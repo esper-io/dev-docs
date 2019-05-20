@@ -1,0 +1,34 @@
+{
+  "name": "esper-docs",
+  "version": "1.0.0",
+  "description": "Esper documentation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esper-io/dev-docs.git"
+  },
+  "keywords": [
+    "Esper docs"
+  ],
+  "author": "Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esper-io/dev-docs/issues"
+  },
+  "homepage": "https://github.com/esper-io/dev-docs#readme",
+  "dependencies": {
+    "vuepress": "^0.14.11"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
+    "vuepress-plugin-reading-time": "^0.1.1"
+  }
+}
