@@ -1,17 +1,11 @@
 module.exports = {
   base: "/",
   title: "Esper Dev Docs",
-  // theme: 'vuepress-theme-blog',
   description: "Esper documentation",
   plugins: ["vuepress-plugin-reading-time", "@vuepress/back-to-top"],
   themeConfig: {
     serviceWorker: {
       updatePopup: true // Boolean | Object, default to undefined.
-      // If set to true, the default text config will be:
-      // updatePopup: {
-      //    message: "New content is available.",
-      //    buttonText: "Refresh"
-      // }
     },
     lastUpdated: "Last Updated",
     head: [
@@ -28,7 +22,7 @@ module.exports = {
     ],
     docsRepo: "esper-io/dev-docs",
     docsDir: "docs",
-    docsBranch: "master",
+    docsBranch: "develop",
     editLinks: true,
     editLinkText: "Help us improve this page!",
     sidebar: {

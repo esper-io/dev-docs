@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - node
+install:
+- yarn global add travis-ci-cloudfront-invalidation
+- yarn global add vuepress
+- yarn
+script:
+- yarn docs:build
+deploy:
+  provider: s3
+  access_key_id: $ID
+  secret_access_key: $SECRET
+  bucket: 'esper-dev-hub'
+  local_dir: docs/.vuepress/dist
+  skip_cleanup: true
+  on:
+    branch: master
+after_deploy:
+  - travis-ci-cloudfront-invalidation -a $ID -s $SECRET -c $CF_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
