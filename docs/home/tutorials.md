@@ -12,7 +12,6 @@ Below are some quick tutorials for specific tasks that might be useful for you o
 - [How do you upload an app to deploy it to a single device?]()
 - [How do you upload an app to deploy it to a group of devices?]()
 - [Creating custom alerts for your fleet]()
-- [Using Twilio for customized alerting]()
 
 
 
