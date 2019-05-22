@@ -15,6 +15,6 @@ deploy:
   local_dir: docs/.vuepress/dist
   skip_cleanup: true
   on:
-    branch: develop
+    branch: master
 after_deploy:
   - travis-ci-cloudfront-invalidation -a $ID -s $SECRET -c $CF_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST
