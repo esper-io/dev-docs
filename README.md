@@ -1,4 +1,5 @@
 # Esper Dev Docs
+[![Build Status](https://travis-ci.com/esper-io/dev-docs.svg?branch=master)](https://travis-ci.com/esper-io/dev-docs)
 
 Documentation for all the Esper Dev APIs, SDKs, and Tools.
 
