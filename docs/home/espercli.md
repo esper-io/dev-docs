@@ -12,7 +12,7 @@ Current stable release versions are
 
 1. **Python:** We recommend you use Python 3.6 or above.
 2. **An Esper Dev Account:** You need a free Esper Dev Trial account to create an environment and generate an Esper `SERVER URL`to talk to APIs. You will choose the `ENVIRONMENT NAME` that will then be assigned as your custom URL and when you complete the sign up process your private environment will be created. See [Requesting an Esper Dev Trial account](https://docs.esper.io/home/gettingstarted.html#setup). 
-3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Dev Console once you have set up your account. For example, the Esper Dev Console for your account can be accessed at `https://foo.esper.cloud` if you choose the `ENVIRONMENT NAME` of “foo”. See [Generating an API Key](https://docs.esper.io/home/module/genapikey.html)
+3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Dev Console once you have set up your account. For example, the Esper Dev Console for your account can be accessed at `https://foo.shoonyacloud.com` if you choose the `ENVIRONMENT NAME` of “foo”. See [Generating an API Key](https://docs.esper.io/home/module/genapikey.html)
 
 ## Installation
 
@@ -246,21 +246,20 @@ is_gms         False
 state          INACTIVE
 ```
 
-#### 3. active
-Active sub command used to set a device as the active device, unset the device from active and show the details the current active device with no options.
+#### 3. set-active
+The set-active sub command used to set a device as the active device and show the details of the current active device with no options.
 ```sh
-$ espercli device active [OPTIONS]
+$ espercli device set-active [OPTIONS]
 ```
 ##### Options
 | Name, shorthand | Default| Description|
 | -------------   |:------:|:----------|
 | --name, -n      |        | Device name |
-| --unset, -u     |        | Unset the active device |
 | --json, -j      |        | Render result in JSON format |
 
 ##### Example
 ```sh
-$ espercli device active -n SNA-SNL-FZH5
+$ espercli device set-active -n SNA-SNL-FZH5
 
 TITLE          DETAILS
 id             62d42cff-6979-48ed-bedf-8b25052a74d0
@@ -270,6 +269,18 @@ api_level      28
 template_name  NonGMS
 is_gms         False
 state          INACTIVE
+```
+
+#### 4. unset-active
+The unset-active sub command used to unset the current active device.
+```sh
+$ espercli device unset-active
+```
+
+##### Example
+```sh
+$ espercli device unset-active
+Unset the active device SNA-SNL-FZH5
 ```
 
 ### **Group**
@@ -322,21 +333,20 @@ name          5G
 device_count  2
 ```
 
-#### 3. active
-Active sub command used to set a group as the active group, unset the group from active and show the details the current active group with no options.
+#### 3. set-active
+The set-active sub command used to set a group as the active group and show the details of the current active group with no options.
 ```sh
-$ espercli group active [OPTIONS]
+$ espercli group set-active [OPTIONS]
 ```
 ##### Options
 | Name, shorthand | Default| Description|
 | -------------   |:------:|:----------|
 | --name, -n      |        | Group name |
-| --unset, -u     |        | Unset the active group |
 | --json, -j      |        | Render result in JSON format |
 
 ##### Example
 ```sh
-$ espercli group active -n 5G
+$ espercli group set-active -n 5G
 
 TITLE         DETAILS
 id            2e5efca2-7776-442e-a5ef-c2758d4a45a3
@@ -344,7 +354,19 @@ name          5G
 device_count  2
 ```
 
-#### 4. create
+#### 4. unset-active
+The unset-active sub command used to unset the current active group.
+```sh
+$ espercli group unset-active
+```
+
+##### Example
+```sh
+$ espercli group unset-active
+Unset the active group 5G
+```
+
+#### 5. create
 Create new group.
 ```sh
 $ espercli group create [OPTIONS]
@@ -365,7 +387,7 @@ name          5G
 device_count  0
 ```
 
-#### 5. update
+#### 6. update
 Modify group information.
 ```sh
 $ espercli group update [OPTIONS] [group-name]
@@ -386,7 +408,7 @@ name          4G
 device_count  2
 ```
 
-#### 6. delete
+#### 7. delete
 Remove particular group.
 ```sh
 $ espercli group delete [group-name]
@@ -398,7 +420,7 @@ $ espercli group delete 5G
 Group with name 5G deleted successfully
 ```
 
-#### 7. add
+#### 8. add
 Add devices into a group, active group is used to add devices if `--group` or `-g` option is not given explicitly.
 ```sh
 $ espercli group add [OPTIONS]
@@ -420,7 +442,7 @@ name          5G
 device_count  2
 ```
 
-#### 8. remove
+#### 9. remove
 Remove devices from a group, active group is used to add devices if `--group` or `-g` option is not given explicitly.
 ```sh
 $ espercli group remove [OPTIONS]
@@ -442,7 +464,7 @@ name          5G
 device_count  0
 ```
 
-#### 9. devices
+#### 10. devices
 List devices in a particular group, active group is used to add devices if `--group` or `-g` option is not given explicitly. Pagination used to limit the number of results, default is 20 results per page.
 ```sh
 $ espercli group devices [OPTIONS] [group-name]
@@ -553,7 +575,25 @@ version_code      1.0
 build_number      1
 ```
 
-#### 4. delete
+#### 4. download
+Download sub command used to download an application file to local system, here version id (UUID) is required to download the application version file.
+```sh
+$ espercli app download [OPTIONS] [version-id]
+```
+##### Options
+| Name, shorthand | Default| Description|
+| -------------   |:------:|:----------|
+| --app, -a       |        | Application id (UUID) |
+| --dest, -d      |        | Destination file path |
+| --json, -j      |        | Render result in JSON format |
+
+##### Example
+```sh
+$ espercli app download -a 630dbfab-7d85-4f81-9f3b-ffb038b0df72 -d ~/foo/com.joeykrim.rootcheck-v1.1.apk 54436edb-9b43-4e2c-8107-2c6fa90e2a9e
+Downloading......:  100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉| 196k/196k [00:11<00:00, 18.1kB/s]
+```
+
+#### 5. delete
 Delete sub command used to delete application. Here, application id (UUID) is required to delete application and unset active application if it is set as active.
 ```sh
 $ espercli app delete [application-id]
@@ -565,21 +605,20 @@ $ espercli app delete 630dbfab-7d85-4f81-9f3b-ffb038b0df72
 Application with id 630dbfab-7d85-4f81-9f3b-ffb038b0df72 deleted successfully
 ```
 
-#### 5. active
-Active sub command used to set and unset active application and show active application information with no options.
+#### 6. set-active
+The set-active sub command used to set an application as active application and show active application information with no options.
 ```sh
-$ espercli app active [OPTIONS]
+$ espercli app set-active [OPTIONS]
 ```
 ##### Options
 | Name, shorthand | Default| Description|
 | -------------   |:------:|:----------|
 | --id, -i        |        | Application id |
-| --unset, -u     |        | Unset the active application |
 | --json, -j      |        | Render result in JSON format |
 
 ##### Example
 ```sh
-$ espercli app active -i 630dbfab-7d85-4f81-9f3b-ffb038b0df72
+$ espercli app set-active -i 630dbfab-7d85-4f81-9f3b-ffb038b0df72
 
 TITLE             DETAILS
 id                630dbfab-7d85-4f81-9f3b-ffb038b0df72
@@ -598,6 +637,18 @@ Total Number of Versions: 1
 
 ID                                    VERSION CODE      BUILD NUMBER    SIZE IN MB  RELEASE TRACK      INSTALLED COUNT
 54436edb-9b43-4e2c-8107-2c6fa90e2a9e  6.4.5                      189       9.36421                                   1
+```
+
+#### 7. unset-active
+The unset-active sub command used to unset the current active application.
+```sh
+$ espercli app unset-active
+```
+
+##### Example
+```sh
+$ espercli app unset-active
+Unset the active application 630dbfab-7d85-4f81-9f3b-ffb038b0df72
 ```
 
 ### **Version**
@@ -992,7 +1043,7 @@ in_progress
 inactive     
 ```
  
- ### **Installs**
+### **Installs**
 Installs command used to list all installations on a device.
 ```sh
 $ espercli installs [SUB-COMMANDS]
@@ -1023,7 +1074,7 @@ ID                                    APPLICATION         PACKAGE               
 fc9e0d4e-fc88-4729-a575-7d4645901f1d  Root Checker Basic  com.joeykrim.rootcheck  6.4.5              Install Success
  ```
  
- ### **status**
+### **status**
 Status command used to list latest device event information.
 ```sh
 $ espercli status [SUB-COMMANDS]
@@ -1054,5 +1105,81 @@ memory_ram                1177
 link_speed                  65
 signal_strength              2
  ```
+
+## *Common Examples*
+#### **1. Deploy an application version to a group**
+First, upload an application file.
+```sh
+$ espercli app upload ~/foo/com.joeykrim.rootcheck-v1.1.apk
+Uploading......: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉| 196k/196k [00:11<00:00, 18.1kB/s, file=com.joeykrim.rootcheck-v1.1.apk]
+
+TITLE             DETAILS
+id                630dbfab-7d85-4f81-9f3b-ffb038b0df72
+application_name  Root Checker Basic
+package_name      com.joeykrim.rootcheck
+developer
+category
+content_rating    0.0
+compatibility
+version_id        e933366b-9bb2-4c41-87fe-023f839dc367
+version_code      1.0
+build_number      1
+```
+
+Then create a group and set this group as active group.
+```sh
+$ espercli group create -n appdeploy
+
+TITLE         DETAILS
+id            2e5efca2-7776-442e-a5ef-c2758d4a45a3
+name          appdeploy
+device_count  0
+
+$ espercli group set-active -n appdeploy
+
+TITLE         DETAILS
+id            2e5efca2-7776-442e-a5ef-c2758d4a45a3
+name          appdeploy
+device_count  0
+```
+
+Then add devices to the group `appdeploy`.
+```sh
+$ espercli group add -d SNA-SNL-73YE SNA-SNL-NYWL
+
+TITLE         DETAILS
+id            2e5efca2-7776-442e-a5ef-c2758d4a45a3
+name          appdeploy
+device_count  2
+```
+
+Use install command on the group to install the application version.
+```sh
+$ espercli group-command install -v e933366b-9bb2-4c41-87fe-023f839dc367
+
+TITLE        DETAILS
+id           6cda46b4-05da-4e76-b7ae-4af52ce288fa
+command      INSTALL
+state        Command Initiated
+success
+failed
+in_progress
+inactive
+```
+
+To check the status of the group command,
+```sh
+$ espercli group-command show 6cda46b4-05da-4e76-b7ae-4af52ce288fa
+
+TITLE        DETAILS
+id           6cda46b4-05da-4e76-b7ae-4af52ce288fa
+command      INSTALL
+state        Command Success
+success      SNA-SNL-73YE
+             SNA-SNL-NYWL
+failed
+in_progress
+inactive     
+```
 
 If you face any issue with CLI usage, we recommend you to reach out to [Esper Dev Support](https://docs.esper.io/home/support.html)

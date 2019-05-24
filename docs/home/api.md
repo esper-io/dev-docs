@@ -13,7 +13,7 @@ Once you have the access token, you need to send an authorization header as belo
 
 ```bash
     curl -X GET \
-    https://foo.esper.cloud/api/enterprise/<enterprise_id>/device/ \
+    https://foo.shoonyacloud.com/api/enterprise/<enterprise_id>/device/ \
     -H 'Authorization: Bearer <ACCESS_TOKEN>' \
     -H 'Content-Type: application/json' \
 ```
