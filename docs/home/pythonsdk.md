@@ -12,8 +12,8 @@ Current stable release verions are
 ## Pre-requisites
 
 1. **Python:** It's recommended to use Python 3.4 or above. However, SDK is compatible with Python 2.7 as well.
-2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `foo.esper.cloud` where “foo” is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://foo-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](./module/register.md). 
-3. **Generate an API key:** API key authentication is used for acessing APIs. You will have to generate this from Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://foo.esper.cloud`. See [Generating an API Key](./module/genapikey.md)
+2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `foo.shoonyacloud.com` where “foo” is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://foo-api.shoonyacloud.com/api`. See [Requesting an Esper Dev Trial account](./module/register.md). 
+3. **Generate an API key:** API key authentication is used for acessing APIs. You will have to generate this from Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://foo.shoonyacloud.com`. See [Generating an API Key](./module/genapikey.md)
 
 ## Installation
 
