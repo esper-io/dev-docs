@@ -43,7 +43,7 @@ cd esper-client-py
 python setup.py install
 ```
 
-> You do need to install setuptools separately since they are packaged along with the downloaded library
+> You do not need to install setuptools separately since they are packaged along with the downloaded library
 
 
 ## Usage
