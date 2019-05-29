@@ -1,6 +1,6 @@
 # Support
 
-If you face any issue with Esper Dev tools or have a feedback/suggestion for us, you can reach out to us using any of the preferred channel mentioned below:
+If you face any issue with Esper Dev tools or have feedback or a suggestion, you can reach out to us through any of the preferred channels mentioned below:
 
 ## Github Issues
 
@@ -17,8 +17,8 @@ If you face any issue with Esper Dev tools or have a feedback/suggestion for us,
 
 ## Slack
 
-Join our slack community [Epser on Slack]().
+Join our Slack community [Epser on Slack]().
 
 ## Email
 
-Still need help ? You can reach out to us at `developer@esper.io`. We will get back to you as soon as possible.
+Still need help? You can reach out to us at `developer@esper.io`. We will get back to you as soon as possible.
