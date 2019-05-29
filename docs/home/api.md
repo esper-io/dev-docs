@@ -2,9 +2,9 @@
 
 Esper APIs are a set of REST-based APIs that help you programmatically control and monitor Android-based Dedicated Devices running the Esper agent using Esper Manage. With these APIs, you can orchestrate and manage devices that have been provisioned against your Esper Manage environment. Furthermore, these APIs allows you to manage the Android applications installed on your Dedicated Device fleet. To read more about the various capabilities of Esper APIs and Esper managed devices, please visit [esper.io](https://esper.io).
 
-To use these APIs you will need to create a developer account with Esper and get access to the Esper Dev Console and the Esper ManageDashboard. You can find out more about Esper and sign up for free at [dev.esper.io](https://dev.esper.io)
+To use these APIs you will need to create a developer account with Esper and get access to the Esper Dev Console and the Esper Manage Dashboard. You can find out more about Esper and sign up for a free account at [dev.esper.io](https://dev.esper.io)
 
-Esper APIs adhere to [Open API specification](https://swagger.io/docs/specification/about/) and you can check our latest api spec on [github](https://github.com/esper-io/esper-api-spec).
+Esper APIs adhere to [Open API specification](https://swagger.io/docs/specification/about/) and you can check our latest API spec on [github](https://github.com/esper-io/esper-api-spec).
 
 ## Authentication
 The client needs to send authentication details to access the Esper APIs by generating and applying an API key. Be sure to sign up for your free trial account with Esper Dev to generate your key. see [Generating an API key](./module/genapikey.md)
@@ -38,7 +38,7 @@ The APIs use standard HTTP status codes to indicate success or failure. All erro
 
 ## APIs
 
-Below are quick links to frequently used APIs. To see a full list of APIs and latest updates visit [API documentation](https://api.esper.io)
+Below are quick links to frequently used APIs. To see a full list of APIs and latest updates, please visit [API documentation](https://api.esper.io)
 
 #### Enterprise
 - [Get enteprise information](https://api.esper.io/#tag/Enterprise)
