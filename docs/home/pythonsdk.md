@@ -58,7 +58,7 @@ Next, you need to configure your client to talk to APIs. For this you will need 
 
 ```python
 configuration = esperclient.Configuration()
-configuration.host = 'https://myapp-api.espercloud.com/api'
+configuration.host = 'https://myapp-api.shoonyacloud.com/api'
 configuration.api_key['Authorization'] = 'LpDriKp7MWJiRGcwc8xzREeUj8OEFa'
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
