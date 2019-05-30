@@ -4,9 +4,9 @@ If you face any issue with Esper Dev tools or have feedback or a suggestion, you
 
 ## Github Issues
 
-1. For problems in API usage and specification, raise an issue on our [Open API specification repo](https://github.com/esper-io/esper-api-spec/issues)
-2. For problems in Python SDK, raise an issue on our [Python SDK repo](https://github.com/esper-io/esper-client-py/issues)
-3. For problems in Esper CLI, raise an issue on [CLI repo](https://github.com/esper-io/esper-cli/issues)
+1. For problems in API usage and specification, you can raise an issue on our [Open API specification repo](https://github.com/esper-io/esper-api-spec/issues)
+2. For problems in Python SDK, you can raise an issue on our [Python SDK repo](https://github.com/esper-io/esper-client-py/issues)
+3. For problems in Esper CLI, you can raise an issue on [CLI repo](https://github.com/esper-io/esper-cli/issues)
 
 ## Gitter 
 [![Gitter](https://badges.gitter.im/esper-dev/community.svg)](https://gitter.im/esper-dev/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
