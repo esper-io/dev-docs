@@ -1,12 +1,12 @@
 # Support
 
-If you face any issue with Esper Dev tools or have a feedback/suggestion for us, you can reach out to us using any of the preferred channel mentioned below:
+If you face any issue with Esper Dev tools or have feedback or a suggestion, you can reach out to us through any of the preferred channels mentioned below:
 
 ## Github Issues
 
-1. For problems in API usage and specification, raise an issue on our [Open API specification repo](https://github.com/esper-io/esper-api-spec/issues)
-2. For problems in Python SDK, raise an issue on our [Python SDK repo](https://github.com/esper-io/esper-client-py/issues)
-3. For problems in Esper CLI, raise an issue on [CLI repo](https://github.com/esper-io/esper-cli/issues)
+1. For problems in API usage and specification, you can raise an issue on our [Open API specification repo](https://github.com/esper-io/esper-api-spec/issues)
+2. For problems in Python SDK, you can raise an issue on our [Python SDK repo](https://github.com/esper-io/esper-client-py/issues)
+3. For problems in Esper CLI, you can raise an issue on [CLI repo](https://github.com/esper-io/esper-cli/issues)
 
 ## Gitter 
 [![Gitter](https://badges.gitter.im/esper-dev/community.svg)](https://gitter.im/esper-dev/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -17,8 +17,8 @@ If you face any issue with Esper Dev tools or have a feedback/suggestion for us,
 
 ## Slack
 
-Join our slack community [Epser on Slack]().
+Join our Slack community [Epser on Slack]().
 
 ## Email
 
-Still need help ? You can reach out to us at `developer@esper.io`. We will get back to you as soon as possible.
+Still need help? You can reach out to us at `developer@esper.io`. We will get back to you as soon as possible.

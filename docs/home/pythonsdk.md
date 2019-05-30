@@ -11,9 +11,9 @@ Current stable release verions are
 
 ## Pre-requisites
 
-1. **Python:** It's recommended to use Python 3.4 or above. However, SDK is compatible with Python 2.7 as well.
+1. **Python:** It's recommended that you use Python 3.4 or above. However, SDK is compatible with Python 2.7 as well.
 2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `foo.shoonyacloud.com` where “foo” is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://foo-api.shoonyacloud.com/api`. See [Requesting an Esper Dev Trial account](./module/register.md). 
-3. **Generate an API key:** API key authentication is used for acessing APIs. You will have to generate this from Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://foo.shoonyacloud.com`. See [Generating an API Key](./module/genapikey.md)
+3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://foo.shoonyacloud.com`. See [Generating an API Key](./module/genapikey.md)
 
 ## Installation
 
@@ -43,7 +43,7 @@ cd esper-client-py
 python setup.py install
 ```
 
-> You need not install setuptools separately, they are packaged along with the downloaded library
+> You do not need to install setuptools separately since they are packaged along with the downloaded library
 
 
 ## Usage
@@ -58,15 +58,15 @@ Next, you need to configure your client to talk to APIs. For this you will need 
 
 ```python
 configuration = esperclient.Configuration()
-configuration.host = 'https://myapp-api.espercloud.com/api'
+configuration.host = 'https://myapp-api.shoonyacloud.com/api'
 configuration.api_key['Authorization'] = 'LpDriKp7MWJiRGcwc8xzREeUj8OEFa'
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 ```
 
-Now you can perform various operations as described below. To see complete list of actions and code samples visit [SDK documentation](https://github.com/esper-io/esper-client-py#documentation-for-api-endpoints) To see response formats visit [API documentation](https://esper-io.github.io/esper-api-spec/)
+Now you can perform various operations as described below. To see the complete list of actions and code samples, visit [SDK documentation](https://github.com/esper-io/esper-client-py#documentation-for-api-endpoints) To see response formats, visit [API documentation](https://esper-io.github.io/esper-api-spec/)
 
-An additional information you'll need to access Esper APIs is your `enterprise ID`, a unique id assinged to your Esper Dev account. You can get your enteprise ID from web dashbaord in `Enterprise Settings` tab. Entperise ID will be a string in UUID format i.e `595a6107-b137-448d-b217-e20cc58ee84d`.
+Some additional information you'll need in order to access Esper APIs is your `enterprise ID`, which is a unique id assinged to your Esper Dev account. You can get your Enteprise ID from the web dashboard in `Enterprise Settings` tab. The Enterprise ID will be a string in UUID format i.e `595a6107-b137-448d-b217-e20cc58ee84d`.
 
 ## Examples
 
@@ -461,7 +461,7 @@ except ApiException as e:
 }
 ```
 
-We are always in active development and we try our best to keep our documentation up to date. However, if you end up ahead of time you can check our latest documentation on [Github](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) for request and response formats.
+We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [Github](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
 
-If you face any issue in SDK usage, we recommend you to reach out to [Esper Dev Support](./support.md)
+If you face any issue in SDK usage, we recommend you that you reach out to [Esper Dev Support](./support.md)
 

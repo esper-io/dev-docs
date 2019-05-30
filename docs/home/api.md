@@ -7,7 +7,7 @@ To use these APIs you will need to create a developer account with Esper and get
 Esper APIs adhere to [Open API specification](https://swagger.io/docs/specification/about/) and you can check our latest API spec on [github](https://github.com/esper-io/esper-api-spec).
 
 ## Authentication
-The client needs to send authentication details to access the Esper APIs by generating and applying an API key. Be sure to sign up for your free trial account with Esper Dev to generate your key. see [Generating an API key](./module/genapikey.md)
+The client needs to send authentication details to access the Esper APIs by generating and applying an API key. Be sure to sign up for your free trial account with Esper Dev to generate your key. See [Generating an API key](./module/genapikey.md)
 
 Once you have the access token, you need to send an authorization header as below
 
@@ -67,4 +67,4 @@ Below are quick links to frequently used APIs. To see a full list of APIs and la
 - [Get command status on group](https://api.esper.io/#operation/getGroupCommand)
 
 
-If you face any issues in API usage, we recommend you to reach out to [Esper Dev Support](./support.md)
+If you face any issues in API usage, we recommend you reach out to [Esper Dev Support](./support.md)
