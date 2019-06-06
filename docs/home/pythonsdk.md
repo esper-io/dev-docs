@@ -19,14 +19,14 @@ Current stable release verions are
 #### Using `pip install`
 
 From PyPI
-```bash
+```sh
 pip install esperclient
 ```
 
 or
 
 From [Github](https://github.com/esper-io/esper-client-py)
-```bash
+```sh
 pip install git+https://github.com/esper-io/esper-client-py.git
 ```
 
@@ -34,7 +34,7 @@ pip install git+https://github.com/esper-io/esper-client-py.git
 
 Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
-```bash
+```sh
 git clone https://github.com/esper-io/esper-client-py.git
 
 cd esper-client-py
