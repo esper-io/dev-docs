@@ -5,7 +5,7 @@
       <p class="homepage__subheading">Documentation for all the Esper Dev APIs, SDKs, and Tools</p>
       <p>
         <a href="https://esper.io/signup/" class="homepage__button">Get Started</a>
-        <a href="/home/" class="homepage__button">Read the Docs</a>
+        <a href="/home/" class="homepage__button homepage_button_two">Read the Docs</a>
       </p>
     </div>
     <div class="homepage__links__section">
@@ -80,17 +80,30 @@
 .homepage__button {
   display: inline-block;
   font-size: 1.2rem;
-  color: #fff;
-  background-color: #7a55a5;
+  /* color: #fff; */
+  /* background-color: #7a55a5; */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.1s ease;
+  color: #7a55a5;
   box-sizing: border-box;
-  border-bottom: 1px solid #6e4d95;
+  border: 1px solid #6e4d95;
 }
 
 .homepage__button:hover {
   background-color: #8765af;
+  color: #fff;
+}
+
+.homepage__button:active {
+  background-color: #573c76;
+  color: #fff;
+}
+
+.homepage_button_two {
+  border: 1px solid #6e4d95;
+  background-color: #7a55a5;
+  color: #fff;
 }
 .homepage__links__section {
   border-top: 1px solid #eaecef;
