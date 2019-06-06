@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/esper-io/dev-docs#readme",
   "dependencies": {
-    "vuepress": "^0.14.11"
+    "vuepress": "^1.0.0-beta.2"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
+    "@vuepress/plugin-back-to-top": "^1.0.0-beta.2",
     "vuepress-plugin-reading-time": "^0.1.1"
   }
 }
