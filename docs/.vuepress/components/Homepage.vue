@@ -5,7 +5,7 @@
       <p class="homepage__subheading">Documentation for all the Esper Dev APIs, SDKs, and Tools</p>
       <p>
         <a href="https://esper.io/signup/" class="homepage__button">Get Started</a>
-        <a href="/home/" class="homepage__button">Read the Docs</a>
+        <a href="/home/" class="homepage__button homepage_button_two">Read the Docs</a>
       </p>
     </div>
     <div class="homepage__links__section">
@@ -51,6 +51,14 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@font-face {
+    font-family: "BlenderPro";
+    src: url('./fonts/BlenderPro-Medium.eot');
+    src: local('‚ò∫'), url('./fonts/BlenderPro-Medium.woff2') format('woff2'), url('./fonts/BlenderPro-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .home {
   padding: 3.6rem 2rem 0;
   max-width: 960px;
@@ -62,15 +70,17 @@
 .homepage__heading {
   margin: 1.8rem auto;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25;
   color: #7a55a5;
+  font-family: 'BlenderPro';
 }
 .homepage__subheading {
   max-width: 35rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.3;
   color: #6a8bad;
+  font-family: 'Nunito Sans', sans-serif;
   margin: 1.8rem auto;
 }
 
@@ -78,19 +88,33 @@
   margin: 1.8rem auto;
 }
 .homepage__button {
+  font-family: 'BlenderPro';
   display: inline-block;
   font-size: 1.2rem;
-  color: #fff;
-  background-color: #7a55a5;
+  /* color: #fff; */
+  /* background-color: #7a55a5; */
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.1s ease;
+  color: #7a55a5;
   box-sizing: border-box;
-  border-bottom: 1px solid #6e4d95;
+  border: 1px solid #6e4d95;
 }
 
 .homepage__button:hover {
   background-color: #8765af;
+  color: #fff;
+}
+
+.homepage__button:active {
+  background-color: #573c76;
+  color: #fff;
+}
+
+.homepage_button_two {
+  border: 1px solid #6e4d95;
+  background-color: #7a55a5;
+  color: #fff;
 }
 .homepage__links__section {
   border-top: 1px solid #eaecef;
@@ -116,11 +140,15 @@
   }
 }
 .homepage__a {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.6rem;
   border-bottom: none;
   padding-bottom: 0;
   color: #3a5169;
+  font-family: 'BlenderPro';
+}
+
+.homepage__links__section__item > p {
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .homepage__footer {
