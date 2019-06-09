@@ -37,7 +37,8 @@ module.exports = {
         "api",
         "tutorials",
         "support",
-        "faq"
+        "faq",
+        ["devconsole/", "Dev Console"],
       ]
     },
     displayAllHeaders: false
