@@ -10,7 +10,7 @@ The device to be provisioned needs to be prepared via the following steps:
 
 *   Factory Reset your device, choose your language, and then tap 6 times on the screen:
 
-![Provision Device](https://documentation-media.s3.amazonaws.com/images/1_ProD.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=BeQQ29CDI8jleKENcKT%2BgrFlRow%3D&Expires=1559913436)
+![Provision Device](https://documentation-media.s3.amazonaws.com/images/1_ProD.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 *   You will now see the QR code setup screen, continue by clicking 'Next'.
 
