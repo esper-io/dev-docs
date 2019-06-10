@@ -10,15 +10,15 @@ Learn about Esper's Policy Management.
 *   Policies can be viewed, edited, and deleted.
 *   To create a new policy, click on the 'New Policy' button:
 
-![Policy Management](https://documentation-media.s3.amazonaws.com/images/1_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=Wf%2BxbdSGPaRmrD0Kt%2BoWcLBYWiY%3D&Expires=1559913434)
+![Policy Management](https://documentation-media.s3.amazonaws.com/images/1_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 *   Enter the policy details and click on 'Create policy':
 
-![Policy Management](https://documentation-media.s3.amazonaws.com/images/2_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=BtNNEh21%2Fk1kqQv3XRoIEvfFMDU%3D&Expires=1559913434)
+![Policy Management](https://documentation-media.s3.amazonaws.com/images/2_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 *   A new policy is created and can be deployed on any device.
 *   The new policy gets listed on the 'Policy management' page:
 
-![Policy Management](https://documentation-media.s3.amazonaws.com/images/3_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=USuZaVszQEZF2XEucAeVfsErS%2FE%3D&Expires=1559913434)
+![Policy Management](https://documentation-media.s3.amazonaws.com/images/3_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-[Return to Introduction](../index.html)
+[Return to Introduction](../index.md)
