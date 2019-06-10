@@ -14,7 +14,7 @@ Steps to create a Device Template:
 2.  Click on 'Create Template'.
 3.  Enter a name for the Device Template. Click 'Next'.
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/1_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=ILHn1nmUuNOmBDa9nJbfVYOiYzE%3D&Expires=1559913433)
+![Device Template](https://documentation-media.s3.amazonaws.com/images/1_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 In the Policy section:
 
@@ -22,7 +22,7 @@ Set default app permissions, Android setting app, system updates, password rules
 
 In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers separated by commas. All numbers must be preceded by +country code (for example +1 for US):
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/2_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=iEMo0fYfPtnsS4DeTTXNbbplIPI%3D&Expires=1559913433)
+![Device Template](https://documentation-media.s3.amazonaws.com/images/2_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 Click 'Next'.
 
