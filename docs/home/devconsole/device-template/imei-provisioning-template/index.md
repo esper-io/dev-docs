@@ -1,4 +1,4 @@
-[Device Template](../index.html) / IMEI Provisioning via Template
+[Device Template](../index.md) / IMEI Provisioning via Template
 
 #### IMEI Provisioning via Template
 
@@ -6,7 +6,7 @@ May 19, 2019
 
 IMEI or Serial number of devices to be provisioned need to be added to the relevant template
 
-See steps on how to [create a template](../index.html).
+See steps on how to [create a template](../index.md).
 
 After creating a template, click on Edit template. During editing, you also see the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section "Add devices" that appears during edit just before Preview section. Using this "Add devices" section, user can either enter IMEI/Serial numbers or upload Csv file with IMEI and Serial numbers.
 
@@ -16,7 +16,7 @@ OR
 
 The user can upload IMEI/Serial numbers with a Csv file.
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/20.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=GjwG138IbFGvc%2Fo5GWBocIXRh0Q%3D&Expires=1559913435)
+![Device Template](https://documentation-media.s3.amazonaws.com/images/20.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 The csv file containing the imei's and serial numbers should adhere to the below conditions-
 
@@ -33,10 +33,10 @@ The csv file containing the imei's and serial numbers should adhere to the below
 
 **Examples for csv , where a serial number or an imei number could be missing**
 
-![Screenshot 2019-05-19 at 12.54.58 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.58_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=aEW5nn%2BLdQWi9K2pltFWtxpr5rc%3D&Expires=1559913435)
+![Screenshot 2019-05-19 at 12.54.58 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.58_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-![Screenshot 2019-05-19 at 12.54.49 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.49_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=Daar7tBtHH0G6uN4sm0xGtEfqS0%3D&Expires=1559913435)
+![Screenshot 2019-05-19 at 12.54.49 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.49_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-![Screenshot 2019-05-19 at 12.54.58 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.58_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=aEW5nn%2BLdQWi9K2pltFWtxpr5rc%3D&Expires=1559913435)
+![Screenshot 2019-05-19 at 12.54.58 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.58_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-[Return to Device Template](../index.html)
+[Return to Device Template](../index.md)
