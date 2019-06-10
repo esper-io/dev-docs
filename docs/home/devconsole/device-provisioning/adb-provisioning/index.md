@@ -1,4 +1,4 @@
-[Provision Device](../index.html) / ADB Provisioning
+[Provision Device](../index.md) / ADB Provisioning
 
 #### ADB Provisioning
 
@@ -19,7 +19,7 @@ The steps for ADB Provisioning are as follows:
     2.  Go to the build number under system settings then tap 6 times to enable developer options.
     3.  Go to developer options and enable USB debugging.
     4.  Click on the Authorization Dialog box on Android device.
-    5.  Run the [attached script](../imei-or-serial-number-based-provisioning/general-android-users/esper-python-script/index.html) on your Desktop/Laptop with Python.
+    5.  Run the [attached script](../imei-or-serial-number-based-provisioning/general-android-users/esper-python-script/index.md) on your Desktop/Laptop with Python.
     6.  This will first download the ADB tools from the Internet.
     7.  Then it will download the Esper DPC from Esper Cloud.
     8.  It will then install the DPC App on the device and assign any required permissions.
@@ -35,4 +35,4 @@ The steps for ADB Provisioning are as follows:
 
 If you are still facing issues with ADB Provisioning, please contact us at help@esper.io.
 
-[Return to Provision Device](../index.html)
+[Return to Provision Device](../index.md)
