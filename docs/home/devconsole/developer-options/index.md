@@ -1,4 +1,4 @@
-[Introduction](../index.html) / Developer Options
+[Introduction](../index.md) / Developer Options
 
 #### Developer Options
 
@@ -10,22 +10,22 @@ Esper is focused on helping Android app developers build, deliver, and maintain 
 
 To kick things off, you need to generate an API key that you can tie to a specific application - it is your choice on how you want to manage your API keys. Do this by clicking the "Register App" button. You can also easily copy the Enterprise ID, necessary for API calls, by clicking on the copy icon next to Enterprise ID on top right of this section.
 
-![Developer Options](https://documentation-media.s3.amazonaws.com/images/1_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=ew8WED2LHUxbMAIz13NHcZhEtks%3D&Expires=1559913434)
+![Developer Options](https://documentation-media.s3.amazonaws.com/images/1_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 Next, you need to enter a unique app name and description(optional) and click register application.
 
-![Developer Options](https://documentation-media.s3.amazonaws.com/images/2_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=FEnaGucBZ6hsPirCevjqfPJXsYU%3D&Expires=1559913434)
+![Developer Options](https://documentation-media.s3.amazonaws.com/images/2_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 Click Generate Token. This will generate a unique OAuth-based API key.
 
-![Developer Options](https://documentation-media.s3.amazonaws.com/images/3_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=hWJFzpzG94baOytUMibFj1SMmcg%3D&Expires=1559913434)
+![Developer Options](https://documentation-media.s3.amazonaws.com/images/3_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 You can then copy (or renew if needed) your API key.
 
-![Developer Options](https://documentation-media.s3.amazonaws.com/images/4_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=laafxpP62ayGWpEHmRsSLNfagKI%3D&Expires=1559913434)
+![Developer Options](https://documentation-media.s3.amazonaws.com/images/4_DO.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 The API key and Enterprise ID can be copied from the dashboard as shown above and can be used to access our [CLI platform](https://github.com/esper-io/esper-cli) (https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](http://api.esper.io) (api.esper.io) in your development and management systems.
 
 Checkout the relevant documentation on the top right of this page by clicking on [Developer Hub](https://docs.esper.io/) and [API Documentation](https://api.esper.io/).
 
-[Return to Introduction](../index.html)
+[Return to Introduction](../index.md)
