@@ -1,4 +1,4 @@
-[Introduction](../index.html) / Enterprise Settings
+[Introduction](../index.md) / Enterprise Settings
 
 #### Enterprise Settings
 
@@ -8,7 +8,7 @@ Learn about Esper's Enterprise Settings.
 
 *   Enterprise Settings enables you to set your company details by clicking on the 'Edit profile' button on the top right hand corner:
 
-![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/2_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=3Fo4G7vdNEerYn%2BegiIq9Ps0DUo%3D&Expires=1559913434)
+![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/2_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 *   You are required to fill in your company information including:
 
@@ -20,10 +20,10 @@ Learn about Esper's Enterprise Settings.
 6.  Address
 7.  Phone number
 
-![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/1_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=epMtRZWFD60wOrMcgUVQ96vm0nk%3D&Expires=1559913434)
+![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/1_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 *   If you will be using apps from Google you will also need to enroll your company's Google Play account:
 
-![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/2_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA&Signature=3Fo4G7vdNEerYn%2BegiIq9Ps0DUo%3D&Expires=1559913434)
+![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/2_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-[Return to Introduction](../index.html)
+[Return to Introduction](../index.md)
