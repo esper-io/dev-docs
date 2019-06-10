@@ -46,4 +46,4 @@ Contact Us
 
 You can also send us an email at developer@esper.io for any questions or concerns.
 
-[Home Dashboard](home-dashboard/index.html)
+[Home Dashboard](home-dashboard/index.md)
