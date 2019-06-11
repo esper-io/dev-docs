@@ -1,49 +1,43 @@
 <template>
   <div class="home">
     <div class="homepage__headerbox">
-      <h1 class="homepage__heading">Esper Dev Docs</h1>
+      <h1 class="homepage__heading">Esper Docs</h1>
       <p class="homepage__subheading">Documentation for all the Esper Dev APIs, SDKs, and Tools</p>
       <p>
-        <a href="https://esper.io/signup/" class="homepage__button">Get Started</a>
-        <a href="/home/" class="homepage__button homepage_button_two">Read the Docs</a>
+        <a href="https://esper.io/signup/" class="homepage__button" style="margin-right: 1rem">Sign up</a>
+        <a href="/home/" class="homepage__button homepage_button_two">Overview</a>
       </p>
     </div>
     <div class="homepage__links__section">
       <div class="homepage__links__section__item">
-        <a  href="/home/pythonsdk.html" class="homepage__a">Esper SDK</a>
-        <p>Python library to call the Esper APIs</p>
+        <div style="padding-bottom: 1rem"><img src="./icons/ApiReferenceIcon.svg" alt='api'/></div>
+        <a  href="https://api.esper.io/" class="homepage__a">Esper API Reference</a>
+        <p>API documentation and OpenAPI specificiation</p>
       </div>
       <div class="homepage__links__section__item">
+        <div style="padding-bottom: 1rem"><img src="./icons/EsperCliIcon.svg" alt='cli'/></div>
         <a href="/home/espercli.html" class="homepage__a">Esper CLI</a>
         <p>Command line tool for the Esper APIs</p>
       </div>
       <div class="homepage__links__section__item">
-        <a href="https://api.esper.io/" class="homepage__a">Esper API Reference</a>
-        <p>API documentation and OpenAPI specificiation</p>
+        <div style="padding-bottom: 1rem"><img src="./icons/EsperSdkIcon.svg" alt='sdk'/></div>
+        <a href="/home/pythonsdk.html" class="homepage__a">Esper SDK</a>
+        <p>Python library to call the Esper APIs</p>
       </div>
       <div class="homepage__links__section__item">
-        <a href="/home/emulator.html" class="homepage__a">Esper Virtual Emulator</a>
-        <p>Using the Esper Virtual Emulator to test apps on an emulated device</p>
+        <div style="padding-bottom: 1rem"><img src="./icons/EsperPluginIcon.svg" alt='plugin'/></div>
+        <a href="/home/emulator.html" class="homepage__a">Esper Plugin for Android Studio</a>
+        <p>Plugin extending Android Studio with Esper Tools</p>
       </div>
       <div class="homepage__links__section__item">
-        <a href="/home/devicekit.html" class="homepage__a">Esper Developement Devices</a>
-        <p> How to purchase and then target devices running Esper Enhanced Android</p>
+        <div style="padding-bottom: 1rem"><img src="./icons/EsperConsoleIcon.svg" alt='console'/></div>
+        <a href="https://consoledocs.esper.io/" class="homepage__a">Esper Console</a>
+        <p>Using the Esper Console: Esper Dev & Esper Manage</p>
       </div>
       <div class="homepage__links__section__item">
-        <a href="https://consoledocs.esper.io/" class="homepage__a">Product Documentation</a>
-        <p>Using Esper Dev Console</p>
-      </div>
-      <div class="homepage__links__section__item">
+        <div style="padding-bottom: 1rem"><img src="./icons/EsperBlogIcon.svg" alt='blog'/></div>
         <a href="https://blog.esper.io" class="homepage__a">Esper Blog</a>
-        <p>Find out the latest about Esper on our developer blog</p>
-      </div>
-      <div class="homepage__links__section__item">
-        <a href="https://github.com/esper-io" class="homepage__a">Github</a>
-        <p>Get the Esper APIs, SDK, and CLI on GitHub. <a href="https://esper.io/signup/">Sign up</a> for the Esper Dev Trial to get your API key</p>
-      </div>
-      <div class="homepage__links__section__item">
-        <a href="/home/support.html" class="homepage__a">Support</a>
-        <p>Find out how to get any support you need for Esper</p>
+        <p>Find out the latest about Esper on our Blog</p>
       </div>
     </div>
     <div class="homepage__footer">Apache 2.0 | Copyright © 2019 Shoonya Enterprises Inc</div>
@@ -76,7 +70,7 @@
   font-family: 'BlenderPro';
 }
 .homepage__subheading {
-  max-width: 35rem;
+  max-width: 37rem;
   font-size: 1.4rem;
   line-height: 1.3;
   color: #6a8bad;
@@ -93,7 +87,7 @@
   font-size: 1.2rem;
   /* color: #fff; */
   /* background-color: #7a55a5; */
-  padding: 0.5rem 1rem;
+  padding: 0rem 2rem;
   border-radius: 4px;
   transition: background-color 0.1s ease;
   color: #7a55a5;
@@ -117,7 +111,6 @@
   color: #fff;
 }
 .homepage__links__section {
-  border-top: 1px solid #eaecef;
   padding: 1.2rem 0;
   margin-top: 2.5rem;
   display: flex;
@@ -131,14 +124,46 @@
   flex-grow: 1;
   flex-basis: 30%;
   max-width: 30%;
+  border: solid 1px #dfe3e6;
+  text-align: center;
+  height: 14rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0rem;
+  background-color: rgba(250, 250, 250, 0.3);
+  padding-bottom: 2rem;
+  border-radius: 4px;
 }
 
 @media (max-width: 719px) {
   .homepage__links__section__item {
+    flex-wrap: wrap;
     max-width: 100%;
     padding: 0 2.5rem;
+    border: solid 1px #dfe3e6;
+    text-align: center;
+    height: 13rem;
+    margin-bottom: 2rem;
+    background-color: rgba(250, 250, 250, 0.3);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-right: 1rem;
   }
 }
+
+@media (max-width: 664px) {
+  .homepage__links__section__item {
+    max-width: 100%;
+    padding: 0 2.5rem;
+    border: solid 1px #dfe3e6;
+    text-align: center;
+    height: 15.5rem;
+    margin-bottom: 2rem;
+    background-color: rgba(250, 250, 250, 0.3);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
 .homepage__a {
   font-size: 1.6rem;
   border-bottom: none;
@@ -153,7 +178,6 @@
 
 .homepage__footer {
   padding: 2.5rem;
-  border-top: 1px solid #eaecef;
   text-align: center;
   color: #4e6e8e;
 }
