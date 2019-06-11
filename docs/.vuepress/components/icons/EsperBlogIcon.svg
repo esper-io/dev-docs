@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.000115384615 60 0.000115384615 60 60 0 60"></polygon>
+        <polygon id="path-3" points="0 60 60 60 60 0 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Esper-dev-home-1" transform="translate(-1120.000000, -474.000000)">
+            <g id="Group-13" transform="translate(1120.000000, 474.000000)">
+                <g id="Group-3">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M60,30.0001154 C60,46.5686538 46.5685385,60.0001154 30,60.0001154 C13.4314615,60.0001154 0,46.5686538 0,30.0001154 C0,13.4313462 13.4314615,0.000115384615 30,0.000115384615 C46.5685385,0.000115384615 60,13.4313462 60,30.0001154" id="Fill-1" fill="#5F4AA1" mask="url(#mask-2)"></path>
+                </g>
+                <path d="M41.8753846,49.1185846 L18.1246154,49.1185846 C16.5902308,49.1185846 15.3461538,47.8745077 15.3461538,46.3401231 L15.3461538,13.6599692 C15.3461538,12.1253538 16.5902308,10.8815077 18.1246154,10.8815077 L41.8753846,10.8815077 C43.4097692,10.8815077 44.6538462,12.1253538 44.6538462,13.6599692 L44.6538462,46.3401231 C44.6538462,47.8745077 43.4097692,49.1185846 41.8753846,49.1185846" id="Fill-4" fill="#B18BBF"></path>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-7"></g>
+                <polygon id="Fill-6" fill="#F4F6FB" mask="url(#mask-4)" points="20.1923077 25.6954615 39.1153846 25.6954615 39.1153846 24.7723846 20.1923077 24.7723846"></polygon>
+                <polygon id="Fill-8" fill="#F4F6FB" mask="url(#mask-4)" points="20.1923077 30.7723846 39.1153846 30.7723846 39.1153846 29.8493077 20.1923077 29.8493077"></polygon>
+                <polygon id="Fill-9" fill="#F4F6FB" mask="url(#mask-4)" points="20.1923077 35.8493077 39.1153846 35.8493077 39.1153846 34.9262308 20.1923077 34.9262308"></polygon>
+                <polygon id="Fill-10" fill="#F4F6FB" mask="url(#mask-4)" points="34.0384615 40.9262308 39.1153846 40.9262308 39.1153846 40.0031538 34.0384615 40.0031538"></polygon>
+                <polygon id="Fill-11" fill="#FFFFFF" mask="url(#mask-4)" points="20.3076923 22.1185385 39.2307692 22.1185385 39.2307692 15.4262308 20.3076923 15.4262308"></polygon>
+                <polygon id="Fill-12" fill="#FFFFFF" mask="url(#mask-4)" points="20.3076923 45.4262308 30 45.4262308 30 39.8877692 20.3076923 39.8877692"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
