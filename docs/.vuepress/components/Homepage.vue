@@ -4,41 +4,43 @@
       <h1 class="homepage__heading">Esper Docs</h1>
       <p class="homepage__subheading">Documentation for all the Esper Dev APIs, SDKs, and Tools</p>
       <p>
-        <a href="https://esper.io/signup/" class="homepage__button" style="margin-right: 1rem">Sign up</a>
+        <a href="https://esper.io/signup/" class="homepage__button">Sign up</a>
         <a href="/home/" class="homepage__button homepage_button_two">Overview</a>
       </p>
     </div>
-    <div class="homepage__links__section">
-      <div class="homepage__links__section__item">
+    <div class="homepage__links__section" style="margin-top: 5rem;">
+      <a  href="https://api.esper.io/" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem"><img src="./icons/ApiReferenceIcon.svg" alt='api'/></div>
-        <a  href="https://api.esper.io/" class="homepage__a">Esper API Reference</a>
+        <div class="homepage__a">Esper API Reference</div>
         <p>API documentation and OpenAPI specificiation</p>
-      </div>
-      <div class="homepage__links__section__item">
+      </a>
+      <a href="/home/espercli.html"  class="homepage__links__section__item">
         <div style="padding-bottom: 1rem"><img src="./icons/EsperCliIcon.svg" alt='cli'/></div>
-        <a href="/home/espercli.html" class="homepage__a">Esper CLI</a>
+        <div class="homepage__a">Esper CLI</div>
         <p>Command line tool for the Esper APIs</p>
-      </div>
-      <div class="homepage__links__section__item">
+      </a>
+      <a  href="/home/pythonsdk.html"  class="homepage__links__section__item">
         <div style="padding-bottom: 1rem"><img src="./icons/EsperSdkIcon.svg" alt='sdk'/></div>
-        <a href="/home/pythonsdk.html" class="homepage__a">Esper SDK</a>
+        <div class="homepage__a">Esper SDK</div>
         <p>Python library to call the Esper APIs</p>
-      </div>
-      <div class="homepage__links__section__item">
+      </a>
+    </div>
+    <div class="homepage__links__section">
+      <a  href="/home/emulator.html" class="homepage__links__section__item homepage__links__section__item2">
         <div style="padding-bottom: 1rem"><img src="./icons/EsperPluginIcon.svg" alt='plugin'/></div>
-        <a href="/home/emulator.html" class="homepage__a">Esper Plugin for Android Studio</a>
+        <div class="homepage__a">Esper Plugin for Android Studio</div>
         <p>Plugin extending Android Studio with Esper Tools</p>
-      </div>
-      <div class="homepage__links__section__item">
+      </a>
+      <a href="https://consoledocs.esper.io/" class="homepage__links__section__item homepage__links__section__item2">
         <div style="padding-bottom: 1rem"><img src="./icons/EsperConsoleIcon.svg" alt='console'/></div>
-        <a href="https://consoledocs.esper.io/" class="homepage__a">Esper Console</a>
+        <div class="homepage__a">Esper Console</div>
         <p>Using the Esper Console: Esper Dev & Esper Manage</p>
-      </div>
-      <div class="homepage__links__section__item">
+      </a>
+      <a href="https://blog.esper.io" class="homepage__links__section__item homepage__links__section__item2">
         <div style="padding-bottom: 1rem"><img src="./icons/EsperBlogIcon.svg" alt='blog'/></div>
-        <a href="https://blog.esper.io" class="homepage__a">Esper Blog</a>
+        <div class="homepage__a">Esper Blog</div>
         <p>Find out the latest about Esper on our Blog</p>
-      </div>
+      </a>
     </div>
     <div class="homepage__footer">Apache 2.0 | Copyright © 2019 Shoonya Enterprises Inc</div>
   </div>
@@ -85,6 +87,7 @@
   font-family: 'BlenderPro';
   display: inline-block;
   font-size: 1.2rem;
+  margin-right: 1rem;
   /* color: #fff; */
   /* background-color: #7a55a5; */
   padding: 0rem 2rem;
@@ -111,8 +114,8 @@
   color: #fff;
 }
 .homepage__links__section {
-  padding: 1.2rem 0;
-  margin-top: 2.5rem;
+  /* padding: 1.2rem 0;
+  margin-top: 2.5rem; */
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -126,11 +129,32 @@
   max-width: 30%;
   border: solid 1px #dfe3e6;
   text-align: center;
-  height: 14rem;
   margin-bottom: 2rem;
-  padding: 1rem 0rem;
+  padding: 2rem 0rem 2rem 0rem;
   background-color: rgba(250, 250, 250, 0.3);
-  padding-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.homepage__links__section__item:hover {
+  background-color: #dfe3e68c;
+}
+
+.homepage__links__section__item:active {
+  background-color: #dfe3e6;
+}
+
+
+
+.homepage__links__section__item2 {
+  flex-grow: 1;
+  flex-basis: 30%;
+  max-width: 30%;
+  border: solid 1px #dfe3e6;
+  text-align: center;
+  min-height: 14rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0rem 1rem 0rem;
+  background-color: rgba(250, 250, 250, 0.3);
   border-radius: 4px;
 }
 
@@ -141,7 +165,7 @@
     padding: 0 2.5rem;
     border: solid 1px #dfe3e6;
     text-align: center;
-    height: 13rem;
+    min-height: 13rem;
     margin-bottom: 2rem;
     background-color: rgba(250, 250, 250, 0.3);
     padding-top: 1rem;
@@ -156,7 +180,7 @@
     padding: 0 2.5rem;
     border: solid 1px #dfe3e6;
     text-align: center;
-    height: 16.5rem;
+    /* height: 16.5rem; */
     margin-bottom: 2rem;
     background-color: rgba(250, 250, 250, 0.3);
     padding-top: 1rem;
@@ -167,25 +191,25 @@
 @media (max-width: 586px) {
   .homepage__links__section__item {
     max-width: 100%;
-    padding: 0 2.5rem;
     border: solid 1px #dfe3e6;
     text-align: center;
-    height: 19rem;
     margin-bottom: 2rem;
     background-color: rgba(250, 250, 250, 0.3);
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+  .homepage__button {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+    display: block;
   }
 }
 
 @media (max-width: 553px) {
   .homepage__links__section__item {
     max-width: 100%;
-    padding: 0 2.5rem;
     border: solid 1px #dfe3e6;
     text-align: center;
-    height: 12rem;
-    margin-bottom: 2rem;
     background-color: rgba(250, 250, 250, 0.3);
     padding-top: 1rem;
   }
