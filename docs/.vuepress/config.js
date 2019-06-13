@@ -18,7 +18,7 @@ module.exports = {
       { text: "CLI", link: "/home/espercli.md" },
       { text: "API", link: "https://esper-io.github.io/esper-api-spec/" },
       { text: "Blog", link: "https://blog.esper.io" },
-      { text: "Product Documentation", link: "https://consoledocs.esper.io" }
+      { text: "Product Documentation", link: "/home/devconsole/" }
     ],
     docsRepo: "esper-io/dev-docs",
     docsDir: "docs",
@@ -35,10 +35,10 @@ module.exports = {
         "pythonsdk",
         "espercli",
         "api",
+        ["devconsole/", "Dev Console"],
         "tutorials",
         "support",
-        "faq",
-        ["devconsole/", "Dev Console"],
+        "faq"
       ]
     },
     displayAllHeaders: false
