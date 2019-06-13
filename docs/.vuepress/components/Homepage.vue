@@ -31,7 +31,7 @@
         <div class="homepage__a">Esper Plugin for Android Studio</div>
         <p>Plugin extending Android Studio with Esper Tools</p>
       </a>
-      <a href="https://consoledocs.esper.io/" class="homepage__links__section__item homepage__links__section__item2">
+      <a href="/home/devconsole/" class="homepage__links__section__item homepage__links__section__item2">
         <div style="padding-bottom: 1rem"><img src="./icons/EsperConsoleIcon.svg" alt='console'/></div>
         <div class="homepage__a">Esper Console</div>
         <p>Using the Esper Console: Esper Dev & Esper Manage</p>
