@@ -10,29 +10,46 @@ Please set up a Device Template before performing the provisioning process.
 
 The steps for ADB Provisioning are as follows:
 
-1.  Factory reset the device
+1.  Factory reset the device. To find the steps to factory reset your device click here.
 2.  Download the esper\_setup.py file to your development computer from here.
-3.  Make sure your development computer has Python 3.6 or above installed.
-4.  Connect your Android device to your computer via USB.
-5.  Do the following steps on the device:
-    1.  Connect to the Internet.
-    2.  Go to the build number under system settings then tap 6 times to enable developer options.
-    3.  Go to developer options and enable USB debugging.
-    4.  Click on the Authorization Dialog box on Android device.
-    5.  Run the [attached script](../imei-or-serial-number-based-provisioning/general-android-users/esper-python-script/index.md) on your Desktop/Laptop with Python.
-    6.  This will first download the ADB tools from the Internet.
-    7.  Then it will download the Esper DPC from Esper Cloud.
-    8.  It will then install the DPC App on the device and assign any required permissions.
-    9.  After installation, the QR Code Scanner will be opened up on the device.
+3.  Make sure your development computer has Python 3.6 or above installed, and the computer is connected to the Internet.
+4.  Do the following steps on the device:
+     a. Connect to the device to the Internet via either Cellular or Wi-Fi
+     b. Go to the Home screen and tap the Menu button, select the About Phone option, and select the Build number. Then tap the build number 6 times to enable developer options.
+     ![](
+     
+     c. Now go back to Settings, and under the Developer options entry select turn on Debugging and then USB debugging.
+     
+     d. Connect your Android device to your development computer via USB.
+     
+     e. Click on the Authorization Dialog box on Android device.
+     
+     f. Run the esper_setup.py script on your development computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
+     
+     g. The Esper Device Management app will then install on the device and assign any permissions required
+     
+     h.  After installation, the QR Code Scanner will be opened up on the device
+     
+Steps on Cloud Portal
 
-6. Open up a previously created Device Template on the Esper Console.
+Choose a Device Template to generate a QR code. If there are no saved Device Templates, create a Device Template
 
-7. Scan the template QR Code on to the device.
 
-8. Click 'Resolve' on the device's dialog box to give the Esper Device Management App system permissions.
+Using ADB Provisioning to provision a Non-GMS/GMS device:
 
-9. The device will then complete provisioning.
+6. Scan the QR code generated from the cloud portal
 
+7. Give permission for the Esper Device Manage app to modify system settings and continue provisioning, click RESOLVE
+
+8. Grant permission for the Esper Device Management app to modify system settings by navigating to the Settings app, Apps & notifications, 
+Permissions. Choose Esper Device Management and move the slider swich to Allow modify system settings.
+
+9. The Esper Device Manage app (DPC) will be installed.
+
+The device is now provisioned according to the selected Device Template
+     
+     
+     
 If you are still facing issues with ADB Provisioning, please contact us at help@esper.io.
 
 [Return to Provision Device](../index.md)
