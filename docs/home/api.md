@@ -11,12 +11,16 @@ The client needs to send authentication details to access the Esper APIs by gene
 
 Once you have the access token, you need to send an authorization header as below
 
-```sh
+<div class="language-sh">
+<pre>
+<code>
     curl -X GET \
-    https://foo.shoonyacloud.com/api/enterprise/<enterprise_id>/device/ \
-    -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+    https://{{ esper_tenant_name }}-api.shoonyacloud.com/api/enterprise/:enterprise_id/device/ \
+    -H 'Authorization: Bearer ACCESS_TOKEN' \
     -H 'Content-Type: application/json' \
-```
+</code>
+</pre>
+</div>
 
 > Please note the use of keyword **Bearer** before the token value.
 

@@ -4,6 +4,7 @@ module.exports = {
   description: "Esper documentation",
   plugins: ["vuepress-plugin-reading-time", "@vuepress/back-to-top"],
   themeConfig: {
+    esper_tenant_name: 'foo',
     serviceWorker: {
       updatePopup: true // Boolean | Object, default to undefined.
     },

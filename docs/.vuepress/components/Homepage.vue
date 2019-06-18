@@ -234,3 +234,11 @@
   color: #4e6e8e;
 }
 </style>
+
+<script>
+let params = (new URL(document.location)).searchParams;
+let name = params.get('esper_tenant_name');
+if(name) {
+  document.cookie = `esper_tenant_name=${name}`
+}
+</script>
