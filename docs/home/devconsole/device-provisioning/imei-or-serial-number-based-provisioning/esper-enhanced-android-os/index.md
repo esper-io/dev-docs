@@ -2,18 +2,28 @@
 
 May 13, 2019
 
-IMEI provisioning if your device is running Esper Enhanced Android.
+#### On the Cloud Portal
 
-In the Esper Console create a Device template then edit the same template and go to ‘Add devices’ to upload the required IMEI csv file. Update the template. See additional details below:
+IMEI provisioning steps if your device is running Esper Enhanced Android-
+
+1. In the Esper Console create a Device template then edit the same template.
+
+2. Go to ‘Add devices’ to upload the required IMEI csv file or by individual IMEI or Serial Numbers. 
+Update the template.
 
 [Creating a Template with IMEI](../../../device-template/imei-provisioning-template/index.md)
 
-On the device with Zero Touch Provisioning:
+#### On the Device 
+Zero Touch Provisioning:
 
-Ideally you should see true zero touch provisioning on your device which means you should be able to boot the device and it will then be provisioned by Esper according to your Device template. The template should provide the known Wi-Fi SSID for Esper Enhanced Android, and the rest of provisioning is taken care of.
+Ideally you should see true zero touch provisioning on your devices for which the imei or serial numbers was uploaded on the template. You should be able to boot the device and watch it get provisioned automatically by Esper according to your Device template. 
+
+If the customer has known Wi-Fi in the deployment field, it can be baked in the Esper Enhanced Android OS. 
 
 If the Wi-Fi SSID set in the Device template is unavailable:
 
-If the Wi-Fi SSID cannot be found you must select the option to manually connect to Wi-Fi and complete the process to connect to the access point. The rest of the Zero Touch Provisioning process then commences .
+If the Wi-Fi SSID cannot be found an option to manually connect to Wi-Fi will appear. Connecting to a network/wifi will then continue the provisioning process requiring no further input from user end.
+
+
 
 [Return to IMEI (or Serial number) based Provisioning](../index.md)
