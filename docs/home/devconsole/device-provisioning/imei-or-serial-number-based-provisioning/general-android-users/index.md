@@ -45,10 +45,22 @@ You will see the toast message ‘You are now a developer!':
 
 11\. Run the command 'python esper\_setup.py' to execute the script.
 
-12\. Allow USB debugging on the device, and then the DPC will be installed.
+![here](../../../images/script_1.png)
+
+12\. The permission to allow USB debugging on the device might pop up again. Click OK, and then the DPC will start getting installed.
+
+![here](../../../images/5_ADB.png)
 
 13\. Connect to an available Wi-Fi or data network on the device.
 
-14\. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
+14\. You might see a google message as follows. Click OK.
+
+![here](../../../images/9_PD.png)
+
+15\. Give permission to DPC to change system settings.
+
+![here](../../../images/10_PD.png)
+
+16\. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
 
 [Return to IMEI (or Serial number) based Provisioning](../index.md)
