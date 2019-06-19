@@ -46,16 +46,23 @@ The steps for ADB Provisioning are as follows:
 Steps on Cloud Portal
 
 Choose a Device Template to generate a QR code. If there are no saved Device Templates, create a Device Template
-
+ 
+ ![here](../../images/temp_1.png)
 
 Using ADB Provisioning to provision a Non-GMS/GMS device:
 
 6. Scan the QR code generated from the cloud portal
 
+ ![here](../../images/1_PD.png)
+
 7. Give permission for the Esper Device Manage app to modify system settings and continue provisioning, click RESOLVE
+
+![here](../../images/10_PD.png)
 
 8. Grant permission for the Esper Device Management app to modify system settings by navigating to the Settings app, Apps & notifications, 
 Permissions. Choose Esper Device Management and move the slider swich to Allow modify system settings.
+
+![here](../../images/11_PD.png)
 
 9. The Esper Device Manage app (DPC) will be installed.
 
