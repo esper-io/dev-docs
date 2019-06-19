@@ -29,11 +29,19 @@ The steps for ADB Provisioning are as follows:
      
      e. Click on the Authorization Dialog box on Android device.
      
+      ![here](../../images/3_ADB.png)
+     
      f. Run the esper_setup.py script on your development computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
+     
+      ![here](../../images/script_1.png)
+     
      
      g. The Esper Device Management app will then install on the device and assign any permissions required
      
      h.  After installation, the QR Code Scanner will be opened up on the device
+     
+     ![here](../../images/1_PD.png)
+     
      
 Steps on Cloud Portal
 
