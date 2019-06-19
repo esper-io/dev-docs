@@ -16,7 +16,8 @@ The steps for ADB Provisioning are as follows:
 4.  Do the following steps on the device:
      a. Connect to the device to the Internet via either Cellular or Wi-Fi
      b. Go to the Home screen and tap the Menu button, select the About Phone option, and select the Build number. Then tap the build number 6 times to enable developer options.
-     ![](
+     
+     ![here](../../images/1_ADB_a.png)
      
      c. Now go back to Settings, and under the Developer options entry select turn on Debugging and then USB debugging.
      
