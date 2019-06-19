@@ -8,7 +8,11 @@ IMEI or Serial number of devices to be provisioned need to be added to the relev
 
 See steps on how to [create a template](../index.md).
 
-After creating a template, click on Edit template. During editing, you also see the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section "Add devices" that appears during edit just before Preview section. Using this "Add devices" section, user can either enter IMEI/Serial numbers or upload Csv file with IMEI and Serial numbers.
+After creating a template, click on Edit template. 
+
+![here](../../images/temp_2.png)
+
+During editing, you also see the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section "Add devices" that appears during edit just before Preview section. Using this "Add devices" section, user can either enter IMEI/Serial numbers or upload Csv file with IMEI and Serial numbers.
 
 The user can enter IMEI numbers and Serial numbers in the text box and click Add.
 
