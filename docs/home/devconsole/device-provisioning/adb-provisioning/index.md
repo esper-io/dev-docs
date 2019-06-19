@@ -43,7 +43,7 @@ The steps for ADB Provisioning are as follows:
      ![here](../../images/1_PD.png)
      
      
-Steps on Cloud Portal
+#### Steps on Cloud Portal
 
 Choose a Device Template to generate a QR code. If there are no saved Device Templates, create a Device Template
  
