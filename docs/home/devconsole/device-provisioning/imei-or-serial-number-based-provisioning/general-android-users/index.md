@@ -57,10 +57,14 @@ You will see the toast message ‘You are now a developer!':
 
 ![here](../../../images/9_PD.png)
 
-15\. Give permission to DPC to change system settings.
+15\. Give permission to DPC to change system settings by Clicking Resolve.
 
 ![here](../../../images/10_PD.png)
 
-16\. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
+16\. Turn on the toggle button to Allow changes to System Settings.
+
+![here](../../../images/11_PD.png)
+
+17\. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
 
 [Return to IMEI (or Serial number) based Provisioning](../index.md)
