@@ -14,7 +14,9 @@ The steps for ADB Provisioning are as follows:
 2.  Download the esper\_setup.py file to your development computer from here.
 3.  Make sure your development computer has Python 3.6 or above installed, and the computer is connected to the Internet.
 4.  Do the following steps on the device:
+
      a. Connect to the device to the Internet via either Cellular or Wi-Fi
+     
      b. Go to the Home screen and tap the Menu button, select the About Phone option, and select the Build number. Then tap the build number 6 times to enable developer options.
      
      ![here](../../images/1_ADB_a.png)
