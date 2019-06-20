@@ -25,16 +25,78 @@ Remember to put the @  before the avd name. Currently the avd uses the system im
 
 We will now proceed to placing the Esper provided images instead of the images downloaded by Android Studio's AVD manager. This would allow you to test your apps quickly with Esper provided services in a convenient manner.
 
+## Downloading the system images
+
+You can download the system images from [here](s3://shoonya-os-builds/builds/EsperAVD/41/EsperAVD-41.tar.gz). Once you have downloaded the image unzip it. You need to replace the files over the previous AVD files that were created for you by avdmanager.
+
 ## Integrating your system images
 
 Integrating the system images requires a few extra configuration files. We need to keep track of two folders that android studio uses to organise the sdk and configurations.
 
 - sdk folder - This folder stores the android sdk and sdk tools. The sdk tools are command line tools that we would extensively use as it provides better feedback, options and debugging capabilities. The GUI is lacking at many places in this regard. You can find the sdk folder in mac in /Users/\<user-name\>/Library/Android/sdk and in C:\Users\\<user-name\>\AppData\Local\Android\sdk in Windows. You can check android studio preferences > Appearance and Behaviour > System Settings > Android SDK and you can find the sdk location mentioned there.
-- .android folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behaviour you have to tinker with the files here. You can find this folder in your home directory in windows, linux and mac. 
+- .android folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behaviour you have to tinker with the files here. You can find this folder in your home directory in windows, linux and mac.
 You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system-qemu.img, vendor-qemu.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Rename your system-qemu.img to system.img and vendor-qemu.img to vendor.img. Place your andvancedFeatures.ini, build.prop, Notice.txt and package.xml config files in the folder as well.
 
-In your .android folder go to avd > esper.avd. Place the AVD.conf, config.ini, emu-launch-params.txt file here. Make sure in your config.ini image.sysdir.1 is set to point to the correct system image dirtectory in the sdk folder. For my mac at present it is set to image.sysdir.1=system-images/android-28/esper/x86_64/. Make sure you have it correctly set too.
+You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system.img, vendor.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Place your andvancedFeatures.ini, Notice.txt and build.prop config files in the folder as well.
 
-Now from the command line in your tools directory start the emulator using the command 
+In your .android folder go to avd > esper.avd. Place the AVD.conf file here.
 
-./emulator @esper
+## Editing the Config.ini
+
+The Config.ini file is responsible for how the emulator behaves. Here is a sample config to get you started.
+
+```text
+AvdId=Esper
+PlayStore.enabled=false
+abi.type=x86_64
+avd.ini.encoding=UTF-8
+disk.dataPartition.size=800M
+fastboot.chosenSnapshotFile=
+fastboot.forceChosenSnapshotBoot=no
+fastboot.forceColdBoot=no
+fastboot.forceFastBoot=yes
+hw.accelerometer=yes
+hw.arc=false
+hw.audioInput=yes
+hw.audioOutput=yes
+hw.battery=yes
+hw.camera.back=virtualscene
+hw.camera.front=emulated
+hw.cpu.arch=x86_64
+hw.cpu.ncore=4
+hw.dPad=no
+hw.device.hash2=MD5:ae200ad6786ec467cb9067f7b46b0fd1
+hw.device.manufacturer=Google
+hw.device.name=Nexus 5X
+hw.gps=yes
+hw.gpu.enabled=yes
+hw.gpu.mode=auto
+hw.initialOrientation=Portrait
+hw.keyboard=yes
+hw.lcd.density=420
+hw.lcd.height=1920
+hw.lcd.width=1080
+hw.mainKeys=no
+hw.ramSize=1536
+hw.sdCard=yes
+hw.sensors.orientation=yes
+hw.sensors.proximity=yes
+hw.trackBall=no
+image.sysdir.1=s<please-specify-system-images-directory>
+runtime.network.latency=none
+runtime.network.speed=full
+sdcard.size=512M
+showDeviceFrame=yes
+skin.dynamic=yes
+tag.display=Google APIs
+tag.id=google_apis
+vm.heapSize=228
+```
+
+Make sure in your config.ini image.sysdir.1 is set to point to the correct system image dirtectory in the sdk folder. For my mac at present it is set to image.sysdir.1=system-images/android-28/esper/x86_64/. Make sure you have it correctly set too.
+
+## Testing the AVD
+
+You are mostly done. Now from the command line in your tools directory start the emulator using the command.
+
+```./emulator @esper```
