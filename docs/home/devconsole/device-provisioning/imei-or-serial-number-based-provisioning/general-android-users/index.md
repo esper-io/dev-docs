@@ -37,28 +37,26 @@ You will see the toast message ‘You are now a developer!':
 
 7\. Open a command prompt on your development computer.
 
-8\. Change to the directory where esper\_setup.py was downloaded.
-
 9\. [Download](docs/home/devconsole/device-provisioning/adb-provisioning/downloadexecutable.md) and run the esper-provisioner executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
 
-10\. The permission to allow USB debugging on the device might pop up again. Click OK, and then the DPC will start getting installed.
+9\. The permission to allow USB debugging on the device might pop up again. Click OK, and then the DPC will start getting installed.
 
 ![here](../../../images/5_ADB.png)
 
-11\. Connect to an available Wi-Fi or data network on the device.
+10\. Connect to an available Wi-Fi or data network on the device.
 
-12\. You might see a google message as follows. Click OK.
+11\. You might see a google message as follows. Click OK.
 
 ![here](../../../images/9_PD.png)
 
-13\. Give permission to DPC to change system settings by Clicking Resolve.
+12\. Give permission to DPC to change system settings by Clicking Resolve.
 
 ![here](../../../images/10_PD.png)
 
-14\. Turn on the toggle button to Allow changes to System Settings.
+13\. Turn on the toggle button to Allow changes to System Settings.
 
 ![here](../../../images/11_PD.png)
 
-15\. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
+14\. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
 
 [Return to IMEI (or Serial number) based Provisioning](../index.md)
