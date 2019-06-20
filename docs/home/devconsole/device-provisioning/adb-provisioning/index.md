@@ -31,7 +31,7 @@ The steps for ADB Provisioning are as follows:
      
       ![here](../../images/3_ADB.png)
      
-     f. [Download](docs/home/devconsole/device-provisioning/adb-provisioning/downloadexecutable.md) and run the esper-provisioner executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
+     f. [Download and run the esper-provisioner](downloadexecutable.md) executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
      
      
      g. The Esper Device Management app will then install on the device and assign any permissions required
