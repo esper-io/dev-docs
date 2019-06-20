@@ -8,7 +8,7 @@ Steps on the device for using AfW provisioning.
 
 The device to be provisioned needs to be prepared via the following steps:
 
-*   Factory Reset your device, the click 'Start':
+*   [Factory Reset your device](../../howtofactoryreset.md), the click 'Start':
 
 ![Provision Device](https://documentation-media.s3.amazonaws.com/images/1_ProD.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
