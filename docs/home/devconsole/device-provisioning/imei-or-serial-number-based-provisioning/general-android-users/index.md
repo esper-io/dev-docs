@@ -37,7 +37,7 @@ You will see the toast message ‘You are now a developer!':
 
 7\. Open a command prompt on your development computer.
 
-9\. [Download](docs/home/devconsole/device-provisioning/adb-provisioning/downloadexecutable.md) and run the esper-provisioner executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
+8\. [Download](docs/home/devconsole/device-provisioning/adb-provisioning/downloadexecutable.md) and run the esper-provisioner executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
 
 9\. The permission to allow USB debugging on the device might pop up again. Click OK, and then the DPC will start getting installed.
 
