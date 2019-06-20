@@ -8,7 +8,7 @@ Device-side steps for the 6-tap provisioning method.
 
 The device to be provisioned needs to be prepared via the following steps:
 
-*   Factory Reset your device, choose your language, and then tap 6 times on the screen:
+*   [Factory Reset your device](../../howtofactoryreset.md), choose your language, and then tap 6 times on the screen:
 
 ![Provision Device](https://documentation-media.s3.amazonaws.com/images/1_ProD.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
