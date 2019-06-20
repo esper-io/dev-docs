@@ -64,7 +64,7 @@ If you don't have a camera or you don't want to use QR code, Download the config
 ![here](../../images/10_PD.png)
 
 8. Grant permission for the Esper Device Management app to modify system settings by navigating to the Settings app, Apps & notifications, 
-Permissions. Choose Esper Device Management and move the slider swich to Allow modify system settings.
+Permissions. Choose Esper Device Management and move the slider switch to Allow modify system settings.
 
 ![here](../../images/11_PD.png)
 
