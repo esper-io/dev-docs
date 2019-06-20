@@ -43,9 +43,7 @@ You will see the toast message ‘You are now a developer!':
 
 10\. Change to the directory where esper\_setup.py was downloaded.
 
-11\. Run the command 'python esper\_setup.py' to execute the script.
-
-![here](../../../images/script_1.png)
+11\. [Download](docs/home/devconsole/device-provisioning/adb-provisioning/downloadexecutable.md) and run the esper-provisioner executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud
 
 12\. The permission to allow USB debugging on the device might pop up again. Click OK, and then the DPC will start getting installed.
 
