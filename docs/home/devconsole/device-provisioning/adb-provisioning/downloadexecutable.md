@@ -17,5 +17,8 @@ Esper-Provisioner executable downloaded above.
 Esper-Provisioner executable downloaded above.
 3. Open command prompt by pressing Command + Space to launch Spotlight and type "Terminal".
 4. Go to the folder where the executable was downloaded. For example if you downloaded it in "Downloads", run "cd Downloads" from root.
-5. Run the following command - "esper-device-provisioner-macos -rc beta" after connecting and enabling USB debugging on the device. See instructions on how to enable USB debugging [here](../index.md). 
+
+5. Run the following command - "chmod +x esper-device-provisioner-macos"
+
+6. Run the following command - "./esper-device-provisioner-macos -rc prod" after connecting and enabling USB debugging on the device. See instructions on how to enable USB debugging [here](../index.md). 
 
