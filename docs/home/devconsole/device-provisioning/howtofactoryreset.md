@@ -1,4 +1,4 @@
-1. Go to Settings Menu\
+1. Go to Settings Menu
   
  
 2. Select System
