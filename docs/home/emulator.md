@@ -4,14 +4,17 @@
 
 Esper developer platform provides you a customized Emulator images based on x86 platform that allows you to get on board on the esper platform with zero touch. You can register your emulator serial number or IMEI number on to the tempate of your choice to which you want to onboard your device and re-start the simulator. On boot emulator device will get enrolled to your platform automatically and you can start accessing and take actions using the esper cloud dashboard.
 
+## Pre-requisites
+
+Before you start with this guide, make sure you have Android Studio installed.
+
 ## Getting started with the Esper emulator
 
-Ensure you have android studio installed and the android SDK in place and also downloaded the esper plugin for android studio.
-Open Android Studio and open Android Virtual Device Manager (tools > AVD manager). On the AVD manager click the create new virtual device. In the window that opens up choose pixel 3 (or any other phone) without play store. In the select a system image dialog box, choose the x86 images tab and select the esper system image.  Click next and then finish. Test if the emulated device is working fine from the AVD manager. Close after ensuring everything is working as expected.
+Open Android Studio and open Android Virtual Device Manager (tools > AVD manager). On the AVD manager click the create new virtual device. In the window that opens up choose pixel 3 (or any other phone) without play store.
 
 ## Creating the AVD from the command line
 
-We will create our avd from command line so that the sdk tools generate the proper directories and configurations for us. To do this browse to the sdk tools folder (Usually in ~/Library/Android/sdk/tools).Go to the bin directory. You should see the avdmanager command line executable here. Use the following command to create the esper avd.
+We will create our avd from command line so that the sdk tools generate the proper directories and configurations for us. To do this browse to the sdk tools folder (Usually in ~/Library/Android/sdk/tools or C:\Users\\<username\>\AppData\Local\Android\Sdk on Windows).Go to the bin directory. You should see the avdmanager command line executable here. Use the following command to create the esper avd.
 
 ```./avdmanager create avd -n esper -k "system-images;android-28;default;x86_64"```
 
@@ -27,7 +30,7 @@ We will now proceed to placing the Esper provided images instead of the images d
 
 ## Downloading the system images
 
-You can download the system images from [here](s3://shoonya-os-builds/builds/EsperAVD/41/EsperAVD-41.tar.gz). Once you have downloaded the image unzip it. You need to replace the files over the previous AVD files that were created for you by avdmanager.
+You can download the [system images from here](https://shoonya-os-builds.s3-us-west-2.amazonaws.com/builds/EsperAVD/42/EsperAVD-42.tar.gz). Once you have downloaded the image unzip it. You need to replace the files over the previous AVD files that were created for you by avdmanager.
 
 ## Integrating your system images
 
