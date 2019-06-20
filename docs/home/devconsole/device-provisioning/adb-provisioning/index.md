@@ -10,7 +10,7 @@ Please set up a Device Template before performing the provisioning process.
 
 The steps for ADB Provisioning are as follows:
 
-1.  Factory reset the device. To find the steps to factory reset your device click here.
+1.  [Factory reset the device](../howtofactoryreset.md). To find the steps to factory reset your device click here.
 2.  Download the esper\_setup.py file to your development computer from here.
 3.  Make sure your development computer has Python 3.6 or above installed, and the computer is connected to the Internet.
 4.  Do the following steps on the device:
