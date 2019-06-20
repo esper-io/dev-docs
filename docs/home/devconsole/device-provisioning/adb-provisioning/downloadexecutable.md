@@ -2,7 +2,7 @@
 
 1. Click [here](../../esper_provisioner_windows.exe) to download the Windows Executable.
 2. After downloading, click on the small arrow next to download and select "Keep".\
-  a. Do this step for IMEI provisioning for non-Esper devices. [Download the config.json file]. This file needs to be edited for changing the username and password that you have setup for your Esper endpoint. Also, if you enter the wifi information, it will enable the device to connect to wifi automatically. Place this file in the same folder as the 
+  a. Do this step for IMEI provisioning for non-Esper devices. [Download the config.json file](../Executables/config.json). This file needs to be edited for changing the username and password that you have setup for your Esper endpoint. Also, if you enter the wifi information, it will enable the device to connect to wifi automatically. Place this file in the same folder as the 
 Esper-Provisioner executable downloaded above.
 3. Open command prompt. Click the "Start >> Program Files >> Accessories >> Command Prompt".
 4. Go to the folder where the executable was downloaded. For example if you downloaded it in "Downloads", run "cd Downloads" from root.
