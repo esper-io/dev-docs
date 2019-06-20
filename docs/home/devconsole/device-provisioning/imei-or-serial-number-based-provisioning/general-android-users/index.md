@@ -35,19 +35,27 @@ You will see the toast message ‘You are now a developer!':
 
 6\. Connect your Android device to your development computer via USB.
 
-7\. Make sure your development computer has access to the Internet and has Python 3.6 or above installed.
+7\. Open a command prompt on your development computer.
 
-8\. Download the esper\_setup.py script from [here](esper-python-script/index.md).
+8\. [Download the esper-provisioner](../../adb-provisioning/downloadexecutable.md) executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud. The config file for imei will need to be placed in the same folder as the executable.
 
-9\. Open a command prompt on your development computer.
+9\. The permission to allow USB debugging on the device might pop up again. Click OK, and then the DPC will start getting installed.
 
-10\. Change to the directory where esper\_setup.py was downloaded.
+![here](../../../images/5_ADB.png)
 
-11\. Run the command 'python esper\_setup.py' to execute the script.
+10\. Connect to an available Wi-Fi or data network on the device.
 
-12\. Allow USB debugging on the device, and then the DPC will be installed.
+11\. You might see a google message as follows. Click OK.
 
-13\. Connect to an available Wi-Fi or data network on the device.
+![here](../../../images/9_PD.png)
+
+12\. Give permission to DPC to change system settings by Clicking Resolve.
+
+![here](../../../images/10_PD.png)
+
+13\. Turn on the toggle button to Allow changes to System Settings.
+
+![here](../../../images/11_PD.png)
 
 14\. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
 
