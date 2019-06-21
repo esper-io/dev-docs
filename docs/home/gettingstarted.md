@@ -5,6 +5,7 @@
 1. **Esper Developer Trial** 
 
 First Step to begin your development is to create a developer account 
+<br>
 Sign up for the Esper Dev Trial using the Link [Singup](www.esper.io/signup) .
 
 During the signup process you will set up your environment name. Once your environment is set you can login to your account on `{{ esper_env_name }}.shoonyacloud.com` where “{{ esper_env_name }}” is your chosen environment name giving you access to both the Esper Dev Console. 
