@@ -4,13 +4,13 @@
 
 1. **Esper Developer Trial** 
 
-First step to start developing with esperis to create a developer account. Sign up for the Esper Developer trial using the link [Singup](www.esper.io/signup) .
+First step to start developing with esper is to create a developer account. Sign up for the Esper Developer trial using the link [Singup](www.esper.io/signup) .
 
 During the signup process you will set up your environment name. Once your environment is set you can login to your account on `{{ esper_env_name }}.shoonyacloud.com` where “{{ esper_env_name }}” is your chosen environment name giving you access to both the Esper Dev Console. 
   
 2. **Target Device**  
  
-Any Android device can act as a targete devices for your your application. Esper tools enable you to communicate with your target device enabling you to deploy and test your application.  
+Any Android device can act as a target devices for your your application. Esper tools enable developers to communicate with your target device enabling them to deploy and test the application on the actual device.  
 
 Esper will be soon launching Developer Kits and Virtual device emulators  
 
