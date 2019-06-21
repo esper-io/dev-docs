@@ -14,9 +14,9 @@
 
   Esper will be soon launching Developer Kits and Virtual device emulators  
 
-  .[DevKits](./module/devkits.md)
+  [DevKits](./module/devkits.md)
 
-  .[DeviceEmulators](./module/emulator.md)
+  [DeviceEmulators](./module/emulator.md)
 
 3. **Device template** 
 
