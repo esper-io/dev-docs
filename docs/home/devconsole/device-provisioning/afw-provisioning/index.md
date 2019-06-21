@@ -1,8 +1,6 @@
-[Provision Device](../index.md) / AfW Provisioning
+[Provision Device](../index.md) / AFW Provisioning
 
 #### AFW Provisioning
-
-June 6, 2019
 
 AFW (Android for Work) Provisioning.
 

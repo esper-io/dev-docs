@@ -21,13 +21,13 @@
 3. **Device template** 
 
   Next step in the development process is to create a Device Template where you define the initial profile for your device specificing the configuration, apps to be loaded , and settings to be applied.Once the device template is create a device is then provisioned using the  Device Template.
-  See [Creating a device template](/home/devconsole/device-template/)
+  See [Creating a device template](./devconsole/device-template/index.md)
 
 4. **Device Provisioning** 
 
   Inorder for the Esper developer tools and console to communicate with your target device, the device needs to be provisioned. By provioning Esper devcie agent is installed on the device. 
 
-See [Provisioning a device](/home/devconsole/device-provisioning/)
+See [Provisioning a device](./devconsole/device-provisioning/index.md)
 
 5. **Start Developing** 
 
