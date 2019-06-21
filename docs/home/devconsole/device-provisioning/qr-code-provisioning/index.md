@@ -1,14 +1,14 @@
 [Provision Device](../index.md) / 6-Tap Provisioning
 
-#### 6-Tap Provisioning
+#### QR Code Provisioning 
 
 June 6, 2019
 
-This page describes how user can provision their devices using the 6-tap method.
+This page describes how user can provision their devices using the QR Code Method.
 
-Below are the steps for the 6-tap provisioning method:
+Similar to the AFW method, the device needs to be prepared for provisioning by bringing up the QR code scanner.
 
-Similar to the AfW method, the device needs to be prepared for provisioning by bringing up the QR code scanner. A QR code is generated in the Esper Console using a [Device Template](../../device-template/index.md). It is scanned using the device to complete the provisioning.
+A QR code is generated in the Esper Console using a [Device Template](../../device-template/index.md). It is scanned using the device to complete the provisioning.
 
 Follow the below two steps to provision a device:
 
