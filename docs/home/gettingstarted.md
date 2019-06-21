@@ -32,9 +32,10 @@
 5. **Start Developing** 
 
      As you being your Android application development on Android Studio, you can start using Esper APIs to deploy and test your application on your target device. Try the Esper CLI by downloading directly from GitHub and installing it on your system. Explore the Web-based Esper Dev Console and Esper Manage Dashboard on the Esper Cloud using your Esper Dev Console account, or access the Esper APIs using one of the method mentioned below
-       - If you are calling the Esper APIs using `HTTP`, see the Esper [ API Reference v1](https://api.esper.io)
-       - If you are using the Python SDK in Android Studio to call the Esper APIs using the Esper SDK, see [Esper SDK](./pythonsdk.md)
-       - Download the Command line tool, Esper CLI with full source code, to work the Esper APIs. Download the Esper CLI [Esper CLI](./espercli.md)
+
+       * If you are calling the Esper APIs using `HTTP`, see the Esper [ API Reference v1](https://api.esper.io)
+       * If you are using the Python SDK in Android Studio to call the Esper APIs using the Esper SDK, see [Esper SDK](./pythonsdk.md)
+       * Download the Command line tool, Esper CLI with full source code, to work the Esper APIs. Download the Esper CLI [Esper CLI](./espercli.md)
 
 ## Quick links
 
