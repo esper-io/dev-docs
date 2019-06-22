@@ -2,8 +2,6 @@
 
 #### ADB Provisioning
 
-June 6, 2019
-
 ADB Provisioning for Non-GMS and GMS devices
 
 Please set up a Device Template before performing the provisioning process.
