@@ -7,7 +7,7 @@ AFW (Android for Work) Provisioning.
 Android devices that have Google Mobile Services (Gmail, Google Account ) can be provisioned into Esper management console using AFW provisioning method. 
 To being provisioning device needs to be factory reset. 
 
-In the Esper Console, a device tempalte needs to be created 
+In the Esper Console, a device template needs to be created 
 
 *   Go to "Provision device" tab.
 *   Choose the "Device template". If you do not have a saved "Device template", create a [Device Template](../../../device-template/index.md).
