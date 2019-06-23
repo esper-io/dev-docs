@@ -1,6 +1,7 @@
 # Esper Emulator
 
- Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can hugely boost your workflow.
+
+Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can hugely boost your workflow.
 
 Esper developer platform provides you a customized Emulator images based on x86 platform that allows you to get on board on the esper platform with zero touch. You can register your emulator serial number or IMEI number on to the tempate of your choice to which you want to onboard your device and re-start the simulator. On boot emulator device will get enrolled to your platform automatically and you can start accessing and take actions using the esper cloud dashboard.
 
@@ -103,3 +104,4 @@ Make sure in your config.ini image.sysdir.1 is set to point to the correct syst
 You are mostly done. Now from the command line in your tools directory start the emulator using the command.
 
 ```./emulator @esper```
+
