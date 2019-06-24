@@ -63,7 +63,7 @@
         <p>Find out the latest about Esper on our Blog</p>
       </a>
     </div>
-    <div class="homepage__footer">Apache 2.0 | Copyright © 2019 Shoonya Enterprises Inc</div>
+    <div class="homepage__footer">Apache 2.0 | 2019 (C) Esper</div>
   </div>
 </template>
 

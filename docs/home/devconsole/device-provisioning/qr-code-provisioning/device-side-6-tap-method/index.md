@@ -1,4 +1,4 @@
-[6-Tap Provisioning](../index.md) / Steps to take on the Device for 6-Tap Provisioning
+[QR Code Provisioning](../index.md) / Steps to take on the Device for 6-Tap Provisioning
 
 #### Steps to take on the Device for 6-Tap Provisioning
 
