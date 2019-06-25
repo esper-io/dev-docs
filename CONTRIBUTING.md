@@ -11,7 +11,7 @@ This section guides you through submitting a bug report for Esper docs. Followin
 ### Running on Esper docs on your local machine
 
 1. First fork this repo `https://github.com/esper-io/dev-docs` and clone the same.
-2. Install [nodejs](https://nodejs.org/) and [yarn](https://yarnpkg.com/en/).
+2. Install [nodejs](https://nodejs.org/) (version v10.16.0 and above) and [yarn](https://yarnpkg.com/en/) (v1.16.0 or above).
 3. In the source directory run the following commands to get the docs running.
     ```
     $ yarn install
