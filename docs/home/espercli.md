@@ -6,13 +6,13 @@ Current stable release versions are
 
     API version: 1.0.0
     SDK version: 0.0.6
-    CLI version: 0.0.3
+    CLI version: 0.0.4
 
 ## Requirements
 
 1. **Python:** We recommend you use Python 3.6 or above.
 2. **An Esper Dev Account:** You need a free Esper Dev Trial account to create an environment and generate an Esper `SERVER URL`to talk to APIs. You will choose the `ENVIRONMENT NAME` that will then be assigned as your custom URL. When you complete the sign up process your private environment will be created. See [Requesting an Esper Dev Trial account](https://docs.esper.io/home/gettingstarted.html#setup). 
-3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Dev Console once you have set up your account. For example, the Esper Dev Console for your account can be accessed at `https://foo.shoonyacloud.com` if you choose the `ENVIRONMENT NAME` of “foo”. See [Generating an API Key](https://docs.esper.io/home/module/genapikey.html)
+3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Dev Console once you have set up your account. For example, the Esper Dev Console for your account can be accessed at `https://{{ esper_tenant_name }}.shoonyacloud.com` if you choose the `ENVIRONMENT NAME` of “{{ esper_tenant_name }}”. See [Generating an API Key](https://docs.esper.io/home/module/genapikey.html)
 
 ## Installation
 
@@ -512,12 +512,12 @@ $ espercli app list [OPTIONS]
 $ espercli app list -l 5
 Total Number of Applications: 76
 
-ID                                    NAME                PACKAGE NAME                    NO. OF VERSIONS
-d7131f72-17e4-40e9-bb9e-28f1fad1f623  ATID Reader         com.atid.app.atx                              1
-0c067884-8d72-41b5-9ed7-3e6f1f62d99d  Call Blocker        com.sappalodapps.callblocker                  1
-630dbfab-7d85-4f81-9f3b-ffb038b0df72  Root Checker Basic  com.joeykrim.rootcheck                        1
-4baf7157-9fee-4dc5-ab3a-81dc983d7332  Castle Clash        com.igg.castleclash                           1
-09368a1b-a9cd-45bc-8824-7190bc0f6b7e  WiFiAnalyzer        com.vrem.wifianalyzer                         1
+ID                                    NAME                PACKAGE NAME
+d7131f72-17e4-40e9-bb9e-28f1fad1f623  ATID Reader         com.atid.app.atx
+0c067884-8d72-41b5-9ed7-3e6f1f62d99d  Call Blocker        com.sappalodapps.callblocker
+630dbfab-7d85-4f81-9f3b-ffb038b0df72  Root Checker Basic  com.joeykrim.rootcheck
+4baf7157-9fee-4dc5-ab3a-81dc983d7332  Castle Clash        com.igg.castleclash
+09368a1b-a9cd-45bc-8824-7190bc0f6b7e  WiFiAnalyzer        com.vrem.wifianalyzer
 ```
 
 #### 2. show
@@ -544,7 +544,6 @@ developer
 category
 content_rating    0.0
 compatibility
-version_count     1
 ```
 
 #### 3. upload
@@ -628,7 +627,6 @@ developer
 category
 content_rating    0.0
 compatibility
-version_count     1
 ```
 Use this example for listing versions of current active app.
 ```sh
