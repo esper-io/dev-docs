@@ -2,7 +2,7 @@ module.exports = {
   base: "/",
   title: "Esper Docs",
   description: "Esper documentation",
-  plugins: ["vuepress-plugin-reading-time", "@vuepress/back-to-top"],
+  plugins: ["vuepress-plugin-reading-time", "@vuepress/back-to-top", '@vuepress/plugin-medium-zoom'],
   themeConfig: {
     esper_tenant_name: 'foo',
     serviceWorker: {

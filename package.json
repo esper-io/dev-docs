@@ -25,10 +25,11 @@
   },
   "homepage": "https://github.com/esper-io/dev-docs#readme",
   "dependencies": {
-    "vuepress": "1.0.1"
+    "@vuepress/plugin-medium-zoom": "^1.0.2",
+    "vuepress": "1.0.2"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "1.0.1",
+    "@vuepress/plugin-back-to-top": "1.0.2",
     "vuepress-plugin-reading-time": "0.1.1"
   }
 }
