@@ -1,5 +1,6 @@
 # Esper Virtual Device
 
+
 Virtual devices are a conventient means to target a device without having the available hardware, or when you do not want to risk breaking the actual hardware device. By trading off the lower performance of a virtual device, you gain a very capable and streamlined virtual device that can hugely boost your productivity during development and early testing.
 
 The Esper Android Tools provide a customized Esper Virtual Device (EVD) image based on the x86 platform allowing you to try out Esper Enhanced Android providing features such as Zero-touch enrollment. You can register your EVD serial number or IMEI number using an Esper Device Tempate of your choice and then re-start the EVD. On boot the EVD will then get enrolled to your Endpoint automatically and you can start accessing the EVD and take actions using the Esper Console or through our APIs, SDK, and CLI.
@@ -46,10 +47,12 @@ You can download the [system images from here](https://shoonya-os-builds.s3-us-w
 
 ## Integrating your system images
 
+
 Integrating the EVD system images requires a few extra configuration files. You will work with two folders that Android Studio uses to organise the SDK and configurations.
 
 - sdk folder - This folder stores the Android SDK and SDK tools. The SDK tools are command line tools provide better feedback, options and debugging capabilities. The Android Studio GUI is lacking at many places in this regard. You can find the sdk folder in mac in /Users/\<user-name\>/Library/Android/sdk and in C:\Users\\<user-name\>\AppData\Local\Android\sdk in Windows. Alternatively you can check Android Studio Preferences > Appearance and Behaviour > System Settings > Android SDK where you can find the SDK folder location.
 - .android folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behaviour you have to modify the files here. You can find this folder in your home directory in Windows, Linux and Mac.
+
 You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system-qemu.img, vendor-qemu.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Rename your system-qemu.img to system.img and vendor-qemu.img to vendor.img. Place your andvancedFeatures.ini, build.prop, Notice.txt and package.xml config files in the folder as well.
 
 You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system.img, vendor.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Place your andvancedFeatures.ini, Notice.txt and build.prop config files in the folder as well.
@@ -114,4 +117,6 @@ Make sure in your config.ini image.sysdir.1 is set to point to the correct syst
 
 You will now have an EVD to target. From the command line in your tools directory start the EVD using the command:
 
+
 ```./emulator @esper```
+

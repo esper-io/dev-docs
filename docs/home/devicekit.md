@@ -1,2 +1,4 @@
 # Esper Device Kit
-Coming soon...
+
+
+Esper will be launching Android developer kits shortly. 
