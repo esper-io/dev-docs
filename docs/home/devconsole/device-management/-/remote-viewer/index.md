@@ -1,6 +1,6 @@
-#### Remote Viewer
+[Introduction](../../../index.md) / [Devices](../../index.md) / [View More](../index.md) / Remote Viewer
 
-Jan. 15, 2019
+# Remote Viewer
 
 How to remotely view your device
 

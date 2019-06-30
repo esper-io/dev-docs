@@ -1,8 +1,7 @@
 [Introduction](../index.md) / Users
 
-#### Users
+# Users
 
-June 6, 2019
 
 Learn about Esper's User Management.
 

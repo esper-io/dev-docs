@@ -1,10 +1,9 @@
-#### Actions
-
-Jan. 15, 2019
+[Introduction](../../../index.md) / [Devices](../../index.md) / [View More](../index.md) / Actions
+# Actions
 
 Actions that can be performed on the device from cloud portal
 
-Device Actions
+## Device Actions
 
 All the device actions that can be performed are shown.
 

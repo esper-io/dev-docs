@@ -1,10 +1,8 @@
-[Devices](../index.md) / View More
+[Introduction](../../index.md) / [Devices](../index.md) / View More
 
-#### View More
+# View More
 
-Jan. 15, 2019
-
-Here is what you can do on the device-
+Here is what you can do on the device
 
 You may view, take actions, change rules, install apps, and remotely view the device from this page.
 

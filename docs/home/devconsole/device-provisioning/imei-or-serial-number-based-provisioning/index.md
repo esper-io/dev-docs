@@ -1,8 +1,6 @@
-[Provision Device](../index.md) / IMEI (or Serial number) based Provisioning
+[Introduction](../../index.md) / [Provision Device](../index.md) / IMEI (or Serial number) based Provisioning
 
-#### IMEI (or Serial number) based Provisioning
-
-June 6, 2019
+# IMEI (or Serial number) based Provisioning
 
 This page describes how you can provision your devices based on IMEI numbers.
 

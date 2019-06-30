@@ -1,8 +1,8 @@
-#### App Management
+[Introduction](../../../index.md) / [Devices](../../index.md) / [View More](../index.md) / App Management
 
-Jan. 15, 2019
+# App Management
 
-Manage apps on the device -
+Manage apps on the device
 
 The apps that are already installed in the device are specified here. There are many ways to install apps on the device -
 

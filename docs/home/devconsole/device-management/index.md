@@ -1,22 +1,20 @@
 [Introduction](../index.md) / Devices
-
-#### Devices
-
-June 6, 2019
+# Devices
 
 Manage your provisioned devices here.
 
 You may view all your device details on the Devices dashboard.
 
-Categories
+
+### Categories
 
 There are checkboxes on the top of the page with categories such as Active, Inactive, Under provisioning, Devices with low battery, etc. that can be checked to view devices in each particular state.
 
-Search
+### Search
 
 Search is provided on the top right where you can search for devices in Devices using the Esper assigned device code which is displayed on the device's home page wallpaper.
 
-Device Tile
+### Device Tile
 
 The default view is Grid, but the user can click on Maps to access the map view. Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [View More](-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
 
@@ -34,7 +32,7 @@ Devices which have been enrolled on to your Esper Cloud are provisioned devices:
 
 ![Device Management](https://documentation-media.s3.amazonaws.com/images/Provisioned.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-Map View
+### Map View
 
 Under the Map view, the types of devices can be chosen from the dropdown. Once selected, the device locations are show:.
 
