@@ -1,9 +1,8 @@
 # Esper Emulator
 
+Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can significantly boost your workflow.
 
-Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can hugely boost your workflow.
-
-Esper developer platform provides you customized Emulator images based on x64 platform that allows you to get on board on the esper platform with zero hassles. You can register your emulator serial number or IMEI number on to the template of your choice to which you want to onboard your device and re-start the simulator. On boot emulator device will get enrolled to your platform automatically and you can start accessing and take actions using the esper cloud dashboard.
+Esper developer platform provides you customized Emulator images based on x64 platform that allows you to get on board on the esper platform with zero hassles. You can register your emulator serial number or IMEI number on to the template of your choice, onboard your device with the template and re-start the simulator. On boot emulator device will get enrolled to your platform automatically and you can start accessing and performing actions using the esper cloud dashboard.
 
 In this guide we will help you with creating your own Esper emulated device.
 
