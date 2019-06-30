@@ -4,7 +4,7 @@ Esper APIs are a set of REST-based APIs that help you programmatically control a
 
 To use these APIs you will need to create a developer account with Esper and get access to the Esper Dev Console and the Esper Manage Dashboard. You can find out more about Esper and sign up for a free account at [esper.io/signup](https://esper.io/signup)
 
-Esper APIs adhere to [Open API specification](https://swagger.io/docs/specification/about/) and you can check our latest API spec on [github](https://github.com/esper-io/esper-api-spec).
+Esper APIs adhere to [Open API specification](https://swagger.io/docs/specification/about/) and you can check our latest API spec on [GitHub](https://github.com/esper-io/esper-api-spec).
 
 ## Authentication
 The client needs to send authentication details to access the Esper APIs by generating and applying an API key. Be sure to sign up for your free trial account with Esper Dev to generate your key. See [Generating an API key](./module/genapikey.md)
