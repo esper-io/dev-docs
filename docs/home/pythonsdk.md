@@ -76,7 +76,7 @@ Some additional information you'll need in order to access Esper APIs is your `e
 
 Some of the frequently used examples are given below:
 
-## **Get enterprise information**
+## **Get Enterprise Information**
 ```python
 from esperclient import EnterpriseApi, ApiClient
 from esperclient.rest import ApiException
@@ -133,7 +133,7 @@ except ApiException as e:
   "is_active": true
 }
 ```
-## **List all devices**
+## **List All Devices**
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -217,7 +217,7 @@ except ApiException as e:
   ]
 }
 ```
-## **List all applications**
+## **List All Applications**
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -392,7 +392,7 @@ except ApiException as e:
 }
 ```
 
-## **Deploy app to device**
+## **Deploy Application to Device**
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -430,7 +430,7 @@ except ApiException as e:
 
 ```
 
-## **Reboot a device**
+## **Reboot a Device**
 ```python
 import esperclient
 from esperclient.rest import ApiException
