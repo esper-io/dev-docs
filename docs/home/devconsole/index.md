@@ -19,7 +19,7 @@
 <div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
-Welcome to the Esper Console where we help Android™ developers build, test, deploy, diagnose, and manage their applications seamlessly and securely to Android-based Dedicated Devices spanning kiosks, point of sale, data collection, and more. Using the Console under Developer Options you will be able to generate API Keys and obtain your Enterprise ID necessary to use the Esper APIs either by calling them using REST/HTTP, with our Esper SDK for Python, or by using our Esper CLI. Additionally, our Esper Plugin for Android™ Studio is available for developer use providing tools to facilitate diagnostics and debugging of applications - whether running in the test lab or deployed in the field.
+Welcome to the Esper Console where we help Android™ developers build, test, deploy, diagnose, and manage their applications seamlessly and securely to Android-based Dedicated Devices spanning kiosks, point of sale, data collection, and more. Using the Console under Developer Options you will be able to generate API Keys and obtain your Enterprise ID necessary to use the Esper APIs either by calling them using REST/HTTP, with our Esper SDK for Python, or by using our Esper CLI. Additionally, our Esper Tools for Android™ Studio is available for developer use providing tools to facilitate diagnostics and debugging of applications - whether running in the test lab or deployed in the field.
 
 ## Introducing Esper
 
@@ -39,7 +39,7 @@ From the Console you can also perform important activities for working with your
 *   Setting alerts for specific battery or network conditions on your devices.
 *   Managing users, including adding additional users to your endpoint for either development or admin use, through the Enterprise Settings.
 
-Many of the above Console features are available via the Esper APIs, so please be sure to check out our API documentation to get started. And install the Esper SDK for Python, our Esper CLI, and the Esper Plugin for Android™ Studio.
+Many of the above Console features are available via the Esper APIs, so please be sure to check out our API documentation to get started. And install the Esper SDK for Python, our Esper CLI, and the Esper Tools for Android™ Studio.
 
 ## Sign Up for an Esper Trial Account
 

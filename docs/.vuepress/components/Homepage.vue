@@ -39,7 +39,7 @@
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
         </div>
-        <div class="homepage__a">Esper Plugin for Android™ Studio</div>
+        <div class="homepage__a">Esper Tools for Android™ Studio</div>
         <p>Plugin extending Android™ Studio with Esper Tools</p>
       </a>
       <a
