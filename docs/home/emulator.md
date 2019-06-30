@@ -1,12 +1,12 @@
-# Esper Emulator
+# Esper Virtual Device
 
-Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can significantly boost your workflow.
+Virtual devices are a conventient means to target a device without having the available hardware, or when you do not want to risk breaking the actual hardware device. By trading off the lower performance of a virtual device, you gain a very capable and streamlined virtual device that can hugely boost your productivity during development and early testing.
 
-Esper developer platform provides you customized Emulator images based on x64 platform that allows you to get on board on the esper platform with zero hassles. You can register your emulator serial number or IMEI number on to the template of your choice, onboard your device with the template and re-start the simulator. On boot emulator device will get enrolled to your platform automatically and you can start accessing and performing actions using the esper cloud dashboard.
+The Esper Android Tools provide a customized Esper Virtual Device (EVD) image based on the x86 platform allowing you to try out Esper Enhanced Android providing features such as Zero-touch enrollment. You can register your EVD serial number or IMEI number using an Esper Device Tempate of your choice and then re-start the EVD. On boot the EVD will then get enrolled to your Endpoint automatically and you can start accessing the EVD and take actions using the Esper Console or through our APIs, SDK, and CLI.
 
 In this guide we will help you with creating your own Esper emulated device.
 
-## Pre-requisites
+## Requirements
 
 Before you start with this guide, make sure you have the following things in place:
 
@@ -39,8 +39,6 @@ With the script in place you can simply execute it. You can start a terminal on 
 ```python3 avd_creator.py```
 
 This will take some time as the script downloads th required files and sets up the Esper AVD.
-
-## Testing the AVD
 
 Once the script has successfully executed you need to start the emulator. You can do it from Android Studio. Within Android Studio Menu choose Tools > AVDManager. You can see the esper AVD. Simply click on the green run button under the actions column and this should launch yor AVD.
 
