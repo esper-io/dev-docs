@@ -17,13 +17,13 @@ Update the template.
 
 Zero Touch Provisioning:
 
-Ideally you should see true zero touch provisioning on your devices for which the imei or serial numbers was uploaded on the template. You should be able to boot the device and watch it get provisioned automatically by Esper according to your **Device template**. 
+Ideally you should see true zero touch provisioning on your devices for which the IMEI or serial numbers was uploaded on the template. You should be able to boot the device and watch it get provisioned automatically by Esper according to your **Device template**. 
 
 If the customer has known Wi-Fi in the deployment field, it can be baked in the Esper Enhanced Android™ OS. 
 
 If the Wi-Fi SSID set in the Device template is unavailable:
 
-If the Wi-Fi SSID cannot be found an option to manually connect to Wi-Fi will appear. Connecting to a network/wifi will then continue the provisioning process requiring no further input from user end.
+If the Wi-Fi SSID cannot be found an option to manually connect to Wi-Fi will appear. Connecting to a network/WiFi will then continue the provisioning process requiring no further input from user end.
 
 
 

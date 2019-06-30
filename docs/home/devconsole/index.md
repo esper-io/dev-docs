@@ -24,7 +24,7 @@ Esper is at heart a technology company that provides Android™ dedicated device
 
 ## Esper and Android™ Developers
 
-Esper gives developers the APIs and tools needed to build, deliver, and maintain Dedicated Device applications - all in one place. Esper offers a full suite of APIs and tools enabling Android™ developers to more efficiently develop, deploy, and support Dedicated Device applications through the entire lifecycle.
+Esper gives developers the APIs and tools needed to build, deliver, and maintain Dedicated Device applications - all in one place. Esper offers a full suite of APIs and tools enabling Android™ developers to more efficiently develop, deploy, and support Dedicated Device applications through the entire life cycle.
 
 From the Console you can also perform important activities for working with your apps and devices during the development, test, and scaled deployment phases:
 

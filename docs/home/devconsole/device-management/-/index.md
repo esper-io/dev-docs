@@ -12,13 +12,13 @@ Click here to read about how you can take actions on the device remotely using t
 
 **Event Feed**
 
-This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behavior to predict security issues.
+This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behaviour to predict security issues.
 
 ![Device Management](https://documentation-media.s3.amazonaws.com/images/6_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 **Device Graphs**
 
-This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, wifi, and their usage over time.
+This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, WiFi, and their usage over time.
 
 ![Device Management](https://documentation-media.s3.amazonaws.com/images/7_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 

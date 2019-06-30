@@ -36,7 +36,7 @@ You will see the toast message **‘You are now a developer!'**:
 
 7\. Open a command prompt on your development computer.
 
-8\. [Download the esper-provisioner](../../adb-provisioning/downloadexecutable.md) executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud. The config file for imei will need to be placed in the same folder as the executable.
+8\. [Download the esper-provisioner](../../adb-provisioning/downloadexecutable.md) executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud. The config file for IMEI will need to be placed in the same folder as the executable.
 
 9\. The permission to **allow USB debugging** on the device might pop up again. Click **OK**, and then the DPC will start getting installed.
 

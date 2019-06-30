@@ -2,7 +2,7 @@
 
 If you face any issue with Esper Dev tools or have feedback or a suggestion, you can reach out to us through any of the preferred channels mentioned below:
 
-## Github Issues
+## GitHub Issues
 
 1. For problems in API usage and specification, you can raise an issue on our [Open API specification repo](https://github.com/esper-io/esper-api-spec/issues)
 2. For problems in Python SDK, you can raise an issue on our [Python SDK repo](https://github.com/esper-io/esper-client-py/issues)
@@ -17,7 +17,7 @@ If you face any issue with Esper Dev tools or have feedback or a suggestion, you
 
 ## Slack
 
-Join our Slack community [Epser on Slack]().
+Join our Slack community [Esper on Slack]().
 
 ## Email
 

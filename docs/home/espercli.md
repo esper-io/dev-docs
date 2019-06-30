@@ -25,7 +25,7 @@ pip install espercli
 
 or
 
-From [Github](https://github.com/esper-io/esper-cli)
+From [GitHub](https://github.com/esper-io/esper-cli)
 ```sh
 pip install git+https://github.com/esper-io/esper-cli.git
 ```
@@ -43,14 +43,14 @@ python setup.py install
 ```
 
 :::tip
-You don't need to install setuptools separately since they are packaged along with the downloaded library
+You don't need to install `setuptools` separately since they are packaged along with the downloaded library
 :::
 
 
 ### Usage
 
-Before using espercli, you need to tell it about your Esper credentials. For this you will need `ENVIRONMENT NAME` and `API KEY` as generated in [Requirements](#requirements) section.
-The way to get started is to run the espercli configure command:
+Before using `espercli`, you need to tell it about your Esper credentials. For this you will need `ENVIRONMENT NAME` and `API KEY` as generated in [Requirements](#requirements) section.
+The way to get started is to run the `espercli configure` command:
 ```sh
 $ espercli configure
 $ Environment name: foo

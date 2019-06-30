@@ -20,14 +20,14 @@ Esper Dev gives you access to the suite of development tools you need to build, 
 - **Esper Remote Debug**: Everything you need to do secure remote debugging of deployed Dedicated Devices running Esper Enhanced Android.
 - **Esper Dedicated Device Cookbooks**: Available quick starts for Kiosk, POS, Restaurant, and Logistics Dedicated Device solutions.
 - **Esper Manage Dashboard**: Through the Esper Dev Console use the Esper Manage Dashboard to access Device Orchestration capabilities that evolves MDM into Dedicated Device specific features.
-- [Esper Support](./support.md): Chat, Github, email and phone.
+- [Esper Support](./support.md): Chat, GitHub, email and phone.
 
 
 ## Esper Device Orchestration Features
 
 Through the Esper Manage Dashboard you can access all the features and capabilities you need to effectively orchestrate and manage Dedicated Device fleets:
 
-- Seamless Enrollment and Bulk Enrollment (QR Code, NFC-based, IMEI)
+- Seamless Enrolment and Bulk Enrolment (QR Code, NFC-based, IMEI)
 - Remote View and Remote Control
 - Application Lockdown and Management   
 - Device Monitoring
@@ -50,6 +50,6 @@ Through the Esper Manage Dashboard you can access all the features and capabilit
 To understand system requirements, see [Requirements](./requirements.md)\
 To get started, see [Getting Started Guide](./gettingstarted.md)\
 Esper APIs [documentation](https://api.esper.io)\
-Esper SDK on [Github](https://github.com/esper-io/esper-client-py)\
+Esper SDK on [GitHub](https://github.com/esper-io/esper-client-py)\
 Checkout [Esper CLI](https://github.com/esper-io/esper-cli), a command line tool for accessing APIs.\
 To learn more about Esper, visit [esper.io](https://esper.io)
