@@ -25,7 +25,9 @@ To use the Esper Dev Tools you need to have Python installed. Depending on the t
 #### Esper SDK Language Support
 - Python
 
-> Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](./api.md).
+:::tip
+Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](./api.md).
+:::
 
 #### Supported Development Platforms: 
 - Linux

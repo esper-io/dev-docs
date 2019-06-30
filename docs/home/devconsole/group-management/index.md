@@ -40,7 +40,10 @@ Here you can see a list of the Esper Enhanced Android™ updates that have been 
 
 ![Group Management](https://documentation-media.s3.amazonaws.com/images/7_GM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-By clicking on the 'Deploy OS Updates' button you may choose any available Build number by then clicking on 'Select Build'. Please note that currently only the latest 30 builds of the Esper Enhanced Android™ updates will be visible to the user for deployment:
+By clicking on the 'Deploy OS Updates' button you may choose any available Build number by then clicking on 'Select Build'. 
+:::tip
+Please note that currently only the latest 30 builds of the Esper Enhanced Android™ updates will be visible to the user for deployment
+:::
 
 ![Group Management](https://documentation-media.s3.amazonaws.com/images/8_GM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 

@@ -10,7 +10,8 @@ To generate your API key, follow the steps mentioned below:
 4. A pop up will open to generate an access token. Click `Generate token`
 5. Copy the token using `Copy` option and keep it safe. In case you lose your token, it cannot be recovered, you can only `Delete` or `Renew` your token.
 
-> Note: A maximum of 5 applications can be registered and only one token can be associated with an application.
-
+:::tip
+ Note: A maximum of 5 applications can be registered and only one token can be associated with an application.
+:::
 
 If you face any issue in generating the API key, we recommend you to reach out to [Developer Support](http://example.com)

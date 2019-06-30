@@ -22,7 +22,9 @@ Once you have the access token, you need to send an authorization header as belo
 </pre>
 </div>
 
-> Please note the use of keyword **Bearer** before the token value.
+::: tip 
+Please note the use of keyword **Bearer** before the token value. 
+:::
 
 ## Errors
 

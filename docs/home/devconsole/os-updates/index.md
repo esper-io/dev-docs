@@ -10,6 +10,8 @@ You can update the Esper Enhanced Android™ version using our OTA functionality
 
 ![OS Updates](https://documentation-media.s3.amazonaws.com/images/OS.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
+:::tip
 Please note that currently only the latest 30 builds of Esper Enhanced Android™ updates will be visible to the user for deployment.
+:::
 
 [Return to Introduction](../index.md)

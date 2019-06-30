@@ -34,7 +34,10 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/3_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-*   To add app from Play Store list - click on the apps to add from the list of available apps. Please note that only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+*   To add app from Play Store list - click on the apps to add from the list of available apps. 
+:::tip
+Please note that only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+:::
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/4_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 

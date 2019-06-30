@@ -50,6 +50,8 @@ This section lets the user capture bug report from the device in question. You c
 
 ![Device Management](https://documentation-media.s3.amazonaws.com/images/10_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
+::: tip
 Please note that the user on the device side needs to swipe down the notification bar and click on the bug report line. On being prompted, the device user needs to choose 'Share'. If they choose 'Cancel' the Bug Report will not be shared.
+:::
 
 [Return to Devices](../index.md)
