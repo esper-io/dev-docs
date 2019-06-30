@@ -1,9 +1,9 @@
 # Esper Emulator
 
 
-Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can hugely boost your workflow.
+Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can significantly boost your workflow.
 
-Esper developer platform provides you a customized Emulator images based on x86 platform that allows you to get on board on the esper platform with zero touch. You can register your emulator serial number or IMEI number on to the tempate of your choice to which you want to onboard your device and re-start the simulator. On boot emulator device will get enrolled to your platform automatically and you can start accessing and take actions using the esper cloud dashboard.
+Esper developer platform provides you with a customized Emulator image based on the x86 platform that allows you to get onboard the Esper platform with zero touch. You can register your emulator serial number or IMEI number onto the tempate of your choice, sync it to your preferred device, and then re-start the simulator. The boot emulator device will be enrolled to your platform automatically and you can then start accessing features and performing actions using the Esper cloud dashboard.
 
 ## Pre-requisites
 
@@ -11,15 +11,15 @@ Before you start with this guide, make sure you have Android Studio installed.
 
 ## Getting started with the Esper emulator
 
-Open Android Studio and open Android Virtual Device Manager (tools > AVD manager). On the AVD manager click the create new virtual device. In the window that opens up choose pixel 3 (or any other phone) without play store.
+Open Android Studio and open Android Virtual Device Manager (tools > AVD manager). On the AVD manager click the create new virtual device. In the window that opens up, choose pixel 3 (or any other phone) without Play Store.
 
 ## Creating the AVD from the command line
 
-We will create our avd from command line so that the sdk tools generate the proper directories and configurations for us. To do this browse to the sdk tools folder (Usually in ~/Library/Android/sdk/tools or C:\Users\\<username\>\AppData\Local\Android\Sdk on Windows).Go to the bin directory. You should see the avdmanager command line executable here. Use the following command to create the esper avd.
+We will create our AVD from the command line so that the SDK tools generate the proper directories and configurations for us. To do this browse to the SDK tools folder (Usually in ~/Library/Android/sdk/tools or C:\Users\\<username\>\AppData\Local\Android\Sdk on Windows).Go to the bin directory. You should see the avdmanager command line executable here. Use the following command to create the Esper AVD.
 
 ```./avdmanager create avd -n esper -k "system-images;android-28;default;x86_64"```
 
-This will create an avd named esper. You can go back one directory and use the emulator command to test this avd.
+This will create an AVD named Esper. You can go back one directory and use the emulator command to test this AVD.
 
 ```./emulator @esper```
 
@@ -35,10 +35,10 @@ You can download the [system images from here](https://shoonya-os-builds.s3-us-w
 
 ## Integrating your system images
 
-Integrating the system images requires a few extra configuration files. We need to keep track of two folders that android studio uses to organise the sdk and configurations.
+Integrating the system images requires a few extra configuration files. We need to keep track of two folders that Android Studio uses to organize the SDK and configurations.
 
-- sdk folder - This folder stores the android sdk and sdk tools. The sdk tools are command line tools that we would extensively use as it provides better feedback, options and debugging capabilities. The GUI is lacking at many places in this regard. You can find the sdk folder in mac in /Users/\<user-name\>/Library/Android/sdk and in C:\Users\\<user-name\>\AppData\Local\Android\sdk in Windows. You can check android studio preferences > Appearance and Behaviour > System Settings > Android SDK and you can find the sdk location mentioned there.
-- .android folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behaviour you have to tinker with the files here. You can find this folder in your home directory in windows, linux and mac.
+- sdk folder - This folder stores the Android SDK and SDK tools. The SDK tools are command line tools that we would extensively use as they provides better feedback, options, and debugging capabilities. The GUI is lacking at many places in this regard. You can find the sdk folder in Mac in /Users/\<user-name\>/Library/Android/sdk and in C:\Users\\<user-name\>\AppData\Local\Android\sdk in Windows. You can check Android Studio preferences > Appearance and Behavior > System Settings > Android SDK and you can find the SDK location mentioned there.
+- .android folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behavior you have to tinker with the files here. You can find this folder in your home directory in Windows, Linux and Mac.
 You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system-qemu.img, vendor-qemu.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Rename your system-qemu.img to system.img and vendor-qemu.img to vendor.img. Place your andvancedFeatures.ini, build.prop, Notice.txt and package.xml config files in the folder as well.
 
 You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system.img, vendor.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Place your andvancedFeatures.ini, Notice.txt and build.prop config files in the folder as well.
@@ -97,11 +97,11 @@ tag.id=google_apis
 vm.heapSize=228
 ```
 
-Make sure in your config.ini image.sysdir.1 is set to point to the correct system image dirtectory in the sdk folder. For my mac at present it is set to image.sysdir.1=system-images/android-28/esper/x86_64/. Make sure you have it correctly set too.
+Make sure in your config.ini image.sysdir.1 is set to point to the correct system image directory in the sdk folder. For my mac at present it is set to image.sysdir.1=system-images/android-28/esper/x86_64/. Make sure you have it correctly set too.
 
 ## Testing the AVD
 
-You are mostly done. Now from the command line in your tools directory start the emulator using the command.
+You are almost done. Now from the command line in your tools directory start the emulator using the command.
 
 ```./emulator @esper```
 
