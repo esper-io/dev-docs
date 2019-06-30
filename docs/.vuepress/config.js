@@ -14,6 +14,7 @@ module.exports = {
     },
     lastUpdated: "Last Updated",
     head: [
+      ['script', { src: '//js.hs-scripts.com/5868902.js', async: true, defer: true }]
       ['link', { rel: 'icon', href: `favicon.ico` }],
     ['link', { rel: 'manifest', href: 'manifest.json' }],
     ],
