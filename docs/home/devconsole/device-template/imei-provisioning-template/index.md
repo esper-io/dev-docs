@@ -1,8 +1,6 @@
-[Device Template](../index.md) / IMEI Provisioning via Template
+[Introduction](../../index.md) / [Device Template](../index.md) / IMEI Provisioning via Template
 
-#### IMEI Provisioning via Template
-
-May 19, 2019
+# IMEI Provisioning via Template
 
 IMEI or Serial number of devices to be provisioned need to be added to the relevant template
 

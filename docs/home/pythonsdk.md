@@ -18,7 +18,7 @@ Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If yo
 
 ## Installation
 
-#### Using `pip install`
+### Using `pip install`
 
 From PyPI
 ```sh
@@ -32,7 +32,7 @@ From [Github](https://github.com/esper-io/esper-client-py)
 pip install git+https://github.com/esper-io/esper-client-py.git
 ```
 
-#### From source
+### From source
 
 Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
