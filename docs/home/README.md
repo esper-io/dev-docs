@@ -3,7 +3,7 @@
 Esper Dev provides tools that enable Android™ developers to deliver highly secure solutions for Dedicated Devices with greater flexibility and control. This leads to a better development experience, designed for the entire development lifecycle, while helping IT do more with less. A [rich API](https://api.esper.io) set and a variety of [open-source SDKs](https://github.com/esper-io/esper-client-py) and tools allow you to incorporate device management for your apps and Dedicated Device apps and dedicated devices.\
 Coupled with the intuitive Esper Dev Console and Esper Manage Dashboard, Esper allows you to gradually scale your fleet at your own pace. You have options here; start with emulated devices, your currently available Dedicated Device or off-the-shelf Android™ hardware, or else Esper Development Devices  that run Esper Enhanced Android. Across the endless variety of Dedicated Devices, Esper gives you supreme control of your app on your own device.
 
-<img src="./assets/overview.jpg" alt="drawing" style="max-width:1000px; width: 100%;"/>
+<img class="no-shadow" src="./assets/overview.jpg" alt="drawing" style="max-width:1000px; width: 100%;"/>
 
 ## Esper Tools
 Esper Dev gives you access to the suite of development tools you need to build, deliver, and maintain Dedicated Device solutions all in one place. Below is an overview of the Esper Tools:

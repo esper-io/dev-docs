@@ -11,21 +11,21 @@
     <div class="homepage__links__section" style="margin-top: 5rem;">
       <a href="https://api.esper.io/" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
-          <img src="./icons/ApiReferenceIcon.svg" alt="api">
+          <img class="no-shadow" src="./icons/ApiReferenceIcon.svg" alt="api">
         </div>
         <div class="homepage__a">Esper API Reference</div>
         <p>API documentation and OpenAPI specificiation</p>
       </a>
       <a href="/home/espercli.html" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
-          <img src="./icons/EsperCliIcon.svg" alt="cli">
+          <img  class="no-shadow" src="./icons/EsperCliIcon.svg" alt="cli">
         </div>
         <div class="homepage__a">Esper CLI</div>
         <p>Command line tool for the Esper APIs</p>
       </a>
       <a href="/home/pythonsdk.html" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
-          <img src="./icons/EsperSdkIcon.svg" alt="sdk">
+          <img class="no-shadow"  src="./icons/EsperSdkIcon.svg" alt="sdk">
         </div>
         <div class="homepage__a">Esper SDK</div>
         <p>Python library to call the Esper APIs</p>
@@ -37,7 +37,7 @@
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
-          <img src="./icons/EsperPluginIcon.svg" alt="plugin">
+          <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
         </div>
         <div class="homepage__a">Esper Plugin for Android™ Studio</div>
         <p>Plugin extending Android™ Studio with Esper Tools</p>
@@ -57,7 +57,7 @@
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
-          <img src="./icons/EsperBlogIcon.svg" alt="blog">
+          <img class="no-shadow"  src="./icons/EsperBlogIcon.svg" alt="blog">
         </div>
         <div class="homepage__a">Esper Blog</div>
         <p>Find out the latest about Esper on our Blog</p>
@@ -68,6 +68,9 @@
 </template>
 
 <style scoped>
+* {
+  font-size: 1em;
+}
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
 @font-face {
   font-family: "BlenderPro";
