@@ -16,11 +16,10 @@ a. Connect to the device to the Internet via either Cellular or Wi-Fi
 
 b. Go to the Home screen and tap the Menu button, select the **About Phone** option, and select the **Build number**. Then tap the build number **6 times** to enable **developer options**.
 
-![here](../../images/2_ADB.png)
+<img src="../../images/1_ADB_a.png" alt="drawing" style="height: 25rem;  margin-right: 2rem;"/>
+<img src="../../images/2_ADB.png" alt="drawing" style="height: 25rem;"/>
 
 c. Now go back to **Settings**, and under the **Developer options** entry select **Turn on Debugging** and then **USB debugging**.
-
-  ![here](../../images/1_ADB_a.png)
 
 d. Connect your Android™ device to your development computer via USB.
 

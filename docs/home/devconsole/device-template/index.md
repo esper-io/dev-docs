@@ -84,7 +84,7 @@ On clicking the View QR code, there is also an option to download the config.jso
   
 You can also Preview, Edit, Duplicate & Delete the template:
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/16_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../images/temp_2.png)
 
 Click on the ellipsis (...) on the template tile to preview, edit, duplicate or delete a template.
 
