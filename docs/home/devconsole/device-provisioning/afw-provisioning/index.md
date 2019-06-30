@@ -75,6 +75,4 @@ In the boot up screen click on **"Start"**:
 ![Provision Device](https://documentation-media.s3.amazonaws.com/images/100.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 
-2.  [On the Device](steps-provision-device/index.md)
-
 [Return to Provision Device](../index.md)
