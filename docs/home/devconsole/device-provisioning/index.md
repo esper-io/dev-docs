@@ -1,6 +1,7 @@
 [Introduction](../index.md) / Provisioning Your Device
 
 # Provisioning Your Device
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
 Provisioning is the initial step to configuring and managing your Android™ device using the Esper Management Console and associated developer tools.

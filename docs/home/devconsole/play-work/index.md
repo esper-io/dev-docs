@@ -1,6 +1,7 @@
 [Introduction](../index.html) / Play for Work
 
 # Play for Work
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 Learn about setting up Play for Work apps using Esper.
 

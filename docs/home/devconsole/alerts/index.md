@@ -1,6 +1,8 @@
 [Introduction](../index.md) / Alerts
 
 # Alerts
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
+
 
 Learn about available Alerts.
 

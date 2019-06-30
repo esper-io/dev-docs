@@ -1,6 +1,7 @@
 [Introduction](../../../index.md) / [Devices](../../index.md) / [View More](../index.md) / App Management
 
 # App Management
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 Manage apps on the device
 

@@ -1,6 +1,7 @@
 [Introduction](../../../index.md) / [Provision Device](../../index.md) / [QR Code Provisioning](../index.md) / Steps to take on Esper Console for 6-Tap Provisioning
 
 # Steps to take on Esper Console for 6-Tap Provisioning
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 Steps on the Esper Console to provision using the 6-tap method.
 

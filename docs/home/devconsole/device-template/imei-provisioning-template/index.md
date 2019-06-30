@@ -1,6 +1,7 @@
 [Introduction](../../index.md) / [Device Template](../index.md) / IMEI Provisioning via Template
 
 # IMEI Provisioning via Template
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 IMEI or Serial number of devices to be provisioned need to be added to the relevant template
 

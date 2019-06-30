@@ -1,6 +1,7 @@
 [Introduction](../index.md) / Enterprise Settings
 
 # Enterprise Settings
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 Learn about Esper's Enterprise Settings.
 

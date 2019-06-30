@@ -1,6 +1,7 @@
 [Introduction](../../index.md) / [Provision Device](../index.md) / QR Code Provisioning
 
 # QR Code Provisioning 
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 This page describes how user can provision their devices using the **QR Code** Method.
 

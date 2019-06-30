@@ -1,6 +1,8 @@
 [Introduction](../../index.md) / [Devices](../index.md) / View More
 
 # View More
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
 
 Here is what you can do on the device
 

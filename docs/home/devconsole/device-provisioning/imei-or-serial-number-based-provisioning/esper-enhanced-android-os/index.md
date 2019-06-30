@@ -1,6 +1,7 @@
 [Introduction](../../../index.md) / [Provision Device](../../index.md) / [IMEI Provisioning](../index.md) / Esper Enhanced Android
 
 # IMEI Provisioning - Esper Enhanced Android
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 ## On the Cloud Portal
 

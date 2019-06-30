@@ -1,6 +1,7 @@
 [Introduction](../../../index.md) / [Provision Device](../../index.md) / [QR Code Provisioning](../index.md) / Steps to take on the Device for 6-Tap Provisioning
 
 # Steps to take on the Device for 6-Tap Provisioning
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 Device-side steps for the 6-tap provisioning method.
 

@@ -1,6 +1,7 @@
 [Introduction](../index.md) / OS Updates
 
 # OS Updates
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 ### Over-the-air updates for Esper Enhanced Android.
 

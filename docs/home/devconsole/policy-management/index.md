@@ -1,6 +1,7 @@
 [Introduction](../index.html) / Compliance Policy
 
 # Compliance Policy
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 Learn about Esper's Policy Management.
 

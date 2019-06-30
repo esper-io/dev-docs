@@ -1,6 +1,7 @@
 [Introduction](../index.md) / Users
 
 # Users
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
 Learn about Esper's User Management.

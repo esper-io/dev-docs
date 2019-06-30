@@ -1,6 +1,8 @@
 [Introduction](../index.md) / Developer Options
 
 # Developer Options
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
 
 **Turn App and Device Management into Code**
 

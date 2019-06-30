@@ -1,6 +1,8 @@
 [Introduction](../index.md) / [Provision Device](./index.md)/ Provisioning Your Device
 
 # How to factory reset
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
+
 1. Go to Settings Menu
   
 2. Select System\

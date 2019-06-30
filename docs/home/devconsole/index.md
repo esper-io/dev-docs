@@ -16,6 +16,9 @@
 
 # Introduction
 
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
+
 Welcome to the Esper Console where we help Android™ developers build, test, deploy, diagnose, and manage their applications seamlessly and securely to Android-based Dedicated Devices spanning kiosks, point of sale, data collection, and more. Using the Console under Developer Options you will be able to generate API Keys and obtain your Enterprise ID necessary to use the Esper APIs either by calling them using REST/HTTP, with our Esper SDK for Python, or by using our Esper CLI. Additionally, our Esper Plugin for Android™ Studio is available for developer use providing tools to facilitate diagnostics and debugging of applications - whether running in the test lab or deployed in the field.
 
 ## Introducing Esper

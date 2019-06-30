@@ -1,5 +1,6 @@
 [Introduction](../../../index.md) / [Provision Device](../../index.md) / [IMEI Provisioning](../index.md) / Android
 # IMEI Provisioning - Android
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 For devices not using Esper Enhanced Android™ (e.g. stock Android), take the following steps to use IMEI based provisioning.
 

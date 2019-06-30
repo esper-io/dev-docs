@@ -1,6 +1,7 @@
 [Introduction](../index.md) / Home (Dashboard)
 
 # Home (Dashboard)
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 This page explains the functionality of the Esper Home Dashboard.
 

@@ -1,6 +1,7 @@
 [Introduction](../../index.md) / [Provision Device](../index.md) / ADB Provisioning
 
 # ADB Provisioning
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 ADB Provisioning for Non-GMS and GMS devices
 

@@ -1,4 +1,6 @@
 # Esper CLI
+<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
 
 This package provides a unified command line interface to the Esper API Services.
 

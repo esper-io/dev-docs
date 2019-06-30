@@ -1,6 +1,8 @@
 [Introduction](../../../index.md) / [Devices](../../index.md) / [View More](../index.md) / Remote Viewer
 
 # Remote Viewer
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
+
 
 How to remotely view your device
 

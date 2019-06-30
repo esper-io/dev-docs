@@ -1,7 +1,7 @@
 [Introduction](../index.md) / Device Template
 
 # Device Template
-
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 ## How to use Esper's Device Template.
 

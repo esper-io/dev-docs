@@ -1,4 +1,6 @@
 # Support
+<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
+
 
 If you face any issue with Esper Dev tools or have feedback or a suggestion, you can reach out to us through any of the preferred channels mentioned below:
 

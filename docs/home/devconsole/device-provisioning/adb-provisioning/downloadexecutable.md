@@ -1,6 +1,9 @@
 [Introduction](../../index.md) / [Provision Device](../index.md) / Downloading Executable
 
 # Downloading Executable
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
+
 ## Downloading Executable For Windows
 
 1. Click <a href="/Executables/esper_provisioner_windows.exe" download>**here**</a> to download the Windows Executable.
