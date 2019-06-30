@@ -2,26 +2,31 @@ module.exports = {
   base: "/",
   title: "Docs",
   description: "Esper documentation",
-  plugins: ["vuepress-plugin-reading-time", "@vuepress/back-to-top", '@vuepress/plugin-medium-zoom'],
+  plugins: [
+    ["vuepress-plugin-reading-time", true],
+    ["@dovyp/vuepress-plugin-clipboard-copy", true],
+    ["@vuepress/back-to-top", true],
+    ["@vuepress/plugin-medium-zoom", true]
+  ],
   themeConfig: {
-    esper_tenant_name: 'foo',
+    esper_tenant_name: "foo",
     serviceWorker: {
       updatePopup: true // Boolean | Object, default to undefined.
     },
     algolia: {
-      apiKey: 'd18aabe96ec6834a5c269f0b13b9a880',
-      indexName: 'esper'
+      apiKey: "d18aabe96ec6834a5c269f0b13b9a880",
+      indexName: "esper"
     },
     lastUpdated: "Last Updated",
     head: [
-      ['script', { src: '//js.hs-scripts.com/5868902.js', async: true, defer: true }]
-      ['link', { rel: 'icon', href: `favicon.ico` }],
-    ['link', { rel: 'manifest', href: 'manifest.json' }],
+      [
+        "script",
+        { src: "//js.hs-scripts.com/5868902.js", async: true, defer: true }
+      ][("link", { rel: "icon", href: `favicon.ico` })],
+      ["link", { rel: "manifest", href: "manifest.json" }]
     ],
     logo: `/esper.svg`,
-    nav: [
-      { text: "Blog", link: "https://blog.esper.io" }
-    ],
+    nav: [{ text: "Blog", link: "https://blog.esper.io" }],
     docsRepo: "esper-io/dev-docs",
     docsDir: "docs",
     docsBranch: "develop",
