@@ -1,107 +1,59 @@
 # Esper Emulator
 
-
 Virtual devices are powerful when you want to test features and rapidly deploy new things without worrying about breaking your hardware device. For a little bargain on the performance front you get a very capable and streamlined medium that can significantly boost your workflow.
 
-Esper developer platform provides you with a customized Emulator image based on the x86 platform that allows you to get onboard the Esper platform with zero touch. You can register your emulator serial number or IMEI number onto the tempate of your choice, sync it to your preferred device, and then re-start the simulator. The boot emulator device will be enrolled to your platform automatically and you can then start accessing features and performing actions using the Esper cloud dashboard.
+Esper developer platform provides you customized Emulator images based on x64 platform that allows you to get on board on the esper platform with zero hassles. You can register your emulator serial number or IMEI number on to the template of your choice, onboard your device with the template and re-start the simulator. On boot emulator device will get enrolled to your platform automatically and you can start accessing and performing actions using the esper cloud dashboard.
+
+In this guide we will help you with creating your own Esper emulated device.
 
 ## Pre-requisites
 
-Before you start with this guide, make sure you have Android Studio installed.
+Before you start with this guide, make sure you have the following things in place:
 
-## Getting started with the Esper emulator
+- You should have Android Studio and Android SDK installed. The emulator functionality depends on the Android SDK and it is important for it to be in place. Download [Android Studio from here](https://developer.android.com/studio#downloads) if you haven't already.
+- You should have Java JDK 1.8 installed. The SDK tools require a specific version of Java and and our installer script requires the same. Make sure you have set Java 8 as the default environment. You can execute ```java -version``` to check which version you are currently on.
+- The installed script requires Python 3 installed. You can [download it from here](https://www.python.org/downloads/).
+- We also require an additional python library to help us download the emulator images hassle free. We will get more in to that in the next section.
+- Currently only Windows and MacOSX are supported platforms. The script probably wouldn't work on Linux.
 
-Open Android Studio and open Android Virtual Device Manager (tools > AVD manager). On the AVD manager click the create new virtual device. In the window that opens up, choose pixel 3 (or any other phone) without Play Store.
+## Getting started with the installation script
 
-## Creating the AVD from the command line
+We provide you with a handy script that downloads all the right components and installs the AVD for you with minimum effort from your side. You can just run the script and let it do all the work for you.
 
-We will create our AVD from the command line so that the SDK tools generate the proper directories and configurations for us. To do this browse to the SDK tools folder (Usually in ~/Library/Android/sdk/tools or C:\Users\\<username\>\AppData\Local\Android\Sdk on Windows).Go to the bin directory. You should see the avdmanager command line executable here. Use the following command to create the Esper AVD.
+### Downloading the script
 
-```./avdmanager create avd -n esper -k "system-images;android-28;default;x86_64"```
+You can download [the script from here](https://downloads.esper.io/avd_creator.zip). Just unzip the file somewhere and start a terminal or command prompt at the extracted folder location.
 
-This will create an AVD named Esper. You can go back one directory and use the emulator command to test this AVD.
+Before you run the script please install the python ```requests``` library. You can do it by issuing the following command windows OR:
 
-```./emulator @esper```
+```pip3 install requests```
 
-Remember to put the @  before the avd name. Currently the avd uses the system images we had asked avdmanager to download.
+Or on a Mac run the following on your terminal:
 
-## Using the esper emulator images instead of factory images
+```sudo pip3 install requests```
 
-We will now proceed to placing the Esper provided images instead of the images downloaded by Android Studio's AVD manager. This would allow you to test your apps quickly with Esper provided services in a convenient manner.
+### Running the script
 
-## Downloading the system images
+With the script in place you can simply execute it. You can start a terminal on mac (or command prompt/powershell on Windows) and issue the following command:
 
-You can download the [system images from here](https://shoonya-os-builds.s3-us-west-2.amazonaws.com/builds/EsperAVD/42/EsperAVD-42.tar.gz). Once you have downloaded the image unzip it. You need to replace the files over the previous AVD files that were created for you by avdmanager.
+```python3 avd_creator.py```
 
-## Integrating your system images
-
-Integrating the system images requires a few extra configuration files. We need to keep track of two folders that Android Studio uses to organize the SDK and configurations.
-
-- sdk folder - This folder stores the Android SDK and SDK tools. The SDK tools are command line tools that we would extensively use as they provides better feedback, options, and debugging capabilities. The GUI is lacking at many places in this regard. You can find the sdk folder in Mac in /Users/\<user-name\>/Library/Android/sdk and in C:\Users\\<user-name\>\AppData\Local\Android\sdk in Windows. You can check Android Studio preferences > Appearance and Behavior > System Settings > Android SDK and you can find the SDK location mentioned there.
-- .android folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behavior you have to tinker with the files here. You can find this folder in your home directory in Windows, Linux and Mac.
-You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system-qemu.img, vendor-qemu.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Rename your system-qemu.img to system.img and vendor-qemu.img to vendor.img. Place your andvancedFeatures.ini, build.prop, Notice.txt and package.xml config files in the folder as well.
-
-You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system.img, vendor.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Place your andvancedFeatures.ini, Notice.txt and build.prop config files in the folder as well.
-
-In your .android folder go to avd > esper.avd. Place the AVD.conf file here.
-
-## Editing the Config.ini
-
-The Config.ini file is responsible for how the emulator behaves. Here is a sample config to get you started.
-
-```text
-AvdId=Esper
-PlayStore.enabled=false
-abi.type=x86_64
-avd.ini.encoding=UTF-8
-disk.dataPartition.size=800M
-fastboot.chosenSnapshotFile=
-fastboot.forceChosenSnapshotBoot=no
-fastboot.forceColdBoot=no
-fastboot.forceFastBoot=yes
-hw.accelerometer=yes
-hw.arc=false
-hw.audioInput=yes
-hw.audioOutput=yes
-hw.battery=yes
-hw.camera.back=virtualscene
-hw.camera.front=emulated
-hw.cpu.arch=x86_64
-hw.cpu.ncore=4
-hw.dPad=no
-hw.device.hash2=MD5:ae200ad6786ec467cb9067f7b46b0fd1
-hw.device.manufacturer=Google
-hw.device.name=Nexus 5X
-hw.gps=yes
-hw.gpu.enabled=yes
-hw.gpu.mode=auto
-hw.initialOrientation=Portrait
-hw.keyboard=yes
-hw.lcd.density=420
-hw.lcd.height=1920
-hw.lcd.width=1080
-hw.mainKeys=no
-hw.ramSize=1536
-hw.sdCard=yes
-hw.sensors.orientation=yes
-hw.sensors.proximity=yes
-hw.trackBall=no
-image.sysdir.1=s<please-specify-system-images-directory>
-runtime.network.latency=none
-runtime.network.speed=full
-sdcard.size=512M
-showDeviceFrame=yes
-skin.dynamic=yes
-tag.display=Google APIs
-tag.id=google_apis
-vm.heapSize=228
-```
-
-Make sure in your config.ini image.sysdir.1 is set to point to the correct system image directory in the sdk folder. For my mac at present it is set to image.sysdir.1=system-images/android-28/esper/x86_64/. Make sure you have it correctly set too.
+This will take some time as the script downloads th required files and sets up the Esper AVD.
 
 ## Testing the AVD
 
-You are almost done. Now from the command line in your tools directory start the emulator using the command.
+Once the script has successfully executed you need to start the emulator. You can do it from Android Studio. Within Android Studio Menu choose Tools > AVDManager. You can see the esper AVD. Simply click on the green run button under the actions column and this should launch yor AVD.
 
-```./emulator @esper```
+Optionally if you are facing an issue or do not want to run android studio to launch the AVD, head to the sdk tools directory. And execute the following.
 
+```bash
+cd ~/Library/Android/sdk/tools
+./emulator @esper
+```
+
+On Windows you can do the same from your command prompt.
+
+```cmd
+cd %LOCALAPPDATA%\Android\Sdk\tools
+emulator.exe @esper
+```
