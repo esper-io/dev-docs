@@ -6,7 +6,13 @@ module.exports = {
     ["vuepress-plugin-reading-time", true],
     ["@dovyp/vuepress-plugin-clipboard-copy", true],
     ["@vuepress/back-to-top", true],
-    ["@vuepress/plugin-medium-zoom", true]
+    ["@vuepress/plugin-medium-zoom", true],
+    [ 
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-141392027-1' // UA-00000000-0
+      }
+    ]  
   ],
   themeConfig: {
     esper_tenant_name: "foo",
