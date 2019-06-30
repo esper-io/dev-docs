@@ -18,7 +18,7 @@ Zero Touch Provisioning:
 
 Ideally you should see true zero touch provisioning on your devices for which the imei or serial numbers was uploaded on the template. You should be able to boot the device and watch it get provisioned automatically by Esper according to your Device template. 
 
-If the customer has known Wi-Fi in the deployment field, it can be baked in the Esper Enhanced Android OS. 
+If the customer has known Wi-Fi in the deployment field, it can be baked in the Esper Enhanced Android™ OS. 
 
 If the Wi-Fi SSID set in the Device template is unavailable:
 

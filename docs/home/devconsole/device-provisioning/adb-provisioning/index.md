@@ -22,9 +22,9 @@ c. Now go back to Settings, and under the Developer options entry select turn on
 
   ![here](../../images/1_ADB_a.png)
 
-d. Connect your Android device to your development computer via USB.
+d. Connect your Android™ device to your development computer via USB.
 
-e. Click on the Authorization Dialog box on Android device.
+e. Click on the Authorization Dialog box on Android™ device.
 
  ![here](../../images/3_ADB.png)
      

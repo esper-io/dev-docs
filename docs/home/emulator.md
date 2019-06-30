@@ -7,11 +7,11 @@ Esper developer platform provides you a customized Emulator images based on x86 
 
 ## Pre-requisites
 
-Before you start with this guide, make sure you have Android Studio installed.
+Before you start with this guide, make sure you have Android™ Studio installed.
 
 ## Getting started with the Esper emulator
 
-Open Android Studio and open Android Virtual Device Manager (tools > AVD manager). On the AVD manager click the create new virtual device. In the window that opens up choose pixel 3 (or any other phone) without play store.
+Open Android™ Studio and open Android™ Virtual Device Manager (tools > AVD manager). On the AVD manager click the create new virtual device. In the window that opens up choose pixel 3 (or any other phone) without play store.
 
 ## Creating the AVD from the command line
 
@@ -27,7 +27,7 @@ Remember to put the @  before the avd name. Currently the avd uses the system im
 
 ## Using the esper emulator images instead of factory images
 
-We will now proceed to placing the Esper provided images instead of the images downloaded by Android Studio's AVD manager. This would allow you to test your apps quickly with Esper provided services in a convenient manner.
+We will now proceed to placing the Esper provided images instead of the images downloaded by Android™ Studio's AVD manager. This would allow you to test your apps quickly with Esper provided services in a convenient manner.
 
 ## Downloading the system images
 
@@ -35,15 +35,15 @@ You can download the [system images from here](https://shoonya-os-builds.s3-us-w
 
 ## Integrating your system images
 
-Integrating the system images requires a few extra configuration files. We need to keep track of two folders that android studio uses to organise the sdk and configurations.
+Integrating the system images requires a few extra configuration files. We need to keep track of two folders that Android™ studio uses to organise the sdk and configurations.
 
-- sdk folder - This folder stores the android sdk and sdk tools. The sdk tools are command line tools that we would extensively use as it provides better feedback, options and debugging capabilities. The GUI is lacking at many places in this regard. You can find the sdk folder in mac in /Users/\<user-name\>/Library/Android/sdk and in C:\Users\\<user-name\>\AppData\Local\Android\sdk in Windows. You can check android studio preferences > Appearance and Behaviour > System Settings > Android SDK and you can find the sdk location mentioned there.
-- .android folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behaviour you have to tinker with the files here. You can find this folder in your home directory in windows, linux and mac.
+- sdk folder - This folder stores the Android™ sdk and sdk tools. The sdk tools are command line tools that we would extensively use as it provides better feedback, options and debugging capabilities. The GUI is lacking at many places in this regard. You can find the sdk folder in mac in /Users/\<user-name\>/Library/Android/sdk and in C:\Users\\<user-name\>\AppData\Local\Android\sdk in Windows. You can check Android™ studio preferences > Appearance and Behaviour > System Settings > Android™ SDK and you can find the sdk location mentioned there.
+- .Android™ folder -  This is where the configuration files as well as your .avd folders are stored. To change the AVD behaviour you have to tinker with the files here. You can find this folder in your home directory in windows, linux and mac.
 You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system-qemu.img, vendor-qemu.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Rename your system-qemu.img to system.img and vendor-qemu.img to vendor.img. Place your andvancedFeatures.ini, build.prop, Notice.txt and package.xml config files in the folder as well.
 
 You can either replace the images in the sdk folder > system-images > android-28 > default > x86_64 or create your own folder under the android-28 folder. We will create android-28 > esper > x86_64 and place our system images here. Place the system.img, vendor.img, ramdisk.img, userdata.img, encryptionkey.img, kernel-ranchu files here. Place your andvancedFeatures.ini, Notice.txt and build.prop config files in the folder as well.
 
-In your .android folder go to avd > esper.avd. Place the AVD.conf file here.
+In your .Android™ folder go to avd > esper.avd. Place the AVD.conf file here.
 
 ## Editing the Config.ini
 

@@ -11,7 +11,7 @@
   
 2. **Target Device**  
  
-     Any Android device can act as a target device for your application. Esper tools enable developers to communicate with their target device so they can deploy and test the application on the actual device.  
+     Any Android™ device can act as a target device for your application. Esper tools enable developers to communicate with their target device so they can deploy and test the application on the actual device.  
 
      Esper will soon be launching Developer Kits and Virtual device emulators.  
 
@@ -31,9 +31,9 @@
 
 5. **Start Developing** 
 
-     As you begin your application development on Android Studio, you can start using the Esper APIs to deploy and test applications on your target device. Try the Esper CLI by downloading it directly from GitHub and installing it on your system. Explore the Web-based Esper Dev Console and Esper Manage Dashboard on the Esper Cloud using your Dev Console account. Or, you can access the Esper APIs using one of the methods described below. 
+     As you begin your application development on Android™ Studio, you can start using the Esper APIs to deploy and test applications on your target device. Try the Esper CLI by downloading it directly from GitHub and installing it on your system. Explore the Web-based Esper Dev Console and Esper Manage Dashboard on the Esper Cloud using your Dev Console account. Or, you can access the Esper APIs using one of the methods described below. 
      * If you are calling the Esper APIs using HTTP, see the Esper [ API Reference v1](https://api.esper.io) 
-     * If you are using the Python SDK in Android Studio to call the Esper APIs, see [Esper SDK](./pythonsdk.md)
+     * If you are using the Python SDK in Android™ Studio to call the Esper APIs, see [Esper SDK](./pythonsdk.md)
      * Download the Command line tool, Esper CLI, with full source code, to work the Esper APIs. You can go here to Download [Esper CLI](./espercli.md)
 
 ## Quick links

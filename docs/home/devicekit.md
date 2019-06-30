@@ -1,4 +1,4 @@
 # Esper Device Kit
 
 
-Esper will be launching Android developer kits shortly. 
+Esper will be launching Android™ developer kits shortly. 

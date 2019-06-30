@@ -10,7 +10,7 @@ This section enables you to manage your applications. You may add the following 
 
 1.  Upload Private Apps (APK files) to the Esper Cloud.
 2.  Install Google Play Apps after [approving](../device-template/how-approve-google-play-store-app/index.md) them.
-3.  Install default Android apps.
+3.  Install default Android™ apps.
 
 Upload Private Apps (APK files) to Esper Cloud:
 
