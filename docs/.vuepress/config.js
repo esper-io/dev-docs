@@ -1,6 +1,6 @@
 module.exports = {
   base: "/",
-  title: "Esper Docs",
+  title: "Docs",
   description: "Esper documentation",
   plugins: ["vuepress-plugin-reading-time", "@vuepress/back-to-top", '@vuepress/plugin-medium-zoom'],
   themeConfig: {
@@ -19,11 +19,7 @@ module.exports = {
     ],
     logo: `/esper.svg`,
     nav: [
-      // { text: "SDK", link: "/home/pythonsdk.md" },
-      // { text: "CLI", link: "/home/espercli.md" },
-      // { text: "API", link: "https://esper-io.github.io/esper-api-spec/" },
-      { text: "Blog", link: "https://blog.esper.io" },
-      // { text: "Product Documentation", link: "/home/devconsole/" }
+      { text: "Blog", link: "https://blog.esper.io" }
     ],
     docsRepo: "esper-io/dev-docs",
     docsDir: "docs",
@@ -46,6 +42,6 @@ module.exports = {
         "faq"
       ]
     },
-    displayAllHeaders: false
+    displayAllHeaders: true
   }
 };

@@ -71,9 +71,9 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
 @font-face {
   font-family: "BlenderPro";
-  src: url("./fonts/BlenderPro-Medium.eot");
-  src: local("‚ò∫"), url("./fonts/BlenderPro-Medium.woff2") format("woff2"),
-    url("./fonts/BlenderPro-Medium.woff") format("woff");
+  src: url("/fonts/BlenderPro-Medium.eot");
+  src: local("‚ò∫"), url("/fonts/BlenderPro-Medium.woff2") format("woff2"),
+    url("/fonts/BlenderPro-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
