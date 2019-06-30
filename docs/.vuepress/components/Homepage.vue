@@ -40,7 +40,7 @@
           <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
         </div>
         <div class="homepage__a">Esper Tools for Android™ Studio</div>
-        <p>Plugin extending Android™ Studio with Esper Tools</p>
+        <p>Esper Virtual Devices, Plugin for Android™ Studio, Esper Enhanced Android™</p>
       </a>
       <a
         href="/home/devconsole/"
