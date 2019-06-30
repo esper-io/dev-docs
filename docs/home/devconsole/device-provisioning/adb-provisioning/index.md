@@ -22,9 +22,9 @@ b. Go to the Home screen and tap the Menu button, select the **About Phone** opt
 
 c. Now go back to **Settings**, and under the **Developer options** entry select **Turn on Debugging** and then **USB debugging**.
 
-d. Connect your Android™ device to your development computer via USB.
+d. Connect your Android device to your development computer via USB.
 
-e. Click on the **Authorization Dialog box** on Android™ device.
+e. Click on the **Authorization Dialog box** on Android device.
 
  ![here](../../images/3_ADB.png)
      

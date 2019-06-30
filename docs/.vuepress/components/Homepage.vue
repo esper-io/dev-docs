@@ -40,7 +40,7 @@
           <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
         </div>
         <div class="homepage__a">Esper Tools for Android™ Studio</div>
-        <p>Esper Virtual Devices, Plugin for Android™ Studio, Esper Enhanced Android™</p>
+        <p>Esper Virtual Devices, Plugin for Android Studio, Esper Enhanced Android</p>
       </a>
       <a
         href="/home/devconsole/"
@@ -63,7 +63,10 @@
         <p>Find out the latest about Esper on our Blog</p>
       </a>
     </div>
-    <div class="homepage__footer">Apache 2.0 | 2019 (C) Esper</div>
+    <div class="homepage__footer">Apache 2.0 | © 2019 Esper, Inc.
+      <div>Android is a trademark of Google LLC</div>
+    </div>
+    
   </div>
 </template>
 

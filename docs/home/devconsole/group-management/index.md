@@ -33,13 +33,13 @@ You can click on **'View Results'** to see the number of successful and unsucces
 
 If your devices are using Esper Enhanced Android, you will also see a tab for **"OS updates"**.
 
-Here you can see a list of the Esper Enhanced Android™ updates that have been made on the current group with details such as build number, device type, number of devices, and date deployed along with an option to view the details:
+Here you can see a list of the Esper Enhanced Android updates that have been made on the current group with details such as build number, device type, number of devices, and date deployed along with an option to view the details:
 
 ![Group Management](https://documentation-media.s3.amazonaws.com/images/7_GM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 By clicking on the **'Deploy OS Updates'** button you may choose any available Build number by then clicking on **'Select Build'**. 
 :::tip
-Please note that currently only the latest 30 builds of the Esper Enhanced Android™ updates will be visible to the user for deployment
+Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment
 :::
 
 ![Group Management](https://documentation-media.s3.amazonaws.com/images/8_GM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)

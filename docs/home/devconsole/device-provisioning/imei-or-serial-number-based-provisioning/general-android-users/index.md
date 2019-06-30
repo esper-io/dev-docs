@@ -2,7 +2,7 @@
 # IMEI Provisioning - Android
 <div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
-For devices not using Esper Enhanced Android™ (e.g. stock Android), take the following steps to use IMEI based provisioning.
+For devices not using Esper Enhanced Android (e.g. stock Android), take the following steps to use IMEI based provisioning.
 
 In the Esper Console, create a new Device template then **'Edit'** the template and go to **‘Add devices’**. Upload the IMEI csv file you have previously prepared. Update the template. See more details below:
 
@@ -33,7 +33,7 @@ You will see the toast message **‘You are now a developer!'**:
 
 ![IMEI](https://documentation-media.s3.amazonaws.com/images/7_IMEI.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-6\. Connect your Android™ device to your development computer via USB.
+6\. Connect your Android device to your development computer via USB.
 
 7\. Open a command prompt on your development computer.
 

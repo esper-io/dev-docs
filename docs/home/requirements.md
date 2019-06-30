@@ -8,7 +8,7 @@ In order to use Esper Dev, the following are the minimum requirements covering t
 The Dev Console requires Chrome v57+.
 
 ## Device Requirements
-Targeted Dedicated Devices must run Android™ version 4.4 KitKat (API Level 19) or above. Alternatively, Esper Development Devices running Esper Enhanced Android™ can be used; this opens up additional features when using Esper Dev.
+Targeted Dedicated Devices must run Android version 4.4 KitKat (API Level 19) or above. Alternatively, Esper Development Devices running Esper Enhanced Android can be used; this opens up additional features when using Esper Dev.
 
 ## Esper Dev Tools Requirements
 To use the Esper Dev Tools you need to have Python installed. Depending on the tool in use, you can install the required Python version for your platform from [python.org](https://www.python.org/)

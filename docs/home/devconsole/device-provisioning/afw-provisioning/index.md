@@ -1,9 +1,9 @@
 [Introduction](../../index.md) / [Provision Device](../index.md) / AFW Provisioning
 
-# AFW (Android™ for Work) Provisioning
+# AFW (Android for Work) Provisioning
 <div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
-Android™ devices that have Google Mobile Services (Gmail, Google Account ) can be provisioned into Esper management console using AFW provisioning method. 
+Android devices that have Google Mobile Services (Gmail, Google Account ) can be provisioned into Esper management console using AFW provisioning method. 
 To being provisioning device needs to be factory reset. 
 
 In the Esper Console, a device template needs to be created 

@@ -9,7 +9,7 @@ This documentation website is hosted at [docs.esper.io](https://docs.esper.io)
 
 ## About Esper
 
-Esper Dev provides tools that enable Android™ developers to deliver highly secure solutions for Dedicated Devices with greater flexibility and control and a more seamless development experience designed for the entire development life cycle - all while helping IT do more with less.
+Esper Dev provides tools that enable Android developers to deliver highly secure solutions for Dedicated Devices with greater flexibility and control and a more seamless development experience designed for the entire development life cycle - all while helping IT do more with less.
 
 To learn more about Esper, please visit [esper.io](https://esper.io)
 
