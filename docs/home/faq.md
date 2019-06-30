@@ -9,6 +9,7 @@ Sign up for the free Esper Trial! Create an endpoint for your company to run all
 The Esper Trial lasts for 6 months after your endpoint is created, and is intended for development and evaluation use - not for commercial deployments. Contact Esper if you have any further questions about the Trial, we’d be happy to help.
  
 **Can I invite other members of my team to use the Esper Trial?**
+
 Yes! If you have created an Esper Trial Endpoint you can simply add additional users in the User Management section. Each user has access to all the templates created for the endpoint and all the devices provisioned through the Endpoint. Additionally each user can create their own set of API Keys, noting all users of the Endpoint will have the same Enterprise ID
  
 **If I like Esper, can I convert my Trial Endpoint to use ongoing or do I need to start with a new Endpoint?**
@@ -63,15 +64,19 @@ Yes! By using Esper Enhanced Android you can perform scaled Zero touch enrollmen
 
 Device Orchestration is moving beyond MDM to bring the management of dedicated devices into DevOps. MDM is the antiquated approach to device management established in a pre-cloud computing world. Additionally, MDM does not factor in building and maintaining dedicated device fleets - it appeared to service BYOD. Esper was conceived for the DevOps world with CI/CD - we expose the Esper platform via a set of APIs that can be integrated into Cloud-based backend systems for automating the device management process, hence orchestrating. We also robustly address the app developers’ needs to work with dedicated devices during the early phases of app development and testing using our Android Tools, the SDK, and the CLI.
  
-Where is Esper based?
+**Where is Esper based?**
+
 We are based in Seattle with offices in Silicon Valley. We are ex-Amazon and Microsoft with deep experience in Android, Windows CE, and Windows Phone.
  
-What does Esper offer for customer support?
+**What does Esper offer for customer support?**
+
 We provide free support within reason during the Trial period. After or beyond that we provide paid support plans with the choice of email, telephone, chat, or Zoom.
  
-Does Esper support iOS devices and/or PC-based systems?
+**Does Esper support iOS devices and/or PC-based systems?**
+
 No, we do not. We are not a general device management company. We are hyper-focused on Android-based dedicated devices. That’s what we do!
  
-Does Esper support BYOD?
+**Does Esper support BYOD?**
+
 We do not support BYOD scenarios. We do support bringing your own dedicated devices.
  
