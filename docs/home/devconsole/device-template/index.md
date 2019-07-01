@@ -1,14 +1,13 @@
 [Introduction](../index.md) / Device Template
 
-#### Device Template
+# Device Template
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
-June 6, 2019
-
-How to use Esper's Device Template.
+## How to use Esper's Device Template.
 
 Device Template is a one stop means for you to quickly provision your device. It lets you create a profile for the device where you may choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
 
-Steps to create a Device Template:
+## Steps to create a Device Template.
 
 1.  Click on 'Device Template'.
 2.  Click on 'Create Template'.
@@ -16,7 +15,7 @@ Steps to create a Device Template:
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/1_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-In the Policy section:
+### In the Policy section
 
 Set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings you wish to enable on your devices. If you wish to have Google Play Store show up on the device, you may turn on the toggle button. You may reset these values to default at any time by clicking 'Reset to Default'.
 
@@ -26,7 +25,7 @@ In order to restrict phone numbers that can make or receive calls to the device,
 
 Click 'Next'.
 
-In the Apps section:
+### In the Apps section
 
 Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](../app-management/index.md) or install apps from Google Play Store that you approved via [Play For Work](../play-work/index.md).
 
@@ -34,13 +33,16 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/3_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-*   To add app from Play Store list - click on the apps to add from the list of available apps. Please note that only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+*   To add app from Play Store list - click on the apps to add from the list of available apps. 
+:::tip
+Please note that only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+:::
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/4_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 Click 'Next'.
 
-In the Branding section:
+### In the Branding section
 
 Upload landscape and/or portrait wallpaper.
 
@@ -52,19 +54,20 @@ There is an option to Preview the uploaded wallpapers:
 
 Click 'Next'.
 
-In the Settings section:
+### In the Settings section
 
 Choose the device settings you would like to have on your provisioned devices such as Bluetooth, Wi-Fi, volume, screen rotation, GPS, and screen timeout. Click 'Next':
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/12_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-In the Group section:
+### In the Group section
 
 Select an existing Group or create a Group. The devices provisioned using this device profile will be a part of the selected Group. Click 'Next':
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/13_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-On the Preview screen, you will see a preview of the entire device template. If you wish to edit your settings, use the 'Back' button to go back to the appropriate screen:
+### On the Preview screen
+ You will see a preview of the entire device template. If you wish to edit your settings, use the 'Back' button to go back to the appropriate screen:
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/14_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
@@ -81,27 +84,27 @@ On clicking the View QR code, there is also an option to download the config.jso
   
 You can also Preview, Edit, Duplicate & Delete the template:
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/16_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../images/temp_2.png)
 
 Click on the ellipsis (...) on the template tile to preview, edit, duplicate or delete a template.
 
-*   Preview Template
+*   **Preview Template**
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/17_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 Click on the Preview option to preview the device template. Click on the + sign to expand and then check selected individual components.
 
-*   Edit Template
+*   **Edit Template**
 
 To edit any template, click on the 'Edit Template' option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the 'Update' button on the Preview page.
 
-*   Add Devices (IMEI Provisioning)
+*   **Add Devices (IMEI Provisioning)**
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/13.1_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
 
-*   Delete Template
+*   **Delete Template**
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/18_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 

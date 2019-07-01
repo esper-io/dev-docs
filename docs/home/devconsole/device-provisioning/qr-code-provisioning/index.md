@@ -1,10 +1,9 @@
-[Provision Device](../index.md) / 6-Tap Provisioning
+[Introduction](../../index.md) / [Provision Device](../index.md) / QR Code Provisioning
 
-#### QR Code Provisioning 
+# QR Code Provisioning 
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
-June 6, 2019
-
-This page describes how user can provision their devices using the QR Code Method.
+This page describes how user can provision their devices using the **QR Code** Method.
 
 Similar to the AFW method, the device needs to be prepared for provisioning by bringing up the QR code scanner.
 

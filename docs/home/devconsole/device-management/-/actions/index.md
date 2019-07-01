@@ -1,10 +1,11 @@
-#### Actions
+[Introduction](../../../index.md) / [Devices](../../index.md) / [View More](../index.md) / Actions
+# Actions
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
-Jan. 15, 2019
 
 Actions that can be performed on the device from cloud portal
 
-Device Actions
+## Device Actions
 
 All the device actions that can be performed are shown.
 

@@ -1,4 +1,6 @@
 # Esper CLI
+<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
 
 This package provides a unified command line interface to the Esper API Services.
 
@@ -25,7 +27,7 @@ pip install espercli
 
 or
 
-From [Github](https://github.com/esper-io/esper-cli)
+From [GitHub](https://github.com/esper-io/esper-cli)
 ```sh
 pip install git+https://github.com/esper-io/esper-cli.git
 ```
@@ -42,13 +44,15 @@ cd esper-cli
 python setup.py install
 ```
 
-> You don't need to install setuptools separately since they are packaged along with the downloaded library
+:::tip
+You don't need to install `setuptools` separately since they are packaged along with the downloaded library
+:::
 
 
 ### Usage
 
-Before using espercli, you need to tell it about your Esper credentials. For this you will need `ENVIRONMENT NAME` and `API KEY` as generated in [Requirements](#requirements) section.
-The way to get started is to run the espercli configure command:
+Before using `espercli`, you need to tell it about your Esper credentials. For this you will need `ENVIRONMENT NAME` and `API KEY` as generated in [Requirements](#requirements) section.
+The way to get started is to run the `espercli configure` command:
 ```sh
 $ espercli configure
 $ Environment name: foo

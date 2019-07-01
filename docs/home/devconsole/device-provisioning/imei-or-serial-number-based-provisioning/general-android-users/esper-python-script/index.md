@@ -1,8 +1,7 @@
-[IMEI Provisioning - Android](../index.md) / Esper Python Script
+[Introduction](../../../../index.md) / [Provision Device](../../../index.md) / [IMEI Provisioning](../../index.md) / [Android](../index.md)/ Esper Python Script
 
-#### Esper Python Script
-
-May 19, 2019
+# Esper Python Script
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 Script to be run via ADB -
 
