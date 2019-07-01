@@ -64,7 +64,7 @@
       </a>
     </div>
     <div class="homepage__footer">Apache 2.0 | © 2019 Esper, Inc.
-      <div>Android is a trademark of Google LLC</div>
+      <div style="font-size: 0.5em;">Android is a trademark of Google LLC</div>
     </div>
     
   </div>
@@ -113,6 +113,7 @@
   margin: 1.8rem auto;
 }
 .homepage__button {
+  font-weight: normal !important;
   font-family: "BlenderPro";
   display: inline-block;
   font-size: 1.2rem;
