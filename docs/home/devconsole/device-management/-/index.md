@@ -1,10 +1,10 @@
-[Devices](../index.md) / View More
+[Introduction](../../index.md) / [Devices](../index.md) / View More
 
-#### View More
+# View More
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
-Jan. 15, 2019
 
-Here is what you can do on the device-
+Here is what you can do on the device
 
 You may view, take actions, change rules, install apps, and remotely view the device from this page.
 
@@ -14,13 +14,13 @@ Click here to read about how you can take actions on the device remotely using t
 
 **Event Feed**
 
-This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behavior to predict security issues.
+This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behaviour to predict security issues.
 
 ![Device Management](https://documentation-media.s3.amazonaws.com/images/6_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
 **Device Graphs**
 
-This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, wifi, and their usage over time.
+This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, WiFi, and their usage over time.
 
 ![Device Management](https://documentation-media.s3.amazonaws.com/images/7_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
@@ -50,6 +50,8 @@ This section lets the user capture bug report from the device in question. You c
 
 ![Device Management](https://documentation-media.s3.amazonaws.com/images/10_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
+::: tip
 Please note that the user on the device side needs to swipe down the notification bar and click on the bug report line. On being prompted, the device user needs to choose 'Share'. If they choose 'Cancel' the Bug Report will not be shared.
+:::
 
 [Return to Devices](../index.md)

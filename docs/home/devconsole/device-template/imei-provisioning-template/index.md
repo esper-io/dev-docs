@@ -1,8 +1,7 @@
-[Device Template](../index.md) / IMEI Provisioning via Template
+[Introduction](../../index.md) / [Device Template](../index.md) / IMEI Provisioning via Template
 
-#### IMEI Provisioning via Template
-
-May 19, 2019
+# IMEI Provisioning via Template
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 IMEI or Serial number of devices to be provisioned need to be added to the relevant template
 
@@ -22,20 +21,20 @@ The user can upload IMEI/Serial numbers with a Csv file.
 
 ![Device Template](https://documentation-media.s3.amazonaws.com/images/20.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-The csv file containing the imei's and serial numbers should adhere to the below conditions-
+The csv file containing the IMEI's and serial numbers should adhere to the below conditions-
 
-*   The imei numbers and serial numbers can be entered separated by comma in the csv file
-*   The imei numbers should be valid 15 digits. Serial numbers do not have any validation.
+*   The IMEI numbers and serial numbers can be entered separated by comma in the csv file
+*   The IMEI numbers should be valid 15 digits. Serial numbers do not have any validation.
 *   File should not be empty
 *   The first line and column of the excel file should be exactly- "imei1, imei2, serialnumber"
-*   For any line imei1 , imei2 , serialnumber all the three should not be empty
-*   Invalid imei will not be accepted. Imeis are being validated through Luhn's algorithm.
+*   For any line imei1 , imei2 , serial number all the three should not be empty
+*   Invalid IMEI will not be accepted. IMEIs are being validated through Luhn's algorithm.
 *   There should not be more than 3 values for a row
-*   Duplicate Imeis should not be uploaded.
-*   Imei and serial number should not be switched.
-*   If user does not want to add a second imei or serial number, they should leave the space blank between the commas
+*   Duplicate IMEIs should not be uploaded.
+*   IMEI and serial number should not be switched.
+*   If user does not want to add a second IMEI or serial number, they should leave the space blank between the commas
 
-**Examples for csv , where a serial number or an imei number could be missing**
+**Examples for csv , where a serial number or an IMEI number could be missing**
 
 ![Screenshot 2019-05-19 at 12.54.58 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.58_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 

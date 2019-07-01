@@ -1,13 +1,17 @@
 # Esper SDK for Python
+<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
 
 Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper Manage. To read more about the various capabilities of Esper Manage and Esper managed devices, please visit [esper.io](https://esper.io).
 
-Current stable release verions are
+Current stable release versions are
 
     API version: 1.0.0
     SDK version: 0.0.6
 
-> Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io).
+:::tip
+Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io).
+:::
 
 ## Pre-requisites
 1. **Python:** We recommend you use Python 3.4 or above.
@@ -16,7 +20,7 @@ Current stable release verions are
 
 ## Installation
 
-#### Using `pip install`
+### Using `pip install`
 
 From PyPI
 ```sh
@@ -25,12 +29,12 @@ pip install esperclient
 
 or
 
-From [Github](https://github.com/esper-io/esper-client-py)
+From [GitHub](https://github.com/esper-io/esper-client-py)
 ```sh
 pip install git+https://github.com/esper-io/esper-client-py.git
 ```
 
-#### From source
+### From source
 
 Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
@@ -42,12 +46,13 @@ cd esper-client-py
 python setup.py install
 ```
 
-> You do not need to install setuptools separately since they are packaged along with the downloaded library
-
+:::tip
+ You do not need to install setuptools separately since they are packaged along with the downloaded library
+:::
 
 ## Usage
 
-Import esperclient package
+Import `esperclient` package
 
 ```python
 import esperclient
@@ -65,7 +70,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 Now you can perform various operations as described below. To see the complete list of actions and code samples, visit [SDK documentation](https://github.com/esper-io/esper-client-py#documentation-for-api-endpoints) To see response formats, visit [API documentation](https://esper-io.github.io/esper-api-spec/)
 
-Some additional information you'll need in order to access Esper APIs is your `enterprise ID`, which is a unique id assinged to your Esper Dev account. You can get your Enteprise ID from the web dashboard in `Enterprise Settings` tab. The Enterprise ID will be a string in UUID format i.e `595a6107-b137-448d-b217-e20cc58ee84d`.
+Some additional information you'll need in order to access Esper APIs is your `enterprise ID`, which is a unique id assigned to your Esper Dev account. You can get your Enterprise ID from the web dashboard in `Enterprise Settings` tab. The Enterprise ID will be a string in UUID format i.e `595a6107-b137-448d-b217-e20cc58ee84d`.
 
 ## Examples
 
@@ -460,7 +465,7 @@ except ApiException as e:
 }
 ```
 
-We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [Github](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
+We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [GitHub](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
 
 If you face any issue in SDK usage, we recommend you that you reach out to [Esper Dev Support](./support.md)
 

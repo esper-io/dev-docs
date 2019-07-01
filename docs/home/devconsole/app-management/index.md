@@ -1,8 +1,8 @@
 [Introduction](../index.md) / Apps
 
-#### Apps
+# Apps
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
-June 6, 2019
 
 Learn about Esper's App Management.
 
@@ -12,14 +12,14 @@ This section enables you to manage your applications. You may add the following 
 2.  Install Google Play Apps after [approving](../device-template/how-approve-google-play-store-app/index.md) them.
 3.  Install default Android apps.
 
-Upload Private Apps (APK files) to Esper Cloud:
+## Upload Private Apps (APK files) to Esper Cloud:
 
 *   You can upload your own mobile app through an APK file using the upload button on the top right hand corner.
 *   The uploaded apps will be shown under the 'Uploaded apps' section:
 
 ![App Management](https://documentation-media.s3.amazonaws.com/images/1_AM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
 
-Install Google Play Apps after [approving](../device-template/how-approve-google-play-store-app/index.md) them:
+## Install Google Play Apps after [approving](../device-template/how-approve-google-play-store-app/index.md) them:
 
 *   You can also allow a user to download apps from Google Play Store.
 *   This requires approving a specific app from the Play Store to allow a user to download the app on their device:

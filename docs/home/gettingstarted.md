@@ -1,4 +1,6 @@
 # Getting Started
+<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
 
 ## Setup
 
