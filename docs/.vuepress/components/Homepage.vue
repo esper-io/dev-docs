@@ -73,6 +73,7 @@
 <style scoped>
 * {
   font-size: 1em;
+  font-weight: normal;
 }
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
 @font-face {

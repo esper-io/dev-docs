@@ -6,7 +6,7 @@
 
 ## Downloading Executable For Windows
 
-1. Click <a href="/Executables/esper_provisioner_windows.exe" download>**here**</a> to download the Windows Executable.
+1. Click <a href="https://downloads.esper.io/esper_provisioner_windows.exe" download>**here**</a> to download the Windows Executable.
 2. After downloading, click on the small arrow next to download and select **"Keep"**.\
   a. Do this step for IMEI provisioning for non-Esper devices. Download the **config.json** file <a href="/Executables/config.json" download>**here**</a>. This file needs to be edited for changing the **username** and **password** that you have setup for your Esper endpoint. Also, if you enter the WiFi information, it will enable the device to connect to WiFi automatically. Place this file in the same folder as the
 Esper-Provisioner executable downloaded above.
@@ -21,7 +21,7 @@ after connecting and enabling USB debugging on the device. See instructions on h
 
 ## Downloading Executable For Mac
 
-1. Click <a href="/Executables/esper-device-provisioner-macos" download>here</a> to download the Mac Executable.
+1. Click <a href="https://downloads.esper.io/esper-device-provisioner-macos" download>here</a> to download the Mac Executable.
 2. After downloading, Ctrl + click on the icon and select Open. This will give permission to the executable to run on your Mac.\
   a. Do this step for IMEI provisioning for non-Esper devices. Download the config.json file <a href="/Executables/config.json" download>here</a>. This file needs to be edited for changing the username and password that you have setup for your Esper endpoint. Also, if you enter the WiFi information, it will enable the device to connect to WiFi automatically. Place this file in the same folder as the 
 Esper-Provisioner executable downloaded above.
