@@ -16,13 +16,13 @@ Click here to read about how you can take actions on the device remotely using t
 
 This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behaviour to predict security issues.
 
-![Device Management](https://documentation-media.s3.amazonaws.com/images/6_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Management](../../../assets/OLD_DASHBOARD/6_DM.png)
 
 **Device Graphs**
 
 This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, WiFi, and their usage over time.
 
-![Device Management](https://documentation-media.s3.amazonaws.com/images/7_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Management](../../../assets/OLD_DASHBOARD/7_DM.png)
 
 [**Apps**](app-management/index.md)
 
@@ -32,13 +32,13 @@ The apps that are already installed in the device are specified here. Only the w
 
 If user wants to switch to a new policy, they can select from the drop down menu and apply it. To create a new policy, click [here](../../policy-management/index.md).
 
-![Device Management](https://documentation-media.s3.amazonaws.com/images/8_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Management](../../../assets/OLD_DASHBOARD/8_DM.png)
 
 **Security**
 
 This page will inform user of security risks that device is facing. If there are any risks, it will show the threat level, cause of the threat, and advise user to secure the device.
 
-![Device Management](https://documentation-media.s3.amazonaws.com/images/9_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Management](../../../assets/OLD_DASHBOARD/9_DM.png)
 
 [**Remote Viewer**](remote-viewer/index.md)
 
@@ -48,7 +48,7 @@ The remote viewer section lets the user remotely view the device and take screen
 
 This section lets the user capture bug report from the device in question. You can select the bug report radio button and press the 'Start' button. The status will change from 'Report Requested' to 'Permission Granted' to 'Download'. The last status 'Download' is a link that will download the bug report with date and time stamp from the device to help your technical staff debug any issues.
 
-![Device Management](https://documentation-media.s3.amazonaws.com/images/10_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Management](../../../assets/OLD_DASHBOARD/10_DM.png)
 
 ::: tip
 Please note that the user on the device side needs to swipe down the notification bar and click on the bug report line. On being prompted, the device user needs to choose 'Share'. If they choose 'Cancel' the Bug Report will not be shared.

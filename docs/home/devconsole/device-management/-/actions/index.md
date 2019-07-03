@@ -31,6 +31,6 @@ In order to wipe or factory reset the device, click on ‘Wipe device’ tile. T
 
 Confirm by clicking ‘Wipe’ and the device will be automatically Wiped.
 
-![Device Management](https://documentation-media.s3.amazonaws.com/images/2_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Management](../../../../assets/OLD_DASHBOARD/2_DM.png)
 
 [Return to View More](../index.md)

@@ -13,25 +13,25 @@ In the Esper Console, create a new Device template then **'Edit'** the template 
 1.  Boot the device.
 2.  Go to **'System'** then select **'About phone'**:
 
-![IMEI](https://documentation-media.s3.amazonaws.com/images/2_IMEI.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![IMEI](../../../../assets/OLD_DASHBOARD/2_IMEI.png)
 
 3\. Tap **‘Build number’** 6 times:
 
-![IMEI](https://documentation-media.s3.amazonaws.com/images/3_IMEI.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![IMEI](../../../../assets/OLD_DASHBOARD/3_IMEI.png)
 
 You will see the toast message **‘You are now a developer!'**:
 
-![IMEI](https://documentation-media.s3.amazonaws.com/images/4_IMEI.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![IMEI](../../../../assets/OLD_DASHBOARD/4_IMEI.png)
 
 4\. Navigate back to **'System'**, then open **‘Developer options’**:
 
-![IMEI](https://documentation-media.s3.amazonaws.com/images/5_IMEI.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![IMEI](../../../../assets/OLD_DASHBOARD/5_IMEI.png)
 
 5\. Turn **'Debugging'** to on, then confirm that **'USB debugging'** is also turned on and click **'OK'** on the resulting pop-up:
 
-![IMEI](https://documentation-media.s3.amazonaws.com/images/6_IMEI.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![IMEI](../../../../assets/OLD_DASHBOARD/6_IMEI.png)
 
-![IMEI](https://documentation-media.s3.amazonaws.com/images/7_IMEI.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![IMEI](../../../../assets/OLD_DASHBOARD/7_IMEI.png)
 
 6\. Connect your Android device to your development computer via USB.
 

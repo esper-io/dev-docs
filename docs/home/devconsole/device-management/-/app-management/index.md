@@ -10,6 +10,6 @@ The apps that are already installed in the device are specified here. There are 
 *   You may toggle ON in the default apps listed in device->view more->apps.
 *   You may install the app from the drop down menu by selecting install radio button. The apps shown in this menu are the [APK files that are uploaded by the user](../../../app-management/index.md) or the apps that are [approved in google play](../../../device-template/how-approve-google-play-store-app/index.md).
 
-![Device Management](https://documentation-media.s3.amazonaws.com/images/3_DM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Management](../../../../assets/OLD_DASHBOARD/3_DM.png)
 
 [Return to View More](../index.md)

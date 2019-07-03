@@ -13,7 +13,7 @@ Device Template is a one stop means for you to quickly provision your device. It
 2.  Click on 'Create Template'.
 3.  Enter a name for the Device Template. Click 'Next'.
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/1_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/1_DT.png)
 
 ### In the Policy section
 
@@ -21,7 +21,7 @@ Set default app permissions, Android setting app, system updates, password rules
 
 In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers separated by commas. All numbers must be preceded by +country code (for example +1 for US):
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/2_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/2_DT.png)
 
 Click 'Next'.
 
@@ -31,14 +31,14 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 
 *   To add your app, upload APK files on App Management - click on the app from the dropdown, select the version and click on Add:
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/3_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/3_DT.png)
 
 *   To add app from Play Store list - click on the apps to add from the list of available apps. 
 :::tip
 Please note that only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
 :::
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/4_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/4_DT.png)
 
 Click 'Next'.
 
@@ -46,11 +46,11 @@ Click 'Next'.
 
 Upload landscape and/or portrait wallpaper.
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/11_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/11_DT.png)
 
 There is an option to Preview the uploaded wallpapers:
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/11.1_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/11.1_DT.png)
 
 Click 'Next'.
 
@@ -58,28 +58,28 @@ Click 'Next'.
 
 Choose the device settings you would like to have on your provisioned devices such as Bluetooth, Wi-Fi, volume, screen rotation, GPS, and screen timeout. Click 'Next':
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/12_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/12_DT.png)
 
 ### In the Group section
 
 Select an existing Group or create a Group. The devices provisioned using this device profile will be a part of the selected Group. Click 'Next':
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/13_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/13_DT.png)
 
 ### On the Preview screen
  You will see a preview of the entire device template. If you wish to edit your settings, use the 'Back' button to go back to the appropriate screen:
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/14_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/14_DT.png)
 
 Click 'Save'. You will see a pop-up to confirm your settings. Click 'Okay':
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/15_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/15_DT.png)
 
 The Device Template you just created will now be visible on the Device Template page. You can search for it in the search bar. Click on it to view the Device Template. Click on 'View QR code' to provision a device using this template directly from your Device Template.
 
 On clicking the View QR code, there is also an option to download the config.json file that can be used during ADB and IMEI provisioning:
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/19_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/19_DT.png)
 
   
 You can also Preview, Edit, Duplicate & Delete the template:
@@ -90,7 +90,7 @@ Click on the ellipsis (...) on the template tile to preview, edit, duplicate or 
 
 *   **Preview Template**
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/17_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/17_DT.png)
 
 Click on the Preview option to preview the device template. Click on the + sign to expand and then check selected individual components.
 
@@ -100,13 +100,13 @@ To edit any template, click on the 'Edit Template' option. Policy, Apps, Brandin
 
 *   **Add Devices (IMEI Provisioning)**
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/13.1_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/13.1_DT.png)
 
 While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
 
 *   **Delete Template**
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/18_DT.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../assets/OLD_DASHBOARD/18_DT.png)
 
 Click on the 'Delete Template' option on top right to delete a selected template.
 

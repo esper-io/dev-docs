@@ -70,7 +70,7 @@ configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 Now you can perform various operations as described below. To see the complete list of actions and code samples, visit [SDK documentation](https://github.com/esper-io/esper-client-py#documentation-for-api-endpoints) To see response formats, visit [API documentation](https://esper-io.github.io/esper-api-spec/)
 
-Some additional information you'll need in order to access Esper APIs is your `enterprise ID`, which is a unique id assigned to your Esper Dev account. You can get your Enterprise ID from the web dashboard in `Enterprise Settings` tab. The Enterprise ID will be a string in UUID format i.e `595a6107-b137-448d-b217-e20cc58ee84d`.
+Some additional information you'll need in order to access Esper APIs is your `enterprise ID`, which is a unique id assigned to your Esper Dev account. You can get your Enterprise ID from the web dashboard in `Company Settings` tab. The Enterprise ID will be a string in UUID format i.e `595a6107-b137-448d-b217-e20cc58ee84d`.
 
 ## Examples
 

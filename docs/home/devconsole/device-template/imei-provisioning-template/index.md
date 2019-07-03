@@ -19,7 +19,7 @@ OR
 
 The user can upload IMEI/Serial numbers with a Csv file.
 
-![Device Template](https://documentation-media.s3.amazonaws.com/images/20.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Device Template](../../../assets/OLD_DASHBOARD/imei_real.png)
 
 The csv file containing the IMEI's and serial numbers should adhere to the below conditions-
 
@@ -36,10 +36,8 @@ The csv file containing the IMEI's and serial numbers should adhere to the below
 
 **Examples for csv , where a serial number or an IMEI number could be missing**
 
-![Screenshot 2019-05-19 at 12.54.58 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.58_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Screenshot 2019-05-19 at 12.54.58 PM (2).png](../../../assets/OLD_DASHBOARD/imei1.png)
 
-![Screenshot 2019-05-19 at 12.54.49 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.49_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
-
-![Screenshot 2019-05-19 at 12.54.58 PM (2).png](https://documentation-media.s3.amazonaws.com/images/Screenshot_2019-05-19_at_12.54.58_PM_2.width-500.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Screenshot 2019-05-19 at 12.54.49 PM (2).png](../../../assets/OLD_DASHBOARD/imei2.png)
 
 [Return to Device Template](../index.md)
