@@ -9,15 +9,15 @@ Learn about Esper's Policy Management.
 *   Policies can be viewed, edited, and deleted.
 *   To create a new policy, click on the **'New Policy'** button:
 
-![Policy Management](https://documentation-media.s3.amazonaws.com/images/1_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Policy Management](../../assets/OLD_DASHBOARD/1_PM.png)
 
 *   Enter the policy details and click on **'Create policy'**:
 
-![Policy Management](https://documentation-media.s3.amazonaws.com/images/2_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Policy Management](../../assets/OLD_DASHBOARD/2_PM.png)
 
 *   A new policy is created and can be deployed on any device.
 *   The new policy gets listed on the **'Compliance Policy'** page:
 
-![Policy Management](https://documentation-media.s3.amazonaws.com/images/3_PM.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Policy Management](../../assets/OLD_DASHBOARD/3_PM.png)
 
 [Return to Introduction](../index.md)

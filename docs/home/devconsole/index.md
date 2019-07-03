@@ -10,7 +10,7 @@
 *   [Alerts](alerts/index.md)
 *   [Compliance Policy](policy-management/index.md)
 *   [Users](user-management/index.md)
-*   [Enterprise Settings](enterprise-configuration/index.md)
+*   [Company Settings](enterprise-configuration/index.md)
 *   [OS Updates](os-updates/index.md)
 *   [Developer Options](developer-options/index.md)
 
@@ -37,7 +37,7 @@ From the Console you can also perform important activities for working with your
 *   Provisioning devices using the Console to prepare them for development and deployment use, as well as manage them ongoing.
 *   Creating groups of devices to ease the process of targeting sets of devices during development, and ultimately managing a diverse fleet of devices across different apps.
 *   Setting alerts for specific battery or network conditions on your devices.
-*   Managing users, including adding additional users to your endpoint for either development or admin use, through the Enterprise Settings.
+*   Managing users, including adding additional users to your endpoint for either development or admin use, through the Company Settings.
 
 Many of the above Console features are available via the Esper APIs, so please be sure to check out our API documentation to get started. And install the Esper SDK for Python, our Esper CLI, and the Esper Tools for Android Studio.
 
