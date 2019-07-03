@@ -2,7 +2,7 @@
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 
-To access Esper APIs, SDK, or CLI an API key is needed. An additional piece of information called `Enterprise ID` is needed for APIs and SDK. You can find your `Enterprise ID` in `Enterprise Settings` tab or top right corner on `Developer Options` tab on your dashboard. 
+To access Esper APIs, SDK, or CLI an API key is needed. An additional piece of information called `Enterprise ID` is needed for APIs and SDK. You can find your `Enterprise ID` in `Company Settings` tab or top right corner on `Developer Options` tab on your dashboard. 
 
 To generate your API key, follow the steps mentioned below:
 

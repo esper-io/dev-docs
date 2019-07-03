@@ -1,13 +1,13 @@
-[Introduction](../index.md) / Enterprise Settings
+[Introduction](../index.md) / Company Settings
 
-# Enterprise Settings
+# Company Settings
 <div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
-Learn about Esper's Enterprise Settings.
+Learn about Esper's Company Settings.
 
-*   Enterprise Settings enables you to set your company details by clicking on the **'Edit profile'** button on the top right hand corner:
+*   Company Settings enables you to set your company details by clicking on the **'Edit profile'** button on the top right hand corner:
 
-![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/2_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Company Settings](../../assets/OLD_DASHBOARD/1_EC.png)
 
 *   You are required to fill in your **company information** including:
 
@@ -19,10 +19,10 @@ Learn about Esper's Enterprise Settings.
 6.  Address
 7.  Phone number
 
-![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/1_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Company Settings](../../assets/OLD_DASHBOARD/2_EC.png)
 
 *   If you will be using apps from Google you will also need to enroll your company's Google Play account:
 
-![Enterprise Configuration](https://documentation-media.s3.amazonaws.com/images/2_EC.width-800.png?AWSAccessKeyId=AKIAJHOTEM5S4GAN2SGA)
+![Company Settings](../../assets/OLD_DASHBOARD/3_EC.png)
 
 [Return to Introduction](../index.md)
