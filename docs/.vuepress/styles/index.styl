@@ -16,12 +16,17 @@ header > .links
     border-right: none;
     overflow:   scroll;
     width: 22rem;
+    overflow-x: hidden;
     padding-right: 2rem;
     background: #eaecef40;
 
 .sidebar::-webkit-scrollbar
-    width: 0px;
+    width: 9px;
     background: transparent; /* make scrollbar transparent */
+.sidebar:hover::-webkit-scrollbar-thumb:vertical
+    background: rgba(45, 40, 51, 0.1);
+    border-radius: 1rem;
+    
 .sidebar > .sidebar-links > li > a.sidebar-link
     // text-transform: uppercase;
     font-family: "Nunito Sans", sans-serif;
