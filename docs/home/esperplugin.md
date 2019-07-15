@@ -73,7 +73,7 @@ To uninstall the Esper Plugin Go to File → Settings (or Android Studio → Pre
 
 This will bring up the Esper Plugin detail. Go over to the dropdown that is displaying Disable, Click the dropdown and then select Uninstall.
 
-![](./assets/OLD_DASHBOARD/10_asp_Uninstall_2.jpg)
+![](./assets/OLD_DASHBOARD/10_asp_Uninstall2.jpg)
 
 Confirm you wish to uninstall the Plugin by clicking on Yes:
 
