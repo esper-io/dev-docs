@@ -3,18 +3,19 @@
 
 
 Esper Plugin for Android Studio
+
 The Esper Plugin for Android Studio enables developers to upload APKs directly from Android Studio to an Esper Endpoint. Once uploaded to Esper you can use the Esper APIs, SDK, or CLI from Android Studio Terminal to provision devices with the APK for testing or deployment purposes. Or you can go to the Esper Console and work with your APK from there.
 This guide describes the steps to take to install the Esper Plugin into Android Studio.
 
 ## Requirements
 Before you start with this guide, make sure you have Android Studio installed, version 181 or greater. 
-To verify your Android Studio go to Help → About. The version number is circled below:
+To verify your Android Studio go to **Help → About**. The version number is circled below:
 
 
 ![](./assets/OLD_DASHBOARD/1_asp_AndroidStudioAbout.jpg)
 
 In case you have a version before 181, simply upgrade your Android Studio to the latest version. The latest available version can be installed by clicking on Help → Check for Updates... and then following the subsequent prompts.
-You will also need an account on an Esper Endpoint. Have your Endpoint name, username, and password available. If your company doesn’t have an Esper Endpoint, sign up for an Esper Trial account here.
+You will also need an account on an Esper Endpoint. Have your Endpoint name, username, and password available. If your company doesn’t have an Esper Endpoint, sign up for an Esper Trial account [here](https://esper.io/signup).
 
 ## Installation
 Next, you will find the Esper Plugin from the Plugin Marketplace; go ahead and install it.
