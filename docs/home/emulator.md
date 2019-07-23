@@ -1,4 +1,4 @@
-# Esper Virtual Device
+# Esper Virtual Device (Preview Release Version)
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
