@@ -2,7 +2,7 @@
   <div class="home">
     <div class="homepage__headerbox">
       <h1 class="homepage__heading">Esper Docs</h1>
-      <p class="homepage__subheading">Documentation for all the Esper Dev APIs, SDKs, and Tools</p>
+      <p class="homepage__subheading">Documentation for all the Esper APIs, SDKs, and Tools</p>
       <p>
         <a href="https://esper.io/signup/" class="homepage__button">Sign up</a>
         <a href="/home/" class="homepage__button homepage_button_two">Overview</a>
@@ -13,22 +13,22 @@
         <div style="padding-bottom: 1rem">
           <img class="no-shadow" src="./icons/ApiReferenceIcon.svg" alt="api">
         </div>
-        <div class="homepage__a">Esper API Reference</div>
+        <div class="homepage__a">API Reference</div>
         <p>API documentation and OpenAPI specificiation</p>
       </a>
       <a href="/home/espercli.html" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
           <img  class="no-shadow" src="./icons/EsperCliIcon.svg" alt="cli">
         </div>
-        <div class="homepage__a">Esper CLI</div>
-        <p>Command line tool for the Esper APIs</p>
+        <div class="homepage__a">CLI</div>
+        <p>Command line tool for the APIs</p>
       </a>
       <a href="/home/pythonsdk.html" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperSdkIcon.svg" alt="sdk">
         </div>
-        <div class="homepage__a">Esper SDK</div>
-        <p>Python library to call the Esper APIs</p>
+        <div class="homepage__a">SDK</div>
+        <p>Python library to call the APIs</p>
       </a>
     </div>
     <div class="homepage__links__section">
@@ -39,8 +39,8 @@
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
         </div>
-        <div class="homepage__a">Esper Tools for Android™ Studio</div>
-        <p>Plugin for Android Studio, Esper Virtual Devices, Esper Enhanced Android</p>
+        <div class="homepage__a">Tools for Android™ Studio</div>
+        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android</p>
       </a>
       <a
         href="/home/devconsole/"
@@ -49,7 +49,7 @@
         <div style="padding-bottom: 1rem">
           <img src="./icons/EsperConsoleIcon.svg" alt="console">
         </div>
-        <div class="homepage__a">Esper Console</div>
+        <div class="homepage__a">Console</div>
         <p>Using the Esper Console: Esper Dev & Esper Manage</p>
       </a>
       <a
@@ -59,7 +59,7 @@
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperBlogIcon.svg" alt="blog">
         </div>
-        <div class="homepage__a">Esper Blog</div>
+        <div class="homepage__a">Blog</div>
         <p>Find out the latest about Esper on our Blog</p>
       </a>
     </div>
@@ -254,6 +254,7 @@
 .homepage__links__section__item > p {
   font-family: "Nunito Sans", sans-serif;
   padding: 0rem 1rem;
+  min-height: 54px;
 }
 
 .homepage__footer {
