@@ -1,4 +1,5 @@
-# Esper Android Studio Plugin (Preview Release Version)
+# Esper Android Studio Plugin 
+## (Preview Release Version)
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 
