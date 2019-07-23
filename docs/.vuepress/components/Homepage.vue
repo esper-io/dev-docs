@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="homepage__headerbox">
-      <h1 class="homepage__heading">Esper Docs (Preview Release Version)</h1>
+      <h1 class="homepage__heading">Esper Docs (Preview Release)</h1>
       <p class="homepage__subheading">Documentation for all the Esper Dev APIs, SDKs, and Tools</p>
       <p>
         <a href="https://esper.io/signup/" class="homepage__button">Sign up</a>
