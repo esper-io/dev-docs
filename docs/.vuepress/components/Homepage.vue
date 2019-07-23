@@ -13,21 +13,21 @@
         <div style="padding-bottom: 1rem">
           <img class="no-shadow" src="./icons/ApiReferenceIcon.svg" alt="api">
         </div>
-        <div class="homepage__a">Esper API Reference</div>
+        <div class="homepage__a">API Reference</div>
         <p>API documentation and OpenAPI specificiation</p>
       </a>
       <a href="/home/espercli.html" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
           <img  class="no-shadow" src="./icons/EsperCliIcon.svg" alt="cli">
         </div>
-        <div class="homepage__a">Esper CLI</div>
+        <div class="homepage__a">CLI</div>
         <p>Command line tool for the Esper APIs</p>
       </a>
       <a href="/home/pythonsdk.html" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperSdkIcon.svg" alt="sdk">
         </div>
-        <div class="homepage__a">Esper SDK</div>
+        <div class="homepage__a">SDK</div>
         <p>Python library to call the Esper APIs</p>
       </a>
     </div>
@@ -39,7 +39,7 @@
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
         </div>
-        <div class="homepage__a">Esper Tools for Android™ Studio</div>
+        <div class="homepage__a">Tools for Android™ Studio</div>
         <p>Plugin for Android Studio, Esper Virtual Devices, Esper Enhanced Android</p>
       </a>
       <a
@@ -49,7 +49,7 @@
         <div style="padding-bottom: 1rem">
           <img src="./icons/EsperConsoleIcon.svg" alt="console">
         </div>
-        <div class="homepage__a">Esper Console</div>
+        <div class="homepage__a">Console</div>
         <p>Using the Esper Console: Esper Dev & Esper Manage</p>
       </a>
       <a
@@ -59,7 +59,7 @@
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperBlogIcon.svg" alt="blog">
         </div>
-        <div class="homepage__a">Esper Blog</div>
+        <div class="homepage__a">Blog</div>
         <p>Find out the latest about Esper on our Blog</p>
       </a>
     </div>
