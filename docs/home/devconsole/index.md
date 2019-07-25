@@ -1,6 +1,7 @@
 ### Table of contents
 
-*   [Home (Dashboard)](home-dashboard/index.md)
+*   [Manage Home](home-dashboard/index.md)
+*   [Dev Home] (home-dev/index.md)
 *   [Provision Device](device-provisioning/index.md)
 *   [Device Template](device-template/index.md)
 *   [Devices](device-management/index.md)
