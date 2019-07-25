@@ -1,4 +1,5 @@
 # API Reference (Preview Release)
+
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
