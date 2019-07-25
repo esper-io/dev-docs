@@ -1,4 +1,7 @@
 ### Table of contents
+<br />
+Click on Below Links to read about various sections of the Esper Dashboard
+<br />
 
 *   [Manage Home](home-dashboard/index.md)
 *   [Dev Home](home-dev/index.md)
