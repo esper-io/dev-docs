@@ -5,6 +5,7 @@ Welcome to the Esper Console where we help Android developers build, test, deplo
 
 Esper Dev provides tools that enable Android developers to deliver highly secure solutions for Dedicated Devices with greater flexibility and control. This leads to a better development experience, designed for the entire development lifecycle, while helping IT do more with less. A [rich API](https://api.esper.io) set and a variety of [open-source SDKs](https://github.com/esper-io/esper-client-py) and tools allow you to incorporate device management for your apps and Dedicated Device apps and dedicated devices.\
 
+<img class="no-shadow" src="./assets/OLD_DASHBOARD/overview.jpg" alt="drawing" style="max-width:1000px; width: 100%;"/>
 
 ## Introducing Esper
 
@@ -30,16 +31,12 @@ Many of the above Console features are available via the Esper APIs, so please b
 
 To try out Esper simply sign up for a developer trial account on the [Esper Website](https://esper.io/signup/). Once the account is setup and you generate your API key, you can test out all the features of our innovative platform – whether building out a kiosk, point of sale solution, or for an entirely new Dedicated Device category. It is the best platform designed for the Android app developer targeting Dedicated Devices. Check out the [Developer Hub](https://docs.esper.io) and the [API Documentation](https://api.esper.io).
 
-## Contact Us
 
-You can also send us an email at `developer@esper.io` for any questions or concerns.
-
-
-
+## Scale your Deployment 
 
 Coupled with the intuitive Esper Dev Console and Esper Manage Dashboard, Esper allows you to gradually scale your fleet at your own pace. You have options here; start with emulated devices, your currently available Dedicated Device or off-the-shelf Android hardware, or else Esper Development Devices that run Esper Enhanced Android. Across the endless variety of Dedicated Devices, Esper gives you supreme control of your app on your own device.
 
-<img class="no-shadow" src="./assets/OLD_DASHBOARD/overview.jpg" alt="drawing" style="max-width:1000px; width: 100%;"/>
+
 
 ## Esper Tools
 Esper Dev gives you access to the suite of development tools you need to build, deliver, and maintain Dedicated Device solutions all in one place. Below is an overview of the Esper Tools:
@@ -89,3 +86,8 @@ Esper APIs [documentation](https://api.esper.io)\
 Esper SDK on [GitHub](https://github.com/esper-io/esper-client-py)\
 Checkout [Esper CLI](https://github.com/esper-io/esper-cli), a command line tool for accessing APIs.\
 To learn more about Esper, visit [esper.io](https://esper.io)
+
+
+## Contact Us
+
+You can also send us an email at `developer@esper.io` for any questions or concerns.
