@@ -18,7 +18,7 @@ Once you have the access token, you need to send an authorization header as belo
 <pre>
 <code>
     curl -X GET \
-    https://{{ esper_tenant_name }}-api.shoonyacloud.com/api/enterprise/:enterprise_id/device/ \
+    https://{{ esper_tenant_name }}-api.esper.cloud/api/enterprise/:enterprise_id/device/ \
     -H 'Authorization: Bearer ACCESS_TOKEN' \
     -H 'Content-Type: application/json' \
 </code>

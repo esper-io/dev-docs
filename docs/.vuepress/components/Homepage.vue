@@ -21,14 +21,14 @@
           <img  class="no-shadow" src="./icons/EsperCliIcon.svg" alt="cli">
         </div>
         <div class="homepage__a">CLI</div>
-        <p>Command line tool for the Esper APIs</p>
+        <p>Command line tool for the APIs</p>
       </a>
       <a href="/home/pythonsdk.html" class="homepage__links__section__item">
         <div style="padding-bottom: 1rem">
           <img class="no-shadow"  src="./icons/EsperSdkIcon.svg" alt="sdk">
         </div>
         <div class="homepage__a">SDK</div>
-        <p>Python library to call the Esper APIs</p>
+        <p>Python library to call the APIs</p>
       </a>
     </div>
     <div class="homepage__links__section">
@@ -40,7 +40,7 @@
           <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
         </div>
         <div class="homepage__a">Tools for Android™ Studio</div>
-        <p>Plugin for Android Studio, Esper Virtual Devices, Esper Enhanced Android</p>
+        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android</p>
       </a>
       <a
         href="/home/devconsole/"
@@ -254,6 +254,7 @@
 .homepage__links__section__item > p {
   font-family: "Nunito Sans", sans-serif;
   padding: 0rem 1rem;
+  min-height: 54px;
 }
 
 .homepage__footer {

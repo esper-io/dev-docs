@@ -19,8 +19,8 @@ We are always in active development and we try our best to keep all of our docum
 
 ## Pre-requisites
 1. **Python:** We recommend you use Python 3.4 or above.
-2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `{{ esper_tenant_name }}.shoonyacloud.com` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.shoonyacloud.com/api`. See [Requesting an Esper Dev Trial account](./module/register.md). 
-3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.shoonyacloud.com`. See [Generating an API Key](./module/genapikey.md)
+2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `https://{{ esper_tenant_name }}.esper.cloud` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](./module/register.md). 
+3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud`. See [Generating an API Key](./module/genapikey.md)
 
 ## Installation
 
@@ -64,13 +64,16 @@ import esperclient
 
 Next, you need to configure your client to talk to APIs. For this you will need `SERVER URL` and `API KEY` as generated in [pre-requisites](#pre-requisites) section.
 
-```python
+<div class="language-python">
+<pre>
+<code>
 configuration = esperclient.Configuration()
-configuration.host = 'https://myapp-api.shoonyacloud.com/api'
+configuration.host = ' https://{{ esper_tenant_name }}-api.esper.cloud/api'
 configuration.api_key['Authorization'] = 'LpDriKp7MWJiRGcwc8xzREeUj8OEFa'
 configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-```
+</code>
+</pre>
+</div>
 
 Now you can perform various operations as described below. To see the complete list of actions and code samples, visit [SDK documentation](https://github.com/esper-io/esper-client-py#documentation-for-api-endpoints) To see response formats, visit [API documentation](https://esper-io.github.io/esper-api-spec/)
 
