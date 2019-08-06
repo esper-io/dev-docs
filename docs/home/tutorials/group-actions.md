@@ -20,7 +20,7 @@ In this tutorial we will use our APIs and Python SDK combined with our Group fun
 
 2. Install Esper Python SDK from [here](https://docs.esper.io/home/pythonsdk.html).
 
-3. Save your ```endpoint name``` and ```enterprise ID```.
+3. Save your `endpoint name` and `enterprise ID`.
 
 4. Create group and add devices either via GUI or using [DeviceGroupAPI](https://api.esper.io/#tag/Device-Group).
 
