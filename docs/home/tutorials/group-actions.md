@@ -14,8 +14,9 @@ Developers during their deployment and testing phase encounters challenging of m
 
 In this tutorial we will use our APIs and Python SDK combined with our Group functionality to perform device deployments systematically and efficiently throughout your entire device fleet.
 
-
-Setup:
+::: tip
+Setup
+:::
 
 1. Sign-up free on for the Esper Trial and generate API Key.
 
@@ -35,7 +36,9 @@ CONFIG.api_key['Authorization'] = '<your-API-Key>'
 CONFIG.api_key_prefix['Authorization'] = 'Bearer'
 ENTERPRISE_ID = '<your-Enterprise-ID>'
 
-Usage:
+::: tip
+Usage
+:::
 
 esper_group_actions [-h]
 -g GROUP_ID
@@ -43,7 +46,9 @@ esper_group_actions [-h]
 -v VALUE
 
 
-Examples:
+::: tip
+Examples
+:::
 1. Set the ring volume at 50% for all devices in the Group:
 ./esper_group_actions -g 83ecfa3c-d2ad-4e76-2cf1-75daff8d7f3d -c ring_volume -v 50
 
@@ -52,8 +57,9 @@ Examples:
 Consider the case where you want to reboot your devices in a group everyday at 1:00 AM, so you can write a cron job in your system running the above command.
 e.g. 
 
+``` js{4}
 # crontab -e
 
 @daily  ~/esperSDK/esper_group_actions.py -g 83ecfa3c-d2ad-4e76-2cf1-75daff8d7f3d -c reboot
-
+```
 
