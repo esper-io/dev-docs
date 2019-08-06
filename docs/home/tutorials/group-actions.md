@@ -28,7 +28,7 @@ In this tutorial we will use our APIs and Python SDK combined with our Group fun
 
 6. Configure python script as per your environment. Below are example values, substitute them with your esper trial configurations.
 
-``` js{4}
+```sh
 CONFIG = esperclient.Configuration()
 CONFIG.host = 'https://<your-endpoint-name>.shoonyacloud.com/api'
 CONFIG.api_key['Authorization'] = '<your-API-Key>'
@@ -38,7 +38,7 @@ ENTERPRISE_ID = '<your-Enterprise-ID>'
 
 # Usage
 
-``` js{4}
+```sh
 esper_group_actions
  -g GROUP_ID
  -c {uninstall, whitelist, brightness, alarm_volume, ring_volume, music_volume, notification_volume, bluetooth, wifi, gps, ping, reboot}
@@ -48,13 +48,13 @@ esper_group_actions
 # Examples
 - Reboot all the devices in a group now
 
-``` js{4}
+```sh
 ./esper_group_actions -g 83ecfa3c-d2ad-4e76-2cf1-75daff8d7f3d -c reboot
 ```
 
 - Reboot all devices in a group everyday at midnight. Write a cron job in your system running the above command.
 
-``` js{4}
+```sh
 # crontab -e
 @daily  ~/esperSDK/esper_group_actions.py -g 83ecfa3c-d2ad-4e76-2cf1-75daff8d7f3d -c reboot
 ```
