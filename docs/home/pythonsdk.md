@@ -1,4 +1,6 @@
 # Esper SDK for Python
+## (Preview Release Version)
+<br />
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
@@ -12,6 +14,8 @@ Current stable release versions are
 :::tip
 Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io).
 :::
+
+We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [GitHub](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
 
 ## Pre-requisites
 1. **Python:** We recommend you use Python 3.4 or above.
@@ -468,7 +472,7 @@ except ApiException as e:
 }
 ```
 
-We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [GitHub](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
+
 
 If you face any issue in SDK usage, we recommend you that you reach out to [Esper Dev Support](./support.md)
 
