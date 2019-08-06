@@ -13,7 +13,7 @@
 *   [Company Settings](enterprise-configuration/index.md)
 *   [OS Updates](os-updates/index.md)
 *   [Developer Options](developer-options/index.md)
-
+*   [Remote ADB](device-management/remote-adb.md)
 # Introduction
 
 <div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
