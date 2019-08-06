@@ -261,3 +261,5 @@ It will look like something shown below:
 
 
 19. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
+
+Thank You!
