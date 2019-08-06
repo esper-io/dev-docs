@@ -7,16 +7,16 @@ lang: en-US
 
 Developer should be able to debug their devices remotely without even physial association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
 
-::: tip
-Steps to connect to remote Adb:
-:::
+
+## Steps to connect to remote Adb:
+
 
 1. On to Esper Dashboard `https://<env.esper.cloud>`, Go to  `Devices` tab, then to your device  and to `Actions`.
 
 2. At the bottom of the page, Click `enable adb`.
 
 3. On to your android device, connect via usb cable and enable adb over tcpip by following command:
-   ``` js{4}
+   ```sh
    adb tcpip 5555
     ```
 4. Disconnect usb cable from the device.
@@ -26,7 +26,7 @@ Steps to connect to remote Adb:
 6. Click `Enable Remote adb` and click `Start`. Wait for few moments to appear IP and port to connect to.
 
 7. On to your Laptop/Desktop with adb tools available, run following command:
-   ``` js{4}
+   ```sh
     adb connect <IP:Port>
    ```
 8. You are connected to adb.
