@@ -11,7 +11,7 @@ Developer should be able to debug their devices remotely without even physial as
 ## Steps to connect to remote Adb:
 
 
-1. On to Esper Dashboard `https://<env.esper.cloud>`, Go to  `Devices` tab, then to your device  and to `Actions`.
+1. On to Esper Dashboard https://{{ esper_tenant_name }}.esper.cloud, Go to  `Devices` tab, then to your device  and to `Actions`.
 
 2. At the bottom of the page, Click `enable adb`.
 
@@ -21,7 +21,7 @@ Developer should be able to debug their devices remotely without even physial as
     ```
 4. Disconnect usb cable from the device.
 
-5. Again go to Esper Dashboard `https://<env.esper.cloud>`, Go to  `Devices` tab, then to your device  and to `Actions`.
+5. Again go to Esper Dashboard https://{{ esper_tenant_name }}.esper.cloud, Go to  `Devices` tab, then to your device  and to `Actions`.
 
 6. Click `Enable Remote adb` and click `Start`. Wait for few moments to appear IP and port to connect to.
 
