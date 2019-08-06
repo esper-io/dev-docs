@@ -1,6 +1,10 @@
 ### Table of contents
 
-*   [Home (Dashboard)](home-dashboard/index.md)
+Click on Below Links to read about various sections of the Esper Dashboard
+<br />
+
+*   [Manage Home](home-dashboard/index.md)
+*   [Dev Home](home-dev/index.md)
 *   [Provision Device](device-provisioning/index.md)
 *   [Device Template](device-template/index.md)
 *   [Devices](device-management/index.md)
@@ -47,5 +51,5 @@ To try out Esper simply sign up for a developer trial account on the [Esper Webs
 
 ## Contact Us
 
-You can also send us an email at `developer@esper.io` for any questions or concerns.
 
+<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
