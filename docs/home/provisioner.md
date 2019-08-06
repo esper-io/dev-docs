@@ -133,7 +133,7 @@ It will look like something shown below:
 
 20. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
 
-# Instructions for MacOS
+## Instructions for MacOS
 
 1. Download the Esper Device Provisioner from here:
 
