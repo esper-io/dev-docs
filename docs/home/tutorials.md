@@ -4,7 +4,7 @@
 
 Below are some quick tutorials for specific tasks that might be useful for you on Esper Platform.
 
-- [How do you reboot groups of devices periodically?](./tutorials/group-actions.md)
+- [Rebooting group of devices periodically?](./tutorials/group-actions.md)
 - [Provisioning an Emulator to DeviceCloud using Serial number]()
 - [Provisioning an Emulator to DeviceCloud using QR Code]()
 - [Provisioning a DevKit to DeviceCloud using IMEI]()
