@@ -3,7 +3,9 @@
 
 ## Instructions for Windows 10
 
-1. Download the Esper Device Provisioner from [here](http://downloads.esper.io/esper-provisioner/windows/Esper%20Device%20Provisioner
+1. Download the Esper Device Provisioner from [here]
+
+(http://downloads.esper.io/esper-provisioner/windows/Esper%20Device%20Provisioner
 %20Setup%201.0.0-beta.exe)
 
 
@@ -18,10 +20,9 @@
 ![](./assets/OLD_DASHBOARD/provisioner17.png)
 
 
-4. Executable files downloaded from the internet are rightly not trusted by Windows by default. As a result, you have to tell Windows that it is safe to execute the file, as you’ve downloaded it from Esper, which you trust. To do so, right-click on the file, and click on Properties:
+4. Double-click on the file, and you will see a dialog that shows the app being installed locally on your PC:
 
-
-![](./assets/OLD_DASHBOARD/provisioner6.png)
+![](./assets/OLD_DASHBOARD/prov3_1.png)
 
 
 5. In the resulting dialog, check the Unblock option, and click on Apply. This will indicate to Windows that it’s OK to execute this file:
