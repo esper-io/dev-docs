@@ -104,11 +104,8 @@ b. Over tcp-ip:
 
 13. You will now see a dialog with the installation progress:
 
-![](./assets/OLD_DASHBOARD/prov3_14.png)
+![](./assets/OLD_DASHBOARD/prov3_15.png)
 
-If you click on the little carat icon to the right, you can see the details of the provisioning:
-
-![](./assets/OLD_DASHBOARD/prov9a.png)
 If you click on the little carat icon to the right, you can see the details of the provisioning:
 ![](./assets/OLD_DASHBOARD/prov9a.png)
 
@@ -116,15 +113,20 @@ It will look like something shown below:
 
 ![](./assets/OLD_DASHBOARD/prov9.png)
 
+14. You can see logs of provisioner just by toggling Logs.
 
+![](./assets/OLD_DASHBOARD/prov3_16.png)
 
+a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of all the steps happening during provisioning of individual devices.
 
-16. You can see logs of provisioner just by toggling Logs.
-17. Also you can download logs just by clicking on this button:
+![](./assets/OLD_DASHBOARD/prov3_17.png)
+
+15. Also you can download logs just by clicking on this button:
 
 ![](./assets/OLD_DASHBOARD/prov10.png)
 
-18. During provisioning if you see a prompt like the one shown below, select Decline.
+
+16. During provisioning if you see a prompt like the one shown below, select Decline.
 
 ![](./assets/OLD_DASHBOARD/prov11.png)
 
