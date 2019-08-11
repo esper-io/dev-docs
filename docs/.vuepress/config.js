@@ -1,14 +1,14 @@
 const autometa_options = {
   site: {
-    name   : 'Esper docs',
-    twitter: 'Esper docs',
+    name: "Esper docs",
+    twitter: "Esper docs"
   },
-  canonical_base: 'https://docs.esper.io',
+  canonical_base: "https://docs.esper.io"
 };
 
 const feed_options = {
-  canonical_base: 'https://docs.esper.io',
-}
+  canonical_base: "https://docs.esper.io"
+};
 
 module.exports = {
   base: "/",
@@ -19,14 +19,14 @@ module.exports = {
     ["@dovyp/vuepress-plugin-clipboard-copy", true],
     ["@vuepress/back-to-top", true],
     ["@vuepress/plugin-medium-zoom", true],
-    [ 'autometa', autometa_options ],
-    [ 'feed', feed_options ],
-    [ 
-      '@vuepress/google-analytics',
+    ["autometa", autometa_options],
+    ["feed", feed_options],
+    [
+      "@vuepress/google-analytics",
       {
-        'ga': 'UA-141392027-1' // UA-00000000-0
+        ga: "UA-141392027-1" // UA-00000000-0
       }
-    ]  
+    ]
   ],
   themeConfig: {
     esper_tenant_name: "foo",
@@ -42,11 +42,14 @@ module.exports = {
       [
         "script",
         { src: "//js.hs-scripts.com/5868902.js", async: true, defer: true }
-      ][("link", { rel: "icon", href: `favicon.ico` })],
+      ],[("link", { rel: "icon", href: `favicon.ico` })],
       ["link", { rel: "manifest", href: "manifest.json" }]
     ],
     logo: `/esper.svg`,
-    nav: [{ text: "Blog", link: "https://blog.esper.io" }],
+    nav: [
+      { text: "Blog", link: "https://blog.esper.io" },
+      { text: "SIGNUP", link: "https://esper.io/signup" }
+    ],
     docsRepo: "esper-io/dev-docs",
     docsDir: "docs",
     docsBranch: "develop",
