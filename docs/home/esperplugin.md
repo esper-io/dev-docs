@@ -68,6 +68,62 @@ If there's any error, you'll see an error as shown below:
 
 Note that trying to upload the same version of the .apk you already have on your Endpoint will produce an error. You currently cannot overwrite it using the Plugin, you will have to delete it using the Esper Console or from the CLI.
 
+<br/>
+<br/>
+
+## Esper Android Virtual Device
+Esper AVD allows the users to experience the Esper Device Policy Controller (DPC)  for Android Devices.
+
+### Usage Instructions
+When android studio is started, plugin notifies the user about newly avaiable AVDs or updates available for the installed AVDs.\
+\
+<img src="./assets/plugin/avd/notification.png" width="75%" height="75%">\
+\
+\
+To create or update Esper AVDs, navigate to Tools Menu > Esper AVD Manager.\
+\
+<img src="./assets/plugin/avd/toolsmenu.png" width="30%" height="30%">\
+\
+\
+Click on "Esper AVD Manager".\
+\
+<img src="./assets/plugin/avd/avdslist.png" width="75%" height="75%">\
+\
+\
+Click on "Create" or "Update". User will be informed that AVD will be created in background.\
+\
+<img src="./assets/plugin/avd/create.png" width="75%" height="75%">\
+\
+\
+Click on "Ok" button. Esper AVD creation happens in background.\
+\
+<img src="./assets/plugin/avd/downloading.png" width="75%" height="75%">\
+\
+After the AVD is created, user will be prompted to restart Android Studio.\
+\
+<img src="./assets/plugin/avd/restart.png" width="75%" height="75%">\
+\
+\
+Click on Restart. Android Studio will be restarted. After restarted, navigate to Esper Toos Menu > Esper AVD Manager. Esper AVD Manager shows that AVD is up-to-date.\
+\
+<img src="./assets/plugin/avd/uptodate.png" width="75%" height="75%">\
+\
+\
+AVD can be launched from Android Studio like other AVDs.\
+By clicking run app\
+\
+<img src="./assets/plugin/avd/runapp.png" width="75%" height="75%">\
+\
+From AVD Manager\
+\
+<img src="./assets/plugin/avd/avdmanager.png" width="75%" height="75%">\
+\
+Esper AVD is up.\
+\
+<img src="./assets/plugin/avd/avdup.png" width="75%" height="75%">\
+### Experience the amazing DPC by Esper.
+
+
 ## Uninstalling
 
 To uninstall the Esper Plugin Go to File → Settings (or Android Studio → Preferences for Mac), click on Plugins ensuring you are displaying Installed Plugins. Then click on the Esper bolded Plugin name:
