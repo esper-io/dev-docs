@@ -1,9 +1,9 @@
 ---
-title: Remote adb
+title: Secure Remote Adb
 lang: en-US
 ---
 
-# Remote ADB
+# Secure Remote ADB
 
 Developer should be able to debug their devices remotely without even physial association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
 
