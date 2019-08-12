@@ -1,5 +1,4 @@
-# Esper SDK for Python
-## (Preview Release Version)
+# Esper SDK for Python (Preview Release Version)
 <br />
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
