@@ -279,33 +279,10 @@ vi. And you can see your device in here:
 ![](./assets/OLD_DASHBOARD/prov3_13.png)
 
 
-13. Once you do the above, click Next on the provisioning tool, and you will start seeing 
-a. You have enabled ADB on your device. Note that ADB over USB is supported automatically by the Esper provisioner. In this case make sure your device is attached to the local computer via a USB cable. 
-
-In case your device is in ADB-over TCPIP mode, then you can provide ip address and port number of device in the provisioner. And then click connect button.
-
-![](./assets/OLD_DASHBOARD/prov3_14.png)
-
-
-b. Your device or devices are connected to the PC on which the provisioner app is running.
-
-
-c. When you attach your device to the PC, you will be greeted with a prompt like the one shown below. Make sure you check the Always allow from this computer checkbox, followed by the OK button.
-
-![](./assets/OLD_DASHBOARD/prov3_12.png)
-
-
-d. Make sure you don’t have any accounts under Accounts in Settings.
-
-
-14. Once you do the above, click Next on the provisioning tool, and you will start seeing your device in it:
-
-
-
-Now select your device or multiple devices if you have multiple devices connected, and click on the Install button.
+13. Now select your device or multiple devices if you have multiple devices connected, and click on the Install button.
 ![](./assets/OLD_DASHBOARD/prov3_13.png)
 
-15. You will now see a dialog with the installation progress:
+14. You will now see a dialog with the installation progress:
 
 ![](./assets/OLD_DASHBOARD/prov8.png)
 
@@ -318,9 +295,7 @@ It will look like something shown below:
 ![](./assets/OLD_DASHBOARD/prov28.png)
 
 
-
-
-16. You can see logs of provisioner just by toggling Logs.
+15. You can see logs of provisioner just by toggling Logs.
 
 ![](./assets/OLD_DASHBOARD/prov3_16.png)
 
@@ -328,20 +303,20 @@ a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of al
 
 ![](./assets/OLD_DASHBOARD/prov3_17.png)
 
-17. Also you can download logs just by clicking on this button:
+16. Also you can download logs just by clicking on this button:
 
 ![](./assets/OLD_DASHBOARD/prov29.png)
 
-18. During provisioning if you see a prompt like the one shown below, select Decline.
+17. During provisioning if you see a prompt like the one shown below, select Decline.
 
 ![](./assets/OLD_DASHBOARD/prov30.png)
 
 
-19. When provisioning is complete, you will see this in the dialog:
+18. When provisioning is complete, you will see this in the dialog:
 
 ![](./assets/OLD_DASHBOARD/prov31.png)
 
 
-20. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
+19. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
 
 Thank You!
