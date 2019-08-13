@@ -17,7 +17,4 @@ Click on Below Links to read about various sections of the Esper Dashboard
 *   [Company Settings](enterprise-configuration/index.md)
 *   [OS Updates](os-updates/index.md)
 *   [Developer Options](developer-options/index.md)
-
-
-
-<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+*   [Remote ADB](device-management/remote-adb.md)
