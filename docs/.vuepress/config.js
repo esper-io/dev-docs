@@ -59,6 +59,7 @@ module.exports = {
         "gettingstarted",
         "esperplugin",
         "emulator",
+        "provisioner",
         "pythonsdk",
         "espercli",
         "api",
