@@ -1,5 +1,7 @@
 # Esper Device Provisioner
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+This tool is designed to make provisioning single or multiple devices an easy task for Esper customers. This tool is compatible for both Windows and Mac. Follow through the below steps to provision your device to Esper endpoint and start managing your device now.
+
 
 ## Instructions for Windows 10
 
@@ -12,12 +14,9 @@
 ![](./assets/OLD_DASHBOARD/provisioner4.png)
 
 
-3. (Optional Step): Move the downloaded file to a temporary location, such as C:\temp\provisioning, so it’s easier to find the next time you need it:
+3. Double-click on the file
 
-![](./assets/OLD_DASHBOARD/provisioner17.png)
-
-
-4. Double-click on the file, and you will see a dialog that shows the app being installed locally on your PC:
+4. You will see a dialog that shows the app being installed locally on your PC:
 
 ![](./assets/OLD_DASHBOARD/prov3_1.png)
 
@@ -173,7 +172,7 @@ a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of al
 ![](./assets/OLD_DASHBOARD/prov14.png)
 
 
-4. Executable files downloaded from the internet are rightly not trusted by MacOs by default. As a result, you have to tell MacOs that it is safe to execute the file, as you’ve downloaded it from Esper. To do so, go to System Preferences, and click on Security & Privacy:
+4. Executable files downloaded from the internet are rightly not trusted by MacOs by default. As a result, you have to tell MacOs that it is safe to execute the file. To do so, go to System Preferences, and click on Security & Privacy:
 
 ![](./assets/OLD_DASHBOARD/prov15.png)
 
