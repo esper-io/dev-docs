@@ -5,8 +5,7 @@
 
 1. Download the Esper Device Provisioner from [here]
 
-(http://downloads.esper.io/esper-provisioner/windows/Esper%20Device%20Provisioner
-%20Setup%201.0.0-beta.exe)
+(http://downloads.esper.io/esper-provisioner/windows/Esper%20Device%20Provisioner%20Setup%201.0.0-beta.exe)
 
 
 2. Open File Explorer (you can use the Windows Key + E shortcut), and go to where you have downloaded the file. Most probably, it will be in your Downloads’ folder:
@@ -162,8 +161,7 @@ a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of al
 
 ## Instructions for MacOS
 
-1. Download the Esper Device Provisioner from [here](http://downloads.esper.io/esper-provisioner/mac/Esper%20Device%20Provisioner-1.0.0
--beta.dmg)
+1. Download the Esper Device Provisioner from [here](http://downloads.esper.io/esper-provisioner/mac/Esper%20Device%20Provisioner-1.0.0-beta.dmg)
 
 
 2. Open Finder and go to where you have downloaded the file. Most probably, it will be in your Downloads’ folder
