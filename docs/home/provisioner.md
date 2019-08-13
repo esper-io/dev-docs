@@ -30,7 +30,7 @@
 ![](./assets/OLD_DASHBOARD/prov3_2.png)
 
 
-6. Enter your endpoint credentials in this dialog--the endpoint name, followed by your endpoint username and then click Continue:
+6. Enter your endpoint credentials in this dialog-the endpoint name, followed by your endpoint username and then click Continue:
 
 ![](./assets/OLD_DASHBOARD/prov3_3.png)
 
@@ -66,38 +66,60 @@ Note: Additional APKs always get installed before Uploaded Apps onto the device.
 11. Before you click Next on the above dialog, ensure that device is connected by any of the methods:
 
 a. USB Mode:
+
     i. Do the following steps to connect your device:
+
     ii. Connect the device to the Internet via Cellular or Wi-Fi
+
     iii. Go to the Home screen and tap the Menu button, select the About Phone option, and select the Build number. Then tap the Build number 6 times to enable Developer options:
+    
 
 ![](./assets/OLD_DASHBOARD/prov3_9.png)
+
       iv.  Now go back to Settings, and under the Developer options entry select turn on Debugging and then USB debugging
+
 ![](./assets/OLD_DASHBOARD/prov3_10.png)
 
+
 ![](./assets/OLD_DASHBOARD/prov3_11.png)
+
     v. Connect your Android device to your development computer via USB 
+
     vi. Click on the Authorization Dialog box on the Android device
+
 
 ![](./assets/OLD_DASHBOARD/prov3_12.png)
 
+
    vii. Now you can see your connected device here:
+
    
 ![](./assets/OLD_DASHBOARD/prov3_13.png)
+
    
    
 b. Over tcp-ip:
+
     i. If your device is running over tcp-ip mode, connect your system to the same wifi to which your device is connected.
+
     ii. Get the ip address of the wifi for eg: 192.168.1.23
+
     iii. Get the port number of the device in which the tcp-ip mode is open.
+
     iv. Paste the ip address and port number in appropriate fields and click connect.
+
     
 ![](./assets/OLD_DASHBOARD/prov3_14.png)
+
     
     
     v. Tool will try to connect to that ip and port.
+
     vi. And you can see your device in here:
+
     
 ![](./assets/OLD_DASHBOARD/prov3_13.png)
+
 
 12. Now select your device or multiple devices if you have multiple devices connected, and click on the Install button.
 
@@ -131,12 +153,12 @@ a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of al
 ![](./assets/OLD_DASHBOARD/prov11.png)
 
 
-19. When provisioning is complete, you will see this in the dialog:
+17. When provisioning is complete, you will see this in the dialog:
 
 ![](./assets/OLD_DASHBOARD/prov12.png)
 
 
-20. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
+18. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
 
 ## Instructions for MacOS
 
@@ -155,7 +177,7 @@ a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of al
 ![](./assets/OLD_DASHBOARD/prov14.png)
 
 
-4. Executable files downloaded from the internet are rightly not trusted by MacOs by default. As a result, you have to tell MacOs that it is safe to execute the file, as you’ve downloaded it from Esper, which you trust. To do so, go to System Preferences, and click on Security & Privacy:
+4. Executable files downloaded from the internet are rightly not trusted by MacOs by default. As a result, you have to tell MacOs that it is safe to execute the file, as you’ve downloaded it from Esper. To do so, go to System Preferences, and click on Security & Privacy:
 
 ![](./assets/OLD_DASHBOARD/prov15.png)
 
@@ -206,14 +228,63 @@ Some devices require that some apps be side-loaded in addition to the ones liste
 Note: Additional APKs always get installed before Uploaded Apps onto the device.
 
 
-12. Before you click Next on the above dialog, ensure that:
+12. Before you click Next on the above dialog, ensure that device is connected by any of the methods:
+
+a. USB Mode:
+
+i. Do the following steps to provision your device.
+
+ii. Connect the device to the internet via Cellular or Wi-Fi
+
+iii. Go to Home Screen and tap the Menu button, select the About Phone option, and select the Build Number. Then tap the Build number 6 times to enable Developer options:
+
+![](./assets/OLD_DASHBOARD/prov3_24.png)
+
+iv. Now go back to Settings, and under the Developer options entry select turn on Debugging and then USB debugging
+
+![](./assets/OLD_DASHBOARD/prov3_10.png)
 
 
+![](./assets/OLD_DASHBOARD/prov3_11.png)
+
+
+
+v. Connect your Android device to your development computer via USB
+
+vi. Click on the Authorization Dialog box on the Android device
+
+![](./assets/OLD_DASHBOARD/prov3_12.png)
+
+vii.Now you can see your connected device here:
+
+![](./assets/OLD_DASHBOARD/prov3_13.png)
+
+
+b. Over tcp-ip:
+
+i. If your device is running over tcp-ip mode, connect your system to the same wifi to which your device is connected.
+
+ii. Get the ip address of the wifi for eg: 192.168.1.23
+
+iii. Get the port number of the device in which the tcp-ip mode is open.
+
+iv. Paste the ip address and port number in appropriate fields and click connect.
+
+![](./assets/OLD_DASHBOARD/prov3_14.png)
+
+v. Tool will try to connect to that ip and port.
+
+vi. And you can see your device in here:
+
+![](./assets/OLD_DASHBOARD/prov3_13.png)
+
+
+13. Once you do the above, click Next on the provisioning tool, and you will start seeing 
 a. You have enabled ADB on your device. Note that ADB over USB is supported automatically by the Esper provisioner. In this case make sure your device is attached to the local computer via a USB cable. 
 
 In case your device is in ADB-over TCPIP mode, then you can provide ip address and port number of device in the provisioner. And then click connect button.
 
-![](./assets/OLD_DASHBOARD/prov24.png)
+![](./assets/OLD_DASHBOARD/prov3_14.png)
 
 
 b. Your device or devices are connected to the PC on which the provisioner app is running.
@@ -221,22 +292,22 @@ b. Your device or devices are connected to the PC on which the provisioner app i
 
 c. When you attach your device to the PC, you will be greeted with a prompt like the one shown below. Make sure you check the Always allow from this computer checkbox, followed by the OK button.
 
-![](./assets/OLD_DASHBOARD/prov25.png)
+![](./assets/OLD_DASHBOARD/prov3_12.png)
 
 
 d. Make sure you don’t have any accounts under Accounts in Settings.
 
 
-13. Once you do the above, click Next on the provisioning tool, and you will start seeing your device in it:
+14. Once you do the above, click Next on the provisioning tool, and you will start seeing your device in it:
 
-![](./assets/OLD_DASHBOARD/prov26.png)
+
 
 Now select your device or multiple devices if you have multiple devices connected, and click on the Install button.
+![](./assets/OLD_DASHBOARD/prov3_13.png)
 
+15. You will now see a dialog with the installation progress:
 
-14. You will now see a dialog with the installation progress:
-
-![](./assets/OLD_DASHBOARD/prov27.png)
+![](./assets/OLD_DASHBOARD/prov8.png)
 
 If you click on the little carat icon to the right, you can see the details of the provisioning:
 
@@ -249,21 +320,28 @@ It will look like something shown below:
 
 
 
-15. You can see logs of provisioner just by toggling Logs.
-16. Also you can download logs just by clicking on this button:
+16. You can see logs of provisioner just by toggling Logs.
+
+![](./assets/OLD_DASHBOARD/prov3_16.png)
+
+a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of all the steps happening during provisioning of individual devices.
+
+![](./assets/OLD_DASHBOARD/prov3_17.png)
+
+17. Also you can download logs just by clicking on this button:
 
 ![](./assets/OLD_DASHBOARD/prov29.png)
 
-17. During provisioning if you see a prompt like the one shown below, select Decline.
+18. During provisioning if you see a prompt like the one shown below, select Decline.
 
 ![](./assets/OLD_DASHBOARD/prov30.png)
 
 
-18. When provisioning is complete, you will see this in the dialog:
+19. When provisioning is complete, you will see this in the dialog:
 
 ![](./assets/OLD_DASHBOARD/prov31.png)
 
 
-19. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
+20. Now you can click on the Prev button and repeat the steps for more devices. Once you are done, simply exit the application using the Close button or the X icon at the top right.
 
 Thank You!
