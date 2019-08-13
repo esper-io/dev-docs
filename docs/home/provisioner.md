@@ -1,5 +1,6 @@
 # Esper Device Provisioner
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
+
 This tool is designed to make provisioning single or multiple devices an easy task for Esper customers. This tool is compatible for both Windows and Mac. Follow through the below steps to provision your device to Esper endpoint and start managing your device now.
 
 
@@ -63,31 +64,31 @@ Note: Additional APKs always get installed before Uploaded Apps onto the device.
 
 a. USB Mode:
 
-    i. Do the following steps to connect your device:
+i. Do the following steps to connect your device:
 
-    ii. Connect the device to the Internet via Cellular or Wi-Fi
+ii. Connect the device to the Internet via Cellular or Wi-Fi
 
-    iii. Go to the Home screen and tap the Menu button, select the About Phone option, and select the Build number. Then tap the Build number 6 times to enable Developer options:
+iii. Go to the Home screen and tap the Menu button, select the About Phone option, and select the Build number. Then tap the Build number 6 times to enable Developer options:
     
 
 ![](./assets/OLD_DASHBOARD/prov3_9.png)
 
-      iv.  Now go back to Settings, and under the Developer options entry select turn on Debugging and then USB debugging
+iv.  Now go back to Settings, and under the Developer options entry select turn on Debugging and then USB debugging
 
 ![](./assets/OLD_DASHBOARD/prov3_10.png)
 
 
 ![](./assets/OLD_DASHBOARD/prov3_11.png)
 
-    v. Connect your Android device to your development computer via USB 
+v. Connect your Android device to your development computer via USB 
 
-    vi. Click on the Authorization Dialog box on the Android device
+vi. Click on the Authorization Dialog box on the Android device
 
 
 ![](./assets/OLD_DASHBOARD/prov3_12.png)
 
 
-   vii. Now you can see your connected device here:
+vii. Now you can see your connected device here:
 
    
 ![](./assets/OLD_DASHBOARD/prov3_13.png)
@@ -96,22 +97,22 @@ a. USB Mode:
    
 b. Over tcp-ip:
 
-    i. If your device is running over tcp-ip mode, connect your system to the same wifi to which your device is connected.
+i. If your device is running over tcp-ip mode, connect your system to the same wifi to which your device is connected.
 
-    ii. Get the ip address of the wifi for eg: 192.168.1.23
+ii. Get the ip address of the wifi for eg: 192.168.1.23
 
-    iii. Get the port number of the device in which the tcp-ip mode is open.
+iii. Get the port number of the device in which the tcp-ip mode is open.
 
-    iv. Paste the ip address and port number in appropriate fields and click connect.
+iv. Paste the ip address and port number in appropriate fields and click connect.
 
     
 ![](./assets/OLD_DASHBOARD/prov3_14.png)
 
     
     
-    v. Tool will try to connect to that ip and port.
+v. Tool will try to connect to that ip and port.
 
-    vi. And you can see your device in here:
+vi. And you can see your device in here:
 
     
 ![](./assets/OLD_DASHBOARD/prov3_13.png)
@@ -161,9 +162,7 @@ a. So when you toggle ‘on’ , you’ll be able to see the detailed logs of al
 1. Download the Esper Device Provisioner from [here](http://downloads.esper.io/esper-provisioner/mac/Esper%20Device%20Provisioner-1.0.0-beta.dmg)
 
 
-2. Open Finder and go to where you have downloaded the file. Most probably, it will be in your Downloads’ folder
-
-:
+2. Open Finder and go to where you have downloaded the file. Most probably, it will be in your Downloads’ folder:
 
 ![](./assets/OLD_DASHBOARD/prov13.png)
 
@@ -250,7 +249,7 @@ vi. Click on the Authorization Dialog box on the Android device
 
 ![](./assets/OLD_DASHBOARD/prov3_12.png)
 
-vii.Now you can see your connected device here:
+vii. Now you can see your connected device here:
 
 ![](./assets/OLD_DASHBOARD/prov3_13.png)
 
