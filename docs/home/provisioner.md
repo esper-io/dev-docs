@@ -3,9 +3,7 @@
 
 ## Instructions for Windows 10
 
-1. Download the Esper Device Provisioner from [here]
-
-(http://downloads.esper.io/esper-provisioner/windows/Esper%20Device%20Provisioner%20Setup%201.0.0-beta.exe)
+1. Download the Esper Device Provisioner from [here](http://downloads.esper.io/esper-provisioner/windows/Esper%20Device%20Provisioner%20Setup%201.0.0-beta.exe)
 
 
 2. Open File Explorer (you can use the Windows Key + E shortcut), and go to where you have downloaded the file. Most probably, it will be in your Downloads’ folder:
