@@ -15,6 +15,14 @@ This section enables you to manage your applications. You may add the following 
 ## Upload Private Apps (APK files) to Esper Cloud:
 
 *   You can upload your own mobile app through an APK file using the upload button on the top right hand corner.
+*   There are some rules that the uploaded app must adhere to inorder to succeed upload and provisioning - 
+    1. The APK has to have a version name and number.
+    2. Max size - 500 MB
+    3. Extension - .apk [only]
+    4. APK Signature verification 
+    5. Latest Android APK standards (currently we allow apks without icons)
+
+*   You can upload your own android app APK file using the upload button on the top right hand corner
 *   The uploaded apps will be shown under the 'Uploaded apps' section:
 
 ![App Management](../../assets/OLD_DASHBOARD/1_AM.png)
