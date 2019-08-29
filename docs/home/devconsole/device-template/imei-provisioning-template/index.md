@@ -17,23 +17,23 @@ See steps on how to [create a template](../index.md).
 
 3. Then grab the serial number of the device which will be seamlessly provisioned, and enter it as shown. Then click on the Add button:
 
-![](../../image/template_for_imei2.png)
+![](../../images/template_for_imei2.png)
 
 
 4. Within a few seconds, the serial number will be registered with the backend, and a message will appear in the bottom left corner:
 
-![](../../image/template_for_imei3.png)
+![](../../images/template_for_imei3.png)
 
 5. Hit cancel to exit the above dialog.
 
 
 6. To view all serial numbers associated with a template, simply click on the Preview option of the template:
 
-![](../../image/template_for_imei4.png)
+![](../../images/template_for_imei4.png)
 
 Then on the resulting dialog expand the IMEI/Serial section, and then you can see the serial numbers associated with the template.
 
-![](../../image/template_for_imei5.png)
+![](../../images/template_for_imei5.png)
 
 7. To delete a serial number from a template, simply follow steps 1 to 4, and click on the trash-can icon to delete a serial number from the template.
 
