@@ -7,17 +7,43 @@ IMEI or Serial number of devices to be provisioned need to be added to the relev
 
 See steps on how to [create a template](../index.md).
 
-After creating a template, click on Edit template. 
+1. On the template which you want your devices to provision against, click on the … and then select Edit
 
-![here](../../images/temp_2.png)
+![](../../images/temp_2.png)
 
-During editing, you also see the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section "Add devices" that appears during edit just before Preview section. Using this "Add devices" section, user can either enter IMEI/Serial numbers or upload Csv file with IMEI and Serial numbers.
+2. On the page that pops up, click on Add devices:
 
-The user can enter IMEI numbers and Serial numbers in the text box and click Add.
+![](../../images/template_for_imei1.png)
 
-OR
+3. Then grab the serial number of the device which will be seamlessly provisioned, and enter it as shown. Then click on the Add button:
 
-The user can upload IMEI/Serial numbers with a Csv file.
+![](../../images/template_for_imei2.png)
+
+
+4. Within a few seconds, the serial number will be registered with the backend, and a message will appear in the bottom left corner:
+
+![](../../images/template_for_imei3.png)
+
+5. Hit cancel to exit the above dialog.
+
+
+6. To view all serial numbers associated with a template, simply click on the Preview option of the template:
+
+![](../../images/template_for_imei4.png)
+
+Then on the resulting dialog expand the IMEI/Serial section, and then you can see the serial numbers associated with the template.
+
+![](../../images/template_for_imei5.png)
+
+7. To delete a serial number from a template, simply follow steps 1 to 4, and click on the trash-can icon to delete a serial number from the template.
+
+
+All this means that during manufacturing, we will need to get a list of serial numbers for all Kiosks, and the serial number should ideally be listed somewhere on the unit, so that it can be easily identified. Serial numbers can be added in bulk using CSV files.
+
+
+
+
+The user can upload IMEI/Serial numbers with a Csv file in the following way -
 
 ![Device Template](../../../assets/OLD_DASHBOARD/imei_real.png)
 
@@ -39,5 +65,7 @@ The csv file containing the IMEI's and serial numbers should adhere to the below
 ![Screenshot 2019-05-19 at 12.54.58 PM (2).png](../../../assets/OLD_DASHBOARD/imei1.png)
 
 ![Screenshot 2019-05-19 at 12.54.49 PM (2).png](../../../assets/OLD_DASHBOARD/imei2.png)
+
+
 
 [Return to Device Template](../index.md)
