@@ -49,6 +49,9 @@ The APIs use standard HTTP status codes to indicate success or failure. All erro
 
 Below are quick links to frequently used APIs. To see a full list of APIs and latest updates, please visit [API documentation](https://api.esper.io)
 
+#### Token
+- [Get token information](https://api.esper.io/#tag/Token)
+
 #### Enterprise
 - [Get enterprise information](https://api.esper.io/#tag/Enterprise)
 - [Update enterprise information](https://api.esper.io/#operation/partialUpdateEnterprise)
