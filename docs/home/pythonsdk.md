@@ -9,7 +9,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 Current stable release versions are
 
     API version: 1.0.0
-    SDK version: 0.0.6
+    SDK version: 0.0.9
 
 :::tip
 Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io).
@@ -83,6 +83,38 @@ Some additional information you'll need in order to access Esper APIs is your `e
 
 Some of the frequently used examples are given below:
 
+## **Get Token Information**
+```python
+from esperclient import TokenApi, ApiClient
+from esperclient.rest import ApiException
+
+# create an instance of the API class
+api_instance = TokenApi(ApiClient(configuration))
+try:
+    api_response = api_instance.get_token_info()
+    print(api_response)
+except ApiException as e:
+    print("Exception when calling TokenApi->get_token_info: %s\n" % e)
+```
+
+*Output*
+```python
+{
+    "id": "string",
+    "enterprise": "string",
+    "user": "string",
+    "developer_app": "string",
+    "source_refresh_token": "string",
+    "token": "string",
+    "expires_on": "2019-08-29T11:06:03Z",
+    "scope": [
+        "string"
+    ],
+    "created_on": "2019-08-29T11:06:03Z",
+    "updated_on": "2019-08-29T11:06:03Z"
+}
+```
+
 ## **Get Enterprise Information**
 ```python
 from esperclient import EnterpriseApi, ApiClient
@@ -101,14 +133,9 @@ except ApiException as e:
 *Output*
 ```python
 {
-  "id": "string",
-  "url": "string",
-  "name": "string",
-  "display_name": "string",
-  "short_code": "string",
-  "mdm_service": 1,
-  "details": {
     "id": "string",
+    "name": "string",
+    "short_code": "string",
     "registered_name": "string",
     "registered_address": "string",
     "location": "string",
@@ -116,28 +143,11 @@ except ApiException as e:
     "contact_person": "string",
     "contact_number": "string",
     "contact_email": "user@example.com",
-    "created_on": "2019-05-09T13:28:41Z",
-    "updated_on": "2019-05-09T13:28:41Z",
-    "is_active": true
-  },
-  "default_policy": 0,
-  "emm": {
-    "id": 0,
-    "google_enterprise_id": "string",
-    "name": "string",
-    "state": 1,
-    "callback_url": "string",
-    "signup_url": "string",
-    "completion_token": "string",
-    "enterprise_token": "string",
-    "is_active": true,
-    "created_on": "2019-05-09T13:28:41Z",
-    "updated_on": "2019-05-09T13:28:41Z",
-    "enterprise": "string"
-  },
-  "created_on": "2019-05-09T13:28:41Z",
-  "updated_on": "2019-05-09T13:28:41Z",
-  "is_active": true
+    "emm": {
+        "google_enterprise_id": "string"
+    },
+    "created_on": "2019-08-29T11:06:03Z",
+    "updated_on": "2019-08-29T11:06:03Z"
 }
 ```
 ## **List All Devices**
