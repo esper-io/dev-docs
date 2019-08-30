@@ -21,7 +21,13 @@ Inorder to provision the AVD to your endpoint, you can grab the Serial number fr
 
 ![](./assets/OLD_DASHBOARD/emulator_image1.png)
 
+If you'd rather use ADB to get the serial number, you can also use adb shell getprop ro.serialno  
+
+Please reboot the AVD after that (or hit the "bac button" once). Now your AVD will provision and start talking to the endpoint automatically.
+
+
 To find out how to add Serial Number or IMEI number to a template for provisioning, refer to this page - 
 
 [Adding IMEI/Serial Number to a Template](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/)
+
 
