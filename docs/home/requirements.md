@@ -10,6 +10,22 @@ The Dev Console requires Chrome v57+ for desktop.
 ## Device Requirements
 Targeted Dedicated Devices must run Android version 4.4 KitKat (API Level 19) or above. Alternatively, Esper Development Devices running Esper Enhanced Android can be used; this opens up additional features when using Esper Dev.
 
+Please make sure to whitelist the following URLs and Ports if your devices are behind any firewall with restrictions in placed for inbound and outbound traffic.
+
+### URLs
+ - *.s3.amazonaws.com
+ - clients3.google.com
+ - google.com
+ - mqtt.shoonyacloud.com:1883  
+ - *.shoonyacloud.com
+ - *.esper.cloud
+ - 13.52.132.230 -> This will allow secure remote adb access to the devices
+
+### Ports
+ -  5228
+ -  5229
+ -  5230 
+
 ## Esper Dev Tools Requirements
 To use the Esper Dev Tools you need to have Python installed. Depending on the tool in use, you can install the required Python version for your platform from [python.org](https://www.python.org/)
 
