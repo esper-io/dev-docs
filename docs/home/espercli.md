@@ -172,7 +172,7 @@ Address          #123, Industrial Layout, Random Avenue
 Location         Santa Clara, CA
 Zip Code         12345
 Email            contact@foo.io
-Contact Person   Shiv Sundar
+Contact Person   Tyrell Smith
 Contact Number   +145678901234
 
 $ espercli enterprise show -j
@@ -210,7 +210,7 @@ Address          #123, Industrial Layout, Random Avenue
 Location         Santa Clara, CA
 Zip Code         12345
 Email            contact@foo.io
-Contact Person   Muneer M
+Contact Person   Tyrell Smith
 Contact Number   +145678901234
 ```
 
