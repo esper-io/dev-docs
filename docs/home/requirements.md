@@ -9,9 +9,9 @@ Following sections talk about the minimum requirements for using various parts o
 
 The Console requires [Chrome](https://www.google.com/chrome) v57 or above. At present, viewing the console on mobile devices is not supported.
 
-## Dedictated Android Devices
+## Dedicated Android Devices
 
-Targeted Dedicated Devices must run Android version 4.4 KitKat (API Level 19) or above. However, we recommend that devices running Android verion 7.0 Nougat (API Level 24) or above be used with Esper.
+Targeted Dedicated Devices must run Android version 4.4 KitKat (API Level 19) or above. However, we recommend that devices running Android version 7.0 Nougat (API Level 24) or above be used with Esper.
 
 Esper Development Devices running Esper Enhanced Android will always be supported be used. Such devices open up additional features for developers, when using Esper.
 
@@ -46,7 +46,7 @@ Various Esper tools and SDK require a Python installation. The table below lists
 
 #### Esper SDK Language Support
 
-- Python
+* Python
 
 To use the Esper Python SDK, please ensure you are using Python v2.7 or above.
 

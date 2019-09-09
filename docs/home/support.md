@@ -17,6 +17,7 @@ Use [this form](https://forms.gle/XEiVZM6h9CZ2xmeZA) to join the [Esper Slack Wo
 ## Gitter
 
 [![Gitter](https://badges.gitter.im/esper-dev/community.svg)](https://gitter.im/esper-dev/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 1. [Esper community](https://gitter.im/esper-dev/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link): For general discussion, questions and feedback.
 2. [Esper API/SDK](https://gitter.im/esper-dev/esper-sdk?utm_source=share-link&utm_medium=link&utm_campaign=share-link): For API and SDK related discussion
 3. [Esper CLI](https://gitter.im/esper-dev/esper-cli?utm_source=share-link&utm_medium=link&utm_campaign=share-link): For CLI tool related discussion

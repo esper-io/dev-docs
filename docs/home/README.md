@@ -51,7 +51,7 @@ Esper gives you access to a suite of development tools you need to build, delive
 * **[Esper CLI](./espercli.md)**: A unified command line interface to the Esper APIs, provided with source code so you can extend it yourself.
 * **Esper Remote Debug**: Everything you need to do secure remote debugging of deployed Dedicated Devices running Esper Enhanced Android.
 * **Esper Dedicated Device Cookbooks**: Available quick starts for Kiosk, POS, Restaurant, and Logistics Dedicated Device solutions.
-* **Esper Manage Console**: Use the Esper console to access Device Orchestration capabilities that eleveates MDM of dedicated devices to a whole new level.
+* **Esper Manage Console**: Use the Esper console to access Device Orchestration capabilities that elevates MDM of dedicated devices to a whole new level.
 * **[Esper Support](./support.md)**: Chat, GitHub, email and phone.
 
 ## Esper Device Orchestration Features
