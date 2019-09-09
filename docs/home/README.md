@@ -43,7 +43,7 @@ Esper gives you access to a suite of development tools you need to build, delive
 * **[Esper Dev Portal](https://docs.esper.io/)**: Provides all Esper documentation in a portal that’s easy to access and use.
 * **Esper Dev Console**: A developer specific console organizing all of the Esper tools.
 * **Esper Cloud**: A private Cloud dedicated to each development team.
-* **[Esper Virtual Device](./evd.md)**: An emulation environment for development and verification testing use with Esper Enhanced Android. You can also use emulation in Android Studio with a stock Android image running our Esper Agent.
+* **[Esper Virtual Device](./emulator.md)**: An emulation environment for development and verification testing use with Esper Enhanced Android. You can also use emulation in Android Studio with a stock Android image running our Esper Agent.
 * **Esper Enhanced Android**: A fortified version built with Android OS for Dedicated Devices. Adds key features for Dedicated Device needs not met by stock Android.
 * **Esper Development Devices**: Esper sourced Dedicated Devices for you test drive Esper Enhanced Android.
 * **[Esper APIs](https://api.esper.io)**: Rich API set for Dedicated Device application development, deployment, and management.
