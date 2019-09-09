@@ -1,0 +1,5 @@
+# disable inline html checks
+MD033 : false
+
+# allow lines more than 80 chars in length
+MD013: false
