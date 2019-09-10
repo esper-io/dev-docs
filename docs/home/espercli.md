@@ -1,5 +1,4 @@
-# Esper CLI (Preview Release Version)
-<br />
+# Esper CLI <Badge text="Preview Release" type="tip"/>
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 

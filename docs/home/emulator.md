@@ -1,5 +1,4 @@
-# Esper Virtual Device (Preview Release Version)
-<br />
+# Esper Virtual Device <Badge text="Preview Release" type="tip"/>
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
