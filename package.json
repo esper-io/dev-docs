@@ -1,6 +1,6 @@
 {
   "name": "esper-docs",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Esper documentation",
   "main": "index.js",
   "directories": {
@@ -26,14 +26,14 @@
   "homepage": "https://github.com/esper-io/dev-docs#readme",
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
-    "@vuepress/plugin-medium-zoom": "^1.0.2",
-    "vuepress": "1.0.2",
-    "vuepress-plugin-autometa": "^0.1.10",
-    "vuepress-plugin-feed": "^0.1.6"
+    "@vuepress/plugin-medium-zoom": "^1.0.4",
+    "vuepress": "1.0.4",
+    "vuepress-plugin-autometa": "^0.1.12",
+    "vuepress-plugin-feed": "^0.1.7"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "1.0.2",
-    "@vuepress/plugin-google-analytics": "^1.0.2",
+    "@vuepress/plugin-back-to-top": "1.0.4",
+    "@vuepress/plugin-google-analytics": "^1.0.4",
     "vuepress-plugin-reading-time": "0.1.1"
   }
 }
