@@ -8,7 +8,7 @@ Esper provides a Python client library to communicate with the Esper APIs to pro
 Current stable release versions are
 
     API version: 1.0.0
-    SDK version: 0.0.6
+    SDK version: 0.0.9
 
 :::tip
 Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io).
@@ -18,8 +18,8 @@ We are always in active development and we try our best to keep all of our docum
 
 ## Pre-requisites
 1. **Python:** We recommend you use Python 3.4 or above.
-2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `https://{{ esper_tenant_name }}.esper.cloud` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](./module/register.md). 
-3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud`. See [Generating an API Key](./module/genapikey.md)
+2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `https://{{ esper_tenant_name }}.esper.cloud` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](https://docs.esper.io/home/gettingstarted.html#setup). 
+3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud`. See [Generating an API Key](https://docs.esper.io/home/gettingstarted.html#setup).
 
 ## Installation
 
@@ -67,7 +67,7 @@ Next, you need to configure your client to talk to APIs. For this you will need 
 <pre>
 <code>
 configuration = esperclient.Configuration()
-configuration.host = ' https://{{ esper_tenant_name }}-api.esper.cloud/api'
+configuration.host = 'https://{{ esper_tenant_name }}-api.esper.cloud/api'
 configuration.api_key['Authorization'] = 'LpDriKp7MWJiRGcwc8xzREeUj8OEFa'
 configuration.api_key_prefix['Authorization'] = 'Bearer'
 </code>
@@ -81,6 +81,38 @@ Some additional information you'll need in order to access Esper APIs is your `e
 ## Examples
 
 Some of the frequently used examples are given below:
+
+## **Get Token Information**
+```python
+from esperclient import TokenApi, ApiClient
+from esperclient.rest import ApiException
+
+# create an instance of the API class
+api_instance = TokenApi(ApiClient(configuration))
+try:
+    api_response = api_instance.get_token_info()
+    print(api_response)
+except ApiException as e:
+    print("Exception when calling TokenApi->get_token_info: %s\n" % e)
+```
+
+*Output*
+```python
+{
+    "id": "string",
+    "enterprise": "string",
+    "user": "string",
+    "developer_app": "string",
+    "source_refresh_token": "string",
+    "token": "string",
+    "expires_on": "2019-08-29T11:06:03Z",
+    "scope": [
+        "string"
+    ],
+    "created_on": "2019-08-29T11:06:03Z",
+    "updated_on": "2019-08-29T11:06:03Z"
+}
+```
 
 ## **Get Enterprise Information**
 ```python
@@ -100,14 +132,9 @@ except ApiException as e:
 *Output*
 ```python
 {
-  "id": "string",
-  "url": "string",
-  "name": "string",
-  "display_name": "string",
-  "short_code": "string",
-  "mdm_service": 1,
-  "details": {
     "id": "string",
+    "name": "string",
+    "short_code": "string",
     "registered_name": "string",
     "registered_address": "string",
     "location": "string",
@@ -115,28 +142,11 @@ except ApiException as e:
     "contact_person": "string",
     "contact_number": "string",
     "contact_email": "user@example.com",
-    "created_on": "2019-05-09T13:28:41Z",
-    "updated_on": "2019-05-09T13:28:41Z",
-    "is_active": true
-  },
-  "default_policy": 0,
-  "emm": {
-    "id": 0,
-    "google_enterprise_id": "string",
-    "name": "string",
-    "state": 1,
-    "callback_url": "string",
-    "signup_url": "string",
-    "completion_token": "string",
-    "enterprise_token": "string",
-    "is_active": true,
-    "created_on": "2019-05-09T13:28:41Z",
-    "updated_on": "2019-05-09T13:28:41Z",
-    "enterprise": "string"
-  },
-  "created_on": "2019-05-09T13:28:41Z",
-  "updated_on": "2019-05-09T13:28:41Z",
-  "is_active": true
+    "emm": {
+        "google_enterprise_id": "string"
+    },
+    "created_on": "2019-08-29T11:06:03Z",
+    "updated_on": "2019-08-29T11:06:03Z"
 }
 ```
 ## **List All Devices**
