@@ -1,5 +1,4 @@
-# API Reference (Preview Release)
-<br />
+# API Reference <Badge text="Preview Release" type="tip"/>
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
