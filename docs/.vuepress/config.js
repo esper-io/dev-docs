@@ -28,6 +28,25 @@ module.exports = {
       }
     ]
   ],
+  head: [
+    [
+      "script",
+      { src: "//js.hs-scripts.com/5868902.js", async: true, defer: true }
+    ],[
+      "script",
+      {},
+      `(function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1485078,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  `],
+    [("link", { rel: "icon", href: `favicon.ico` })],
+    ["link", { rel: "manifest", href: "manifest.json" }]
+  ],
   themeConfig: {
     esper_tenant_name: "foo",
     serviceWorker: {
@@ -38,13 +57,6 @@ module.exports = {
       indexName: "esper"
     },
     lastUpdated: "Last Updated",
-    head: [
-      [
-        "script",
-        { src: "//js.hs-scripts.com/5868902.js", async: true, defer: true }
-      ],[("link", { rel: "icon", href: `favicon.ico` })],
-      ["link", { rel: "manifest", href: "manifest.json" }]
-    ],
     logo: `/esper.svg`,
     nav: [
       { text: "Blog", link: "https://blog.esper.io" },
