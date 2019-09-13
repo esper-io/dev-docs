@@ -1,6 +1,4 @@
-# Esper Android Studio Plugin 
-## (Preview Release Version)
-<br />
+# Esper Android Studio Plugin <Badge text="Preview Release" type="tip"/>
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 

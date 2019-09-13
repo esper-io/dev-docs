@@ -1,6 +1,4 @@
-# Esper SDK for Python
-## (Preview Release Version)
-<br />
+# Esper SDK for Python <Badge text="Preview Release" type="tip"/>
 <div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 
