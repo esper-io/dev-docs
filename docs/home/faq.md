@@ -80,3 +80,15 @@ No, we do not. We are not a general device management company. We are hyper-focu
 
 We do not support BYOD scenarios. We do support bringing your own dedicated devices.
  
+ **How does one get out of Kiosk Mode in an Esper Managed Device?** <br/>
+ Check out these videos on how to do the same.
+[Samsung SM-T510 - Exit Kiosk Mode](https://www.youtube.com/watch?v=okpc00edhlA&feature=youtu.be)<br/>
+[Lenovo TB-8504F - exit kiosk Mode](https://www.youtube.com/watch?v=mZBRo79OJOk&feature=youtu.be)<br/>
+
+Steps are as follows - <br/>
+<br/>
+-Tap 3 times on the right top corner of the device<br/>
+-Esper Menu will show up<br/>
+-Choose the option to exit kiosk as shown in the videos.<br/>
+
+
