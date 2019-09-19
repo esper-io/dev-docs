@@ -80,7 +80,7 @@ The Esper Android Tools provide a customized Esper Virtual Device (EVD) image ba
 Inorder to get the Esper Virtual Device, simply follow the instructions -
 
 1. Install & setup [Esper Android Studio Plugin](https://docs.esper.io/home/esperplugin.html#requirements)
-2. Please download the AVD from the AS Tools' menu as intructed below.
+2. Please download the AVD from the Android Studio Tools menu as intructed below.
 Once done, you can simply launch the Esper AVD as you'd any other AVD.
 
 When android studio is started, plugin notifies the user about newly avaiable AVDs or updates available for the installed AVDs.\
@@ -98,16 +98,16 @@ Click on "Esper AVD Manager".\
 <img src="./assets/plugin/avd/avdslist.png" width="75%" height="75%">\
 \
 \
-Click on "Create" or "Update". User will be informed that AVD will be created in background.\
+Click on "Create" or "Update". User will be informed that AVD (Esper Virtual Device is also known as EVD) will be created in background.\
 \
 <img src="./assets/plugin/avd/create.png" width="75%" height="75%">\
 \
 \
-Click on "Ok" button. Esper AVD creation happens in background.\
+Click on "Ok" button. Esper AVD (EVD) creation happens in background.\
 \
 <img src="./assets/plugin/avd/downloading.png" width="75%" height="75%">\
 \
-After the AVD is created, user will be prompted to restart Android Studio.\
+After the EVD is created, user will be prompted to restart Android Studio.\
 \
 <img src="./assets/plugin/avd/restart.png" width="75%" height="75%">\
 \
@@ -126,28 +126,27 @@ From AVD Manager\
 \
 <img src="./assets/plugin/avd/avdmanager.png" width="75%" height="75%">\
 \
-Esper AVD is up.\
+Esper AVD (EVD) is up.\
 \
 <img src="./assets/plugin/avd/avdup.png" width="75%" height="75%">\
 
 
 
-When the AVD is launched, it will show up an emulated camera screen, as if to it's ready to scan a QR code. 
+When the EVD is launched, it will show up an emulated camera screen, as if to it's ready to scan a QR code. 
 
 
-Inorder to provision the AVD to your endpoint, you can grab the Serial number from the AVD screen and add it to your template(used for provisioning).
+Inorder to provision the AVD (EVD) to your endpoint, you can grab the Serial number from the AVD (EVD) screen and add it to your template(used for provisioning).
 
 ![](./assets/OLD_DASHBOARD/emulator_image1.png)
-
-If you'd rather use ADB to get the serial number, you can also use adb shell getprop ro.serialno  
-
-Please reboot the AVD after that (or hit the "bac button" once). Now your AVD will provision and start talking to the endpoint automatically.
-
 
 To find out how to add Serial Number or IMEI number to a template for provisioning, refer to this page - 
 
 [Adding IMEI/Serial Number to a Template](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/)
 
+
+If you'd rather use ADB to get the serial number, you can also use adb shell getprop ro.serialno  
+
+Please reboot the AVD (EVD) after that (or hit the "back button" once). Now your AVD (EVD) will provision and start talking to the Esper endpoint automatically.
 
 
 ## Uninstalling
