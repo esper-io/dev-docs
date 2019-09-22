@@ -37,7 +37,7 @@ If this is the first time you are installing a 3rd-party plugin, Android Studio 
 Click on Accept to proceed. If you have installed third-party plugins before, you will not see this prompt, and you can proceed to the next step.
 Once Android Studio restarts, check the Event Log in the lower right corner to verify the Plugin successfully installed.
 
-## Setup and Use
+## Setup
 The setup for the Esper Plugin is Project specific for the currently open Project. If you wish to use the Esper Plugin for other Projects, be sure to perform the setup for each. 
 With your desired Project open, go to File → Settings (or Android Studio → Preferences for Mac). Click on the drop down for Other Settings, and the click on Esper from the resulting list. In the Esper window, type in the relevant credentials for your Endpoint Name, Username, and Password. Hit Apply and then OK.
 
@@ -45,6 +45,9 @@ With your desired Project open, go to File → Settings (or Android Studio → P
 
 
 The Plugin is now configured to your Endpoint for this Project.
+<br/>
+<br/>
+## Uploading APK to Esper
 
 Now once you are ready to upload an .apk file to your Endpoint, simply go to Build → Upload APK to Esper:
 
@@ -67,6 +70,40 @@ If there's any error, you'll see an error as shown below:
 Note that trying to upload the same version of the .apk you already have on your Endpoint will produce an error. You currently cannot overwrite it using the Plugin, you will have to delete it using the Esper Console or from the CLI.
 
 <br/>
+
+## Deploying application to a group of devices
+Esper plugin faciliates developers to deploy an uploaded applciation to a group.
+
+### After uploading APK
+After [uploading the APK to Esper](#uploading-apk-to-esper), developer can opt to deploy to a group of devices.
+
+<img src="./assets/plugin/deployapptogroup/deploy_after_upload.jpg">
+
+### Uploaded applications
+Developers can choose an application and a group.\
+\
+<img src="./assets/plugin/deployapptogroup/deploy_app_to_group_menu_item.jpg">\
+\
+<img src="./assets/plugin/deployapptogroup/choose_app_and_group.jpg">
+
+Deployment status will be updated until the deployment is completed.
+
+<img src="./assets/plugin/deployapptogroup/deploy_status_initial.jpg">
+
+<img src="./assets/plugin/deployapptogroup/deploy_status_final.jpg">
+
+Deployment status can be monitored from the background as well (Click on Deploy in background button). Intermediate status will be updated at background progress bar.
+
+<img src="./assets/plugin/deployapptogroup/deploy_status_background.jpg">
+
+Final status will be updated with a notification.
+
+<img src="./assets/plugin/deployapptogroup/deploy_status_notification.jpg">
+
+Final status can also be seen in event log as well.
+
+<img src="./assets/plugin/deployapptogroup/deploy_status_event_log.jpg">
+
 <br/>
 
 ## Esper Android Virtual Device
@@ -121,6 +158,7 @@ Esper AVD is up.\
 <img src="./assets/plugin/avd/avdup.png" width="75%" height="75%">\
 ### Experience the amazing DPC by Esper.
 
+<br/>
 
 ## Uninstalling
 
