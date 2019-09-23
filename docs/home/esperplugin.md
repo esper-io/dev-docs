@@ -70,9 +70,19 @@ Note that trying to upload the same version of the .apk you already have on your
 <br/>
 
 ## Esper Android Virtual Device
-Esper AVD allows the users to experience the Esper Device Policy Controller (DPC)  for Android Devices.
+Esper AVD allows the users to experience the Esper Agent for Android Devices.
+
+Virtual devices are a convenient means to target a device without having the available hardware, or when you do not want to risk breaking the actual hardware device. By trading off the lower performance of a virtual device, you gain a very capable and streamlined virtual device that can hugely boost your productivity during development and early testing.
+
+The Esper Android Tools provide a customized Esper Virtual Device (EVD) image based on the x86 platform allowing you to try out Esper Enhanced Android providing features such as Zero-touch enrollment. You can register your EVD serial number or IMEI number using an Esper Device Template of your choice and then re-start the EVD. On boot the EVD will then get enrolled to your Endpoint automatically and you can start accessing the EVD and take actions using the Esper Console or through our APIs, SDK, and CLI.
 
 ### Usage Instructions
+Inorder to get the Esper Virtual Device, simply follow the instructions -
+
+1. Install & setup [Esper Android Studio Plugin](https://docs.esper.io/home/esperplugin.html#requirements)
+2. Please download the AVD from the Android Studio Tools menu as intructed below.
+Once done, you can simply launch the Esper AVD as you'd any other AVD.
+
 When android studio is started, plugin notifies the user about newly avaiable AVDs or updates available for the installed AVDs.\
 \
 <img src="./assets/plugin/avd/notification.png" width="75%" height="75%">\
@@ -88,16 +98,16 @@ Click on "Esper AVD Manager".\
 <img src="./assets/plugin/avd/avdslist.png" width="75%" height="75%">\
 \
 \
-Click on "Create" or "Update". User will be informed that AVD will be created in background.\
+Click on "Create" or "Update". User will be informed that AVD (Esper Virtual Device is also known as EVD) will be created in background.\
 \
 <img src="./assets/plugin/avd/create.png" width="75%" height="75%">\
 \
 \
-Click on "Ok" button. Esper AVD creation happens in background.\
+Click on "Ok" button. Esper AVD (EVD) creation happens in background.\
 \
 <img src="./assets/plugin/avd/downloading.png" width="75%" height="75%">\
 \
-After the AVD is created, user will be prompted to restart Android Studio.\
+After the EVD is created, user will be prompted to restart Android Studio.\
 \
 <img src="./assets/plugin/avd/restart.png" width="75%" height="75%">\
 \
@@ -116,10 +126,27 @@ From AVD Manager\
 \
 <img src="./assets/plugin/avd/avdmanager.png" width="75%" height="75%">\
 \
-Esper AVD is up.\
+Esper AVD (EVD) is up.\
 \
 <img src="./assets/plugin/avd/avdup.png" width="75%" height="75%">\
-### Experience the amazing DPC by Esper.
+
+
+
+When the EVD is launched, it will show up an emulated camera screen, as if to it's ready to scan a QR code. 
+
+
+Inorder to provision the AVD (EVD) to your endpoint, you can grab the Serial number from the AVD (EVD) screen and add it to your template(used for provisioning).
+
+![](./assets/OLD_DASHBOARD/emulator_image1.png)
+
+To find out how to add Serial Number or IMEI number to a template for provisioning, refer to this page - 
+
+[Adding IMEI/Serial Number to a Template](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/)
+
+
+If you'd rather use ADB to get the serial number, you can also use adb shell getprop ro.serialno  
+
+Please reboot the Esper AVD (EVD) after that (or hit the "back button" once). Now your Espe AVD (EVD) will provision and start talking to the Esper endpoint automatically.
 
 
 ## Uninstalling
