@@ -70,7 +70,7 @@ Note that trying to upload the same version of the .apk you already have on your
 <br/>
 
 ## Esper Android Virtual Device
-Esper AVD allows the users to experience the Esper Device Policy Controller (DPC) for Android Devices.
+Esper AVD allows the users to experience the Esper Agent for Android Devices.
 
 Virtual devices are a convenient means to target a device without having the available hardware, or when you do not want to risk breaking the actual hardware device. By trading off the lower performance of a virtual device, you gain a very capable and streamlined virtual device that can hugely boost your productivity during development and early testing.
 
@@ -146,7 +146,7 @@ To find out how to add Serial Number or IMEI number to a template for provisioni
 
 If you'd rather use ADB to get the serial number, you can also use adb shell getprop ro.serialno  
 
-Please reboot the AVD (EVD) after that (or hit the "back button" once). Now your AVD (EVD) will provision and start talking to the Esper endpoint automatically.
+Please reboot the Esper AVD (EVD) after that (or hit the "back button" once). Now your Espe AVD (EVD) will provision and start talking to the Esper endpoint automatically.
 
 
 ## Uninstalling
