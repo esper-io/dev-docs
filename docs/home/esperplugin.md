@@ -72,7 +72,7 @@ Note that trying to upload the same version of the .apk you already have on your
 <br/>
 
 ## Deploying application to a group of devices
-Esper plugin faciliates developers to deploy an uploaded applciation to a group.
+Esper plugin facilitates developers to deploy an uploaded application to a group.
 
 ### After uploading APK
 After [uploading the APK to Esper](#uploading-apk-to-esper), developer can opt to deploy to a group of devices.
