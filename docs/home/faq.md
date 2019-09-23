@@ -89,7 +89,7 @@ Steps are as follows - <br/>
 <br/>
 -Tap 3 times on the right top corner of the device<br/>
 -Esper Menu will show up<br/>
-- Please note that Settings app can be chosen via Compliance policy from Template during provisioning and from Compliance Policy post provisioning. <br/>
+-Please note that Settings app can be chosen via Compliance policy from Template during provisioning and from Compliance Policy post provisioning. <br/>
 -if Esper settings app was chosen via Template or Compliance policy - Enter the Authentication code (This Esper Settings App password can be obtained from your Esper Customer Support contact)<br/>
 -if Default settings app was chosen via Template or Compliance policy - no password needs to be entered. <br/>
 -Click Continue <br/>
