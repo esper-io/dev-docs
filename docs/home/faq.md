@@ -93,7 +93,7 @@ Steps are as follows - <br/>
 -if Esper settings app was chosen via Template or Compliance policy - Enter the Authentication code (This Esper Settings App password can be obtained from your Esper Customer Support contact)<br/>
 -if Default settings app was chosen via Template or Compliance policy - no password needs to be entered. <br/>
 -Click Continue <br/>
--Click the square button for exit kiosk - <br/>
+-Click the square button for exit kiosk <br/>
 -You can click on any installed app showing on the home screen of device to use it as kiosk mode app. <br/>
 
 Here is another video with a Lenovo Tablet - <br/>
