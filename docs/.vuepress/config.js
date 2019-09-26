@@ -1,14 +1,14 @@
-const autometa_options = {
-  site: {
-    name: "Esper docs",
-    twitter: "Esper docs"
-  },
-  canonical_base: "https://docs.esper.io"
-};
+// const autometa_options = {
+//   site: {
+//     name: "Esper docs",
+//     twitter: "Esper docs"
+//   },
+//   canonical_base: "https://docs.esper.io"
+// };
 
-const feed_options = {
-  canonical_base: "https://docs.esper.io"
-};
+// const feed_options = {
+//   canonical_base: "https://docs.esper.io"
+// };
 
 module.exports = {
   base: "/",
@@ -19,8 +19,8 @@ module.exports = {
     ["@dovyp/vuepress-plugin-clipboard-copy", true],
     ["@vuepress/back-to-top", true],
     ["@vuepress/plugin-medium-zoom", true],
-    ["autometa", autometa_options],
-    ["feed", feed_options],
+    // ["autometa", autometa_options],
+    // ["feed", feed_options],
     [
       "@vuepress/google-analytics",
       {

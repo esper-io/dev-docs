@@ -26,9 +26,7 @@
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
     "@vuepress/plugin-medium-zoom": "^1.1.0",
-    "vuepress": "1.1.0",
-    "vuepress-plugin-autometa": "^0.1.12",
-    "vuepress-plugin-feed": "^0.1.7"
+    "vuepress": "1.1.0"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "1.1.0",
