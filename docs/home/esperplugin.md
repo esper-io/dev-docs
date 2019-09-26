@@ -80,10 +80,10 @@ The Esper Android Tools provide a customized Esper Virtual Device (EVD) image ba
 Inorder to get the Esper Virtual Device, simply follow the instructions -
 
 1. Install & setup [Esper Android Studio Plugin](https://docs.esper.io/home/esperplugin.html#requirements)
-2. Please download the AVD from the Android Studio Tools menu as intructed below.
+2. Please download the AVD from the Android Studio Tools menu as instructed below.
 Once done, you can simply launch the Esper AVD as you'd any other AVD.
 
-When android studio is started, plugin notifies the user about newly avaiable AVDs or updates available for the installed AVDs.\
+When android studio is started, plugin notifies the user about newly available AVDs or updates available for the installed AVDs.\
 \
 <img src="./assets/plugin/avd/notification.png" width="75%" height="75%">\
 \
@@ -112,7 +112,7 @@ After the EVD is created, user will be prompted to restart Android Studio.\
 <img src="./assets/plugin/avd/restart.png" width="75%" height="75%">\
 \
 \
-Click on Restart. Android Studio will be restarted. After restarted, navigate to Esper Toos Menu > Esper AVD Manager. Esper AVD Manager shows that AVD is up-to-date.\
+Click on Restart. Android Studio will be restarted. After restarted, navigate to Esper Tools Menu > Esper AVD Manager. Esper AVD Manager shows that AVD is up-to-date.\
 \
 <img src="./assets/plugin/avd/uptodate.png" width="75%" height="75%">\
 \
@@ -144,9 +144,13 @@ To find out how to add Serial Number or IMEI number to a template for provisioni
 [Adding IMEI/Serial Number to a Template](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/)
 
 
-If you'd rather use ADB to get the serial number, you can also use adb shell getprop ro.serialno  
+If you'd rather use ADB to get the serial number, you can also use 
 
-Please reboot the Esper AVD (EVD) after that (or hit the "back button" once). Now your Espe AVD (EVD) will provision and start talking to the Esper endpoint automatically.
+```sh
+adb shell getprop ro.serialno
+```
+
+Please reboot the Esper AVD (EVD) after that (or hit the "back button" once). Now your Esper AVD (EVD) will provision and start talking to the Esper endpoint automatically.
 
 
 ## Uninstalling

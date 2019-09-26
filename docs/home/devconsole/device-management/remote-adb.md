@@ -5,7 +5,7 @@ lang: en-US
 
 # Secure Remote ADB
 
-Developer should be able to debug their devices remotely without even physial association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
+Developer should be able to debug their devices remotely without even physical association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
 
 This document tells you how you can remotely connect to device via secure adb channel. We will be using esper-cli command line tool which internally uses [esperSDK](https://docs.esper.io/home/pythonsdk.html)  [APIs](https://api.esper.io/) to provide the secure access between your host machine and device.
 
@@ -23,7 +23,7 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 4. Disconnect usb cable from the device. You should be able to connect adb via port 5555 over tcp
 
-5. Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your enviornment on to the host machine.
+5. Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your environment on to the host machine.
    - Check your espercli version: espercli -v
    ```sh
    #espercli -v
