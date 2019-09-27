@@ -76,7 +76,7 @@ module.exports = {
         "pythonsdk",
         "espercli",
         "api",
-        ["devconsole/", "Dev Console"],
+        "console",
         "tutorials",
         "support",
         "faq"
