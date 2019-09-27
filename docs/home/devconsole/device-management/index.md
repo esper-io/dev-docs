@@ -20,6 +20,8 @@ Search is provided on the top right where you can search for devices in Devices 
 
 If you are logging in to your endpoint for the very first time you will see the following screen which gives you a choice to either provision a device or Simulate a device.
 
+![Simulare](../images/Simulare-1.png)
+
 You can choose to provision a device the details to which are provided in the Provision Device section of this documentation. Or you may choose to Simulate a Device. You will see a momentary "You are all set!" message post which a mock device will be available for you to experiment and play around with till you provision an actual device.
 
 Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform. 
