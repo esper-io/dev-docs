@@ -17,7 +17,7 @@ Esper Development Devices running Esper Enhanced Android will always be supporte
 
 ## Infrastructure
 
-Dedicated devices are often behind corporate firewalls, preventing Esper backends to communicate with them (or vice-versa). Please make sure to whitelist the following URLs and Ports, in case your fleet is running behind such a firewall.
+Dedicated devices are often behind corporate firewalls, preventing Esper backend to communicate with them (or vice-versa). Please make sure to whitelist the following URLs and Ports, in case your fleet is running behind such a firewall.
 
 ### URLs
 

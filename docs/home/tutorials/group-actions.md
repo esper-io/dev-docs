@@ -9,7 +9,7 @@ Developers during their deployment and testing phase encounters challenges of ma
 
 - Reboot devices in a group in an automated manner via their application code and do not want to use our GUI dashboard.
 - Increase the brightness of the devices to 100% at 6:00 PM everyday.
-- Lock the device for use during app ugrade etc.
+- Lock the device for use during app upgrade etc.
 
 
 In this tutorial we will use our APIs and Python SDK combined with our Group functionality to perform device deployments systematically and efficiently throughout your entire device fleet. We will be using an example of rebooting devices in a group but same can be easily extend to other device to group actions.
