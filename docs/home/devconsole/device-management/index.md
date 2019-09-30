@@ -22,15 +22,16 @@ If you are logging in to your endpoint for the very first time you will see the 
 
 ![Simulare](../images/simulare-1.png)
 
-You can choose to provision a device the details to which are provided in the Provision Device section of this documentation. Or you may choose to Simulate a Device. You will see a momentary "You are all set!" message post which a mock device will be available for you to experiment and play around with till you provision an actual device.
+You can choose to provision a real Android device the details to which are provided in the [Provision Device](https://docs.esper.io/home/devconsole/device-provisioning/) section of this documentation. Or you may choose to Simulate a Device. You will see a momentary "You are all set!" message after which a mock device will be available for you to experiment and play around with till you provision an actual device.
 
 ![Simulare](../images/simulare-2.png)
 
 Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform. 
 
-Capabilities such as Apps, Remote View and Capture log might not be available on the Simulated device. 
+Capabilities such as Apps, Remote View and Capture log might not be available on a Simulated device. 
 
-This device is only available for new signups currently.
+This device is only available for new signups currently. Please note that trial accounts created on or after September 27, 2019 will have this feature enabled. Accounts created before that will not. Please reach out to us at support@esper.io if you signed up before September 27, and would like to try out Simulated devices. 
+
 
 ### Device Tile
 
