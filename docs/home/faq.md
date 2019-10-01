@@ -99,5 +99,5 @@ Steps are as follows - <br/>
 Here is another video with a Lenovo Tablet - <br/>
 [![](https://img.youtube.com/vi/mZBRo79OJOk/0.jpg)](https://www.youtube.com/watch?v=mZBRo79OJOk "Lenovo TB-8504F - exit kiosk Mode")
 
-**Why is landscape and portrait mode reversed in my device?**
+**Why is landscape and portrait mode reversed in my device?**<br/>
 This is a device specific behaviour and depends on the device manufacturer and OS image installed on the device. The same system would be landscape for some devices and portrait for others. 
