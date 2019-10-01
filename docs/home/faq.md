@@ -101,3 +101,75 @@ Here is another video with a Lenovo Tablet - <br/>
 
 **Why is landscape and portrait mode reversed in my device?**<br/>
 This is a device specific behaviour and depends on the device manufacturer and OS image installed on the device. The same system would be landscape for some devices and portrait for others. 
+
+
+**How to install apps on Esper devices using the Dashboard after provisioning?**
+
+ 
+**Individual Device Install**
+
+*Private Apps*
+1. Click on Devices on the left navigation bar
+2. Click on the Device tile -> Details
+3. Click on the Apps tab
+4. Choose the App you wish you install from the dropdown menu and click Install 
+
+*Google Apps*
+1. Go to Play For Work
+2. Click on the app (it must be approved)
+3. Click Select
+4. Select the device you wish to install it on from the dropdown on top left
+5. Click Install
+
+*Preloaded Apps* <br/> Approve a preloaded app to show in the device from the list of apps in Device-Apps section by turning **on** the toggle button.
+
+**Group App install**
+
+*Private Apps*
+1. Click on Group on the left navigation bar
+2. Click on the Group tile -> Details
+3. Click on the Apps tab (see image below)
+4. Choose the App you wish you install from the dropdown menu and click Install app.
+
+This should work for installing the apks that you have uploaded in the system. You can upload your apks from the [Apps section](https://docs.esper.io/home/devconsole/app-management/). 
+
+*Google Apps* Run a script provided by Esper support (support@esper.io) to install google apps on groups 
+
+*Preloaded Apps* Run a script provided by Esper support (support@esper.io) to approve (unhide) Google Play apps on groups 
+ 
+**How to uninstall apps on Esper devices using the Dashboard after provisioning?** <br/>
+
+**Individual Device Uninstall**
+ 
+*Private Apps*
+1. Click on Devices on the left navigation bar
+2. Click on the Device tile -> Details
+3. Click on the Apps tab
+4. Choose the App you wish you uninstall from the dropdown menu and click Uninstall app button OR unapprove the apps from the list of apps by turning **off** the toggle button.
+
+*Google Apps*
+ 1. Go to Play For Work
+ 2. Click on the app 
+ 3. Click Select
+ 4. Select the device you wish to uninstall it on from the dropdown on top left
+ 5. Click Uninstall
+
+*Preloaded Apps* 
+1. Click on Devices on the left navigation bar
+2. Click on the Device tile -> Details
+3. Click on the Apps tab
+4. Unapprove the apps from the list of apps by turning **off** the toggle button.
+
+**Groups Uninstall**
+
+*Private Apps*  If you want to uninstall private apps in a Group of enrolled Devices, do the following -
+1. Click on Group on the left navigation bar
+2. Click on the Group tile -> Details
+3. Click on the Apps tab (see image below)
+4. Choose the App you wish you uninstall from the dropdown menu and click Uninstall app.
+
+*Google Apps* If you want to uninstall a google play store app in the group after provisioning, that feature is still coming soon. For now, you can run a script provided by Esper support (support@esper.io) to uninstall apps on groups 
+ 
+*Preloaded Apps* If you want to uninstall a preloaded  app in the group after provisioning, that feature is still coming soon. For now, you can run a script provided by Esper support (support@esper.io) to uninstall apps on groups 
+ 
+**Please note that some preloaded apps are desgined to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled.**
