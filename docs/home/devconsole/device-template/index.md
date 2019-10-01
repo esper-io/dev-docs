@@ -102,7 +102,7 @@ To edit any template, click on the 'Edit Template' option. Policy, Apps, Brandin
 
 ![Device Template](../../assets/OLD_DASHBOARD/13.1_DT.png)
 
-While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
+While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/).
 
 *   **Delete Template**
 
