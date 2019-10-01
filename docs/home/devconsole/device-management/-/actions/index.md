@@ -38,7 +38,7 @@ Confirm by clicking ‘Wipe’ and the device will be automatically Wiped.
 
 The Device Settings section below Actions lets user choose to make changes in the device settings such as turning on adb, increasing/decreasing volume, brightness, turning on or off bluetooth, choosing portrait or landscape mode for device etc.</br>
 Note: Portrait and landscape mode for various devices might be interswitched based on the device manufacturer and OS iamge installed. 
-See screenshot below.
+
 
 ![Device Management](../../../../assets/OLD_DASHBOARD/2.1_DM.png)
 
