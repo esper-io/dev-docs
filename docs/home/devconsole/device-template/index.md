@@ -27,7 +27,7 @@ Click 'Next'.
 
 ### In the Apps section
 
-Select 'Kiosk mode' to pin an app during startup for devices that need to operate in Kiosk Mode. Or choose 'Multi application mode' to give users access to the Home screen inorder to be able to use multiple apps on the Esper managed device. 
+Select 'Kiosk mode' to pin an app during startup for devices that need to operate in Kiosk Mode. Or choose 'Multi application mode' to give users access to the Home screen in order to be able to use multiple apps on the Esper managed device. 
 
 [Kiosk-Multiapplication mode section](../../assets/OLD_DASHBOARD/kiosk-multiapplication-template.png)
 
