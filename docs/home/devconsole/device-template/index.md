@@ -48,9 +48,8 @@ You may choose from install apps from a variety of sources-
 
 ![Google app Apps](../../assets/OLD_DASHBOARD/googleplay-app-template.png)
 
+<i> Note: Only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.</i>
 
-Please note that only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
-:::
 
 ![How to approve Google play apps](../../assets/OLD_DASHBOARD/approve-google-apps.png)
 
