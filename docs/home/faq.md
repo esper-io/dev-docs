@@ -168,8 +168,8 @@ This should work for installing the apks that you have uploaded in the system. Y
 3. Click on the Apps tab (see image below)
 4. Choose the App you wish you uninstall from the dropdown menu and click Uninstall app.
 
-*Google Apps* If you want to uninstall a google play store app in the group after provisioning, that feature is still coming soon. For now, you can run a script provided by Esper support (support@esper.io) to uninstall apps on groups 
+*Google Apps* If you want to uninstall a google play store app in the group after provisioning, that feature is still coming soon. For now, you can run a script provided by Esper support (support@esper.io) to uninstall apps on groups. 
  
-*Preloaded Apps* If you want to uninstall a preloaded  app in the group after provisioning, that feature is still coming soon. For now, you can run a script provided by Esper support (support@esper.io) to uninstall apps on groups 
+*Preloaded Apps* If you want to uninstall a preloaded  app in the group after provisioning, that feature is still coming soon. For now, you can run a script provided by Esper support (support@esper.io) to uninstall apps on groups. 
  
 **Please note that some preloaded apps are desgined to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled.**
