@@ -31,7 +31,7 @@ Select 'Kiosk mode' to pin an app during startup for devices that need to operat
 
 [Kiosk-Multiapplication mode section](../../assets/OLD_DASHBOARD/kiosk-multiapplication-template.png)
 
-Afer choosing the app mode, choose the apps that you would like to have installed on your device during provisioning. 
+After choosing the app mode, choose the apps that you would like to have installed on your device during provisioning. 
 
 You may choose from install apps from a variety of sources-
 1. Preloaded apps - There are many preloaded apps packaged with android devices. Approve these apps to show up on your device after provisioning by adding their package name in the following section:
