@@ -61,7 +61,7 @@ module.exports = {
       { text: "Blog", link: "https://blog.esper.io" },
       { text: "SIGNUP", link: "https://esper.io/signup" }
     ],
-    docsRepo: "esper-io/dev-docs",
+    docsRepo: "esper-io/dev-docs/",
     docsDir: "docs",
     docsBranch: "develop",
     editLinks: true,
