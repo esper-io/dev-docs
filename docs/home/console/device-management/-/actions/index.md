@@ -35,6 +35,23 @@ Confirm by clicking ‘Wipe’ and the device will be automatically Wiped.
 
 If your device was provisioned in kiosk mode, you may use this button to exit out of the kiosk mode or enter back in. When you exit the kiosk mode, the kiosk mode app (selected during provisioning) will get unpinned and device user will be able to use the device in multi-application mode. When you click this button again, it will re-enter kiosk mode and the same app will again get pinned to the device screen.
 
+
+**6. ADB access** <Badge text="New" type="tip"/>
+
+Turn on ADB of your Esper Managed Device with easy by turning on the ADB toggle button. This only works for physically connected devices via USB.
+
+**7. Device Settings** 
+
+Change Device settings from Esper Dashboard. Following are features available -
+ Turn on/off bluetooth 
+ Turn on/off wifi 
+ Select screen timeout duration 
+ Select screen orientation
+ Select GPS accuracy
+ Increase/decrease Brightness, Volume (alarm, notification, ring and music)
+
+See screenshot of the Device Actions page below - 
+
 ![Device Management](../../../../assets/OLD_DASHBOARD/Device-actions.png)
 
 [Return to View More](../index.md)
