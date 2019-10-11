@@ -43,7 +43,7 @@
         <p>Plugin for Android Studio, Virtual Devices, Enhanced Android</p>
       </a>
       <a
-        href="/home/devconsole/"
+        href="/home/console.html"
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
