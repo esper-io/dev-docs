@@ -16,6 +16,23 @@ There are checkboxes on the top of the page with categories such as Active, Inac
 
 Search is provided on the top right where you can search for devices in Devices using the Esper assigned device code which is displayed on the device's home page wallpaper.
 
+## Getting Started
+
+If you are logging in to your endpoint for the very first time you will see the following screen which gives you a choice to either provision a device or Simulate a device.
+
+![Simulare](../images/simulare-1.png)
+
+You can choose to provision a real Android device the details to which are provided in the [Provision Device](https://docs.esper.io/home/devconsole/device-provisioning/) section of this documentation. Or you may choose to Simulate a Device. You will see a momentary "You are all set!" message after which a mock device will be available for you to experiment and play around with till you provision an actual device.
+
+![Simulare](../images/simulare-2.png)
+
+Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform. 
+
+Capabilities such as Apps, Remote View and Capture log might not be available on a Simulated device. 
+
+This device is only available for new signups currently. Please note that trial accounts created on or after September 27, 2019 will have this feature enabled. Accounts created before that will not. Please reach out to us at support@esper.io if you signed up before September 27, and would like to try out Simulated devices. 
+
+
 ### Device Tile
 
 The default view is Grid, but the user can click on Maps to access the map view. Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [View More](-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:

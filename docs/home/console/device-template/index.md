@@ -27,20 +27,33 @@ Click 'Next'.
 
 ### In the Apps section
 
-Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](../app-management/index.md) or install apps from Google Play Store that you approved via [Play For Work](../play-work/index.md).
+Select 'Kiosk mode' to pin an app during startup for devices that need to operate in Kiosk Mode. Or choose 'Multi application mode' to give users access to the Home screen in order to be able to use multiple apps on the Esper managed device. 
 
-*   To add your app, upload APK files on App Management - click on the app from the dropdown, select the version and click on Add:
+[Kiosk-Multiapplication mode section](../../assets/OLD_DASHBOARD/kiosk-multiapplication-template.png)
 
-![Device Template](../../assets/OLD_DASHBOARD/3_DT.png)
+After choosing the app mode, choose the apps that you would like to have installed on your device during provisioning. 
 
-*   To add app from Play Store list - click on the apps to add from the list of available apps. 
-:::tip
-Please note that only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
-:::
+You may choose from install apps from a variety of sources-
+1. Preloaded apps - There are many preloaded apps packaged with android devices. Approve these apps to show up on your device after provisioning by adding their package name in the following section:
 
-![Device Template](../../assets/OLD_DASHBOARD/4_DT.png)
+![Preloaded apps](../../assets/OLD_DASHBOARD/preloaded-apps-template.png)
 
-Click 'Next'.
+
+2. Private apps - These are your private or company apps (in-house apps) that can be uploaded on Esper Dashboard via [App Management](../app-management/index.md). After uploading, user may choose to install these apps during provisioning via template in the following section or install them post provisioning.
+
+![Private apps](../../assets/OLD_DASHBOARD/private-apps-template.png)
+
+
+3. Google apps - You may install apps from Google Play Store that you approved via [Play For Work](../play-work/index.md) as shown below - 
+
+![Google app Apps](../../assets/OLD_DASHBOARD/googleplay-app-template.png)
+
+<i> Note: Only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.</i>
+
+
+![How to approve Google play apps](../../assets/OLD_DASHBOARD/approve-google-apps.png)
+
+Click 'Next' to move to next section.
 
 ### In the Branding section
 
@@ -102,7 +115,7 @@ To edit any template, click on the 'Edit Template' option. Policy, Apps, Brandin
 
 ![Device Template](../../assets/OLD_DASHBOARD/13.1_DT.png)
 
-While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
+While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/).
 
 *   **Delete Template**
 
