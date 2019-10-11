@@ -10,7 +10,7 @@ You may view, take actions, change rules, install apps, and remotely view the de
 
 [**Device Actions**](actions/index.md)
 
-Click ![here](actions/index.md) to read about how you can take actions on the device remotely using the cloud portal.
+Click [here](actions/index.md) to read about how you can take actions on the device remotely using the cloud portal.
 
 **Event Feed**
 
