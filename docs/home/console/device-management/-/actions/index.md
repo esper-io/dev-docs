@@ -43,13 +43,13 @@ Turn on ADB of your Esper Managed Device with easy by turning on the ADB toggle 
 **7. Device Settings** 
 
 Change Device settings from Esper Dashboard. Following are features available -
- Turn on/off bluetooth 
- Turn on/off wifi 
- Select screen timeout duration 
- Select screen orientation
- Select GPS accuracy
- Increase/decrease Brightness, Volume (alarm, notification, ring and music)
+ * Turn on/off bluetooth  <br>
+ * Select screen timeout duration  <br>
+ * Select screen orientation  <br>
+ * Select GPS accuracy  <br>
+ * Increase/decrease Brightness, Volume (alarm, notification, ring and music)  <br>
 
+<br>
 See screenshot of the Device Actions page below - 
 
 ![Device Management](../../../../assets/OLD_DASHBOARD/Device-actions.png)
