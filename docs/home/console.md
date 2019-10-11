@@ -464,26 +464,28 @@ In order for geofencing to work, the mobile device needs Internet connectivity a
 
 Setting up a geofence for a device is easy - it starts by selecting Geofence in Esper Console left navigation pane - this brings you up to a wizard for quickly defining the geofence. Click on New Geofence:
 
-(../../assets/OLD_DASHBOARD/geo1.png)
+![](./assets/OLD_DASHBOARD/geo4.png)
 
 
 In the first screen you define the size of your geofence (meaning where you expect any devices to be for this geofence) - it is a circle that can be as small as 100m radius up to 10km. Note that GPS can drift and jump, thus a geofence smaller than 100m can cause false positives. To set it up at a location simply type the address for the center of the circle, or drag it in the map view to set it up. Give it a name and description, and then click Next:
 
-(../../assets/OLD_DASHBOARD/geo2.png)
+![](./assets/OLD_DASHBOARD/geo3.png)
 
 
 Now you assign devices to this geofence - you can do as many as you need that fit the criteria for the geofence. In this case we are just doing one:
 
-(../../assets/OLD_DASHBOARD/geo3.png)
+![](./assets/OLD_DASHBOARD/geo1.png)
 
 Now you define the action to be taken when any of the assigned devices leave the geofence - you can either lock them, have them beep, or both. In this case I went with beep!
 
-(../../assets/OLD_DASHBOARD/geo4.png)
+![](./assets/OLD_DASHBOARD/geo2.png)
 
 That’s it! It looks even easier in our video:
 https://youtu.be/UkTwhFRTwgQ                       
 	
 Give it a try and let us know what you think, andi@esper.io.
+
+<i> Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices.  </i>
 
 ##  Company Settings
 

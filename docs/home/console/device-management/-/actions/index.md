@@ -31,6 +31,10 @@ In order to wipe or factory reset the device, click on ‘Wipe device’ tile. T
 
 Confirm by clicking ‘Wipe’ and the device will be automatically Wiped.
 
-![Device Management](../../../../assets/OLD_DASHBOARD/2_DM.png)
+**5. Device Mode** <Badge text="New" type="tip"/>
+
+If your device was provisioned in kiosk mode, you may use this button to exit out of the kiosk mode or enter back in. When you exit the kiosk mode, the kiosk mode app (selected during provisioning) will get unpinned and device user will be able to use the device in multi-application mode. When you click this button again, it will re-enter kiosk mode and the same app will again get pinned to the device screen.
+
+![Device Management](../../../../assets/OLD_DASHBOARD/Device-actions.png)
 
 [Return to View More](../index.md)
