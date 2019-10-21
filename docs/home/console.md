@@ -137,7 +137,7 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 
 *   To add your app, upload APK files on App Management - click on the app from the dropdown, select the version and click on Add:
 
-![Device Template](./assets/OLD_DASHBOARD/3_DT.png)
+![Device Template](./assets/OLD_DASHBOARD/Temp_App_Management_new1.png)
 
 *   To add app from Play Store list - click on the apps to add from the list of available apps. 
 :::tip
