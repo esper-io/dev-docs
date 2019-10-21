@@ -87,64 +87,70 @@ Policy is a standard set of rules or permissions that are related to security of
 
 Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
 
-Drop Down menus-
-1. Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4. 
-2. Default App Permission
-3. System Updates
-4. Android Settings App
+*Drop Down menus*-
+1. Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4. <br> </br>
+2. Default App Permission<br> </br>
+3. System Updates<br> </br>
+4. Android Settings App<br> </br>
 
-Toggle Buttons-
-1. Lock Screen
-2. Safe-Mode Login
-3. Factory Reset
-4. Notification bar
-5. Screenshot
-6. USB connectivity
-7. SMS
-8. Outgoing calls
-9. Camera Access
-10. NFC 
-11. Google PlayStore
-12. USB tethering
-13. Edit date and time
-14. Application uninstall
-15. USB File transfer 
+*Toggle Buttons*-<br> </br>
+1. Lock Screen<br> </br>
+2. Safe-Mode Login<br> </br>
+3. Factory Reset<br> </br>
+4. Notification bar<br> </br>
+5. Screenshot<br> </br>
+6. USB connectivity<br> </br>
+7. SMS<br> </br>
+8. Outgoing calls <br> </br>
+9. Camera Access<br> </br>
+10. NFC <br> </br>
+11. Google PlayStore<br> </br>
+12. USB tethering<br> </br>
+13. Edit date and time<br> </br>
+14. Application uninstall<br> </br>
+15. USB File transfer <br> </br>
 
-For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. 
+For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br> </br>
 
-Checkbox-
-Restrict outgoing/incoming calls using customised dialer. 
+*Checkbox*-<br> </br>
+Restrict outgoing/incoming calls using customised dialer. <br> </br>
 
-If clicked, this opens up two more checkboxes-
+If clicked, this opens up two more checkboxes-<br> </br>
 
-Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts>
-Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts>
+1. Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts><br> </br>
+2. Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts><br> </br>
 
-In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.
+In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br> </br>
 
 <i>All numbers must be preceded by +country code (for example +1 for US)</i>
 <i>All numbers must be separated by comma </i>
-
+<br> </br>
 ![Device Template](./assets/OLD_DASHBOARD/2_DT.png)
-
+<br> </br>
 You may reset these values to default at any time by clicking 'Reset to Default' button at the bottom.
-
+<br> </br>
 Click 'Next'.
-
+<br> </br>
 ### In the Apps section
 
 Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console/app-management/index.md) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
-*   To add your app, upload APK files on App Management - click on the app from the dropdown, select the version and click on Add:
+*   As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
+1. Kiosk mode - This mode pins the selected private app as the default app that stays pinned on the device screen permanently unless user exits the kiosk mode. This mode is useful for cases where device is single purpose and only app needs to run on it and admin does not wish device users to be able to interact with the device in any other manner. For example airport kiosks. 
 
-![Device Template](./assets/OLD_DASHBOARD/3_DT.png)
+2. Multi-app mode - In multi app mode, user is free to use any private app, google play app or preloaded (in-ROM) app which are approved and installed by the admin. It is closely similar to BYOD but admin retains the control of the apps that are usable by the device user. For example a grocery delivery company wants their delivery person using the device to be able to use company app as well as the google maps. 
 
-*   To add app from Play Store list - click on the apps to add from the list of available apps. 
+* Next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered seperated by commas. 
+
+* Next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on Add to add the private app to the template.
+
+![Device Template](./assets/OLD_DASHBOARD/Temp_App_Management_new1.png)
+
+*   To add app from Play Store list - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
+
 :::tip
-Please note that only once you [Approve a Google Play Store App](./console/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+Only once you [Approve a Google Play Store App](./console/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
 :::
-
-![Device Template](./assets/OLD_DASHBOARD/4_DT.png)
 
 Click 'Next'.
 
@@ -321,7 +327,9 @@ This section enables you to manage your applications. You may add the following 
 
 1.  Upload Private Apps (APK files) to the Esper Cloud.
 2.  Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them.
-3.  Approve default Android apps to show up on the device home screen.
+
+<i>To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. See [FAQ](https://docs.esper.io/home/faq.html) </i>
+
 
 ### Upload Private Apps (APK files) to Esper Cloud:
 
@@ -337,6 +345,24 @@ This section enables you to manage your applications. You may add the following 
 *   The uploaded apps will be shown under the 'Uploaded apps' section:
 
 ![App Management](./assets/OLD_DASHBOARD/1_AM.png)
+
+When you click on any private app, it will open the details of the same. For example in the below screen, you may see details of the Zomato (uploaded) app. It shows the following details - 
+1. Name of the app
+2. Package name
+3. App icon (if parsable)
+4. Version number (for each version). Note that the same app can have various versions.
+5. Number of devices the app is installed on
+6. The date the app was uploaded on
+7. Size of the app
+8. Compatibility with SDK version
+9. App description (coming soon!)
+10. Build number (coming soon!)
+
+![App Management](./assets/OLD_DASHBOARD/2_AM.png)
+
+In the above image, you can see ellipsis (3 dots) under Actions. On clicking the ellipsis, user has options to:
+1. Download the app version
+2. Delete the app version
 
 ### Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them:
 
@@ -368,7 +394,7 @@ This section enables you to manage your applications. You may add the following 
 
 ![App Management](./assets/OLD_DASHBOARD/7_AM.png)
 
-*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. 
+*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. <br> </br>
 <i> Note: Unapproving an app does NOT mean uninstalling it. If the app was approved earlier, it will continue to stay installed in your device until it is explicitly uninstalled. Post uninstallation, if it has been unapproved, user/admin will not be able to uninstall it on the device.</i>
 
 ![App Management](./assets/OLD_DASHBOARD/5_PW.png)
@@ -376,25 +402,6 @@ This section enables you to manage your applications. You may add the following 
 *   You can also see all the approved Google Play Store apps under Play Store section:
 
 ![App Management](./assets/OLD_DASHBOARD/1_AM.png)
-
-When you click on any private app, it will open the details of the same. For example in the below screen, you may see details of the Zomato (uploaded) app. It shows the following details - 
-1. Name of the app
-2. Package name
-3. App icon (if parsable)
-4. Version number (for each version). Note that the same app can have various versions.
-5. Number of devices the app is installed on
-6. The date the app was uploaded on
-7. Size of the app
-8. Compatibility with SDK version
-9. App description (coming soon!)
-10. Build number (coming soon!)
-
-![App Management](./assets/OLD_DASHBOARD/2_AM.png)
-
-In the above image, you can see ellipsis (3 dots) under Actions. On clicking the ellipsis, user has options to:
-1. Download the app version
-2. Delete the app version
-
 
 
 ##  Play for Work
@@ -478,10 +485,47 @@ Learn about Esper's Policy Management.
 
 *   Enter the policy details and click on **'Create policy'**:
 
+Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning. Hover your mouse over these policies to know more about them.
+
+Drop Down menus- 
+
+Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4.<br> </br>
+Default App Permission <br> </br>
+System Updates <br> </br>
+Android Settings App <br> </br>
+Toggle Buttons- <br> </br>
+
+Lock Screen <br> </br>
+Safe-Mode Login <br> </br>
+Factory Reset<br> </br>
+Notification bar<br> </br>
+Screenshot<br> </br>
+USB connectivity
+SMS
+Outgoing calls
+Camera Access
+NFC
+Google PlayStore
+USB tethering
+Edit date and time
+Application uninstall
+USB File transfer
+For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button.
+
+Checkbox- Restrict outgoing/incoming calls using customised dialer.
+
+If clicked, this opens up two more checkboxes-
+
+Restrict incoming calls to uploaded contacts only Restrict outgoing calls to uploaded contacts only
+
+In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.
+
+All numbers must be preceded by +country code (for example +1 for US) All numbers must be separated by comma
+
 ![Policy Management](./assets/OLD_DASHBOARD/2_PM.png)
 
 *   A new policy is created and can be deployed on any device.
-*   The new policy gets listed on the **'Compliance Policy'** page:
+*   The new policy gets listed on the **'Compliance Policy'** page which can be edited or deleted as required:
 
 ![Policy Management](./assets/OLD_DASHBOARD/3_PM.png)
 
@@ -545,11 +589,11 @@ Now you define the action to be taken when any of the assigned devices leave the
 
 If you chose to Lockdown the device, you will see the following screen if the device is taken outside the geofence boundary - 
 
-![](./assets/OLD_DASHBOARD/geo4.png)
+![](./assets/OLD_DASHBOARD/geo5.jpg)
 
 
 You can see for Geofence applied Devices if they have left or entered the Geofence in the Event Feed section:
-![](./assets/OLD_DASHBOARD/geo3.png)
+![](./assets/OLD_DASHBOARD/geo6.png)
 
 
 That’s it! It looks even easier in our video:

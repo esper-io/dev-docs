@@ -38,13 +38,13 @@ You can see package names of the app listed next to the version number.
 
 If user wants to switch to a new policy, they can select from the drop down menu and apply it. To create a new policy, click [here](../../policy-management/index.md).
 
-![Device Management](../../../assets/OLD_DASHBOARD/8_DM.png)
+![Device Management](../../../assets/OLD_DASHBOARD/Device-Compliance_Policy_image_1.png)
 
 **Security**
 
 This page will inform user of security risks that device is facing. If there are any risks, it will show the threat level, cause of the threat, and advise user to secure the device.
 
-![Device Management](../../../assets/OLD_DASHBOARD/9_DM.png)
+![Device Management](../../../assets/OLD_DASHBOARD/Device_Security_image_1.png)
 
 [**Remote Viewer**](remote-viewer/index.md)
 
