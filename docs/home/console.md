@@ -135,16 +135,22 @@ Click 'Next'.
 
 Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console/app-management/index.md) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
-*   To add your app, upload APK files on App Management - click on the app from the dropdown, select the version and click on Add:
+*   As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
+1. Kiosk mode - This mode pins the selected private app as the default app that stays pinned on the device screen permanently unless user exits the kiosk mode. This mode is useful for cases where device is single purpose and only app needs to run on it and admin does not wish device users to be able to interact with the device in any other manner. For example airport kiosks. 
+
+2. Multi-app mode - In multi app mode, user is free to use any private app, google play app or preloaded (in-ROM) app which are approved and installed by the admin. It is closely similar to BYOD but admin retains the control of the apps that are usable by the device user. For example a grocery delivery company wants their delivery person using the device to be able to use company app as well as the google maps. 
+
+* Next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered seperated by commas. 
+
+* Next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on Add to add the private app to the template.
 
 ![Device Template](./assets/OLD_DASHBOARD/Temp_App_Management_new1.png)
 
-*   To add app from Play Store list - click on the apps to add from the list of available apps. 
-:::tip
-Please note that only once you [Approve a Google Play Store App](./console/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
-:::
+*   To add app from Play Store list - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
 
-![Device Template](./assets/OLD_DASHBOARD/4_DT.png)
+:::tip
+Only once you [Approve a Google Play Store App](./console/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+:::
 
 Click 'Next'.
 
@@ -388,7 +394,7 @@ In the above image, you can see ellipsis (3 dots) under Actions. On clicking the
 
 ![App Management](./assets/OLD_DASHBOARD/7_AM.png)
 
-*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. 
+*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. <br> </br>
 <i> Note: Unapproving an app does NOT mean uninstalling it. If the app was approved earlier, it will continue to stay installed in your device until it is explicitly uninstalled. Post uninstallation, if it has been unapproved, user/admin will not be able to uninstall it on the device.</i>
 
 ![App Management](./assets/OLD_DASHBOARD/5_PW.png)
