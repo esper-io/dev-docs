@@ -545,11 +545,11 @@ Now you define the action to be taken when any of the assigned devices leave the
 
 If you chose to Lockdown the device, you will see the following screen if the device is taken outside the geofence boundary - 
 
-![](./assets/OLD_DASHBOARD/geo4.png)
+![](./assets/OLD_DASHBOARD/geo5.png)
 
 
 You can see for Geofence applied Devices if they have left or entered the Geofence in the Event Feed section:
-![](./assets/OLD_DASHBOARD/geo3.png)
+![](./assets/OLD_DASHBOARD/geo6.png)
 
 
 That’s it! It looks even easier in our video:
