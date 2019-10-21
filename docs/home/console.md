@@ -391,12 +391,11 @@ When you click on any private app, it will open the details of the same. For exa
 
 ![App Management](./assets/OLD_DASHBOARD/2_AM.png)
 
-Actions:
-On clicking the ellipsis (3 dots), user has options to:
+In the above image, you can see ellipsis (3 dots) under Actions. On clicking the ellipsis, user has options to:
 1. Download the app version
 2. Delete the app version
 
-![App Management](./assets/OLD_DASHBOARD/3_AM.png)
+
 
 ##  Play for Work
 
