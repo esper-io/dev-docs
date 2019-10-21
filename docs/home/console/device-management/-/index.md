@@ -24,9 +24,15 @@ This section represents the graphical representation of the various attributes o
 
 ![Device Management](../../../assets/OLD_DASHBOARD/7_DM.png)
 
+However, if a device stays inactive for more than 7 days, you will see an empty state requesting to activate the device:
+![Device Management](../../../assets/OLD_DASHBOARD/8_DM.png)
+
 [**Apps**](app-management/index.md)
 
 The apps that are already installed in the device are specified here. Only the whitelisted apps that are toggled ON are visible in the device dashboard. You cannot download/install any of the apps that are not approved by the admin.
+
+You can see package names of the app listed next to the version number.
+![Device Management](../../../assets/OLD_DASHBOARD/9_DM.png)
 
 **Compliance Policy**
 

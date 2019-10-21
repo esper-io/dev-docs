@@ -83,11 +83,51 @@ Device Template is a one stop means for you to quickly provision your device. It
 
 ### In the Policy section
 
-Set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings you wish to enable on your devices. If you wish to have Google Play Store show up on the device, you may turn on the toggle button. You may reset these values to default at any time by clicking 'Reset to Default'.
+Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices. 
 
-In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers separated by commas. All numbers must be preceded by +country code (for example +1 for US):
+Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
+
+Drop Down menus-
+1. Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4. 
+2. Default App Permission
+3. System Updates
+4. Android Settings App
+
+Toggle Buttons-
+1. Lock Screen
+2. Safe-Mode Login
+3. Factory Reset
+4. Notification bar
+5. Screenshot
+6. USB connectivity
+7. SMS
+8. Outgoing calls
+9. Camera Access
+10. NFC 
+11. Google PlayStore
+12. USB tethering
+13. Edit date and time
+14. Application uninstall
+15. USB File transfer 
+
+For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. 
+
+Checkbox-
+Restrict outgoing/incoming calls using customised dialer. 
+
+If clicked, this opens up two more checkboxes-
+
+Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts>
+Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts>
+
+In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.
+
+<i>All numbers must be preceded by +country code (for example +1 for US)</i>
+<i>All numbers must be separated by comma </i>
 
 ![Device Template](./assets/OLD_DASHBOARD/2_DT.png)
+
+You may reset these values to default at any time by clicking 'Reset to Default' button at the bottom.
 
 Click 'Next'.
 
@@ -281,7 +321,7 @@ This section enables you to manage your applications. You may add the following 
 
 1.  Upload Private Apps (APK files) to the Esper Cloud.
 2.  Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them.
-3.  Install default Android apps.
+3.  Approve default Android apps to show up on the device home screen.
 
 ### Upload Private Apps (APK files) to Esper Cloud:
 
@@ -328,13 +368,34 @@ This section enables you to manage your applications. You may add the following 
 
 ![App Management](./assets/OLD_DASHBOARD/7_AM.png)
 
-*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button:
+*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. 
+<i> Note: Unapproving an app does NOT mean uninstalling it. If the app was approved earlier, it will continue to stay installed in your device until it is explicitly uninstalled. Post uninstallation, if it has been unapproved, user/admin will not be able to uninstall it on the device.</i>
 
 ![App Management](./assets/OLD_DASHBOARD/5_PW.png)
 
 *   You can also see all the approved Google Play Store apps under Play Store section:
 
 ![App Management](./assets/OLD_DASHBOARD/1_AM.png)
+
+When you click on any private app, it will open the details of the same. For example in the below screen, you may see details of the Zomato (uploaded) app. It shows the following details - 
+1. Name of the app
+2. Package name
+3. App icon (if parsable)
+4. Version number (for each version). Note that the same app can have various versions.
+5. Number of devices the app is installed on
+6. The date the app was uploaded on
+7. Size of the app
+8. Compatibility with SDK version
+9. App description (coming soon!)
+10. Build number (coming soon!)
+
+![App Management](./assets/OLD_DASHBOARD/2_AM.png)
+
+In the above image, you can see ellipsis (3 dots) under Actions. On clicking the ellipsis, user has options to:
+1. Download the app version
+2. Delete the app version
+
+
 
 ##  Play for Work
 
@@ -455,7 +516,9 @@ Delete icon
 
 ![User Management](./assets/OLD_DASHBOARD/5_UM.png)
 
-##  Geofence
+
+##  Geofence <Badge text="New" type="tip"/>
+
 
 Now in Esper - Geofences!
 Geofencing is a useful feature for some dedicated device deployment scenarios. With geofencing you use the device’s location typically generated by GPS to trigger an alert when the device enters or leaves a defined area. Common scenarios include making sure a fleet of delivery devices stay in their delivery zone, warehousing devices don’t stray far from the warehouse, and restaurant ordering devices don’t leave the restaurant.
@@ -480,12 +543,23 @@ Now you define the action to be taken when any of the assigned devices leave the
 
 ![](./assets/OLD_DASHBOARD/geo2.png)
 
+If you chose to Lockdown the device, you will see the following screen if the device is taken outside the geofence boundary - 
+
+![](./assets/OLD_DASHBOARD/geo4.png)
+
+
+You can see for Geofence applied Devices if they have left or entered the Geofence in the Event Feed section:
+![](./assets/OLD_DASHBOARD/geo3.png)
+
+
 That’s it! It looks even easier in our video:
 https://youtu.be/UkTwhFRTwgQ                       
 	
 Give it a try and let us know what you think, andi@esper.io.
 
-<i> Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices.  </i>
+
+<i> Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  </i>
+
 
 ##  Company Settings
 
