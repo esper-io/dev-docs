@@ -254,7 +254,7 @@ Click `Next`.
 ### In the Settings section
 
 Change Device settings from Esper Dashboard. Following are features available -
- ![](../../../../assets/settings/settings.png)
+ ![](./assets/settings/settings.png)
 
  * Turn on/off bluetooth  <br>
  * Select screen timeout duration  <br>
