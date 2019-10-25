@@ -253,8 +253,19 @@ Click `Next`.
 
 ### In the Settings section
 
-Choose the device settings you would like to have on your provisioned devices such as Bluetooth, Wi-Fi, volume, screen rotation, GPS, and screen timeout:
+Change Device settings from Esper Dashboard. Following are features available -
+ ![](../../../../assets/settings/settings.png)
 
+ * Turn on/off bluetooth  <br>
+ * Select screen timeout duration  <br>
+ * Select screen orientation  <br>
+ * Select GPS accuracy  <br>
+ * Increase/decrease Brightness, Volume (alarm, notification, ring and music)  <br>
+ * Timezone <Badge text="New" type="tip"/> - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.  
+
+ ![](./assets/settings/timezone.png)
+
+Here is a complete screenshot of Template Settings page - 
 ![Device Template](./assets/OLD_DASHBOARD/12_DT.png)
 
 Click `Next`
