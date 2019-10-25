@@ -77,7 +77,7 @@ Device Template is a one stop means for you to quickly provision your device. It
 
 1.  Click on 'Device Template'.
 2.  Click on 'Create Template'.
-3.  Enter a name for the Device Template. Click 'Next'.
+3.  Enter a name for the Device Template. Click `Next`.
 
 ![Device Template](./assets/OLD_DASHBOARD/1_DT.png)
 
@@ -87,50 +87,109 @@ Policy is a standard set of rules or permissions that are related to security of
 
 Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
 
-*Drop Down menus*-
-1. Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4. <br> </br>
-2. Default App Permission<br> </br>
-3. System Updates<br> </br>
-4. Android Settings App<br> </br>
+Dropdown menus-
+1. Device Password Rules - If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. <br> 
+The Password rule is a policy that specifies the rules for the device unlock password that users can set.
 
-*Toggle Buttons*-<br> </br>
-1. Lock Screen<br> </br>
-2. Safe-Mode Login<br> </br>
-3. Factory Reset<br> </br>
-4. Notification bar<br> </br>
-5. Screenshot<br> </br>
-6. USB connectivity<br> </br>
-7. SMS<br> </br>
-8. Outgoing calls <br> </br>
-9. Camera Access<br> </br>
-10. NFC <br> </br>
-11. Google PlayStore<br> </br>
-12. USB tethering<br> </br>
-13. Edit date and time<br> </br>
-14. Application uninstall<br> </br>
-15. USB File transfer <br> </br>
+    Alphabetic: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
 
-For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br> </br>
+    Alphanumeric: Expands from Alphabetic to also include numbers and special characters.
 
-*Checkbox*-<br> </br>
-Restrict outgoing/incoming calls using customised dialer. <br> </br>
+    None: There is no password required to lock the device.
 
-If clicked, this opens up two more checkboxes-<br> </br>
+    The password for a device is setup during the initial setup of the device by the user.
+<br/>
+2. Default App Permission<br> Default app permissions  determines enforcement of the runtime-permission rule across all the apps on a device (e.g. Gallery, Camera).
 
-1. Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts><br> </br>
-2. Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts><br> </br>
 
-In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br> </br>
+    Allow automatically: This rule will grant all the permissions any app requests without showing a prompt to the user.
 
-<i>All numbers must be preceded by +country code (for example +1 for US)</i>
-<i>All numbers must be separated by comma </i>
-<br> </br>
-![Device Template](./assets/OLD_DASHBOARD/2_DT.png)
-<br> </br>
-You may reset these values to default at any time by clicking 'Reset to Default' button at the bottom.
-<br> </br>
-Click 'Next'.
-<br> </br>
+    Ask user: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”
+
+    Deny automatically: This rule will deny any permission request from any app on the device.<br/>
+3. System Updates<br> 
+The System updates option allows you to enforce a system update policy on the device when a system update/OTA update is available.
+
+    Update automatically: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
+
+    Postpone installation: This option postpones installation of an OTA update for 30 days. 
+
+    Windowed installation: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
+ <br/>
+4. Android Settings App<br> Android settings app determines how users can access the Android device settings.
+
+    Default setting app: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
+
+    No settings app: No icon for any settings app will be available for the user to choose from the device’s dashboard.
+
+    Esper settings app: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. Settings provided via this app are limited to:
+    1. Changing the Wi-Fi AP
+
+    2. Enabling the “flashlight” if there’s a camera flash LED on the device
+
+    3. Control the display orientation of the device.
+
+    Contact Esper to setup a password for the Esper Settings app.
+<br/>
+
+Factory Reset Protection - <Badge text="New" type="tip"/> <br>
+*FRP Toggle Button* - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above.
+<br>
+
+![](./assets/GoogleAccountid/factory_reset_protection.png)
+
+On turning on the FRP button, user needs to enter the Google ID of the account they wish to authorize to enable usage of the device post factory reset. <br/>
+
+See [here](./console/policy-management/getgoogleaccount.md) to know how to get the Google account ID of your account and how FRP protects your device. 
+
+Other Template Compliance Policy Toggle Buttons-<br> 
+1. Lock Screen<br> If Locked screen is switched ON, it enables the default “lock screen” to be displayed upon a screen timeout as specified in the Settings section. If it is enabled, the user has an option to set the password rule in the dropdown above.
+<br/>
+2. Safe-Mode Login<br> Turn Safe mode login On to allow users to boot to safe mode on their device. Leave Off to prevent Safe mode login.<br/>
+3. Factory Reset<br> 
+Factory reset dictates whether or not the user can perform a factory reset on the device. Turning it Off prevents a factory reset by the user.
+This is not inclusive of the hard key factory reset.
+<br/>
+4. Notification bar<br> Notification bar dictates whether or not a user can swipe down to display the notification bar. Turn On to enable access to the Notification bar. <br/>
+5. Screenshot<br> 
+Screenshot allows or prevents a user from taking screenshots on the device using available screenshot actions. Turn On to allow screenshots.
+<br/>
+6. USB connectivity<br> 
+USB connectivity allows or prevents the user to be able to communicate via USB on-the-go. Turn On to allow.
+<br/>
+7. SMS<br> SMS controls the ability of the device to send or receive SMS. If it is turned Off it prevents the device from using SMS  regardless of which SMS app is used. Turn On if you wish to enable the device to send and receive SMS. <br/>
+8. Outgoing calls <br> 
+Outgoing calls determines whether a user can make outgoing calls from the device. Turn On to allow outgoing calls, turn Off to prevent.
+<br/>
+9. Camera Access<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
+10. NFC <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC.  Turn On if any of your apps require NFC. <br/>
+11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google Playstore of admin approved Google Play Apps.<br/>
+12. USB tethering<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
+13. Edit date and time<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
+14. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
+15. USB File transfer <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
+16. Google Assistant <Badge text="New" type="tip"/> <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. 
+For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br> <br/>
+
+Checkbox-<br> 
+`Restrict outgoing/incoming calls using customised dialer.`<br> 
+
+If clicked, this opens up two more checkboxes-<br> 
+
+1. `Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts>`<br> 
+2. `Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts>`<br> 
+In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br> 
+
+:::tip All numbers must be preceded by +country code (for example +1 for US).
+All numbers must be separated by comma. 
+:::
+<br> <br/>
+![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png)
+<br> <br/>
+You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
+<br> <br/>
+Click `Next`.
+<br> <br/>
 ### In the Apps section
 
 Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console/app-management/index.md) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
@@ -140,11 +199,37 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 
 2. Multi-app mode - In multi app mode, user is free to use any private app, google play app or preloaded (in-ROM) app which are approved and installed by the admin. It is closely similar to BYOD but admin retains the control of the apps that are usable by the device user. For example a grocery delivery company wants their delivery person using the device to be able to use company app as well as the google maps. 
 
-* Next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered seperated by commas. 
+* Default Android Launcher <Badge text="New" type="tip"/> - The next section is a simple checkbox labeled "Default Android Launcher" - This feature, if checked will provision devices with default android screen with no restrictions on the apps that can be installed and used. It will also disable various Esper Agent features and is best used when device usage is desired in loosely controlled environment. <br>
 
-* Next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on Add to add the private app to the template.
+    Here is a list of Esper features that will be **unavailable** in this mode as it applies the launcherless version of the Esper Device agent - 
 
-![Device Template](./assets/OLD_DASHBOARD/Temp_App_Management_new1.png)
+    • Capture Screenshot <br>
+    • Remote View and Remote Control<br>
+    • Install an app via dashboard<br>
+    • Uninstall an app via dashboard<br>
+    • Over the Air OS updates for Esper Enhanced Android OS<br>
+    • Latest Device Agent updates for Devices with Android version less than 6.0
+
+    ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc.png)
+
+    The device screen will look similar to a regular android device with `Esper Device Agent` showing up as an app that can be opened and closed.
+
+    ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc1.png)
+
+    Even when user has exited the `Esper Device Agent` they will be able to see it running in the background in the notification bar as follows - 
+
+    ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
+
+
+
+    If the `Default Android launcher` is **unchecked**, Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case.
+
+   
+* Preloaded Apps - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered seperated by commas. 
+
+* Private (uploaded) Apps - The next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on `Add` to add the private app to the template.
+
+    ![Device Template](./assets/OLD_DASHBOARD/Temp_App_Management_new1.png)
 
 *   To add app from Play Store list - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
 
@@ -152,7 +237,7 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 Only once you [Approve a Google Play Store App](./console/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
 :::
 
-Click 'Next'.
+Click `Next`.
 
 ### In the Branding section
 
@@ -164,32 +249,36 @@ There is an option to Preview the uploaded wallpapers:
 
 ![Device Template](./assets/OLD_DASHBOARD/11.1_DT.png)
 
-Click 'Next'.
+Click `Next`.
 
 ### In the Settings section
 
-Choose the device settings you would like to have on your provisioned devices such as Bluetooth, Wi-Fi, volume, screen rotation, GPS, and screen timeout. Click 'Next':
+Choose the device settings you would like to have on your provisioned devices such as Bluetooth, Wi-Fi, volume, screen rotation, GPS, and screen timeout:
 
 ![Device Template](./assets/OLD_DASHBOARD/12_DT.png)
 
+Click `Next`
+
 ### In the Group section
 
-Select an existing Group or create a Group. The devices provisioned using this device profile will be a part of the selected Group. Click 'Next':
+Select an existing Group or create a Group. The devices provisioned using this device profile will be a part of the selected Group. Click `Next`:
 
 ![Device Template](./assets/OLD_DASHBOARD/13_DT.png)
+
+Click `Next`
 
 ### On the Preview screen
  You will see a preview of the entire device template. If you wish to edit your settings, use the 'Back' button to go back to the appropriate screen:
 
 ![Device Template](./assets/OLD_DASHBOARD/14_DT.png)
 
-Click 'Save'. You will see a pop-up to confirm your settings. Click 'Okay':
+Click 'Save'. You will see a pop-up to confirm your settings. Click `Okay`:
 
 ![Device Template](./assets/OLD_DASHBOARD/15_DT.png)
 
 The Device Template you just created will now be visible on the Device Template page. You can search for it in the search bar. Click on it to view the Device Template. Click on 'View QR code' to provision a device using this template directly from your Device Template.
 
-On clicking the View QR code, there is also an option to download the config.json file that can be used during ADB and IMEI provisioning:
+On clicking the View QR code, there is also an option to download the config.json `Download Config` file that can be used during ADB and IMEI provisioning:
 
 ![Device Template](./assets/OLD_DASHBOARD/19_DT.png)
 
@@ -204,23 +293,23 @@ Click on the ellipsis (...) on the template tile to preview, edit, duplicate or 
 
 ![Device Template](./assets/OLD_DASHBOARD/17_DT.png)
 
-Click on the Preview option to preview the device template. Click on the + sign to expand and then check selected individual components.
+Click on the `Preview` option to preview the device template. Click on the `+` sign to expand and then check selected individual components.
 
 *   **Edit Template**
 
-To edit any template, click on the 'Edit Template' option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the 'Update' button on the Preview page.
+To edit any template, click on the `Edit Template` option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the `Update` button on the Preview page.
 
 *   **Add Devices (IMEI Provisioning)**
 
 ![Device Template](./assets/OLD_DASHBOARD/13.1_DT.png)
 
-While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
+While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section `Add devices` that appears if you click on `Edit Template`. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
 
 *   **Delete Template**
 
 ![Device Template](./assets/OLD_DASHBOARD/18_DT.png)
 
-Click on the 'Delete Template' option on top right to delete a selected template.
+Click on the `Delete Template` option on top right to delete a selected template.
 
   
 ##  Devices
@@ -272,11 +361,11 @@ Learn about Esper's Group Management.
 
 Using Groups devices can be sectioned into groups and mass actions can be performed on a group of devices. You can create a Group by entering a unique name. Once you create a Group, you have the option to add from all existing provisioned devices which exist in the **"All devices"** group. Users can also create a Group during [template creation](./console/device-template/index.md).
 
-You can delete a Group by selecting one or many Groups using the top right button **'Delete group'**. There is also an option to refresh. Additionally, a search capability for search via group name has been provided. The Group tile will show the name and number of devices in the Group:
+You can delete a Group by selecting one or many Groups using the top right button **`Delete group`**. There is also an option to refresh. Additionally, a search capability for search via group name has been provided. The Group tile will show the name and number of devices in the Group:
 
 ![Group Management](./assets/OLD_DASHBOARD/1_GM.png)
 
-On clicking **'View more>'**, you can take actions such as reboot, lock, ping, and wipe for the devices in the Group:
+On clicking **`View more`**, you can take actions such as reboot, lock, ping, and wipe for the devices in the Group:
 
 ![Group Management](./assets/OLD_DASHBOARD/2_GM.png)
 
@@ -292,28 +381,28 @@ You can also schedule app installation for the Group:
 
 ![Group Management](./assets/OLD_DASHBOARD/5_GM.png)
 
-You can click on **'View Results'** to see the number of successful and unsuccessful device installations:
+You can click on **`View Results`** to see the number of successful and unsuccessful device installations:
 
 ![Group Management](./assets/OLD_DASHBOARD/6_GM.png)
 
-If your devices are using Esper Enhanced Android, you will also see a tab for **"OS updates"**.
+If your devices are using Esper Enhanced Android, you will also see a tab for **`OS updates`**.
 
 Here you can see a list of the Esper Enhanced Android updates that have been made on the current group with details such as build number, device type, number of devices, and date deployed along with an option to view the details:
 
 ![Group Management](./assets/OLD_DASHBOARD/7_GM.png)
 
-By clicking on the **'Deploy OS Updates'** button you may choose any available Build number by then clicking on **'Select Build'**. 
+By clicking on the **`Deploy OS Updates`** button you may choose any available Build number by then clicking on **`Select Build`**. 
 :::tip
 Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment
 :::
 
 ![Group Management](./assets/OLD_DASHBOARD/8_GM.png)
 
-The **'Number of devices'** will populate with the devices in the group on which this update is applicable; this pertains to those that have an OS build version lower than the selected version for the deployment:
+The **`Number of devices`** will populate with the devices in the group on which this update is applicable; this pertains to those that have an OS build version lower than the selected version for the deployment:
 
 ![Group Management](./assets/OLD_DASHBOARD/9_GM.png)
 
-You may add the installation name, any pertinent notes, and after that click **'Save'**:
+You may add the installation name, any pertinent notes, and after that click **`Save`**:
 
 ![Group Management](./assets/OLD_DASHBOARD/10_GM.png)
 
@@ -328,8 +417,9 @@ This section enables you to manage your applications. You may add the following 
 1.  Upload Private Apps (APK files) to the Esper Cloud.
 2.  Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them.
 
-<i>To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. See [FAQ](https://docs.esper.io/home/faq.html) </i>
-
+:::tip To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. 
+:::
+See [FAQ](https://docs.esper.io/home/faq.html)
 
 ### Upload Private Apps (APK files) to Esper Cloud:
 
@@ -355,14 +445,26 @@ When you click on any private app, it will open the details of the same. For exa
 6. The date the app was uploaded on
 7. Size of the app
 8. Compatibility with SDK version
-9. App description (coming soon!)
-10. Build number (coming soon!)
+9. App description  <Badge text="New" type="tip"/> - We now have a new field for you to add your app version specific  description or release notes.
 
-![App Management](./assets/OLD_DASHBOARD/2_AM.png)
 
-In the above image, you can see ellipsis (3 dots) under Actions. On clicking the ellipsis, user has options to:
-1. Download the app version
-2. Delete the app version
+![App Management](./assets/apps/apps3.png)
+
+In the above image, you can see ellipsis (3 dots) under Actions. 
+
+Here is another example of an app with description -
+
+![App Management](./assets/apps/apps1.png) 
+
+ On clicking the ellipsis under Ation, user has options to:
+1. Delete the app version
+2. Edit description <Badge text="New" type="tip"/> - You can now add and edit description or release notes per version of the app. 
+![App Management](./assets/apps/apps2.png)
+
+    A description can also be added during app upload.
+    ![App Management](./assets/apps/apps4.png)
+
+3. Download the app version
 
 ### Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them:
 
@@ -394,7 +496,7 @@ In the above image, you can see ellipsis (3 dots) under Actions. On clicking the
 
 ![App Management](./assets/OLD_DASHBOARD/7_AM.png)
 
-*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. <br> </br>
+*   You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. <br> <br/>
 <i> Note: Unapproving an app does NOT mean uninstalling it. If the app was approved earlier, it will continue to stay installed in your device until it is explicitly uninstalled. Post uninstallation, if it has been unapproved, user/admin will not be able to uninstall it on the device.</i>
 
 ![App Management](./assets/OLD_DASHBOARD/5_PW.png)
@@ -475,59 +577,123 @@ User Alerts to monitor the performance of your devices. You can create a device 
 
 ##  Compliance Policy
 
-Learn about Esper's Policy Management.
+Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices. 
 
-*   A policy is a set of rules closely related to privacy and security that a device follows.
-*   Policies can be viewed, edited, and deleted.
-*   To create a new policy, click on the **'New Policy'** button:
-
-![Policy Management](./assets/OLD_DASHBOARD/1_PM.png)
-
-*   Enter the policy details and click on **'Create policy'**:
-
-Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning. Hover your mouse over these policies to know more about them.
-
-Drop Down menus- 
-
-Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4.<br> </br>
-Default App Permission <br> </br>
-System Updates <br> </br>
-Android Settings App <br> </br>
-Toggle Buttons- <br> </br>
-
-Lock Screen <br> </br>
-Safe-Mode Login <br> </br>
-Factory Reset<br> </br>
-Notification bar<br> </br>
-Screenshot<br> </br>
-USB connectivity
-SMS
-Outgoing calls
-Camera Access
-NFC
-Google PlayStore
-USB tethering
-Edit date and time
-Application uninstall
-USB File transfer
-For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button.
-
-Checkbox- Restrict outgoing/incoming calls using customised dialer.
-
-If clicked, this opens up two more checkboxes-
-
-Restrict incoming calls to uploaded contacts only Restrict outgoing calls to uploaded contacts only
-
-In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.
-
-All numbers must be preceded by +country code (for example +1 for US) All numbers must be separated by comma
-
-![Policy Management](./assets/OLD_DASHBOARD/2_PM.png)
 
 *   A new policy is created and can be deployed on any device.
 *   The new policy gets listed on the **'Compliance Policy'** page which can be edited or deleted as required:
 
 ![Policy Management](./assets/OLD_DASHBOARD/3_PM.png)
+
+
+Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
+
+Dropdown menus-
+1. Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4. <br> 
+The Password rule is a policy that specifies the rules for the device unlock password that users can set.
+
+    Alphabetic: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
+
+    Alphanumeric: Expands from Alphabetic to also include numbers and special characters.
+
+    None: There is no password required to lock the device.
+
+    The password for a device is setup during the initial setup of the device by the user.
+<br/>
+2. Default App Permission<br> Default app permissions  determines enforcement of the runtime-permission rule across all the apps on a device (e.g. Gallery, Camera).
+
+
+    Allow automatically: This rule will grant all the permissions any app requests without showing a prompt to the user.
+
+    Ask user: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”
+
+    Deny automatically: This rule will deny any permission request from any app on the device.<br/>
+3. System Updates<br> 
+The System updates option allows you to enforce a system update policy on the device when a system update/OTA update is available.
+
+    Update automatically: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
+
+    Postpone installation: This option postpones installation of an OTA update for 30 days. 
+
+    Windowed installation: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
+ <br/>
+4. Android Settings App<br> Android settings app determines how users can access the Android device settings.
+
+    Default setting app: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
+
+    No settings app: No icon for any settings app will be available for the user to choose from the device’s dashboard.
+
+    Esper settings app: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. Settings provided via this app are limited to:
+    1. Changing the Wi-Fi AP
+
+    2. Enabling the “flashlight” if there’s a camera flash LED on the device
+
+    3. Control the display orientation of the device.
+
+    Contact Esper to setup a password for the Esper Settings app.
+<br/>
+
+Factory Reset Protection - <Badge text="New" type="tip"/> <br>
+*FRP Toggle Button* - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above.
+<br>
+
+![](./assets/GoogleAccountid/factory_reset_protection.png)
+
+On turning on the FRP button, user needs to enter the Google ID of the account they wish to authorize to enable usage of the device post factory reset. <br/>
+See [here](./console/policy-management/getgoogleaccount.md) to know how to get the Google account ID of your account and how FRP protects your device. 
+
+Other Compliance Policy Toggle Buttons-<br> 
+1. Lock Screen<br> If Locked screen is switched ON, it enables the default “lock screen” to be displayed upon a screen timeout as specified in the Settings section. If it is enabled, the user has an option to set the password rule in the dropdown above.
+<br/>
+2. Safe-Mode Login<br> Turn Safe mode login On to allow users to boot to safe mode on their device. Leave Off to prevent Safe mode login.<br/>
+3. Factory Reset<br> 
+Factory reset dictates whether or not the user can perform a factory reset on the device. Turning it Off prevents a factory reset by the user.
+This is not inclusive of the hard key factory reset.
+<br/>
+4. Notification bar<br> Notification bar dictates whether or not a user can swipe down to display the notification bar. Turn On to enable access to the Notification bar. <br/>
+5. Screenshot<br> 
+Screenshot allows or prevents a user from taking screenshots on the device using available screenshot actions. Turn On to allow screenshots.
+<br/>
+6. USB connectivity<br> 
+USB connectivity allows or prevents the user to be able to communicate via USB on-the-go. Turn On to allow.
+<br/>
+7. SMS<br> SMS controls the ability of the device to send or receive SMS. If it is turned Off it prevents the device from using SMS  regardless of which SMS app is used. Turn On if you wish to enable the device to send and receive SMS. <br/>
+8. Outgoing calls <br> 
+Outgoing calls determines whether a user can make outgoing calls from the device. Turn On to allow outgoing calls, turn Off to prevent.
+<br/>
+9. Camera Access<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
+10. NFC <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC.  Turn On if any of your apps require NFC. <br/>
+11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google Playstore of admin approved Google Play Apps.<br/>
+12. USB tethering<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
+13. Edit date and time<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
+14. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
+15. USB File transfer <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
+16. Google Assistant <Badge text="New" type="tip"/> <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant.   
+
+For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br> 
+
+Checkbox-<br> 
+`Restrict outgoing/incoming calls using customised dialer.` <br> 
+
+If clicked, this opens up two more checkboxes-<br> 
+
+1. `Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts>`<br> 
+2. `Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts>`<br> 
+
+In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br> 
+
+:::tip All numbers must be preceded by +country code (for example +1 for US).
+All numbers must be separated by comma. 
+:::
+<br> 
+
+![](./assets/OLD_DASHBOARD/newpolicy.png)
+
+
+You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
+
+
+
 
 ##  Users
 
@@ -539,7 +705,7 @@ Under the Users tab you are able to view all registered users in your enterprise
 
 New User
 
-*   To add a new user, click on 'New User' and fill in details of the user in the form:
+*   To add a new user, click on `New User` and fill in details of the user in the form:
 
 ![User Management](./assets/OLD_DASHBOARD/2_UM.png)
 
@@ -556,7 +722,7 @@ Edit icon
 
 Delete icon
 
-*   Click on the Delete icon to delete a user from the enterprise. That user will no longer be able to access their account:
+*   Click on the `Delete` icon to delete a user from the enterprise. That user will no longer be able to access their account:
 
 ![User Management](./assets/OLD_DASHBOARD/5_UM.png)
 
@@ -569,12 +735,12 @@ Geofencing is a useful feature for some dedicated device deployment scenarios. W
 
 In order for geofencing to work, the mobile device needs Internet connectivity and location services enabled. Thus this is typically for cellular connected devices with high accuracy location services enabled - whether smartphones or tablets. 
 
-Setting up a geofence for a device is easy - it starts by selecting Geofence in Esper Console left navigation pane - this brings you up to a wizard for quickly defining the geofence. Click on New Geofence:
+Setting up a geofence for a device is easy - it starts by selecting Geofence in Esper Console left navigation pane - this brings you up to a wizard for quickly defining the geofence. Click on `New Geofence`:
 
 ![](./assets/OLD_DASHBOARD/geo4.png)
 
 
-In the first screen you define the size of your geofence (meaning where you expect any devices to be for this geofence) - it is a circle that can be as small as 100m radius up to 10km. Note that GPS can drift and jump, thus a geofence smaller than 100m can cause false positives. To set it up at a location simply type the address for the center of the circle, or drag it in the map view to set it up. Give it a name and description, and then click Next:
+In the first screen you define the size of your geofence (meaning where you expect any devices to be for this geofence) - it is a circle that can be as small as 100m radius up to 10km. Note that GPS can drift and jump, thus a geofence smaller than 100m can cause false positives. To set it up at a location simply type the address for the center of the circle, or drag it in the map view to set it up. Give it a name and description, and then click `Next`:
 
 ![](./assets/OLD_DASHBOARD/geo3.png)
 
@@ -602,8 +768,8 @@ https://youtu.be/UkTwhFRTwgQ
 Give it a try and let us know what you think, andi@esper.io.
 
 
-<i> Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  </i>
-
+:::tip Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  
+:::
 
 ##  Company Settings
 
@@ -670,7 +836,7 @@ Checkout the relevant documentation on the top right of this page by clicking on
 
 ##  Secure Remote ADB
 
-Developer should be able to debug their devices remotely without even physial association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
+Developer should be able to debug their devices remotely without even physical association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
 
 This document tells you how you can remotely connect to device via secure adb channel. We will be using esper-cli command line tool which internally uses [esperSDK](https://docs.esper.io/home/pythonsdk.html)  [APIs](https://api.esper.io/) to provide the secure access between your host machine and device.
 
@@ -688,7 +854,7 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 4. Disconnect usb cable from the device. You should be able to connect adb via port 5555 over tcp
 
-5. Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your enviornment on to the host machine.
+5. Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your environment on to the host machine.
    - Check your espercli version: espercli -v
    ```sh
    #espercli -v
