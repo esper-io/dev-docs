@@ -234,7 +234,7 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 *   To add app from Play Store list - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
 
 :::tip
-Only once you [Approve a Google Play Store App](./console/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+Only once you [Approve a Google Play Store App](./console/device-template/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
 :::
 
 Click `Next`.
