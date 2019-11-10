@@ -25,12 +25,12 @@
   "homepage": "https://github.com/esper-io/dev-docs#readme",
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
-    "@vuepress/plugin-medium-zoom": "^1.1.0",
-    "vuepress": "1.1.0"
+    "@vuepress/plugin-medium-zoom": "^1.2.0",
+    "vuepress": "1.2.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "1.1.0",
-    "@vuepress/plugin-google-analytics": "^1.1.0",
+    "@vuepress/plugin-back-to-top": "1.2.0",
+    "@vuepress/plugin-google-analytics": "^1.2.0",
     "vuepress-plugin-reading-time": "0.1.1"
   }
 }
