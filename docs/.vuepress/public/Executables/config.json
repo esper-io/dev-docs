@@ -1,6 +1,6 @@
 {
-    "android.app.extra.EXTRA_PROVISIONING_WIFI_SSID": "wifiname ",
-    "android.app.extra.EXTRA_PROVISIONING_WIFI_PSK": "wifipassword",
-    "com.shoonyaos.autoprovision.SHOONYA_CLOUD_USER_NAME": "esperendpointname",
-    "com.shoonyaos.autoprovision.SHOONYA_CLOUD_PASSWORD": "esperendpointpassword"
+  "android.app.extra.EXTRA_PROVISIONING_WIFI_SSID": "wifiname ",
+  "android.app.extra.EXTRA_PROVISIONING_WIFI_PSK": "wifipassword",
+  "com.shoonyaos.autoprovision.SHOONYA_CLOUD_USER_NAME": "esperendpointname",
+  "com.shoonyaos.autoprovision.SHOONYA_CLOUD_PASSWORD": "esperendpointpassword"
 }

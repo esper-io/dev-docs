@@ -9,7 +9,15 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
+    "style-lint": "stylelint --fix \"src/**/*.vue\" \"src/**/*.scss\"",
+    "lint": "markdownlint */*.md docs/home/*.md docs/home/*/*.md docs/home/*/*/*.md",
+    "prettier": "prettier --list-different --write \"**/*.{js,json,css,scss,vue,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -26,11 +34,28 @@
   "dependencies": {
     "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7",
     "@vuepress/plugin-medium-zoom": "^1.2.0",
+    "eslint-plugin-vue": "^6.0.0",
+    "prettier": "1.13.x",
     "vuepress": "1.2.0"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "1.2.0",
     "@vuepress/plugin-google-analytics": "^1.2.0",
-    "vuepress-plugin-reading-time": "0.1.1"
+    "vuepress-plugin-check-md": "0.0.2",
+    "vuepress-plugin-reading-time": "0.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-vue-libs": "^3.0.0",
+    "husky": "^3.0.5",
+    "imagemin-lint-staged": "0.3.x",
+    "lint-staged": "7.1.x",
+    "markdownlint-cli": "0.10.x",
+    "stylelint": "9.2.x",
+    "stylelint-config-css-modules": "1.2.x",
+    "stylelint-config-prettier": "3.2.x",
+    "stylelint-config-recess-order": "2.0.x",
+    "stylelint-config-standard": "18.2.x",
+    "stylelint-scss": "3.1.x"
   }
 }

@@ -1,8 +1,6 @@
 [Introduction](../../console.md) / Developer Options
 
 # Developer Options
-<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
-
 
 **Turn App and Device Management into Code**
 
@@ -24,7 +22,7 @@ You can then copy (or renew if needed) your API key.
 
 ![Developer Options](../../assets/OLD_DASHBOARD/4_DO.png)
 
-The **API key** and **Enterprise ID** can be copied from the dashboard as shown above and can be used to access our [CLI platform](https://github.com/esper-io/esper-cli) (https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](http://api.esper.io) (api.esper.io) in your development and management systems.
+The **API key** and **Enterprise ID** can be copied from the dashboard as shown above and can be used to access our [CLI platform](https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](http://api.esper.io) (api.esper.io) in your development and management systems.
 
 Checkout the relevant documentation on the top right of this page by clicking on [Developer Hub](https://docs.esper.io/) and [API Documentation](https://api.esper.io/).
 

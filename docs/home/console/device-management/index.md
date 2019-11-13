@@ -1,12 +1,12 @@
 [Introduction](../../console.md) / Devices
-# Devices
-<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
+# Devices
+
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 Manage your provisioned devices here.
 
 You may view all your device details on the Devices dashboard.
-
 
 ### Categories
 
@@ -26,12 +26,11 @@ You can choose to provision a real Android device the details to which are provi
 
 ![Simulare](../images/simulare-2.png)
 
-Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform. 
+Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform.
 
-Capabilities such as Apps, Remote View and Capture log might not be available on a Simulated device. 
+Capabilities such as Apps, Remote View and Capture log might not be available on a Simulated device.
 
-This device is only available for new signups currently. Please note that trial accounts created on or after September 27, 2019 will have this feature enabled. Accounts created before that will not. Please reach out to us at support@esper.io if you signed up before September 27, and would like to try out Simulated devices. 
-
+This device is only available for new signups currently. Please note that trial accounts created on or after September 27, 2019 will have this feature enabled. Accounts created before that will not. Please reach out to us at support@esper.io if you signed up before September 27, and would like to try out Simulated devices.
 
 ### Device Tile
 

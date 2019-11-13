@@ -1,8 +1,7 @@
 # Tutorial
-<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
-
 
 Below are some quick tutorials for specific tasks that might be useful for you on Esper Platform.
+
 <!--
 - [Rebooting group of devices periodically?](./tutorials/group-actions.md)
 - [Provisioning an Emulator to DeviceCloud using Serial number]()

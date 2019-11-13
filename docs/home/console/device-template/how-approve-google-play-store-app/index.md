@@ -1,7 +1,6 @@
 [Introduction](../../../console.md) / [Device Template](../index.md) / How to Approve a Google Play Store App
 
 # How to Approve a Google Play Store App
-<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 ### Steps to approve an app
 

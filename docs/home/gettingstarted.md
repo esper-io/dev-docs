@@ -1,7 +1,5 @@
 # Getting Started
 
-<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
-
 ## Overview
 
 The following figure illustrates the process of getting started with Esper.
@@ -16,7 +14,7 @@ The first step to start developing with Esper is to create a developer account. 
 
 ![Signup screen](./assets/GettingStarted/SingupScreen.png)
 
-Once you click in the `Start My Free Trial` button, you'll be automatically logged in, and redirected to your very own environment's endpoint. At the same time, you'll get an email with your temporary login credentials, along with the URL of your endpoint (it will be something like `{{ esper_tenant_name }}.esper.cloud`, where "{{ esper_tenant_name }}" is the randomly chosen name of your environment). If you would like a customized endpoint name, like `acme.esper.cloud`, please email us at <support@esper.io>, and we'll be glad to help you change it.
+Once you click in the `Start My Free Trial` button, you'll be automatically logged in, and redirected to your very own environment's endpoint. At the same time, you'll get an email with your temporary login credentials, along with the URL of your endpoint (it will be something like `{{ esper_tenant_name }}.esper.cloud`, where "{{ esper_tenant_name }}" is the randomly chosen name of your environment). If you would like a customized endpoint name, like `acme.esper.cloud`, please email us at <mailto:support@esper.io>, and we'll be glad to help you change it.
 
 > Please change your password when you are redirected to your endpoint!
 
@@ -32,9 +30,9 @@ Please see the [Creating a Device Template](./devconsole/device-template/index.m
 
 ### 3. Provision your Dedicated Android Device
 
-Any Android device that meets Esper [requirements](./requirements.md) can act as a target device for your applications and can be provisioned against an Esper endpoint. Once provisioned, Esper enables developers to communicate with their target device so they can deploy and test the application on them. During the process of provisioning, an Esper Device Agent is installed on the device. Please see the Instructions for  [Provisioning a device](./devconsole/device-provisioning/index.md) to follow the process most suited for your device and workflow.
+Any Android device that meets Esper [requirements](./requirements.md) can act as a target device for your applications and can be provisioned against an Esper endpoint. Once provisioned, Esper enables developers to communicate with their target device so they can deploy and test the application on them. During the process of provisioning, an Esper Device Agent is installed on the device. Please see the Instructions for [Provisioning a device](./devconsole/device-provisioning/index.md) to follow the process most suited for your device and workflow.
 
-> Esper ships with an [Esper-Enhanced Android Virtual Device](./emulator.md), which you can use to try Esper without the need for any hardware! This virtual device can be installed via our Android Studio plugin. Esper also has some pre-approved Developer Kits which you can acquire from us for your applications. Simply email us at <support@esper.io> if you'd like one.
+> Esper ships with an [Esper-Enhanced Android Virtual Device](./emulator.md), which you can use to try Esper without the need for any hardware! This virtual device can be installed via our Android Studio plugin. Esper also has some pre-approved Developer Kits which you can acquire from us for your applications. Simply email us at <mailto:support@esper.io> if you'd like one.
 
 ### 4. Using the Web Console
 

@@ -1,7 +1,4 @@
 # Overview
-
-<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
-
 Welcome to the Esper Console where Android™ developers can build, test, deploy, diagnose, and manage their applications seamlessly and securely to Android-based dedicated devices. Using the console, you will be able to generate API Keys and obtain your Enterprise ID; this enables you to use the Esper [APIs](./api.md) either by calling them via [REST](https://api.esper.io/), with our Esper [SDK for Python](./pythonsdk.md), or by using our Esper [CLI](./espercli.md). Additionally, our Esper [plugin](./esperplugin.md) for Android Studio is available for developers to use, and provides a set of resources to facilitate diagnostics and debugging of applications—whether running in a test lab or deployed in the field.
 
 Esper provides tools that enable Android developers to deliver highly secure solutions to Dedicated Devices, all the while giving them superior flexibility and control over the process. This leads to a better development experience spanning the entire development lifecycle. Furthermore, this lightens the burden on IT, enabling them to focus on more pressing aspects of your product. A [rich API](https://api.esper.io) set and a variety of [open-source SDKs](https://github.com/esper-io/esper-client-py) and tools allow you to incorporate device management for your dedicated device apps and dedicated devices.
@@ -77,13 +74,13 @@ Through the Esper Console you can access all the features and capabilities you n
 
 ## Next steps
 
-1. To understand system requirements, see [Requirements](./requirements.md)
-2. To get started, see [Getting Started Guide](./gettingstarted.md)
-3. Checkout Esper APIs [documentation](https://api.esper.io)
-4. Checkout Esper SDK on [GitHub](https://github.com/esper-io/esper-client-py)
-5. Checkout [Esper CLI](https://github.com/esper-io/esper-cli), a command line tool for accessing APIs.
-6. To learn more about Esper, visit [esper.io](https://esper.io)
+1.  To understand system requirements, see [Requirements](./requirements.md)
+2.  To get started, see [Getting Started Guide](./gettingstarted.md)
+3.  Checkout Esper APIs [documentation](https://api.esper.io)
+4.  Checkout Esper SDK on [GitHub](https://github.com/esper-io/esper-client-py)
+5.  Checkout [Esper CLI](https://github.com/esper-io/esper-cli), a command line tool for accessing APIs.
+6.  To learn more about Esper, visit [esper.io](https://esper.io)
 
 ## Contact Us
 
-You can also send us an email at <support@esper.io> for any questions or concerns.
+You can also send us an email at <mailto:support@esper.io> for any questions or concerns.
