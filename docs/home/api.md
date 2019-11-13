@@ -41,9 +41,9 @@ The APIs use standard HTTP status codes to indicate success or failure. All erro
 }
 ```
 
-- `errors` List of error details
-- `message` Error description
-- `status` HTTP status code
+* `errors` List of error details
+* `message` Error description
+* `status` HTTP status code
 
 ## APIs
 
@@ -51,38 +51,38 @@ Below are quick links to frequently used APIs. To see a full list of APIs and la
 
 ### Token
 
-- [Get token information](https://api.esper.io/#tag/Token)
+* [Get token information](https://api.esper.io/#tag/Token)
 
 ### Enterprise
 
-- [Get enterprise information](https://api.esper.io/#tag/Enterprise)
-- [Update enterprise information](https://api.esper.io/#operation/partialUpdateEnterprise)
+* [Get enterprise information](https://api.esper.io/#tag/Enterprise)
+* [Update enterprise information](https://api.esper.io/#operation/partialUpdateEnterprise)
 
 ### Application
 
-- [Get application information](https://api.esper.io/#tag/Application)
-- [Delete application](https://api.esper.io/#operation/deleteApplication)
-- [App version management](https://api.esper.io/#operation/getAppVersions)
-- [Upload an application](https://api.esper.io/#operation/upload)
+* [Get application information](https://api.esper.io/#tag/Application)
+* [Delete application](https://api.esper.io/#operation/deleteApplication)
+* [App version management](https://api.esper.io/#operation/getAppVersions)
+* [Upload an application](https://api.esper.io/#operation/upload)
 
 ### Devices
 
-- [Get device information](https://api.esper.io/#tag/Device)
-- [List app installed on device](https://api.esper.io/#operation/getAppInstalls)
-- [Get latest telemetry event](https://api.esper.io/#operation/getDeviceEvent)
+* [Get device information](https://api.esper.io/#tag/Device)
+* [List app installed on device](https://api.esper.io/#operation/getAppInstalls)
+* [Get latest telemetry event](https://api.esper.io/#operation/getDeviceEvent)
 
 ### Device Groups
 
-- [Device Group Management](https://api.esper.io/#tag/Device-Group)
+* [Device Group Management](https://api.esper.io/#tag/Device-Group)
 
 ### Device Commands
 
-- [Run command on device](https://api.esper.io/#operation/runCommand)
-- [Get command status](https://api.esper.io/#operation/getCommand)
+* [Run command on device](https://api.esper.io/#operation/runCommand)
+* [Get command status](https://api.esper.io/#operation/getCommand)
 
 ### Group Commands
 
-- [Run command on a group](https://api.esper.io/#operation/runGroupCommand)
-- [Get command status on group](https://api.esper.io/#operation/getGroupCommand)
+* [Run command on a group](https://api.esper.io/#operation/runGroupCommand)
+* [Get command status on group](https://api.esper.io/#operation/getGroupCommand)
 
 If you face any issues in API usage, we recommend you reach out to [Esper Dev Support](./support.md)

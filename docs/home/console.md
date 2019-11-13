@@ -822,7 +822,7 @@ Remote access to the device can be done from anywhere in the world using espercl
 4.  Disconnect usb cable from the device. You should be able to connect adb via port 5555 over tcp
 
 5.  Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your environment on to the host machine.
-    - Check your espercli version: espercli -v
+    * Check your espercli version: espercli -v
     ```sh
     #espercli -v
     Esper CLI is Command line tool for the Esper APIs:  0.0.5
@@ -830,8 +830,8 @@ Remote access to the device can be done from anywhere in the world using espercl
     Python 3.7.3
     Platform Darwin-18.0.0-x86_64-i386-64bit
     ```
-    - Make sure it is >= 0.0.5 to use secure-adb feature.
-    - Upgrade to the latest version of espercli using the following command:
+    * Make sure it is >= 0.0.5 to use secure-adb feature.
+    * Upgrade to the latest version of espercli using the following command:
     ```sh
     pip install -U espercli
     ```

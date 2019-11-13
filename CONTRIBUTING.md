@@ -40,10 +40,10 @@ This section guides you through submitting a bug report for Esper docs. Followin
 
 The following list shows some guiding rules that you should keep in mind when you're contributing to the Esper documentation:
 
-- **DO** create separate branch on your fork before working on the docs
-- **DON'T** surprise us with large pull requests. Instead file an issue and start a discussion.
-- **DO** follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).
-- **DO** blog and tweet (or whatever) about your contributions, frequently!
-- **DON'T** modify host URLs on the docs with static URLs. When you are modifying an endpoint, in case it has a user specific endpoint, use `{{ esper_tenant_name }}` so that vuepress will plug in the respective endpoint name there.\
+* **DO** create separate branch on your fork before working on the docs
+* **DON'T** surprise us with large pull requests. Instead file an issue and start a discussion.
+* **DO** follow the [GitHub Flow workflow](https://guides.github.com/introduction/flow/).
+* **DO** blog and tweet (or whatever) about your contributions, frequently!
+* **DON'T** modify host URLs on the docs with static URLs. When you are modifying an endpoint, in case it has a user specific endpoint, use `{{ esper_tenant_name }}` so that vuepress will plug in the respective endpoint name there.\
 
 Eg. If you're planning to use `https://<endpoint-name>.esper.cloud` then use `https://{{ esper_tenant_name }}.esper.cloud` instead
