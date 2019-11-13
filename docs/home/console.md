@@ -42,24 +42,23 @@ Provisioning is the initial step to configuring and managing your Android device
 
 Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are:
 
-1.  [AFW provisioning](./console/device-provisioning/afw-provisioning/index.md) - AFW (Android for Work) method is best used for:
-
-    * Devices that have GMS (Google Mobile Services) enabled
+1.  [Provisioner Tool](./adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
+    * All Android Devices - GMS or Non-GMS
+    * Devices with or without camera
+    * Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
+    
+2.  [AFW provisioning](./afw-provisioning/index.md) - AFW (Android for Work) method is best used for:
+    * Devices that have GMS (Google Mobile Services) enabled 
     * Devices with a camera for QR code scanning
 
-2.  [ADB provisioning](./console/device-provisioning/adb-provisioning/index.md) - ADB (Android Debug Bridge) method is best used for:
-
-    * Devices with No Google Services
-    * Devices with No camera
-    * Devices running Android 6.0, 5.1 or 4.4
-
-3.  [IMEI (or Serial Number) based provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
-
-    * IMEI/Serial Number method is use for Bulk provisioning of devices
+3.  [QR Code Provisioning ](./qr-code-provisioning/index.md)
+    * QR Method like AFW is used for devices that have both GMS (Google Mobile Services) and Camera enabled 
+    
+4.  [IMEI (or Serial Number) based provisioning](./imei-or-serial-number-based-provisioning/index.md) 
+    * Used for Esper Enhanced Android Devices
+    * IMEI/Serial Number method is use for Bulk provisioning of devices 
     * Enables zero touch provisioning
 
-4.  [QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
-    * QR Method like AFW is used for devices that have both GMS (Google Mobile Services) and Camera enabled
 
 ## Device Template
 
@@ -302,11 +301,54 @@ While editing a template, you also have the option to add IMEI/Serial numbers of
 
 Click on the `Delete Template` option on top right to delete a selected template.
 
-## Devices
 
-Manage your provisioned devices here.
+  
+##  Devices
 
-You may view all your device details on the Devices dashboard.
+This section talks about understanding how to manage your Esper provisioned device after the provisioning steps are complete. 
+
+It consists of the following sections - 
+1. [Getting Started](./console.html#getting-started)
+2. [Categories](./console.html#categories)
+3. [Search](./console.html#search)
+4. [Device Tile (also, Grid View)](./console.html#device-tile)
+5. [Map View of Devices](./console.html#map-view)
+6. Further Device Mangement functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
+    
+    a. [Device information](./console/device-management/-/#information) - Hardware, software, memory, location, storage and other detail of the device.
+
+    b. [Actions](./console/device-management/-/#device-actions) - Admin can take actions such as reboot, lock, lockdwon, ping or exit kiosk mode.
+
+    c. [Event Feed](./console/device-management/-/#event-feed) - Admin can view event feed log of the device.
+
+    d. [Device Graphs](./console/device-management/-/#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
+    
+    e. [Apps](./console/device-management/-/#apps) - Admin can unhide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
+
+    f. [Compliance Policy](./console/device-management/-/#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
+
+    g. [Security]() - This section gives details regarding the security status of the device.
+    
+    h. [Remote View](./console/device-management/-/#remote-viewer) - Admin can remote view the device if device user accepts the request.
+
+    i. [Capture log](./console/device-management/-/#capture-logs) - Admin can capture device's android bug report fromt his section in case any issue arises.
+
+
+### Getting Started
+
+If you are logging in to your endpoint for the very first time you will see the following screen which gives you a choice to either provision a device or Simulate a device.
+
+![Simulare](./console/images/simulare-1.png)
+
+You can choose to provision a real Android device the details to which are provided in the [Provision Device](https://docs.esper.io/home/devconsole/device-provisioning/) section of this documentation. Or you may choose to Simulate a Device. You will see a momentary "You are all set!" message after which a mock device will be available for you to experiment and play around with till you provision an actual device.
+
+![Simulare](./console/images/simulare-2.png)
+
+Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform. 
+
+Capabilities such as Apps, Remote View and Capture log might not be available on a Simulated device. 
+
+This device is only available for new signups currently. Please note that trial accounts created on or after September 27, 2019 will have this feature enabled. Accounts created before that will not. Please reach out to us at support@esper.io if you signed up before September 27, and would like to try out Simulated devices. 
 
 ### Categories
 
@@ -568,7 +610,7 @@ User Alerts to monitor the performance of your devices. You can create a device 
 
 ![Alerts](./assets/OLD_DASHBOARD/3_A.png)
 
-## Compliance Policy
+###  Compliance Policy
 
 Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices.
 
