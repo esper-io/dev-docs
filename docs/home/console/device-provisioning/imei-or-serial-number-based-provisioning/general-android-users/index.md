@@ -1,5 +1,3 @@
-[Introduction](../../../../console.md) / [Provision Device](../../index.md) / [IMEI Provisioning](../index.md) / Android
-
 # IMEI Provisioning - Android
 
 For devices not using Esper Enhanced Android (e.g. stock Android), take the following steps to use IMEI based provisioning.
@@ -13,25 +11,25 @@ In the Esper Console, create a new Device template then **'Edit'** the template 
 1.  Boot the device.
 2.  Go to **'System'** then select **'About phone'**:
 
-![IMEI](../../../../assets/OLD_DASHBOARD/2_IMEI.png)
+    ![IMEI](../../../../assets/OLD_DASHBOARD/2_IMEI.png)
 
 3. Tap **‘Build number’** 6 times:
 
-![IMEI](../../../../assets/OLD_DASHBOARD/3_IMEI.png)
+    ![IMEI](../../../../assets/OLD_DASHBOARD/3_IMEI.png)
 
-You will see the toast message **‘You are now a developer!'**:
+    You will see the toast message **‘You are now a developer!'**:
 
-![IMEI](../../../../assets/OLD_DASHBOARD/4_IMEI.png)
+    ![IMEI](../../../../assets/OLD_DASHBOARD/4_IMEI.png)
 
 4. Navigate back to **'System'**, then open **‘Developer options’**:
 
-![IMEI](../../../../assets/OLD_DASHBOARD/5_IMEI.png)
+    ![IMEI](../../../../assets/OLD_DASHBOARD/5_IMEI.png)
 
 5. Turn **'Debugging'** to on, then confirm that **'USB debugging'** is also turned on and click **'OK'** on the resulting pop-up:
 
-![IMEI](../../../../assets/OLD_DASHBOARD/6_IMEI.png)
+    ![IMEI](../../../../assets/OLD_DASHBOARD/6_IMEI.png)
 
-![IMEI](../../../../assets/OLD_DASHBOARD/7_IMEI.png)
+    ![IMEI](../../../../assets/OLD_DASHBOARD/7_IMEI.png)
 
 6. Connect your Android device to your development computer via USB.
 
@@ -41,21 +39,21 @@ You will see the toast message **‘You are now a developer!'**:
 
 9. The permission to **allow USB debugging** on the device might pop up again. Click **OK**, and then the DPC will start getting installed.
 
-![here](../../../images/5_ADB.png)
+    ![here](../../../images/5_ADB.png)
 
 10. Connect to an available Wi-Fi or data network on the device.
 
 11. You might see a google message as follows. Click OK.
 
-![here](../../../images/9_PD.png)
+    ![here](../../../images/9_PD.png)
 
 12. Give permission to DPC to change system settings by Clicking **Resolve**.
 
-![here](../../../images/10_PD.png)
+    ![here](../../../images/10_PD.png)
 
 13. Turn on the toggle button to **Allow changes to System Settings**.
 
-![here](../../../images/11_PD.png)
+    ![here](../../../images/11_PD.png)
 
 14. The device will then be provisioned to the parameters set in the template that includes the device's IMEI previously uploaded to Esper.
 

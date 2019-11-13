@@ -18,7 +18,7 @@ Current stable release versions are
 
 ## Installation
 
-#### Using `pip install`
+### Using `pip install`
 
 From PyPI
 
@@ -34,7 +34,7 @@ From [GitHub](https://github.com/esper-io/esper-cli)
 pip install git+https://github.com/esper-io/esper-cli.git
 ```
 
-#### From source
+### From source
 
 Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
@@ -50,7 +50,7 @@ python setup.py install
 You don't need to install `setuptools` separately since they are packaged along with the downloaded library
 :::
 
-### Usage
+## Usage
 
 Before using `espercli`, you need to tell it about your Esper credentials. For this you will need `ENVIRONMENT NAME` and `API KEY` as generated in [Requirements](#requirements) section. The way to get started is to run the `espercli configure` command:
 
@@ -101,7 +101,7 @@ Configure command is used to set and modify Esper credential details and can sho
 $ espercli configure [OPTIONS]
 ```
 
-##### Options
+#### Options
 
 | Name, shorthand | Default | Description                  |
 | --------------- | :-----: | :--------------------------- |
@@ -1386,7 +1386,7 @@ signal_strength              2
 
 ## _Common Examples_
 
-#### **1. Deploy an application version to a group**
+### **1. Deploy an application version to a group**
 
 First, upload an application file.
 

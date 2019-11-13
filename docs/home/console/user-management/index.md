@@ -1,6 +1,5 @@
-[Introduction](../../console.md) / Users
-
 # Users
+
 Learn about Esper's User Management.
 
 Under the Users tab you are able to view all registered users in your enterprise. Here you can add, delete, and edit users:

@@ -1,5 +1,3 @@
-[Introduction](../../../../../console.md) / [Provision Device](../../../index.md) / [IMEI Provisioning](../../index.md) / [Android](../index.md)/ Esper Python Script
-
 # Esper Python Script
 
 Script to be run via ADB -

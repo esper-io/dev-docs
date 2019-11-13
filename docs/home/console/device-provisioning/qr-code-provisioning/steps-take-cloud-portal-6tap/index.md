@@ -1,5 +1,3 @@
-[Introduction](../../../index.md) / [Provision Device](../../index.md) / [QR Code Provisioning](../index.md) / Steps to take on Esper Console for 6-Tap Provisioning
-
 # Steps to take on Esper Console for 6-Tap Provisioning
 
 Steps on the Esper Console to provision using the 6-tap method.

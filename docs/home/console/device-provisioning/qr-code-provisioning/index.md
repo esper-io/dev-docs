@@ -1,5 +1,3 @@
-[Introduction](../../../console.md) / [Provision Device](../index.md) / QR Code Provisioning
-
 # QR Code Provisioning
 
 This page describes how user can provision their devices using the **QR Code** Method.

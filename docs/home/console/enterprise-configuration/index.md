@@ -1,5 +1,3 @@
-[Introduction](../../console.md) / Company Settings
-
 # Company Settings
 
 Learn about Esper's Company Settings.

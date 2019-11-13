@@ -1,5 +1,3 @@
-[Introduction](../../../../console.md) / [Provision Device](../../index.md) / [QR Code Provisioning](../index.md) / Steps to take on the Device for 6-Tap Provisioning
-
 # Steps to take on the Device for 6-Tap Provisioning
 
 Device-side steps for the 6-tap provisioning method.

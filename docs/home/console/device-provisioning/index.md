@@ -1,6 +1,5 @@
-[Introduction](../../console.md) / Provisioning Your Device
-
 # Provisioning Your Device
+
 Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
 
 Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are:
@@ -14,7 +13,7 @@ Esper provides multiple methods of provisioning a device, which involves downloa
     * Devices that have GMS (Google Mobile Services) enabled 
     * Devices with a camera for QR code scanning
 
-3.  [QR Code Provisioning ](./qr-code-provisioning/index.md)
+3.  [QR Code Provisioning](./qr-code-provisioning/index.md)
     * QR Method like AFW is used for devices that have both GMS (Google Mobile Services) and Camera enabled 
     
 4.  [IMEI (or Serial Number) based provisioning](./imei-or-serial-number-based-provisioning/index.md) 

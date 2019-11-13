@@ -97,7 +97,7 @@ except ApiException as e:
     print("Exception when calling TokenApi->get_token_info: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {
@@ -132,7 +132,7 @@ except ApiException as e:
     print("Exception when calling EnterpriseApi->get_enterprise: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {
@@ -187,7 +187,7 @@ except ApiException as e:
     print("Exception when calling DeviceApi->get_all_devices: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {
@@ -270,7 +270,7 @@ except ApiException as e:
     print("Exception when calling ApplicationApi->get_all_applications: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {
@@ -325,7 +325,7 @@ except ApiException as e:
     print("Exception when calling ApplicationApi->upload: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {
@@ -379,7 +379,7 @@ except ApiException as e:
     print("Exception when calling ApplicationApi->get_app_versions: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {
@@ -439,7 +439,7 @@ except ApiException as e:
     print("Exception when calling CommandsApi->run_command: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {
@@ -476,7 +476,7 @@ except ApiException as e:
     print("Exception when calling CommandsApi->run_command: %s\n" % e)
 ```
 
-_Output_
+### Output
 
 ```python
 {

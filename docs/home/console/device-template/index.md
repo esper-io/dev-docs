@@ -1,5 +1,3 @@
-[Introduction](../../../console.md) / Device Template
-
 # Device Template
 
 ## How to use Esper's Device Template.
@@ -36,21 +34,21 @@ You may choose from install apps from a variety of sources-
 
 1.  Preloaded apps - There are many preloaded apps packaged with android devices. Approve these apps to show up on your device after provisioning by adding their package name in the following section:
 
-![Preloaded apps](../../assets/OLD_DASHBOARD/preloaded-apps-template.png)
+    ![Preloaded apps](../../assets/OLD_DASHBOARD/preloaded-apps-template.png)
 
 2.  Private apps - These are your private or company apps (in-house apps) that can be uploaded on Esper Dashboard via [App Management](../app-management/index.md). After uploading, user may choose to install these apps during provisioning via template in the following section or install them post provisioning.
 
-![Private apps](../../assets/OLD_DASHBOARD/private-apps-template.png)
+    ![Private apps](../../assets/OLD_DASHBOARD/private-apps-template.png)
 
 3.  Google apps - You may install apps from Google Play Store that you approved via [Play For Work](../play-work/index.md) as shown below -
 
-![Google app Apps](../../assets/OLD_DASHBOARD/googleplay-app-template.png)
+    ![Google app Apps](../../assets/OLD_DASHBOARD/googleplay-app-template.png)
 
-<i> Note: Only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.</i>
+    <i> Note: Only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.</i>
 
-![How to approve Google play apps](../../assets/OLD_DASHBOARD/approve-google-apps.png)
+    ![How to approve Google play apps](../../assets/OLD_DASHBOARD/approve-google-apps.png)
 
-Click 'Next' to move to next section.
+    Click 'Next' to move to next section.
 
 ### In the Branding section
 

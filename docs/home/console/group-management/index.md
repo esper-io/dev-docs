@@ -1,5 +1,3 @@
-[Introduction](../../console.md) / Groups
-
 # Groups
 
 Learn about Esper's Group Management.

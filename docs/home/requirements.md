@@ -43,7 +43,7 @@ Various Esper tools and SDK require a Python installation. The table below lists
 | Esper SDK |    Yes     |         Yes |
 | Esper CLI |            |         Yes |
 
-#### Esper SDK Language Support
+### Esper SDK Language Support
 
 * Python
 

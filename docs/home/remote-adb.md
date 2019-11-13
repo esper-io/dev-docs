@@ -13,7 +13,7 @@ Remote access to the device can be done from anywhere in the world using espercl
 
 ## Steps to connect to secure remote adb
 
-1.  On to Esper Dashboard https://{{ esper_tenant_name }}.esper.cloud, Go to `Devices` tab, then to your device and to `Actions`.
+1.  On to Esper Dashboard `https://{{ esper_tenant_name }}.esper.cloud` , Go to `Devices` tab, then to your device and to `Actions`.
 
 2.  At the bottom of the page, Click `enable adb`.
 

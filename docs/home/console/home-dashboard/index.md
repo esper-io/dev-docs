@@ -1,5 +1,3 @@
-[Introduction](../../console.md) / Home (Dashboard)
-
 # Home (Dashboard)
 
 This page explains the functionality of the Esper Home Dashboard.
@@ -20,7 +18,7 @@ Capabilities such as Apps, Remote View and Capture log might not be available on
 
 This device is only available for new signups currently.
 
-# Once you have provisioned a Device, you can use the four main sections on the Home Dashboard page:
+## Once you have provisioned a Device, you can use the four main sections on the Home Dashboard page:
 
 ### 1. Deployment Status
 

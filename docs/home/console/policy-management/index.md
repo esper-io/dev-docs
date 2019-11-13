@@ -1,5 +1,3 @@
-[Introduction](../../console.md) / Compliance Policy
-
 # Compliance Policy
 
 Learn about Esper's Policy Management.

@@ -1,6 +1,5 @@
-[Introduction](../../index.md) / [Provision Device](../index.md) / Downloading Executable
-
 # Downloading Executable
+
 ## Downloading Executable For Windows
 
 1.  Click <a href="https://downloads.esper.io/esper_provisioner_windows.exe" download>**here**</a> to download the Windows Executable.
@@ -25,14 +24,14 @@ after connecting and enabling USB debugging on the device. See instructions on h
 4.  Go to the folder where the executable was downloaded. For example if you downloaded it in "Downloads", run "cd Downloads" from root.
 5.  Run the following command
 
-```sh
-chmod +x esper-device-provisioner-macos
-```
+     ```sh
+     chmod +x esper-device-provisioner-macos
+     ```
 
 6.  Run the following command
 
-```sh
-./esper-device-provisioner-macos -rc prod
-```
+     ```sh
+     ./esper-device-provisioner-macos -rc prod
+     ```
 
 after connecting and enabling USB debugging on the device. See instructions on how to enable USB debugging under ADB provisioning section [here](../index.md).

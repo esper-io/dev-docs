@@ -1,5 +1,3 @@
-[Introduction](../../console.md) / Play for Work
-
 # Play for Work
 
 Learn about setting up Play for Work apps using Esper.
