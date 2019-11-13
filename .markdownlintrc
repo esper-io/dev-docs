@@ -8,6 +8,8 @@
   "line-length": false,
   "commands-show-output": false,
   "no-trailing-punctuation": false,
+  "no-duplicate-heading" : false,
+  "no-trailing-spaces": false,
   "no-inline-html": false,
   // ===
   // Prettier overrides
