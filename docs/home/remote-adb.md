@@ -11,7 +11,7 @@ This document tells you how you can remotely connect to device via secure adb ch
 
 Remote access to the device can be done from anywhere in the world using espercli and doesn't have to be in the same network.
 
-## Steps to connect to secure remote adb:
+## Steps to connect to secure remote adb
 
 1. On to Esper Dashboard https://{{ esper_tenant_name }}.esper.cloud, Go to  `Devices` tab, then to your device  and to `Actions`.
 
