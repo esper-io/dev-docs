@@ -1,5 +1,3 @@
-[Introduction](../index.md) / [Provision Device](./index.md)/ Provisioning Your Device
-
 # How to factory reset
 
 1.  Go to Settings Menu

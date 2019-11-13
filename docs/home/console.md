@@ -28,13 +28,12 @@ The Alerts Status tile gives a summary of Alerts you've created and Alerts that 
 
 Read about the Developer Tools and Documentation here -
 
-* **Esper API Keys** - Get API Key and Enterprise ID to be able to access Esper APIs to integrate in your app development code. See here - `https://{{ esper_tenant_name }}.esper.cloud/developer-console/`
-* **Esper API Reference** - Checkout all APIs that you can use to manage your dedicated devices at [Esper APIs](https://api.esper.io) using HTTP/REST framework.
-* **Esper SDK For Python** - Install SDK for python using instructions [here](./pythonsdk.md)
-* **Esper CLI** - Quickly execute CLI commands to install/uninstall/manage deployment on your provisioned devices
-* **Esper Plugin For Android Studio** - Use Esper Plugin to easily deploy new versions of your app onto Esper dashboard and to your dedicated devices. This plugin enables you to remotely view/control your devices on Android studio as well.
-* **Esper Docs With Quick Starts** - This is one stop for all documentation regarding API, CLI, SDK, Plugin and Console.
-
+- **Esper API Keys** - Get API Key and Enterprise ID to be able to access Esper APIs to integrate in your app development code. See here - `https://{{ esper_tenant_name }}.esper.cloud/developer-console/`
+- **Esper API Reference** - Checkout all APIs that you can use to manage your dedicated devices at [Esper APIs](https://api.esper.io) using HTTP/REST framework.
+- **Esper SDK For Python** - Install SDK for python using instructions [here](./pythonsdk.md)
+- **Esper CLI** - Quickly execute CLI commands to install/uninstall/manage deployment on your provisioned devices
+- **Esper Plugin For Android Studio** - Use Esper Plugin to easily deploy new versions of your app onto Esper dashboard and to your dedicated devices. This plugin enables you to remotely view/control your devices on Android studio as well.
+- **Esper Docs With Quick Starts** - This is one stop for all documentation regarding API, CLI, SDK, Plugin and Console.
 
 ## Provision Device
 
@@ -43,22 +42,24 @@ Provisioning is the initial step to configuring and managing your Android device
 Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are:
 
 1.  [Provisioner Tool](./adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
-    * All Android Devices - GMS or Non-GMS
-    * Devices with or without camera
-    * Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
-    
+
+    - All Android Devices - GMS or Non-GMS
+    - Devices with or without camera
+    - Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
+
 2.  [AFW provisioning](./afw-provisioning/index.md) - AFW (Android for Work) method is best used for:
-    * Devices that have GMS (Google Mobile Services) enabled 
-    * Devices with a camera for QR code scanning
 
-3.  [QR Code Provisioning ](./qr-code-provisioning/index.md)
-    * QR Method like AFW is used for devices that have both GMS (Google Mobile Services) and Camera enabled 
-    
-4.  [IMEI (or Serial Number) based provisioning](./imei-or-serial-number-based-provisioning/index.md) 
-    * Used for Esper Enhanced Android Devices
-    * IMEI/Serial Number method is use for Bulk provisioning of devices 
-    * Enables zero touch provisioning
+    - Devices that have GMS (Google Mobile Services) enabled
+    - Devices with a camera for QR code scanning
 
+3.  [QR Code Provisioning](./qr-code-provisioning/index.md)
+
+    - QR Method like AFW is used for devices that have both GMS (Google Mobile Services) and Camera enabled
+
+4.  [IMEI (or Serial Number) based provisioning](./imei-or-serial-number-based-provisioning/index.md)
+    - Used for Esper Enhanced Android Devices
+    - IMEI/Serial Number method is use for Bulk provisioning of devices
+    - Enables zero touch provisioning
 
 ## Device Template
 
@@ -83,51 +84,52 @@ Below is a list of features you can turn on or off in the policy section. These 
 ### Dropdown menus
 
 1.  **Device Password Rules** \
-    If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4.
-    The Password rule is a policy that specifies the rules for the device unlock password that users can set.
-    * **Alphabetic**: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
+    If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. The Password rule is a policy that specifies the rules for the device unlock password that users can set.
 
-    * **Alphanumeric**: Expands from Alphabetic to also include numbers and special characters.
+    - **Alphabetic**: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
 
-    * **None**: There is no password required to lock the device.
+    - **Alphanumeric**: Expands from Alphabetic to also include numbers and special characters.
+
+    - **None**: There is no password required to lock the device.
 
     The password for a device is setup during the initial setup of the device by the user.
 
 2.  **Default App Permission** \
     Default app permissions determines enforcement of the runtime-permission rule across all the apps on a device (e.g. Gallery, Camera).
 
-    * **Allow automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user.
+    - **Allow automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user.
 
-    * **Ask user**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”
+    - **Ask user**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”
 
-    * **Deny automatically**: This rule will deny any permission request from any app on the device.<br/>
+    - **Deny automatically**: This rule will deny any permission request from any app on the device.<br/>
 
 3.  **System Updates** \
     The System updates option allows you to enforce a system update policy on the device when a system update/OTA update is available.
 
-    * **Update automatically**: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
+    - **Update automatically**: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
 
-    * **Postpone installation**: This option postpones installation of an OTA update for 30 days.
+    - **Postpone installation**: This option postpones installation of an OTA update for 30 days.
 
-    * **Windowed installation**: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
+    - **Windowed installation**: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
 
      <br/>
 
 4.  **Android Settings App** \
     Android settings app determines how users can access the Android device settings.
 
-    * **Default setting app**: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
+    - **Default setting app**: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
 
-    * **No settings app**: No icon for any settings app will be available for the user to choose from the device’s dashboard.
+    - **No settings app**: No icon for any settings app will be available for the user to choose from the device’s dashboard.
 
-    * **Esper settings app**: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. Settings provided via this app are limited to:
-        1. Changing the Wi-Fi AP
+    - **Esper settings app**: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. Settings provided via this app are limited to:
 
-        2. Enabling the “flashlight” if there’s a camera flash LED on the device
+      1.  Changing the Wi-Fi AP
 
-        3. Control the display orientation of the device.
+      2.  Enabling the “flashlight” if there’s a camera flash LED on the device
 
-    * **Contact Esper** to setup a password for the Esper Settings app.
+      3.  Control the display orientation of the device.
+
+    - **Contact Esper** to setup a password for the Esper Settings app.
 
     <br/>
 
@@ -167,16 +169,13 @@ If clicked, this opens up two more checkboxes-<br>
 1.  `Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts>`<br>
 2.  `Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts>`<br> In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
 
-:::tip
-All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
-:::
-<br> <br/> ![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png) <br> <br/> You may reset these values to default at any time by clicking `Reset to Default` button at the bottom. <br> <br/> Click `Next`. <br> <br/>
+:::tip All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. ::: <br> <br/> ![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png) <br> <br/> You may reset these values to default at any time by clicking `Reset to Default` button at the bottom. <br> <br/> Click `Next`. <br> <br/>
 
 ### In the Apps section
 
 Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console/app-management/index.md) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
-* As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
+- As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
 
 1.  **Kiosk mode** - This mode pins the selected private app as the default app that stays pinned on the device screen permanently unless user exits the kiosk mode. This mode is useful for cases where device is single purpose and only app needs to run on it and admin does not wish device users to be able to interact with the device in any other manner. For example airport kiosks.
 
@@ -186,34 +185,31 @@ Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to 
 
 The next section is a simple checkbox labeled "Default Android Launcher" - This feature, if checked will provision devices with default android screen with no restrictions on the apps that can be installed and used. It will also disable various Esper Agent features and is best used when device usage is desired in loosely controlled environment. <br>
 
-  Here is a list of Esper features that will be **unavailable** in this mode as it applies the launcherless version of the Esper Device agent -
+Here is a list of Esper features that will be **unavailable** in this mode as it applies the launcherless version of the Esper Device agent -
 
-  • Capture Screenshot <br> • Remote View and Remote Control<br> • Install an app via dashboard<br> • Uninstall an app via dashboard<br> • Over the Air OS updates for Esper Enhanced Android OS<br> • Latest Device Agent updates for Devices with Android version less than 6.0
+• Capture Screenshot <br> • Remote View and Remote Control<br> • Install an app via dashboard<br> • Uninstall an app via dashboard<br> • Over the Air OS updates for Esper Enhanced Android OS<br> • Latest Device Agent updates for Devices with Android version less than 6.0
 
-  ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc.png)
+![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc.png)
 
-  The device screen will look similar to a regular android device with `Esper Device Agent` showing up as an app that can be opened and closed.
+The device screen will look similar to a regular android device with `Esper Device Agent` showing up as an app that can be opened and closed.
 
-  ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc1.png)
+![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc1.png)
 
-  Even when user has exited the `Esper Device Agent` they will be able to see it running in the background in the notification bar as follows -
+Even when user has exited the `Esper Device Agent` they will be able to see it running in the background in the notification bar as follows -
 
-  ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
-
+![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
 
 If the `Default Android launcher` is **unchecked**, Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case.
 
-* **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered seperated by commas.
+- **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered seperated by commas.
 
-* **Private (uploaded) Apps** - The next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on `Add` to add the private app to the template.
+- **Private (uploaded) Apps** - The next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on `Add` to add the private app to the template.
 
   ![Device Template](./assets/OLD_DASHBOARD/Temp_App_Management_new1.png)
 
-* **To add app from Play Store list** - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
+- **To add app from Play Store list** - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
 
-:::tip
-Only once you [Approve a Google Play Store App](./console/device-template/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
-:::
+:::tip Only once you [Approve a Google Play Store App](./console/device-template/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template. :::
 
 Click `Next`.
 
@@ -231,17 +227,14 @@ Click `Next`.
 
 ### In the Settings section
 
-Change Device settings from Esper Dashboard. Following are features available
-<br>
-![Esper Device Settings](./assets/settings/settings.png)
-<br>
+Change Device settings from Esper Dashboard. Following are features available <br> ![Esper Device Settings](./assets/settings/settings.png) <br>
 
-* Turn on/off bluetooth <br>
-* Select screen timeout duration <br>
-* Select screen orientation <br>
-* Select GPS accuracy <br>
-* Increase/decrease Brightness, Volume (alarm, notification, ring and music) <br>
-* Timezone <Badge text="New" type="tip"/> - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
+- Turn on/off bluetooth <br>
+- Select screen timeout duration <br>
+- Select screen orientation <br>
+- Select GPS accuracy <br>
+- Increase/decrease Brightness, Volume (alarm, notification, ring and music) <br>
+- Timezone <Badge text="New" type="tip"/> - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
 
 ![Esper Timezone](./assets/settings/timezone.png)
 
@@ -279,42 +272,41 @@ You can also Preview, Edit, Duplicate & Delete the template:
 
 Click on the ellipsis (...) on the template tile to preview, edit, duplicate or delete a template.
 
-* **Preview Template**
+- **Preview Template**
 
 ![Device Template](./assets/OLD_DASHBOARD/17_DT.png)
 
 Click on the `Preview` option to preview the device template. Click on the `+` sign to expand and then check selected individual components.
 
-* **Edit Template**
+- **Edit Template**
 
 To edit any template, click on the `Edit Template` option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the `Update` button on the Preview page.
 
-* **Add Devices (IMEI Provisioning)**
+- **Add Devices (IMEI Provisioning)**
 
 ![Device Template](./assets/OLD_DASHBOARD/13.1_DT.png)
 
 While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section `Add devices` that appears if you click on `Edit Template`. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
 
-* **Delete Template**
+- **Delete Template**
 
 ![Device Template](./assets/OLD_DASHBOARD/18_DT.png)
 
 Click on the `Delete Template` option on top right to delete a selected template.
 
+## Devices
 
-  
-##  Devices
+This section talks about understanding how to manage your Esper provisioned device after the provisioning steps are complete.
 
-This section talks about understanding how to manage your Esper provisioned device after the provisioning steps are complete. 
+It consists of the following sections -
 
-It consists of the following sections - 
-1. [Getting Started](./console.html#getting-started)
-2. [Categories](./console.html#categories)
-3. [Search](./console.html#search)
-4. [Device Tile (also, Grid View)](./console.html#device-tile)
-5. [Map View of Devices](./console.html#map-view)
-6. Further Device Mangement functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
-    
+1.  [Getting Started](./console.html#getting-started)
+2.  [Categories](./console.html#categories)
+3.  [Search](./console.html#search)
+4.  [Device Tile (also, Grid View)](./console.html#device-tile)
+5.  [Map View of Devices](./console.html#map-view)
+6.  Further Device Mangement functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
+
     a. [Device information](./console/device-management/-/#information) - Hardware, software, memory, location, storage and other detail of the device.
 
     b. [Actions](./console/device-management/-/#device-actions) - Admin can take actions such as reboot, lock, lockdwon, ping or exit kiosk mode.
@@ -322,17 +314,16 @@ It consists of the following sections -
     c. [Event Feed](./console/device-management/-/#event-feed) - Admin can view event feed log of the device.
 
     d. [Device Graphs](./console/device-management/-/#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
-    
+
     e. [Apps](./console/device-management/-/#apps) - Admin can unhide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
 
-    f. [Compliance Policy](./console/device-management/-/#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
+    f. [Compliance Policy](./console#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
 
-    g. [Security]() - This section gives details regarding the security status of the device.
-    
+    g. [Security](./console.md#_2-security-summary) - This section gives details regarding the security status of the device.
+
     h. [Remote View](./console/device-management/-/#remote-viewer) - Admin can remote view the device if device user accepts the request.
 
     i. [Capture log](./console/device-management/-/#capture-logs) - Admin can capture device's android bug report fromt his section in case any issue arises.
-
 
 ### Getting Started
 
@@ -344,11 +335,11 @@ You can choose to provision a real Android device the details to which are provi
 
 ![Simulare](./console/images/simulare-2.png)
 
-Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform. 
+Simulare helps you explore the Esper platform without using a real device. We provide this simulated device to act as an actual device to help you experience the capabilities of our platform.
 
-Capabilities such as Apps, Remote View and Capture log might not be available on a Simulated device. 
+Capabilities such as Apps, Remote View and Capture log might not be available on a Simulated device.
 
-This device is only available for new signups currently. Please note that trial accounts created on or after September 27, 2019 will have this feature enabled. Accounts created before that will not. Please reach out to us at support@esper.io if you signed up before September 27, and would like to try out Simulated devices. 
+This device is only available for new signups currently. Please note that trial accounts created on or after September 27, 2019 will have this feature enabled. Accounts created before that will not. Please reach out to us at support@esper.io if you signed up before September 27, and would like to try out Simulated devices.
 
 ### Categories
 
@@ -424,9 +415,7 @@ Here you can see a list of the Esper Enhanced Android updates that have been mad
 
 By clicking on the **`Deploy OS Updates`** button you may choose any available Build number by then clicking on **`Select Build`**.
 
-:::tip
-Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment
-:::
+:::tip Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment :::
 
 ![Group Management](./assets/OLD_DASHBOARD/8_GM.png)
 
@@ -449,15 +438,12 @@ This section enables you to manage your applications. You may add the following 
 1.  Upload Private Apps (APK files) to the Esper Cloud.
 2.  Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them.
 
-:::tip
-To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section.
-:::
-See [FAQ](https://docs.esper.io/home/faq.html)
+:::tip To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. ::: See [FAQ](https://docs.esper.io/home/faq.html)
 
 ### Upload Private Apps (APK files) to Esper Cloud:
 
-* You can upload your own mobile app through an APK file using the upload button on the top right hand corner.
-* There are some rules that the uploaded app must adhere to inorder to succeed upload and provisioning -
+- You can upload your own mobile app through an APK file using the upload button on the top right hand corner.
+- There are some rules that the uploaded app must adhere to inorder to succeed upload and provisioning -
 
   1.  The APK has to have a version name and number.
   2.  Max size - 500 MB
@@ -465,8 +451,8 @@ See [FAQ](https://docs.esper.io/home/faq.html)
   4.  APK Signature verification
   5.  Latest Android APK standards (currently we allow apks without icons)
 
-* You can upload your own android app APK file using the upload button on the top right hand corner
-* The uploaded apps will be shown under the 'Uploaded apps' section:
+- You can upload your own android app APK file using the upload button on the top right hand corner
+- The uploaded apps will be shown under the 'Uploaded apps' section:
 
 ![App Management](./assets/OLD_DASHBOARD/1_AM.png)
 
@@ -502,12 +488,12 @@ On clicking the ellipsis under Action, user has options to:
 
 ### Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them:
 
-* You can also allow a user to download apps from Google Play Store.
-* This requires approving a specific app from the Play Store to allow a user to download the app on their device:
+- You can also allow a user to download apps from Google Play Store.
+- This requires approving a specific app from the Play Store to allow a user to download the app on their device:
 
 ![App Management](./assets/OLD_DASHBOARD/5_DT.png)
 
-* You also have the option to handle new 'App Permission Requests' for the approved apps. You can:
+- You also have the option to handle new 'App Permission Requests' for the approved apps. You can:
 
 1.  Approve the requests for new app permissions so that users can update the installed app.
 2.  Revoke the requests for new app permissions so that users cannot update the installed apps.
@@ -518,23 +504,23 @@ On clicking the ellipsis under Action, user has options to:
 
 ![App Management](./assets/OLD_DASHBOARD/8_PW.png)
 
-* You can then select the device you want the app to be installed on by clicking on the 'Select option' and then 'Select the Device':
+- You can then select the device you want the app to be installed on by clicking on the 'Select option' and then 'Select the Device':
 
 ![App Management](./assets/OLD_DASHBOARD/5_AM.png)
 
-* Once the app is installed on the device, a notification shows up indicating the app was successfully installed:
+- Once the app is installed on the device, a notification shows up indicating the app was successfully installed:
 
 ![App Management](./assets/OLD_DASHBOARD/6_AM.png)
 
-* You also have the option to update or uninstall the app from a specific device:
+- You also have the option to update or uninstall the app from a specific device:
 
 ![App Management](./assets/OLD_DASHBOARD/7_AM.png)
 
-* You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. <br> <br/> <i> Note: Unapproving an app does NOT mean uninstalling it. If the app was approved earlier, it will continue to stay installed in your device until it is explicitly uninstalled. Post uninstallation, if it has been unapproved, user/admin will not be able to uninstall it on the device.</i>
+- You can unapprove the app from all the installed devices by clicking the 'UNAPPROVE' button. <br> <br/> <i> Note: Unapproving an app does NOT mean uninstalling it. If the app was approved earlier, it will continue to stay installed in your device until it is explicitly uninstalled. Post uninstallation, if it has been unapproved, user/admin will not be able to uninstall it on the device.</i>
 
 ![App Management](./assets/OLD_DASHBOARD/5_PW.png)
 
-* You can also see all the approved Google Play Store apps under Play Store section:
+- You can also see all the approved Google Play Store apps under Play Store section:
 
 ![App Management](./assets/OLD_DASHBOARD/1_AM.png)
 
@@ -542,40 +528,40 @@ On clicking the ellipsis under Action, user has options to:
 
 Learn about setting up Play for Work apps using Esper.
 
-* Play for Work gives you access to the Enterprise version of Google Play.
-* Here you can either APPROVE or UNAPPROVE applications that can be downloaded onto your dedicated devices. After an app is approved it be visible on Google Play for device installation:
+- Play for Work gives you access to the Enterprise version of Google Play.
+- Here you can either APPROVE or UNAPPROVE applications that can be downloaded onto your dedicated devices. After an app is approved it be visible on Google Play for device installation:
 
 ![Play For Work](./assets/OLD_DASHBOARD/1_PW.png)
 
 ### Approve an app
 
-* Approve an app by clicking **APPROVE** button.
+- Approve an app by clicking **APPROVE** button.
 
 ![Play For Work](./assets/OLD_DASHBOARD/2_PW.png)
 
-* Upon clicking APPROVE a pop-up will appear:
+- Upon clicking APPROVE a pop-up will appear:
 
 ![Play For Work](./assets/OLD_DASHBOARD/3_PW.png)
 
-* Via the pop-up you can set app permission requests:
+- Via the pop-up you can set app permission requests:
 
 ![Play For Work](./assets/OLD_DASHBOARD/4_PW.png)
 
-* Upon clicking SAVE, your settings will be applied to the app. The dedicated device user can then access it from the Play Store within the given app permission requests:
+- Upon clicking SAVE, your settings will be applied to the app. The dedicated device user can then access it from the Play Store within the given app permission requests:
 
 ![Play For Work](./assets/OLD_DASHBOARD/5_PW.png)
 
 ### Unapprove an app
 
-* Once you click UNAPPROVE, the access to the application is removed from user’s Google Play account:
+- Once you click UNAPPROVE, the access to the application is removed from user’s Google Play account:
 
 ![Play For Work](./assets/OLD_DASHBOARD/5_PW.png)
 
-* Click the OK button to remove the application from user’s Google Play account:
+- Click the OK button to remove the application from user’s Google Play account:
 
 ![Play For Work](./assets/OLD_DASHBOARD/6_PW.png)
 
-* After clicking OK you will get a message indicating that it was successfully UNAPPROVED:
+- After clicking OK you will get a message indicating that it was successfully UNAPPROVED:
 
 ![Play For Work](./assets/OLD_DASHBOARD/7_PW.png)
 
@@ -599,23 +585,21 @@ User Alerts to monitor the performance of your devices. You can create a device 
 
 ![Alerts](./assets/OLD_DASHBOARD/1_A.png)
 
-* The alert performs one or more actions based on the value of the metric relative to a threshold over a selected time period.
-* Choose an alert, the **set condition**, the **name** for the alert and then click on **'Create alert'**:
+- The alert performs one or more actions based on the value of the metric relative to a threshold over a selected time period.
+- Choose an alert, the **set condition**, the **name** for the alert and then click on **'Create alert'**:
 
 ![Alerts](./assets/OLD_DASHBOARD/2_A.png)
 
-#### Delete icon
-
-* Use this to delete an alert:
+_Delete icon_ - this to delete an alert:
 
 ![Alerts](./assets/OLD_DASHBOARD/3_A.png)
 
-###  Compliance Policy
+### Compliance Policy
 
 Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices.
 
-* A new policy is created and can be deployed on any device.
-* The new policy gets listed on the **'Compliance Policy'** page which can be edited or deleted as required:
+- A new policy is created and can be deployed on any device.
+- The new policy gets listed on the **'Compliance Policy'** page which can be edited or deleted as required:
 
 ![Policy Management](./assets/OLD_DASHBOARD/3_PM.png)
 
@@ -707,9 +691,7 @@ If clicked, this opens up two more checkboxes-<br>
 
 In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
 
-:::tip
-All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
-::: <br>
+:::tip All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. ::: <br>
 
 ![Create New Policy](./assets/OLD_DASHBOARD/newpolicy.png)
 
@@ -725,24 +707,24 @@ Under the Users tab you are able to view all registered users in your enterprise
 
 New User
 
-* To add a new user, click on `New User` and fill in details of the user in the form:
+- To add a new user, click on `New User` and fill in details of the user in the form:
 
 ![Esper User Management add new user](./assets/OLD_DASHBOARD/2_UM.png)
 
-* Upon creating a new user, you will get a confirmation pop-up:
+- Upon creating a new user, you will get a confirmation pop-up:
 
 ![Esper User Management](./assets/OLD_DASHBOARD/3_UM.png)
 
 Edit icon
 
-* Here you can edit the details of a user.
-* You will be able to change the username, email, full name, password, and role assigned to the user:
+- Here you can edit the details of a user.
+- You will be able to change the username, email, full name, password, and role assigned to the user:
 
 ![Esper User Management](./assets/OLD_DASHBOARD/4_UM.png)
 
 Delete icon
 
-* Click on the `Delete` icon to delete a user from the enterprise. That user will no longer be able to access their account:
+- Click on the `Delete` icon to delete a user from the enterprise. That user will no longer be able to access their account:
 
 ![Esper User Management](./assets/OLD_DASHBOARD/5_UM.png)
 
@@ -772,24 +754,22 @@ If you chose to Lockdown the device, you will see the following screen if the de
 
 ![Esper Lockdown](./assets/OLD_DASHBOARD/geo5.jpg)
 
-You can see for Geofence applied Devices if they have left or entered the Geofence in the Event Feed section: ![](./assets/OLD_DASHBOARD/geo6.png)
+You can see for Geofence applied Devices if they have left or entered the Geofence in the Event Feed section: ![Geofence in Event Feed](./assets/OLD_DASHBOARD/geo6.png)
 
-That’s it! It looks even easier in our [video](https://youtu.be/UkTwhFRTwgQ) 
-Give it a try and let us know what you think, andi@esper.io.
+That’s it! It looks even easier in our [video](https://youtu.be/UkTwhFRTwgQ) Give it a try and let us know what you think, andi@esper.io.
 
-:::tip
-Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  
+:::tip Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  
 :::
 
 ## Company Settings
 
 Learn about Esper's Company Settings.
 
-* Company Settings enables you to set your company details by clicking on the **'Edit profile'** button on the top right hand corner:
+- Company Settings enables you to set your company details by clicking on the **'Edit profile'** button on the top right hand corner:
 
 ![Company Settings](./assets/OLD_DASHBOARD/1_EC.png)
 
-* You are required to fill in your **company information** including:
+- You are required to fill in your **company information** including:
 
 1.  Registered name
 2.  Location
@@ -801,7 +781,7 @@ Learn about Esper's Company Settings.
 
 ![Company Settings](./assets/OLD_DASHBOARD/2_EC.png)
 
-* If you will be using apps from Google you will also need to enroll your company's Google Play account:
+- If you will be using apps from Google you will also need to enroll your company's Google Play account:
 
 ![Company Settings](./assets/OLD_DASHBOARD/3_EC.png)
 
@@ -813,13 +793,11 @@ You can update the Esper Enhanced Android version using our OTA functionality. C
 
 ![OS Updates](./assets/OLD_DASHBOARD/OS.png)
 
-:::tip
-Please note that currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment.
-:::
+:::tip Please note that currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment. :::
 
 ## Developer Options
 
-**Turn App and Device Management into Code**
+### Turn App and Device Management into Code
 
 Esper is focused on helping Android app developers build, deliver, and maintain Dedicated Device applications - whether a restaurant kiosk, retail POS, or logistics hub. We have made our APIs available to Android developers worldwide so they can move rote app and device management actions into reusable code. Anyone can use our APIs to build, orchestrate, and integrate elegant solutions based on their business requirements. We do the heavy lifting by taking care of the infrastructure, so app developers can focus on building great solutions rather than being bogged down in app and device management. We help you procure efficient hardware along with the optional secure, optimized Esper Enhanced Android and our open source APIs and SDKs. We also offer the Esper Plugin for the Android Studio with tools improving the challenging task of app diagnostics - including working with deployed apps running on dedicated devices in the field. Check out [esper.io](http://esper.io) for more information about our rich feature set.
 
@@ -839,7 +817,7 @@ You can then copy (or renew if needed) your API key.
 
 ![Developer Options](./assets/OLD_DASHBOARD/4_DO.png)
 
-The **API key** and **Enterprise ID** can be copied from the dashboard as shown above and can be used to access our [CLI platform](https://github.com/esper-io/esper-cli) (https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](http://api.esper.io) (api.esper.io) in your development and management systems.
+The **API key** and **Enterprise ID** can be copied from the dashboard as shown above and can be used to access our [CLI platform](https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](http://api.esper.io) (api.esper.io) in your development and management systems.
 
 Checkout the relevant documentation on the top right of this page by clicking on [Developer Hub](https://docs.esper.io/) and [API Documentation](https://api.esper.io/).
 
@@ -853,7 +831,7 @@ Remote access to the device can be done from anywhere in the world using espercl
 
 ### Steps to connect to secure remote adb:
 
-1.  On to Esper Dashboard https://{{ esper_tenant_name }}.esper.cloud, Go to `Devices` tab, then to your device and to `Actions`.
+1.  On to Esper Dashboard `https://{{ esper_tenant_name }}.esper.cloud`, Go to `Devices` tab, then to your device and to `Actions`.
 
 2.  At the bottom of the page, Click `enable adb`.
 
@@ -864,7 +842,7 @@ Remote access to the device can be done from anywhere in the world using espercl
 4.  Disconnect usb cable from the device. You should be able to connect adb via port 5555 over tcp
 
 5.  Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your environment on to the host machine.
-    * Check your espercli version: espercli -v
+    - Check your espercli version: espercli -v
     ```sh
     #espercli -v
     Esper CLI is Command line tool for the Esper APIs:  0.0.5
@@ -872,8 +850,8 @@ Remote access to the device can be done from anywhere in the world using espercl
     Python 3.7.3
     Platform Darwin-18.0.0-x86_64-i386-64bit
     ```
-    * Make sure it is >= 0.0.5 to use secure-adb feature.
-    * Upgrade to the latest version of espercli using the following command:
+    - Make sure it is >= 0.0.5 to use secure-adb feature.
+    - Upgrade to the latest version of espercli using the following command:
     ```sh
     pip install -U espercli
     ```
@@ -894,6 +872,4 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 9.  You are connected to adb.
 
-::: warning
-Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again
-:::
+::: warning Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again :::
