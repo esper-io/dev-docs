@@ -562,7 +562,7 @@ User Alerts to monitor the performance of your devices. You can create a device 
 
 ![Alerts](./assets/OLD_DASHBOARD/2_A.png)
 
-**Delete icon**
+#### Delete icon
 
 * Use this to delete an alert:
 
@@ -579,9 +579,9 @@ Policy is a standard set of rules or permissions that are related to security of
 
 Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
 
-### Dropdown menus
+### Available policy options
 
-1.  Device Password Rules - If you choose alphabetic or alphanumeric, a minimum passowrd length can be entered. The default minimum password length is 4. <br> The Password rule is a policy that specifies the rules for the device unlock password that users can set.
+1.  Device Password Rules - If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. <br> The Password rule is a policy that specifies the rules for the device unlock password that users can set.
 
         Alphabetic: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
 
@@ -631,7 +631,7 @@ Below is a list of features you can turn on or off in the policy section. These 
 
 Factory Reset Protection - <Badge text="New" type="tip"/> <br> _FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
 
-![](./assets/GoogleAccountid/factory_reset_protection.png)
+![Factory Reset Protection](./assets/GoogleAccountid/factory_reset_protection.png)
 
 On turning on the FRP button, user needs to enter the Google ID of the account they wish to authorize to enable usage of the device post factory reset. <br/> See [here](./console/policy-management/getgoogleaccount.md) to know how to get the Google account ID of your account and how FRP protects your device.
 
@@ -669,7 +669,7 @@ In order to restrict phone numbers that can make or receive calls to the device,
 All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
 ::: <br>
 
-![](./assets/OLD_DASHBOARD/newpolicy.png)
+![Create New Policy](./assets/OLD_DASHBOARD/newpolicy.png)
 
 You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
 
@@ -679,30 +679,30 @@ Learn about Esper's User Management.
 
 Under the Users tab you are able to view all registered users in your enterprise. Here you can add, delete, and edit users:
 
-![User Management](./assets/OLD_DASHBOARD/1_UM.png)
+![Esper User Management](./assets/OLD_DASHBOARD/1_UM.png)
 
 New User
 
 * To add a new user, click on `New User` and fill in details of the user in the form:
 
-![User Management](./assets/OLD_DASHBOARD/2_UM.png)
+![Esper User Management add new user](./assets/OLD_DASHBOARD/2_UM.png)
 
 * Upon creating a new user, you will get a confirmation pop-up:
 
-![User Management](./assets/OLD_DASHBOARD/3_UM.png)
+![Esper User Management](./assets/OLD_DASHBOARD/3_UM.png)
 
 Edit icon
 
 * Here you can edit the details of a user.
 * You will be able to change the username, email, full name, password, and role assigned to the user:
 
-![User Management](./assets/OLD_DASHBOARD/4_UM.png)
+![Esper User Management](./assets/OLD_DASHBOARD/4_UM.png)
 
 Delete icon
 
 * Click on the `Delete` icon to delete a user from the enterprise. That user will no longer be able to access their account:
 
-![User Management](./assets/OLD_DASHBOARD/5_UM.png)
+![Esper User Management](./assets/OLD_DASHBOARD/5_UM.png)
 
 ## Geofence <Badge text="New" type="tip"/>
 
@@ -712,23 +712,23 @@ In order for geofencing to work, the mobile device needs Internet connectivity a
 
 Setting up a geofence for a device is easy - it starts by selecting Geofence in Esper Console left navigation pane - this brings you up to a wizard for quickly defining the geofence. Click on `New Geofence`:
 
-![](./assets/OLD_DASHBOARD/geo4.png)
+![Esper Geofence Creation](./assets/OLD_DASHBOARD/geo4.png)
 
 In the first screen you define the size of your geofence (meaning where you expect any devices to be for this geofence) - it is a circle that can be as small as 100m radius up to 10km. Note that GPS can drift and jump, thus a geofence smaller than 100m can cause false positives. To set it up at a location simply type the address for the center of the circle, or drag it in the map view to set it up. Give it a name and description, and then click `Next`:
 
-![](./assets/OLD_DASHBOARD/geo3.png)
+![Esper Name Geofence](./assets/OLD_DASHBOARD/geo3.png)
 
 Now you assign devices to this geofence - you can do as many as you need that fit the criteria for the geofence. In this case we are just doing one:
 
-![](./assets/OLD_DASHBOARD/geo1.png)
+![Esper Assign devices](./assets/OLD_DASHBOARD/geo1.png)
 
 Now you define the action to be taken when any of the assigned devices leave the geofence - you can either lock them, have them beep, or both. In this case I went with beep!
 
-![](./assets/OLD_DASHBOARD/geo2.png)
+![Esper Select Actions Geofence](./assets/OLD_DASHBOARD/geo2.png)
 
 If you chose to Lockdown the device, you will see the following screen if the device is taken outside the geofence boundary -
 
-![](./assets/OLD_DASHBOARD/geo5.jpg)
+![Esper Lockdown](./assets/OLD_DASHBOARD/geo5.jpg)
 
 You can see for Geofence applied Devices if they have left or entered the Geofence in the Event Feed section: ![](./assets/OLD_DASHBOARD/geo6.png)
 
