@@ -35,7 +35,8 @@ Here you can see a list of the Esper Enhanced Android updates that have been mad
 ![Group Management](../../assets/OLD_DASHBOARD/7_GM.png)
 
 By clicking on the **'Deploy OS Updates'** button you may choose any available Build number by then clicking on **'Select Build'**. 
-:::tip 
+:::tip
+
 Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment 
 :::
 

@@ -168,9 +168,11 @@ Select the 'uninstall' radio button and choose the app to be uninstalled from th
 Turn off the toggle button from the app list for the preloaded app. It does not uninstall the app but hides it. 
  
  
- ::: tip 
+
+:::tip 
  Please note that some preloaded apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. 
- :::
+
+:::
 
 
 ## Compliance Policy
@@ -266,6 +268,6 @@ This section lets the user capture bug report from the device in question. You c
 
 ![Device Management](../../../assets/OLD_DASHBOARD/10_DM.png)
 
-::: tip
+:::tip
 Please note that the user on the device side needs to swipe down the notification bar and click on the bug report line. On being prompted, the device user needs to choose `Share`. If they choose `Decline` the Bug Report will not be shared.
 :::

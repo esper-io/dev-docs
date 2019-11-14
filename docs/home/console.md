@@ -169,7 +169,9 @@ If clicked, this opens up two more checkboxes-<br>
 1.  `Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts>`<br>
 2.  `Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts>`<br> In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
 
-:::tip All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. :::
+:::tip
+All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
+:::
 
 <br> <br/>
 
@@ -213,7 +215,9 @@ If the `Default Android launcher` is **unchecked**, Esper Device agent will take
 
 - **To add app from Play Store list** - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
 
-:::tip Only once you [Approve a Google Play Store App](./console/device-template/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template. :::
+:::tip
+Only once you [Approve a Google Play Store App](./console/device-template/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
+:::
 
 Click `Next`.
 
@@ -419,7 +423,9 @@ Here you can see a list of the Esper Enhanced Android updates that have been mad
 
 By clicking on the **`Deploy OS Updates`** button you may choose any available Build number by then clicking on **`Select Build`**.
 
-:::tip Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment :::
+:::tip
+Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment
+:::
 
 ![Group Management](./assets/OLD_DASHBOARD/8_GM.png)
 
@@ -442,7 +448,9 @@ This section enables you to manage your applications. You may add the following 
 1.  Upload Private Apps (APK files) to the Esper Cloud.
 2.  Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them.
 
-:::tip To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. :::
+:::tip
+To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section.
+:::
 
 See [FAQ](./faq.md)
 
@@ -697,7 +705,9 @@ If clicked, this opens up two more checkboxes-<br>
 
 In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
 
-:::tip All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. ::: <br>
+:::tip
+All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
+::: <br>
 
 ![Create New Policy](./assets/OLD_DASHBOARD/newpolicy.png)
 
@@ -764,7 +774,8 @@ You can see for Geofence applied Devices if they have left or entered the Geofen
 
 That’s it! It looks even easier in our [video](https://youtu.be/UkTwhFRTwgQ) Give it a try and let us know what you think, andi@esper.io.
 
-:::tip Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  
+:::tip
+Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  
 :::
 
 ## Company Settings
@@ -799,7 +810,9 @@ You can update the Esper Enhanced Android version using our OTA functionality. C
 
 ![OS Updates](./assets/OLD_DASHBOARD/OS.png)
 
-:::tip Please note that currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment. :::
+:::tip
+Please note that currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment.
+:::
 
 ## Developer Options
 
@@ -878,4 +891,6 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 9.  You are connected to adb.
 
-::: warning Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again :::
+:::warning
+Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again
+:::

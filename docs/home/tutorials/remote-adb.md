@@ -7,7 +7,7 @@ lang: en-US
 
 Developer should be able to debug their devices remotely without even physical association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
 
-::: tip
+:::tip
 Steps to connect to remote Adb:
 :::
 
@@ -31,6 +31,6 @@ Steps to connect to remote Adb:
     ```
 8.  You are connected to adb.
 
-::: warning
+:::warning
 Now onwards until device is rebooted, You would be able to connect to the device remotely. Post reboot you have to do Step 1-7 again
 :::

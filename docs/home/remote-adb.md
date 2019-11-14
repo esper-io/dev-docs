@@ -54,4 +54,6 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 9.  You are connected to adb.
 
-::: warning Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again :::
+:::warning
+Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again
+:::

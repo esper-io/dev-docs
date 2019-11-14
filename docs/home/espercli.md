@@ -44,7 +44,9 @@ cd esper-cli
 python setup.py install
 ```
 
-:::tip You don't need to install `setuptools` separately since they are packaged along with the downloaded library :::
+:::tip
+You don't need to install `setuptools` separately since they are packaged along with the downloaded library
+:::
 
 ## Usage
 

@@ -216,7 +216,9 @@ The concept of Device Template is to make it easy for our customers to define ho
 
 Post provisioning, the device will be set and ready to use in production as defined by the template.
 
-:::tip The template is not meant for any other purpose except for provisioning devices. :::
+:::tip
+The template is not meant for any other purpose except for provisioning devices.
+:::
 
 Now, after provisioning, if the admin changes their mind and wants to apply changes to individual devices or groups of devices, they have options to do in the Esper Dashboard. These are categorised by Devices and Groups.
 

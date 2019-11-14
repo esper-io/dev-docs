@@ -7,7 +7,9 @@ Current stable release versions are
     API version: 1.0.0
     SDK version: 0.0.9
 
-:::tip Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io). :::
+:::tip
+Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io).
+:::
 
 We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [GitHub](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
 
@@ -47,7 +49,9 @@ cd esper-client-py
 python setup.py install
 ```
 
-:::tip You do not need to install setuptools separately since they are packaged along with the downloaded library :::
+:::tip
+You do not need to install setuptools separately since they are packaged along with the downloaded library
+:::
 
 ## Usage
 
