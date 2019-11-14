@@ -10,11 +10,11 @@ There are four tile sections on the Home Dashboard page:
 
 ### 1\. Deployment Status
 
-This tile shows the current deployment status of the devices for the current customer environment and includes a clickable link to number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](./console/device-management/index.md) showing the corresponding category of devices.
+This tile shows the current deployment status of the devices for the current customer environment and includes a clickable link to number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
 
 ### 2\. Security Summary
 
-The Security Summary tile shows a summary of security status of the deployed devices. It shows how many of them are at High Risk, Medium Risk, Low Risk and No Risk. Clicking on each takes the user to the [Device Dashboard](./console/device-management/index.md) showing the corresponding category of devices.
+The Security Summary tile shows a summary of security status of the deployed devices. It shows how many of them are at High Risk, Medium Risk, Low Risk and No Risk. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
 
 ### 3\. Where are your Devices?
 

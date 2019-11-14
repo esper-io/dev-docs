@@ -10,6 +10,6 @@ On the the Esper Console, you provision a device using the 6-tap method by:
 ![1 PD.png](../../../../assets/OLD_DASHBOARD/1_PD.png)
 
 * Generate the **QR Code**.
-* Follow the steps to scan this QR code [using the device](../../afw-provisioning/steps-provision-device/index.md)
+* Follow the steps to scan this QR code [using the device](../../afw-provisioning/index.md)
 
 [Return to 6-Tap Provisioning](../index.md)
