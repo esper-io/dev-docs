@@ -707,7 +707,8 @@ In order to restrict phone numbers that can make or receive calls to the device,
 
 :::tip
 All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
-::: <br>
+:::
+ <br>
 
 ![Create New Policy](./assets/OLD_DASHBOARD/newpolicy.png)
 

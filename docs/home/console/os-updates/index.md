@@ -5,7 +5,6 @@ You can update the Esper Enhanced Android version using our OTA functionality. C
 ![OS Updates](../../assets/OLD_DASHBOARD/OS.png)
 
 :::tip
-
 Please note that currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment.
 :::
 

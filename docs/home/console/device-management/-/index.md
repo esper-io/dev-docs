@@ -171,7 +171,6 @@ Turn off the toggle button from the app list for the preloaded app. It does not 
 
 :::tip 
  Please note that some preloaded apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. 
-
 :::
 
 
