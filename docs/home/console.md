@@ -205,7 +205,7 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 
 If the `Default Android launcher` is **unchecked**, Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case.
 
-- **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered seperated by commas.
+- **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
 
 - **Private (uploaded) Apps** - The next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on `Add` to add the private app to the template.
 
@@ -309,11 +309,11 @@ It consists of the following sections -
 3.  [Search](./console.md#search)
 4.  [Device Tile (also, Grid View)](./console.md#device-tile)
 5.  [Map View of Devices](./console.md#map-view)
-6.  Further Device Mangement functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
+6.  Further Device Management functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
 
     a. [Device information](./console/device-management/-/#information) - Hardware, software, memory, location, storage and other detail of the device.
 
-    b. [Actions](./console/device-management/-/#device-actions) - Admin can take actions such as reboot, lock, lockdwon, ping or exit kiosk mode.
+    b. [Actions](./console/device-management/-/#device-actions) - Admin can take actions such as reboot, lock, lockdown, ping or exit kiosk mode.
 
     c. [Event Feed](./console/device-management/-/#event-feed) - Admin can view event feed log of the device.
 
@@ -327,7 +327,7 @@ It consists of the following sections -
 
     h. [Remote View](./console/device-management/-/#remote-viewer) - Admin can remote view the device if device user accepts the request.
 
-    i. [Capture log](./console/device-management/-/#capture-logs) - Admin can capture device's android bug report fromt his section in case any issue arises.
+    i. [Capture log](./console/device-management/-/#capture-logs) - Admin can capture device's android bug report front his section in case any issue arises.
 
 ### Getting Started
 
