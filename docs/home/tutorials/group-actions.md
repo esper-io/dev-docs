@@ -3,7 +3,7 @@ title: How to automate device action onto Group
 lang: en-US
 ---
 
-# Overview
+## Overview
 
 Developers during their deployment and testing phase encounters challenges of managing multiple devices at a time. Few examples:
 
@@ -13,7 +13,7 @@ Developers during their deployment and testing phase encounters challenges of ma
 
 In this tutorial we will use our APIs and Python SDK combined with our Group functionality to perform device deployments systematically and efficiently throughout your entire device fleet. We will be using an example of rebooting devices in a group but same can be easily extend to other device to group actions.
 
-# Setup
+## Setup
 
 1.  [Sign-up free](https://esper.io/signup/) on for the Esper Trial and generate API Key.
 
@@ -35,7 +35,7 @@ CONFIG.api_key_prefix['Authorization'] = 'Bearer'
 ENTERPRISE_ID = '<your-Enterprise-ID>'
 ```
 
-# Usage
+## Usage
 
 ```sh
 esper_group_actions
@@ -44,7 +44,7 @@ esper_group_actions
  -v VALUE
 ```
 
-# Examples
+## Examples
 
 - Reboot all the devices in a group now
 

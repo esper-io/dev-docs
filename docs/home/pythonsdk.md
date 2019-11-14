@@ -25,29 +25,24 @@ We are always in active development and we try our best to keep all of our docum
 
 From PyPI
 
-```sh
-pip install esperclient
-```
+    pip install esperclient
+
 
 or
 
 From [GitHub](https://github.com/esper-io/esper-client-py)
 
-```sh
-pip install git+https://github.com/esper-io/esper-client-py.git
-```
+
+    pip install git+https://github.com/esper-io/esper-client-py.git
 
 ### From source
 
 Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
-```sh
-git clone https://github.com/esper-io/esper-client-py.git
 
-cd esper-client-py
-
-python setup.py install
-```
+    $ git clone https://github.com/esper-io/esper-client-py.git
+    $ cd esper-client-py
+    $ python setup.py install
 
 :::tip
 You do not need to install setuptools separately since they are packaged along with the downloaded library
@@ -57,9 +52,8 @@ You do not need to install setuptools separately since they are packaged along w
 
 Import `esperclient` package
 
-```python
-import esperclient
-```
+    import esperclient
+
 
 Next, you need to configure your client to talk to APIs. For this you will need `SERVER URL` and `API KEY` as generated in [pre-requisites](#pre-requisites) section.
 
@@ -82,20 +76,20 @@ Some additional information you'll need in order to access Esper APIs is your `e
 
 Some of the frequently used examples are given below:
 
-## **Get Token Information**
+## Get Token Information
 
-```python
-from esperclient import TokenApi, ApiClient
-from esperclient.rest import ApiException
+  ```python
+  from esperclient import TokenApi, ApiClient
+  from esperclient.rest import ApiException
 
-# create an instance of the API class
-api_instance = TokenApi(ApiClient(configuration))
-try:
-    api_response = api_instance.get_token_info()
-    print(api_response)
-except ApiException as e:
-    print("Exception when calling TokenApi->get_token_info: %s\n" % e)
-```
+  # create an instance of the API class
+  api_instance = TokenApi(ApiClient(configuration))
+  try:
+      api_response = api_instance.get_token_info()
+      print(api_response)
+  except ApiException as e:
+      print("Exception when calling TokenApi->get_token_info: %s\n" % e)
+  ```
 
 ### Output
 
@@ -116,7 +110,7 @@ except ApiException as e:
 }
 ```
 
-## **Get Enterprise Information**
+## Get Enterprise Information
 
 ```python
 from esperclient import EnterpriseApi, ApiClient
@@ -154,7 +148,7 @@ except ApiException as e:
 }
 ```
 
-## **List All Devices**
+## List All Devices
 
 ```python
 import esperclient
@@ -241,33 +235,33 @@ except ApiException as e:
 }
 ```
 
-## **List All Applications**
+## List All Applications
 
 ```python
-import esperclient
-from esperclient.rest import ApiException
+  import esperclient
+  from esperclient.rest import ApiException
 
-# Configure API key authorization: apiKey
-configuration = esperclient.Configuration()
-configuration.host = 'SERVER_URL'
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'Bearer'
+  # Configure API key authorization: apiKey
+  configuration = esperclient.Configuration()
+  configuration.host = 'SERVER_URL'
+  configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+  configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
-enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
-application_name = 'application_name_example' # str | filter by application name (optional)
-package_name = 'package_name_example' # str | filter by package name (optional)
-is_hidden = true # bool | filter default esper apps (optional)
-limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
+  # create an instance of the API class
+  api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
+  enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
+  application_name = 'application_name_example' # str | filter by application name (optional)
+  package_name = 'package_name_example' # str | filter by package name (optional)
+  is_hidden = true # bool | filter default esper apps (optional)
+  limit = 20 # int | Number of results to return per page. (optional) (default to 20)
+  offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
-try:
-    # List apps in enterprise
-    api_response = api_instance.get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
-    print(api_response)
-except ApiException as e:
-    print("Exception when calling ApplicationApi->get_all_applications: %s\n" % e)
+  try:
+      # List apps in enterprise
+      api_response = api_instance.get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
+      print(api_response)
+  except ApiException as e:
+      print("Exception when calling ApplicationApi->get_all_applications: %s\n" % e)
 ```
 
 ### Output
@@ -307,7 +301,7 @@ except ApiException as e:
 }
 ```
 
-## **Upload an Application**
+## Upload an Application
 
 ```python
 import esperclient
@@ -357,7 +351,7 @@ except ApiException as e:
 }
 ```
 
-## **List App Versions**
+## List App Versions
 
 ```python
 import esperclient
@@ -423,7 +417,7 @@ except ApiException as e:
 }
 ```
 
-## **Deploy Application to Device**
+## Deploy Application to Device
 
 ```python
 import esperclient
@@ -461,7 +455,7 @@ except ApiException as e:
 }
 ```
 
-## **Reboot a Device**
+## Reboot a Device
 
 ```python
 import esperclient

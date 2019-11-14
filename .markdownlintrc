@@ -7,6 +7,7 @@
   // used instead.
   "line-length": false,
   "commands-show-output": false,
+  "code-block-style": false,
   "no-trailing-punctuation": false,
   "no-duplicate-heading" : false,
   "no-trailing-spaces": false,
