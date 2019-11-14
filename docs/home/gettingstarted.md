@@ -10,7 +10,7 @@ Each of these parts are described in detail below:
 
 ### 1. Signup for an Account
 
-The first step to start developing with Esper is to create a developer account. [Signup for a trial account](http://www.esper.io/signup). During the signup process you will will be asked to enter a few, quick details to set up your environment:
+The first step to start developing with Esper is to create a developer account. [Signup for a trial account](https://esper.io/signup). During the signup process you will will be asked to enter a few, quick details to set up your environment:
 
 ![Signup screen](./assets/GettingStarted/SingupScreen.png)
 
@@ -54,7 +54,7 @@ Lastly, check out some wonderful [Tutorials](./tutorials.md) to get you started!
 
 Below are the quick links to the guide for specific actions on the Esper platform.
 
-- [Signup for an Esper Account.](http://www.esper.io/signup)
+- [Signup for an Esper Account.](https://esper.io/signup)
 - [Provision an Android Device to Esper.](./console/device-provisioning/index.md)
 - [Get yourself an API Key.](./console.md#developer-options)
 - [Getting started with Esper SDK.](./pythonsdk.md)

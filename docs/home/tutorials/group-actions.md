@@ -7,9 +7,9 @@ lang: en-US
 
 Developers during their deployment and testing phase encounters challenges of managing multiple devices at a time. Few examples:
 
-* Reboot devices in a group in an automated manner via their application code and do not want to use our GUI dashboard.
-* Increase the brightness of the devices to 100% at 6:00 PM everyday.
-* Lock the device for use during app upgrade etc.
+- Reboot devices in a group in an automated manner via their application code and do not want to use our GUI dashboard.
+- Increase the brightness of the devices to 100% at 6:00 PM everyday.
+- Lock the device for use during app upgrade etc.
 
 In this tutorial we will use our APIs and Python SDK combined with our Group functionality to perform device deployments systematically and efficiently throughout your entire device fleet. We will be using an example of rebooting devices in a group but same can be easily extend to other device to group actions.
 
@@ -17,7 +17,7 @@ In this tutorial we will use our APIs and Python SDK combined with our Group fun
 
 1.  [Sign-up free](https://esper.io/signup/) on for the Esper Trial and generate API Key.
 
-2.  Install Esper Python SDK from [here](https://docs.esper.io/home/pythonsdk.html).
+2.  Install Esper Python SDK from [here](../pythonsdk.md).
 
 3.  Save your `endpoint name` and `enterprise ID`.
 
@@ -46,13 +46,13 @@ esper_group_actions
 
 # Examples
 
-* Reboot all the devices in a group now
+- Reboot all the devices in a group now
 
 ```sh
 ./esper_group_actions -g 83ecfa3c-d2ad-4e76-2cf1-75daff8d7f3d -c reboot
 ```
 
-* Reboot all devices in a group everyday at midnight. Write a cron job in your system running the above command.
+- Reboot all devices in a group everyday at midnight. Write a cron job in your system running the above command.
 
 ```sh
 # crontab -e

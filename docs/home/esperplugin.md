@@ -112,7 +112,7 @@ The Esper Android Tools provide a customized Esper Virtual Device (EVD) image ba
 
 Inorder to get the Esper Virtual Device, simply follow the instructions -
 
-1.  Install & setup [Esper Android Studio Plugin](https://docs.esper.io/home/esperplugin.html#requirements)
+1.  Install & setup [Esper Android Studio Plugin](./esperplugin.md#requirements)
 2.  Please download the AVD from the Android Studio Tools menu as instructed below. Once done, you can simply launch the Esper AVD as you'd any other AVD.
 
 When android studio is started, plugin notifies the user about newly available AVDs or updates available for the installed AVDs.\

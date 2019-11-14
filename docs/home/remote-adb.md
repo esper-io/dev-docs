@@ -7,7 +7,7 @@ lang: en-US
 
 Developer should be able to debug their devices remotely without even physical association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
 
-This document tells you how you can remotely connect to device via secure adb channel. We will be using esper-cli command line tool which internally uses [esperSDK](https://docs.esper.io/home/pythonsdk.html) [APIs](https://api.esper.io/) to provide the secure access between your host machine and device.
+This document tells you how you can remotely connect to device via secure adb channel. We will be using esper-cli command line tool which internally uses [esperSDK](./pythonsdk.md) [APIs](https://api.esper.io/) to provide the secure access between your host machine and device.
 
 Remote access to the device can be done from anywhere in the world using espercli and doesn't have to be in the same network.
 
@@ -23,8 +23,8 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 4.  Disconnect usb cable from the device. You should be able to connect adb via port 5555 over tcp
 
-5.  Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your environment on to the host machine.
-    * Check your espercli version: espercli -v
+5.  Setup [esper-cli](./espercli.md) and configure for your environment on to the host machine.
+    - Check your espercli version: espercli -v
     ```sh
     #espercli -v
     Esper CLI is Command line tool for the Esper APIs:  0.0.5
@@ -32,8 +32,8 @@ Remote access to the device can be done from anywhere in the world using espercl
     Python 3.7.3
     Platform Darwin-18.0.0-x86_64-i386-64bit
     ```
-    * Make sure it is >= 0.0.5 to use secure-adb feature.
-    * Upgrade to the latest version of espercli using the following command:
+    - Make sure it is >= 0.0.5 to use secure-adb feature.
+    - Upgrade to the latest version of espercli using the following command:
     ```sh
     pip install -U espercli
     ```
@@ -54,6 +54,4 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 9.  You are connected to adb.
 
-::: warning 
-Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again
-:::
+::: warning Now onwards until device is rebooted, You would be able to connect to the device remotely using espercli. Post reboot you have to do Step 1-8 again :::

@@ -444,7 +444,7 @@ This section enables you to manage your applications. You may add the following 
 
 :::tip To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. :::
 
-See [FAQ](https://docs.esper.io/home/faq.html)
+See [FAQ](./faq.md)
 
 ### Upload Private Apps (APK files) to Esper Cloud:
 
@@ -831,7 +831,7 @@ Checkout the relevant documentation on the top right of this page by clicking on
 
 Developer should be able to debug their devices remotely without even physical association with the device. ADB is android tool that help you to get take actions on the device, get the device or application logs and help you in resolving customer or in-field issues right by sitting remotely in your office.
 
-This document tells you how you can remotely connect to device via secure adb channel. We will be using esper-cli command line tool which internally uses [esperSDK](https://docs.esper.io/home/pythonsdk.html) [APIs](https://api.esper.io/) to provide the secure access between your host machine and device.
+This document tells you how you can remotely connect to device via secure adb channel. We will be using esper-cli command line tool which internally uses [esperSDK](./pythonsdk.md) [APIs](https://api.esper.io/) to provide the secure access between your host machine and device.
 
 Remote access to the device can be done from anywhere in the world using espercli and doesn't have to be in the same network.
 
@@ -847,7 +847,7 @@ Remote access to the device can be done from anywhere in the world using espercl
     ```
 4.  Disconnect usb cable from the device. You should be able to connect adb via port 5555 over tcp
 
-5.  Setup [esper-cli](https://docs.esper.io/home/espercli.html) and configure for your environment on to the host machine.
+5.  Setup [esper-cli](./espercli.md) and configure for your environment on to the host machine.
     - Check your espercli version: espercli -v
     ```sh
     #espercli -v

@@ -7,17 +7,15 @@ Current stable release versions are
     API version: 1.0.0
     SDK version: 0.0.9
 
-:::tip
-Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io).
-:::
+:::tip Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If you are using a language other than Python and would like to immediately work with the Esper APIs, please consider calling the APIs directly. You can refer to the Esper API documentation [here](https://api.esper.io). :::
 
 We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [GitHub](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
 
 ## Pre-requisites
 
 1.  **Python:** We recommend you use Python 3.4 or above.
-2.  **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `https://{{ esper_tenant_name }}.esper.cloud` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](https://docs.esper.io/home/gettingstarted.html#setup).
-3.  **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud`. See [Generating an API Key](https://docs.esper.io/home/gettingstarted.html#setup).
+2.  **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `https://{{ esper_tenant_name }}.esper.cloud` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](./gettingstarted.md#setup).
+3.  **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud`. See [Generating an API Key](./gettingstarted.md#setup).
 
 ## Installation
 
@@ -49,9 +47,7 @@ cd esper-client-py
 python setup.py install
 ```
 
-:::tip
-You do not need to install setuptools separately since they are packaged along with the downloaded library
-:::
+:::tip You do not need to install setuptools separately since they are packaged along with the downloaded library :::
 
 ## Usage
 
