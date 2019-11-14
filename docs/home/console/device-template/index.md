@@ -36,7 +36,7 @@ You may choose from install apps from a variety of sources-
 
     ![Preloaded apps](../../assets/OLD_DASHBOARD/preloaded-apps-template.png)
 
-2.  Private apps - These are your private or company apps (in-house apps) that can be uploaded on Esper Dashboard via [App Management](../app-management/index.md). After uploading, user may choose to install these apps during provisioning via template in the following section or install them post provisioning.
+2.  Private apps - These are your private or company apps (in-house apps) that can be uploaded on Esper Dashboard via [App Management](../../console.md#apps). After uploading, user may choose to install these apps during provisioning via template in the following section or install them post provisioning.
 
     ![Private apps](../../assets/OLD_DASHBOARD/private-apps-template.png)
 

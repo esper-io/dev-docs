@@ -176,7 +176,7 @@ Turn off the toggle button from the app list for the preloaded app. It does not 
 
 ## Compliance Policy
 
-If user wants to switch to a new policy, they can select from the drop down menu and apply it. To create a new policy, click [here](../../../../home/console/device-management/-/#compliance-policy).
+If user wants to switch to a new policy, they can select from the drop down menu and apply it. To create a new policy, click [here](../../../../home/console/device-management/-/index.md#compliance-policy).
 
 ![Device Management](../../../assets/OLD_DASHBOARD/Device-Compliance_Policy_image_1.png)
 

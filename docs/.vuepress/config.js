@@ -12,7 +12,7 @@
 
 module.exports = {
   base: '/',
-  title: 'Docs',
+  title: 'Esper Docs',
   description: 'Esper documentation',
   plugins: [
     ['vuepress-plugin-reading-time', true],
@@ -87,8 +87,8 @@ module.exports = {
         "api",
         "remote-adb",
         // "tutorials",
-        "support",
-        "faq"
+        // "support",
+        // "faq"
       ]
     },
     displayAllHeaders: false,

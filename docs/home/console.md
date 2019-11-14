@@ -41,22 +41,22 @@ Provisioning is the initial step to configuring and managing your Android device
 
 Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are:
 
-1.  [Provisioner Tool](./adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
+1.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
 
     - All Android Devices - GMS or Non-GMS
     - Devices with or without camera
     - Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
 
-2.  [AFW provisioning](./afw-provisioning/index.md) - AFW (Android for Work) method is best used for:
+2.  [AFW provisioning](./console/device-provisioning/afw-provisioning/index.md) - AFW (Android for Work) method is best used for:
 
     - Devices that have GMS (Google Mobile Services) enabled
     - Devices with a camera for QR code scanning
 
-3.  [QR Code Provisioning](./qr-code-provisioning/index.md)
+3.  [QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
 
     - QR Method like AFW is used for devices that have both GMS (Google Mobile Services) and Camera enabled
 
-4.  [IMEI (or Serial Number) based provisioning](./imei-or-serial-number-based-provisioning/index.md)
+4.  [IMEI (or Serial Number) based provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
     - Used for Esper Enhanced Android Devices
     - IMEI/Serial Number method is use for Bulk provisioning of devices
     - Enables zero touch provisioning
@@ -179,7 +179,7 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 
 ### In the Apps section
 
-Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console/app-management/index.md) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
+Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
 - As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
 
@@ -315,23 +315,23 @@ It consists of the following sections -
 5.  [Map View of Devices](./console.md#map-view)
 6.  Further Device Management functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
 
-    a. [Device information](./console/device-management/-/#information) - Hardware, software, memory, location, storage and other detail of the device.
+    a. [Device information](./console/device-management/-/index.md#information) - Hardware, software, memory, location, storage and other detail of the device.
 
-    b. [Actions](./console/device-management/-/#device-actions) - Admin can take actions such as reboot, lock, lockdown, ping or exit kiosk mode.
+    b. [Actions](./console/device-management/-/index.md#device-actions) - Admin can take actions such as reboot, lock, lockdown, ping or exit kiosk mode.
 
-    c. [Event Feed](./console/device-management/-/#event-feed) - Admin can view event feed log of the device.
+    c. [Event Feed](./console/device-management/-/index.md#event-feed) - Admin can view event feed log of the device.
 
-    d. [Device Graphs](./console/device-management/-/#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
+    d. [Device Graphs](./console/device-management/-/index.md#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
 
-    e. [Apps](./console/device-management/-/#apps) - Admin can unhide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
+    e. [Apps](./console/device-management/-/index.md#apps) - Admin can unhide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
 
     f. [Compliance Policy](./console#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
 
     g. [Security](./console.md#_2-security-summary) - This section gives details regarding the security status of the device.
 
-    h. [Remote View](./console/device-management/-/#remote-viewer) - Admin can remote view the device if device user accepts the request.
+    h. [Remote View](./console/device-management/-/index.md#remote-viewer) - Admin can remote view the device if device user accepts the request.
 
-    i. [Capture log](./console/device-management/-/#capture-logs) - Admin can capture device's android bug report front his section in case any issue arises.
+    i. [Capture log](./console/device-management/-/index.md#capture-logs) - Admin can capture device's android bug report front his section in case any issue arises.
 
 ### Getting Started
 
