@@ -8,7 +8,7 @@ A QR code is generated in the Esper Console using a [Device Template](../../devi
 
 Follow the below two steps to provision a device:
 
-1.  [On the Esper Console](steps-take-cloud-portal-6tap/index.md)
+1.  [On the Esper Console](./steps-take-cloud-portal-6tap/index.md)
 
 2.  [On the Device](device-side-6-tap-method/index.md)
 

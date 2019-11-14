@@ -1,7 +1,5 @@
 # Esper CLI <Badge text="Preview Release" type="tip"/>
 
-<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
-
 This package provides a unified command line interface to the Esper API Services.
 
 Current stable release versions are
@@ -46,9 +44,7 @@ cd esper-cli
 python setup.py install
 ```
 
-:::tip 
-You don't need to install `setuptools` separately since they are packaged along with the downloaded library
-:::
+:::tip You don't need to install `setuptools` separately since they are packaged along with the downloaded library :::
 
 ## Usage
 

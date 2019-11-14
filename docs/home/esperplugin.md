@@ -28,15 +28,14 @@ Click on Accept to proceed. If you have installed third-party plugins before, yo
 
 ## Setup
 
-The setup for the Esper Plugin is Project specific for the currently open Project. If you wish to use the Esper Plugin for other Projects, be sure to perform the setup for each. 
-With your desired Project open, go to File → Settings (or Android Studio → Preferences for Mac). Click on the drop down for Other Settings, and the click on Esper from the resulting list.
+The setup for the Esper Plugin is Project specific for the currently open Project. If you wish to use the Esper Plugin for other Projects, be sure to perform the setup for each. With your desired Project open, go to File → Settings (or Android Studio → Preferences for Mac). Click on the drop down for Other Settings, and the click on Esper from the resulting list.
 
 ![Esper Android Studio Plugin](./assets/plugin/setup/settings.png)
 
 If you don't have credentials, please click on "here" hyperlink in the above screen and sign up by typing your email, full name, company name and contact number. Your end point credentials will be emailed to you.
 
 ![Esper Android Studio Plugin](./assets/plugin/setup/signup.png)
- 
+
 Please type in the relevant credentials for your Endpoint Name, Username, and Password. Hit Apply and then OK.
 
 ![Esper Android Studio Plugin](./assets/plugin/setup/setup.png)
@@ -171,7 +170,7 @@ Inorder to provision the AVD (EVD) to your endpoint, you can grab the Serial num
 
 To find out how to add Serial Number or IMEI number to a template for provisioning, refer to this page -
 
-[Adding IMEI/Serial Number to a Template](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/)
+[Adding IMEI/Serial Number to a Template](./console/device-template/imei-provisioning-template/index.md)
 
 If you'd rather use ADB to get the serial number, you can also use
 

@@ -96,23 +96,23 @@ You can also Preview, Edit, Duplicate & Delete the template:
 
 Click on the ellipsis (...) on the template tile to preview, edit, duplicate or delete a template.
 
-* **Preview Template**
+- **Preview Template**
 
 ![Device Template](../../assets/OLD_DASHBOARD/17_DT.png)
 
 Click on the Preview option to preview the device template. Click on the + sign to expand and then check selected individual components.
 
-* **Edit Template**
+- **Edit Template**
 
 To edit any template, click on the 'Edit Template' option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the 'Update' button on the Preview page.
 
-* **Add Devices (IMEI Provisioning)**
+- **Add Devices (IMEI Provisioning)**
 
 ![Device Template](../../assets/OLD_DASHBOARD/13.1_DT.png)
 
-While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/).
+While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](../device-template/imei-provisioning-template/index.md).
 
-* **Delete Template**
+- **Delete Template**
 
 ![Device Template](../../assets/OLD_DASHBOARD/18_DT.png)
 

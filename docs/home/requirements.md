@@ -1,7 +1,5 @@
 # Requirements
 
-<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
-
 Following sections talk about the minimum requirements for using various parts of Esper.
 
 ## Web-Based Console (\*.esper.cloud)
@@ -20,19 +18,19 @@ Dedicated devices are often behind corporate firewalls, preventing Esper backend
 
 ### URLs
 
-* \*.s3.amazonaws.com
-* clients3.google.com
-* google.com
-* mqtt.shoonyacloud.com:1883
-* \*.shoonyacloud.com
-* \*.esper.cloud
-* 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
+- \*.s3.amazonaws.com
+- clients3.google.com
+- google.com
+- mqtt.shoonyacloud.com:1883
+- \*.shoonyacloud.com
+- \*.esper.cloud
+- 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
 
 ### Ports
 
-* 5228
-* 5229
-* 5230
+- 5228
+- 5229
+- 5230
 
 ## Esper Dev Tools Requirements
 
@@ -45,7 +43,7 @@ Various Esper tools and SDK require a Python installation. The table below lists
 
 ### Esper SDK Language Support
 
-* Python
+- Python
 
 To use the Esper Python SDK, please ensure you are using Python v2.7 or above.
 
@@ -53,9 +51,9 @@ To use the Esper Python SDK, please ensure you are using Python v2.7 or above.
 
 ## Supported Development Platforms
 
-* MacOS
-* Windows
-* Linux
+- MacOS
+- Windows
+- Linux
 
 At Esper, our developers use all of the above platforms to interact with Esper itself. So feel free to use whatever platform fits well for you!
 

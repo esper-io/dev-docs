@@ -169,7 +169,11 @@ If clicked, this opens up two more checkboxes-<br>
 1.  `Restrict incoming calls to uploaded contacts only <upload a csv file of allowed contacts>`<br>
 2.  `Restrict outgoing calls to uploaded contacts only <upload a csv file of allowed contacts>`<br> In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
 
-:::tip All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. ::: <br> <br/> ![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png) <br> <br/> You may reset these values to default at any time by clicking `Reset to Default` button at the bottom. <br> <br/> Click `Next`. <br> <br/>
+:::tip All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. :::
+
+<br> <br/>
+
+![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png) <br> <br/> You may reset these values to default at any time by clicking `Reset to Default` button at the bottom. <br> <br/> Click `Next`. <br> <br/>
 
 ### In the Apps section
 
@@ -272,23 +276,23 @@ You can also Preview, Edit, Duplicate & Delete the template:
 
 Click on the ellipsis (...) on the template tile to preview, edit, duplicate or delete a template.
 
-- **Preview Template**
+### Preview Template
 
 ![Device Template](./assets/OLD_DASHBOARD/17_DT.png)
 
 Click on the `Preview` option to preview the device template. Click on the `+` sign to expand and then check selected individual components.
 
-- **Edit Template**
+### Edit Template
 
 To edit any template, click on the `Edit Template` option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the `Update` button on the Preview page.
 
-- **Add Devices (IMEI Provisioning)**
+### Add Devices (IMEI Provisioning)
 
 ![Device Template](./assets/OLD_DASHBOARD/13.1_DT.png)
 
-While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section `Add devices` that appears if you click on `Edit Template`. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](imei-provisioning-template/index.html).
+While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section `Add devices` that appears if you click on `Edit Template`. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](./console/device-template/imei-provisioning-template/index.md).
 
-- **Delete Template**
+### Delete Template
 
 ![Device Template](./assets/OLD_DASHBOARD/18_DT.png)
 
@@ -300,11 +304,11 @@ This section talks about understanding how to manage your Esper provisioned devi
 
 It consists of the following sections -
 
-1.  [Getting Started](./console.html#getting-started)
-2.  [Categories](./console.html#categories)
-3.  [Search](./console.html#search)
-4.  [Device Tile (also, Grid View)](./console.html#device-tile)
-5.  [Map View of Devices](./console.html#map-view)
+1.  [Getting Started](./console.md#getting-started)
+2.  [Categories](./console.md#categories)
+3.  [Search](./console.md#search)
+4.  [Device Tile (also, Grid View)](./console.md#device-tile)
+5.  [Map View of Devices](./console.md#map-view)
 6.  Further Device Mangement functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
 
     a. [Device information](./console/device-management/-/#information) - Hardware, software, memory, location, storage and other detail of the device.
@@ -331,7 +335,7 @@ If you are logging in to your endpoint for the very first time you will see the 
 
 ![Simulare](./console/images/simulare-1.png)
 
-You can choose to provision a real Android device the details to which are provided in the [Provision Device](https://docs.esper.io/home/devconsole/device-provisioning/) section of this documentation. Or you may choose to Simulate a Device. You will see a momentary "You are all set!" message after which a mock device will be available for you to experiment and play around with till you provision an actual device.
+You can choose to provision a real Android device the details to which are provided in the [Provision Device](./console/device-provisioning/index.md) section of this documentation. Or you may choose to Simulate a Device. You will see a momentary "You are all set!" message after which a mock device will be available for you to experiment and play around with till you provision an actual device.
 
 ![Simulare](./console/images/simulare-2.png)
 
@@ -438,7 +442,9 @@ This section enables you to manage your applications. You may add the following 
 1.  Upload Private Apps (APK files) to the Esper Cloud.
 2.  Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them.
 
-:::tip To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. ::: See [FAQ](https://docs.esper.io/home/faq.html)
+:::tip To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section. :::
+
+See [FAQ](https://docs.esper.io/home/faq.html)
 
 ### Upload Private Apps (APK files) to Esper Cloud:
 
