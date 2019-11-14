@@ -52,7 +52,7 @@ module.exports = {
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   `,
     ],
-    ['link', { rel: 'manifest', href: 'manifest.json' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
   ],
   themeConfig: {
     esper_tenant_name: 'foo',
