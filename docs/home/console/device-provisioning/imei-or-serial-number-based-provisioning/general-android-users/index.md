@@ -2,7 +2,7 @@
 
 For devices not using Esper Enhanced Android (e.g. stock Android), take the following steps to use IMEI based provisioning.
 
-In the Esper Console, create a new Device template then **'Edit'** the template and go to **‘Add devices’**. Upload the IMEI csv file you have previously prepared. Update the template. See more details below:
+In the Esper Console, create a new Device template then **'Edit'** the template and go to **‘Add devices’**. Upload the IMEI CSV file you have previously prepared. Update the template. See more details below:
 
 [Creating a Template with IMEI](../../../device-template/imei-provisioning-template/index.md)
 
@@ -35,7 +35,7 @@ In the Esper Console, create a new Device template then **'Edit'** the template 
 
 7. Open a command prompt on your development computer.
 
-8. [Download the esper-provisioner](../../adb-provisioning/downloadexecutable.md) executable on your computer. This will first download the ADB tools from the Internet, then download the Esper Device Management app (DPC) from the Esper Cloud. The config file for IMEI will need to be placed in the same folder as the executable.
+8. [Download the esper-provisioner](../../adb-provisioning/downloadexecutable.md) executable on your computer. This will first download the ADB tools from the internet, then download the Esper Device Management app (DPC) from the Esper Cloud. The config file for IMEI will need to be placed in the same folder as the executable.
 
 9. The permission to **allow USB debugging** on the device might pop up again. Click **OK**, and then the DPC will start getting installed.
 

@@ -2,7 +2,7 @@
 
 This page describes how user can provision their devices using the **QR Code** Method.
 
-Similar to the AFW method, the device needs to be prepared for provisioning by bringing up the QR code scanner.
+Similar to the AfW method, the device needs to be prepared for provisioning by bringing up the QR code scanner.
 
 A QR code is generated in the Esper Console using a [Device Template](../../device-template/index.md). It is scanned using the device to complete the provisioning.
 

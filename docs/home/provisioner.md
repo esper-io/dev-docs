@@ -54,7 +54,7 @@ This tool is designed to make provisioning single or multiple devices an easy ta
 
         i. Do the following steps to connect your device:
 
-        ii. Connect the device to the Internet via Cellular or Wi-Fi
+        ii. Connect the device to the internet via Cellular or Wi-Fi
 
         iii. Go to the Home screen and tap the Menu button, select the About Phone option, and select the Build number. Then tap the Build number 6 times to enable Developer options:
 

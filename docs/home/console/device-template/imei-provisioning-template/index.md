@@ -38,9 +38,9 @@ See steps on how to [create a template](../index.md).
 
     ![Device Template](../../../assets/OLD_DASHBOARD/imei_real.png)
 
-## The csv file containing the IMEI's and serial numbers should adhere to the below conditions
+## The CSV file containing the IMEI's and serial numbers should adhere to the below conditions
 
-* The IMEI numbers and serial numbers can be entered separated by comma in the csv file
+* The IMEI numbers and serial numbers can be entered separated by comma in the CSV file
 * The IMEI numbers should be valid 15 digits. Serial numbers do not have any validation.
 * File should not be empty
 * The first line and column of the excel file should be exactly* "imei1, imei2, serialnumber"
@@ -51,7 +51,7 @@ See steps on how to [create a template](../index.md).
 * IMEI and serial number should not be switched.
 * If user does not want to add a second IMEI or serial number, they should leave the space blank between the commas
 
-### Examples for csv , where a serial number or an IMEI number could be missing
+### Examples for CSV , where a serial number or an IMEI number could be missing
 
 ![Screenshot 2019-05-19 at 12.54.58 PM (2).png](../../../assets/OLD_DASHBOARD/imei1.png)
 

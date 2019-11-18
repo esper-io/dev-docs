@@ -9,12 +9,12 @@ Esper provides multiple methods of provisioning a device, which involves downloa
     * Devices with or without camera
     * Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
     
-2.  [AFW provisioning](./afw-provisioning/index.md) - AFW (Android for Work) method is best used for:
+2.  [AfW provisioning](./afw-provisioning/index.md) - AfW (Android for Work) method is best used for:
     * Devices that have GMS (Google Mobile Services) enabled 
     * Devices with a camera for QR code scanning
 
 3.  [QR Code Provisioning](./qr-code-provisioning/index.md)
-    * QR Method like AFW is used for devices that have both GMS (Google Mobile Services) and Camera enabled 
+    * QR Method like AfW is used for devices that have both GMS (Google Mobile Services) and Camera enabled 
     
 4.  [IMEI (or Serial Number) based provisioning](./imei-or-serial-number-based-provisioning/index.md) 
     * Used for Esper Enhanced Android Devices

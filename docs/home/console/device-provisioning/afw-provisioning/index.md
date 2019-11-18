@@ -1,6 +1,6 @@
-# AFW (Android for Work) Provisioning
+# AfW (Android for Work) Provisioning
 
-Android devices that have Google Mobile Services (Gmail, Google Account ) can be provisioned into Esper management console using AFW provisioning method. To being provisioning device needs to be factory reset. <br> <mark> <i> Note: AfW Provisioning method is NOT available for Android devices with Android version below 6.0.\* </i> </mark> </br>
+Android devices that have Google Mobile Services (Gmail, Google Account ) can be provisioned into Esper management console using AfW provisioning method. To being provisioning device needs to be factory reset. <br> <mark> <i> Note: AfW Provisioning method is NOT available for Android devices with Android version below 6.0.\* </i> </mark> </br>
 
 In the Esper Console, a device template needs to be created
 
@@ -17,7 +17,7 @@ In the boot up screen click on **"Start"**:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/1_ProD.png)
 
-- Device needs to be connected to the Internet either using the Mobile network or WiFi
+- Device needs to be connected to the internet either using the Mobile network or WiFi
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/3_PD.png)
 
@@ -25,7 +25,7 @@ In the boot up screen click on **"Start"**:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/5_PD.png)
 
-- Enter **afw#shoonya** in the Google Sign in screen, then click **"Next"**:
+- Enter **afw#esper** in the Google Sign in screen, then click **"Next"**:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/6_PD.png)
 
