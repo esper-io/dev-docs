@@ -1,22 +1,19 @@
-[Introduction](../../console.md) / Compliance Policy
-
 # Compliance Policy
-<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 Learn about Esper's Policy Management.
 
-*   A policy is a set of rules closely related to privacy and security that a device follows.
-*   Policies can be viewed, edited, and deleted.
-*   To create a new policy, click on the **'New Policy'** button:
+* A policy is a set of rules closely related to privacy and security that a device follows.
+* Policies can be viewed, edited, and deleted.
+* To create a new policy, click on the **'New Policy'** button:
 
 ![Policy Management](../../assets/OLD_DASHBOARD/1_PM.png)
 
-*   Enter the policy details and click on **'Create policy'**:
+* Enter the policy details and click on **'Create policy'**:
 
 ![Policy Management](../../assets/OLD_DASHBOARD/2_PM.png)
 
-*   A new policy is created and can be deployed on any device.
-*   The new policy gets listed on the **'Compliance Policy'** page:
+* A new policy is created and can be deployed on any device.
+* The new policy gets listed on the **'Compliance Policy'** page:
 
 ![Policy Management](../../assets/OLD_DASHBOARD/3_PM.png)
 

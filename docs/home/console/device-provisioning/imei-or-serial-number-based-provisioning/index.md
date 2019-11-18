@@ -1,7 +1,4 @@
-[Introduction](../../../console.md) / [Provision Device](../index.md) / IMEI (or Serial number) based Provisioning
-
 # IMEI (or Serial number) based Provisioning
-<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
 
 This page describes how you can provision your devices based on IMEI numbers.
 

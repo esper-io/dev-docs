@@ -1,31 +1,68 @@
 <template>
   <div class="home">
     <div class="homepage__headerbox">
-      <h1 class="homepage__heading">Esper Docs<Badge text="Preview Release" type="tip"/> </h1>
-      <p class="homepage__subheading">Documentation for all the Esper Dev APIs, SDKs, and Tools</p>
+      <h1 class="homepage__heading">
+        Esper Docs<Badge
+          text="Preview Release"
+          type="tip"
+        />
+      </h1>
+      <p class="homepage__subheading">
+        Documentation for all the Esper Dev APIs, SDKs, and Tools
+      </p>
       <p>
-        <a href="https://esper.io/signup/" class="homepage__button">Sign up</a>
-        <a href="/home/" class="homepage__button homepage_button_two">Overview</a>
+        <a
+          href="https://esper.io/signup/"
+          class="homepage__button"
+        >Sign up</a>
+        <a
+          href="/home/"
+          class="homepage__button homepage_button_two"
+        >Overview</a>
       </p>
     </div>
-    <div class="homepage__links__section" style="margin-top: 5rem;">
-      <a href="https://api.esper.io/" class="homepage__links__section__item">
+    <div
+      class="homepage__links__section"
+      style="margin-top: 5rem;"
+    >
+      <a
+        href="https://api.esper.io/"
+        class="homepage__links__section__item"
+      >
         <div style="padding-bottom: 1rem">
-          <img class="no-shadow" src="./icons/ApiReferenceIcon.svg" alt="api">
+          <img
+            class="no-shadow"
+            src="./icons/ApiReferenceIcon.svg"
+            alt="api"
+          >
         </div>
         <div class="homepage__a">API Reference</div>
         <p>API documentation and OpenAPI specificiation</p>
       </a>
-      <a href="/home/espercli.html" class="homepage__links__section__item">
+      <a
+        href="/home/espercli.html"
+        class="homepage__links__section__item"
+      >
         <div style="padding-bottom: 1rem">
-          <img  class="no-shadow" src="./icons/EsperCliIcon.svg" alt="cli">
+          <img
+            class="no-shadow"
+            src="./icons/EsperCliIcon.svg"
+            alt="cli"
+          >
         </div>
         <div class="homepage__a">CLI</div>
         <p>Command line tool for the APIs</p>
       </a>
-      <a href="/home/pythonsdk.html" class="homepage__links__section__item">
+      <a
+        href="/home/pythonsdk.html"
+        class="homepage__links__section__item"
+      >
         <div style="padding-bottom: 1rem">
-          <img class="no-shadow"  src="./icons/EsperSdkIcon.svg" alt="sdk">
+          <img
+            class="no-shadow"
+            src="./icons/EsperSdkIcon.svg"
+            alt="sdk"
+          >
         </div>
         <div class="homepage__a">SDK</div>
         <p>Python library to call the APIs</p>
@@ -37,7 +74,11 @@
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
-          <img class="no-shadow"  src="./icons/EsperPluginIcon.svg" alt="plugin">
+          <img
+            class="no-shadow"
+            src="./icons/EsperPluginIcon.svg"
+            alt="plugin"
+          >
         </div>
         <div class="homepage__a">Tools for Android™ Studio</div>
         <p>Plugin for Android Studio, Virtual Devices, Enhanced Android</p>
@@ -47,7 +88,10 @@
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
-          <img src="./icons/EsperConsoleIcon.svg" alt="console">
+          <img
+            src="./icons/EsperConsoleIcon.svg"
+            alt="console"
+          >
         </div>
         <div class="homepage__a">Console</div>
         <p>Using the Esper Console: Esper Dev & Esper Manage</p>
@@ -57,16 +101,22 @@
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
-          <img class="no-shadow"  src="./icons/EsperBlogIcon.svg" alt="blog">
+          <img
+            class="no-shadow"
+            src="./icons/EsperBlogIcon.svg"
+            alt="blog"
+          >
         </div>
         <div class="homepage__a">Blog</div>
         <p>Find out the latest about Esper on our Blog</p>
       </a>
     </div>
-    <div class="homepage__footer">Apache 2.0 | © 2019 Esper, Inc.
-      <div style="font-size: 0.5em;">Android is a trademark of Google LLC</div>
+    <div class="homepage__footer">
+      Apache 2.0 | © 2019 Esper, Inc.
+      <div style="font-size: 0.5em;">
+        Android is a trademark of Google LLC
+      </div>
     </div>
-    
   </div>
 </template>
 
@@ -75,12 +125,12 @@
   font-size: 1em;
   font-weight: normal;
 }
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 @font-face {
-  font-family: "BlenderPro";
-  src: url("/fonts/BlenderPro-Medium.eot");
-  src: local("‚ò∫"), url("/fonts/BlenderPro-Medium.woff2") format("woff2"),
-    url("/fonts/BlenderPro-Medium.woff") format("woff");
+  font-family: 'BlenderPro';
+  src: url('/fonts/BlenderPro-Medium.eot');
+  src: local('‚ò∫'), url('/fonts/BlenderPro-Medium.woff2') format('woff2'),
+    url('/fonts/BlenderPro-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -98,14 +148,14 @@
   font-weight: 500;
   line-height: 1.25;
   color: #7a55a5;
-  font-family: "BlenderPro";
+  font-family: 'BlenderPro';
 }
 .homepage__subheading {
   max-width: 37rem;
   font-size: 1.4rem;
   line-height: 1.3;
   color: #6a8bad;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   margin: 1.8rem auto;
 }
 
@@ -114,7 +164,7 @@
 }
 .homepage__button {
   font-weight: normal !important;
-  font-family: "BlenderPro";
+  font-family: 'BlenderPro';
   display: inline-block;
   font-size: 1.2rem;
   margin-right: 1rem;
@@ -248,11 +298,11 @@
   border-bottom: none;
   padding-bottom: 0;
   color: #3a5169;
-  font-family: "BlenderPro";
+  font-family: 'BlenderPro';
 }
 
 .homepage__links__section__item > p {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   padding: 0rem 1rem;
   min-height: 54px;
 }
@@ -267,11 +317,11 @@
 <script>
 export default {
   mounted() {
-    let params = new URL(document.location).searchParams;
-    let name = params.get("esper_tenant_name");
+    const params = new URL(document.location).searchParams
+    const name = params.get('esper_tenant_name')
     if (name) {
-      document.cookie = `esper_tenant_name=${name}`;
+      document.cookie = `esper_tenant_name=${name}`
     }
-  }
-};
+  },
+}
 </script>

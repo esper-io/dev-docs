@@ -1,7 +1,4 @@
-[Introduction](../../../console.md) / Device Template
-
 # Device Template
-<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
 
 ## How to use Esper's Device Template.
 
@@ -27,33 +24,31 @@ Click 'Next'.
 
 ### In the Apps section
 
-Select 'Kiosk mode' to pin an app during startup for devices that need to operate in Kiosk Mode. Or choose 'Multi application mode' to give users access to the Home screen in order to be able to use multiple apps on the Esper managed device. 
+Select 'Kiosk mode' to pin an app during startup for devices that need to operate in Kiosk Mode. Or choose 'Multi application mode' to give users access to the Home screen in order to be able to use multiple apps on the Esper managed device.
 
-[Kiosk-Multiapplication mode section](../../assets/OLD_DASHBOARD/kiosk-multiapplication-template.png)
+![Kiosk-Multiapplication mode section](../../assets/OLD_DASHBOARD/kioskMultiApplication.png)
 
-After choosing the app mode, choose the apps that you would like to have installed on your device during provisioning. 
+After choosing the app mode, choose the apps that you would like to have installed on your device during provisioning.
 
 You may choose from install apps from a variety of sources-
-1. Preloaded apps - There are many preloaded apps packaged with android devices. Approve these apps to show up on your device after provisioning by adding their package name in the following section:
 
-![Preloaded apps](../../assets/OLD_DASHBOARD/preloaded-apps-template.png)
+1.  Preloaded apps - There are many preloaded apps packaged with android devices. Approve these apps to show up on your device after provisioning by adding their package name in the following section:
 
+    ![Preloaded apps](../../assets/OLD_DASHBOARD/preloaded-apps-template.png)
 
-2. Private apps - These are your private or company apps (in-house apps) that can be uploaded on Esper Dashboard via [App Management](../app-management/index.md). After uploading, user may choose to install these apps during provisioning via template in the following section or install them post provisioning.
+2.  Private apps - These are your private or company apps (in-house apps) that can be uploaded on Esper Dashboard via [App Management](../../console.md#apps). After uploading, user may choose to install these apps during provisioning via template in the following section or install them post provisioning.
 
-![Private apps](../../assets/OLD_DASHBOARD/private-apps-template.png)
+    ![Private apps](../../assets/OLD_DASHBOARD/private-apps-template.png)
 
+3.  Google apps - You may install apps from Google Play Store that you approved via [Play For Work](../play-work/index.md) as shown below -
 
-3. Google apps - You may install apps from Google Play Store that you approved via [Play For Work](../play-work/index.md) as shown below - 
+    ![Google app Apps](../../assets/OLD_DASHBOARD/googleplay-app-template.png)
 
-![Google app Apps](../../assets/OLD_DASHBOARD/googleplay-app-template.png)
+    <i> Note: Only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.</i>
 
-<i> Note: Only once you [Approve a Google Play Store App](how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.</i>
+    ![How to approve Google play apps](../../assets/OLD_DASHBOARD/approve-google-apps.png)
 
-
-![How to approve Google play apps](../../assets/OLD_DASHBOARD/approve-google-apps.png)
-
-Click 'Next' to move to next section.
+    Click 'Next' to move to next section.
 
 ### In the Branding section
 
@@ -80,7 +75,8 @@ Select an existing Group or create a Group. The devices provisioned using this d
 ![Device Template](../../assets/OLD_DASHBOARD/13_DT.png)
 
 ### On the Preview screen
- You will see a preview of the entire device template. If you wish to edit your settings, use the 'Back' button to go back to the appropriate screen:
+
+You will see a preview of the entire device template. If you wish to edit your settings, use the 'Back' button to go back to the appropriate screen:
 
 ![Device Template](../../assets/OLD_DASHBOARD/14_DT.png)
 
@@ -94,35 +90,32 @@ On clicking the View QR code, there is also an option to download the config.jso
 
 ![Device Template](../../assets/OLD_DASHBOARD/19_DT.png)
 
-  
 You can also Preview, Edit, Duplicate & Delete the template:
 
 ![Device Template](../images/temp_2.png)
 
 Click on the ellipsis (...) on the template tile to preview, edit, duplicate or delete a template.
 
-*   **Preview Template**
+- **Preview Template**
 
 ![Device Template](../../assets/OLD_DASHBOARD/17_DT.png)
 
 Click on the Preview option to preview the device template. Click on the + sign to expand and then check selected individual components.
 
-*   **Edit Template**
+- **Edit Template**
 
 To edit any template, click on the 'Edit Template' option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the 'Update' button on the Preview page.
 
-*   **Add Devices (IMEI Provisioning)**
+- **Add Devices (IMEI Provisioning)**
 
 ![Device Template](../../assets/OLD_DASHBOARD/13.1_DT.png)
 
-While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](https://docs.esper.io/home/devconsole/device-template/imei-provisioning-template/).
+While editing a template, you also have the option to add IMEI/Serial numbers of devices you want to provision with this template. There is a section 'Add devices' that appears if you click on Edit Template. Using this section, user can upload IMEI and Serial numbers. See details on IMEI Provisioning via Template [here](../device-template/imei-provisioning-template/index.md).
 
-*   **Delete Template**
+- **Delete Template**
 
 ![Device Template](../../assets/OLD_DASHBOARD/18_DT.png)
 
 Click on the 'Delete Template' option on top right to delete a selected template.
-
-  
 
 [Return to Introduction](../index.md)

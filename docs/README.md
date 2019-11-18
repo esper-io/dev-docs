@@ -1,6 +1,6 @@
 ---
 home: true
 layout: Homepage
-Website: docs.esper.io
+website: docs.esper.io
 
 ---
