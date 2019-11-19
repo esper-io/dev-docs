@@ -1,6 +1,4 @@
 # Esper SDK for Python <Badge text="Preview Release" type="tip"/>
-<div class="avg-reading-time">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}s</div>
-
 
 Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper Manage. To read more about the various capabilities of Esper Manage and Esper managed devices, please visit [esper.io](https://esper.io).
 
@@ -16,49 +14,46 @@ Note: Esper plans to release SDK support for Kotlin, Java, and JavaScript. If yo
 We are always in active development and we try our best to keep all of our documentation up to date. However, if you have time you can check our latest documentation on [GitHub](https://github.com/esper-io/esper-client-py) for code samples and [API documentation](https://api.esper.io) as well as request and response formats.
 
 ## Pre-requisites
-1. **Python:** We recommend you use Python 3.4 or above.
-2. **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `https://{{ esper_tenant_name }}.esper.cloud` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](https://docs.esper.io/home/gettingstarted.html#setup). 
-3. **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud`. See [Generating an API Key](https://docs.esper.io/home/gettingstarted.html#setup).
+
+1.  **Python:** We recommend you use Python 3.4 or above.
+2.  **Access to Esper Dev console:** Sign up for the Esper Dev Trial to obtain access to the Esper Dev Console with a private Esper Cloud account. During that process you will set your environment name. Once your environment is set up you can login to your account on `https://{{ esper_tenant_name }}.esper.cloud` where "{{ esper_tenant_name }}" is your chosen environment name giving you access to both the Esper Dev Console and the Esper Manage Dashboard. Your `SERVER URL` will be `https://{{ esper_tenant_name }}-api.esper.cloud/api`. See [Requesting an Esper Dev Trial account](./gettingstarted.md#setup).
+3.  **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Manage Dashboard. Web Dashboard for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud`. See [Generating an API Key](./gettingstarted.md#setup).
 
 ## Installation
 
 ### Using `pip install`
 
 From PyPI
-```sh
-pip install esperclient
-```
+
+    pip install esperclient
+
 
 or
 
 From [GitHub](https://github.com/esper-io/esper-client-py)
-```sh
-pip install git+https://github.com/esper-io/esper-client-py.git
-```
+
+
+    pip install git+https://github.com/esper-io/esper-client-py.git
 
 ### From source
 
 Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
-```sh
-git clone https://github.com/esper-io/esper-client-py.git
 
-cd esper-client-py
-
-python setup.py install
-```
+    $ git clone https://github.com/esper-io/esper-client-py.git
+    $ cd esper-client-py
+    $ python setup.py install
 
 :::tip
- You do not need to install setuptools separately since they are packaged along with the downloaded library
+You do not need to install setuptools separately since they are packaged along with the downloaded library
 :::
 
 ## Usage
 
 Import `esperclient` package
 
-```python
-import esperclient
-```
+    import esperclient
+
 
 Next, you need to configure your client to talk to APIs. For this you will need `SERVER URL` and `API KEY` as generated in [pre-requisites](#pre-requisites) section.
 
@@ -81,21 +76,23 @@ Some additional information you'll need in order to access Esper APIs is your `e
 
 Some of the frequently used examples are given below:
 
-## **Get Token Information**
-```python
-from esperclient import TokenApi, ApiClient
-from esperclient.rest import ApiException
+## Get Token Information
 
-# create an instance of the API class
-api_instance = TokenApi(ApiClient(configuration))
-try:
-    api_response = api_instance.get_token_info()
-    print(api_response)
-except ApiException as e:
-    print("Exception when calling TokenApi->get_token_info: %s\n" % e)
-```
+  ```python
+  from esperclient import TokenApi, ApiClient
+  from esperclient.rest import ApiException
 
-*Output*
+  # create an instance of the API class
+  api_instance = TokenApi(ApiClient(configuration))
+  try:
+      api_response = api_instance.get_token_info()
+      print(api_response)
+  except ApiException as e:
+      print("Exception when calling TokenApi->get_token_info: %s\n" % e)
+  ```
+
+### Output
+
 ```python
 {
     "id": "string",
@@ -113,7 +110,8 @@ except ApiException as e:
 }
 ```
 
-## **Get Enterprise Information**
+## Get Enterprise Information
+
 ```python
 from esperclient import EnterpriseApi, ApiClient
 from esperclient.rest import ApiException
@@ -128,7 +126,8 @@ except ApiException as e:
     print("Exception when calling EnterpriseApi->get_enterprise: %s\n" % e)
 ```
 
-*Output*
+### Output
+
 ```python
 {
     "id": "string",
@@ -148,7 +147,9 @@ except ApiException as e:
     "updated_on": "2019-08-29T11:06:03Z"
 }
 ```
-## **List All Devices**
+
+## List All Devices
+
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -178,9 +179,10 @@ try:
     print(api_response)
 except ApiException as e:
     print("Exception when calling DeviceApi->get_all_devices: %s\n" % e)
-
 ```
-*Output*
+
+### Output
+
 ```python
 {
   "count": 0,
@@ -232,34 +234,38 @@ except ApiException as e:
   ]
 }
 ```
-## **List All Applications**
+
+## List All Applications
+
 ```python
-import esperclient
-from esperclient.rest import ApiException
+  import esperclient
+  from esperclient.rest import ApiException
 
-# Configure API key authorization: apiKey
-configuration = esperclient.Configuration()
-configuration.host = 'SERVER_URL'
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-configuration.api_key_prefix['Authorization'] = 'Bearer'
+  # Configure API key authorization: apiKey
+  configuration = esperclient.Configuration()
+  configuration.host = 'SERVER_URL'
+  configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+  configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
-enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
-application_name = 'application_name_example' # str | filter by application name (optional)
-package_name = 'package_name_example' # str | filter by package name (optional)
-is_hidden = true # bool | filter default esper apps (optional)
-limit = 20 # int | Number of results to return per page. (optional) (default to 20)
-offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
+  # create an instance of the API class
+  api_instance = esperclient.ApplicationApi(esperclient.ApiClient(configuration))
+  enterprise_id = 'enterprise_id_example' # str | A UUID string identifying this enterprise.
+  application_name = 'application_name_example' # str | filter by application name (optional)
+  package_name = 'package_name_example' # str | filter by package name (optional)
+  is_hidden = true # bool | filter default esper apps (optional)
+  limit = 20 # int | Number of results to return per page. (optional) (default to 20)
+  offset = 0 # int | The initial index from which to return the results. (optional) (default to 0)
 
-try:
-    # List apps in enterprise
-    api_response = api_instance.get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
-    print(api_response)
-except ApiException as e:
-    print("Exception when calling ApplicationApi->get_all_applications: %s\n" % e)
+  try:
+      # List apps in enterprise
+      api_response = api_instance.get_all_applications(enterprise_id, application_name=application_name, package_name=package_name, is_hidden=is_hidden, limit=limit, offset=offset)
+      print(api_response)
+  except ApiException as e:
+      print("Exception when calling ApplicationApi->get_all_applications: %s\n" % e)
 ```
-*Output*
+
+### Output
+
 ```python
 {
   "count": 0,
@@ -295,7 +301,8 @@ except ApiException as e:
 }
 ```
 
-## **Upload an Application**
+## Upload an Application
+
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -312,7 +319,8 @@ except ApiException as e:
     print("Exception when calling ApplicationApi->upload: %s\n" % e)
 ```
 
-*Output*
+### Output
+
 ```python
 {
   "application": {
@@ -343,7 +351,8 @@ except ApiException as e:
 }
 ```
 
-## **List App Versions**
+## List App Versions
+
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -362,9 +371,10 @@ try:
     print(api_response)
 except ApiException as e:
     print("Exception when calling ApplicationApi->get_app_versions: %s\n" % e)
-
 ```
-*Output*
+
+### Output
+
 ```python
 {
   "count": 0,
@@ -407,7 +417,8 @@ except ApiException as e:
 }
 ```
 
-## **Deploy Application to Device**
+## Deploy Application to Device
+
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -420,9 +431,9 @@ try:
     print(api_response)
 except ApiException as e:
     print("Exception when calling CommandsApi->run_command: %s\n" % e)
-
 ```
-*Output*
+
+### Output
 
 ```python
 {
@@ -442,10 +453,10 @@ except ApiException as e:
   "group_command": "string",
   "issued_by": "string"
 }
-
 ```
 
-## **Reboot a Device**
+## Reboot a Device
+
 ```python
 import esperclient
 from esperclient.rest import ApiException
@@ -459,7 +470,8 @@ except ApiException as e:
     print("Exception when calling CommandsApi->run_command: %s\n" % e)
 ```
 
-*Output*
+### Output
+
 ```python
 {
   "id": "string",
@@ -480,7 +492,4 @@ except ApiException as e:
 }
 ```
 
-
-
 If you face any issue in SDK usage, we recommend you that you reach out to [Esper Dev Support](./support.md)
-

@@ -1,0 +1,20 @@
+{
+  "default": true,
+  // Rule customizations for markdownlint go here
+  // https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md
+
+  // Disable line length restrictions, because editor soft-wrapping is being
+  // used instead.
+  "line-length": false,
+  "commands-show-output": false,
+  "code-block-style": false,
+  "no-trailing-punctuation": false,
+  "no-duplicate-heading" : false,
+  "no-trailing-spaces": false,
+  "no-inline-html": false,
+  // ===
+  // Prettier overrides
+  // ===
+  "no-multiple-blanks": false,
+  "list-marker-space": false
+}
