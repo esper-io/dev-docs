@@ -10,7 +10,7 @@ This is the first tab that comes in view when clicking on `Details` on the Devic
 
 * Memory (Total, in-use, average used, free)
 
-* Location on map
+* Location on map - It might take time sometimes to show up as its an external Google EMM api call for GMS devices. If the device does not show its location, it can helpful to reboot the device. In most cases, for GMS as well as non-GMS devices, location should start showing after staying connected to a network for 30 minutes or so.
 
 * Device code, Registered on, Template name, GMS/Non-GMS
 
@@ -80,6 +80,11 @@ After locking down a device, the button will change to `Unlock` to give admin ac
 
 ![Device Lockdown](../../../assets/devicelockdown/lockdown2.png)
 
+:::tip
+It is possible that some devices might restart on receiving the lockdown command before they go in the lockdown state.
+:::
+
+
 ### ADB access
 
 Turn on ADB of your Esper Managed Device with easy by turning on the ADB toggle button. This only works for physically connected devices via USB.
@@ -116,6 +121,23 @@ This section shows the logs of event feedback received from the active devices. 
 ## Device Graphs
 
 This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, WiFi, and their usage over time.
+
+With the new Telemetry Cloud infrastructure in place, Esper Device metrics have now increased to 15 metrics that can be accessed via Device graphs:
+1. Battery Current 
+2. Wifi Signal Strength
+3. Available Internal Storage
+4. Wifi Link Speed
+5. Data Usage (Download) 
+6. Data Usage (Upload)
+7. Battery Capacity Total
+8. OS Occupied Storage
+9. Battery Current Average
+10. Battery Capacity Count
+11. Available RAM
+12. Battery Level
+13. Battery Voltage
+14. Wifi Frequency
+15. Battery Temperature
 
 ![Device Management](../../../assets/OLD_DASHBOARD/7_DM.png)
 
@@ -220,7 +242,7 @@ Device will send the above 3 fields in DeviceStatus and Device API. BasicIntegri
 3. After every 5 hrs.
 
 
-### Dashboard
+### Security Dashboard
 
 Cloud will receive the above values and figure out the the security state, reason and advise.
 
