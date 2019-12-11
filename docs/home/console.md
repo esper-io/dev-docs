@@ -39,7 +39,7 @@ Read about the Developer Tools and Documentation here -
 
 Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
 
-Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are:
+Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
 
 1.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
 
