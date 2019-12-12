@@ -249,7 +249,7 @@ There is a simple solution to this problem. Simply create a Compliance Policy an
 
 ![](./assets/faq/permissionforapp2.png)
 
-Once you apply the compliance policy on the device/group, you should be able to make tne required permission changes from the Settings on the device.
+Once you apply the compliance policy on the device/group, you should be able to make the required permission changes from the Settings on the device.
 
 ## My device is not adhering to the expected behavior when I take an action on the dashboard.
 
