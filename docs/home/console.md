@@ -39,7 +39,7 @@ Read about the Developer Tools and Documentation here -
 
 Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
 
-Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are:
+Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
 
 1.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
 
@@ -60,6 +60,11 @@ Esper provides multiple methods of provisioning a device, which involves downloa
     - Used for Esper Enhanced Android Devices
     - IMEI/Serial Number method is use for Bulk provisioning of devices
     - Enables zero touch provisioning
+
+    :::tip
+    In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process.
+    :::
+
 
 ## Device Template
 
@@ -121,19 +126,42 @@ Below is a list of features you can turn on or off in the policy section. These 
 
     - **No settings app**: No icon for any settings app will be available for the user to choose from the device’s dashboard.
 
-    - **Esper settings app**: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. Settings provided via this app are limited to:
+    - **Esper settings app**: 
 
-      1.  Changing the Wi-Fi AP
+       Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. This app is made secure via the Esper settings app password protection. Settings provided via this app are limited to:
+        1. Changing the Wi-Fi Access Point
 
-      2.  Enabling the “flashlight” if there’s a camera flash LED on the device
+        2. Enabling the “flashlight” if there’s a camera flash LED on the device
 
-      3.  Control the display orientation of the device.
+        3. Control the display orientation of the device.
 
-    - **Contact Esper** to setup a password for the Esper Settings app.
+        4. A robust means for users to be able to factory reset their device irrespective of the policy. 
+        
+        5. About - We have added information regarding provisioning endpoint in the about section for the user to be able to view the endpoint name the device is registered in, in case they have access to multiple endpoints.
+        
+        6. Kiosk app - An option to switch the kiosk app from this menu. User can choose any installed app on device to act as the kiosk app.
+        
+        7. Esper Branding - User can turn off the Esper logo in case they wish to use their own logo as a reseller of Esper platform.
+    
 
+    ![](./assets/esperSettingsApp/espersettingapp1.png)
+
+5. **Dock & Empty Settings App Password** <br> 
+    In Kiosk mode, Device user can access a hidden dock consisting of menu items such as Esper settings app by tapping 3 times on top right corner or by clicking the power button 3 times. This text field is to protect accessibility for this feature via password.  The dock menu consists of multi-app mode - kiosk mode switch, Esper settings app and Power button. 
+
+    ![](./assets/esperSettingsApp/espersettingapp2.png)
+
+    The textbox here accepts the common password for Dock and the Esper Settings App. It is now acceptable to not have any password for these features for the ease of device users. Esper, however, recommends that passwords are setup for stronger security.
     <br/>
 
-### Factory Reset Protection <Badge text="New" type="tip"/>
+### Google Account Permissions
+
+ This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
+Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
+
+![Google Account Permissions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+### Factory Reset Protection 
 
 FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
 
@@ -160,9 +188,15 @@ Other Template Compliance Policy Toggle Buttons-<br>
 13. **Edit date and time**<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
 14. **Application uninstall**<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
 15. **USB File transfer** <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
-16. **Google Assistant** <Badge text="New" type="tip"/> <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br> <br/>
+16. **Google Assistant** <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br> 
+17. **Local App Install**<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
+
+![LocalAppInstall](./assets/policy/localappinstall.png)
+ <br/>
 
 ### Restrict outgoing/incoming calls using customised dialer.
+
+![Restrictcall](./assets/policy/restrictcall.png)
 
 If clicked, this opens up two more checkboxes-<br>
 
@@ -174,28 +208,38 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 :::
 
 <br> <br/>
-
+Compliance Policy Section of the Device Template - 
 ![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png) <br> <br/> You may reset these values to default at any time by clicking `Reset to Default` button at the bottom. <br> <br/> Click `Next`. <br> <br/>
 
 ### In the Apps section
 
-Select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give users access to the Home screen. Choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
+In this section, you can select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give device-users access to the Home screen. You can choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
-- As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
+As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
+
+![Device Template](./assets/OLD_DASHBOARD/devicemode.png)
 
 1.  **Kiosk mode** - This mode pins the selected private app as the default app that stays pinned on the device screen permanently unless user exits the kiosk mode. This mode is useful for cases where device is single purpose and only app needs to run on it and admin does not wish device users to be able to interact with the device in any other manner. For example airport kiosks.
 
 2.  **Multi-app mode** - In multi app mode, user is free to use any private app, google play app or preloaded (in-ROM) app which are approved and installed by the admin. It is closely similar to BYOD but admin retains the control of the apps that are usable by the device user. For example a grocery delivery company wants their delivery person using the device to be able to use company app as well as the google maps.
 
-### Default Android Launcher <Badge text="New" type="tip"/>
+### Default Android Launcher 
 
-The next section is a simple checkbox labeled "Default Android Launcher" - This feature, if checked will provision devices with default android screen with no restrictions on the apps that can be installed and used. It will also disable various Esper Agent features and is best used when device usage is desired in loosely controlled environment. <br>
-
-Here is a list of Esper features that will be **unavailable** in this mode as it applies the launcherless version of the Esper Device agent -
-
-• Capture Screenshot <br> • Remote View and Remote Control<br> • Install an app via dashboard<br> • Uninstall an app via dashboard<br> • Over the Air OS updates for Esper Enhanced Android OS<br> • Latest Device Agent updates for Devices with Android version less than 6.0
+The next section is a simple checkbox labeled "Default Android Launcher" - 
+This feature gives user an option to choose Esper Agent to run in the background as an app instead of being permanently pinned on the screen. 
 
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc.png)
+
+When this box is **checked**, the default android launcher will be active and user can exit Esper Agent (DPC) like any other android app. Esper Agent (DPC) will continue to run in the background and execute device management functionality. Many of Esper features will not be applicable if this version of Esper Agent (DPC) is installed.
+
+If the Default Android launcher is **unchecked**, Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case. This use case gives more control to the Dashboard admin on the apps that a device user may use and actions that can be taken on the device. 
+<br>
+
+Here is a list of Esper features that will be **unavailable in the default android launcher (also known as launcherless mode)**  as it applies the launcherless version of the Esper Device agent -
+
+• Capture Screenshot <br> • Remote View and Remote Control<br>  • Over the Air OS updates for Esper Enhanced Android OS<br> • Latest Device Agent updates for Devices with Android version less than 6.0
+
+
 
 The device screen will look similar to a regular android device with `Esper Device Agent` showing up as an app that can be opened and closed.
 
@@ -205,15 +249,27 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
 
-If the `Default Android launcher` is **unchecked**, Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case.
+
+
+
 
 - **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
 
+  ![Device Template](./assets/template-app/preloadedapps.png)
+
 - **Private (uploaded) Apps** - The next section is for Private(uploaded) apps. User needs to upload APK files on App Management previously. Once uploaded, in template, user may click on the app from the dropdown, select the version and click on `Add` to add the private app to the template.
 
-  ![Device Template](./assets/OLD_DASHBOARD/Temp_App_Management_new1.png)
+   ![Device Template](./assets/template-app/privateapps.png)
 
 - **To add app from Play Store list** - click on the apps to add from the list of available apps. This section is a little tricky because user needs to approve the Google apps from Play Store or Play for Work section before they are able to choose them in this section.
+
+
+   ![Device Template](./assets/template-app/playstoreapps.png)
+
+For convenience, a Playstore tab has been provided on this page where users can approve Google apps that need to be added to template.
+
+   ![Device Template](./assets/template-app/playstoreicon.png)
+
 
 :::tip
 Only once you [Approve a Google Play Store App](./console/device-template/how-approve-google-play-store-app/index.md), you may add it from the list shown in the Device Template.
@@ -235,14 +291,14 @@ Click `Next`.
 
 ### In the Settings section
 
-Change Device settings from Esper Dashboard. Following are features available <br> ![Esper Device Settings](./assets/settings/settings.png) <br>
+Change Device settings from Esper Dashboard. Following are features available <br> 
 
 - Turn on/off bluetooth <br>
 - Select screen timeout duration <br>
 - Select screen orientation <br>
 - Select GPS accuracy <br>
 - Increase/decrease Brightness, Volume (alarm, notification, ring and music) <br>
-- Timezone <Badge text="New" type="tip"/> - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
+- Timezone  - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
 
 ![Esper Timezone](./assets/settings/timezone.png)
 
@@ -387,61 +443,316 @@ Once you click on the cluster icon, devices in the cluster will appear. Upon cli
 
 ## Groups
 
-Learn about Esper's Group Management.
+Using Groups devices can be sectioned into groups and mass actions can be performed on a group of devices. Users can perform mass reboot, lock, check heartbeat, apply a compliance policy, install/uninstall apps and OS updates on thousands of devices in one click using Group features. 
 
-Using Groups devices can be sectioned into groups and mass actions can be performed on a group of devices. You can create a Group by entering a unique name. Once you create a Group, you have the option to add from all existing provisioned devices which exist in the **"All devices"** group. Users can also create a Group during [template creation](./console/device-template/index.md).
+There is a pre-existing group called "All Devices", which is the default group where devices fall unless otherwise specified during provisioning via template.
 
-You can delete a Group by selecting one or many Groups using the top right button **`Delete group`**. There is also an option to refresh. Additionally, a search capability for search via group name has been provided. The Group tile will show the name and number of devices in the Group:
+### Creating a Group
+You can create a Group by clicking the button `Create Group` on the top right. 
+
+![Group Management](./assets/groups/creategroup2.png)
+
+Enter a unique name and click Create. 
+
+![Group Management](./assets/groups/creategroup1.png)
+
+Once you create a Group, you have the option to add devices from the  default **All devices** group. To move devices, users can -
+- click on the checkboxes on the left of the device that needs to be moved.  
+- select all devices by clicking on the top checkbox. 
+- search for a particular device by enter device code via Search box. 
+- sort the device list by 'last updated'. 
+
+![Group Management](./assets/groups/creategroup3.png)
+
+Once the required devices are selected, user can click on `Add devices` to add the selected devices to the Group. Individual devices can be added by clicking on the plus sign on right end.
+
+![Group Management](./assets/groups/creategroup4.png)
+
+Devices can be moved back to All Devices by selecting checkbox and clicking on `Remove selected`. Individual devices can be removed by clicking on the trash button on right end.
+
+![Group Management](./assets/groups/creategroup5.png)
+
+Once the correct set of devices have been moved to the Group. Click `Save`. You should receive a message "Successfully updated the group" on the left corner of the dashboard. 
+
+![Group Management](./assets/groups/creategroup6.png)
+
+You should now view list of all groups created in tile view. We will know more about 'group tile' further below into this document.
 
 ![Group Management](./assets/OLD_DASHBOARD/1_GM.png)
 
-On clicking **`View more`**, you can take actions such as reboot, lock, ping, and wipe for the devices in the Group:
+Another way to create a groups is during [template creation](./console/device-template/index.md). In the group section on template, user can pre create a group such that any device provisioned using the said template will fall in the (created and) selected group.
 
-![Group Management](./assets/OLD_DASHBOARD/2_GM.png)
+![Group Management](./assets/groups/creategroup7.png)
 
-You can change a policy for all the devices in a Group:
+Refer to Device Template->Group section for more information on this. 
 
-![Group Management](./assets/OLD_DASHBOARD/3_GM.png)
+### Deleting a Group
 
-You can install apps to all the devices in a Group:
+You can delete a Group by selecting one or many Groups using the top right button **`Delete group`**. 
 
-![Group Management](./assets/OLD_DASHBOARD/4_GM.png)
+- Click on `Delete Group` (shown in image below)
+- Select by clicking on the groups you wish to delete
+- Click on bottom right `Delete Selected Groups`  
 
-You can also schedule app installation for the Group:
+![Group Management](./assets/groups/deletegroup1.png)
+
+### Refresh Groups list
+There is an option to refresh groups screen by clicking on a button `Refresh` on the top right corner to view recent changes.
+
+![Group Management](./assets/groups/refreshgroup1.png)
+
+### Search Group
+
+User can search for a group by typing the group name in the search box on top right. 
+
+![Group Management](./assets/groups/searchgroup1.png)
+ 
+### Group Tile 
+ 
+ The Groups are listed in tile view that contain show the group icon, name and number of devices in the Group.
+
+![Group Management](./assets/groups/grouptile1.png)
+
+On clicking **`Details`**, you can take actions such as reboot, lock, ping, and wipe for the devices in the Group
+
+![Group Management](./assets/groups/groupdetail1.png)
+
+There are 5 tabs under the Group Details - 
+
+- Manage 
+- Actions
+- Compliance Policy
+- Apps
+- OS updates
+
+
+1. **Manage** 
+This section is to view the `Device tile` of all devices present in the group. 
+
+![Group Management](./assets/groups/groupdetail1.png)
+
+The device tiles will show the following information for each device in the group - 
+
+- Device name
+- Device manufacturer
+- Last seen date, time and location
+ - Active/Inactive status
+- Gms/Non-Gms
+- Risk Status
+- Ethernet, Wi-Fi and Cellular connection name and status
+- Link to device details
+
+See more about information about individual devices in the [Devices](http://localhost:8080/home/console.html#devices) section on this document.
+
+There are six filters provided to sort through the list of device tiles based on the following categories - 
+
+![Group Management](./assets/groups/groupsmanage1.png)
+
+- Under provisioning - Devices in the group that are currently undergoing provisioning
+- Active devices - Devices in the group that are currently active ie online
+- Inactive devices - Devices in the group that are currently inactive ie offline
+- Devices at risk - Devices in the group that are at high, medium or low security risk (See Security in [Devices](http://localhost:8080/home/console.html#devices) for more information on how the security risk level of a device is calculated)
+- Devices with low battery - Devices in the group with battery percentage less than 15%
+- Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
+
+2. **Actions**
+ The groups actions such as Reboot, Screen lock and Heartbeat can be applied on all the devices in a group as a mass action. 
+ 
+ ![Group Management](./assets/groups/groupsactions1.png)
+
+ Reboot - When the Reboot action is applied on a group, all active devices will receive the command to reboot. The live report generated will show the progress bar of reboot action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+
+  ![Group Management](./assets/groups/groupsactions2.png)
+
+  Screen lock - When the Screen lock action is applied on a group, all active devices will receive the command to lock screen. The live report generated will show the progress bar of locking action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+
+  ![Group Management](./assets/groups/groupsactions3.png)
+ 
+
+Heart beat - When the Heart beat action is applied on a group, all active devices will receive the command to report whether they are online (or alive). The live report generated will show the progress bar of 'ping' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+
+  ![Group Management](./assets/groups/groupactions4.png)
+
+:::tip
+The groups actions will get applied on active (online) devices. The inactive devices currently do not get the command if they are not online at the time the action was applied.
+:::
+
+3. **Compliance Policy** 
+ A pre created compliance policy can be chosen from the drop down and applied to all devices in the group in one click. A preview of the chosen policy can be viewed under the drop down as seen below. 
+
+![Group Management](./assets/groups/groupspolicy.png)
+
+When a Compliance Policy is applied on a group, all active devices will receive the command to comply by the given policy. The live report generated will show the progress bar of application of policy on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+
+![Group Management](./assets/groups/groupspolicy1.png)
+
+On clicking `Show more` user can see the details such as name of active devices, model, current policy and last updated for Active as well as Inactive devices.
+
+Active device detail status for policy application-
+![Group Management](./assets/groups/groupspolicy2.png)
+
+Inactive device detail status for policy application-
+![Group Management](./assets/groups/groupspolicy3.png)
+
+Once the policy application process is completed, another line is added detailing the policy application failure on devices. This lists Device names, model and reason for failure as shown below-
+![Group Management](./assets/groups/groupspolicy4.png)
+
+
+:::tip
+The compliance policy will get applied on active (online) devices. The inactive devices currently do not get the policy if they are not online at the time the action was applied.
+:::
+
+4. **Apps** 
+
+The app section in group has 3 sub sections- 
+1. Install/Uninstall
+2. Scheduled Install
+3. Approvals
+
+1. Install/Uninstall - This section is used to install of uninstall private (or uploaded) apps to the groups by selecting them from dropdown and clicking install or uninstall.
+
+![Group Management](./assets/groups/groupsapps1.png)
+
+As seen in case of action and policy, here also the installation or uninstallation command is send only to active devices and the progress report of this process can be viewed as shown below-
+
+Group Install- Installation of private apps in groups.
+![Group Management](./assets/groups/groupsapps2.png)
+
+On clicking `Show more`-
+![Group Management](./assets/groups/groupsapps3.png)
+
+![Group Management](./assets/groups/groupsapps4.png)
+
+Once the process completes, another line showing details on Failed installation also appears at the end along with detailed reasoning -
+
+![Group Management](./assets/groups/groupsapps5.png)
+
+On clicking `Close` the installation view is hidden however the process continues in the background.
+
+Groups Uninstall - Uninstallation of private apps in groups.
+![Group Management](./assets/groups/groupsapps6.png)
+
+On clicking `Show more`-
+![Group Management](./assets/groups/groupsapps7.png)
+
+![Group Management](./assets/groups/groupsapps8.png)
+
+Once the process completes, another line showing details on Failed installation also appears at the end along with detailed reasoning -
+
+![Group Management](./assets/groups/groupsapps9.png)
+
+On clicking `Close` the uninstallation view is hidden however the process continues in the background.
+
+2. Scheduled install
+
+You may create a scheduled app install by clicking the `Create Scheduled install` button. Enter the App name, version, schedule the start and end date/time for the app install. Lastly, give this schedule a unique name and click "Create Schedule" to get started.
+
+![Group Management](./assets/OLD_DASHBOARD/5.1_GM.png)
+
+You can also view scheduled app installation for Group along with start and end time.
 
 ![Group Management](./assets/OLD_DASHBOARD/5_GM.png)
+
 
 You can click on **`View Results`** to see the number of successful and unsuccessful device installations:
 
 ![Group Management](./assets/OLD_DASHBOARD/6_GM.png)
 
-If your devices are using Esper Enhanced Android, you will also see a tab for **`OS updates`**.
+3. Approvals
+The approvals section is to hide or un-hide In-ROM apps (also referred to as Preloaded apps) on devices.
 
-Here you can see a list of the Esper Enhanced Android updates that have been made on the current group with details such as build number, device type, number of devices, and date deployed along with an option to view the details:
+The catch is that admin needs to enter the exact package name of the In-ROM app that they wish to approve or unapprove. The best way to get the exact package name of an In-ROM app is via an adb command as shown below - 
 
-![Group Management](./assets/OLD_DASHBOARD/7_GM.png)
+`adb shell pm list packages`
+
+User should turn on adb for the device (physically connected via USB) from Device->Actions(Settings), authorize adb usage from the device and run the above command to get the exact package name as shown -  
+
+![Group Management](./assets/groups/groupsapps11.png)
+
+
+Approve App -
+
+Enter the package name as obtained from adb command and click Approve-
+![Group Management](./assets/groups/groupsapps10.png)
+
+![Group Management](./assets/groups/groupsapps12.png)
+
+On clicking a prompt is shows as below - 
+
+![Group Management](./assets/groups/groupsapps13.png)
+Clicking `No` will cancel the action.
+Clicking `Yes` will bring up live report of the app approval action on the group that looks like this - 
+
+![Group Management](./assets/groups/groupsapps14.png)
+
+Once the process completes, the total number of Successful, Unsuccessful and Inactive devices can be seen. Also, a 'View failed devices' report appears at the left bottom of the screen.
+
+![Group Management](./assets/groups/groupsapps15.png)
+
+On clicking the same, reasoning for failure of approval command can be viewed.
+
+![Group Management](./assets/groups/groupsapps16.png)
+
+Unapprove App- 
+
+Enter the package name as obtained from adb command and click Unapprove-
+![Group Management](./assets/groups/groupsapps17.png)
+
+
+
+On clicking a prompt is shows as below - 
+
+![Group Management](./assets/groups/groupsapps18.png)
+
+Clicking `No` will cancel the action.
+Clicking `Yes` will bring up live report of the app unapproval action on the group that looks like this - 
+
+![Group Management](./assets/groups/groupsapps19.png)
+
+Once the process completes, the total number of Successful, Unsuccessful and Inactive devices can be seen. Also, a 'View failed devices' report appears at the left bottom of the screen.
+
+![Group Management](./assets/groups/groupsapps20.png)
+
+On clicking the same, reasoning for failure of approval command can be viewed.
+
+![Group Management](./assets/groups/groupsapps21.png)
+
+
+
+
+:::tip
+Please note that approve and unapprove mean show and hide. The unapproved apps do not mean uninstallation of these apps.
+:::
+
+5. **OS Updates**
+
+This section is only relevant for fleet of Esper Enhanced Android devices.  
+
+Here you can see a list of the Esper Enhanced Android updates that have been deployed on the current group with details such as build number, device type, number of devices, and date deployed along with an option to view results.
+
+![Group Management](./assets/groups/groupsos1.png)
 
 By clicking on the **`Deploy OS Updates`** button you may choose any available Build number by then clicking on **`Select Build`**.
+
+![Group Management](./assets/groups/groupsos2.png)
 
 :::tip
 Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment
 :::
 
-![Group Management](./assets/OLD_DASHBOARD/8_GM.png)
+![Group Management](./assets/groups/groupsos3.png)
 
 The **`Number of devices`** will populate with the devices in the group on which this update is applicable; this pertains to those that have an OS build version lower than the selected version for the deployment:
 
-![Group Management](./assets/OLD_DASHBOARD/9_GM.png)
+![Group Management](./assets/groups/groupsos4.png)
 
 You may add the installation name, any pertinent notes, and after that click **`Save`**:
 
-![Group Management](./assets/OLD_DASHBOARD/10_GM.png)
 
-In a future update we will give users the option to choose the time window for their OS update installation.
+Coming Soon! 
+In a future update users will have the option to choose the time window for their OS update installation.
 
 ## Apps
-
-Learn about Esper's App Management.
 
 This section enables you to manage your applications. You may add the following type of apps to your device:
 
@@ -452,18 +763,18 @@ This section enables you to manage your applications. You may add the following 
 To approve In-ROM apps or Preloaded apps in a device, you may do so from template during provisioning or post provisioning from Groups->Apps->Approvals section.
 :::
 
-See [FAQ](./faq.md)
 
 ### Upload Private Apps (APK files) to Esper Cloud:
 
 - You can upload your own mobile app through an APK file using the upload button on the top right hand corner.
 - There are some rules that the uploaded app must adhere to inorder to succeed upload and provisioning -
 
-  1.  The APK has to have a version name and number.
+  1.  The APK has to have a unique version name and number.
   2.  Max size - 500 MB
   3.  Extension - .apk [only]
   4.  APK Signature verification
-  5.  Latest Android APK standards (currently we allow apks without icons)
+  5.  The app should not set itself as the default launcher. This will cause conflict with the Esper Agent(DPC).
+  6.  Latest Android APK standards (currently we allow apks without icons)
 
 - You can upload your own android app APK file using the upload button on the top right hand corner
 - The uploaded apps will be shown under the 'Uploaded apps' section:
@@ -480,7 +791,7 @@ When you click on any private app, it will open the details of the same. For exa
 6.  The date the app was uploaded on
 7.  Size of the app
 8.  Compatibility with SDK version
-9.  App description <Badge text="New" type="tip"/> - We now have a new field for you to add your app version specific description or release notes.
+9.  App description  - We now have a new field for you to add your app version specific description or release notes.
 
 ![App Management](./assets/apps/apps3.png)
 
@@ -493,7 +804,7 @@ Here is another example of an app with description -
 On clicking the ellipsis under Action, user has options to:
 
 1.  Delete the app version
-2.  Edit description <Badge text="New" type="tip"/> - You can now add and edit description or release notes per version of the app. ![App Management](./assets/apps/apps2.png)
+2.  Edit description  - You can now add and edit description or release notes per version of the app. ![App Management](./assets/apps/apps2.png)
 
     A description can also be added during app upload.
     ![App Management](./assets/apps/apps4.png)
@@ -608,7 +919,7 @@ _Delete icon_ - this to delete an alert:
 
 ![Alerts](./assets/OLD_DASHBOARD/3_A.png)
 
-### Compliance Policy
+## Compliance Policy
 
 Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices.
 
@@ -623,17 +934,19 @@ Below is a list of features you can turn on or off in the policy section. These 
 
 1.  Device Password Rules - If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. <br> The Password rule is a policy that specifies the rules for the device unlock password that users can set.
 
-        Alphabetic: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
+    Alphabetic: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
 
-        Alphanumeric: Expands from Alphabetic to also include numbers and special characters.
+    Alphanumeric: Expands from Alphabetic to also include numbers and special characters.
 
-        None: There is no password required to lock the device.
+    None: There is no password required to lock the device.
 
-        The password for a device is setup during the initial setup of the device by the user.
+    The password for a device is setup during the initial setup of the device by the user.
 
     <br/>
 
-2.  Default App Permission<br> Default app permissions determines enforcement of the runtime-permission rule across all the apps on a device (e.g. Gallery, Camera).
+2.  Default App Permission<br> 
+
+    Default app permissions determines enforcement of the runtime-permission rule across all the apps on a device (e.g. Gallery, Camera).
 
 
     Allow automatically: This rule will grant all the permissions any app requests without showing a prompt to the user.
@@ -644,32 +957,50 @@ Below is a list of features you can turn on or off in the policy section. These 
 
 3.  System Updates<br> The System updates option allows you to enforce a system update policy on the device when a system update/OTA update is available.
 
-        Update automatically: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
+    Update automatically: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
 
-        Postpone installation: This option postpones installation of an OTA update for 30 days.
+    Postpone installation: This option postpones installation of an OTA update for 30 days.
 
-        Windowed installation: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
+    Windowed installation: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
 
      <br/>
 
-4.  Android Settings App<br> Android settings app determines how users can access the Android device settings.
+4.  Android Settings App<br> Android settings app determines how users can access the Android device settings. There are three options to choose for the type of settings app to be made available on the device as follows - 
 
-        Default setting app: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
+    _Default setting app_: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
 
-        No settings app: No icon for any settings app will be available for the user to choose from the device’s dashboard.
+    _No settings app_: No icon for any settings app will be available for the user to choose from the device’s dashboard.
 
-        Esper settings app: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. Settings provided via this app are limited to:
-        1. Changing the Wi-Fi AP
+    _Esper settings app_: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. This app is made secure via the Esper settings app password protection. Settings provided via this app are limited to:
+    1. Changing the Wi-Fi Access Point
 
-        2. Enabling the “flashlight” if there’s a camera flash LED on the device
+    2. Enabling the “flashlight” if there’s a camera flash LED on the device
 
-        3. Control the display orientation of the device.
+    3. Control the display orientation of the device.
 
-        Contact Esper to setup a password for the Esper Settings app.
+    4. A robust means for users to be able to factory reset their device irrespective of the policy. 
+        
+    5. About - We have added information regarding provisioning endpoint in the about section for the user to be able to view the endpoint name the device is registered in, in case they have access to multiple endpoints.
+        
+    6. Kiosk app - An option to switch the kiosk app from this menu. User can choose any installed app on device to act as the kiosk app.
+        
+    7. Esper Branding - User can turn off the Esper logo in case they wish to use their own logo as a reseller of Esper platform.
+        
+    
+    ![](./assets/esperSettingsApp/espersettingapp1.png)
 
     <br/>
 
-Factory Reset Protection - <Badge text="New" type="tip"/> <br> _FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
+
+### Google Account Permissions
+
+ This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
+Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
+
+![Google Account Permissions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+### Factory Reset Protection <br> 
+_FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
 
 ![Factory Reset Protection](./assets/GoogleAccountid/factory_reset_protection.png)
 
@@ -688,15 +1019,20 @@ Other Compliance Policy Toggle Buttons-<br>
 9.  Camera Access<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
 10. NFC <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC. Turn On if any of your apps require NFC. <br/>
 11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google Playstore of admin approved Google Play Apps.<br/>
-12. USB tethering<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
-13. Edit date and time<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
-14. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
-15. USB File transfer <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
-16. Google Assistant <Badge text="New" type="tip"/> <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant.
+12. Wifi <br> Wifi can be turned off on the device if there are other type of networks such as cellular present on the device. In case on no network availability, the wifi poicy will auto switch to on inorder to ensure the connectivity of the device with the cloud. <br/>
+13. USB tethering<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
+14. Edit date and time<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
+15. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
+16. USB File transfer <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
+17. Google Assistant  <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br>
+18. **Local App Install**<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
 
-For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br>
+![LocalAppInstall](./assets/policy/localappinstall.png)
+ <br/>
 
 Checkbox-<br> `Restrict outgoing/incoming calls using customised dialer.` <br>
+
+![Restrictcall](./assets/policy/restrictcall.png)
 
 If clicked, this opens up two more checkboxes-<br>
 
@@ -745,7 +1081,7 @@ Delete icon
 
 ![Esper User Management](./assets/OLD_DASHBOARD/5_UM.png)
 
-## Geofence <Badge text="New" type="tip"/>
+## Geofence
 
 Now in Esper - Geofences! Geofencing is a useful feature for some dedicated device deployment scenarios. With geofencing you use the device’s location typically generated by GPS to trigger an alert when the device enters or leaves a defined area. Common scenarios include making sure a fleet of delivery devices stay in their delivery zone, warehousing devices don’t stray far from the warehouse, and restaurant ordering devices don’t leave the restaurant.
 
@@ -776,7 +1112,7 @@ You can see for Geofence applied Devices if they have left or entered the Geofen
 That’s it! It looks even easier in our [video](https://youtu.be/UkTwhFRTwgQ) Give it a try and let us know what you think, andi@esper.io.
 
 :::tip
-Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device.  
+Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device. This feature is not supported for Android version 4.x.
 :::
 
 ## Company Settings

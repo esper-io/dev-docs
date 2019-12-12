@@ -226,12 +226,35 @@ Devices - If a user wants to make change to an individual (Esper Managed) device
 
 [![Esper Device Template](./assets/faq/device-template-faq3.png)](./console.md#devices)
 
-Groups - If a user wants to make change to an entire group of (Esper Managed) devices, they need to go to Groups section on the sidebar menu. Here users can see Group tiles. Here also, on clicking 'Details' user can see various available Group functionaliies under various menus. Find out more about Group functionalities by clicking below.
+Groups - If a user wants to make change to an entire group of (Esper Managed) devices, they need to go to Groups section on the sidebar menu. Here users can see Group tiles. Here also, on clicking 'Details' user can see various available Group functionalities under various menus. Find out more about Group functionalities by clicking below.
 
 [![Esper Device Template](./assets/faq/device-template-faq5.png)](./console.md#groups)
 
 In both Devices and Groups section, user will see a 'Compliance Policy' tab under which they can choose and apply a new Compliance policy for the individual device or the group. In order to apply a policy, user needs to create a new Compliance policy or choose an existing one.
 
+
 ![Esper Device Template](./assets/faq/device-template-faq4.png)
 
 [Know more about Compliance Policy](./console.md#compliance-policy).
+
+## I am not able to open my app (for example - true caller) as permissions are not provided to the app and I am getting a message that ths is controlled by admin?
+
+Sometimes customers are not able to use their apps that require extra permissions. They get the message such as "Permission needed" and "Action Not Allowed" when trying to change Settings or open the app. 
+
+![](./assets/faq/permissionsforapp.png)
+
+
+There is a simple solution to this problem. Simply create a Compliance Policy and choose the option of `Ask User` from `App Permissions` drop down. This will allow the device user to give the required permission to the app from Settings -> App Permissions.  
+
+
+![](./assets/faq/permissionforapp2.png)
+
+Once you apply the compliance policy on the device/group, you should be able to make the required permission changes from the Settings on the device.
+
+## My device is not adhering to the expected behavior when I take an action on the dashboard.
+
+There is a big market of android manufacturers that have deployed various Android versions ranging from 4.x to 10.x. Often times these devices display unique behaviors that is manufacturer and OS specific. In such cases these devices might not comply by certain dashboard actions as expected due to device-specific issues. For example notification bar might show up in lenovo devices during lockdown or an older version of samsung device does not comply by password policy.  Contact esper support at support@esper.io to get help with device specific issues. 
+
+## I am unable to push any of the apps/apk I uploaded to the Esper Console to the device.
+
+This is an issue with Google PlayProtect interference. You need to decline the Google Play Protect prompt that pops up during provisioning. Alternatively you may use Play For Work to deploy apps, or simply appeal the the [PlayProtect folks](https://support.google.com/googleplay/android-developer/answer/2992033?hl=en).
