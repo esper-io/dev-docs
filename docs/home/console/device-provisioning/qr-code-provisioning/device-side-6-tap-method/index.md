@@ -1,20 +1,35 @@
 # Steps to take on the Device for 6-Tap Provisioning
 
-Device-side steps for the 6-tap provisioning method.
+Android devices that have Google Mobile Services support (Play Store can be found on such devices) can be provisioned into Esper management console using 6 Tap QR code provisioning method. To begin provisioning, device needs to be factory reset. <br> 
+
+Prerequisites for this method - 
+
+- Devices that have GMS (Google Mobile Services) support enabled
+- Devices with a camera for QR code scanning
+- Android 7.0 and above
+- Factory reset required
+
+The console will take you step by step through the process of 6 Tap QR code provisioning. You may follow through these steps easily by clicking Next.
+
+![Provision Device](../../../../assets/provisioning/console2.png)
+
+The below steps are a more detailed version of the same steps for provision via AfW method. It is more or less the same as the console guidelines however, it has some extra screenshots - 
 
 The device to be provisioned needs to be prepared via the following steps:
 
-* [Factory Reset your device](../../howtofactoryreset.md), choose your **language**, and then **tap 6 times** on the screen:
+Step 1. [Factory Reset your device](../../howtofactoryreset.md), choose your **language**, and then **tap 6 times** anywhere on the screen
 
 ![Provision Device](../../../../assets/OLD_DASHBOARD/1_ProD.png)
 
-* You will now see the **QR code setup** screen, continue by clicking **'Next'**.
+Step 2. You will now see the **QR code setup** screen, continue by clicking **'Next'**.
 
-* Connect to your Wi-Fi network:
+![Provision Device](../../../../assets/provisioning/qrcode1.png)
+
+Step 3. Connect to your Wi-Fi network:
 
 ![Provision Device](../../../../assets/OLD_DASHBOARD/3_PD.png)
 
-* Scan the **QR code** generated on Esper Console:
+Step 4. A QR code scanner will appear on your screen -
 
 ![Provision Device](../../../../assets/OLD_DASHBOARD/13_PD.png)
 

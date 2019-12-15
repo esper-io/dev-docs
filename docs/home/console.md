@@ -39,32 +39,73 @@ Read about the Developer Tools and Documentation here -
 
 Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
 
-Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
+Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as shown in the following image - 
 
-1.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
+![Provisioning](./assets/provisioning/provisioning1.png)
+
+You may provision your device using any of the four methods given the pre requisites mentioned are met. To see the detailed steps, hover your mouse over any of the provisioning methods and `Provision` button appears. On clicking the same, detailed steps for the selected method will start showing.
+
+![Provisioning](./assets/provisioning/provisioning4.png)
+
+If you find choosing between these methods confusing, for your convenience, we have provided an easy way to choose a provisioning method by filling the form on the right side. User needs to fill the following sections - 
+- Android version - Check the android version on your device by going to Settings -> About ->  Android Version
+
+   ![Provisioning](./assets/provisioning/provisioning2.png)
+   
+   Choose the android version of your device from the drop down menu. 
+   
+:::tip
+Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0, 6.0 and so on.
+:::
+
+   ![Provisioning](./assets/provisioning/provisioning3.png)
+
+- Esper Enhanced - Esper Enhanced Android is purpose-built optimized Android OS with enhanced performance, security and features such as zero touch provisioning, remote adb debugging and OTA android updates. Esper provides Esper Enhanced devices on request from customers. Choose `YES`, if your devices are Esper Enhanced.
+
+- GMS support - Choose `YES`, if your android device supports Google Mobile Services. If Play Store app exists in your device, your device is a GMS device.
+
+![Provisioning](./assets/provisioning/playstoreicon.png)
+
+- Camera -  Choose `YES`, if your device has a working camera.
+
+Finally, click on `Suggest Provisioning Method`. 
+
+Based on your selection, you will be suggested with one out of the four provisioning methods which will get highlighted. Click on the same to see the steps to provision your device.
+
+The four methods of provisioning have the below pre requisites. Click on each topic to know more.
+
+1.  [AfW provisioning](./console/device-provisioning/afw-provisioning/index.md) - AfW (Android for Work) method is best used for:
+
+    - Devices that have GMS (Google Mobile Services) support enabled
+    - Devices with a camera for QR code scanning
+    - Android 6.0 and above
+    - Factory reset required
+
+2.  [QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
+
+    - Devices that have GMS (Google Mobile Services) support enabled
+    - Devices with a camera for QR code scanning
+    - Android 7.0 and above
+    - Factory reset required
+
+3.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
 
     - All Android Devices - GMS or Non-GMS
     - Devices with or without camera
     - Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
+    - USB cable required to connect device for adb access from developer options
+    - Factory reset required
 
-2.  [AfW provisioning](./console/device-provisioning/afw-provisioning/index.md) - AfW (Android for Work) method is best used for:
-
-    - Devices that have GMS (Google Mobile Services) enabled
-    - Devices with a camera for QR code scanning
-
-3.  [QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
-
-    - QR Method like AfW is used for devices that have both GMS (Google Mobile Services) and Camera enabled
-
-4.  [IMEI (or Serial Number) based provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
+4.  [Seamless provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
     - Used for Esper Enhanced Android Devices
-    - IMEI/Serial Number method is use for Bulk provisioning of devices
+    - IMEI/Serial Number method is use for bulk provisioning of devices
     - Enables zero touch provisioning
 
     :::tip
     In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process.
     :::
 
+If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Please contact us on andi@esper.io or support@esper.io.
 
 ## Device Template
 
@@ -154,12 +195,16 @@ Below is a list of features you can turn on or off in the policy section. These 
     The textbox here accepts the common password for Dock and the Esper Settings App. It is now acceptable to not have any password for these features for the ease of device users. Esper, however, recommends that passwords are setup for stronger security.
     <br/>
 
-### Google Account Permissions
+### Google Account Restrictions
 
  This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
 
-![Google Account Permissions](./assets/GoogleAccountid/googleaccountpermission1.png)
+![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+:::tip
+The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
+:::
 
 ### Factory Reset Protection 
 
@@ -992,12 +1037,16 @@ Below is a list of features you can turn on or off in the policy section. These 
     <br/>
 
 
-### Google Account Permissions
+### Google Account Restrictions
 
  This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
 
-![Google Account Permissions](./assets/GoogleAccountid/googleaccountpermission1.png)
+![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+:::tip
+The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
+:::
 
 ### Factory Reset Protection <br> 
 _FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
@@ -1025,7 +1074,7 @@ Other Compliance Policy Toggle Buttons-<br>
 15. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
 16. USB File transfer <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
 17. Google Assistant  <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br>
-18. **Local App Install**<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
+18. Local App Install<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
 
 ![LocalAppInstall](./assets/policy/localappinstall.png)
  <br/>
@@ -1058,7 +1107,7 @@ Under the Users tab you are able to view all registered users in your enterprise
 
 ![Esper User Management](./assets/OLD_DASHBOARD/1_UM.png)
 
-New User
+**New User**
 
 - To add a new user, click on `New User` and fill in details of the user in the form:
 
@@ -1068,7 +1117,7 @@ New User
 
 ![Esper User Management](./assets/OLD_DASHBOARD/3_UM.png)
 
-Edit icon
+**Edit User**
 
 - Here you can edit the details of a user.
 - You will be able to change the username, email, full name, password, and role assigned to the user:
@@ -1119,7 +1168,7 @@ Note: The performance of Geofencing feature is dependent on accuracy of in-built
 
 Learn about Esper's Company Settings.
 
-- Company Settings enables you to set your company details by clicking on the **'Edit profile'** button on the top right hand corner:
+- Company Settings enables you to set your company details by clicking on the **Edit profile** button on the top right hand corner:
 
 ![Company Settings](./assets/OLD_DASHBOARD/1_EC.png)
 
@@ -1135,9 +1184,13 @@ Learn about Esper's Company Settings.
 
 ![Company Settings](./assets/OLD_DASHBOARD/2_EC.png)
 
-- If you will be using apps from Google you will also need to enroll your company's Google Play account:
+An important feature that allows you to have some control over your device name prefixes is present in this tab. The last section Company short code allows you enter 3 letter short codes for your company name and location/area for the devices. For example if I set my company short code as ESP-BNG, all my devices will have the prefix and will have names such as ESP-BNG-2345 etc. The ESP here signifies my company name and the BNG is the location.
+
+**Important**: If you will be using apps from Google you will also need to enroll your company's Google Play account:
 
 ![Company Settings](./assets/OLD_DASHBOARD/3_EC.png)
+
+Know how to enroll into Google Play Services [here](./console/company-setting/index.md).
 
 ## OS Updates
 

@@ -241,13 +241,13 @@ In both Devices and Groups section, user will see a 'Compliance Policy' tab unde
 
 Sometimes customers are not able to use their apps that require extra permissions. They get the message such as "Permission needed" and "Action Not Allowed" when trying to change Settings or open the app. 
 
-![](./assets/faq/permissionsforapp.png)
+![](./assets/faq/permissionsforapp5.png)
 
 
 There is a simple solution to this problem. Simply create a Compliance Policy and choose the option of `Ask User` from `App Permissions` drop down. This will allow the device user to give the required permission to the app from Settings -> App Permissions.  
 
 
-![](./assets/faq/permissionforapp2.png)
+![](./assets/faq/permissionforapp3.png)
 
 Once you apply the compliance policy on the device/group, you should be able to make tne required permission changes from the Settings on the device.
 
@@ -258,3 +258,35 @@ There is a big market of android manufacturers that have deployed various Androi
 ## I am unable to push any of the apps/apk I uploaded to the Esper Console to the device.
 
 This is an issue with Google PlayProtect interference. You need to decline the Google Play Protect prompt that pops up during provisioning. Alternatively you may use Play For Work to deploy apps, or simply appeal the the [PlayProtect folks](https://support.google.com/googleplay/android-developer/answer/2992033?hl=en).
+
+## Can I use G-Suite account during EMM enrollment?
+
+No. Currently Esper supports only Gmail accounts for enrollment with Google EMM services. Support for G-suite account is coming up soon. Contact support@esper.io to know the latest in this regard.
+
+## Is it Possible to Enroll for EMM with an e-mail id which is currently already enrolled in EMM?
+
+No, it is not  possible. Either you need to use a new email id which has never been enrolled. Or you need to un-enroll your previously used gmail id from EMM and then re-enroll with the same email id.
+
+
+## How to un-enroll from EMM with your email ID? 
+
+:::tip
+If you delete you organization from google EMM enrollment, Esper does not get this information from Google and hence it will cause failure of provisioning when Esper will try to reach Google for setting up the device. It is highly advised that admin does NOT unenroll their gmail ids from Google without consulting Esper support at support@esper.io.
+:::
+
+If you still wish to unenroll your email from Google Android for Work, get in touch with esper support at support@esper.io and follow these steps -
+
+1. Go to  [Google Play Admin Settings page](https://play.google.com/work/adminsettings). If you are already signed in, you will see an option to 'SWITCH ACCOUNTS'. Click on the same to switch to the gmail id that you had enrolled with.
+
+![](./assets/faq/emmfaq1.png)
+
+2. Select your account or give login credentials 
+
+![](./assets/faq/emmfaq2.png)
+
+3. Under Settings you will see Organization information section. Click on the vertical ellipsis on the right. You will see an option to “Delete Organization”. Clicking this will disassociate your email with the said organization.
+
+![](./assets/faq/emmfaq3.png)
+
+
+
