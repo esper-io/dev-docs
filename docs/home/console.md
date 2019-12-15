@@ -1099,6 +1099,81 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 
 You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
 
+## Reports
+
+This sections lets a user get daily and customized reports of activity of devices and groups of devices.
+There are two sections to reports - 
+
+1. Daily Reports
+2. Custom Reports
+
+**Daily Reports** 
+
+These get generated on a daily basis as shown below - 
+
+![](./assets/reports/report1.png)
+
+It generates the following information - 
+- Date of the report
+- Report type
+- Option to View
+- Option to download in pdf, excel or csv formats
+
+![](./assets/reports/reports4.png)
+
+Clicking on View or Report type will take user to a detailed view of the daily report - 
+
+![](./assets/reports/reports2.png)
+
+Here, the following information is shown - 
+- Number of Registered Devices
+- Peak number of active devices
+- Newly provisioning devices
+
+Additionally, you may see for each group - 
+- Number of Registered devices
+- Number of Active devices
+- Number of Inactive devices
+- Newly provisioned devices
+
+on clicking the '>' sign, user can view devices wise details as shown below - 
+
+![](./assets/reports/reports3.png)
+
+Listing the following details per device - 
+
+- Device name
+- Serial number
+- Status
+- Inactive from last 3 days (yes/no)
+- Last known location
+
+Here is a preview of a downloaded pdf version of daily report - 
+
+![](./assets/reports/reports5.png)
+
+This report lists all the information shown above for the chosen date in an easily downloadable format.
+
+**Custom Report**
+
+Dashboard admin user also has the option to generate a group wise custom report that is spread over a chosen period of time. Admin can choose start and end date to generate the report as shown below -
+
+![](./assets/reports/reports6.png)
+
+Following information is required- 
+
+- Group name to be chosen from dropdowsn
+- Start date
+- End date
+
+Finally, clicking on Generate report will bring up the custom report to the user as follows-
+
+![](./assets/reports/reports7.png)
+
+This report has the same information as daily report but for the specified dates and group.
+
+
+
 ## Users
 
 Learn about Esper's User Management.
