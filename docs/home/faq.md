@@ -288,5 +288,19 @@ If you still wish to unenroll your email from Google Android for Work, get in to
 
 ![](./assets/faq/emmfaq3.png)
 
+## On entering afw#esper why do I see "Couldn't find your google account?
 
+A possible cause for this error message is that the pre-configured Google account has not been removed from the device before the factory reset.
+In order to solve this problem, provide the previously configured Google Account credentials and reset the device. Remove the Google Account from the device and carry out the factory reset again.
 
+![](./assets/faq/faq14.png)
+
+## Can I control which apps show up on my device Google Play Store app?
+
+Yes, you have the option to decide which of the apps are to appear on the device Google Play Store. Go to the Play For Work section and choose the option Organize App-
+
+![](./assets/faq/orgapp1.png)
+
+Any app added in the collections on this page will show up on the Google Play Store app on the device - 
+
+![](./assets/faq/orgapp2.png)

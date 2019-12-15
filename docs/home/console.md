@@ -947,6 +947,15 @@ sets up email notifications for anyone requesting new permissions to the specifi
 
 ![Play For Work](./assets/OLD_DASHBOARD/8_PW.png)
 
+You have the option to decide which of the apps are to appear on the device Google Play Store. Go to the Play For Work section and choose the option Organize App-
+
+![](./assets/faq/orgapp1.png)
+
+Any app added in the collections on this page will show up on the Google Play Store app on the device - 
+
+![](./assets/faq/orgapp2.png)
+
+
 ## Alerts
 
 Learn about available Alerts.
