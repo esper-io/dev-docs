@@ -472,11 +472,7 @@ There are checkboxes on the top of the page with categories such as  that can be
  - High risk devices - devices with security status high
  - No risk devices - device with security status 'secure'
 
-
  See the [Security](https://docs.esper.io/home/console/device-management/-/#security) section to know how the security status of a device is determined
-
- 
-
 
 ### Search
 
