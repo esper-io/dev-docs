@@ -243,13 +243,12 @@ Sometimes customers are not able to use their apps that require extra permission
 
 ![](./assets/faq/permissionsforapp5.png)
 
-
 There is a simple solution to this problem. Simply create a Compliance Policy and choose the option of `Ask User` from `App Permissions` drop down. This will allow the device user to give the required permission to the app from Settings -> App Permissions.  
-
 
 ![](./assets/faq/permissionforapp3.png)
 
-Once you apply the compliance policy on the device/group, you should be able to make tne required permission changes from the Settings on the device.
+Once you apply the compliance policy on the device/group, you should be able to make the required permission changes from the Settings on the device.
+
 
 ## My device is not adhering to the expected behavior when I take an action on the dashboard.
 
@@ -258,6 +257,7 @@ There is a big market of android manufacturers that have deployed various Androi
 ## I am unable to push any of the apps/apk I uploaded to the Esper Console to the device.
 
 This is an issue with Google PlayProtect interference. You need to decline the Google Play Protect prompt that pops up during provisioning. Alternatively you may use Play For Work to deploy apps, or simply appeal the the [PlayProtect folks](https://support.google.com/googleplay/android-developer/answer/2992033?hl=en).
+
 
 ## Can I use G-Suite account during EMM enrollment?
 
@@ -304,3 +304,4 @@ Yes, you have the option to decide which of the apps are to appear on the device
 Any app added in the collections on this page will show up on the Google Play Store app on the device - 
 
 ![](./assets/faq/orgapp2.png)
+

@@ -39,7 +39,8 @@ Read about the Developer Tools and Documentation here -
 
 Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
 
-Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as shown in the following image - 
+Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
+
 
 ![Provisioning](./assets/provisioning/provisioning1.png)
 
@@ -105,7 +106,9 @@ The four methods of provisioning have the below pre requisites. Click on each to
     In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process.
     :::
 
+
 If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Please contact us on andi@esper.io or support@esper.io.
+
 
 ## Device Template
 
@@ -195,16 +198,20 @@ Below is a list of features you can turn on or off in the policy section. These 
     The textbox here accepts the common password for Dock and the Esper Settings App. It is now acceptable to not have any password for these features for the ease of device users. Esper, however, recommends that passwords are setup for stronger security.
     <br/>
 
+
 ### Google Account Restrictions
+
 
  This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
+
 
 ![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
 
 :::tip
 The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
 :::
+
 
 ### Factory Reset Protection 
 
@@ -260,7 +267,9 @@ Compliance Policy Section of the Device Template -
 
 In this section, you can select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give device-users access to the Home screen. You can choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
+
 As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
+
 
 ![Device Template](./assets/OLD_DASHBOARD/devicemode.png)
 
@@ -295,6 +304,7 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
 
 
+
 - **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
 
   ![Device Template](./assets/template-app/preloadedapps.png)
@@ -308,7 +318,9 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 
    ![Device Template](./assets/template-app/playstoreapps.png)
 
+
 For convenience, a PlayStore tab has been provided on this page where users can approve Google apps that need to be added to template.
+
 
    ![Device Template](./assets/template-app/playstoreicon.png)
 
@@ -746,6 +758,7 @@ The approvals section is to hide or un-hide In-ROM apps (also referred to as Pre
 
 The catch is that admin needs to enter the exact package name of the In-ROM app that they wish to approve or unapprove. The best way to get the exact package name of an In-ROM app is via an adb command as shown below - 
 
+
 `adb shell pm list packages`
 
 User should turn on adb for the device (physically connected via USB) from Device->Actions(Settings), authorize adb usage from the device and run the above command to get the exact package name as shown -  
@@ -767,6 +780,7 @@ Clicking `No` will cancel the action.
 Clicking `Yes` will bring up live report of the app approval action on the group that looks like this - 
 
 ![Group Management](./assets/groups/groupsapps14.png)
+
 
 Once the process completes, the total number of Successful, Unsuccessful and Inactive devices can be seen. Also, a 'View failed devices' report appears at the left bottom of the screen.
 
@@ -858,6 +872,7 @@ To approve In-ROM apps or Preloaded apps in a device, you may do so from templat
   4.  APK Signature verification
   5.  The app should not set itself as the default launcher. This will cause conflict with the Esper Agent(DPC).
   6.  Latest Android APK standards (currently we allow APKs without icons)
+
 
 - You can upload your own android app APK file using the upload button on the top right hand corner
 - The uploaded apps will be shown under the 'Uploaded apps' section:
@@ -1084,16 +1099,19 @@ Below is a list of features you can turn on or off in the policy section. These 
     <br/>
 
 
+
 ### Google Account Restrictions
 
  This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
+
 
 ![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
 
 :::tip
 The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
 :::
+
 
 ### Factory Reset Protection <br> 
 _FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
