@@ -41,29 +41,73 @@ Provisioning is the initial step to configuring and managing your Android device
 
 Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
 
-1.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
+
+![Provisioning](./assets/provisioning/provisioning1.png)
+
+You may provision your device using any of the four methods given the pre requisites mentioned are met. To see the detailed steps, hover your mouse over any of the provisioning methods and `Provision` button appears. On clicking the same, detailed steps for the selected method will start showing.
+
+![Provisioning](./assets/provisioning/provisioning4.png)
+
+If you find choosing between these methods confusing, for your convenience, we have provided an easy way to choose a provisioning method by filling the form on the right side. User needs to fill the following sections - 
+- Android version - Check the android version on your device by going to Settings -> About ->  Android Version
+
+   ![Provisioning](./assets/provisioning/provisioning2.png)
+   
+   Choose the android version of your device from the drop down menu. 
+   
+:::tip
+Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0, 6.0 and so on.
+:::
+
+   ![Provisioning](./assets/provisioning/provisioning3.png)
+
+- Esper Enhanced - Esper Enhanced Android is purpose-built optimized Android OS with enhanced performance, security and features such as zero touch provisioning, remote adb debugging and OTA android updates. Esper provides Esper Enhanced devices on request from customers. Choose `YES`, if your devices are Esper Enhanced.
+
+- GMS support - Choose `YES`, if your android device supports Google Mobile Services. If Play Store app exists in your device, your device is a GMS device.
+
+![Provisioning](./assets/provisioning/playstoreicon.png)
+
+- Camera -  Choose `YES`, if your device has a working camera.
+
+Finally, click on `Suggest Provisioning Method`. 
+
+Based on your selection, you will be suggested with one out of the four provisioning methods which will get highlighted. Click on the same to see the steps to provision your device.
+
+The four methods of provisioning have the below pre requisites. Click on each topic to know more.
+
+1.  [AfW provisioning](./console/device-provisioning/afw-provisioning/index.md) - AfW (Android for Work) method is best used for:
+
+    - Devices that have GMS (Google Mobile Services) support enabled
+    - Devices with a camera for QR code scanning
+    - Android 6.0 and above
+    - Factory reset required
+
+2.  [QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
+
+    - Devices that have GMS (Google Mobile Services) support enabled
+    - Devices with a camera for QR code scanning
+    - Android 7.0 and above
+    - Factory reset required
+
+3.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) - Provisioner Tool is a user friendly provisioning tool by Esper. This can be used conveniently to provision -
 
     - All Android Devices - GMS or Non-GMS
     - Devices with or without camera
     - Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
+    - USB cable required to connect device for adb access from developer options
+    - Factory reset required
 
-2.  [AfW provisioning](./console/device-provisioning/afw-provisioning/index.md) - AfW (Android for Work) method is best used for:
-
-    - Devices that have GMS (Google Mobile Services) enabled
-    - Devices with a camera for QR code scanning
-
-3.  [QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
-
-    - QR Method like AfW is used for devices that have both GMS (Google Mobile Services) and Camera enabled
-
-4.  [IMEI (or Serial Number) based provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
+4.  [Seamless provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
     - Used for Esper Enhanced Android Devices
-    - IMEI/Serial Number method is use for Bulk provisioning of devices
+    - IMEI/Serial Number method is use for bulk provisioning of devices
     - Enables zero touch provisioning
 
     :::tip
     In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process.
     :::
+
+
+If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Please contact us on andi@esper.io or support@esper.io.
 
 
 ## Device Template
@@ -154,12 +198,20 @@ Below is a list of features you can turn on or off in the policy section. These 
     The textbox here accepts the common password for Dock and the Esper Settings App. It is now acceptable to not have any password for these features for the ease of device users. Esper, however, recommends that passwords are setup for stronger security.
     <br/>
 
-### Google Account Permissions
+
+### Google Account Restrictions
+
 
  This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
 
-![Google Account Permissions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+:::tip
+The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
+:::
+
 
 ### Factory Reset Protection 
 
@@ -183,10 +235,10 @@ Other Template Compliance Policy Toggle Buttons-<br>
 8.  **Outgoing calls** <br> Outgoing calls determines whether a user can make outgoing calls from the device. Turn On to allow outgoing calls, turn Off to prevent. <br/>
 9.  **Camera Access**<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
 10. **NFC** <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC. Turn On if any of your apps require NFC. <br/>
-11. **Google PlayStore**<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google Playstore of admin approved Google Play Apps.<br/>
+11. **Google PlayStore**<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google PlayStore of admin approved Google Play Apps.<br/>
 12. **USB tethering**<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
 13. **Edit date and time**<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
-14. **Application uninstall**<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
+14. **Application uninstall**<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/> 
 15. **USB File transfer** <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
 16. **Google Assistant** <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br> 
 17. **Local App Install**<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
@@ -215,7 +267,9 @@ Compliance Policy Section of the Device Template -
 
 In this section, you can select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give device-users access to the Home screen. You can choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
+
 As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
+
 
 ![Device Template](./assets/OLD_DASHBOARD/devicemode.png)
 
@@ -251,8 +305,6 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 
 
 
-
-
 - **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
 
   ![Device Template](./assets/template-app/preloadedapps.png)
@@ -266,7 +318,9 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 
    ![Device Template](./assets/template-app/playstoreapps.png)
 
-For convenience, a Playstore tab has been provided on this page where users can approve Google apps that need to be added to template.
+
+For convenience, a PlayStore tab has been provided on this page where users can approve Google apps that need to be added to template.
+
 
    ![Device Template](./assets/template-app/playstoreicon.png)
 
@@ -379,11 +433,11 @@ It consists of the following sections -
 
     d. [Device Graphs](./console/device-management/-/index.md#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
 
-    e. [Apps](./console/device-management/-/index.md#apps) - Admin can unhide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
+    e. [Apps](./console/device-management/-/index.md#apps) - Admin can un-hide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
 
     f. [Compliance Policy](./console#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
 
-    g. [Security](./console.md#_2-security-summary) - This section gives details regarding the security status of the device.
+    g. [Security](https://docs.esper.io/home/console/device-management/-/#security) - This section gives details regarding the security status of the device.
 
     h. [Remote View](./console/device-management/-/index.md#remote-viewer) - Admin can remote view the device if device user accepts the request.
 
@@ -407,11 +461,26 @@ This device is only available for new signups currently. Please note that trial 
 
 ### Categories
 
-There are checkboxes on the top of the page with categories such as Active, Inactive, Under provisioning, Devices with low battery, etc. that can be checked to view devices in each particular state.
+There are checkboxes on the top of the page with categories such as  that can be checked to view devices in each particular state-
+ - Active - currently online  
+ - Inactive - currently offline
+ - Under provisioning - devices undergoing provisioning 
+ - Devices with low battery - devices with battery under 30% charging
+ - Recently added devices - devices provisioned within the last 3 days
+ - Low risk devices - device with security status low
+ - Medium risk devices - devices with security status medium
+ - High risk devices - devices with security status high
+ - No risk devices - device with security status 'secure'
+
+
+ See the [Security](https://docs.esper.io/home/console/device-management/-/#security) section to know how the security status of a device is determined
+
+ 
+
 
 ### Search
 
-Search is provided on the top right where you can search for devices in Devices using the Esper assigned device code which is displayed on the device's home page wallpaper.
+Search is provided on the top right where you can search for devices in Devices using the Esper assigned device code which is displayed on the device homepage.
 
 ### Device Tile
 
@@ -423,13 +492,26 @@ Devices listed 'Under Provisioning' refer to devices where Google Play apps are 
 
 ![Device Management](./assets/OLD_DASHBOARD/Under_Provisioning.png)
 
-Devices under 'Applying Policy' refer to devices on which device templates are being implemented:
-
-![Device Management](./assets/OLD_DASHBOARD/Applying_Policy.png)
 
 Devices which have been enrolled on to your Esper Cloud are provisioned devices:
 
-![Device Management](./assets/OLD_DASHBOARD/Provisioned.png)
+Example 1- 
+This is a device at high security risk highlighted in red. Its currently offline and supports Google Mobile services.
+It is connected to wifi Esper-SSID. It was last seen on 12/10/2019 at Bellevue, Washington.
+
+![Device Management](./assets/OLD_DASHBOARD/devicetile1.png)
+
+Example 2- 
+This is a device is secure hence highlighted in green. Its currently offline and supports Google Mobile services.
+It is connected to wifi JZSB. It was last seen on 12/06/2019 at Kuala Lumpur.
+
+![Device Management](./assets/OLD_DASHBOARD/devicetile2.png)
+
+Example 3- 
+This is a device at low risk hence highlighted in dark grey. Its currently offline and supports Google Mobile services.
+It is connected to wifi Droidcon. It was last seen on 09/20/2019 at an undetermined location. It has been tagged with DroidConNYC indicating it was used to demo in Droid conference held in NYC. This is an example of how customers can use tags to identify and search their devices.
+
+![Device Management](./assets/OLD_DASHBOARD/devicetile3.png)
 
 ### Map View
 
@@ -440,6 +522,19 @@ Under the Map view, the types of devices can be chosen from the dropdown. Once s
 Once you click on the cluster icon, devices in the cluster will appear. Upon clicking on the individual devices, device information will be displayed:
 
 ![Device Template](./assets/OLD_DASHBOARD/1.2_DM.png)
+
+Another satellite version of maps that can be viewed by clicking `Satellite` is shown below - 
+
+![Device Template](./assets/OLD_DASHBOARD/devicemap2.png)
+
+Device tiles can be viewed in satellite view as well by zooming and clicking on the device pins -
+
+![Device Template](./assets/OLD_DASHBOARD/devicemap3.png)
+
+
+:::tip
+Device name and group names are actionable links in the device tiles that show up on maps on clicking device pins. Clicking them will take user to the respective device and group details pages.
+:::
 
 ## Groups
 
@@ -551,7 +646,7 @@ There are six filters provided to sort through the list of device tiles based on
 - Under provisioning - Devices in the group that are currently undergoing provisioning
 - Active devices - Devices in the group that are currently active ie online
 - Inactive devices - Devices in the group that are currently inactive ie offline
-- Devices at risk - Devices in the group that are at high, medium or low security risk (See Security in [Devices](http://localhost:8080/home/console.html#devices) for more information on how the security risk level of a device is calculated)
+- Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](http://localhost:8080/home/console.html#devices) for more information on how the security risk level of a device is calculated)
 - Devices with low battery - Devices in the group with battery percentage less than 15%
 - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
 
@@ -663,6 +758,7 @@ The approvals section is to hide or un-hide In-ROM apps (also referred to as Pre
 
 The catch is that admin needs to enter the exact package name of the In-ROM app that they wish to approve or unapprove. The best way to get the exact package name of an In-ROM app is via an adb command as shown below - 
 
+
 `adb shell pm list packages`
 
 User should turn on adb for the device (physically connected via USB) from Device->Actions(Settings), authorize adb usage from the device and run the above command to get the exact package name as shown -  
@@ -684,6 +780,7 @@ Clicking `No` will cancel the action.
 Clicking `Yes` will bring up live report of the app approval action on the group that looks like this - 
 
 ![Group Management](./assets/groups/groupsapps14.png)
+
 
 Once the process completes, the total number of Successful, Unsuccessful and Inactive devices can be seen. Also, a 'View failed devices' report appears at the left bottom of the screen.
 
@@ -767,14 +864,15 @@ To approve In-ROM apps or Preloaded apps in a device, you may do so from templat
 ### Upload Private Apps (APK files) to Esper Cloud:
 
 - You can upload your own mobile app through an APK file using the upload button on the top right hand corner.
-- There are some rules that the uploaded app must adhere to inorder to succeed upload and provisioning -
+- There are some rules that the uploaded app must adhere to in-order to succeed upload and provisioning -
 
   1.  The APK has to have a unique version name and number.
   2.  Max size - 500 MB
   3.  Extension - .apk [only]
   4.  APK Signature verification
   5.  The app should not set itself as the default launcher. This will cause conflict with the Esper Agent(DPC).
-  6.  Latest Android APK standards (currently we allow apks without icons)
+  6.  Latest Android APK standards (currently we allow APKs without icons)
+
 
 - You can upload your own android app APK file using the upload button on the top right hand corner
 - The uploaded apps will be shown under the 'Uploaded apps' section:
@@ -902,6 +1000,15 @@ sets up email notifications for anyone requesting new permissions to the specifi
 
 ![Play For Work](./assets/OLD_DASHBOARD/8_PW.png)
 
+You have the option to decide which of the apps are to appear on the device Google Play Store. Go to the Play For Work section and choose the option Organize App-
+
+![](./assets/faq/orgapp1.png)
+
+Any app added in the collections on this page will show up on the Google Play Store app on the device - 
+
+![](./assets/faq/orgapp2.png)
+
+
 ## Alerts
 
 Learn about available Alerts.
@@ -992,12 +1099,19 @@ Below is a list of features you can turn on or off in the policy section. These 
     <br/>
 
 
-### Google Account Permissions
+
+### Google Account Restrictions
 
  This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
 
-![Google Account Permissions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
+
+:::tip
+The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
+:::
+
 
 ### Factory Reset Protection <br> 
 _FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
@@ -1018,14 +1132,14 @@ Other Compliance Policy Toggle Buttons-<br>
 8.  Outgoing calls <br> Outgoing calls determines whether a user can make outgoing calls from the device. Turn On to allow outgoing calls, turn Off to prevent. <br/>
 9.  Camera Access<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
 10. NFC <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC. Turn On if any of your apps require NFC. <br/>
-11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google Playstore of admin approved Google Play Apps.<br/>
-12. Wifi <br> Wifi can be turned off on the device if there are other type of networks such as cellular present on the device. In case on no network availability, the wifi poicy will auto switch to on inorder to ensure the connectivity of the device with the cloud. <br/>
+11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google PlayStore of admin approved Google Play Apps.<br/>
+12. Wifi <br> Wifi can be turned off on the device if there are other type of networks such as cellular present on the device. In case on no network availability, the Wifi policy will auto switch to on in-order to ensure the connectivity of the device with the cloud. <br/>
 13. USB tethering<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
 14. Edit date and time<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
 15. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
 16. USB File transfer <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
 17. Google Assistant  <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br>
-18. **Local App Install**<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
+18. Local App Install<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
 
 ![LocalAppInstall](./assets/policy/localappinstall.png)
  <br/>
@@ -1050,6 +1164,80 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 
 You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
 
+## Reports
+
+This sections lets a user get daily and customized reports of activity of devices and groups of devices.
+There are two sections to reports - 
+
+1. Daily Reports
+2. Custom Reports
+
+**Daily Reports** 
+
+These get generated on a daily basis as shown below - 
+
+![](./assets/reports/report1.png)
+
+It generates the following information - 
+- Date of the report
+- Report type
+- Option to View
+- Option to download in pdf, excel or csv formats
+
+![](./assets/reports/reports4.png)
+
+Clicking on View or Report type will take user to a detailed view of the daily report - 
+
+![](./assets/reports/reports2.png)
+
+Here, the following information is shown - 
+- Number of Registered Devices
+- Peak number of active devices
+- Newly provisioning devices
+
+Additionally, you may see for each group - 
+- Number of Registered devices
+- Number of Active devices
+- Number of Inactive devices
+- Newly provisioned devices
+
+on clicking the '>' sign, user can view devices wise details as shown below - 
+
+![](./assets/reports/reports3.png)
+
+Listing the following details per device - 
+
+- Device name
+- Serial number
+- Status
+- Inactive from last 3 days (yes/no)
+- Last known location
+
+Here is a preview of a downloaded pdf version of daily report - 
+
+![](./assets/reports/reports5.png)
+
+This report lists all the information shown above for the chosen date in an easily downloadable format.
+
+**Custom Report**
+
+Dashboard admin user also has the option to generate a group wise custom report that is spread over a chosen period of time. Admin can choose start and end date to generate the report as shown below -
+
+![](./assets/reports/reports6.png)
+
+Following information is required- 
+
+- Group name to be chosen from dropdown
+- Start date
+- End date
+
+Finally, clicking on Generate report will bring up the custom report to the user as follows-
+
+![](./assets/reports/reports7.png)
+
+This report has the same information as daily report but for the specified dates and group.
+
+
 ## Users
 
 Learn about Esper's User Management.
@@ -1058,7 +1246,7 @@ Under the Users tab you are able to view all registered users in your enterprise
 
 ![Esper User Management](./assets/OLD_DASHBOARD/1_UM.png)
 
-New User
+**New User**
 
 - To add a new user, click on `New User` and fill in details of the user in the form:
 
@@ -1068,7 +1256,7 @@ New User
 
 ![Esper User Management](./assets/OLD_DASHBOARD/3_UM.png)
 
-Edit icon
+**Edit User**
 
 - Here you can edit the details of a user.
 - You will be able to change the username, email, full name, password, and role assigned to the user:
@@ -1119,7 +1307,7 @@ Note: The performance of Geofencing feature is dependent on accuracy of in-built
 
 Learn about Esper's Company Settings.
 
-- Company Settings enables you to set your company details by clicking on the **'Edit profile'** button on the top right hand corner:
+- Company Settings enables you to set your company details by clicking on the **Edit profile** button on the top right hand corner:
 
 ![Company Settings](./assets/OLD_DASHBOARD/1_EC.png)
 
@@ -1135,9 +1323,13 @@ Learn about Esper's Company Settings.
 
 ![Company Settings](./assets/OLD_DASHBOARD/2_EC.png)
 
-- If you will be using apps from Google you will also need to enroll your company's Google Play account:
+An important feature that allows you to have some control over your device name prefixes is present in this tab. The last section Company short code allows you enter 3 letter short codes for your company name and location/area for the devices. For example if I set my company short code as ESP-BNG, all my devices will have the prefix and will have names such as ESP-BNG-2345 etc. The ESP here signifies my company name and the BNG is the location.
+
+**Important**: If you will be using apps from Google you will also need to enroll your company's Google Play account:
 
 ![Company Settings](./assets/OLD_DASHBOARD/3_EC.png)
+
+Know how to enroll into Google Play Services [here](./console/company-setting/index.md).
 
 ## OS Updates
 

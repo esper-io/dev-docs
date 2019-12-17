@@ -18,7 +18,7 @@ This is the first tab that comes in view when clicking on `Details` on the Devic
 
 * Hardware information (Manufacturer, Hardware chip set, Brand, Serial number, Model, Baseband version)
 
-* Network information (IMEI/MEID, Mac Address, DNS, Wifi Mac ID, Cellular netowrk status, Wifi Access point, Connectivity duration, IP address, Ethernet status)
+* Network information (IMEI/MEID, Mac Address, DNS, Wifi Mac ID, Cellular network status, Wifi Access point, Connectivity duration, IP address, Ethernet status)
     
 * Display Information - Resolution, Refresh rate
 
@@ -39,11 +39,11 @@ All the device actions that can be performed on active devices are listed below.
 
 ### Reboot
 
-Click on the ‘Reboot’ option and then confirm to reboot the device remotely. This action is avaialable for devices with Android version 6.0 and above.
+Click on the ‘Reboot’ option and then confirm to reboot the device remotely. This action is available for devices with Android version 6.0 and above.
 
 ### Screen Lock
 
-To lock the device screen , click on ‘Lock device’ and confirm the same. In this case, Device user will need to enter device password (if it has been set) inorder to use device again. 
+To lock the device screen , click on ‘Lock device’ and confirm the same. In this case, Device user will need to enter device password (if it has been set) in-order to use device again. 
 
 ### Heart beat
 
@@ -145,7 +145,7 @@ However, if a device stays inactive for more than 7 days, you will see an empty 
 
 ## Apps
 
-This sections lists the Apps that are installed on the device along with the Version code, Package Name, Approval status (On/Off toggle button) and Available Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps. Toggling the button On will unhide the app and toggling it back to Off wil hide the app.
+This sections lists the Apps that are installed on the device along with the Version code, Package Name, Approval status (On/Off toggle button) and Available Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps. Toggling the button On will un-hide the app and toggling it back to Off wil hide the app.
 
 ![Device Management](../../../assets/OLD_DASHBOARD/3_DM.png)
 
@@ -157,7 +157,7 @@ There are many different ways to install various type of apps on a device as lis
 
 #### Private Apps
 
-These are compnay apps or privately owned app versions that can be uploaded on the dashboard from the `Apps` section. Inorder to install this app on the device, click on the radio button in Device->Details->Apps section for Install, choose the app and click Install.
+These are company apps or privately owned app versions that can be uploaded on the dashboard from the `Apps` section. In-order to install this app on the device, click on the radio button in Device->Details->Apps section for Install, choose the app and click Install.
 
 #### Google Apps
 

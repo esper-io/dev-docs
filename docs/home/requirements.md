@@ -10,6 +10,8 @@ The Console requires [Chrome](https://www.google.com/chrome) v57 or above. At pr
 
 Targeted Dedicated Devices must run Android version 4.4 KitKat (API Level 19) or above. However, we recommend that devices running Android version 7.0 Nougat (API Level 24) or above be used with Esper.
 
+We have recently started supporting latest Android version 10 on our platform.
+
 Esper Development Devices running Esper Enhanced Android will always be supported be used. Such devices open up additional features for developers, when using Esper.
 
 ## Infrastructure

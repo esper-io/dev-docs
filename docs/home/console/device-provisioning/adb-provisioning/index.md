@@ -5,7 +5,7 @@ For the ease of our customers, we have created a tool for Provisioning which use
 This method can be used to provision most android devices regardless of whether they are -
 
 - GMS or Non GMS
-- Have a camera or cameraless
+- Have a camera or camera-less
 - All Android versions including 4.x and 5.x
 
 We have made it super user friendly and it takes the user step by step indicating the progress in mini log seen on screen.
