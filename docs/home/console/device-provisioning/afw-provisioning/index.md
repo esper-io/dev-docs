@@ -11,7 +11,7 @@ Prerequisites for this method -
 
 The console will take you step by step through the process of AfW provisioning. You may follow through these steps easily by clicking Next.
 
-![Provision Device](../../../assets/afw/console1.png)
+![Provision Device](../../../assets/Afw/console1.png)
 
 The below steps are a more detailed version of the same steps for provision via AfW method. It is more or less the same as the console guidelines however, it has some extra screenshots - 
 
@@ -59,11 +59,11 @@ Step 10. A QR Code scanner will appear on your device once Esper agent is downlo
 
 Step 11. Now you need to bring up QR code of the template you wish to provision your device with. This can be done either from the Device Template section by clicking on the 'View QR code' link at the bottom of tile for the desired template as shown below - 
 
-![Provision Device](../../../assets/afw/template1.png)
+![Provision Device](../../../assets/Afw/template1.png)
 
 Or it can be done by choosing the template from drop down shown in step 6 of the guidelines given in Esper console for AfW provisioning method as shown below- 
 
-![Provision Device](../../../assets/afw/template2.png)
+![Provision Device](../../../assets/Afw/template2.png)
 
 In both cases, a QR code will appear on the Esper console that should be  scanned via the QR code scanner which appears on the device in the previous step.
 
