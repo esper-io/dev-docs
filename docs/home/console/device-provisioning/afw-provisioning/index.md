@@ -31,7 +31,7 @@ Step 4.  When presented with the **"Copy apps & data"** screen, select **"Set up
 
 Step 5.  Enter **afw#esper** in the Google Sign in screen, then click **"Next"**. afw#esper is the keyword with which Google (our certified EMM partner) will recognize that this device is to be registered with Esper.  
 
-![Provision Device](../../../assets/afw/qrcodeimage.png)
+![Provision Device](../../../assets/OLD_DASHBOARD/19_DT.png)
 
 Scan the QR code using device scanner
 
@@ -67,7 +67,7 @@ Or it can be done by choosing the template from drop down shown in step 6 of the
 
 In both cases, a QR code will appear on the Esper console that should be  scanned via the QR code scanner which appears on the device in the previous step.
 
-![Provision Device](../../../assets/afw/template3.png)
+![Provision Device](../../../assets/OLD_DASHBOARD/19_DT.png)
 
 Step 12. Bring the template QR code as shown above in the square QR code scanner of the device. You may need to move the device closer or further from the QR code screen and click on the scanner to capture the QR code. 
 

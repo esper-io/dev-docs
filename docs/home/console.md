@@ -228,7 +228,7 @@ Other Template Compliance Policy Toggle Buttons-<br>
 8.  **Outgoing calls** <br> Outgoing calls determines whether a user can make outgoing calls from the device. Turn On to allow outgoing calls, turn Off to prevent. <br/>
 9.  **Camera Access**<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
 10. **NFC** <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC. Turn On if any of your apps require NFC. <br/>
-11. **Google PlayStore**<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google Playstore of admin approved Google Play Apps.<br/>
+11. **Google PlayStore**<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google PlayStore of admin approved Google Play Apps.<br/>
 12. **USB tethering**<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
 13. **Edit date and time**<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
 14. **Application uninstall**<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
@@ -295,9 +295,6 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
 
 
-
-
-
 - **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
 
   ![Device Template](./assets/template-app/preloadedapps.png)
@@ -311,7 +308,7 @@ Even when user has exited the `Esper Device Agent` they will be able to see it r
 
    ![Device Template](./assets/template-app/playstoreapps.png)
 
-For convenience, a Playstore tab has been provided on this page where users can approve Google apps that need to be added to template.
+For convenience, a PlayStore tab has been provided on this page where users can approve Google apps that need to be added to template.
 
    ![Device Template](./assets/template-app/playstoreicon.png)
 
@@ -424,11 +421,11 @@ It consists of the following sections -
 
     d. [Device Graphs](./console/device-management/-/index.md#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
 
-    e. [Apps](./console/device-management/-/index.md#apps) - Admin can unhide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
+    e. [Apps](./console/device-management/-/index.md#apps) - Admin can un-hide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
 
     f. [Compliance Policy](./console#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
 
-    g. [Security](./console.md#_2-security-summary) - This section gives details regarding the security status of the device.
+    g. [Security](https://docs.esper.io/home/console/device-management/-/#security) - This section gives details regarding the security status of the device.
 
     h. [Remote View](./console/device-management/-/index.md#remote-viewer) - Admin can remote view the device if device user accepts the request.
 
@@ -452,11 +449,26 @@ This device is only available for new signups currently. Please note that trial 
 
 ### Categories
 
-There are checkboxes on the top of the page with categories such as Active, Inactive, Under provisioning, Devices with low battery, etc. that can be checked to view devices in each particular state.
+There are checkboxes on the top of the page with categories such as  that can be checked to view devices in each particular state-
+ - Active - currently online  
+ - Inactive - currently offline
+ - Under provisioning - devices undergoing provisioning 
+ - Devices with low battery - devices with battery under 30% charging
+ - Recently added devices - devices provisioned within the last 3 days
+ - Low risk devices - device with security status low
+ - Medium risk devices - devices with security status medium
+ - High risk devices - devices with security status high
+ - No risk devices - device with security status 'secure'
+
+
+ See the [Security](https://docs.esper.io/home/console/device-management/-/#security) section to know how the security status of a device is determined
+
+ 
+
 
 ### Search
 
-Search is provided on the top right where you can search for devices in Devices using the Esper assigned device code which is displayed on the device's home page wallpaper.
+Search is provided on the top right where you can search for devices in Devices using the Esper assigned device code which is displayed on the device homepage.
 
 ### Device Tile
 
@@ -468,13 +480,26 @@ Devices listed 'Under Provisioning' refer to devices where Google Play apps are 
 
 ![Device Management](./assets/OLD_DASHBOARD/Under_Provisioning.png)
 
-Devices under 'Applying Policy' refer to devices on which device templates are being implemented:
-
-![Device Management](./assets/OLD_DASHBOARD/Applying_Policy.png)
 
 Devices which have been enrolled on to your Esper Cloud are provisioned devices:
 
-![Device Management](./assets/OLD_DASHBOARD/Provisioned.png)
+Example 1- 
+This is a device at high security risk highlighted in red. Its currently offline and supports Google Mobile services.
+It is connected to wifi Esper-SSID. It was last seen on 12/10/2019 at Bellevue, Washington.
+
+![Device Management](./assets/OLD_DASHBOARD/devicetile1.png)
+
+Example 2- 
+This is a device is secure hence highlighted in green. Its currently offline and supports Google Mobile services.
+It is connected to wifi JZSB. It was last seen on 12/06/2019 at Kuala Lumpur.
+
+![Device Management](./assets/OLD_DASHBOARD/devicetile2.png)
+
+Example 3- 
+This is a device at low risk hence highlighted in dark grey. Its currently offline and supports Google Mobile services.
+It is connected to wifi Droidcon. It was last seen on 09/20/2019 at an undetermined location. It has been tagged with DroidConNYC indicating it was used to demo in Droid conference held in NYC. This is an example of how customers can use tags to identify and search their devices.
+
+![Device Management](./assets/OLD_DASHBOARD/devicetile3.png)
 
 ### Map View
 
@@ -485,6 +510,19 @@ Under the Map view, the types of devices can be chosen from the dropdown. Once s
 Once you click on the cluster icon, devices in the cluster will appear. Upon clicking on the individual devices, device information will be displayed:
 
 ![Device Template](./assets/OLD_DASHBOARD/1.2_DM.png)
+
+Another satellite version of maps that can be viewed by clicking `Satellite` is shown below - 
+
+![Device Template](./assets/OLD_DASHBOARD/devicemap2.png)
+
+Device tiles can be viewed in satellite view as well by zooming and clicking on the device pins -
+
+![Device Template](./assets/OLD_DASHBOARD/devicemap3.png)
+
+
+:::tip
+Device name and group names are actionable links in the device tiles that show up on maps on clicking device pins. Clicking them will take user to the respective device and group details pages.
+:::
 
 ## Groups
 
@@ -596,7 +634,7 @@ There are six filters provided to sort through the list of device tiles based on
 - Under provisioning - Devices in the group that are currently undergoing provisioning
 - Active devices - Devices in the group that are currently active ie online
 - Inactive devices - Devices in the group that are currently inactive ie offline
-- Devices at risk - Devices in the group that are at high, medium or low security risk (See Security in [Devices](http://localhost:8080/home/console.html#devices) for more information on how the security risk level of a device is calculated)
+- Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](http://localhost:8080/home/console.html#devices) for more information on how the security risk level of a device is calculated)
 - Devices with low battery - Devices in the group with battery percentage less than 15%
 - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
 
@@ -812,14 +850,14 @@ To approve In-ROM apps or Preloaded apps in a device, you may do so from templat
 ### Upload Private Apps (APK files) to Esper Cloud:
 
 - You can upload your own mobile app through an APK file using the upload button on the top right hand corner.
-- There are some rules that the uploaded app must adhere to inorder to succeed upload and provisioning -
+- There are some rules that the uploaded app must adhere to in-order to succeed upload and provisioning -
 
   1.  The APK has to have a unique version name and number.
   2.  Max size - 500 MB
   3.  Extension - .apk [only]
   4.  APK Signature verification
   5.  The app should not set itself as the default launcher. This will cause conflict with the Esper Agent(DPC).
-  6.  Latest Android APK standards (currently we allow apks without icons)
+  6.  Latest Android APK standards (currently we allow APKs without icons)
 
 - You can upload your own android app APK file using the upload button on the top right hand corner
 - The uploaded apps will be shown under the 'Uploaded apps' section:
@@ -1076,8 +1114,8 @@ Other Compliance Policy Toggle Buttons-<br>
 8.  Outgoing calls <br> Outgoing calls determines whether a user can make outgoing calls from the device. Turn On to allow outgoing calls, turn Off to prevent. <br/>
 9.  Camera Access<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
 10. NFC <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC. Turn On if any of your apps require NFC. <br/>
-11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google Playstore of admin approved Google Play Apps.<br/>
-12. Wifi <br> Wifi can be turned off on the device if there are other type of networks such as cellular present on the device. In case on no network availability, the wifi poicy will auto switch to on inorder to ensure the connectivity of the device with the cloud. <br/>
+11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google PlayStore of admin approved Google Play Apps.<br/>
+12. Wifi <br> Wifi can be turned off on the device if there are other type of networks such as cellular present on the device. In case on no network availability, the Wifi policy will auto switch to on in-order to ensure the connectivity of the device with the cloud. <br/>
 13. USB tethering<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
 14. Edit date and time<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
 15. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
@@ -1171,7 +1209,7 @@ Dashboard admin user also has the option to generate a group wise custom report 
 
 Following information is required- 
 
-- Group name to be chosen from dropdowsn
+- Group name to be chosen from dropdown
 - Start date
 - End date
 
