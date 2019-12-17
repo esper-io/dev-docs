@@ -1238,7 +1238,6 @@ Finally, clicking on Generate report will bring up the custom report to the user
 This report has the same information as daily report but for the specified dates and group.
 
 
-
 ## Users
 
 Learn about Esper's User Management.
