@@ -120,9 +120,14 @@ Device Template is a one stop means for you to quickly provision your device. It
 
 1.  Click on 'Device Template'.
 2.  Click on 'Create Template'.
-3.  Enter a name for the Device Template. Click `Next`.
+3.  Enter a name for the Device Template. You also have an option to enter a description for the template. 
 
-![Device Template](./assets/OLD_DASHBOARD/1_DT.png)
+     Dashboard users and admins create templates in a context, for example creating a template to define the device behavior for a set of devices deployed in Burbank warehouse. The description box enables the context to be associated and saved with the Templates.
+
+
+![Device Template](./assets/template/templatedesc1.png)
+
+Click `Next`.
 
 ### In the Policy section
 
@@ -355,8 +360,36 @@ Change Device settings from Esper Dashboard. Following are features available <b
 - Timezone  - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
 
 ![Esper Timezone](./assets/settings/timezone.png)
+- Wifi SSID -  In order to make the 6-tap provisioning process easier, we are introducing the capability to include the required WiFi credentials in the QR code generated via a Device Template. After reading the QR code, the device automatically connects to the WiFi access point using the SSID and password entered for the template. 
+The bottom section of Template-Settings page is where you can see the heading “Ability to add wifi credentials to the QR code” -
 
-Here is a complete screenshot of Template Settings page <br> ![Device Template](./assets/OLD_DASHBOARD/12_DT.png)
+![Device Template](./assets/template/wifissid1.png)
+
+
+Basically three fields: WiFi SSID, WiFi Password and WiFi Security type. Out of these three, 
+
+
+
+User may enter wifi ssid, password and choose the security type in the dropdown shown below. The WiFi security type can take only four values: NONE, WPA, WEP or EAP.
+
+![Device Template](./assets/template/wifissid2.png)
+
+An extra drop down appears when option EAP is selected for further security settings. 
+
+In more technical terms, here, provisioning wifi phase 2 authorization (android.app.extra.PROVISIONING_WIFI_PHASE2_AUTH) must be defined which accepts: NONE, PAP, MSCHAP, MSCHAPV2, GTC, SIM, AKA or AKA_PRIME. 
+
+Read more about these options [here](https://developer.android.com/reference/android/net/wifi/WifiEnterpriseConfig.Eap).
+
+
+![Device Template](./assets/template/wifissid3.png)
+
+
+Upon reading the QR code, the device will automatically connect to the WiFi access point if it is available. 
+
+
+Here is a complete view of Settings section in Template -
+
+![Device Template](./assets/OLD_DASHBOARD/12_DT.png)
 
 Click `Next`
 
@@ -478,16 +511,15 @@ There are checkboxes on the top of the page with categories such as  that can be
 
 Search is provided on the top right where you can search for devices in Devices using the Esper assigned device code which is displayed on the device homepage.
 
-### Device Tile
+### Device View
 
-The default view is Grid, but the user can click on Maps to access the map view. Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [View More](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
+The default view is Grid, but the user can click on Maps to access the list view and the map view. 
+
+Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [View More](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
 
 ![Device Management](./assets/OLD_DASHBOARD/1_DM.png)
 
-Devices listed 'Under Provisioning' refer to devices where Google Play apps are getting updated:
-
-![Device Management](./assets/OLD_DASHBOARD/Under_Provisioning.png)
-
+### Device Tiles (Grid View)
 
 Devices which have been enrolled on to your Esper Cloud are provisioned devices:
 
@@ -508,6 +540,18 @@ This is a device at low risk hence highlighted in dark grey. Its currently offli
 It is connected to wifi Droidcon. It was last seen on 09/20/2019 at an undetermined location. It has been tagged with DroidConNYC indicating it was used to demo in Droid conference held in NYC. This is an example of how customers can use tags to identify and search their devices.
 
 ![Device Management](./assets/OLD_DASHBOARD/devicetile3.png)
+
+Example 4 - Devices listed 'Under Provisioning' refer to devices which are still getting provisioned (such as google app getting updated etc). These are devices that have not yet achieved the active status. 
+
+![Device Management](./assets/OLD_DASHBOARD/Under_Provisioning.png)
+
+### List View
+ When the number of devices in a fleet crosses over into the 100s it is hard to view or sort them in the device tile view. With the new List View users can easily see a list of all devices available on the dashboard along with device information columns including online/offline status, serial number, group name, Android version, and andy tags. 
+
+Search by device name can be used without having to click and enter into device details page to get detailed information about each device. 
+
+
+![Device Management](./assets/devicetab/listview1.png)
 
 ### Map View
 
@@ -1031,6 +1075,17 @@ Policy is a standard set of rules or permissions that are related to security of
 
 ![Policy Management](./assets/OLD_DASHBOARD/3_PM.png)
 
+
+### Create a policy
+
+Click on `New Policy` to start creating a new policy.
+
+![Policy Management](./assets/policy/createpolicy1.png)
+
+Dashboard users and admins create policies in a context, for example a compliance policy for any device operating at retail outlets in Texas. The description box enables the context to be associated and saved with Compliance Policies.
+
+![Policy Management](./assets/policy/createpolicy2.png)
+
 Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
 
 ### Available policy options
@@ -1156,7 +1211,7 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 :::
  <br>
 
-![Create New Policy](./assets/OLD_DASHBOARD/newpolicy.png)
+![Create New Policy](./assets/policy/createpolicy3.png)
 
 You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
 
@@ -1299,6 +1354,48 @@ That’s it! It looks even easier in our [video](https://youtu.be/UkTwhFRTwgQ) G
 Note: The performance of Geofencing feature is dependent on accuracy of in-built GPS of devices. Additionally, ability to track location of the device is also dependent on WiFi, Bluetooth, cellular connectivity and internet of the device. This feature is not supported for Android version 4.x.
 :::
 
+## Pipeline
+
+Introduction:
+
+Esper Pipeline feature enables users to ensure smooth deployment of actions (including app installation) on large fleets of remote devices by defining stages constituting of operations, installations, tests, and wait time that are executed when a defined trigger occurs, such as when a new version of the app is uploaded. Only after succeeding in the above stages on test devices will the action get applied on production devices, hence ensuring a smooth deployment via a pipeline of stages. The initial version of the Esper Pipeline supports only the app installation operation and requires a 5 second or more break between the deletion of stages. 
+
+![](./assets/pipeline/image2.png)
+
+Pipeline has the capability to create n number of stages or operations for automating tasks. Different sets of tasks can be automated by creating pipelines & reduce the manual work to do it one by one.
+
+V1 design, will do some limited operations & limited pipeline capabilities.  
+ 
+Example use case: 
+Let us consider a use case where enterprise wants to deploy app Ant v1.145 to their device fleet of 1000 devices deployed in Texas. It is very important to them that the deployment of the latest version of app Ant is smooth and without any errors. So they use pipelines to test this Ant v1.145 on various devices in different stages, they also ensure that it continues to run for a few hours on each set of devices and so on. Pipeline feature helps them easily plan the stages of tests and various operations that this app version has to succeed through before it is approved to be deployed on the fleet of production devices in Texas.
+
+Steps Of Pipeline: 
+
+Create A Pipeline
+
+Pipeline info : Name a pipeline & give description if any.
+
+![](./assets/pipeline/image11.png)
+
+Trigger: Define a trigger which is an operation that sets off the pipeline in motion. Any time the defined trigger occurs, either via dashboard or via an api call or cli command, the pipeline will automatically start running. For V1 we currently only support the trigger where a new app version is uploaded. 
+
+
+![](./assets/pipeline/image9.png)
+
+ Stages: Post trigger, you need to define stages of the pipeline. For each stage, a name & description is given first, then you have to add operations that are to take place. For each operation, define name & description, operation type and finally, select a group of devices on which the operation will occur. For now operation is Install app or uninstall app. Users can create any number of stages as per their use case.
+
+ ![](./assets/pipeline/image6.png)
+
+ ![](./assets/pipeline/image10.png)
+ 
+
+Preview & Save : Once user is done with above three steps they see the final preview & saves the pipeline & the pipeline will be created.
+
+![](./assets/pipeline/image2.png)
+
+Pipeline can be edited later at any moment as per the use case or we can add or remove stages .
+
+ 
 ## Company Settings
 
 Learn about Esper's Company Settings.
