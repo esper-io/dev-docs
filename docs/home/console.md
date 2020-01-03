@@ -582,6 +582,8 @@ Search by device name can be used without having to click and enter into device 
 
 ![Device Management](./assets/devicetab/listview1.png)
 
+Each device name is a link that will take the dashboard user to the [details](./console/device-management/-/index.md) of that device.
+
 This view gives the capability to filter devices via - 
 
 1. Group Name - Gives the option to choose any one group
@@ -602,7 +604,7 @@ Under the Map view, the types of devices can be chosen from the dropdown. Once s
 
 ![Device Management](./assets/OLD_DASHBOARD/1.1_DM.png)
 
-Once you click on the cluster icon, devices in the cluster will appear. Upon clicking on the individual devices, device information will be displayed:
+Once you click on the cluster icon, devices in the cluster will appear. Upon clicking on the individual devices, device information will be displayed. Clicking on the device name will take the dashboard user to [details](./console/device-management/-/index.md) section of that device.
 
 ![Device Template](./assets/OLD_DASHBOARD/1.2_DM.png)
 
