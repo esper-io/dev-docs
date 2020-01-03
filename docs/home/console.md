@@ -537,13 +537,21 @@ Search is provided on the top right where you can search for devices in Devices 
 
 ### Device View
 
-The default view is Grid, but the user can click on Maps to access the list view and the map view. 
+There are 3 types of viewing styles - grid, list and maps. The default view is Grid, but the user can click on list and maps to access the list view and the map view. 
 
+<<<<<<< HEAD
 Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
+=======
+![Device Management](./assets/devicetab/deviceviews.png)
+>>>>>>> d83105bbf5479a6297893c8b30ad6f90675c0eff
 
-![Device Management](./assets/OLD_DASHBOARD/1_DM.png)
+### Grid View 
 
-### Device Tiles (Grid View)
+Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [Details](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
+
+![Device Management](./assets/devicetab/gridview1.png)
+
+#### Device Tiles
 
 Devices which have been enrolled on to your Esper Cloud are provisioned devices:
 
