@@ -353,15 +353,39 @@ Click `Next`.
 Change Device settings from Esper Dashboard. Following are features available <br> 
 
 - Turn on/off bluetooth <br>
-- Select screen timeout duration <br>
+- Select screen timeout duration <br> - Dashboard user can decide the time after which the device screen should get locked. Similar to stock android devices, we have options such as 5s, 15s, 30s, 1 minute and so on. There is also an option of the device screen 'Never' timing out such as in use case of a digital signage device. We have following screen lock timeouts - 
+
+    5 seconds<br>
+    15 seconds<br>
+    30 seconds<br>
+    1 minute<br>
+    2 minutes<br>
+    5 minutes<br>
+    10 minutes<br>
+    30 minutes<br>
+    Never<br>
+
+
+![Esper Timezone](./assets/template/screentimeoutdevice.png)
+
+
 - Select screen orientation <br>
 - Select GPS accuracy <br>
 - Increase/decrease Brightness, Volume (alarm, notification, ring and music) <br>
 - Timezone  - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
 
 ![Esper Timezone](./assets/settings/timezone.png)
+
+We have introduced a robust search capability such that even as the dashboard user begins to type, the suggestions show up conveniently for the dashboard to select and set the timezone. For example, typing 'Pacific' will bring up all timezones starting with 'Pacific' prefix.
+
+![Esper Timezone](./assets/settings/timezone2.png)
+
+- ADB - This option gives user capability to enable ADB on the device using the template for 30 minutes post provisioning.  This is useful in cases where the admin or support engineer is provisioning the device for the first time and wants to make sure that we still have access to communicate with device in case of any issues. It is also useful for testing the device with tools that require communication via adb. For security purposes we have limited the time for which adb stays on.
+
+![Device Template](./assets/template/template-adb.png)
+
 - Wifi SSID -  In order to make the 6-tap provisioning process easier, we are introducing the capability to include the required WiFi credentials in the QR code generated via a Device Template. After reading the QR code, the device automatically connects to the WiFi access point using the SSID and password entered for the template. 
-The bottom section of Template-Settings page is where you can see the heading “Ability to add wifi credentials to the QR code” -
+The bottom section of Template-Settings page is where you can see the heading “Ability to add Wifi credentials to the QR code” -
 
 ![Device Template](./assets/template/wifissid1.png)
 
@@ -370,13 +394,13 @@ Basically three fields: WiFi SSID, WiFi Password and WiFi Security type. Out of 
 
 
 
-User may enter wifi ssid, password and choose the security type in the dropdown shown below. The WiFi security type can take only four values: NONE, WPA, WEP or EAP.
+User may enter WiFi SSID, password and choose the security type in the dropdown shown below. The WiFi security type can take only four values: NONE, WPA, WEP or EAP.
 
 ![Device Template](./assets/template/wifissid2.png)
 
 An extra drop down appears when option EAP is selected for further security settings. 
 
-In more technical terms, here, provisioning wifi phase 2 authorization (android.app.extra.PROVISIONING_WIFI_PHASE2_AUTH) must be defined which accepts: NONE, PAP, MSCHAP, MSCHAPV2, GTC, SIM, AKA or AKA_PRIME. 
+In more technical terms, here, provisioning Wifi phase 2 authorization (android.app.extra.PROVISIONING_WIFI_PHASE2_AUTH) must be defined which accepts: NONE, PAP, MSCHAP, MSCHAPV2, GTC, SIM, AKA or AKA_PRIME. 
 
 Read more about these options [here](https://developer.android.com/reference/android/net/wifi/WifiEnterpriseConfig.Eap).
 
@@ -515,7 +539,7 @@ Search is provided on the top right where you can search for devices in Devices 
 
 The default view is Grid, but the user can click on Maps to access the list view and the map view. 
 
-Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [View More](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
+Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
 
 ![Device Management](./assets/OLD_DASHBOARD/1_DM.png)
 
@@ -552,6 +576,20 @@ Search by device name can be used without having to click and enter into device 
 
 
 ![Device Management](./assets/devicetab/listview1.png)
+
+This view gives the capability to filter devices via - 
+
+1. Group Name - Gives the option to choose any one group
+2. Policy Name - Gives the option to choose any one policy
+3. GMS/Non GMS - Gives option to choose between GMS and Non-GMS
+4. Active/Inactive - Gives option to choose Active or Inactive device
+5. Security Status - Gives option to choose between High Risk, Low Risk, Medium Risk and No Risk (or Secure) devices.
+
+In the filters, a search capability has been provided to select values.
+Currently, user can only filter by one value of each of above. For example, I can choose Group A, Policy B and Active which will give me a filtered list of devices in Group A which are active and have policy B applied on them.
+
+![Device Management](./assets/devicetab/listview2.png)
+
 
 ### Map View
 
@@ -677,7 +715,7 @@ The device tiles will show the following information for each device in the grou
 - Ethernet, Wi-Fi and Cellular connection name and status
 - Link to device details
 
-See more about information about individual devices in the [Devices](http://localhost:8080/home/console.html#devices) section on this document.
+See more about information about individual devices in the [Devices](https://docs.esper.io/home/console.html#devices) section on this document.
 
 There are six filters provided to sort through the list of device tiles based on the following categories - 
 
