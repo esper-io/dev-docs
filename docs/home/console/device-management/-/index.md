@@ -98,7 +98,21 @@ Change Device settings from Esper Dashboard. Following are features available -
  ![Device Settings](../../../assets/settings/settings.png)
 
 * Turn on/off bluetooth  <br>
-* Select screen timeout duration  <br>
+* Select screen timeout duration <br>  Dashboard user can decide the time after which the device screen should get locked. Similar to stock android devices, we have options such as 5s, 15s, 30s, 1 minute and so on. There is also an option of the device screen 'Never' timing out such as in use case of a digital signage device. We have following screen lock timeouts - 
+
+    5 seconds<br>
+    15 seconds<br>
+    30 seconds<br>
+    1 minute<br>
+    2 minutes<br>
+    5 minutes<br>
+    10 minutes<br>
+    30 minutes<br>
+    Never<br>
+
+
+![Esper Timezone](../../../assets/template/screentimeoutdevice.png)
+
 * Select screen orientation  <br>
 * Select GPS accuracy  <br>
 * Increase/decrease Brightness, Volume (alarm, notification, ring and music)  <br>
