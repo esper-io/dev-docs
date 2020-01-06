@@ -305,3 +305,24 @@ Any app added in the collections on this page will show up on the Google Play St
 
 ![](./assets/faq/orgapp2.png)
 
+## How to capture log when my device is in Kiosk mode?
+
+Click on below image to view video instructions to easily  capture log for a device which is in Kiosk mode-
+
+<br/><br/> [![Capture log-kiosk mode](./assets/faq/capturebugreport-kiosk.png)](https://www.youtube.com/watch?v=EEGsY9_1Nn0&feature=youtu.be 'Capture log in kiosk mode')
+
+Steps to take - 
+1. Go to the Devices section, and search for your device via the Device ID. Click on Details.
+2. Go to Actions tab and click "Unpin app". This will unpin the kiosk app from your device. 
+3. Usually the Compliance Policy for Kiosk mode is set such that Notification bar is blocked. Since we need notification bar for getting bug report, in order to change this we need a new policy to be set on the device. 
+4. Open the Compliance Policy section in new tab.
+5. Create a new Compliance Policy that is identical to the policy currently applied on the device except for the notification bar. Alternatively, you may duplicate existing policies via the vertical ellipsis and make the change. Turn on the toggle button for notification bar and save the policy with a unique name, for example NotificationEnabledPolicy. 
+6. Apply this new policy on the device by going to Device-> Compliance Policy section. 
+7. You will see a notification on device "Policy Switch successful."
+8. Now you may drag down finger from top to see the notification bar on phone.
+9. On the Console, go to Device-> Capture log and click Start.
+10. On the device notification bar, you will see that system is capturing bug report. At the end of this process, click on small arrow down next to the question "Share bug report?" and click on 'Share' on the request seen in notification bar. 
+11. The console will now show a downloadable link for bugreport.
+12. Go to Device->Compliance policy and switch it back to the old policy with notification bar off.
+13. Go to Device->Actions and click on Pin app to go back to kiosk mode.
+

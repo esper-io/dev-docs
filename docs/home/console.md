@@ -366,7 +366,9 @@ Change Device settings from Esper Dashboard. Following are features available <b
     Never<br>
 
 
-![Esper Timezone](./assets/template/screentimeoutdevice.png)
+
+![Esper Timezone](./assets/template/screentimeoutdashboard.png)
+
 
 
 - Select screen orientation <br>
@@ -380,9 +382,7 @@ We have introduced a robust search capability such that even as the dashboard us
 
 ![Esper Timezone](./assets/settings/timezone2.png)
 
-- ADB - This option gives user capability to enable ADB on the device using the template for 30 minutes post provisioning.  This is useful in cases where the admin or support engineer is provisioning the device for the first time and wants to make sure that we still have access to communicate with device in case of any issues. It is also useful for testing the device with tools that require communication via adb. For security purposes we have limited the time for which adb stays on.
 
-![Device Template](./assets/template/template-adb.png)
 
 - Wifi SSID -  In order to make the 6-tap provisioning process easier, we are introducing the capability to include the required WiFi credentials in the QR code generated via a Device Template. After reading the QR code, the device automatically connects to the WiFi access point using the SSID and password entered for the template. 
 The bottom section of Template-Settings page is where you can see the heading “Ability to add Wifi credentials to the QR code” -
