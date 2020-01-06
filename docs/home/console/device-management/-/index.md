@@ -111,7 +111,9 @@ Change Device settings from Esper Dashboard. Following are features available -
     Never<br>
 
 
+
 ![Esper Timezone](../../../assets/template/screentimeoutdashboard.png)
+
 
 * Select screen orientation  <br>
 * Select GPS accuracy  <br>

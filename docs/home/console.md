@@ -366,7 +366,9 @@ Change Device settings from Esper Dashboard. Following are features available <b
     Never<br>
 
 
+
 ![Esper Timezone](./assets/template/screentimeoutdashboard.png)
+
 
 
 - Select screen orientation <br>
