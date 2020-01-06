@@ -111,7 +111,7 @@ Change Device settings from Esper Dashboard. Following are features available -
     Never<br>
 
 
-![Esper Timezone](../../../assets/template/screentimeoutdevice.png)
+![Esper Timezone](../../../assets/template/screentimeoutdashboard.png)
 
 * Select screen orientation  <br>
 * Select GPS accuracy  <br>
@@ -131,7 +131,7 @@ Below is screenshot of the Device Actions page which is also inclusive of local 
 
 ## Event Feed
 
-This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behaviour to predict security issues.
+This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behavior to predict security issues.
 
 ![Device Management](../../../assets/OLD_DASHBOARD/6_DM.png)
 
