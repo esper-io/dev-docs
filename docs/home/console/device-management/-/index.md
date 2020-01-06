@@ -120,6 +120,9 @@ Change Device settings from Esper Dashboard. Following are features available -
 
  ![Device Settings](../../../assets/settings/timezone.png)
 
+We have introduced a robust search capability such that even as the dashboard user begins to type, the suggestions show up conveniently for the dashboard to select and set the timezone. For example, typing 'Pacific' will bring up all timezones starting with 'Pacific' prefix.
+
+![Esper Timezone](../../../assets/settings/timezone2.png)
 
 <br>
 Below is screenshot of the Device Actions page which is also inclusive of local adb and device settings - 
