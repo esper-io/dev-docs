@@ -731,7 +731,7 @@ There are six filters provided to sort through the list of device tiles based on
 - Under provisioning - Devices in the group that are currently undergoing provisioning
 - Active devices - Devices in the group that are currently active ie online
 - Inactive devices - Devices in the group that are currently inactive ie offline
-- Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](http://localhost:8080/home/console.html#devices) for more information on how the security risk level of a device is calculated)
+- Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](https://docs.esper.io/home/console/device-management/-/) for more information on how the security risk level of a device is calculated)
 - Devices with low battery - Devices in the group with battery percentage less than 15%
 - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
 
