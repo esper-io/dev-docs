@@ -1,10 +1,14 @@
 # Console
 
-Click on Below Links to read about various sections of the Esper Dashboard <br />
+Welcome to  Esper Console docs. This document describes how to use the Esper console features with ease. You can view subheadings on the left side bar which will take you directly to the section you are looking for. There is a separate [faq](https://docs.esper.io/home/faq.html) section that can be checked for any quick query if you are already used to Esper Console. <br />
 
 ## Manage Home
 
 This page explains the functionality of the Esper Home Dashboard.
+
+![](./assets/GettingStarted/managedashboard.png)
+
+
 
 There are four tile sections on the Home Dashboard page:
 
@@ -539,7 +543,7 @@ Search is provided on the top right where you can search for devices in Devices 
 
 There are 3 types of viewing styles - grid, list and maps. The default view is Grid, but the user can click on list and maps to access the list view and the map view. 
 
-Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
+Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:<br>
 ![Device Management](./assets/devicetab/deviceviews.png)
 
 ### Grid View 
@@ -731,7 +735,7 @@ There are six filters provided to sort through the list of device tiles based on
 - Under provisioning - Devices in the group that are currently undergoing provisioning
 - Active devices - Devices in the group that are currently active ie online
 - Inactive devices - Devices in the group that are currently inactive ie offline
-- Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](http://localhost:8080/home/console.html#devices) for more information on how the security risk level of a device is calculated)
+- Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](https://docs.esper.io/home/console/device-management/-/) for more information on how the security risk level of a device is calculated)
 - Devices with low battery - Devices in the group with battery percentage less than 15%
 - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
 
