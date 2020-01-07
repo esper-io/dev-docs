@@ -1,10 +1,14 @@
 # Console
 
-Click on Below Links to read about various sections of the Esper Dashboard <br />
+Welcome to  Esper Console docs. This document describes how to use the Esper console features with ease. You can view subheadings on the left side bar which will take you directly to the section you are looking for. There is a separate [faq](https://docs.esper.io/home/faq.html) section that can be checked for any quick query if you are already used to Esper Console. <br />
 
 ## Manage Home
 
 This page explains the functionality of the Esper Home Dashboard.
+
+![](./assets/GettingStarted/managedashboard.png)
+
+
 
 There are four tile sections on the Home Dashboard page:
 
