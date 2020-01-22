@@ -4,7 +4,7 @@ This tool is designed to make provisioning single or multiple devices an easy ta
 
 ## Instructions for Windows 10
 
-1.  Download the Esper Device Provisioner from [here](http://downloads.esper.io/esper-provisioner/windows/Esper%20Device%20Provisioner%20Setup%201.0.0-beta.exe)
+1.  Download the Esper Device Provisioner from [here](https://downloads.esper.io/esper-provisioner/windows/EsperDeviceProvisioner.exe)
 
 2.  Open File Explorer (you can use the Windows Key + E shortcut), and go to where you have downloaded the file. Most probably, it will be in your Downloads’ folder:
 
@@ -130,7 +130,7 @@ This tool is designed to make provisioning single or multiple devices an easy ta
 
 ## Instructions for MacOS
 
-1.  Download the Esper Device Provisioner from [here](http://downloads.esper.io/esper-provisioner/mac/Esper%20Device%20Provisioner-1.0.0-beta.dmg)
+1.  Download the Esper Device Provisioner from [here](https://downloads.esper.io/esper-provisioner/mac/EsperDeviceProvisioner.dmg)
 
 2.  Open Finder and go to where you have downloaded the file. Most probably, it will be in your Downloads’ folder:
 
