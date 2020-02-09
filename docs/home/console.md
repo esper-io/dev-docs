@@ -268,8 +268,14 @@ If clicked, this opens up two more checkboxes-<br>
 All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
 :::
 
-<br> <br/>
+ADB- Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.” If checked in policy, dashboard user may turn on ADB via Settings for a configurable time period.  If unchecked, ADB can not be turned on from Settings. NOTE: We NEVER allow turning on ADB from device end for an Esper provisioned device.
+ 
+ 
+![](./assets/template/adbinpolicy.png)
+
+<br/>
 Compliance Policy Section of the Device Template - 
+
 ![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png) <br> <br/> You may reset these values to default at any time by clicking `Reset to Default` button at the bottom. <br> <br/> Click `Next`. <br> <br/>
 
 ### In the Apps section
@@ -303,7 +309,6 @@ Here is a list of Esper features that will be **unavailable in the default andro
 • Capture Screenshot <br> • Remote View and Remote Control<br>  • Over the Air OS updates for Esper Enhanced Android OS<br> • Latest Device Agent updates for Devices with Android version less than 6.0
 
 
-
 The device screen will look similar to a regular android device with `Esper Device Agent` showing up as an app that can be opened and closed.
 
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc1.png)
@@ -311,7 +316,6 @@ The device screen will look similar to a regular android device with `Esper Devi
 Even when user has exited the `Esper Device Agent` they will be able to see it running in the background in the notification bar as follows -
 
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
-
 
 
 - **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
@@ -370,10 +374,7 @@ Change Device settings from Esper Dashboard. Following are features available <b
     Never<br>
 
 
-
 ![Esper Timezone](./assets/template/screentimeoutdashboard.png)
-
-
 
 - Select screen orientation <br>
 - Select GPS accuracy <br>
@@ -386,17 +387,45 @@ We have introduced a robust search capability such that even as the dashboard us
 
 ![Esper Timezone](./assets/settings/timezone2.png)
 
+- ADB -  Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.
+If the ADB was enabled in Policy, ADB can be turned on from here for a device for a configurable time period or to can be set to 'Always On' 
+
+:::tip
+Keeping ADB 'Always ON' is NOT recommended for security purposes).
+:::
+
+If dashboard user needs to turn on the adb for communication to device for purpose of debugging or run external tools, they may choose to enable it from here.
+
+Below are the time configurations for which adb can be turned on-
+ 
+![](./assets/settings/adbinsettings.png)
+ 
+   - Always On
+   - 1 hour
+   - 3 hour
+   - 8 hour
+   - 1 day
+
+After the completion of this time period from the point of provisioning, the ADB will automatically turn off for the device.
+ 
+- WiFi Access Points - User can predefine preferred WiFi networks by entering WiFi access point details such as WiFi SSID, WiFi Security Type, WiFi Password and whether its a "Hidden" network.
+ 
+![](./assets/settings/wifiaccesspoints.png)
+ 
+The device will automatically connect to the given WiFi access points as per the availability and network strength after provisioning.
+ 
+:::tip
+The WiFi on/off and WiFi access points feature are not available for android 10.0 and above
+:::
 
 
-- Wifi SSID -  In order to make the 6-tap provisioning process easier, we are introducing the capability to include the required WiFi credentials in the QR code generated via a Device Template. After reading the QR code, the device automatically connects to the WiFi access point using the SSID and password entered for the template. 
-The bottom section of Template-Settings page is where you can see the heading “Ability to add Wifi credentials to the QR code” -
+
+- Ability to add Wifi Credentials to QR Code (OR WiFi to be used during provisioning) -  In order to make the 6-tap provisioning process easier, we are introducing the capability to include the required WiFi credentials in the QR code generated via a Device Template. After reading the QR code, the device automatically connects to the WiFi access point using the SSID and password entered for the template. 
+
 
 ![Device Template](./assets/template/wifissid1.png)
 
-
-Basically three fields: WiFi SSID, WiFi Password and WiFi Security type. Out of these three, 
-
-
+Similar to Wifi access points, three fields: WiFi SSID, WiFi Password and WiFi Security type. 
 
 User may enter WiFi SSID, password and choose the security type in the dropdown shown below. The WiFi security type can take only four values: NONE, WPA, WEP or EAP.
 
@@ -1260,9 +1289,25 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 :::
  <br>
 
-![Create New Policy](./assets/policy/createpolicy3.png)
-
+ADB - Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.”
+ 
+If checked in policy, dashboard user may turn on ADB via Dashboard Settings for a configurable time period.  If unchecked, ADB can not be turned on from Settings.
+ 
+NOTE: We NEVER allow turning on ADB from device end for an Esper provisioned device.
+ 
+ 
+![](./assets/template/adbinpolicy.png)
+ 
+ 
+Here is how the Compliance Policy page of the Dashboard looks like -
+<br>
+ 
+![](./assets/OLD_DASHBOARD/newpolicy.png)
+ 
+ 
 You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
+ 
+
 
 ## Reports
 
