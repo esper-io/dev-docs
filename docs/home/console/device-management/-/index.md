@@ -205,9 +205,11 @@ This feature will allow user control over bluetooth connection of the device. Tu
 When on, the information under "Paired devices" will show the number of devices paired and whether they are connected.
  
 For example when no device is connected -
+
 ![](../../../assets/devicesettings/devicebluetooth.png)
  
 When a device is paired as well as connected -
+
 ![](../../../assets/devicesettings/devicebluetooth1.png)
  
 Here, the device name as well as its IP address and connection status is shown. If the device gets disconnected, it will continue to show in the Paired list but the connection status will shows as "Disconnected."
@@ -276,58 +278,100 @@ With the new Telemetry Cloud infrastructure in place, Esper Device metrics have 
 
 ![Device Management](../../../assets/OLD_DASHBOARD/7_DM.png)
 
-However, if a device stays inactive for more than 7 days, you will see an empty state requesting to activate the device: ![Device Management](../../../assets/OLD_DASHBOARD/8_DM.png)
+However, if a device stays inactive for more than 7 days, you will see an empty state requesting to activate the device: 
+
+![](../../../assets/OLD_DASHBOARD/8_DM.png)
 
 ## Apps
 
-This sections lists the Apps that are installed on the device along with the Version code, Package Name, Approval status (On/Off toggle button) and Available Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps. Toggling the button On will un-hide the app and toggling it back to Off wil hide the app.
+This sections lists the Apps that are installed on the device along with the App name,App type, Version code, Package Name, App state and Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps. 
 
-![Device Management](../../../assets/OLD_DASHBOARD/3_DM.png)
+![Device Management](../../../assets/deviceapps/deviceapps1.png)
 
-There are also radio buttons at the bottom end where user can choose to `Install` or `Uninstall` a private app on the device which is previously uploaded in the `Apps` section of the Dashboard.
+An App can have 3 states - Show, Hide and Disable. This is useful for apps such as IN-ROM apps that sometimes can not be uninstalled but can be disabled. For all installed apps also, there is an option to Show or Hide from the device home screen.
 
-There are many different ways to install various type of apps on a device as listed below - 
+On the left side, dashboard user can choose between All apps, Enterprise (or privately uploaded) apps, Google apps and Preloaded (IN-ROM apps).
 
-### Installing an App in a Single Device - 
+Additionally, there is a New App Install button, search bar and filter on top left and top right corners - 
 
-#### Private Apps
+![Device Management](../../../assets/deviceapps/deviceapps10.png)
 
-These are company apps or privately owned app versions that can be uploaded on the dashboard from the `Apps` section. In-order to install this app on the device, click on the radio button in Device->Details->Apps section for Install, choose the app and click Install.
+The filter lets you view apps with app state in Show/Hide or Disable.
 
-#### Google Apps
+The New App Install button lets you install new apps on the device. A dialog box appears as below - 
 
-1. Go to Play For Work
-2. Click on the app (Make sure its approved
-3. Click Select
-4. Select the device you wish to install it on from the dropdown on top left
-5. Click Install
+![Device Management](../../../assets/deviceapps/deviceapps13.png)
 
-#### Preloaded Apps
+You may select the app from the list of all approved google apps and all uploaded private apps. Then you may select the app version number.
 
-Approve a preloaded app to show in the device from the list of apps in Device-Apps section by turning **on** the toggle button.
+Finally click 'Install'.
 
-### Uninstalling an App on a Single Device 
- 
-#### Private Apps
+![Device Management](../../../assets/deviceapps/deviceapps15.png)
 
-Select the 'uninstall' radio button and choose the app to be uninstalled from the drop down menu. Click Uninstall.
+A progress bar is seen with a final message informing of app installation success.
+If an error occurs, user will be informed of the same. Please do not hesitate to reach out to us at support@esper.io for any issues.
 
-#### Google Apps
+Additionally, there is a search bar available on top left corner of app list that lets us search for apps via its name- 
 
- 1. Go to Play For Work
- 2. Click on the app 
- 3. Click Select
- 4. Select the device you wish to uninstall it on from the dropdown on top left
- 5. Click Uninstall
+![Device Management](../../../assets/deviceapps/deviceapps11.png)
 
-#### Preloaded Apps
+The app list is paginated as can be viewed at the bottom. 
 
-Turn off the toggle button from the app list for the preloaded app. It does not uninstall the app but hides it. 
- 
- 
+
+![Device Management](../../../assets/deviceapps/deviceapps12.png)
+
+**Actions**
+
+The Actions column is where it gets interesting. On clicking the ellipsis button on the right end, you will see actions such as -
+
+![Device Management](../../../assets/deviceapps/deviceapps2.png)
+
+1. Uninstall - uninstalls the apps. Note that some IN-ROM apps can not be uninstalled.
+When you click 'Uninstall', a dialog box appears on right collapsible sidebar such as this - 
+
+![Device Management](../../../assets/deviceapps/deviceapps3.png)
+
+Click on 'Yes, Uninstall' to uninstall the app. The following progress bar will show - 
+
+![Device Management](../../../assets/deviceapps/deviceapps4.png)
+
+![Device Management](../../../assets/deviceapps/deviceapps5.png)
+
+Click Close and the app gets uninstalled from device and disappears from the device.
+
+2. Clear Data - clears app data. Similar pop up and progress bar show up as uninstall action - 
+
+![Device Management](../../../assets/deviceapps/deviceapps6.png)
+
+![Device Management](../../../assets/deviceapps/deviceapps5.png)
+
+3. Set App Permission - This lets user define detailed app permission such as location granularity, access to camera, read phone state and writing to external storage.
+
+On clicking this, a dialogue box appears such as below - 
+
+![Device Management](../../../assets/deviceapps/deviceapps16.png)
+
+Simply choosing the options from the dropdown will execute the command. The permissions which are available to choose are dependent on the type on IN-ROM app that is being looked at. 
+
+4. Set App State - As stated above, an app can have 3 states - show, hide and disable. This action give us control over the apps state. 
+
+Clicking on this brings up this dialog box - 
+
+![Device Management](../../../assets/deviceapps/deviceapps8.png)
+
+Show - installed and visible on home screen.
+
+Hide - installed but not visible on home screen.
+
+Disable - installed but can not be used.
+
+Here you may click on any of 3 states to choose the state for the app selected.
+Click Save changes.
+
+
 
 :::tip 
- Please note that some preloaded apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. 
+ Please note that some In-ROM (preloaded) apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. 
 :::
 
 
