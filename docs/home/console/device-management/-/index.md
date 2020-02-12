@@ -35,7 +35,7 @@ Additionally, on the top under breadcrumbs, Device name, Group name (that it bel
 <div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
  
 Device actions or setting changes to be performed on a device from dashboard can be done from this section. There are capabilities such as Reboot, Screen lock, Heart beat, Device Lockdown, Wipe, Device mode, increase or decrease brightness, volume, change screen orientation, screen timeout settings, wifi settings, GPS, Bluetooth and ADB settings that can be changed from this section.
-Below is screenshot of the complete Device Settings page with tabs closed-
+Below is screenshot of the complete Device Settings page with tabs closed -
  
 ![Device Management](../../../assets/OLD_DASHBOARD/device-actions.png)
  
