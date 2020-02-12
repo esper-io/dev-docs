@@ -89,39 +89,52 @@ Confirm by clicking ‘Wipe’ and the device will be automatically Wiped.
  
 This command can be used if the device needs to be reprovisioned with a different template. It can also be used if device system has crashed and is unusable currently. Factory reset will bring it back to original factory settings which can be freshly configured for company purpose.
  
-**6. Device Mode**
+**6. Switch Device Mode**
  
-If your device was provisioned in kiosk mode, you may use this button to exit out of the kiosk mode or enter back in. When you exit the kiosk mode, the kiosk mode app (selected during provisioning) will get unpinned and device user will be able to use the device in multi-application mode. When you click this button again, it will re-enter kiosk mode and the same app will again get pinned to the device screen.
+Now you can remotely change the device mode between Multi app and Kiosk as well as change the Kiosk mode app using the Esper Console. 
+
+To give some more background, Multi-app mode is device mode in which user sees the all approved apps on the home screen and can use any of these apps as per their requirement.
+
+However, the Kiosk mode is device mode where the device acts like a "kiosk" such that user may only use the kiosk app for one primary functionality. 
+ 
+We have not made it possible for the dashboard users to easily and remotely switch between the two modes. It is also remotely possible to switch the app that you wish to act as Kiosk app in the Kiosk mode.
+ 
+Just go to Devices > Details for the device you wish to change. Then go to Settings > Device mode > Change.
  
 ![](../../../assets/devicesettings/changekioskapp.png)
+
+In the screen above you see that the device is in Kiosk mode and the app pinned acting as Kiosk app is bbdaily. If you wish to change the Kiosk app, simply click on 'Change.'
+
+This brings up a dialog box that enables you to choose a different apk for Kiosk mode. Note: This apk could be any Private apk that was previously installed on the device
+
  
-If you wish to change the mode or the kiosk app, click on "Switch to Multi Applications"/ "Switch to Kiosk Mode" or the "Change" button on top right. A side bar will appear on right as follows -
- 
-![](../../../assets/devicesettings/kioskmodefullview.png)
- 
-Taking a closer look at the Device Mode side bar -
-![](../../../../assets/devicesettings/changekioskapp1.png)
- 
-Here, you may choose between Kiosk mode and Multi application mode.
- 
-Kiosk mode will pin the selected app on screen from which a device user can not get out. They will only be able to use the selected kiosk app on the device. In multi-application mode, the device user can view the device home screen and select and use any of the apps on the device home screen.
- 
-When choosing kiosk mode, user has the option to choose the app that is to be pinned in the kiosk mode from the drop down menu. In multi application mode this drop down is disabled as all apps will be visible to user.
- 
-After making the selection, click Save.
- 
+![](../../../assets/devicesettings/changekioskapp5.png)
+
+In this dialog box that appears on the right side, you may choose the mode you wish to run on your device. If you choose Kiosk mode, you have the option to choose any of the apps that show up in drop down.
+
+![](../../../assets/devicesettings/changekioskapp6.png)
+
+Click Save. 
+
 ![](../../../assets/devicesettings/changekioskapp2.png)
- 
-If multi application mode was chosen, the button will change to "Switch to Kiosk Mode"-
- 
-![](../../../assets/devicesettings/changekioskapp3.png)
- 
-If Kiosk mode with a different kiosk mode app was chosen, the name of the app will change next to the text "Pinned app"-
- 
-![](../../../assets/devicesettings/changekioskapp4.png)
- 
-In this case, it changed from "bbdaily" to "cure.fit".
- 
+
+The Device Mode will now show Pinned app as the one you selected. In this example, it shows Candy Crush Saga. 
+
+![](../../../assets/devicesettings/changekioskapp7.png)
+
+If you wish to change the mode, for example to Multiapp, simply click the radio button on the dialog box - 
+
+![](../../../assets/devicesettings/changekioskapp8.png)
+
+Click Save.
+
+![](../../../assets/devicesettings/changekioskapp9.png)
+
+
+Now the Device will be in Multi-App mode and you will see an option to switch to Kiosk Mode on the Device Settings screen. Clicking on this will again bring up the same dialog box where you may choose the mode and app as per your requirement.
+
+
+
 **7. Display**
  
 This section is related to the display settings of the device.
@@ -406,6 +419,18 @@ How to remotely view your device
 On Esper Enhanced Devices, or devices that have manufacture signed supervisor plugin in the system, there is an option to `Remote Control` the device. This means that any action such as click performed on the dashboard will result in remote action on the device. 
 
 Through Esper obtaining membership in SEAP (Samsung Enterprise Alliance Program), our platform now supports Samsung Knox specific extensions and as a result can now provide the Remote Control feature available for any Esper provisioned Samsung devices running Knox 3.x.
+
+**Hardware Keys and Keyboard Events**
+
+This feature is an enhancement that allows you to click on the device screen while remotely viewing the device on the dashboard and getting the response from the device as though it was actually clicked on. 
+
+Some devices do not have soft keys for home, back and recent instead, they are hard keys physically on the device itself. As a result, the Remote Control view of the device was not allowing users to be able to navigate the device. 
+
+We have enabled the hardware keys and keyboard events so that a virtual set of keys are represented on the Remote Control screen even for devices that have only hardware keys for this purpose. Additionally, we have enabled keyboard events so users can use the keyboard on their system to type and are not forced to use the keyboard on the device by clicking on each character using the mouse pointer. This makes the experience of remote control more convenient as we continue to improve.
+
+Note that Remote Control is only enabled on devices where Esper’s locally installed agent has been signed by the device maker’s platform key. As we are a Samsung Knox partner, the remote control is typically available on Samsung models. Contact us if your device is not supported as of now, we can work with the device maker to get the necessary signing done.
+
+
 
 ### Capture Logs
 
