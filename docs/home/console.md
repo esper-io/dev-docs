@@ -583,7 +583,57 @@ Under the Grid view each device will be represented as tiles in the ‘Device ma
 
 #### Device Tiles
 
-Devices which have been enrolled on to your Esper Cloud are provisioned devices:
+Devices which have been enrolled on to your Esper Cloud or are undergoing provisioning and have started communicating to the backend, show up as Device tiles in the grid view.
+
+For example - 
+
+![Device Management](./assets/devicetile/devicetile1.png)
+
+This is a typical device tile that shows the device system generated name, device model, last seen time and location, online/offline status, gms/non-gms status, security status (secure), network connection and an option to see further details.
+
+You will notice an ellipsis button on top right corner. Clicking on this brings up the following options - 
+
+![Device Management](./assets/devicetile/devicetile2.png)
+
+1. View device on map - Clicking this shows the exact location of the device on google maps like this - 
+
+![Device Management](./assets/devicetile/devicetile3.png)
+
+2. Add Tags - To make it easier to remember, we have capability to add tags on devices to easily identify devices in a location or type of device or wifi ssid or any other information we wish to keep tagged on the device.
+
+On clicking the Add Tags button, the following pop up appears - 
+
+
+![Device Management](./assets/devicetile/devicetile4.png)
+
+Enter tags and click 'Add'. Note that maximum number of tags per device is 3.
+
+
+![Device Management](./assets/devicetile/devicetile5.png)
+
+You may edit or delete the tags using actions. On clicking the edit (pencil icon) the text box lets you edit and Update the tag as shown below - 
+
+![Device Management](./assets/devicetile/devicetile6.png)
+
+You may also click on the delete (trash icon) to delete a tag.
+
+
+![Device Management](./assets/devicetile/devicetile7.png)
+
+3. Remove from Group - This option only appears if the device is part of a group other than the 'Default Group'. Clicking this will simply remove the device from the group and make it a part of the 'Default Group'.
+
+4. Device rename - Esper uses a unique Device ID to identify each and every device enrolled in Esper. This Device ID will be prominently displayed in the device tile and device lists. However many customers want to apply their own naming conventions for their devices. So we’ve added a new feature called Device rename that enables you to give each device any name of your choosing. It is an alias for customer purposes as we still continue to use the Device ID under the hood.
+
+Click on Device rename and this dialog pops up enabling you to give it a friendly name, change the current friendly name, or revert back to the Device ID if you wish.
+
+
+![Device Management](./assets/devicetile/devicetile8.png)
+
+The new device name will appear in all views of Esper including the Device home screen moving forward after you change it.
+
+
+
+Here are a few more examples of device tiles - 
 
 Example 1- 
 This is a device at high security risk highlighted in red. Its currently offline and supports Google Mobile services.
@@ -619,11 +669,16 @@ Each device name is a link that will take the dashboard user to the [details](./
 
 This view gives the capability to filter devices via - 
 
-1. Group Name - Gives the option to choose any one group
-2. Policy Name - Gives the option to choose any one policy
-3. GMS/Non GMS - Gives option to choose between GMS and Non-GMS
-4. Active/Inactive - Gives option to choose Active or Inactive device
-5. Security Status - Gives option to choose between High Risk, Low Risk, Medium Risk and No Risk (or Secure) devices.
+1. Group Name 
+2. Policy Name 
+3. GMS/Non-GMS 
+4. Network Type (Cellular, Ethernet, Wifi, Other)
+5. Android Version
+6. Registered Date
+7. Online/Offline 
+8. Security Status 
+9. Last Seen
+
 
 In the filters, a search capability has been provided to select values.
 Currently, user can only filter by one value of each of above. For example, I can choose Group A, Policy B and Active which will give me a filtered list of devices in Group A which are active and have policy B applied on them.
@@ -707,7 +762,7 @@ You can delete a Group by selecting one or many Groups using the top right butto
 - Select by clicking on the groups you wish to delete
 - Click on bottom right `Delete Selected Groups`  
 
-![Group Management](./assets/groups/deletegroup1.png)
+![Group Management](./assets/groups/groupsdelete1.png)
 
 ### Refresh Groups list
 There is an option to refresh groups screen by clicking on a button `Refresh` on the top right corner to view recent changes.
@@ -777,14 +832,25 @@ There are six filters provided to sort through the list of device tiles based on
 
   ![Group Management](./assets/groups/groupsactions2.png)
 
-  Screen lock - When the Screen lock action is applied on a group, all active devices will receive the command to lock screen. The live report generated will show the progress bar of locking action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+  On clicking "See details", a live status update of successful and unsuccessful devices and reason for failure appears in a sidebar such as follows -
 
-  ![Group Management](./assets/groups/groupsactions3.png)
+ ![Group Management](./assets/groups/groupsactionsstatus2.png)
+
+Refresh button can be clicked to get the latest update. Clicking on 'Success' will show details of succeeded devices and 'Failed' shows status of failed devices.
+
+  Screen lock - When the Screen lock action is applied on a group, all active devices will receive the command to lock screen. The live report generated will show the progress bar of locking action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
  
 
-Heart beat - When the Heart beat action is applied on a group, all active devices will receive the command to report whether they are online (or alive). The live report generated will show the progress bar of 'ping' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+Heart beat - When the Heart beat action is applied on a group, all active devices will receive the command to report whether they are online (or alive). The live report generated will show the progress bar of 'ping' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
 
-  ![Group Management](./assets/groups/groupactions4.png)
+Wipe device - When the Wipe action is applied on a group, all active devices will receive the command to reset themselves to factory settings. The live report generated will show the progress bar of 'wipe' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
+
+Push a WiFi access point - When a WiFi access point is pushed to a group, dashboard user will be asked to enter the details of WiFi access point.
+
+ ![Group Management](./assets/devicesettings/devicewifiap.png)
+
+ All active devices will receive the command to connect to the given WiFi access point. The live report generated will show the progress bar of the action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
+
 
 :::tip
 The groups actions will get applied on active (online) devices. The inactive devices currently do not get the command if they are not online at the time the action was applied.
@@ -805,10 +871,10 @@ Active device detail status for policy application-
 ![Group Management](./assets/groups/groupspolicy2.png)
 
 Inactive device detail status for policy application-
-![Group Management](./assets/groups/groupspolicy3.png)
+![Group Management](./assets/groups/groupspolicy4.png)
 
 Once the policy application process is completed, another line is added detailing the policy application failure on devices. This lists Device names, model and reason for failure as shown below-
-![Group Management](./assets/groups/groupspolicy4.png)
+![Group Management](./assets/groups/groupspolicy3.png)
 
 
 :::tip
@@ -817,46 +883,55 @@ The compliance policy will get applied on active (online) devices. The inactive 
 
 4. **Apps** 
 
+To address the need to manage app actions on fleet of devices, we rolled out our initial implementation of a robust App Unification feature on our Cloud backend which enables Esper to easily handle all types of apps and app-related actions for customers at the Group level.
+
 The app section in group has 3 sub sections- 
 1. Install/Uninstall
 2. Scheduled Install
 3. Approvals
 
-1. Install/Uninstall - This section is used to install of uninstall private (or uploaded) apps to the groups by selecting them from dropdown and clicking install or uninstall.
+
+**Install/Uninstall**
+
+This section is used to install of uninstall **privately uploaded apps (also knowns as Enterprise apps) and Google Play apps** to the groups.
+
+To deploy a Google app or a private app to a group, go to Groups > Details for the group you wish to deploy the app on. Go to the Apps tab where you will view this screen.
+
 
 ![Group Management](./assets/groups/groupsapps1.png)
 
-As seen in case of action and policy, here also the installation or uninstallation command is send only to active devices and the progress report of this process can be viewed as shown below-
+Choose between Install and Uninstall actions in the drop-down select app action. The Select App dropdown then shows a list of all uploaded private APKs and approved Google apps. 
 
-Group Install- Installation of private apps in groups.
+After selecting a version from the “Select Version” dropdown, in the 'App Details Preview', you can see under the heading 'App type' indicating whether its a private app (App type - Enterprise) or a Google app (App type - Google) as shown below. 
+
 ![Group Management](./assets/groups/groupsapps2.png)
 
-On clicking `Show more`-
+Additionally, you can also view the app icon, app name, version number and package name of the app in this section. Clicking the Install button on the bottom right will deploy the app on the group.
+
 ![Group Management](./assets/groups/groupsapps3.png)
+
+A collapsible sidebar will appear on the right showing the latest status of the install command fired on the devices in the group. Click on Success and Failed to view the device name, model and status of the devices that received the commands successfully and devices that failed to receive the command respectively. 
 
 ![Group Management](./assets/groups/groupsapps4.png)
 
-Once the process completes, another line showing details on Failed installation also appears at the end along with detailed reasoning -
+It will continue to update the status over a period of 3 minutes after which you can use the refresh function to get the latest installation status from the devices.  
 
-![Group Management](./assets/groups/groupsapps5.png)
 
-On clicking `Close` the installation view is hidden however the process continues in the background.
+Groups Uninstall works similarly as above if the App action chosen is 'Uninstall' in the dropdown menu.
 
-Groups Uninstall - Uninstallation of private apps in groups.
-![Group Management](./assets/groups/groupsapps6.png)
 
-On clicking `Show more`-
-![Group Management](./assets/groups/groupsapps7.png)
+History of Groups App commands - 
+The history sections shows the history of the group commands for installation and uninstallation of apps fired on the group. 
 
-![Group Management](./assets/groups/groupsapps8.png)
+![Group Management](./assets/groups/groupsappshistory.png)
 
-Once the process completes, another line showing details on Failed installation also appears at the end along with detailed reasoning -
+Details such as app name, action applied, app type, app version, package name and status can be viewed in columns in a paginated report. The Results column has a link to 'View' which can show the detailed report on the collapsible sidebar for successful and failed devices for that command. 
 
-![Group Management](./assets/groups/groupsapps9.png)
+Both the command history and detailed sidebar reports are refreshable manually by dashboard user.
 
-On clicking `Close` the uninstallation view is hidden however the process continues in the background.
 
-2. Scheduled install
+
+**Scheduled install**
 
 You may create a scheduled app install by clicking the `Create Scheduled install` button. Enter the App name, version, schedule the start and end date/time for the app install. Lastly, give this schedule a unique name and click "Create Schedule" to get started.
 
@@ -871,8 +946,9 @@ You can click on **`View Results`** to see the number of successful and unsucces
 
 ![Group Management](./assets/OLD_DASHBOARD/6_GM.png)
 
-3. Approvals
-The approvals section is to hide or un-hide In-ROM apps (also referred to as Preloaded apps) on devices.
+**Approvals**
+
+The approvals section is to show, hide or disable In-ROM apps (also referred to as Preloaded apps) on devices.
 
 The catch is that admin needs to enter the exact package name of the In-ROM app that they wish to approve or unapprove. The best way to get the exact package name of an In-ROM app is via an adb command as shown below - 
 
@@ -884,60 +960,26 @@ User should turn on adb for the device (physically connected via USB) from Devic
 ![Group Management](./assets/groups/groupsapps11.png)
 
 
-Approve App -
+Once you have the exact package name of the In-ROM app you wish to execute the action on, go to Approvals section in Groups. The following screen will show - 
 
-Enter the package name as obtained from adb command and click Approve-
-![Group Management](./assets/groups/groupsapps10.png)
+![Group Management](./assets/groups/groupsapprovals1.png)
 
-![Group Management](./assets/groups/groupsapps12.png)
+There are three options here - Show, Hide and Disable. You may enter the package name and choose any of these 3 options. Click 'Apply'. 
 
-On clicking a prompt is shows as below - 
+A prompt such as below will appear (in this example, we chose 'Show') - 
 
-![Group Management](./assets/groups/groupsapps13.png)
-Clicking `No` will cancel the action.
-Clicking `Yes` will bring up live report of the app approval action on the group that looks like this - 
+![Group Management](./assets/groups/groupsapprovals2.png)
 
-![Group Management](./assets/groups/groupsapps14.png)
+Click 'Yes' and the group command status will start to show -
 
 
-Once the process completes, the total number of Successful, Unsuccessful and Inactive devices can be seen. Also, a 'View failed devices' report appears at the left bottom of the screen.
+![Group Management](./assets/groups/groupsapprovals3.png)
 
-![Group Management](./assets/groups/groupsapps15.png)
+Just like other group commands, click 'See details' to view the collapsible sidebar report - 
 
-On clicking the same, reasoning for failure of approval command can be viewed.
+![Group Management](./assets/groups/groupsapprovals4.png)
 
-![Group Management](./assets/groups/groupsapps16.png)
-
-Unapprove App- 
-
-Enter the package name as obtained from adb command and click Unapprove-
-![Group Management](./assets/groups/groupsapps17.png)
-
-
-
-On clicking a prompt is shows as below - 
-
-![Group Management](./assets/groups/groupsapps18.png)
-
-Clicking `No` will cancel the action.
-Clicking `Yes` will bring up live report of the app unapproval action on the group that looks like this - 
-
-![Group Management](./assets/groups/groupsapps19.png)
-
-Once the process completes, the total number of Successful, Unsuccessful and Inactive devices can be seen. Also, a 'View failed devices' report appears at the left bottom of the screen.
-
-![Group Management](./assets/groups/groupsapps20.png)
-
-On clicking the same, reasoning for failure of approval command can be viewed.
-
-![Group Management](./assets/groups/groupsapps21.png)
-
-
-
-
-:::tip
-Please note that approve and unapprove mean show and hide. The unapproved apps do not mean uninstallation of these apps.
-:::
+Similar functionality is present for Hide and Disable actions for In-ROM apps.
 
 5. **OS Updates**
 
