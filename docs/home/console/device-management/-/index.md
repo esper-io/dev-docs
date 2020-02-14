@@ -30,112 +30,230 @@ Additionally, on the top under breadcrumbs, Device name, Group name (that it bel
 ![Device Information View](../../../assets/devicetab/deviceinfo2.png)
 ![Device Information View](../../../assets/devicetab/deviceinfo3.png)
 
-## Device Actions
-
-The second section consists of the `Actions` that can be performed on the device from cloud portal.
-
-
-All the device actions that can be performed on active devices are listed below.
-
-### Reboot
-
-Click on the ‘Reboot’ option and then confirm to reboot the device remotely. This action is available for devices with Android version 6.0 and above.
-
-### Screen Lock
-
-To lock the device screen , click on ‘Lock device’ and confirm the same. In this case, Device user will need to enter device password (if it has been set) in-order to use device again. 
-
-### Heart beat
-
-If the device has been inactive for a while, it means the device has entered Doze mode during which network activity is disabled.
-
-The Ping device command forces the device to come out of Doze mode and tell the Dashboard it is active.
-
-### Wipe device
-
-In order to wipe or factory reset the device, click on ‘Wipe device’ tile. Toggle the external storage to ON if you want to wipe the external storage also.
-
-Confirm by clicking ‘Wipe’ and the device will be automatically Wiped.
-
-### Device Mode
-
-If your device was provisioned in kiosk mode, you may use this button to exit out of the kiosk mode or enter back in. When you exit the kiosk mode, the kiosk mode app (selected during provisioning) will get unpinned and device user will be able to use the device in multi-application mode. When you click this button again, it will re-enter kiosk mode and the same app will again get pinned to the device screen.
-
-
-### Device Lockdown <Badge text="New" type="tip"/>
-
+[Introduction](../../../../console.md) / [Devices](../../index.md) / [View More](../index.md) / Actions
+# Device Settings
+<div class="avg-reading-time" style="margin-top: 0rem;">Average reading time : {{ $page.readingTime.text.replace(' read', '') }}</div>
+ 
+Device actions or setting changes to be performed on a device from dashboard can be done from this section. There are capabilities such as Reboot, Screen lock, Heart beat, Device Lockdown, Wipe, Device mode, increase or decrease brightness, volume, change screen orientation, screen timeout settings, wifi settings, GPS, Bluetooth and ADB settings that can be changed from this section.
+Below is screenshot of the complete Device Settings page with tabs closed -
+ 
+![Device Management](../../../assets/OLD_DASHBOARD/device-actions.png)
+ 
+Another view with all tabs open -
+ 
+![Device Management](../../../assets/OLD_DASHBOARD/devicesettingstabopen1.png)
+ 
+![Device Management](../../../assets/OLD_DASHBOARD/devicesettingstabopen2.png)
+ 
+Let's get into details of each action and setting below -
+ 
+**1\. Reboot**
+ 
+Click on the ‘Reboot’ option and then confirm to reboot the device remotely. This can help in case there is trouble communicating with the device.
+ 
+**2\. Screen Lock**
+ 
+To lock the device screen , click on ‘Lock device’ and confirm the same. In this case, Device user will need to enter device password (if it has been set) in-order to use device again. This can be used to avoid unwanted usage if device falls in wrong hands.
+ 
+**3\. Heart beat**
+ 
+Esper Managed devices are continuously talking to our Cloud and updating their statuses every minute. If they are dozing off due to inactivity or bad network connection, our Cloud will internally wake them and ask for a status update.
+ 
+The Hear beat or Ping command is used to do the same task manually. It request device to send the freshest status update to the cloud dashboard. It can also be used to check whether the device is online.
+ 
+ 
+**4. Device Lockdown** <Badge text="New" type="tip"/> <br>
 This feature is introduced to completely lockdown the device in case of unauthorized usage or relocation etc. For example if a user takes device outside of the authorized area, or a company decides to prohibit user from using the device, they can do a complete lockdown. In this case, a custom message can be entered which will show on screen, for example a contact number to call or email.
-
-![Device Lockdown](../../../assets/devicelockdown/lockdown1.png)
-
+ 
+![](../../../assets/devicelockdown/lockdown1.png)
+ 
 When you click `Lockdown`, a custom message text box appears where user can enter the text they want the device user to see.
+ 
+![](../../../assets/devicelockdown/lockdown3.png)
+ 
+As a result, when the device is locked down, the user sees the following screen -
+ 
+![](../../../assets/devicelockdown/lockdown4.png)
+ 
+After locking down a device, the button will change to `Unlock` to give admin access to unlock the said device.
+ 
+![](../../../assets/devicelockdown/lockdown2.png)
+ 
+ 
+ 
+ 
+**5. Wipe device**
+ 
+In order to wipe or factory reset the device, click on ‘Wipe device’ tile. Toggle the external storage to ON if you want to wipe the external storage also.
+Confirm by clicking ‘Wipe’ and the device will be automatically Wiped.
+ 
+This command can be used if the device needs to be reprovisioned with a different template. It can also be used if device system has crashed and is unusable currently. Factory reset will bring it back to original factory settings which can be freshly configured for company purpose.
+ 
+**6. Switch Device Mode**
+ 
+Now you can remotely change the device mode between Multi app and Kiosk as well as change the Kiosk mode app using the Esper Console. 
 
-![Device Lockdown](../../../assets/devicelockdown/lockdown3.png)
+To give some more background, Multi-app mode is device mode in which user sees the all approved apps on the home screen and can use any of these apps as per their requirement.
 
-As a result, when the device is locked down, the user sees the following screen - 
+However, the Kiosk mode is device mode where the device acts like a "kiosk" such that user may only use the kiosk app for one primary functionality. 
+ 
+We have not made it possible for the dashboard users to easily and remotely switch between the two modes. It is also remotely possible to switch the app that you wish to act as Kiosk app in the Kiosk mode.
+ 
+Just go to Devices > Details for the device you wish to change. Then go to Settings > Device mode > Change.
+ 
+![](../../../assets/devicesettings/changekioskapp.png)
 
-![Device Lockdown](../../../assets/devicelockdown/lockdown4.png)
+In the screen above you see that the device is in Kiosk mode and the app pinned acting as Kiosk app is bbdaily. If you wish to change the Kiosk app, simply click on 'Change.'
 
-After locking down a device, the button will change to `Unlock` to give admin access to unlock the said device. 
+This brings up a dialog box that enables you to choose a different apk for Kiosk mode. Note: This apk could be any Private apk that was previously installed on the device
 
-![Device Lockdown](../../../assets/devicelockdown/lockdown2.png)
+ 
+![](../../../assets/devicesettings/changekioskapp5.png)
 
+In this dialog box that appears on the right side, you may choose the mode you wish to run on your device. If you choose Kiosk mode, you have the option to choose any of the apps that show up in drop down.
+
+![](../../../assets/devicesettings/changekioskapp6.png)
+
+Click Save. 
+
+![](../../../assets/devicesettings/changekioskapp2.png)
+
+The Device Mode will now show Pinned app as the one you selected. In this example, it shows Candy Crush Saga. 
+
+![](../../../assets/devicesettings/changekioskapp7.png)
+
+If you wish to change the mode, for example to Multiapp, simply click the radio button on the dialog box - 
+
+![](../../../assets/devicesettings/changekioskapp8.png)
+
+Click Save.
+
+![](../../../assets/devicesettings/changekioskapp9.png)
+
+
+Now the Device will be in Multi-App mode and you will see an option to switch to Kiosk Mode on the Device Settings screen. Clicking on this will again bring up the same dialog box where you may choose the mode and app as per your requirement.
+
+
+
+**7. Display**
+ 
+This section is related to the display settings of the device.
+Following settings for the device can be controlled from this section -
+ 
+1. Increase or decrease the brightness of the screen.
+2. Change the screen orientation to - <br>
+   -auto rotate - Screen will change orientation as per the orientation of the device.  <br>
+   -landscape - Screen will always stay in landscape mode. <br>
+   -portrait - Screen will always stay in portrait mode. <br>
+3. Select screen timeout duration - User can choose a configurable timing after which the device will lock the screen.<br>
+ 
+ 
+![](../../../assets/devicesettings/display.png)  
+ 
+![](../../../assets/devicesettings/display1.png)
+ 
+**8. Sound**
+This section is related to the sound settings of the device.
+Following settings for the device can be controlled from this section -
+ 
+1. Alarm volume
+2. Notification volume
+3. Music volume
+4. Ring volume
+ 
+ 
+**9. WiFi & Internet**
+ 
+This section is related to the Wifi and Internet settings of the device.
+ 
+![](../../../assets/devicesettings/devicewifi.png)
+ 
+WiFi - User can toggle on/off the Wifi for the device. This can be done if the device has an alternative connection available such as cellular network via sim card.
+ 
 :::tip
-It is possible that some devices might restart on receiving the lockdown command before they go in the lockdown state.
+In case the dashboard user tries to switch off WiFi when no other connection is available, in-order to maintain communication with the cloud backend, the device will turn WiFi on automatically after attempting to find alternative internet connection for 10s.
 :::
+ 
+WiFi access points - User can predefine preferred WiFi networks by entering WiFi access point details such as WiFi SSID, WiFi Security Type, WiFi Password and whether its a "Hidden" network.
+ 
+![](../../../assets/devicesettings/devicewifiap.png)
+ 
+The device will automatically connect to the given WiFi access points as per the availability and network strength.
+ 
+:::tip
+The WiFi on/off and WiFi access points feature are not available for android 10.0 and above
+:::
+ 
+**10. Location**
+This section relates to the settings pertaining to the GPS accuracy of the device.
+ 
+![](../../../assets/devicesettings/devicelocation.png)
+ 
+There are 4 GPS accuracy settings -
+ 
+1. High Accuracy - Choosing this option will optimize for accuracy using extra inferences and heuristics for quicker location resolution.
+ 
+2. Device Only - Choosing this option will just use GPS chipset of device and will not use any extra inferences or heuristics. This can slow down location resolution.
+ 
+3. Battery Saver - This option will optimize for longer battery life at the cost of accuracy of location.
+ 
+4. Off - Turns of Device GPS.
+ 
+**11. Bluetooth & Devices**
+ 
+This feature will allow user control over bluetooth connection of the device. Turning off the toggle button turns Off the bluetooth on device.
+When on, the information under "Paired devices" will show the number of devices paired and whether they are connected.
+ 
+For example when no device is connected -
 
+![](../../../assets/devicesettings/devicebluetooth.png)
+ 
+When a device is paired as well as connected -
 
-### ADB access
-
-Turn on ADB of your Esper Managed Device with easy by turning on the ADB toggle button. This only works for physically connected devices via USB.
-
-![ADB access](../../../assets/adb/adb1.png)
-
-### Device Settings
-
-Change Device settings from Esper Dashboard. Following are features available -
-
- ![Device Settings](../../../assets/settings/settings.png)
-
-* Turn on/off bluetooth  <br>
-* Select screen timeout duration <br>  Dashboard user can decide the time after which the device screen should get locked. Similar to stock android devices, we have options such as 5s, 15s, 30s, 1 minute and so on. There is also an option of the device screen 'Never' timing out such as in use case of a digital signage device. We have following screen lock timeouts - 
-
-    5 seconds<br>
-    15 seconds<br>
-    30 seconds<br>
-    1 minute<br>
-    2 minutes<br>
-    5 minutes<br>
-    10 minutes<br>
-    30 minutes<br>
-    Never<br>
-
-
-
-![Esper Timezone](../../../assets/template/screentimeoutdashboard.png)
-
-
-* Select screen orientation  <br>
-* Select GPS accuracy  <br>
-* Increase/decrease Brightness, Volume (alarm, notification, ring and music)  <br>
-* Timezone <Badge text="New" type="tip"/> - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.  
-
- ![Device Settings](../../../assets/settings/timezone.png)
-
-We have introduced a robust search capability such that even as the dashboard user begins to type, the suggestions show up conveniently for the dashboard to select and set the timezone. For example, typing 'Pacific' will bring up all timezones starting with 'Pacific' prefix.
-
-![Esper Timezone](../../../assets/settings/timezone2.png)
-
+![](../../../assets/devicesettings/devicebluetooth1.png)
+ 
+Here, the device name as well as its IP address and connection status is shown. If the device gets disconnected, it will continue to show in the Paired list but the connection status will shows as "Disconnected."
+ 
+Until the device user removes the device by choosing to "Forget Device" from the list of paired bluetooth devices, it will continue to show in the "Paired devices" list on Dashboard.
+ 
+ 
+**12. ADB access**
+ 
+Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.
+ 
+Turn on ADB of your Esper Managed Device with easy by turning on the ADB toggle button. Use the drop down menu to turn on adb for a configurable time period.
+ 
+You may also choose the Always On option to keep ADB on. However, Esper does not recommend this practice as ADB is a gateway to communication with core of device and should be used in a highly secure manner.
+ 
+![](../../../assets/devicesettings/deviceadb.png)
+ 
+In case dashboard user needs to turn on the adb for communication to device for purpose of debugging or run external tools, they may choose to enable it from here.
+Below are the time configurations for which adb can be turned on-
+ 
+   - Always On
+   - 1 hour
+   - 3 hour
+   - 8 hour
+   - 1 day
+ 
+After the completion of this time period from the point of provisioning, the ADB will automatically turn off for the device.
 <br>
-Below is screenshot of the Device Actions page which is also inclusive of local adb and device settings - 
+ 
+**12. Timezone**
+ 
+With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard. 
+ 
+:::tip
+Timezone feature is only available for devices which are running Esper Enhanced Android or the devices for which Esper's supervisor plugin has been signed by the manufacturer of the device.
+:::
+ 
+ 
+![](../../../assets/settings/timezone.png)
+ 
+ 
+[Return to View More](../index.md)
+ 
 
-![Device Management](../../../assets/OLD_DASHBOARD/Device-actions.png)
-
-## Event Feed
-
-This section shows the logs of event feedback received from the active devices. In the future, it will be used to read any anomaly in data behavior to predict security issues.
-
-![Device Management](../../../assets/OLD_DASHBOARD/6_DM.png)
 
 ## Device Graphs
 
@@ -160,58 +278,100 @@ With the new Telemetry Cloud infrastructure in place, Esper Device metrics have 
 
 ![Device Management](../../../assets/OLD_DASHBOARD/7_DM.png)
 
-However, if a device stays inactive for more than 7 days, you will see an empty state requesting to activate the device: ![Device Management](../../../assets/OLD_DASHBOARD/8_DM.png)
+However, if a device stays inactive for more than 7 days, you will see an empty state requesting to activate the device: 
+
+![](../../../assets/OLD_DASHBOARD/8_DM.png)
 
 ## Apps
 
-This sections lists the Apps that are installed on the device along with the Version code, Package Name, Approval status (On/Off toggle button) and Available Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps. Toggling the button On will un-hide the app and toggling it back to Off wil hide the app.
+This sections lists the Apps that are installed on the device along with the App name,App type, Version code, Package Name, App state and Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps. 
 
-![Device Management](../../../assets/OLD_DASHBOARD/3_DM.png)
+![Device Management](../../../assets/deviceapps/deviceapps1.png)
 
-There are also radio buttons at the bottom end where user can choose to `Install` or `Uninstall` a private app on the device which is previously uploaded in the `Apps` section of the Dashboard.
+An App can have 3 states - Show, Hide and Disable. This is useful for apps such as IN-ROM apps that sometimes can not be uninstalled but can be disabled. For all installed apps also, there is an option to Show or Hide from the device home screen.
 
-There are many different ways to install various type of apps on a device as listed below - 
+On the left side, dashboard user can choose between All apps, Enterprise (or privately uploaded) apps, Google apps and Preloaded (IN-ROM apps).
 
-### Installing an App in a Single Device - 
+Additionally, there is a New App Install button, search bar and filter on top left and top right corners - 
 
-#### Private Apps
+![Device Management](../../../assets/deviceapps/deviceapps10.png)
 
-These are company apps or privately owned app versions that can be uploaded on the dashboard from the `Apps` section. In-order to install this app on the device, click on the radio button in Device->Details->Apps section for Install, choose the app and click Install.
+The filter lets you view apps with app state in Show/Hide or Disable.
 
-#### Google Apps
+The New App Install button lets you install new apps on the device. A dialog box appears as below - 
 
-1. Go to Play For Work
-2. Click on the app (Make sure its approved
-3. Click Select
-4. Select the device you wish to install it on from the dropdown on top left
-5. Click Install
+![Device Management](../../../assets/deviceapps/deviceapps13.png)
 
-#### Preloaded Apps
+You may select the app from the list of all approved google apps and all uploaded private apps. Then you may select the app version number.
 
-Approve a preloaded app to show in the device from the list of apps in Device-Apps section by turning **on** the toggle button.
+Finally click 'Install'.
 
-### Uninstalling an App on a Single Device 
- 
-#### Private Apps
+![Device Management](../../../assets/deviceapps/deviceapps15.png)
 
-Select the 'uninstall' radio button and choose the app to be uninstalled from the drop down menu. Click Uninstall.
+A progress bar is seen with a final message informing of app installation success.
+If an error occurs, user will be informed of the same. Please do not hesitate to reach out to us at support@esper.io for any issues.
 
-#### Google Apps
+Additionally, there is a search bar available on top left corner of app list that lets us search for apps via its name- 
 
- 1. Go to Play For Work
- 2. Click on the app 
- 3. Click Select
- 4. Select the device you wish to uninstall it on from the dropdown on top left
- 5. Click Uninstall
+![Device Management](../../../assets/deviceapps/deviceapps11.png)
 
-#### Preloaded Apps
+The app list is paginated as can be viewed at the bottom. 
 
-Turn off the toggle button from the app list for the preloaded app. It does not uninstall the app but hides it. 
- 
- 
+
+![Device Management](../../../assets/deviceapps/deviceapps12.png)
+
+**Actions**
+
+The Actions column is where it gets interesting. On clicking the ellipsis button on the right end, you will see actions such as -
+
+![Device Management](../../../assets/deviceapps/deviceapps2.png)
+
+1. Uninstall - uninstalls the apps. Note that some IN-ROM apps can not be uninstalled.
+When you click 'Uninstall', a dialog box appears on right collapsible sidebar such as this - 
+
+![Device Management](../../../assets/deviceapps/deviceapps3.png)
+
+Click on 'Yes, Uninstall' to uninstall the app. The following progress bar will show - 
+
+![Device Management](../../../assets/deviceapps/deviceapps4.png)
+
+![Device Management](../../../assets/deviceapps/deviceapps5.png)
+
+Click Close and the app gets uninstalled from device and disappears from the device.
+
+2. Clear Data - clears app data. Similar pop up and progress bar show up as uninstall action - 
+
+![Device Management](../../../assets/deviceapps/deviceapps6.png)
+
+![Device Management](../../../assets/deviceapps/deviceapps5.png)
+
+3. Set App Permission - This lets user define detailed app permission such as location granularity, access to camera, read phone state and writing to external storage.
+
+On clicking this, a dialogue box appears such as below - 
+
+![Device Management](../../../assets/deviceapps/deviceapps16.png)
+
+Simply choosing the options from the dropdown will execute the command. The permissions which are available to choose are dependent on the type on IN-ROM app that is being looked at. 
+
+4. Set App State - As stated above, an app can have 3 states - show, hide and disable. This action give us control over the apps state. 
+
+Clicking on this brings up this dialog box - 
+
+![Device Management](../../../assets/deviceapps/deviceapps8.png)
+
+Show - installed and visible on home screen.
+
+Hide - installed but not visible on home screen.
+
+Disable - installed but can not be used.
+
+Here you may click on any of 3 states to choose the state for the app selected.
+Click Save changes.
+
+
 
 :::tip 
- Please note that some preloaded apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. 
+ Please note that some In-ROM (preloaded) apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. 
 :::
 
 
@@ -303,6 +463,18 @@ How to remotely view your device
 On Esper Enhanced Devices, or devices that have manufacture signed supervisor plugin in the system, there is an option to `Remote Control` the device. This means that any action such as click performed on the dashboard will result in remote action on the device. 
 
 Through Esper obtaining membership in SEAP (Samsung Enterprise Alliance Program), our platform now supports Samsung Knox specific extensions and as a result can now provide the Remote Control feature available for any Esper provisioned Samsung devices running Knox 3.x.
+
+**Hardware Keys and Keyboard Events**
+
+This feature is an enhancement that allows you to click on the device screen while remotely viewing the device on the dashboard and getting the response from the device as though it was actually clicked on. 
+
+Some devices do not have soft keys for home, back and recent instead, they are hard keys physically on the device itself. As a result, the Remote Control view of the device was not allowing users to be able to navigate the device. 
+
+We have enabled the hardware keys and keyboard events so that a virtual set of keys are represented on the Remote Control screen even for devices that have only hardware keys for this purpose. Additionally, we have enabled keyboard events so users can use the keyboard on their system to type and are not forced to use the keyboard on the device by clicking on each character using the mouse pointer. This makes the experience of remote control more convenient as we continue to improve.
+
+Note that Remote Control is only enabled on devices where Esper’s locally installed agent has been signed by the device maker’s platform key. As we are a Samsung Knox partner, the remote control is typically available on Samsung models. Contact us if your device is not supported as of now, we can work with the device maker to get the necessary signing done.
+
+
 
 ### Capture Logs
 
