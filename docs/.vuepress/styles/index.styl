@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+a
+    font-weight: bold !important;
+
+.navbar
+    border: none;
+    filter: drop-shadow(1px 1px 2px #00000025);
+
+header > .links
+    #algolia-search-input
+        border-radius: 6px;
+        border: none;
+        background-color: #fdfdfdc4;
+.sidebar
+    border-right: none;
+    overflow:   scroll;
+    width: 22rem;
+    overflow-x: hidden;
+    padding-right: 2rem;
+    background: rgb(250, 250, 251);
+
+@media (max-width: 719px) {
+    .sidebar {
+        filter: drop-shadow(1px 1px 2px #00000025);
+    }
+}
+
+.sidebar::-webkit-scrollbar
+    width: 9px;
+    background: transparent; /* make scrollbar transparent */
+.sidebar:hover::-webkit-scrollbar-thumb:vertical
+    background: rgba(45, 40, 51, 0.1);
+    border-radius: 1rem;
+    
+.sidebar > .sidebar-links > li > a.sidebar-link
+    // text-transform: uppercase;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500 !important;
+    color: #384986 !important;
+
+.sidebar > .sidebar-links > li > a.sidebar-link.active
+    background: #8080801c;
+    border-radius: 0rem 1rem 1rem 0rem;
+    // width: fit-content;
+    // padding-right: 3rem;
+
+.sidebar-sub-header > .active.sidebar-link
+    color: #252222;
+
+.sidebar-sub-header > .sidebar-link
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: normal !important;
+    color: #00000080;
+body
+    font-family: "Nunito Sans", sans-serif;
+.site-name
+    margin-top: 0.2rem;
+
+h1, h2, h3, h4, .site-name
+    font-weight: normal !important;
+    font-family: "Nunito Sans", sans-serif;
+
+img:not(.no-shadow)
+    filter: drop-shadow(1px 1px 2px #00000025);
+    border-radius: 8px;
+
+.custom-block.tip
+    border-color: #384986;
+
+.avg-reading-time
+    margin-top: -1rem;
+    font-size: 0.8em;
+    color: grey;

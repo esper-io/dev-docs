@@ -1,15 +1,23 @@
 {
   "name": "esper-docs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Esper documentation",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs --no-cache",
     "docs:build": "vuepress build docs",
+    "style-lint": "stylelint --fix \"src/**/*.vue\" \"src/**/*.scss\"",
+    "lint": "markdownlint */*.md docs/*/*.md docs/home/*/*.md docs/*/*/*/*.md docs/*/*/*/*/*.md docs/*/*/*/*/*/*.md  docs/*/*/*/*/*/*/*.md",
+    "prettier": "prettier --list-different --write \"**/*.{js,json,css,scss,vue,md}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "repository": {
     "type": "git",
@@ -18,17 +26,36 @@
   "keywords": [
     "Esper docs"
   ],
-  "author": "Lee",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/esper-io/dev-docs/issues"
   },
   "homepage": "https://github.com/esper-io/dev-docs#readme",
   "dependencies": {
-    "vuepress": "^0.14.11"
+    "@dovyp/vuepress-plugin-clipboard-copy": "1.0.0-alpha.7",
+    "@vuepress/plugin-medium-zoom": "1.2.0",
+    "eslint-plugin-vue": "6.0.1",
+    "prettier": "1.19.1",
+    "vuepress": "1.2.0"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
-    "vuepress-plugin-reading-time": "^0.1.1"
+    "@vuepress/plugin-back-to-top": "1.2.0",
+    "@vuepress/plugin-google-analytics": "1.2.0",
+    "vuepress-plugin-check-md": "0.0.2",
+    "vuepress-plugin-reading-time": "0.1.1",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "6.5.0",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-vue-libs": "4.0.0",
+    "husky": "3.0.9",
+    "imagemin-lint-staged": "0.4.0",
+    "lint-staged": "9.4.3",
+    "markdownlint-cli": "0.19.0",
+    "stylelint": "11.1.x",
+    "stylelint-config-css-modules": "2.0.0",
+    "stylelint-config-prettier": "6.0.0",
+    "stylelint-config-recess-order": "2.0.3",
+    "stylelint-config-standard": "19.0.0",
+    "stylelint-scss": "3.12.1"
   }
 }
