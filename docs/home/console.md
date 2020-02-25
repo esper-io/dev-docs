@@ -7,9 +7,7 @@ The Esper console is a feature-rich user interface for you to operate and manage
 
 Home provides useful at-a-glance information about the activity on your account.Esper ensures your business operations continue to run efficiently at all times.
 
-
-<img class="no-shadow" src="./assets/GettingStarted/managedashboard.png" alt="Esper Console"/>
-
+![Esper console](./assets/GettingStarted/managedashboard.png)
 
 
 There are four sections on the Home page:
@@ -1292,7 +1290,7 @@ The Google Account Restriction feature is applicable only to GMS android devices
 
 
 ### Factory Reset Protection <br>
- 
+
 _FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
 
 ![Factory Reset Protection](./assets/GoogleAccountid/factory_reset_protection.png)
