@@ -13,44 +13,47 @@
       <span
         class="arrow"
         :class="open ? 'down' : 'right'"
-      ></span>
+      />
     </button>
 
     <DropdownTransition>
       <ul
-        class="nav-dropdown"
         v-show="open"
+        class="nav-dropdown"
       >
         <li
-          class="dropdown-item"
-          :key="subItem.link || index"
           v-for="(subItem, index) in item.items"
+          :key="subItem.link || index"
+          class="dropdown-item"
         >
-          <h4 v-if="subItem.type === 'links'">{{ subItem.text }}</h4>
+          <h4 v-if="subItem.type === 'links'">
+            {{ subItem.text }}
+          </h4>
 
           <ul
-            class="dropdown-subitem-wrapper"
             v-if="subItem.type === 'links'"
+            class="dropdown-subitem-wrapper"
           >
             <li
-              class="dropdown-subitem"
-              :key="childSubItem.link"
               v-for="childSubItem in subItem.items"
+              :key="childSubItem.link"
+              class="dropdown-subitem"
             >
               <NavLink
+                :item="childSubItem"
                 @focusout="
                   isLastItemOfArray(childSubItem, subItem.items) &&
-                  isLastItemOfArray(subItem, item.items) &&
-                  toggle()
+                    isLastItemOfArray(subItem, item.items) &&
+                    toggle()
                 "
-                :item="childSubItem"/>
+              />
             </li>
           </ul>
 
           <NavLink
             v-else
-            @focusout="isLastItemOfArray(subItem, item.items) && toggle()"
             :item="subItem"
+            @focusout="isLastItemOfArray(subItem, item.items) && toggle()"
           />
         </li>
       </ul>
@@ -66,15 +69,15 @@ import last from 'lodash/last'
 export default {
   components: { NavLink, DropdownTransition },
 
-  data () {
-    return {
-      open: false
-    }
-  },
-
   props: {
     item: {
       required: true
+    }
+  },
+
+  data () {
+    return {
+      open: false
     }
   },
 
@@ -85,6 +88,12 @@ export default {
     }
   },
 
+  watch: {
+    $route () {
+      this.open = false
+    }
+  },
+
   methods: {
     toggle () {
       this.open = !this.open
@@ -92,12 +101,6 @@ export default {
 
     isLastItemOfArray (item, array) {
       return last(array) === item
-    }
-  },
-
-  watch: {
-    $route () {
-      this.open = false
     }
   }
 }
@@ -115,8 +118,8 @@ export default {
     line-height 1.4rem
     background transparent
     border none
-    font-weight 500
-    color $textColor
+    font-weight bold
+    color #fff
     &:hover
       border-color transparent
     .arrow
@@ -125,7 +128,9 @@ export default {
       margin-left 0.4rem
   .nav-dropdown
     .dropdown-item
-      color inherit
+      color grey
+      &:hover
+        color grey !important
       line-height 1.7rem
       h4
         margin 0.45rem 0 0
@@ -141,6 +146,7 @@ export default {
         line-height 1.7rem
         position relative
         border-bottom none
+        color $accentColor
         font-weight 400
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem

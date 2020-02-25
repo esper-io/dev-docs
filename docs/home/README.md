@@ -1,4 +1,9 @@
-# Overview
+
+# Introduction
+
+Esper is at heart a technology company that provides Android dedicated device fleet management solutions for enterprises led by APIs, SDKs, and tools for developers. Based in Silicon Valley with supporting teams in Seattle, Esper is currently the only company providing a full stack, API-driven implementation delivering a secure platform for purpose-built Android-based dedicated devices.
+
+## Overview
 
 Welcome to the Esper Console where Android™ developers can build, test, deploy, diagnose, and manage their applications seamlessly and securely to Android-based dedicated devices. Using the console, you will be able to generate API Keys and obtain your Enterprise ID; this enables you to use the Esper [APIs](./api.md) either by calling them via [REST](https://api.esper.io/), with our Esper [SDK for Python](./pythonsdk.md), or by using our Esper [CLI](./espercli.md). Additionally, our Esper [plugin](./esperplugin.md) for Android Studio is available for developers to use, and provides a set of resources to facilitate diagnostics and debugging of applications—whether running in a test lab or deployed in the field.
 
@@ -6,9 +11,6 @@ Esper provides tools that enable Android developers to deliver highly secure sol
 
 <img class="no-shadow" src="./assets/OLD_DASHBOARD/overview.jpg" alt="drawing" style="max-width:1000px; width: 100%;"/>
 
-## Introducing Esper
-
-Esper is at heart a technology company that provides Android dedicated device fleet management solutions for enterprises led by APIs, SDKs, and tools for developers. Based in Silicon Valley with supporting teams in Seattle, Esper is currently the only company providing a full stack, API-driven implementation delivering a secure platform for purpose-built Android-based dedicated devices.
 
 ## Esper and Android Developers
 
