@@ -525,7 +525,7 @@ It consists of the following sections -
 
     e. [Apps](./console/device-management/-/index.md#apps) - Admin can un-hide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
 
-    f. [Compliance Policy](./console#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
+    f. [Compliance Policy](./#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
 
     g. [Security](https://docs.esper.io/home/console/device-management/-/#security) - This section gives details regarding the security status of the device.
 
