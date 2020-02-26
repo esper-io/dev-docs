@@ -69,8 +69,6 @@ Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0
 
 - GMS support - Choose `YES`, if your android device supports Google Mobile Services. If Play Store app exists in your device, your device is a GMS device.
 
-![Provisioning](./assets/provisioning/playstoreicon.png)
-
 - Camera -  Choose `YES`, if your device has a working camera.
 
 Finally, click on `Suggest Provisioning Method`. 

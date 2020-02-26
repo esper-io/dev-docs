@@ -9,7 +9,8 @@ Welcome to the Esper Console where Android™ developers can build, test, deploy
 
 Esper provides tools that enable Android developers to deliver highly secure solutions to Dedicated Devices, all the while giving them superior flexibility and control over the process. This leads to a better development experience spanning the entire development lifecycle. Furthermore, this lightens the burden on IT, enabling them to focus on more pressing aspects of your product. A [rich API](https://api.esper.io) set and a variety of [open-source SDKs](https://github.com/esper-io/esper-client-py) and tools allow you to incorporate device management for your dedicated device apps and dedicated devices.
 
-<img class="no-shadow" src="./assets/OLD_DASHBOARD/overview.jpg" alt="drawing" style="max-width:1000px; width: 100%;"/>
+
+![Esper overview](./assets/OLD_DASHBOARD/overview.jpg)
 
 
 ## Esper and Android Developers
