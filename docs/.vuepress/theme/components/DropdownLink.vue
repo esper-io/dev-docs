@@ -119,7 +119,7 @@ export default {
     background transparent
     border none
     font-weight bold
-    color #fff
+    color inherit
     &:hover
       border-color transparent
     .arrow
@@ -146,7 +146,7 @@ export default {
         line-height 1.7rem
         position relative
         border-bottom none
-        color $accentColor
+        color #626679
         font-weight 400
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem

@@ -115,10 +115,12 @@ $navbar-horizontal-padding = 6rem
 @media (max-width: $MQMobile)
   .navbar
     padding-left 4rem
+    padding-right 2rem
     .can-hide
       display none
     .links
-      padding-left 1.5rem
+      padding-left 3rem
+      right 3rem
     .site-name
       width calc(100vw - 9.4rem)
       overflow hidden

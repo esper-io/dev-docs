@@ -1,18 +1,21 @@
 <template>
   <aside class="sidebar">
-    <NavLinks/>
-    <slot name="top"/>
-    <SidebarLinks :depth="0" :items="items"/>
-    <slot name="bottom"/>
+    <NavLinks />
+    <slot name="top" />
+    <SidebarLinks
+      :depth="0"
+      :items="items"
+    />
+    <slot name="bottom" />
     <ul class="support">
       <li class="support-title">
-      Support
+        Support
       </li>
       <li>
-      <a href="/home/faq.html">FAQ</a>
+        <a href="/home/faq.html">FAQ</a>
       </li>
       <li>
-      <a href="/home/support.html">Contact</a>
+        <a href="/home/support.html">Contact</a>
       </li>
     </ul>
   </aside>
@@ -39,7 +42,7 @@ export default {
     padding: 0.35rem 1rem 0.35rem 1.25rem !important
     font-weight: 500 !important
     font-size: 1em
-    color: #384986 !important
+    color: #151828 !important
     li
       a
         font-size: 1em
