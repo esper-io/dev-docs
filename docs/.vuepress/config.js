@@ -1,15 +1,3 @@
-// const autometa_options = {
-//   site: {
-//     name: "Esper docs",
-//     twitter: "Esper docs"
-//   },
-//   canonical_base: "https://docs.esper.io"
-// };
-
-// const feed_options = {
-//   canonical_base: "https://docs.esper.io"
-// };
-
 module.exports = {
   base: '/',
   title: 'Esper Docs',
@@ -20,8 +8,6 @@ module.exports = {
     ['@vuepress/back-to-top', true],
     ['@vuepress/plugin-medium-zoom', true],
     [
-      // ["autometa", autometa_options],
-      // ["feed", feed_options],
       ('@vuepress/google-analytics',
       {
         ga: 'UA-141392027-1', // UA-00000000-0
@@ -66,6 +52,38 @@ module.exports = {
     lastUpdated: 'Last Updated',
     logo: `/esper.svg`,
     nav: [
+      {
+        text: 'API docs',
+        link: 'https://api.esper.io'
+      },{
+        text: 'Products',
+        ariaLabel: 'Products',
+        items: [
+          {
+            text: 'Commercial Android',
+            link: 'https://esper.io/hardware'
+          },
+          
+          {
+            text: 'Custom Device',
+            link: 'https://esper.io/custom-device'
+          },
+          
+          {
+            text: 'Esper Test Lab',
+            link: 'https://esper.io/test-lab/'
+          },
+          {
+            text: 'Esper Androidx86',
+            link: 'https://esper.io/android-x86/'
+          },
+          {
+            text: 'Esper Virtual Devices',
+            link: 'https://esper.io/android-virtual-device/'
+          },
+          
+        ]
+      },
       { text: 'Blog', link: 'https://blog.esper.io' },
       { text: 'SIGNUP', link: 'https://esper.io/signup' },
     ],
@@ -86,9 +104,6 @@ module.exports = {
         "espercli",
         "api",
         "remote-adb",
-        // "tutorials",
-        // "support",
-        // "faq"
       ]
     },
     displayAllHeaders: false,

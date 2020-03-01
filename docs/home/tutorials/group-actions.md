@@ -29,7 +29,7 @@ In this tutorial we will use our APIs and Python SDK combined with our Group fun
 
 ```sh
 CONFIG = esperclient.Configuration()
-CONFIG.host = 'https://<your-endpoint-name>.shoonyacloud.com/api'
+CONFIG.host = 'https://<your-endpoint-name>.esper.cloud/api'
 CONFIG.api_key['Authorization'] = '<your-API-Key>'
 CONFIG.api_key_prefix['Authorization'] = 'Bearer'
 ENTERPRISE_ID = '<your-Enterprise-ID>'

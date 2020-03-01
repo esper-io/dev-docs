@@ -8,7 +8,7 @@
 html, body
   padding 0
   margin 0
-  background-color #fff
+  background-color #f3f5fd
 
 body
   font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
@@ -48,11 +48,24 @@ body
   z-index 10
   margin 0
   top $navbarHeight
-  left 0
+  left 20rem
   bottom 0
   box-sizing border-box
   border-right 1px solid $borderColor
   overflow-y auto
+  top: 8rem;
+  @media (max-width: 1830px)
+    left 14rem
+  @media (max-width: 1700px)
+    left 10rem
+  @media (max-width: 1580px)
+    left 7rem
+  @media (max-width: 1360px)
+    left 4rem
+  @media (max-width: 1480px)
+    left 3rem
+  @media (max-width: 1280px)
+    left 0rem
 
 {$contentClass}:not(.custom)
   @extend $wrapper
