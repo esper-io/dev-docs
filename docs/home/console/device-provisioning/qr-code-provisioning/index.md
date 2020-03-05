@@ -8,7 +8,7 @@ A QR code is generated in the Esper Console using a [Device Template](../../devi
 
 Follow the below steps to provision a device using the 6 Tap QR code method-
 
-# Steps to take for 6-Tap QR code Provisioning
+## Steps to take for 6-Tap QR code Provisioning
 
 Android devices that have Google Mobile Services support (GMS devices that support Play Store) can be provisioned into Esper management console using 6 Tap QR code provisioning method. To begin provisioning, device needs to be factory reset. <br> 
 
@@ -53,23 +53,23 @@ Scan the QR code generated on the dashboard.
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/13.1_PD.png)
 
-* On **'Set up your device'**, click **'ACCEPT & CONTINUE'**:
+- On **'Set up your device'**, click **'ACCEPT & CONTINUE'**:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/12_PD.png)
 
-* On the **"Google check activity for security problems"** screen, click **'ACCEPT'**:
+- On the **"Google check activity for security problems"** screen, click **'ACCEPT'**:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/14.1_PD.png)
 
-* Give permission to allow app modification by clicking **'RESOLVE'**:
+- Give permission to allow app modification by clicking **'RESOLVE'**:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/16_PD.png)
 
-* Grant permission to Esper Device Management under **'Modify system settings'**:
+- Grant permission to Esper Device Management under **'Modify system settings'**:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/18_PD.png)
 
-* The device is provisioned:
+- The device is provisioned:
 
 ![Provision Device](../../../assets/OLD_DASHBOARD/100.png)
 
