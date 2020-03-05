@@ -8,6 +8,8 @@ Current version: 1.1
 
 Release name: Tessarion
 
+Link to Download: http://downloads.esper.io/device-sdk/esperdevicesdk-release-feb-14-2020.aar
+
 Table of Contents: 
 
 - Downloading the SDK
