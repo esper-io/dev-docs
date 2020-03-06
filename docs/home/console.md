@@ -431,7 +431,7 @@ User may enter WiFi SSID, password and choose the security type in the dropdown 
 
 An extra drop down appears when option EAP is selected for further security settings. 
 
-In more technical terms, here, provisioning Wifi phase 2 authorization (android.app.extra.PROVISIONING_WIFI_PHASE2_AUTH) must be defined which accepts: NONE, PAP, MSCHAP, MSCHAPV2, GTC, SIM, AKA or AKA_PRIME. 
+In more technical terms, here, provisioning Wifi phase 2 authorization must be defined which accepts: NONE, PAP, MSCHAP, MSCHAPV2, GTC, SIM, AKA or AKA_PRIME. 
 
 Read more about these options [here](https://developer.android.com/reference/android/net/wifi/WifiEnterpriseConfig.Eap).
 

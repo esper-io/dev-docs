@@ -116,6 +116,7 @@ $navbar-horizontal-padding = 6rem
   .navbar
     padding-left 4rem
     padding-right 2rem
+    max-width 100vw
     .can-hide
       display none
     .links
