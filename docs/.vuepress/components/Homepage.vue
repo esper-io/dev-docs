@@ -125,15 +125,6 @@
   font-size: 1em;
   font-weight: normal;
 }
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
-@font-face {
-  font-family: 'BlenderPro';
-  src: url('/fonts/BlenderPro-Medium.eot');
-  src: local('‚ò∫'), url('/fonts/BlenderPro-Medium.woff2') format('woff2'),
-    url('/fonts/BlenderPro-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 .home {
   padding: 3.6rem 2rem 0;
   max-width: 960px;
@@ -148,7 +139,7 @@
   font-weight: 500;
   line-height: 1.25;
   color: #7a55a5;
-  font-family: 'BlenderPro';
+  font-family: 'Nunito Sans', sans-serif;
 }
 .homepage__subheading {
   max-width: 37rem;
@@ -164,7 +155,7 @@
 }
 .homepage__button {
   font-weight: normal !important;
-  font-family: 'BlenderPro';
+  font-family: 'Nunito Sans', sans-serif;
   display: inline-block;
   font-size: 1.2rem;
   margin-right: 1rem;
@@ -298,7 +289,7 @@
   border-bottom: none;
   padding-bottom: 0;
   color: #3a5169;
-  font-family: 'BlenderPro';
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .homepage__links__section__item > p {

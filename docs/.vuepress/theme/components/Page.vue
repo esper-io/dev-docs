@@ -28,6 +28,7 @@ export default {
   padding-top 8rem
   padding-bottom 5rem
   display block
+  max-width 100vw
   width fit-content
   margin auto
   margin-bottom 2rem
@@ -37,9 +38,15 @@ export default {
     padding-bottom 3rem
     padding-right: 1rem
   .content__default
+    @media (max-width: 520px)
+      max-width: 80vw
     background #fff
     padding-bottom 5rem
     border-radius: 5px;
     // box-shadow 0 7px 14px 0 rgba(60,66,87, 0.12), 0 3px 6px 0 rgba(0,0,0, 0.12);
+  @media (max-width: 520px)
+    padding: 0px
+    padding-top 5rem
+    padding-bottom 3rem
 
 </style>
