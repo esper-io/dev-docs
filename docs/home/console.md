@@ -1,32 +1,32 @@
-# Console
+# Esper console
 
-Welcome to  Esper Console docs. This document describes how to use the Esper console features with ease. You can view subheadings on the left side bar which will take you directly to the section you are looking for. There is a separate [faq](https://docs.esper.io/home/faq.html) section that can be checked for any quick query if you are already used to Esper Console. <br />
-
-## Manage Home
-
-This page explains the functionality of the Esper Home Dashboard.
-
-![](./assets/GettingStarted/managedashboard.png)
+The Esper console is a feature-rich user interface for you to operate and manage your devices. Esper provides a range of super simple options to deploy company‑owned devices at scale.
 
 
+## Home
 
-There are four tile sections on the Home Dashboard page:
+Home provides useful at-a-glance information about the activity on your account.Esper ensures your business operations continue to run efficiently at all times.
+
+![Esper console](./assets/GettingStarted/managedashboard.png)
+
+
+There are four sections on the Home page:
 
 ### 1\. Deployment Status
 
-This tile shows the current deployment status of the devices for the current customer environment and includes a clickable link to number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
+This shows the current deployment status of the devices for the current customer environment and includes a clickable link to number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
 
 ### 2\. Security Summary
 
-The Security Summary tile shows a summary of security status of the deployed devices. It shows how many of them are at High Risk, Medium Risk, Low Risk and No Risk. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
+This shows a summary of security status of the deployed devices. It shows how many of them are at High Risk, Medium Risk, Low Risk and No Risk. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
 
 ### 3\. Where are your Devices?
 
-This section gives an overview of the location where all the devices are deployed. You can see a world map showing locations of all the devices in Map and Satellite View. It can be made full screen and user has options to zoom in and zoom out. There is also a summary of cities worldwide containing the highest number of devices.
+This section gives an overview of the location where all the devices are deployed. You can see locations of all the devices in Map and Satellite View. There is also a summary of cities worldwide containing the highest number of devices.
 
 ### 4\. Alerts Status
 
-The Alerts Status tile gives a summary of Alerts you've created and Alerts that have been fired for each of the created Alerts. The Alert name can be selected from the dropdown and the number of Alerts fired will then be shown.
+This gives a summary of Alerts you've created and Alerts that have been fired for each of the created Alerts. The Alert name can be selected from the dropdown and the number of Alerts fired will then be shown.
 
 ## Dev Home
 
@@ -39,12 +39,11 @@ Read about the Developer Tools and Documentation here -
 - **Esper Plugin For Android Studio** - Use Esper Plugin to easily deploy new versions of your app onto Esper dashboard and to your dedicated devices. This plugin enables you to remotely view/control your devices on Android studio as well.
 - **Esper Docs With Quick Starts** - This is one stop for all documentation regarding API, CLI, SDK, Plugin and Console.
 
-## Provision Device
+## Provisioning methods
 
 Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
 
-Esper provides multiple methods of provisioning a device, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
-
+Esper provides different methods as per the device capabilities available, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
 
 ![Provisioning](./assets/provisioning/provisioning1.png)
 
@@ -53,6 +52,7 @@ You may provision your device using any of the four methods given the pre requis
 ![Provisioning](./assets/provisioning/provisioning4.png)
 
 If you find choosing between these methods confusing, for your convenience, we have provided an easy way to choose a provisioning method by filling the form on the right side. User needs to fill the following sections - 
+
 - Android version - Check the android version on your device by going to Settings -> About ->  Android Version
 
    ![Provisioning](./assets/provisioning/provisioning2.png)
@@ -68,8 +68,6 @@ Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0
 - Esper Enhanced - Esper Enhanced Android is purpose-built optimized Android OS with enhanced performance, security and features such as zero touch provisioning, remote adb debugging and OTA android updates. Esper provides Esper Enhanced devices on request from customers. Choose `YES`, if your devices are Esper Enhanced.
 
 - GMS support - Choose `YES`, if your android device supports Google Mobile Services. If Play Store app exists in your device, your device is a GMS device.
-
-![Provisioning](./assets/provisioning/playstoreicon.png)
 
 - Camera -  Choose `YES`, if your device has a working camera.
 
@@ -197,12 +195,12 @@ Below is a list of features you can turn on or off in the policy section. These 
         7. Esper Branding - User can turn off the Esper logo in case they wish to use their own logo as a reseller of Esper platform.
     
 
-    ![](./assets/esperSettingsApp/espersettingapp1.png)
+    ![Esper settings app](./assets/esperSettingsApp/espersettingapp1.png)
 
 5. **Dock & Empty Settings App Password** <br> 
     In Kiosk mode, Device user can access a hidden dock consisting of menu items such as Esper settings app by tapping 3 times on top right corner or by clicking the power button 3 times. This text field is to protect accessibility for this feature via password.  The dock menu consists of multi-app mode - kiosk mode switch, Esper settings app and Power button. 
 
-    ![](./assets/esperSettingsApp/espersettingapp2.png)
+    ![Dock & Empty Settings App Password](./assets/esperSettingsApp/espersettingapp2.png)
 
     The textbox here accepts the common password for Dock and the Esper Settings App. It is now acceptable to not have any password for these features for the ease of device users. Esper, however, recommends that passwords are setup for stronger security.
     <br/>
@@ -271,7 +269,7 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 ADB- Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.” If checked in policy, dashboard user may turn on ADB via Settings for a configurable time period.  If unchecked, ADB can not be turned on from Settings. NOTE: We NEVER allow turning on ADB from device end for an Esper provisioned device.
  
  
-![](./assets/template/adbinpolicy.png)
+![Android Debug Bridge](./assets/template/adbinpolicy.png)
 
 <br/>
 Compliance Policy Section of the Device Template - 
@@ -398,19 +396,19 @@ If dashboard user needs to turn on the adb for communication to device for purpo
 
 Below are the time configurations for which adb can be turned on-
  
-![](./assets/settings/adbinsettings.png)
+![Android Debug Bridge settings](./assets/settings/adbinsettings.png)
  
-   - Always On
-   - 1 hour
-   - 3 hour
-   - 8 hour
-   - 1 day
+- Always On
+- 1 hour
+- 3 hour
+- 8 hour
+- 1 day
 
 After the completion of this time period from the point of provisioning, the ADB will automatically turn off for the device.
  
 - WiFi Access Points - User can predefine preferred WiFi networks by entering WiFi access point details such as WiFi SSID, WiFi Security Type, WiFi Password and whether its a "Hidden" network.
  
-![](./assets/settings/wifiaccesspoints.png)
+![WiFi Access Points](./assets/settings/wifiaccesspoints.png)
  
 The device will automatically connect to the given WiFi access points as per the availability and network strength after provisioning.
  
@@ -525,7 +523,7 @@ It consists of the following sections -
 
     e. [Apps](./console/device-management/-/index.md#apps) - Admin can un-hide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
 
-    f. [Compliance Policy](./console#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
+    f. [Compliance Policy](./#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
 
     g. [Security](https://docs.esper.io/home/console/device-management/-/#security) - This section gives details regarding the security status of the device.
 
@@ -551,16 +549,17 @@ This device is only available for new signups currently. Please note that trial 
 
 ### Categories
 
-There are checkboxes on the top of the page with categories such as  that can be checked to view devices in each particular state-
- - Active - currently online  
- - Inactive - currently offline
- - Under provisioning - devices undergoing provisioning 
- - Devices with low battery - devices with battery under 30% charging
- - Recently added devices - devices provisioned within the last 3 days
- - Low risk devices - device with security status low
- - Medium risk devices - devices with security status medium
- - High risk devices - devices with security status high
- - No risk devices - device with security status 'secure'
+There are checkboxes on the top of the page with categories such as  that can be checked to view devices in each particular state 
+
+- Active - currently online  
+- Inactive - currently offline
+- Under provisioning - devices undergoing provisioning 
+- Devices with low battery - devices with battery under 30% charging
+- Recently added devices - devices provisioned within the last 3 days
+- Low risk devices - device with security status low
+- Medium risk devices - devices with security status medium
+- High risk devices - devices with security status high
+- No risk devices - device with security status 'secure'
 
  See the [Security](https://docs.esper.io/home/console/device-management/-/#security) section to know how the security status of a device is determined
 
@@ -597,28 +596,28 @@ You will notice an ellipsis button on top right corner. Clicking on this brings 
 
 1. View device on map - Clicking this shows the exact location of the device on google maps like this - 
 
-![Device Management](./assets/devicetile/devicetile3.png)
+    ![Device Management](./assets/devicetile/devicetile3.png)
 
 2. Add Tags - To make it easier to remember, we have capability to add tags on devices to easily identify devices in a location or type of device or wifi ssid or any other information we wish to keep tagged on the device.
 
-On clicking the Add Tags button, the following pop up appears - 
+    On clicking the Add Tags button, the following pop up appears - 
 
 
-![Device Management](./assets/devicetile/devicetile4.png)
+    ![Device Management](./assets/devicetile/devicetile4.png)
 
-Enter tags and click 'Add'. Note that maximum number of tags per device is 3.
-
-
-![Device Management](./assets/devicetile/devicetile5.png)
-
-You may edit or delete the tags using actions. On clicking the edit (pencil icon) the text box lets you edit and Update the tag as shown below - 
-
-![Device Management](./assets/devicetile/devicetile6.png)
-
-You may also click on the delete (trash icon) to delete a tag.
+    Enter tags and click 'Add'. Note that maximum number of tags per device is 3.
 
 
-![Device Management](./assets/devicetile/devicetile7.png)
+    ![Device Management](./assets/devicetile/devicetile5.png)
+
+    You may edit or delete the tags using actions. On clicking the edit (pencil icon) the text box lets you edit and Update the tag as shown below - 
+
+    ![Device Management](./assets/devicetile/devicetile6.png)
+
+    You may also click on the delete (trash icon) to delete a tag.
+
+
+    ![Device Management](./assets/devicetile/devicetile7.png)
 
 3. Remove from Group - This option only appears if the device is part of a group other than the 'Default Group'. Clicking this will simply remove the device from the group and make it a part of the 'Default Group'.
 
@@ -658,6 +657,7 @@ Example 4 - Devices listed 'Under Provisioning' refer to devices which are still
 ![Device Management](./assets/OLD_DASHBOARD/Under_Provisioning.png)
 
 ### List View
+
  When the number of devices in a fleet crosses over into the 100s it is hard to view or sort them in the device tile view. With the new List View users can easily see a list of all devices available on the dashboard along with device information columns including online/offline status, serial number, group name, Android version, and andy tags. 
 
 Search by device name can be used without having to click and enter into device details page to get detailed information about each device. 
@@ -716,6 +716,7 @@ Using Groups devices can be sectioned into groups and mass actions can be perfor
 There is a pre-existing group called "All Devices", which is the default group where devices fall unless otherwise specified during provisioning via template.
 
 ### Creating a Group
+
 You can create a Group by clicking the button `Create Group` on the top right. 
 
 ![Group Management](./assets/groups/creategroup2.png)
@@ -725,6 +726,7 @@ Enter a unique name and click Create.
 ![Group Management](./assets/groups/creategroup1.png)
 
 Once you create a Group, you have the option to add devices from the  default **All devices** group. To move devices, users can -
+
 - click on the checkboxes on the left of the device that needs to be moved.  
 - select all devices by clicking on the top checkbox. 
 - search for a particular device by enter device code via Search box. 
@@ -795,191 +797,192 @@ There are 5 tabs under the Group Details -
 
 
 1. **Manage** 
-This section is to view the `Device tile` of all devices present in the group. 
 
-![Group Management](./assets/groups/groupdetail1.png)
+    This section is to view the `Device tile` of all devices present in the group. 
 
-The device tiles will show the following information for each device in the group - 
+    ![Group Management](./assets/groups/groupdetail1.png)
 
-- Device name
-- Device manufacturer
-- Last seen date, time and location
- - Active/Inactive status
-- Gms/Non-Gms
-- Risk Status
-- Ethernet, Wi-Fi and Cellular connection name and status
-- Link to device details
+    The device tiles will show the following information for each device in the group - 
 
-See more about information about individual devices in the [Devices](https://docs.esper.io/home/console.html#devices) section on this document.
+    - Device name
+    - Device manufacturer
+    - Last seen date, time and location
+    - Active/Inactive status
+    - Gms/Non-Gms
+    - Risk Status
+    - Ethernet, Wi-Fi and Cellular connection name and status
+    - Link to device details
 
-There are six filters provided to sort through the list of device tiles based on the following categories - 
+    See more about information about individual devices in the [Devices](https://docs.esper.io/home/console.html#devices) section on this document.
 
-![Group Management](./assets/groups/groupsmanage1.png)
+    There are six filters provided to sort through the list of device tiles based on the following categories - 
 
-- Under provisioning - Devices in the group that are currently undergoing provisioning
-- Active devices - Devices in the group that are currently active ie online
-- Inactive devices - Devices in the group that are currently inactive ie offline
-- Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](https://docs.esper.io/home/console/device-management/-/) for more information on how the security risk level of a device is calculated)
-- Devices with low battery - Devices in the group with battery percentage less than 15%
-- Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
+    ![Group Management](./assets/groups/groupsmanage1.png)
+
+    - Under provisioning - Devices in the group that are currently undergoing provisioning
+    - Active devices - Devices in the group that are currently active ie online
+    - Inactive devices - Devices in the group that are currently inactive ie offline
+    - Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](https://docs.esper.io/home/console/device-management/-/) for more information on how the security risk level of a device is calculated)
+    - Devices with low battery - Devices in the group with battery percentage less than 15%
+    - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
 
 2. **Actions**
- The groups actions such as Reboot, Screen lock and Heartbeat can be applied on all the devices in a group as a mass action. 
- 
- ![Group Management](./assets/groups/groupsactions1.png)
+    The groups actions such as Reboot, Screen lock and Heartbeat can be applied on all the devices in a group as a mass action. 
+    
+    ![Group Management](./assets/groups/groupsactions1.png)
 
- Reboot - When the Reboot action is applied on a group, all active devices will receive the command to reboot. The live report generated will show the progress bar of reboot action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+    Reboot - When the Reboot action is applied on a group, all active devices will receive the command to reboot. The live report generated will show the progress bar of reboot action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
 
-  ![Group Management](./assets/groups/groupsactions2.png)
+    ![Group Management](./assets/groups/groupsactions2.png)
 
-  On clicking "See details", a live status update of successful and unsuccessful devices and reason for failure appears in a sidebar such as follows -
+    On clicking "See details", a live status update of successful and unsuccessful devices and reason for failure appears in a sidebar such as follows -
 
- ![Group Management](./assets/groups/groupsactionsstatus2.png)
+    ![Group Management](./assets/groups/groupsactionsstatus2.png)
 
-Refresh button can be clicked to get the latest update. Clicking on 'Success' will show details of succeeded devices and 'Failed' shows status of failed devices.
+    Refresh button can be clicked to get the latest update. Clicking on 'Success' will show details of succeeded devices and 'Failed' shows status of failed devices.
 
-  Screen lock - When the Screen lock action is applied on a group, all active devices will receive the command to lock screen. The live report generated will show the progress bar of locking action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
- 
+    Screen lock - When the Screen lock action is applied on a group, all active devices will receive the command to lock screen. The live report generated will show the progress bar of locking action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
+    
 
-Heart beat - When the Heart beat action is applied on a group, all active devices will receive the command to report whether they are online (or alive). The live report generated will show the progress bar of 'ping' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
+    Heart beat - When the Heart beat action is applied on a group, all active devices will receive the command to report whether they are online (or alive). The live report generated will show the progress bar of 'ping' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
 
-Wipe device - When the Wipe action is applied on a group, all active devices will receive the command to reset themselves to factory settings. The live report generated will show the progress bar of 'wipe' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
+    Wipe device - When the Wipe action is applied on a group, all active devices will receive the command to reset themselves to factory settings. The live report generated will show the progress bar of 'wipe' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
 
-Push a WiFi access point - When a WiFi access point is pushed to a group, dashboard user will be asked to enter the details of WiFi access point.
+    Push a WiFi access point - When a WiFi access point is pushed to a group, dashboard user will be asked to enter the details of WiFi access point.
 
- ![Group Management](./assets/devicesettings/devicewifiap.png)
+    ![Group Management](./assets/devicesettings/devicewifiap.png)
 
- All active devices will receive the command to connect to the given WiFi access point. The live report generated will show the progress bar of the action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
+    All active devices will receive the command to connect to the given WiFi access point. The live report generated will show the progress bar of the action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
 
 
-:::tip
-The groups actions will get applied on active (online) devices. The inactive devices currently do not get the command if they are not online at the time the action was applied.
-:::
+    :::tip
+    The groups actions will get applied on active (online) devices. The inactive devices currently do not get the command if they are not online at the time the action was applied.
+    :::
 
 3. **Compliance Policy** 
- A pre created compliance policy can be chosen from the drop down and applied to all devices in the group in one click. A preview of the chosen policy can be viewed under the drop down as seen below. 
+    A pre created compliance policy can be chosen from the drop down and applied to all devices in the group in one click. A preview of the chosen policy can be viewed under the drop down as seen below. 
 
-![Group Management](./assets/groups/groupspolicy.png)
+    ![Group Management](./assets/groups/groupspolicy.png)
 
-When a Compliance Policy is applied on a group, all active devices will receive the command to comply by the given policy. The live report generated will show the progress bar of application of policy on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+    When a Compliance Policy is applied on a group, all active devices will receive the command to comply by the given policy. The live report generated will show the progress bar of application of policy on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
 
-![Group Management](./assets/groups/groupspolicy1.png)
+    ![Group Management](./assets/groups/groupspolicy1.png)
 
-On clicking `Show more` user can see the details such as name of active devices, model, current policy and last updated for Active as well as Inactive devices.
+    On clicking `Show more` user can see the details such as name of active devices, model, current policy and last updated for Active as well as Inactive devices.
 
-Active device detail status for policy application-
-![Group Management](./assets/groups/groupspolicy2.png)
+    Active device detail status for policy application-
+    ![Group Management](./assets/groups/groupspolicy2.png)
 
-Inactive device detail status for policy application-
-![Group Management](./assets/groups/groupspolicy4.png)
+    Inactive device detail status for policy application-
+    ![Group Management](./assets/groups/groupspolicy4.png)
 
-Once the policy application process is completed, another line is added detailing the policy application failure on devices. This lists Device names, model and reason for failure as shown below-
-![Group Management](./assets/groups/groupspolicy3.png)
+    Once the policy application process is completed, another line is added detailing the policy application failure on devices. This lists Device names, model and reason for failure as shown below-
+    ![Group Management](./assets/groups/groupspolicy3.png)
 
 
-:::tip
-The compliance policy will get applied on active (online) devices. The inactive devices currently do not get the policy if they are not online at the time the action was applied.
-:::
+    :::tip
+    The compliance policy will get applied on active (online) devices. The inactive devices currently do not get the policy if they are not online at the time the action was applied.
+    :::
 
 4. **Apps** 
 
-To address the need to manage app actions on fleet of devices, we rolled out our initial implementation of a robust App Unification feature on our Cloud backend which enables Esper to easily handle all types of apps and app-related actions for customers at the Group level.
+    To address the need to manage app actions on fleet of devices, we rolled out our initial implementation of a robust App Unification feature on our Cloud backend which enables Esper to easily handle all types of apps and app-related actions for customers at the Group level.
 
-The app section in group has 3 sub sections- 
-1. Install/Uninstall
-2. Scheduled Install
-3. Approvals
-
-
-**Install/Uninstall**
-
-This section is used to install of uninstall **privately uploaded apps (also knowns as Enterprise apps) and Google Play apps** to the groups.
-
-To deploy a Google app or a private app to a group, go to Groups > Details for the group you wish to deploy the app on. Go to the Apps tab where you will view this screen.
+    The app section in group has 3 sub sections- 
+    1. Install/Uninstall
+    2. Scheduled Install
+    3. Approvals
 
 
-![Group Management](./assets/groups/groupsapps1.png)
+    **Install/Uninstall**
 
-Choose between Install and Uninstall actions in the drop-down select app action. The Select App dropdown then shows a list of all uploaded private APKs and approved Google apps. 
+    This section is used to install of uninstall **privately uploaded apps (also knowns as Enterprise apps) and Google Play apps** to the groups.
 
-After selecting a version from the “Select Version” dropdown, in the 'App Details Preview', you can see under the heading 'App type' indicating whether its a private app (App type - Enterprise) or a Google app (App type - Google) as shown below. 
-
-![Group Management](./assets/groups/groupsapps2.png)
-
-Additionally, you can also view the app icon, app name, version number and package name of the app in this section. Clicking the Install button on the bottom right will deploy the app on the group.
-
-![Group Management](./assets/groups/groupsapps3.png)
-
-A collapsible sidebar will appear on the right showing the latest status of the install command fired on the devices in the group. Click on Success and Failed to view the device name, model and status of the devices that received the commands successfully and devices that failed to receive the command respectively. 
-
-![Group Management](./assets/groups/groupsapps4.png)
-
-It will continue to update the status over a period of 3 minutes after which you can use the refresh function to get the latest installation status from the devices.  
+    To deploy a Google app or a private app to a group, go to Groups > Details for the group you wish to deploy the app on. Go to the Apps tab where you will view this screen.
 
 
-Groups Uninstall works similarly as above if the App action chosen is 'Uninstall' in the dropdown menu.
+    ![Group Management](./assets/groups/groupsapps1.png)
+
+    Choose between Install and Uninstall actions in the drop-down select app action. The Select App dropdown then shows a list of all uploaded private APKs and approved Google apps. 
+
+    After selecting a version from the “Select Version” dropdown, in the 'App Details Preview', you can see under the heading 'App type' indicating whether its a private app (App type - Enterprise) or a Google app (App type - Google) as shown below. 
+
+    ![Group Management](./assets/groups/groupsapps2.png)
+
+    Additionally, you can also view the app icon, app name, version number and package name of the app in this section. Clicking the Install button on the bottom right will deploy the app on the group.
+
+    ![Group Management](./assets/groups/groupsapps3.png)
+
+    A collapsible sidebar will appear on the right showing the latest status of the install command fired on the devices in the group. Click on Success and Failed to view the device name, model and status of the devices that received the commands successfully and devices that failed to receive the command respectively. 
+
+    ![Group Management](./assets/groups/groupsapps4.png)
+
+    It will continue to update the status over a period of 3 minutes after which you can use the refresh function to get the latest installation status from the devices.  
 
 
-History of Groups App commands - 
-The history sections shows the history of the group commands for installation and uninstallation of apps fired on the group. 
-
-![Group Management](./assets/groups/groupsappshistory.png)
-
-Details such as app name, action applied, app type, app version, package name and status can be viewed in columns in a paginated report. The Results column has a link to 'View' which can show the detailed report on the collapsible sidebar for successful and failed devices for that command. 
-
-Both the command history and detailed sidebar reports are refreshable manually by dashboard user.
+    Groups Uninstall works similarly as above if the App action chosen is 'Uninstall' in the dropdown menu.
 
 
+    History of Groups App commands - 
+    The history sections shows the history of the group commands for installation and uninstallation of apps fired on the group. 
 
-**Scheduled install**
+    ![Group Management](./assets/groups/groupsappshistory.png)
 
-You may create a scheduled app install by clicking the `Create Scheduled install` button. Enter the App name, version, schedule the start and end date/time for the app install. Lastly, give this schedule a unique name and click "Create Schedule" to get started.
+    Details such as app name, action applied, app type, app version, package name and status can be viewed in columns in a paginated report. The Results column has a link to 'View' which can show the detailed report on the collapsible sidebar for successful and failed devices for that command. 
 
-![Group Management](./assets/OLD_DASHBOARD/5.1_GM.png)
-
-You can also view scheduled app installation for Group along with start and end time.
-
-![Group Management](./assets/OLD_DASHBOARD/5_GM.png)
+    Both the command history and detailed sidebar reports are refreshable manually by dashboard user.
 
 
-You can click on **`View Results`** to see the number of successful and unsuccessful device installations:
 
-![Group Management](./assets/OLD_DASHBOARD/6_GM.png)
+    **Scheduled install**
 
-**Approvals**
+    You may create a scheduled app install by clicking the `Create Scheduled install` button. Enter the App name, version, schedule the start and end date/time for the app install. Lastly, give this schedule a unique name and click "Create Schedule" to get started.
 
-The approvals section is to show, hide or disable In-ROM apps (also referred to as Preloaded apps) on devices.
+    ![Group Management](./assets/OLD_DASHBOARD/5.1_GM.png)
 
-The catch is that admin needs to enter the exact package name of the In-ROM app that they wish to approve or unapprove. The best way to get the exact package name of an In-ROM app is via an adb command as shown below - 
+    You can also view scheduled app installation for Group along with start and end time.
 
-
-`adb shell pm list packages`
-
-User should turn on adb for the device (physically connected via USB) from Device->Actions(Settings), authorize adb usage from the device and run the above command to get the exact package name as shown -  
-
-![Group Management](./assets/groups/groupsapps11.png)
+    ![Group Management](./assets/OLD_DASHBOARD/5_GM.png)
 
 
-Once you have the exact package name of the In-ROM app you wish to execute the action on, go to Approvals section in Groups. The following screen will show - 
+    You can click on **`View Results`** to see the number of successful and unsuccessful device installations:
 
-![Group Management](./assets/groups/groupsapprovals1.png)
+    ![Group Management](./assets/OLD_DASHBOARD/6_GM.png)
 
-There are three options here - Show, Hide and Disable. You may enter the package name and choose any of these 3 options. Click 'Apply'. 
+    **Approvals**
 
-A prompt such as below will appear (in this example, we chose 'Show') - 
+    The approvals section is to show, hide or disable In-ROM apps (also referred to as Preloaded apps) on devices.
 
-![Group Management](./assets/groups/groupsapprovals2.png)
-
-Click 'Yes' and the group command status will start to show -
+    The catch is that admin needs to enter the exact package name of the In-ROM app that they wish to approve or unapprove. The best way to get the exact package name of an In-ROM app is via an adb command as shown below - 
 
 
-![Group Management](./assets/groups/groupsapprovals3.png)
+    `adb shell pm list packages`
 
-Just like other group commands, click 'See details' to view the collapsible sidebar report - 
+    User should turn on adb for the device (physically connected via USB) from Device->Actions(Settings), authorize adb usage from the device and run the above command to get the exact package name as shown -  
 
-![Group Management](./assets/groups/groupsapprovals4.png)
+    ![Group Management](./assets/groups/groupsapps11.png)
 
-Similar functionality is present for Hide and Disable actions for In-ROM apps.
+
+    Once you have the exact package name of the In-ROM app you wish to execute the action on, go to Approvals section in Groups. The following screen will show - 
+
+    ![Group Management](./assets/groups/groupsapprovals1.png)
+
+    There are three options here - Show, Hide and Disable. You may enter the package name and choose any of these 3 options. Click 'Apply'. 
+
+    A prompt such as below will appear (in this example, we chose 'Show') - 
+
+    ![Group Management](./assets/groups/groupsapprovals2.png)
+
+    Click 'Yes' and the group command status will start to show -
+
+
+    ![Group Management](./assets/groups/groupsapprovals3.png)
+
+    Just like other group commands, click 'See details' to view the collapsible sidebar report - 
+
+    ![Group Management](./assets/groups/groupsapprovals4.png)
+
+    Similar functionality is present for Hide and Disable actions for In-ROM apps.
 
 5. **OS Updates**
 
@@ -1162,11 +1165,11 @@ sets up email notifications for anyone requesting new permissions to the specifi
 
 You have the option to decide which of the apps are to appear on the device Google Play Store. Go to the Play For Work section and choose the option Organize App-
 
-![](./assets/faq/orgapp1.png)
+![Play For Work](./assets/faq/orgapp1.png)
 
 Any app added in the collections on this page will show up on the Google Play Store app on the device - 
 
-![](./assets/faq/orgapp2.png)
+![Play For Work](./assets/faq/orgapp2.png)
 
 
 ## Alerts
@@ -1265,7 +1268,7 @@ Below is a list of features you can turn on or off in the policy section. These 
     7. Esper Branding - User can turn off the Esper logo in case they wish to use their own logo as a reseller of Esper platform.
         
     
-    ![](./assets/esperSettingsApp/espersettingapp1.png)
+    ![Esper Branding](./assets/esperSettingsApp/espersettingapp1.png)
 
     <br/>
 
@@ -1284,7 +1287,8 @@ The Google Account Restriction feature is applicable only to GMS android devices
 :::
 
 
-### Factory Reset Protection <br> 
+### Factory Reset Protection <br>
+
 _FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
 
 ![Factory Reset Protection](./assets/GoogleAccountid/factory_reset_protection.png)
@@ -1338,13 +1342,13 @@ If checked in policy, dashboard user may turn on ADB via Dashboard Settings for 
 NOTE: We NEVER allow turning on ADB from device end for an Esper provisioned device.
  
  
-![](./assets/template/adbinpolicy.png)
+![ADB](./assets/template/adbinpolicy.png)
  
  
 Here is how the Compliance Policy page of the Dashboard looks like -
 <br>
  
-![](./assets/OLD_DASHBOARD/newpolicy.png)
+![Compliance Policy](./assets/OLD_DASHBOARD/newpolicy.png)
  
  
 You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
@@ -1363,19 +1367,20 @@ There are two sections to reports -
 
 These get generated on a daily basis as shown below - 
 
-![](./assets/reports/report1.png)
+![Daily Reports](./assets/reports/report1.png)
 
 It generates the following information - 
+
 - Date of the report
 - Report type
 - Option to View
 - Option to download in pdf, excel or csv formats
 
-![](./assets/reports/reports4.png)
+![View Report](./assets/reports/reports4.png)
 
 Clicking on View or Report type will take user to a detailed view of the daily report - 
 
-![](./assets/reports/reports2.png)
+![Reports](./assets/reports/reports2.png)
 
 Here, the following information is shown - 
 - Number of Registered Devices
@@ -1390,7 +1395,7 @@ Additionally, you may see for each group -
 
 on clicking the '>' sign, user can view devices wise details as shown below - 
 
-![](./assets/reports/reports3.png)
+![Reports](./assets/reports/reports3.png)
 
 Listing the following details per device - 
 
@@ -1402,7 +1407,7 @@ Listing the following details per device -
 
 Here is a preview of a downloaded pdf version of daily report - 
 
-![](./assets/reports/reports5.png)
+![Reports PDF](./assets/reports/reports5.png)
 
 This report lists all the information shown above for the chosen date in an easily downloadable format.
 
@@ -1410,7 +1415,7 @@ This report lists all the information shown above for the chosen date in an easi
 
 Dashboard admin user also has the option to generate a group wise custom report that is spread over a chosen period of time. Admin can choose start and end date to generate the report as shown below -
 
-![](./assets/reports/reports6.png)
+![Custom Report](./assets/reports/reports6.png)
 
 Following information is required- 
 
@@ -1420,7 +1425,7 @@ Following information is required-
 
 Finally, clicking on Generate report will bring up the custom report to the user as follows-
 
-![](./assets/reports/reports7.png)
+![Custom Report](./assets/reports/reports7.png)
 
 This report has the same information as daily report but for the specified dates and group.
 
@@ -1496,7 +1501,7 @@ Introduction:
 
 Esper Pipeline feature enables users to ensure smooth deployment of actions (including app installation) on large fleets of remote devices by defining stages constituting of operations, installations, tests, and wait time that are executed when a defined trigger occurs, such as when a new version of the app is uploaded. Only after succeeding in the above stages on test devices will the action get applied on production devices, hence ensuring a smooth deployment via a pipeline of stages. The initial version of the Esper Pipeline supports only the app installation operation and requires a 5 second or more break between the deletion of stages. 
 
-![](./assets/pipeline/image2.png)
+![Esper pipelines](./assets/pipeline/image2.png)
 
 Pipeline has the capability to create n number of stages or operations for automating tasks. Different sets of tasks can be automated by creating pipelines & reduce the manual work to do it one by one.
 
@@ -1511,23 +1516,23 @@ Create A Pipeline
 
 Pipeline info : Name a pipeline & give description if any.
 
-![](./assets/pipeline/image11.png)
+![Create Esper Pipeline](./assets/pipeline/image11.png)
 
 Trigger: Define a trigger which is an operation that sets off the pipeline in motion. Any time the defined trigger occurs, either via dashboard or via an api call or cli command, the pipeline will automatically start running. For V1 we currently only support the trigger where a new app version is uploaded. 
 
 
-![](./assets/pipeline/image9.png)
+![Esper pipeline - trigger](./assets/pipeline/image9.png)
 
  Stages: Post trigger, you need to define stages of the pipeline. For each stage, a name & description is given first, then you have to add operations that are to take place. For each operation, define name & description, operation type and finally, select a group of devices on which the operation will occur. For now operation is Install app or uninstall app. Users can create any number of stages as per their use case.
 
- ![](./assets/pipeline/image6.png)
+ ![Esper pipeline stages](./assets/pipeline/image6.png)
 
- ![](./assets/pipeline/image10.png)
+ ![Esper pipeline stages](./assets/pipeline/image10.png)
  
 
 Preview & Save : Once user is done with above three steps they see the final preview & saves the pipeline & the pipeline will be created.
 
-![](./assets/pipeline/image2.png)
+![Esper pipeline preview](./assets/pipeline/image2.png)
 
 Pipeline can be edited later at any moment as per the use case or we can add or remove stages .
 

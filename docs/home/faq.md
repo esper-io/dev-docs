@@ -241,11 +241,11 @@ In both Devices and Groups section, user will see a 'Compliance Policy' tab unde
 
 Sometimes customers are not able to use their apps that require extra permissions. They get the message such as "Permission needed" and "Action Not Allowed" when trying to change Settings or open the app. 
 
-![](./assets/faq/permissionsforapp5.png)
+![Permissions for app](./assets/faq/permissionsforapp5.png)
 
 There is a simple solution to this problem. Simply create a Compliance Policy and choose the option of `Ask User` from `App Permissions` drop down. This will allow the device user to give the required permission to the app from Settings -> App Permissions.  
 
-![](./assets/faq/permissionforapp3.png)
+![Permissions for app](./assets/faq/permissionforapp3.png)
 
 Once you apply the compliance policy on the device/group, you should be able to make the required permission changes from the Settings on the device.
 
@@ -278,32 +278,32 @@ If you still wish to unenroll your email from Google Android for Work, get in to
 
 1. Go to  [Google Play Admin Settings page](https://play.google.com/work/adminsettings). If you are already signed in, you will see an option to 'SWITCH ACCOUNTS'. Click on the same to switch to the gmail id that you had enrolled with.
 
-![](./assets/faq/emmfaq1.png)
+    ![Google Play Admin Settings page](./assets/faq/emmfaq1.png)
 
 2. Select your account or give login credentials 
 
-![](./assets/faq/emmfaq2.png)
+    ![FAQ](./assets/faq/emmfaq2.png)
 
 3. Under Settings you will see Organization information section. Click on the vertical ellipsis on the right. You will see an option to “Delete Organization”. Clicking this will disassociate your email with the said organization.
 
-![](./assets/faq/emmfaq3.png)
+![disassociate your email with the said organization](./assets/faq/emmfaq3.png)
 
 ## On entering afw#esper why do I see "Couldn't find your google account?
 
 A possible cause for this error message is that the pre-configured Google account has not been removed from the device before the factory reset.
 In order to solve this problem, provide the previously configured Google Account credentials and reset the device. Remove the Google Account from the device and carry out the factory reset again.
 
-![](./assets/faq/faq14.png)
+![afw#esper](./assets/faq/faq14.png)
 
 ## Can I control which apps show up on my device Google Play Store app?
 
 Yes, you have the option to decide which of the apps are to appear on the device Google Play Store. Go to the Play For Work section and choose the option Organize App-
 
-![](./assets/faq/orgapp1.png)
+![Google Play Store app](./assets/faq/orgapp1.png)
 
 Any app added in the collections on this page will show up on the Google Play Store app on the device - 
 
-![](./assets/faq/orgapp2.png)
+![Google Play Store app](./assets/faq/orgapp2.png)
 
 ## How to capture log when my device is in Kiosk mode?
 
@@ -311,7 +311,8 @@ Click on below image to view video instructions to easily  capture log for a dev
 
 <br/><br/> [![Capture log-kiosk mode](./assets/faq/capturebugreport-kiosk.png)](https://www.youtube.com/watch?v=EEGsY9_1Nn0&feature=youtu.be 'Capture log in kiosk mode')
 
-Steps to take - 
+Steps to take
+
 1. Go to the Devices section, and search for your device via the Device ID. Click on Details.
 2. Go to Actions tab and click "Unpin app". This will unpin the kiosk app from your device. 
 3. Usually the Compliance Policy for Kiosk mode is set such that Notification bar is blocked. Since we need notification bar for getting bug report, in order to change this we need a new policy to be set on the device. 
