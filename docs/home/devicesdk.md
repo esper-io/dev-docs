@@ -1,5 +1,5 @@
-
 # Esper Device SDK
+
 
 
 The Esper Device SDK exposes an API to conduct privileged operations on Esper Managed devices. The SDK can be used to develop apps which need to perform seamless operations on or retrieve vital information out of a device.
