@@ -14,4 +14,4 @@ To generate your API key, follow the steps mentioned below:
 Note: A maximum of 5 applications can be registered and only one token can be associated with an application.
 :::
 
-If you face any issue in generating the API key, we recommend you to reach out to [Developer Support](http://example.com)
+If you face any issue in generating the API key, we recommend you to reach out to andi@esper.io

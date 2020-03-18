@@ -22,7 +22,7 @@ This device is only available for new signups currently.
 
 ### 1. Deployment Status
 
-This tile shows the current deployment status of the devices for the current customer environment and includes a clickable link to number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](../device-management/index.md) showing the corresponding category of devices.
+This tile shows the current deployment status of the devices for the current customer environment and includes a clickable link to number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](../../console.md#devices) showing the corresponding category of devices.
 
 ### 2. Security Summary
 
