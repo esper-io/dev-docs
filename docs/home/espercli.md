@@ -32,7 +32,7 @@ From [GitHub](https://github.com/esper-io/esper-cli)
 
 ### From source
 
-Download/Clone the project and install via [Setuptools](http://pypi.python.org/pypi/setuptools).
+Download/Clone the project and install via [Setuptools](https://pypi.python.org/pypi/setuptools).
 
     $ git clone https://github.com/esper-io/esper-cli.git
 

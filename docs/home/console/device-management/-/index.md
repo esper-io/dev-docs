@@ -226,7 +226,7 @@ With our supervisor plugin, we have enabled you to change timezone of device rem
 
 ![Timezone](../../../assets/settings/timezone.png)
 
-[Return to View More](../index.md)
+[Return to View More](../../../console.md)
 
 ## Device Graphs
 
