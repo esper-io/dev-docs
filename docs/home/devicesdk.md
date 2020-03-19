@@ -25,7 +25,7 @@ Table of Contents:
 
 ## Downloading the SDK
 
-Download the .aar file of the SDK from [here](http://downloads.esper.io/device-sdk/esperdevicesdk-release-feb-14-2020.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
+Download the .aar file of the SDK from [here](https://downloads.esper.io/device-sdk/esperdevicesdk-release-feb-14-2020.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
 
 ```
 implementation files('libs/esperdevicesdk-release-feb-14-2020.aar')
