@@ -1196,14 +1196,14 @@ Policy is a standard set of rules or permissions that are related to security of
 - A new policy is created and can be deployed on any device.
 - The new policy gets listed on the **'Compliance Policy'** page which can be edited or deleted as required:
 
-![Policy Management](../../../assets/OLD_DASHBOARD/compliancepolicy_DevRel26.png)
+![Policy Management](./assets/OLD_DASHBOARD/compliancepolicy_DevRel26.png)
 
 
 ### Duplicate a Policy
 
 If you'd like to define a new Compliance Policy based off of an existing Policy, click on the copy icon in the Compliance policy list view and a duplicate will be made you can rename and modify as needed.
 
-![Policy Management](../../../assets/OLD_DASHBOARD/CopyCompliancePolicy_DevRel26.png)
+![Policy Management](./assets/OLD_DASHBOARD/CopyCompliancePolicy_DevRel26.png)
 
 
 
