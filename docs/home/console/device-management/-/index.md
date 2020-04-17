@@ -24,11 +24,9 @@ This is the first tab that comes in view when clicking on `Details` on the Devic
 
 Additionally, on the top under breadcrumbs, Device name, Group name (that it belongs to), Applied Policy and Applied template are shown.
 
-### Device Information View 
+### Device Information View
 
-![Device Information View](../../../assets/devicetab/deviceinfo1.png)
-![Device Information View](../../../assets/devicetab/deviceinfo2.png)
-![Device Information View](../../../assets/devicetab/deviceinfo3.png)
+![Device Information View](../../../assets/devicetab/deviceinfo1.png) ![Device Information View](../../../assets/devicetab/deviceinfo2.png) ![Device Information View](../../../assets/devicetab/deviceinfo3_DevRel26.png) ![Device Information View](../../../assets/devicetab/deviceinfo4_DevRel26.png)![Device Information View](../../../assets/devicetab/deviceinfo5_DevRel26.png)
 
 [Introduction](../../../../console.md) / [Devices](../../index.md) / [View More](../index.md) / Actions
 # Device Settings
