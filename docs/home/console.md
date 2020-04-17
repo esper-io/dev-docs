@@ -1199,15 +1199,14 @@ Policy is a standard set of rules or permissions that are related to security of
 ![Policy Management](./assets/OLD_DASHBOARD/compliancepolicy_DevRel26.png)
 
 
-### Duplicate a Policy
+### Duplicating a Policy
 
 If you'd like to define a new Compliance Policy based off of an existing Policy, click on the copy icon in the Compliance policy list view and a duplicate will be made you can rename and modify as needed.
 
 ![Policy Management](./assets/OLD_DASHBOARD/CopyCompliancePolicy_DevRel26.png)
 
 
-
-### Create a Policy
+### Creating a Policy
 
 Click on `New Policy` to start creating a new policy.
 
@@ -1219,7 +1218,7 @@ Dashboard users and admins create policies in a context, for example a complianc
 
 Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
 
-### Available policy options
+### Available Policy Options
 
 1.  Device Password Rules - If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. <br> The Password rule is a policy that specifies the rules for the device unlock password that users can set.
 
