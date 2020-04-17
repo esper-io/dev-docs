@@ -296,7 +296,7 @@ The app list is paginated as can be viewed at the bottom.
 
 The Actions column is where it gets interesting. On clicking the ellipsis button on the right end, you will see actions such as -
 
-![Device Management](../../../assets/deviceapps/deviceapps2.png)
+![Device Management](../../../assets/deviceapps/deviceapps2_DevRel26.png)
 
 1. Uninstall - uninstalls the apps. Note that some IN-ROM apps can not be uninstalled. When you click 'Uninstall', a dialog box appears on right collapsible sidebar such as this -
 
