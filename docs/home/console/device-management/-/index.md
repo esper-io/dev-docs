@@ -258,13 +258,13 @@ However, if a device stays inactive for more than 7 days, you will see an empty 
 
 ## Apps
 
-This sections lists the Apps that are installed on the device along with the App name,App type, Version code, Package Name, App state and Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps.
+This sections lists the Apps that are installed on the device along with the App name, App type, Version code, Package Name, App state and Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps.
 
 ![Device Management](../../../assets/deviceapps/deviceapps1.png)
 
 An App can have 3 states - Show, Hide and Disable. This is useful for apps such as IN-ROM apps that sometimes can not be uninstalled but can be disabled. For all installed apps also, there is an option to Show or Hide from the device home screen.
 
-On the left side, dashboard user can choose between All apps, Enterprise (or privately uploaded) apps, Google apps and Preloaded (IN-ROM apps).
+On the left side, you can choose between All apps, or to filter the list to just Enterprise (or privately uploaded) apps, Google apps, or Preloaded (IN-ROM) apps.
 
 Additionally, there is a New App Install button, search bar and filter on top left and top right corners -
 
