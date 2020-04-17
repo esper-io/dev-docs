@@ -411,18 +411,25 @@ How to remotely view your device
 
 - For remote viewing of the device we need to click on the ‘Start session’ icon. Once the user allows the remote view request, a secure connection will get established and device screen will be streamed on the dashboard.
 
-![Device Management](../../../assets/OLD_DASHBOARD/4_DM.png)
+![Device Management](../../../assets/OLD_DASHBOARD/4_DM_DevRel26.png)
 
 - The session automatically ends after 15 minutes. You can also stop it by clicking the ‘Stop session’.
 
-![Device Management](../../../assets/OLD_DASHBOARD/5_DM.png)
+![Device Management](../../../assets/OLD_DASHBOARD/5_DM_DevRel26.png)
 
 - The ‘Portrait’ button allows you to turn the screen to portrait as well as landscape mode.
 - Single Device to Cloud session is allowed at a time.
+- The ‘Full Screen’ button allows you to remotely view the device in full screen mode.
+
+![Device Management](../../../assets/OLD_DASHBOARD/5a_DM_DevRel26.png)
+
+While in Full Screen mode using Remote Control, a widget at the lower right corner of the screen will enable navigation on a remote device that has hard keys. If the control widget happens to overlap with the frame, grab and move it to a clear space on the Console screen.
 
 ### Remote Control
 
 On Esper Enhanced Devices, or devices that have manufacture signed supervisor plugin in the system, there is an option to `Remote Control` the device. This means that any action such as click performed on the dashboard will result in remote action on the device.
+
+You may interact with the remote device using your mouse as though you were touching the screen locally. 
 
 Through Esper obtaining membership in SEAP (Samsung Enterprise Alliance Program), our platform now supports Samsung Knox specific extensions and as a result can now provide the Remote Control feature available for any Esper provisioned Samsung devices running Knox 3.x.
 
