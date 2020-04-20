@@ -419,7 +419,7 @@ To remotely view a device:
 ![Device Management](../../../assets/OLD_DASHBOARD/5_DM_DevRel26.png)
 
 - The ‘Portrait’ button allows you to turn the screen to portrait as well as landscape mode.
-- Single Device to Cloud session is allowed at a time.
+- Only a single device-to-cloud session is allowed at a time.
 - The ‘Full Screen’ button allows you to remotely view the device in full screen mode.
 
 ![Device Management](../../../assets/OLD_DASHBOARD/5a_DM_DevRel26.png)
