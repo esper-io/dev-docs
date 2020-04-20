@@ -1076,28 +1076,27 @@ When you click on any private app, it will open the details of the same. For exa
 3.  App icon (if parsable)
 4.  Version number (for each version). Note that the same app can have various versions.
 5.  Number of devices the app is installed on
-6.  The date the app was uploaded on
+6.  Build Number
 7.  Size of the app
 8.  Compatibility with SDK version
-9.  App description  - We now have a new field for you to add your app version specific description or release notes.
+9.  Uploaded on - the date the app was uploaded
+10.  App description  - a field for you to add a description or release notes.
 
-![App Management](./assets/apps/apps3.png)
+![App Management](./assets/apps/app_listing.png)
 
-In the above image, you can see ellipsis (3 dots) under Actions.
-
-Here is another example of an app with description -
+Clicking on the number of devices on which the app is installed will launch a pop-up window that provides a quick overview of the devices onto which the app has been installed and app version for each installation. NOTE: These are linked to the Device Overviews for the devices on which the app has been installed. 
 
 ![App Management](./assets/apps/apps1.png)
 
-On clicking the ellipsis under Action, user has options to:
+Finally, there is an ellipsis (3 dots) under "Actions." Clicking the ellipsis under Action, enables you to to:
 
 1.  Delete the app version
 2.  Edit description  - You can now add and edit description or release notes per version of the app. ![App Management](./assets/apps/apps2.png)
-
-    A description can also be added during app upload.
-    ![App Management](./assets/apps/apps4.png)
-
 3.  Download the app version
+
+A description can also be added during app upload.
+
+![App Management](./assets/apps/apps4.png)
 
 ### Install Google Play Apps after [approving](./console/device-template/how-approve-google-play-store-app/index.md) them:
 
