@@ -696,18 +696,21 @@ Each device name is a link that will take the dashboard user to the [details](./
 
 This view gives the capability to filter devices via - 
 
-1. Group Name 
-2. Policy Name 
-3. GMS/Non-GMS 
-4. Network Type (Cellular, Ethernet, Wifi, Other)
-5. Android Version
-6. Registered Date
-7. Online/Offline 
-8. Security Status 
-9. Last Seen
+1.  Online/Offline
+2.  Group Name
+3.  Policy Name
+4.  GMS/Non GMS
+5.  Network Type
+6.  Android Version
+7.  Registered Date
+8.  Security Status
+9.  Battery Percentage
+10. Last Seen
+11. Templates
 
-
+By default, the list is sorted in descending order of device registration date unless a new option is selected from the menu.
 In the filters, a search capability has been provided to select values.
+
 Currently, user can only filter by one value of each of above. For example, I can choose Group A, Policy B and Active which will give me a filtered list of devices in Group A which are active and have policy B applied on them.
 
 ![Device Management](./assets/devicetab/listview2.png)
