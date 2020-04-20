@@ -1131,6 +1131,10 @@ On clicking the ellipsis under Action, user has options to:
 
 ![App Management](./assets/OLD_DASHBOARD/1_AM.png)
 
+### Apps with Multiple icons on the Device Home Screen
+
+Esper now supports a customer’s Android app that has multiple icons on the device home screen. Please contact us if you are interested in using this new customer release capability.
+
 ## Play for Work
 
 Learn about setting up Play for Work apps using Esper.
