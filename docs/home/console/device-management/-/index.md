@@ -292,6 +292,10 @@ Finally click 'Install'.
 
 A progress bar is seen with a final message informing of app installation success. If an error occurs, user will be informed of the same. Please do not hesitate to reach out to us at support@esper.io for any issues.
 
+Clicking the information symbol in the upper right hand corner will bring up a sidebar listing recent app activity.
+
+![Device Management](../../../assets/deviceapps/activity_feed_added_to_apps_section.png)
+
 Additionally, there is a search bar available on top left corner of app list that lets us search for apps via its name-
 
 ![Device Management](../../../assets/deviceapps/deviceapps11.png)
