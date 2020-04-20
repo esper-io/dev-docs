@@ -7,7 +7,7 @@ The Esper console is a feature-rich user interface for you to operate and manage
 
 Home provides useful at-a-glance information about the activity on your account.Esper ensures your business operations continue to run efficiently at all times.
 
-![Esper console](./assets/GettingStarted/managedashboard.png)
+![Esper console](./assets/GettingStarted/esper_console-home_screen.png)
 
 
 There are four sections on the Home page:
