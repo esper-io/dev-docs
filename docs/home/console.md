@@ -49,6 +49,12 @@ When you're ready to submit your feedback, click the check-mark to the right of 
 
 ![Esper console submit feedback](./assets/GettingStarted/feedback_widget-select_a_category.png)
 
+## What's New Button
+
+Clicking on the "What's New" button at the top right of the screen causes a slide out will appear that you can scroll through to learn more about updates and improvements to your Esper experience.
+
+![Esper console submit feedback](./assets/GettingStarted/whats_new.png)
+
 ## Dev Home
 
 Read about the Developer Tools and Documentation here -
