@@ -28,6 +28,25 @@ This section gives an overview of the location where all the devices are deploye
 
 This gives a summary of Alerts you've created and Alerts that have been fired for each of the created Alerts. The Alert name can be selected from the dropdown and the number of Alerts fired will then be shown.
 
+## Feedback Widget
+
+Wherever you are in the Console, the blue Feedback Widget at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
+
+![Esper console with feedback widget highlighted](./assets/GettingStarted/feedback_widget-tab.png)
+
+Clicking on the Feedback Widget brings up a screen overlay with the following tools:
+
+* Box tool & Pin comment – Highlight a specific area of the page and comment on that area. The comment can be removed and simply left with the box outline.
+* Blackout – Blackout any sensitive information on the screen.
+* Pen – Draw anything you like! Circle and Point works great with a touch screen and pen.
+* Line – Underline, strikethrough, draw a straight line.
+* Line with arrow – Point to something.
+* Pin comment – Drop a pin and make a comment.
+
+![Esper console with feedback widget overlay](./assets/GettingStarted/feedback_widget-capture_controls.png)
+
+When you're ready to submit your feedback, click the check-mark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click **Strong** __Send__. Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
+
 ## Dev Home
 
 Read about the Developer Tools and Documentation here -
