@@ -690,7 +690,7 @@ Example 4 - Devices listed 'Under Provisioning' refer to devices which are still
 Search by device name can be used without having to click and enter into device details page to get detailed information about each device. 
 
 
-![Device Management](./assets/devicetab/listview1.png)
+![Device Management](./assets/devicetab/devices_list_menu.png)
 
 Each device name is a link that will take the dashboard user to the [details](./console/device-management/-/index.md) of that device.
 
