@@ -228,6 +228,14 @@ With our supervisor plugin, we have enabled you to change timezone of device rem
 
 [Return to View More](../../../console.md)
 
+### Error Messages
+
+Given the diversity of the Android OS, some devices do not include the capabilities needed to execute a particular command from the Console. Error messages will tell at a glance whether a particular feature is supported on the device or not. 
+
+These error messages provide context for each unsupported feature flag so you can more effectively navigate the console avoiding potentially frustrating experience pushing a settings change unsupported on a particular device. 
+
+![Error messages](../../../assets/GettingStarted/unsupported_feature_flags.png)
+
 ## Device Graphs
 
 This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, WiFi, and their usage over time.
