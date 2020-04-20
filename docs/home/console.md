@@ -36,12 +36,12 @@ Wherever you are in the Console, the blue Feedback Widget at the bottom right co
 
 Clicking on the Feedback Widget brings up a screen overlay with the following tools:
 
-* Box tool & Pin comment – Highlight a specific area of the page and comment on that area. The comment can be removed and simply left with the box outline.
-* Blackout – Blackout any sensitive information on the screen.
-* Pen – Draw anything you like! Circle and Point works great with a touch screen and pen.
-* Line – Underline, strikethrough, draw a straight line.
-* Line with arrow – Point to something.
-* Pin comment – Drop a pin and make a comment.
+* Box tool – Highlight a specific area of the page and comment on that area. If you prefer, the comment can be removed and simply left with the box outline.
+* Blackout tool – Blackout any sensitive information on the screen.
+* Pen tool – Draw anything you like! Circle and Point works great with a touch screen and pen.
+* Line tool – Underline, strikethrough, draw a straight line.
+* Line with arrow tool – Point to something.
+* Comment tool – Drop a pin and make a comment.
 
 ![Esper console with feedback capture controls](./assets/GettingStarted/feedback_widget-capture_controls.png)
 
