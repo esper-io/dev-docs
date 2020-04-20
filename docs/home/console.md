@@ -1,4 +1,4 @@
-# Esper console
+# Esper Console
 
 The Esper console is a feature-rich user interface for you to operate and manage your devices. Esper provides a range of super simple options to deploy company‑owned devices at scale.
 
@@ -60,7 +60,7 @@ Read about the Developer Tools and Documentation here -
 - **Esper Plugin For Android Studio** - Use Esper Plugin to easily deploy new versions of your app onto Esper dashboard and to your dedicated devices. This plugin enables you to remotely view/control your devices on Android studio as well.
 - **Esper Docs With Quick Starts** - This is one stop for all documentation regarding API, CLI, SDK, Plugin and Console.
 
-## Provisioning methods
+## Provisioning Methods
 
 Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
 
@@ -135,11 +135,11 @@ If you still have trouble figuring the provisioning process, Esper support will 
 
 ## Device Template
 
-### How to use Esper's Device Template.
+### How to Use Esper's Device Template.
 
 Device Template is a one stop means for you to quickly provision your device. It lets you create a profile for the device where you may choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
 
-### Steps to create a Device Template.
+### Steps to Create a Device Template.
 
 1.  Click on 'Device Template'.
 2.  Click on 'Create Template'.
@@ -152,13 +152,13 @@ Device Template is a one stop means for you to quickly provision your device. It
 
 Click `Next`.
 
-### In the Policy section
+### In the Policy Section
 
 Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices.
 
 Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
 
-### Dropdown menus
+### Dropdown Menus
 
 1.  **Device Password Rules** \
     If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. The Password rule is a policy that specifies the rules for the device unlock password that users can set.
@@ -174,20 +174,20 @@ Below is a list of features you can turn on or off in the policy section. These 
 2.  **Default App Permission** \
     Default app permissions determines enforcement of the runtime-permission rule across all the apps on a device (e.g. Gallery, Camera).
 
-    - **Allow automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user.
+    - **Allow Automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user.
 
-    - **Ask user**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”
+    - **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”
 
-    - **Deny automatically**: This rule will deny any permission request from any app on the device.<br/>
+    - **Deny Automatically**: This rule will deny any permission request from any app on the device.<br/>
 
 3.  **System Updates** \
     The System updates option allows you to enforce a system update policy on the device when a system update/OTA update is available.
 
-    - **Update automatically**: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
+    - **Update Automatically**: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
 
-    - **Postpone installation**: This option postpones installation of an OTA update for 30 days.
+    - **Postpone Installation**: This option postpones installation of an OTA update for 30 days.
 
-    - **Windowed installation**: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
+    - **Windowed Installation**: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
 
      <br/>
 
