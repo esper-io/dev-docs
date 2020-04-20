@@ -1086,6 +1086,7 @@ When you click on any private app, it will open the details of the same. For exa
 
 Clicking on the number of devices on which the app is installed will launch a pop-up window that provides a quick overview of the devices onto which the app has been installed and app version for each installation. NOTE: These are linked to the Device Overviews for the devices on which the app has been installed. 
 
+![App Management](./assets/apps/devices_onto_which_an_app_has_been_installed.png)
 ![App Management](./assets/apps/apps1.png)
 
 Finally, there is an ellipsis (3 dots) under "Actions." Clicking the ellipsis under Action, enables you to to:
