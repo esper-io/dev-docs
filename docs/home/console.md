@@ -715,6 +715,7 @@ Currently, user can only filter by one value of each of above. For example, I ca
 
 ![Device Management](./assets/devicetab/listview2.png)
 
+Custom filters to Device List view are now stored locally via browser caching. Your sort preferences will be applied automatically  when you return to this page unless you update your preferences or clear your cache. 
 
 ### Map View
 
