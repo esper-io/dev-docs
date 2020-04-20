@@ -403,17 +403,18 @@ Cloud will receive the above values and figure out the the security state, reaso
 
 The remote viewer section lets the user remotely view the device and take screenshots of a remote device.
 
-How to remotely view your device
+To remotely view a device:
 
-- Remote viewer is a feature which allows one to observe the device remotely and allow Admin (Dashboard user) to monitor the device live.
+- Click on "Remote viewer."
 
-- The ‘Capture screenshot’ button will capture the current screen of the device. There is a recorded history of all screenshots captured per device under the screenshots section.
-
-- For remote viewing of the device we need to click on the ‘Start session’ icon. Once the user allows the remote view request, a secure connection will get established and device screen will be streamed on the dashboard.
+- Click on the ‘Start session’ button. On devices using Android 9.0 and above, a secure connection will get established and device screen will be streamed on the dashboard. On devices Android 8.1 and earlier, users would see a permission prompt informing them of the remote session. Once the remote view request is allowed, a secure connection will get established and device screen will be streamed on the dashboard.
 
 ![Device Management](../../../assets/OLD_DASHBOARD/4_DM_DevRel26.png)
 
 - The session automatically ends after 15 minutes. You can also stop it by clicking the ‘Stop session’.
+
+- The ‘Capture screenshot’ button will capture the current screen of the device. There is a recorded history of all screenshots captured per device under the screenshots section.
+
 
 ![Device Management](../../../assets/OLD_DASHBOARD/5_DM_DevRel26.png)
 
