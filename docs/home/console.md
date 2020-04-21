@@ -1492,7 +1492,7 @@ This view lists the following details per device -
 
 Here is a preview of a downloaded pdf version of daily report - 
 
-![Reports PDF](./assets/reports/reports5.png)
+![Reports PDF](./assets/reports/daily_report_pdf.png)
 
 This report lists all the information shown above for the chosen date in an easily downloadable format.
 
