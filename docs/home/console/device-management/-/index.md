@@ -268,41 +268,29 @@ However, if a device stays inactive for more than 7 days, you will see an empty 
 
 This sections lists the Apps that are installed on the device along with the App name, App type, Version code, Package Name, App state and Actions. The apps that are already installed in the device are specified in this list including Private, Preloaded (In-ROM) and Google Apps.
 
-![Device Management](../../../assets/deviceapps/deviceapps1.png)
+![Device Management](../../../assets/deviceapps/device_app_installation_1.jpg)
 
 An App can have 3 states - Show, Hide and Disable. This is useful for apps such as IN-ROM apps that sometimes can not be uninstalled but can be disabled. For all installed apps also, there is an option to Show or Hide from the device home screen.
 
-On the left side, you can choose between All apps, or to filter the list to just Enterprise (or privately uploaded) apps, Google apps, or Preloaded (IN-ROM) apps.
+Just above the apps list, you can choose between All apps, or to filter the list to just Enterprise (or privately uploaded) apps, Google apps, or Preloaded (IN-ROM) apps.
 
-Additionally, there is a New App Install button, search bar and filter on top left and top right corners -
+Additionally, at the top right of the screen there is a search bar, a `New App Install` button, search bar and a drop down menu that lets you filter the list by app state
 
-![Device Management](../../../assets/deviceapps/deviceapps10.png)
+![Device Management](../../../assets/deviceapps/device_app_installation_4.png)
 
 The filter lets you view apps with app state in Show/Hide or Disable.
 
-The New App Install button lets you install new apps on the device. A dialog box appears as below -
+The New App Install button lets you install new apps on the device. A dialog box slides in from the left:
 
-![Device Management](../../../assets/deviceapps/deviceapps13.png)
+![Device Management](../../../assets/deviceapps/device_app_installation_2.jpg)
 
 You may select the app from the list of all approved google apps and all uploaded private apps. Then you may select the app version number.
 
 Finally click 'Install'.
 
-![Device Management](../../../assets/deviceapps/deviceapps15.png)
+![Device Management](../../../assets/deviceapps/device_app_installation_3.jpg)
 
-A progress bar is seen with a final message informing of app installation success. If an error occurs, user will be informed of the same. Please do not hesitate to reach out to us at support@esper.io for any issues.
-
-Clicking the information symbol in the upper right hand corner will bring up a sidebar listing recent app activity.
-
-![Device Management](../../../assets/deviceapps/activity_feed_added_to_apps_section.png)
-
-Additionally, there is a search bar available on top left corner of app list that lets us search for apps via its name-
-
-![Device Management](../../../assets/deviceapps/deviceapps11.png)
-
-The app list is paginated as can be viewed at the bottom.
-
-![Device Management](../../../assets/deviceapps/deviceapps12.png)
+A progress bar is seen with a final message informing of app installation success. The app installation screen also includes an estimated total time required for the installation. If an error occurs, user will be informed of the same. Please do not hesitate to reach out to us at support@esper.io for any issues.
 
 **Actions**
 
