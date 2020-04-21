@@ -693,6 +693,14 @@ Search by device name can be used without having to click and enter into device 
 
 Each device name is a link that will take the dashboard user to the [details](./console/device-management/-/index.md) of that device.
 
+To use the **_Actions_** button, check the box next to the device you wish to modify, then click the **_Actions_** button. You will be able to do the following actions via a sidebar pop-up, without having to navigate to other sections of the Console:
+
+*  Ping
+*  Reboot
+*  App install
+*  App uninstall
+*  Apply policy
+
 Clicking on the **_Table Settings_** button (the button with a gear on it in between the **_Actions_** and **_Filter_** buttons) allows you to add and remove columns, control the density of your table, and perform other customization activities to improve the look and function of your Device Lists. The columns you can add or delete from the table include:
 
 *  Online/Offline status
