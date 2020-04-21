@@ -975,7 +975,7 @@ There are 5 tabs under the Group Details -
     To deploy a Google app or a private app to a group, go to Groups > Details for the group you wish to deploy the app on. Go to the Apps tab where you will view this screen.
 
 
-    ![Group Management](./assets/groups/groupsapps1.png)
+    ![Group Management](./assets/groups/group_app_installation.png)
 
     Choose between Install and Uninstall actions in the drop-down select app action. The Select App dropdown then shows a list of all uploaded private APKs and approved Google apps. 
 
