@@ -1450,22 +1450,20 @@ There are two sections to reports -
 
 **Daily Reports** 
 
-These get generated on a daily basis as shown below - 
+Predictably, daily reports are generated on a daily basis. 
 
-![Daily Reports](./assets/reports/report1.png)
+![Daily Reports](./assets/reports/daily_report_1.png)
 
-It generates the following information - 
+Each includes the following information - 
 
 - Date of the report
 - Report type
 - Option to View
 - Option to download in pdf, excel or csv formats
 
-![View Report](./assets/reports/reports4.png)
-
 Clicking on View or Report type will take user to a detailed view of the daily report - 
 
-![Reports](./assets/reports/reports2.png)
+![Daily Reports](./assets/reports/daily_report_2.png)
 
 Here, the following information is shown - 
 - Number of Registered Devices
@@ -1478,17 +1476,19 @@ Additionally, you may see for each group -
 - Number of Inactive devices
 - Newly provisioned devices
 
-on clicking the '>' sign, user can view devices wise details as shown below - 
+Clicking the '>' sign next to one of the groups will give you additional detail about the devices in that group, as shown below: 
 
-![Reports](./assets/reports/reports3.png)
+![Daily Reports](./assets/reports/daily_report_3.png)
 
-Listing the following details per device - 
+This view lists the following details per device - 
 
 - Device name
 - Serial number
 - Status
-- Inactive from last 3 days (yes/no)
-- Last known location
+- Registered on
+- Location as of the report date
+- Whether or not the device has recently changed location
+- Any tags assigned to the device
 
 Here is a preview of a downloaded pdf version of daily report - 
 
