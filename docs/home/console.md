@@ -711,6 +711,8 @@ Select an app from the dropdown menu, then click **_Install_**.
 
 Hovering over the progress bar offers additional detail about the process—in this case app installation.
 
+![Device Management](./assets/devicetab/update_status_bar.png)
+
 Clicking on the **_Table Settings_** button (the button with a gear on it in between the **_Actions_** and **_Filter_** buttons) allows you to add and remove columns, control the density of your table, and perform other customization activities to improve the look and function of your Device Lists. The columns you can add or delete from the table include:
 
 *  Online/Offline status
