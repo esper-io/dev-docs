@@ -276,7 +276,7 @@ Just above the apps list, you can choose between All apps, or to filter the list
 
 Additionally, at the top right of the screen there is a search bar, a `New App Install` button, search bar and a drop down menu that lets you filter the list by app state
 
-![Device Management](../../../assets/deviceapps/device_app_installation_4.png)
+![Device Management](../../../assets/deviceapps/device_app_installation_04.png)
 
 The filter lets you view apps with app state in Show/Hide or Disable.
 
