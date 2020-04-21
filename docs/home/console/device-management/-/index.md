@@ -25,7 +25,7 @@ Additionally, on the top under breadcrumbs, Device name, Group name (that it bel
 
 ### Device Information View
 
-![Device Information View](../../../assets/devicetab/deviceinfo1.png) ![Device Information View](../../../assets/devicetab/deviceinfo2.png) ![Device Information View](../../../assets/OLD_DASHBOARD/deviceinfo3_DevRel26.png) ![Device Information View](../../../assets/OLD_DASHBOARD/deviceinfo4_DevRel26.png) ![Device Information View](../../../assets/OLD_DASHBOARD/deviceinfo5_DevRel26.png)
+![Device Information View](../../../assets/devicetab/deviceinfo1_devrel32.png) ![Device Information View](../../../assets/devicetab/deviceinfo2.png) ![Device Information View](../../../assets/OLD_DASHBOARD/deviceinfo3_DevRel26.png) ![Device Information View](../../../assets/OLD_DASHBOARD/deviceinfo4_DevRel26.png) ![Device Information View](../../../assets/OLD_DASHBOARD/deviceinfo5_DevRel26.png)
 
 ## Device Settings
 
