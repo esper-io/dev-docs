@@ -938,7 +938,9 @@ There are 5 tabs under the Group Details -
 
     ![Group Management](./assets/groups/apply_compliance_policy-to_groups-devrel32.jpg)
 
-    When a Compliance Policy is applied on a group, all active devices will receive the command to comply by the given policy. The live report generated will show the progress bar of application of policy on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
+    When a Compliance Policy is applied on a group, all active devices will receive the command to comply by the given policy. If you check, "Queue requests for offline devices," the system will queue policy updates to be pushed to offline devices if they come back online within 24 hours of executing the push command.
+    
+    The live report generated will show the progress bar of application of policy on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
 
     ![Group Management](./assets/groups/groupspolicy1.png)
 
