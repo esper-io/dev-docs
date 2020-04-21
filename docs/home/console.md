@@ -707,9 +707,9 @@ Clicking on "App install," for example, will launch the "App install" sidebar:
 
 Select an app from the dropdown menu, then click **_Install_**.
 
-![Device Management](./assets/devicetab/actions_sidebar_1.png)
+![Device Management](./assets/devicetab/actions_sidebar_2.png)
 
-
+Hovering over the progress bar offers additional detail about the process—in this case app installation.
 
 Clicking on the **_Table Settings_** button (the button with a gear on it in between the **_Actions_** and **_Filter_** buttons) allows you to add and remove columns, control the density of your table, and perform other customization activities to improve the look and function of your Device Lists. The columns you can add or delete from the table include:
 
