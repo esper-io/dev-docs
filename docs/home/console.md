@@ -1523,7 +1523,7 @@ Esper's User Management can be reached by clicking on the user icon at the top-r
 
 Access to this page is only available to those with _Enterprise Admin_ role, other roles will not see the User management option in the drop down. Clicking on "User Management" brings up the User Management screen.
 
-![Esper User Management](./assets/OLD_DASHBOARD/user_management_screen.png)
+![Esper User Management](./assets/OLD_DASHBOARD/user_management_screen.jpg)
 
 **Adding a New User**
 
@@ -1531,15 +1531,15 @@ To add a new user, click on `New User`. This starts a two-step process:
 
 Step 1:Enter user account information:
 
-![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_1.png)
+![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_1.jpg)
 
 Step 2: Define the user role.
 
-![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_2.png)
+![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_2.jpg)
 
 If you're creating a Group Admin or Group Viewer, assign to the appropriate groups and click `Confirm`.
 
-![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_3.png)
+![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_3.jpg)
 
 - Upon creating a new user, you will get a confirmation pop-up:
 
