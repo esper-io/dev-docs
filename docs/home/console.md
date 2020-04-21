@@ -1529,11 +1529,11 @@ Access to this page is only available to those with _Enterprise Admin_ role, oth
 
 To add a new user, click on `New User`. This starts a two-step process:
 
-Step 1:Enter user account information:
+First, enter user account information and click `Next`.
 
 ![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_1.jpg)
 
-Step 2: Define the user role.
+Then select the user role from the pop-down menu.
 
 ![Esper User Management add new user](./assets/OLD_DASHBOARD/create_new_user_2.jpg)
 
