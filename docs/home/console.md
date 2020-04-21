@@ -936,7 +936,7 @@ There are 5 tabs under the Group Details -
 3. **Compliance Policy** 
     A pre created compliance policy can be chosen from the drop down and applied to all devices in the group in one click. A preview of the chosen policy can be viewed under the drop down as seen below. 
 
-    ![Group Management](./assets/groups/apply_compliance_policy-to_groups.png)
+    ![Group Management](./assets/groups/apply_compliance_policy-to_groups.jpg)
 
     When a Compliance Policy is applied on a group, all active devices will receive the command to comply by the given policy. The live report generated will show the progress bar of application of policy on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
 
