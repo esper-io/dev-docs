@@ -687,14 +687,33 @@ Example 4 - Devices listed 'Under Provisioning' refer to devices which are still
 
  When the number of devices in a fleet crosses over into the 100s it is hard to view or sort them in the device tile view. With the new List View users can easily see a list of all devices available on the dashboard along with device information columns including online/offline status, serial number, group name, Android version, and andy tags. 
 
-Search by device name can be used without having to click and enter into device details page to get detailed information about each device. 
-
+Search by device name can be used without having to click and enter into device details page to get detailed information about each device.
 
 ![Device Management](./assets/devicetab/devices_list_menu.png)
 
 Each device name is a link that will take the dashboard user to the [details](./console/device-management/-/index.md) of that device.
 
-This view gives the capability to filter devices via - 
+Clicking on the **_Table Settings_** button (the button with a gear on it in between the **_Actions_** and **_Filter_** buttons) allows you to add and remove columns, control the density of your table, and perform other customization activities to improve the look and function of your Device Lists. The columns you can add or delete from the table include:
+
+*  Online/Offline status
+*  Device Serial Number
+*  Group Name
+*  Policy Name
+*  GMS/Non-GMS Device
+*  Network Type
+*  Android Version
+*  Registered On date
+*  Risk Status
+*  Battery Percentage
+*  Last Seen
+*  DPC Version
+*  Template Name
+*  Model
+*  WiFI SSD
+*  Location 
+*  Tags
+
+Clicking on the **_Filter_** button view lets you filter devices on the list via: 
 
 1.  Online/Offline
 2.  Group Name
@@ -715,7 +734,9 @@ Currently, user can only filter by one value of each of above. For example, I ca
 
 ![Device Management](./assets/devicetab/listview2.png)
 
-Custom filters to Device List view are now stored locally via browser caching. Your sort preferences will be applied automatically  when you return to this page unless you update your preferences or clear your cache. 
+Custom filters to Device List view are now stored locally via browser caching. Your sort preferences will be applied automatically  when you return to this page unless you update your preferences or clear your cache.
+
+Clicking the **_Download devices list_** button enables you to download device data to an CSV or Excel spreadsheet.
 
 ### Map View
 
