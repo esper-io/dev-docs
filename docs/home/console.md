@@ -1534,6 +1534,12 @@ You can unsubscribe all email addresses by selecting the “Subscribers” check
 
 ![Daily Reports](./assets/reports/email_subscription_added_to_reports_4.jpg)
 
+There are some limitations to the report email subscription service:
+
+- A maximum of 10 subscriptions can be done for each environment.
+- Duplicate email addresses are not allowed.
+- All subscriptions will be subjected to an automated check for invalid email address format and for invalid domains.
+
 
 ## Users
 
