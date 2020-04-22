@@ -1192,10 +1192,7 @@ Esper now supports a customer’s Android app that has multiple icons on the dev
 
 ## Play for Work
 
-Learn about setting up Play for Work apps using Esper.
-
-- Play for Work gives you access to the Enterprise version of Google Play.
-- Here you can either APPROVE or UNAPPROVE applications that can be downloaded onto your dedicated devices. After an app is approved it be visible on Google Play for device installation:
+Play for Work gives you access to the Enterprise version of Google Play. Within Play for Work you can either APPROVE or UNAPPROVE applications that can be downloaded onto your dedicated devices. After an app is approved it be visible on Google Play for device installation:
 
 ![Play For Work](./assets/OLD_DASHBOARD/1_PW.png)
 
@@ -1250,6 +1247,13 @@ You have the option to decide which of the apps are to appear on the device Goog
 Any app added in the collections on this page will show up on the Google Play Store app on the device - 
 
 ![Play For Work](./assets/faq/orgapp2.png)
+
+
+### Signing Up for Play for Work ###
+
+If you have not signed up for Play for Work, you will see the following when you click on Apps > Play Store:
+
+![Play For Work](./assets/OLD_DASHBOARD/play_for_work_enrollment_screen.png)
 
 
 ## Alerts
@@ -1681,11 +1685,9 @@ Learn about Esper's Company Settings.
 
 An important feature that allows you to have some control over your device name prefixes is present in this tab. The last section Company short code allows you enter 3 letter short codes for your company name and location/area for the devices. For example if I set my company short code as ESP-BNG, all my devices will have the prefix and will have names such as ESP-BNG-2345 etc. The ESP here signifies my company name and the BNG is the location.
 
-**Important**: If you will be using apps from Google you will also need to enroll your company's Google Play account:
+**Important**: If you will be using apps from Google you will also need to enroll your company's Google Play account. You can do so by clicking on "Apps" in the main menu on the left side of the screen, then on "Play Store."
 
-![Company Settings](./assets/OLD_DASHBOARD/3_EC.png)
-
-Know how to enroll into Google Play Services [here](./console/company-setting/index.md).
+Learn how to enroll into Google Play Services [here](./console/company-setting/index.md).
 
 ## OS Updates
 
