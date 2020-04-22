@@ -86,9 +86,7 @@ If you find choosing between these methods confusing, for your convenience, we h
    
    Choose the android version of your device from the drop down menu. 
    
-:::tip
-Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0, 6.0 and so on.
-:::
+**TIP:** Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0, 6.0 and so on.
 
    ![Provisioning](./assets/provisioning/provisioning3.png)
 
@@ -131,9 +129,7 @@ The four methods of provisioning have the below pre requisites. Click on each to
     - IMEI/Serial Number method is use for bulk provisioning of devices
     - Enables zero touch provisioning
 
-    :::tip
-    In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process.
-    :::
+    **TIP:** In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process.
 
 
 If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Please contact us on andi@esper.io or support@esper.io.
@@ -242,9 +238,7 @@ Note: If user has not checked this box in the applied policy, it is recommended 
 
 ![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
 
-:::tip
-The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
-:::
+**TIP** The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
 
 
 ### Factory Reset Protection 
@@ -289,9 +283,7 @@ If clicked, this opens up two more checkboxes-<br>
 1.  `Restrict incoming calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br>
 2.  `Restrict outgoing calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br> In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
 
-:::tip
-All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
-:::
+**TIP:** All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
 
 ADB- Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.” If checked in policy, dashboard user may turn on ADB via Settings for a configurable time period.  If unchecked, ADB can not be turned on from Settings. NOTE: We NEVER allow turning on ADB from device end for an Esper provisioned device.
  
@@ -299,9 +291,14 @@ ADB- Google defines ADB as “Android Debug Bridge (adb) is a versatile command-
 ![Android Debug Bridge](./assets/template/adbinpolicy.png)
 
 <br/>
-Compliance Policy Section of the Device Template - 
+Compliance Policy Section of the Device Template: 
 
-![Device Template](./assets/OLD_DASHBOARD/newpolicytemplate.png) <br> <br/> You may reset these values to default at any time by clicking `Reset to Default` button at the bottom. <br> <br/> Click `Next`. <br> <br/>
+![Device Template](./assets/OLD_DASHBOARD/improved_provision_template_ux.jpg)
+
+You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
+
+Click `Next`.
+
 
 ### In the Apps section
 
