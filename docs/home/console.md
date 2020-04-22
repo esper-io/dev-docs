@@ -1013,11 +1013,9 @@ There are 5 tabs under the Group Details -
 
     ![Group Management](./assets/groups/groupsapps4.png)
 
-    It will continue to update the status over a period of 3 minutes after which you can use the refresh function to get the latest installation status from the devices.  
-
+    It will continue to update the status over a period of 3 minutes after which you can use the refresh function to get the latest installation status from the devices. In addition to listing devices that successfully installed an app (Success) or Failed,it shows those In Progress along with the queued commands and the total number of devices.
 
     Groups Uninstall works similarly as above if the App action chosen is 'Uninstall' in the dropdown menu.
-
 
     History of Groups App commands - 
     The history sections shows the history of the group commands for installation and uninstallation of apps fired on the group. 
