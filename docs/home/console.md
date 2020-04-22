@@ -284,7 +284,7 @@ In this section, you can select 'Kiosk mode' to pin an app during startup or 'Mu
 
 Your first step is to choose whether you want to provision their device in kiosk or multi app mode by clicking on the radio button.
 
-![Device Template](./assets/OLD_DASHBOARD/devicemode.png)
+![Device Template](./assets/OLD_DASHBOARD/click_advanced_settings.png)
 
 1.  **Kiosk mode** - This mode pins the selected private app as the default app that stays pinned on the device screen permanently unless user exits the kiosk mode. This mode is useful for cases where device is single purpose and only app needs to run on it and admin does not wish device users to be able to interact with the device in any other manner. For example airport kiosks.
 
