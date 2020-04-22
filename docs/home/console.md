@@ -282,15 +282,21 @@ Compliance Policy Section of the Device Template -
 
 In this section, you can select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give device-users access to the Home screen. You can choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
-
-As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
-
+Your first step is to choose whether you want to provision their device in kiosk or multi app mode by clicking on the radio button.
 
 ![Device Template](./assets/OLD_DASHBOARD/devicemode.png)
 
 1.  **Kiosk mode** - This mode pins the selected private app as the default app that stays pinned on the device screen permanently unless user exits the kiosk mode. This mode is useful for cases where device is single purpose and only app needs to run on it and admin does not wish device users to be able to interact with the device in any other manner. For example airport kiosks.
 
 2.  **Multi-app mode** - In multi app mode, user is free to use any private app, google play app or preloaded (in-ROM) app which are approved and installed by the admin. It is closely similar to BYOD but admin retains the control of the apps that are usable by the device user. For example a grocery delivery company wants their delivery person using the device to be able to use company app as well as the google maps.
+
+Clicking on the `Advanced Settings` button will launch a dialog box in which you can select either the Esper DPC Launcher or the default Android launcher.
+
+![Device Template](./assets/OLD_DASHBOARD/managed_google_play-devrel27.jpg)
+
+There is also a checkbox that allows you to include or bypass Google Play setup during provisioning. If this is unchecked, Google Play apps will not be updated—reducing provisioning time dramatically. If the endpoint is enrolled into a Managed Google Play account, the default value for this is checked on; if the endpoint is not enrolled then the default is off.
+
+Once you have made your selection, click on "Close."
 
 ### Default Android Launcher 
 
