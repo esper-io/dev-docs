@@ -304,32 +304,34 @@ Click `Next`.
 
 In this section, you can select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give device-users access to the Home screen. You can choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
+Your first step is to choose whether you want to provision their device in kiosk or multi app mode by clicking on the radio button.
 
-As seen in image below, the first step is for user to choose whether they want to provision their device in kiosk or multi app mode by clicking on the radio button.
-
-
-![Device Template](./assets/OLD_DASHBOARD/devicemode.png)
+![Device Template](./assets/OLD_DASHBOARD/click_advanced_settings.png)
 
 1.  **Kiosk mode** - This mode pins the selected private app as the default app that stays pinned on the device screen permanently unless user exits the kiosk mode. This mode is useful for cases where device is single purpose and only app needs to run on it and admin does not wish device users to be able to interact with the device in any other manner. For example airport kiosks.
 
 2.  **Multi-app mode** - In multi app mode, user is free to use any private app, google play app or preloaded (in-ROM) app which are approved and installed by the admin. It is closely similar to BYOD but admin retains the control of the apps that are usable by the device user. For example a grocery delivery company wants their delivery person using the device to be able to use company app as well as the google maps.
 
-### Default Android Launcher 
+### Advanced Settings ###
 
-The next section is a simple checkbox labeled "Default Android Launcher" - 
-This feature gives user an option to choose Esper Agent to run in the background as an app instead of being permanently pinned on the screen. 
+Clicking on the `Advanced Settings` button will launch a dialog box in which you can select either the Esper DPC Launcher or the default Android launcher.
 
-![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc.png)
+![Device Template](./assets/OLD_DASHBOARD/managed_google_play-devrel27.jpg)
 
-When this box is **checked**, the default android launcher will be active and user can exit Esper Agent (DPC) like any other android app. Esper Agent (DPC) will continue to run in the background and execute device management functionality. Many of Esper features will not be applicable if this version of Esper Agent (DPC) is installed.
+There is also a checkbox that allows you to include or bypass Google Play setup during provisioning. If this is unchecked, Google Play apps will not be updated—reducing provisioning time dramatically. If the endpoint is enrolled into a Managed Google Play account, the default value for this is checked on; if the endpoint is not enrolled then the default is off.
 
-If the Default Android launcher is **unchecked**, Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case. This use case gives more control to the Dashboard admin on the apps that a device user may use and actions that can be taken on the device. 
-<br>
+Once you have made your selection, click on "Close."
 
-Here is a list of Esper features that will be **unavailable in the default android launcher (also known as launcherless mode)**  as it applies the launcherless version of the Esper Device agent -
+If "Esper DPC Launcher" is **checked**, the Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case. This use case gives more control to the Dashboard admin on the apps that a device user may use and actions that can be taken on the device.
 
-• Capture Screenshot <br> • Remote View and Remote Control<br>  • Over the Air OS updates for Esper Enhanced Android OS<br> • Latest Device Agent updates for Devices with Android version less than 6.0
+If "Default Android Launcher" is **checked**, the default android launcher will be active and user can exit Esper Agent (DPC) like any other android app. Esper Agent (DPC) will continue to run in the background and execute device management functionality. Many of Esper features will not be applicable if this version of Esper Agent (DPC) is installed.
 
+If the Default Andriod Launcher is selected, the following Esper features that will be unavailable:
+
+- Capture Screenshot
+- Remote View and Remote Control
+- Over the Air OS updates for Esper Enhanced Android OS
+- Latest Device Agent updates for Devices with Android version less than 6.0
 
 The device screen will look similar to a regular android device with `Esper Device Agent` showing up as an app that can be opened and closed.
 
