@@ -777,7 +777,7 @@ More details (current status) of each command can be accessed by clicking ‘Vie
 
 The details and activity of any single device can be known by selecting a device and clicking the **_Device details_** icon. The Activity tab will show all activities done on that device.
 
-![Device Management](./assets/devicetabdevice_list_improvements-history-individual_device-devrel27.png)
+![Device Management](./assets/devicetab/device_list_improvements-history-individual_device-devrel27.png)
 
 
 ### Map View
