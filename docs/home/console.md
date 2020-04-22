@@ -769,15 +769,15 @@ Clicking the **_Download devices list_** button enables you to download device d
 
 Clicking the **_Device details_** icon brings in a dialog box from the right side of the screen listing the history of all commands fired by any user.
 
-![Device Management](./assets/devicetab/device_list_improvements-history-devrel27.png)
+![Device Management](./assets/devicetab/history-devrel27.png)
 
 More details (current status) of each command can be accessed by clicking ‘View Details’. The pop-up box will then provide details of each command—including the devices that are currently in an In progress, Success, Queued or Failed state.
 
-![Device Management](./assets/devicetab/device_list_improvements-history-closeup-devrel27.png)
+![Device Management](./assets/devicetab/history-closeup-devrel27.png)
 
 The details and activity of any single device can be known by selecting a device and clicking the **_Device details_** icon. The Activity tab will show all activities done on that device.
 
-![Device Management](./assets/devicetab/device_list_improvements-history-individual_device-devrel27.png)
+![Device Management](./assets/devicetab/history-individual_device-devrel27.png)
 
 
 ### Map View
