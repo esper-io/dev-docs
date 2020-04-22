@@ -318,10 +318,6 @@ Clicking on the `Advanced Settings` button will launch a dialog box in which you
 
 ![Device Template](./assets/OLD_DASHBOARD/managed_google_play-devrel27.jpg)
 
-There is also a checkbox that allows you to include or bypass Google Play setup during provisioning. If this is unchecked, Google Play apps will not be updated—reducing provisioning time dramatically. If the endpoint is enrolled into a Managed Google Play account, the default value for this is checked on; if the endpoint is not enrolled then the default is off.
-
-Once you have made your selection, click on "Close."
-
 If "Esper DPC Launcher" is **checked**, the Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case. This use case gives more control to the Dashboard admin on the apps that a device user may use and actions that can be taken on the device.
 
 If "Default Android Launcher" is **checked**, the default android launcher will be active and user can exit Esper Agent (DPC) like any other android app. Esper Agent (DPC) will continue to run in the background and execute device management functionality. Many of Esper features will not be applicable if this version of Esper Agent (DPC) is installed.
@@ -340,6 +336,10 @@ The device screen will look similar to a regular android device with `Esper Devi
 Even when user has exited the `Esper Device Agent` they will be able to see it running in the background in the notification bar as follows -
 
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
+
+There is also a checkbox that allows you to include or bypass Google Play setup during provisioning. If this is unchecked, Google Play apps will not be updated—reducing provisioning time dramatically. If the endpoint is enrolled into a Managed Google Play account, the default value for this is checked on; if the endpoint is not enrolled then the default is off.
+
+Once you have made your selection, click on "Close."
 
 
 - **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
