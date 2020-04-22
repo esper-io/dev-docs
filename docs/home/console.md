@@ -1253,7 +1253,9 @@ Any app added in the collections on this page will show up on the Google Play St
 
 If you have not signed up for Play for Work, you will see the following when you click on Apps > Play Store:
 
-![Play For Work](./assets/OLD_DASHBOARD/play_for_work_enrollment_screen.png)
+![Play For Work](./assets/OLD_DASHBOARD/play_for_work_enrollment_screen.jpg)
+
+To sign up for Play for Work, click on "Enroll from Google Play website" at the bottom of the Window. Learn how to enroll into Google Play Services [here](./console/company-setting/index.md).
 
 
 ## Alerts
@@ -1697,9 +1699,8 @@ You can update the Esper Enhanced Android version using our OTA functionality. C
 
 ![OS Updates](./assets/OLD_DASHBOARD/OS.png)
 
-:::tip
-Please note that currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment.
-:::
+**NOTE:** Currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment.
+
 
 ## Developer Options
 
