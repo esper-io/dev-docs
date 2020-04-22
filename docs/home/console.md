@@ -612,7 +612,7 @@ Devices which have been enrolled on to your Esper Cloud or are undergoing provis
 
 For example - 
 
-![Device Management](./assets/devicetile/devicetile1.png)
+![Device Management](./assets/devicetab/device_tiles.png)
 
 This is a typical device tile that shows the device system generated name, device model, last seen time and location, online/offline status, gms/non-gms status, security status (secure), network connection and an option to see further details.
 
