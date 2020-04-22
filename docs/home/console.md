@@ -700,6 +700,14 @@ To use the **_Actions_** button, check the box next to the device you wish to mo
 *  App uninstall
 *  Apply policy
 
+Clicking on "Ping" will attempt to ping the selected devices.
+
+![Device Management](./assets/devicetab/device_list_improvements-ping-devrel27.png)
+
+Clicking on "Reboot" will reboot the selected devices. Rebooting can be done to online devices, and to offline devices, once they come back online.
+
+![Device Management](./assets/devicetab/device_list_improvements-reboot-devrel27.png)
+
 Clicking on "App install," for example, will launch the "App install" sidebar:
 
 ![Device Management](./assets/devicetab/actions_sidebar_1.png)
@@ -758,6 +766,19 @@ Currently, user can only filter by one value of each of above. For example, I ca
 Custom filters to Device List view are now stored locally via browser caching. Your sort preferences will be applied automatically  when you return to this page unless you update your preferences or clear your cache.
 
 Clicking the **_Download devices list_** button enables you to download device data to an CSV or Excel spreadsheet.
+
+Clicking the **_Device details_** icon brings in a dialog box from the right side of the screen listing the history of all commands fired by any user.
+
+![Device Management](./assets/devicetab/device_list_improvements-history-devrel27.png)
+
+More details (current status) of each command can be accessed by clicking ‘View Details’. The pop-up box will then provide details of each command—including the devices that are currently in an In progress, Success, Queued or Failed state.
+
+![Device Management](./assets/devicetab/device_list_improvements-history-closeup-devrel27.png)
+
+The details and activity of any single device can be known by selecting a device and clicking the **_Device details_** icon. The Activity tab will show all activities done on that device.
+
+![Device Management](./assets/devicetabdevice_list_improvements-history-individual_device-devrel27.png)
+
 
 ### Map View
 
