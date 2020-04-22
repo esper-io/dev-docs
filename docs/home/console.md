@@ -604,7 +604,7 @@ Under the Grid view each device will be represented as tiles in the ‘Device ma
 
 Under the Grid view each device will be represented as tiles in the ‘Device management’ tab with a summary of all device information such as location, network, health, and risk status of the device. Click on [Details](./console/device-management/-/index.md) on the tile for any individual device to see further actions and changes that can be made for this device:
 
-![Device Management](./assets/devicetab/gridview1.png)
+![Device Management](./assets/devicetab/device_tiles.png)
 
 #### Device Tiles
 
