@@ -327,3 +327,24 @@ Steps to take
 12. Go to Device->Compliance policy and switch it back to the old policy with notification bar off.
 13. Go to Device->Actions and click on Pin app to go back to kiosk mode.
 
+
+## Troubleshooting: The device I'm trying to reach is online but all my commands are timing out ##
+
+Dedicated devices are often behind corporate firewalls. This can prevent Esper's backend from communicating with them (or vice-versa). If you can see that a device is online but your commands are timing out, check to see that the following URLs have been white-listed:
+
+- *.s3.amazonaws.com
+- clients3.google.com
+- google.com
+- mqtt.shoonyacloud.com:1883
+- *.shoonyacloud.com
+- *.esper.cloud
+- 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
+
+
+Then check to see that Esper has access to the following ports:
+
+- 5228
+- 5229
+- 5230
+
+If all have been whitelisted, try rebooting the device.
