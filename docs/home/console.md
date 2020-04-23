@@ -1575,6 +1575,13 @@ Access to this page is only available to those with _Enterprise Admin_ role, oth
 
 ![Esper User Management](./assets/OLD_DASHBOARD/user_management_screen.jpg)
 
+There are four main roles for Esper console users: Enterprise Administrator, Enterprise Viewer, Group Administrator, and Group viewer. Each role has different permissions, ranging from an Enterprise Administrator, whose able to view or change anything, down to a Group Viewer, who can view those things having to do with those groups to which the Group Viewer is assigned.
+
+The privileges and permissions for each role are as follows:
+
+![Esper User Management](./assets/OLD_DASHBOARD/user_role_chart.png)
+
+
 **Adding a New User**
 
 To add a new user, click on `New User`. This starts a two-step process:
