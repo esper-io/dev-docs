@@ -702,11 +702,11 @@ To use the **_Actions_** button, check the box next to the device you wish to mo
 
 Clicking on "Ping" will attempt to ping the selected devices.
 
-![Device Management](./assets/devicetab/device_list_improvements-ping-devrel27.png)
+![Device Management](./assets/devicetab/device_list_improvements-ping-devrel27.jpg)
 
 Clicking on "Reboot" will reboot the selected devices. Rebooting can be done to online devices, and to offline devices, once they come back online.
 
-![Device Management](./assets/devicetab/device_list_improvements-reboot-devrel27.png)
+![Device Management](./assets/devicetab/device_list_improvements-reboot-devrel27.jpg)
 
 Clicking on "App install," for example, will launch the "App install" sidebar:
 
