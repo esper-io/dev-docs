@@ -684,7 +684,7 @@ Example 4 - Devices listed 'Under Provisioning' refer to devices which are still
 
 ### List View
 
- When the number of devices in a fleet crosses over into the 100s it is hard to view or sort them in the device tile view. With the new List View users can easily see a list of all devices available on the dashboard along with device information columns including online/offline status, serial number, group name, Android version, and andy tags. 
+ When the number of devices in a fleet crosses over into the 100s it is hard to view or sort them in the device tile view. List View enabeles you to see a list of all devices available on the dashboard along with device information columns including online/offline status, serial number, group name, Android version, and andy tags. 
 
 Search by device name can be used without having to click and enter into device details page to get detailed information about each device.
 
@@ -700,13 +700,29 @@ To use the **_Actions_** button, check the box next to the device you wish to mo
 *  App uninstall
 *  Apply policy
 
-Clicking on "Ping" will attempt to ping the selected devices.
+Clicking "Ping," will bring in a pane from the right side of the screen enabling you to ping the selected devices.
 
-![Device Management](./assets/devicetab/device_list_improvements-ping-devrel27.jpg)
+![Device Management](./assets/devicetab/ping_submenu_1.png)
 
-Clicking on "Reboot" will reboot the selected devices. Rebooting can be done to online devices, and to offline devices, once they come back online.
+Click **_Ping_** will ping the selected devices; a new pane will slide in from the right showing progress.
 
-![Device Management](./assets/devicetab/device_list_improvements-reboot-devrel27.jpg)
+![Device Management](./assets/devicetab/ping_submenu_2.png)
+
+You can click "View Details" for additional detail.
+
+![Device Management](./assets/devicetab/ping_submenu_3.png)
+
+Clicking on "Reboot" will bring in a pane from the right side of the screen enabling you to reboot the selected devices.. Rebooting can be done to online devices, and to offline devices, once they come back online.
+
+![Device Management](./assets/devicetab/reboot_submenu_1.png)
+
+Click **_Reboot_** will reboot the selected devices; a new pane will slide in from the right showing progress.
+
+![Device Management](./assets/devicetab/reboot_submenu_2.png)
+
+You can click "View Details" for additional detail.
+
+![Device Management](./assets/devicetab/reboot_submenu_3.png)
 
 Clicking on "App install," for example, will launch the "App install" sidebar:
 
