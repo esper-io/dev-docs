@@ -1078,17 +1078,17 @@ This section is only relevant for fleet of Esper Enhanced Android devices.
 
 Here you can see a list of the Esper Enhanced Android updates that have been deployed on the current group with details such as build number, device type, number of devices, and date deployed along with an option to view results.
 
-![Group Management](./assets/groups/groupsos1.png)
+![Group Management](./assets/groups/group_appupdates.png)
 
 By clicking on the **`Deploy OS Updates`** button you may choose any available Build number by then clicking on **`Select Build`**.
 
-![Group Management](./assets/groups/groupsos2.png)
+![Group Management](./assets/groups/group_createnewinstall.png)
 
 :::tip
 Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment
 :::
 
-![Group Management](./assets/groups/groupsos3.png)
+![Group Management](./assets/groups/group_selectbuild.png)
 
 The **`Number of devices`** will populate with the devices in the group on which this update is applicable; this pertains to those that have an OS build version lower than the selected version for the deployment:
 
