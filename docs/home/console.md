@@ -746,7 +746,7 @@ To add or remove columns from this list, click the down arrow.
 
 ![Device Management](./assets/devicetab/list_filter.png)
 
-The select any columns you wish to add; unselect any you wish to remove.
+The select any columns you wish to add; unselect any you wish to remove and click **_Apply_**.
 
 Clicking on the **_Filter_** button view lets you filter devices on the list via: 
 
