@@ -1626,7 +1626,7 @@ To look at an existing geofence, click on its name in the list. This will bring 
 
 To view the devices on the fence—that is, the devices subject to that geofence—click **_Devices on fence_**.
 
-![Esper Geofence Creation](./assets/OLD_DASHBOARD/geofence_tileview.png)
+![Esper Geofence Creation](./assets/OLD_DASHBOARD/geofence_devicesonfence.png)
 
 ### Setting Up a Geofence
 
