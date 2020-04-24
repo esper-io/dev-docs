@@ -813,7 +813,7 @@ Enter a unique name and click Create.
 
 Once you create a Group, you have the option to add devices from the **Default** group. To move devices, users can:
 
-- Click the checkboxe to the left of the device that needs to be moved.  
+- Click the checkbox to the left of the device that needs to be moved.  
 - Select all devices by clicking on the top checkbox. 
 - Search for a particular device by enter device code via Search box. 
 - Sort the device list by "last updated." 
