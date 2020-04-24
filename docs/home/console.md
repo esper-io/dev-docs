@@ -797,9 +797,11 @@ Device name and group names are actionable links in the device tiles that show u
 
 ## Groups
 
-Using Groups devices can be sectioned into groups and mass actions can be performed on a group of devices. Users can perform mass reboot, lock, check heartbeat, apply a compliance policy, install/uninstall apps and OS updates on thousands of devices in one click using Group features. 
+Using Groups devices can be sectioned into groups and mass actions can be performed on a group of devices. Users can perform mass reboot, lock, check heartbeat, apply a compliance policy, install/uninstall apps and OS updates on thousands of devices in one click using Group features.
 
-There is a pre-existing group called "All Devices", which is the default group where devices fall unless otherwise specified during provisioning via template.
+![Group Management](./assets/groups/groups_page.png)
+
+There is a "Default" group where devices fall unless otherwise specified during provisioning via template.
 
 ### Creating a Group
 
