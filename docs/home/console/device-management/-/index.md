@@ -242,23 +242,22 @@ This section represents the graphical representation of the various attributes o
 
 With the new Telemetry Cloud infrastructure in place, Esper Device metrics have now increased to 15 metrics that can be accessed via Device graphs:
 
-1. Battery Current
-2. Wifi Signal Strength
-3. Available Internal Storage
-4. Wifi Link Speed
-5. Data Usage (Download)
-6. Data Usage (Upload)
-7. Battery Capacity Total
-8. OS Occupied Storage
-9. Battery Current Average
-10. Battery Capacity Count
-11. Available RAM
-12. Battery Level
-13. Battery Voltage
-14. Wifi Frequency
-15. Battery Temperature
+1. WiFi Frequency
+2. Battery Voltage
+3. Battery Capacity Count
+4. Battery Level
+5. Battery Capacity Total
+6. Battery Current Average
+7. Wifi Link Speed
+8. Battery Current
+9. Available Internal Storage
+10. Data Usage
+11. Battery Temperature
+12. Available RAM
+13. Wifi Signal Strength
+14. OS Occupied Storage
 
-![Device Management](../../../assets/OLD_DASHBOARD/7_DM.png)
+![Device Management](../../../assets/OLD_DASHBOARD/device_graphs.png)
 
 However, if a device stays inactive for more than 7 days, you will see an empty state requesting to activate the device:
 
