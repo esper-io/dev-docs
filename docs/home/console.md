@@ -746,6 +746,8 @@ To add or remove columns from this list, click the down arrow.
 
 ![Device Management](./assets/devicetab/list_filter.png)
 
+The select any columns you wish to add; unselect any you wish to remove.
+
 Clicking on the **_Filter_** button view lets you filter devices on the list via: 
 
 1.  Online/Offline
