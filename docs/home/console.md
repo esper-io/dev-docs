@@ -738,25 +738,13 @@ Hovering over the progress bar offers additional detail about the process—in t
 
 Hovering over the progress bar will provide additional detail about the process on any command status progress menu.
 
-Clicking on the **_Table Settings_** button (the button with a gear on it in between the **_Actions_** and **_Filter_** buttons) allows you to add and remove columns, control the density of your table, and perform other customization activities to improve the look and function of your Device Lists. The columns you can add or delete from the table include:
+Clicking on the **_Table Settings_** button (the button with a gear on it in between the **_Actions_** and **_Filter_** buttons) will bring in a slide-in pane that allows you to add and remove columns, control the density of your table, and perform other customization activities to improve the look and function of your Device Lists.
 
-*  Online/Offline status
-*  Device Serial Number
-*  Group Name
-*  Policy Name
-*  GMS/Non-GMS Device
-*  Network Type
-*  Android Version
-*  Registered On date
-*  Risk Status
-*  Battery Percentage
-*  Last Seen
-*  DPC Version
-*  Template Name
-*  Model
-*  WiFI SSD
-*  Location 
-*  Tags
+![Device Management](./assets/devicetab/table_settings.png)
+
+To add or remove columns from this list, click the down arrow.
+
+![Device Management](./assets/devicetab/list_filter.png)
 
 Clicking on the **_Filter_** button view lets you filter devices on the list via: 
 
