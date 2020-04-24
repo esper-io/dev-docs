@@ -702,27 +702,27 @@ To use the **_Actions_** button, check the box next to the device you wish to mo
 
 Clicking "Ping," will bring in a pane from the right side of the screen enabling you to ping the selected devices.
 
-![Device Management](./assets/devicetab/ping_submenu_1.png)
+![Device Management](./assets/devicetab/ping_submenu_1a.png)
 
 Click **_Ping_** will ping the selected devices; a new pane will slide in from the right showing progress.
 
-![Device Management](./assets/devicetab/ping_submenu_2.png)
+![Device Management](./assets/devicetab/ping_submenu_2a.png)
 
 You can click "View Details" for additional detail.
 
-![Device Management](./assets/devicetab/ping_submenu_3.png)
+![Device Management](./assets/devicetab/ping_submenu_3a.png)
 
 Clicking on "Reboot" will bring in a pane from the right side of the screen enabling you to reboot the selected devices.. Rebooting can be done to online devices, and to offline devices, once they come back online.
 
-![Device Management](./assets/devicetab/reboot_submenu_1.png)
+![Device Management](./assets/devicetab/reboot_submenu_1a.png)
 
 Click **_Reboot_** will reboot the selected devices; a new pane will slide in from the right showing progress.
 
-![Device Management](./assets/devicetab/reboot_submenu_2.png)
+![Device Management](./assets/devicetab/reboot_submenu_2a.png)
 
 You can click "View Details" for additional detail.
 
-![Device Management](./assets/devicetab/reboot_submenu_3.png)
+![Device Management](./assets/devicetab/reboot_submenu_3a.png)
 
 Clicking on "App install," for example, will launch the "App install" sidebar:
 
@@ -740,7 +740,7 @@ Hovering over the progress bar will provide additional detail about the process 
 
 Clicking on the **_Table Settings_** button (the button with a gear on it in between the **_Actions_** and **_Filter_** buttons) will bring in a slide-in pane that allows you to add and remove columns, control the density of your table, and perform other customization activities to improve the look and function of your Device Lists.
 
-![Device Management](./assets/devicetab/table_settings.png)
+![Device Management](./assets/devicetab/table_settingsa.png)
 
 To add or remove columns from this list, click the down arrow.
 
