@@ -238,7 +238,7 @@ These error messages provide context for each unsupported feature flag so you ca
 
 ## Device Graphs
 
-This section provides a graphic representation of various attributes of a specific device. Fifteen metrics can be accessed here:
+This section provides a graphic representation of various attributes of a specific device. Fourteen metrics can be accessed here:
 
 1. Wifi Frequency
 2. Battery Voltage
