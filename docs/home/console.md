@@ -1616,19 +1616,19 @@ In order for geofencing to work, the mobile device needs internet connectivity a
 
 Setting up a geofence for a device is easy - it starts by selecting Geofence in Esper Console left navigation pane - this brings you up to a wizard for quickly defining the geofence. Click on `New Geofence`:
 
-![Esper Geofence Creation](./assets/OLD_DASHBOARD/geo4.png)
+![Esper Geofence Creation](./assets/OLD_DASHBOARD/geofence_homepage.png)
 
 In the first screen you define the size of your geofence (meaning where you expect any devices to be for this geofence) - it is a circle that can be as small as 100m radius up to 10km. Note that GPS can drift and jump, thus a geofence smaller than 100m can cause false positives. To set it up at a location simply type the address for the center of the circle, or drag it in the map view to set it up. Give it a name and description, and then click `Next`:
 
-![Esper Name Geofence](./assets/OLD_DASHBOARD/geo3.png)
+![Esper Name Geofence](./assets/OLD_DASHBOARD/geofence_create.png)
 
 Now you assign devices to this geofence - you can do as many as you need that fit the criteria for the geofence. In this case we are just doing one:
 
-![Esper Assign devices](./assets/OLD_DASHBOARD/geo1.png)
+![Esper Assign devices](./assets/OLD_DASHBOARD/geofence_selectdevices.png)
 
 Now you define the action to be taken when any of the assigned devices leave the geofence - you can either lock them, have them beep, or both. In this case I went with beep!
 
-![Esper Select Actions Geofence](./assets/OLD_DASHBOARD/geo2.png)
+![Esper Select Actions Geofence](./assets/OLD_DASHBOARD/geofence_setactions.png)
 
 If you chose to Lockdown the device, you will see the following screen if the device is taken outside the geofence boundary -
 
