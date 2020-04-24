@@ -811,12 +811,12 @@ Enter a unique name and click Create.
 
 ![Group Management](./assets/groups/creategroup1.png)
 
-Once you create a Group, you have the option to add devices from the  default **All devices** group. To move devices, users can -
+Once you create a Group, you have the option to add devices from the **Default** group. To move devices, users can:
 
-- click on the checkboxes on the left of the device that needs to be moved.  
-- select all devices by clicking on the top checkbox. 
-- search for a particular device by enter device code via Search box. 
-- sort the device list by 'last updated'. 
+- Click the checkboxe to the left of the device that needs to be moved.  
+- Select all devices by clicking on the top checkbox. 
+- Search for a particular device by enter device code via Search box. 
+- Sort the device list by "last updated." 
 
 ![Group Management](./assets/groups/creategroup3.png)
 
