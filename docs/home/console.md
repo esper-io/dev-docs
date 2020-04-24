@@ -141,6 +141,19 @@ If you still have trouble figuring the provisioning process, Esper support will 
 
 Provisioning Templates offer a simple means for you to quickly provision your device. It enables you to create a profile for the device where you may choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
 
+![Device Template](./assets/template/provisioning_templates.png)
+
+Clicking on the elipses are the top right of one of the template tiles opens a pop-up menu that enables you to do the following to that template:
+
+- Preview
+- Edit
+- Duplicate
+- Upload IMEI CSV
+- Download Config
+- Delete
+
+![Device Template](./assets/template/provisioning_templates_threedots.png)
+
 ### Steps to Create a Provisioning Template.
 
 1.  Click `Provisioning Templates`.
