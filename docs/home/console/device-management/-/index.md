@@ -238,11 +238,9 @@ These error messages provide context for each unsupported feature flag so you ca
 
 ## Device Graphs
 
-This section represents the graphical representation of the various attributes of a particular device whose ID is displayed at the top. The values that can be monitored includes information related to battery, memory, WiFi, and their usage over time.
+This section provides a graphic representation of various attributes of a specific device. Fifteen metrics can be accessed here:
 
-With the new Telemetry Cloud infrastructure in place, Esper Device metrics have now increased to 15 metrics that can be accessed via Device graphs:
-
-1. WiFi Frequency
+1. Wifi Frequency
 2. Battery Voltage
 3. Battery Capacity Count
 4. Battery Level
