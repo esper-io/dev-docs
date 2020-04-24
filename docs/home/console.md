@@ -135,19 +135,19 @@ The four methods of provisioning have the below pre requisites. Click on each to
 If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Please contact us on andi@esper.io or support@esper.io.
 
 
-## Device Template
+## Provisioning Templates
 
-### How to Use Esper's Device Template.
+### How to Use Esper's Provisioning Templates.
 
-Device Template is a one stop means for you to quickly provision your device. It lets you create a profile for the device where you may choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
+Provisioning Templates offer a simple means for you to quickly provision your device. It enables you to create a profile for the device where you may choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
 
-### Steps to Create a Device Template.
+### Steps to Create a Provisioning Template.
 
-1.  Click on 'Device Template'.
-2.  Click on 'Create Template'.
+1.  Click `Provisioning Templates`.
+2.  Click `Create Template`.
 3.  Enter a name for the Device Template. You also have an option to enter a description for the template. 
 
-     Dashboard users and admins create templates in a context, for example creating a template to define the device behavior for a set of devices deployed in Burbank warehouse. The description box enables the context to be associated and saved with the Templates.
+     Dashboard users and admins create templates in a context, for example creating a template to define the device behavior for a set of devices deployed in a specific warehouse. The description box enables you to explain the context for the template.
 
 
 ![Device Template](./assets/template/templatedesc1.png)
