@@ -1628,6 +1628,10 @@ To view the devices on the fence—that is, the devices subject to that geofence
 
 ![Esper Geofence Creation](./assets/OLD_DASHBOARD/geofence_devicesonfence.png)
 
+To unassign devices from the Geofence, click the elipses (...) next to that device's entry on the list and click on "Unassign" from the pop-up box. Devices that haven't been successfully assigned to the group can be assigned using the same method.
+
+![Esper Geofence Creation](./assets/OLD_DASHBOARD/geofence_devicesonfence_apply.png)
+
 ### Setting Up a Geofence
 
 Setting up a geofence for a device is easy - it starts by selecting Geofence in Esper Console left navigation pane - this brings you up to a wizard for quickly defining the geofence. Click on `New Geofence`:
