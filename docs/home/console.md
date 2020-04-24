@@ -748,26 +748,12 @@ To add or remove columns from this list, click the down arrow.
 
 The select any columns you wish to add; unselect any you wish to remove and click **_Apply_**.
 
-Clicking on the **_Filter_** button view lets you filter devices on the list via: 
-
-1.  Online/Offline
-2.  Group Name
-3.  Policy Name
-4.  GMS/Non GMS
-5.  Network Type
-6.  Android Version
-7.  Registered Date
-8.  Security Status
-9.  Battery Percentage
-10. Last Seen
-11. Templates
-
 By default, the list is sorted in descending order of device registration date unless a new option is selected from the menu.
 In the filters, a search capability has been provided to select values.
 
 Currently, user can only filter by one value of each of above. For example, I can choose Group A, Policy B and Active which will give me a filtered list of devices in Group A which are active and have policy B applied on them.
 
-![Device Management](./assets/devicetab/listview2.png)
+![Device Management](./assets/devicetab/filter_by.png)
 
 Custom filters to Device List view are now stored locally via browser caching. Your sort preferences will be applied automatically  when you return to this page unless you update your preferences or clear your cache.
 
