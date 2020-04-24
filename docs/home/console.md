@@ -139,7 +139,7 @@ If you still have trouble figuring the provisioning process, Esper support will 
 
 ### How to Use Esper's Provisioning Templates.
 
-Provisioning Templates offer a simple means for you to quickly provision your device. It enables you to create a profile for the device where you may choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
+Provisioning templates offer a simple means for you to quickly provision devices. To do so, you create create a profile for the device in which you choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
 
 ![Device Template](./assets/template/provisioning_templates.png)
 
@@ -154,7 +154,7 @@ Clicking on the elipses are the top right of one of the template tiles opens a p
 
 ![Device Template](./assets/template/provisioning_templates_threedots.png)
 
-### Steps to Create a Provisioning Template.
+### Creating a Provisioning Template
 
 1.  Click `Provisioning Templates`.
 2.  Click `Create Template`.
