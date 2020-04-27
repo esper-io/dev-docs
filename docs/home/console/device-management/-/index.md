@@ -445,8 +445,6 @@ Note that Remote Control is only enabled on devices where Esper’s locally inst
 
 This feature enables you to capture a bug report from the device. To do so, click on *Capture Logs* then click on `Start`. As the report is gathered, the status will change from *Requesting Report* to *Permission Granted* to *Download*. The *Download* status is actually a live link; clicking *Download* will download the bug report with date and time stamp from the device to help your technical staff debug any issues.
 
-If device user denies the permission to share the logs, the status will change to *Permission Denied by User*.
-
 ![Device Management](../../../assets/OLD_DASHBOARD/bug_report.png)
 
 When you request a capture log from a specific device, a notification will pop up on that device asking permission to share the report. The device user will need to swipe down the notifiation bar, tap the bug report line, and tap `Share`. If the device user taps `Decline`, the report will be not be shared and the status will change to *Permission Denied by User*.
