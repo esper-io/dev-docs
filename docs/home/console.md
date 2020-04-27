@@ -1133,6 +1133,7 @@ To approve In-ROM apps or Preloaded apps in a device, you may do so from templat
   5.  The app should not set itself as the default launcher. This will cause conflict with the Esper Agent(DPC).
   6.  Latest Android APK standards (currently we allow APKs without icons)
 
+:::note If you attempt to upload an APK file that has a V2 or V3 signature, but not a v1 signature, it will be rejected. Older Android platforms—those running Marshmallow (6.0) and earlier—require apps that contain v1 signatures. :::
 
 - You can upload your own android app APK file using the upload button on the top right hand corner
 - The uploaded apps will be shown under the 'Uploaded apps' section:
