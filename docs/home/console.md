@@ -1138,7 +1138,8 @@ To approve In-ROM apps or Preloaded apps in a device, you may do so from templat
 
 ![App Management](./assets/OLD_DASHBOARD/1_AM.png)
 
-:::note If you attempt to upload an APK file that has a V2 or V3 signature, but not a v1 signature, it will be rejected. Older Android platforms—those running Marshmallow (6.0) and earlier—require apps that contain v1 signatures. :::
+:::note
+If you attempt to upload an APK file that has a V2 or V3 signature, but not a v1 signature, it will be rejected. Older Android platforms—those running Marshmallow (6.0) and earlier—require apps that contain v1 signatures. :::
 
 When you click on any private app, it will open the details of the same. For example in the below screen, you may see details of the Zomato (uploaded) app. It shows the following details -
 
