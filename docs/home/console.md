@@ -30,11 +30,11 @@ This gives a summary of Alerts you've created and Alerts that have been fired fo
 
 ## Feedback Widget
 
-Wherever you are in the Console, the blue Feedback button at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
+Wherever you are in the Console, the blue **Feedback** button at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
 
 ![Esper console with feedback widget highlighted](./assets/GettingStarted/feedback_widget-tab.png)
 
-Clicking on **Feedback** brings up a screen with the following tools:
+Clicking **Feedback** brings up a screen with the following tools:
 
 * Box tool – Highlight a specific area of the page and comment on that area. If you prefer, the comment can be removed and simply left with the box outline.
 * Blackout tool – Blackout any sensitive information on the screen.
@@ -51,7 +51,7 @@ When you're ready to submit your feedback, click the check-mark to the right of 
 
 ## What's New Button
 
-Clicking on the "What's New" button at the top right of the screen causes a slide out will appear that you can scroll through to learn more about updates and improvements to your Esper experience.
+Clicking **What's New** button at the top right of the screen causes a slide out to appear that you can scroll through to learn more about updates and improvements to your Esper experience.
 
 ![Esper console submit feedback](./assets/GettingStarted/whats_new.png)
 
@@ -235,24 +235,25 @@ Below is a list of features you can turn on or off in the policy section. These 
     ![Esper settings app](./assets/esperSettingsApp/espersettingapp1.png)
 
 5. **Dock & Empty Settings App Password** <br> 
-    In Kiosk mode, Device user can access a hidden dock consisting of menu items such as Esper settings app by tapping 3 times on top right corner or by clicking the power button 3 times. This text field is to protect accessibility for this feature via password.  The dock menu consists of multi-app mode - kiosk mode switch, Esper settings app and Power button. 
+    In Kiosk mode, Device user can access a hidden dock—consisting of menu items such as Esper settings app—by tapping 3 times on top right corner or by clicking the power button 3 times. This text field is to protect accessibility for this feature via password.  The dock menu consists of multi-app mode - kiosk mode switch, Esper settings app and Power button. 
 
     ![Dock & Empty Settings App Password](./assets/esperSettingsApp/espersettingapp2.png)
 
     The textbox here accepts the common password for Dock and the Esper Settings App. It is now acceptable to not have any password for these features for the ease of device users. Esper, however, recommends that passwords are setup for stronger security.
-    <br/>
 
 
 ### Google Account Restrictions
 
 
  This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
+
 Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
 
 
 ![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
 
-**TIP** The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
+:::tip
+The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services. :::
 
 
 ### Factory Reset Protection 
@@ -297,7 +298,8 @@ If clicked, this opens up two more checkboxes-<br>
 1.  `Restrict incoming calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br>
 2.  `Restrict outgoing calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br> In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
 
-**TIP:** All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
+:::tip
+All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. :::
 
 ADB- Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.” If checked in policy, dashboard user may turn on ADB via Settings for a configurable time period.  If unchecked, ADB can not be turned on from Settings. NOTE: We NEVER allow turning on ADB from device end for an Esper provisioned device.
  
