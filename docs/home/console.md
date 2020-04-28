@@ -30,11 +30,11 @@ This gives a summary of Alerts you've created and Alerts that have been fired fo
 
 ## Feedback Widget
 
-Wherever you are in the Console, the blue Feedback Widget at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
+Wherever you are in the Console, the blue Feedback button at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
 
 ![Esper console with feedback widget highlighted](./assets/GettingStarted/feedback_widget-tab.png)
 
-Clicking on the Feedback Widget brings up a screen overlay with the following tools:
+Clicking on **Feedback** brings up a screen with the following tools:
 
 * Box tool – Highlight a specific area of the page and comment on that area. If you prefer, the comment can be removed and simply left with the box outline.
 * Blackout tool – Blackout any sensitive information on the screen.
@@ -45,7 +45,7 @@ Clicking on the Feedback Widget brings up a screen overlay with the following to
 
 ![Esper console with feedback capture controls](./assets/GettingStarted/feedback_widget-capture_controls.png)
 
-When you're ready to submit your feedback, click the check-mark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click **Strong** __Send__. Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
+When you're ready to submit your feedback, click the check-mark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click **Send**. Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
 
 ![Esper console submit feedback](./assets/GettingStarted/feedback_widget-select_a_category.png)
 
@@ -68,39 +68,40 @@ Read about the Developer Tools and Documentation here -
 
 ## Provisioning Methods
 
-Provisioning is the initial step to configuring and managing your Android device using the Esper Management Console and associated developer tools.
+Provisioning is the initial step in configuring and managing an Android device using the Esper Management Console and associated developer tools.
 
-Esper provides different methods as per the device capabilities available, which involves downloading the Esper Agent onto the device and configuring it according to the provisioning settings used for a Device Template. The supported provisioning methods are as follows:
+Esper provides four different methods for provisioning Android devices, depending on the capabilities of the device being configured:
 
 ![Provisioning](./assets/provisioning/provisioning1.png)
 
-You may provision your device using any of the four methods given the pre requisites mentioned are met. To see the detailed steps, hover your mouse over any of the provisioning methods and `Provision` button appears. On clicking the same, detailed steps for the selected method will start showing.
+If you meet the prerequisites, you may provision your device using any of the four methods. To see the detailed steps, hold your mouse over any of the provisioning methods and the `Provision` button will appear. Click on the `Provision` button and detailed steps for the selected method appear.
 
 ![Provisioning](./assets/provisioning/provisioning4.png)
 
-If you find choosing between these methods confusing, for your convenience, we have provided an easy way to choose a provisioning method by filling the form on the right side. User needs to fill the following sections - 
+If you find choosing between these methods confusing, we have provided an easy way to choose a provisioning method by filling the form on the right side. You will need to provide the following information - 
 
-- Android version - Check the android version on your device by going to Settings -> About ->  Android Version
+- Android version - Check the android version on your device by navigating to Settings -> About ->  Android Version
 
    ![Provisioning](./assets/provisioning/provisioning2.png)
    
    Choose the android version of your device from the drop down menu. 
    
-**TIP:** Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0, 6.0 and so on.
+:::tip
+Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0, 6.0 and so on. :::
 
    ![Provisioning](./assets/provisioning/provisioning3.png)
 
-- Esper Enhanced - Esper Enhanced Android is purpose-built optimized Android OS with enhanced performance, security and features such as zero touch provisioning, remote adb debugging and OTA android updates. Esper provides Esper Enhanced devices on request from customers. Choose `YES`, if your devices are Esper Enhanced.
+- Esper Enhanced - Esper Enhanced Android is purpose-built optimized Android OS with enhanced performance, security and features such as zero touch provisioning, remote adb debugging and OTA android updates. Esper provides Esper Enhanced devices on request from customers. Click **YES**, if your devices are Esper Enhanced.
 
-- GMS support - Choose `YES`, if your android device supports Google Mobile Services. If Play Store app exists in your device, your device is a GMS device.
+- GMS support - Click **YES**, if your android device supports Google Mobile Services. If Play Store app exists in your device, your device is a GMS device.
 
-- Camera -  Choose `YES`, if your device has a working camera.
+- Camera -  Choose **YES**, if your device has a working camera.
 
-Finally, click on `Suggest Provisioning Method`. 
+Finally, click **Suggest Provisioning Method**. 
 
-Based on your selection, you will be suggested with one out of the four provisioning methods which will get highlighted. Click on the same to see the steps to provision your device.
+Based on your selections, the tool will suggest one of the four provisioning methods by highlighting it. Click on it to see the steps to provision your device.
 
-The four methods of provisioning have the below pre requisites. Click on each topic to know more.
+Here are the prerequisites for each of the four provisioning methods. Click the name of a method to learn more about it.
 
 1.  [AfW provisioning](./console/device-provisioning/afw-provisioning/index.md) - AfW (Android for Work) method is best used for:
 
@@ -129,10 +130,11 @@ The four methods of provisioning have the below pre requisites. Click on each to
     - IMEI/Serial Number method is use for bulk provisioning of devices
     - Enables zero touch provisioning
 
-    **TIP:** In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process.
+    :::tip
+    In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process. :::
 
 
-If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Please contact us on andi@esper.io or support@esper.io.
+If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Send us an email at andi@esper.io or support@esper.io.
 
 
 ## Provisioning Templates
@@ -156,16 +158,15 @@ Clicking on the elipses are the top right of one of the template tiles opens a p
 
 ### Creating a Provisioning Template
 
-1.  Click `Provisioning Templates`.
-2.  Click `Create Template`.
-3.  Enter a name for the Device Template. You also have an option to enter a description for the template. 
+1.  Click **Provisioning Templates > Create Template**.
+2.  Enter a name for the Device Template. You also have an option to enter a description for the template. 
 
      Dashboard users and admins create templates in a context, for example creating a template to define the device behavior for a set of devices deployed in a specific warehouse. The description box enables you to explain the context for the template.
 
 
 ![Device Template](./assets/template/templatedesc1.png)
 
-Click `Next`.
+Click **Next**.
 
 ### In the Policy Section
 
@@ -175,7 +176,7 @@ Below is a list of features you can turn on or off in the policy section. These 
 
 ### Dropdown Menus
 
-1.  **Device Password Rules** \
+1.  **Device Password Rules**
     If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. The Password rule is a policy that specifies the rules for the device unlock password that users can set.
 
     - **Alphabetic**: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
