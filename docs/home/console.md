@@ -207,7 +207,7 @@ Below is a list of features you can turn on or off in the policy section. These 
 
      <br/>
 
-4.  **Android Settings App** \
+4.  **Android Settings App**
     Android settings app determines how users can access the Android device settings.
 
     - **Default setting app**: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
@@ -295,8 +295,10 @@ Other Template Compliance Policy Toggle Buttons-<br>
 
 If clicked, this opens up two more checkboxes-<br>
 
-1.  `Restrict incoming calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br>
-2.  `Restrict outgoing calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br> In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
+- Restrict incoming calls to uploaded contacts only <upload a CSV file of allowed contacts>
+- Restrict outgoing calls to uploaded contacts only <upload a CSV file of allowed contacts>
+
+In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.
 
 :::tip
 All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma. :::
@@ -311,14 +313,14 @@ Compliance Policy Section of the Device Template:
 
 ![Device Template](./assets/OLD_DASHBOARD/improved_provision_template_ux.jpg)
 
-You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
+You may reset these values to default at any time by clicking **Reset to Default** button at the bottom.
 
-Click `Next`.
+Click **Next**.
 
 
 ### In the Apps section
 
-In this section, you can select 'Kiosk mode' to pin an app during startup or 'Multi application mode' to give device-users access to the Home screen. You can choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
+In this section, you can select *Kiosk mode* to pin an app during startup or *Multi application mode* to give device-users access to the Home screen. You can choose the apps that you would like to have installed on your device during provisioning. You may choose from install apps you uploaded via [App Management](./console.md#apps) or install apps from Google Play Store that you approved via [Play For Work](./console/play-work/index.md).
 
 Your first step is to choose whether you want to provision their device in kiosk or multi app mode by clicking on the radio button.
 
@@ -334,9 +336,9 @@ Clicking on the `Advanced Settings` button will launch a dialog box in which you
 
 ![Device Template](./assets/OLD_DASHBOARD/managed_google_play-devrel27.jpg)
 
-If "Esper DPC Launcher" is **checked**, the Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case. This use case gives more control to the Dashboard admin on the apps that a device user may use and actions that can be taken on the device.
+If "Esper DPC Launcher" is **selected**, the Esper Device agent will take admin control of the device and only approved apps can be installed or used. All features of Esper Device agents will be functional in this case. This use case gives more control to the Dashboard admin on the apps that a device user may use and actions that can be taken on the device.
 
-If "Default Android Launcher" is **checked**, the default android launcher will be active and user can exit Esper Agent (DPC) like any other android app. Esper Agent (DPC) will continue to run in the background and execute device management functionality. Many of Esper features will not be applicable if this version of Esper Agent (DPC) is installed.
+If "Default Android Launcher" is **selected**, the default android launcher will be active and user can exit Esper Agent (DPC) like any other android app. Esper Agent (DPC) will continue to run in the background and execute device management functionality. Many of Esper features will not be applicable if this version of Esper Agent (DPC) is installed.
 
 If the Default Andriod Launcher is selected, the following Esper features that will be unavailable:
 
@@ -349,13 +351,13 @@ The device screen will look similar to a regular android device with `Esper Devi
 
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc1.png)
 
-Even when user has exited the `Esper Device Agent` they will be able to see it running in the background in the notification bar as follows -
+Even when user has exited the Esper Device Agent they will be able to see it running in the background in the notification bar as follows -
 
 ![Device Template](./assets/OLD_DASHBOARD/launcherlessdpc2.png)
 
 There is also a checkbox that allows you to include or bypass Google Play setup during provisioning. If this is unchecked, Google Play apps will not be updated—reducing provisioning time dramatically. If the endpoint is enrolled into a Managed Google Play account, the default value for this is checked on; if the endpoint is not enrolled then the default is off.
 
-Once you have made your selection, click on "Close."
+Once you have made your selection, click **Close**.
 
 
 - **Preloaded Apps** - The next section is of Preloaded (IN-ROM) apps where user may enter package names of apps that are already existing in the device to approve them to show up on the device after provisioning. The package names must be entered separated by commas.
@@ -403,35 +405,34 @@ Change Device settings from Esper Dashboard. Following are features available <b
 - Turn on/off bluetooth <br>
 - Select screen timeout duration <br> - Dashboard user can decide the time after which the device screen should get locked. Similar to stock android devices, we have options such as 5s, 15s, 30s, 1 minute and so on. There is also an option of the device screen 'Never' timing out such as in use case of a digital signage device. We have following screen lock timeouts - 
 
-    5 seconds<br>
-    15 seconds<br>
-    30 seconds<br>
-    1 minute<br>
-    2 minutes<br>
-    5 minutes<br>
-    10 minutes<br>
-    30 minutes<br>
-    Never<br>
+⋅⋅* 5 seconds
+⋅⋅* 15 seconds
+⋅⋅* 30 seconds
+⋅⋅* 1 minute
+⋅⋅* 2 minutes
+⋅⋅* 5 minutes
+⋅⋅* 10 minutes
+⋅⋅* 30 minutes
+⋅⋅* Never
 
 
 ![Esper Timezone](./assets/template/screentimeoutdashboard.png)
 
-- Select screen orientation <br>
-- Select GPS accuracy <br>
+- Select **Screen orientation**
+- Select **GPS accuracy**
 - Increase/decrease Brightness, Volume (alarm, notification, ring and music) <br>
 - Timezone  - With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
 
 ![Esper Timezone](./assets/settings/timezone.png)
 
-We have introduced a robust search capability such that even as the dashboard user begins to type, the suggestions show up conveniently for the dashboard to select and set the timezone. For example, typing 'Pacific' will bring up all timezones starting with 'Pacific' prefix.
+We have introduced a robust search capability such that even as the dashboard user begins to type, the suggestions show up conveniently for the dashboard to select and set the timezone. For example, typing "Pacific" will bring up all the timezones that start with "Pacific."
 
 ![Esper Timezone](./assets/settings/timezone2.png)
 
-- ADB -  Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.
-If the ADB was enabled in Policy, ADB can be turned on from here for a device for a configurable time period or to can be set to 'Always On' 
+- ADB -  Android Debug Bridge (ADB) is a versatile command-line tool that provides access to Unix shell to communicate with an android device. If the ADB was enabled in Policy, ADB can be turned on from here for a device for a configurable time period or to can be set to "Always On." 
 
 :::tip
-Keeping ADB 'Always ON' is NOT recommended for security purposes).
+Keeping ADB "Always ON" is *NOT* recommended for security purposes).
 :::
 
 If dashboard user needs to turn on the adb for communication to device for purpose of debugging or run external tools, they may choose to enable it from here.
@@ -458,10 +459,7 @@ The device will automatically connect to the given WiFi access points as per the
 The WiFi on/off and WiFi access points feature are not available for android 10.0 and above
 :::
 
-
-
-- Ability to add Wifi Credentials to QR Code (OR WiFi to be used during provisioning) -  In order to make the 6-tap provisioning process easier, we are introducing the capability to include the required WiFi credentials in the QR code generated via a Device Template. After reading the QR code, the device automatically connects to the WiFi access point using the SSID and password entered for the template. 
-
+- Ability to add Wifi Credentials to QR Code (OR WiFi to be used during provisioning) -  In order to make the 6-tap provisioning process easier, we have added the capability to include the required WiFi credentials in the QR code generated via a Device Template. After reading the QR code, the device will automatically connects to the WiFi access point using the SSID and password entered for the template.
 
 ![Device Template](./assets/template/wifissid1.png)
 
@@ -488,33 +486,33 @@ Here is a complete view of Settings section in Template -
 
 ![Device Template](./assets/OLD_DASHBOARD/12_DT.png)
 
-Click `Next`
+Click **Next**.
 
 ### In the Group section
 
-Select an existing Group or create a Group. The devices provisioned using this device profile will be a part of the selected Group. Click `Next`:
+Select an existing Group or create a Group. The devices provisioned using this device profile will be a part of the selected Group. Click **Next**.
 
 ![Device Template](./assets/OLD_DASHBOARD/13_DT.png)
 
-Click `Next`
+Click **Next**.
 
 ### On the Preview screen
 
-You will see a preview of the entire device template. If you wish to edit your settings, use the 'Back' button to go back to the appropriate screen:
+You will see a preview of the entire device template. If you wish to edit your settings, use the **Back** button to go back to the appropriate screen:
 
 ![Device Template](./assets/OLD_DASHBOARD/14_DT.png)
 
-Click 'Save'. You will see a pop-up to confirm your settings. Click `Okay`:
+Click **Save**. You will see a pop-up to confirm your settings. Click **Okay**.
 
 ![Device Template](./assets/OLD_DASHBOARD/15_DT.png)
 
-The Device Template you just created will now be visible on the Device Template page. You can search for it in the search bar. Click on it to view the Device Template. Click on 'View QR code' to provision a device using this template directly from your Device Template.
+The Device Template you just created will now be visible on the Device Template page. You can search for it in the search bar. Click on it to view the Device Template. Click on **View QR code** to provision a device using this template directly from your device template.
 
-On clicking the View QR code, there is also an option to download the config.json `Download Config` file that can be used during ADB and IMEI provisioning:
+When you have clicked **View QR code**, you will also have the option to download the config.json file for use used during ADB and IMEI provisioning. Simply click **Download Config**.
 
 ![Device Template](./assets/OLD_DASHBOARD/19_DT.png)
 
-You can also Preview, Edit, Duplicate & Delete the template:
+You can also Preview, Edit, Duplicate, and Delete the template.
 
 ![Device Template](./console/images/temp_2.png)
 
@@ -528,7 +526,7 @@ Click on the `Preview` option to preview the device template. Click on the `+` s
 
 ### Edit Template
 
-To edit any template, click on the `Edit Template` option. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the `Update` button on the Preview page.
+To edit any template, click **Edit Template**. Policy, Apps, Branding, Settings, Group and Add devices options can be updated as required. To save the changes, click on the **Update** button on the Preview page.
 
 ### Add Devices (IMEI Provisioning)
 
