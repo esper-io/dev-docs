@@ -5,7 +5,7 @@ The Esper console is a feature-rich user interface for you to operate and manage
 
 ## Home
 
-Home provides useful at-a-glance information about the activity on your account.Esper ensures your business operations continue to run efficiently at all times.
+Home provides useful at-a-glance information about the activity on your endpoint. Esper ensures your business operations continue to run efficiently at all times.
 
 ![Esper console](./assets/GettingStarted/esper_console-home_screen.png)
 
@@ -14,7 +14,7 @@ There are four sections on the Home page:
 
 ### 1\. Deployment Status
 
-This shows the current deployment status of the devices for the current customer environment and includes a clickable link to number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
+This shows the current deployment status of the devices for the current customer environment (called an endpoint) and includes a clickable link to the number of Active, Inactive, Under Provisioning and Recently Added devices. Clicking on each takes the user to the [Device Dashboard](./console.md#devices) showing the corresponding category of devices.
 
 ### 2\. Security Summary
 
@@ -59,18 +59,18 @@ Clicking the **What's New** button at the top right of the screen causes a slide
 
 Read about the Developer Tools and Documentation here -
 
-- **Esper API Keys** - Get API Key and Enterprise ID to be able to access Esper APIs to integrate in your app development code. See here - `https://{{ esper_tenant_name }}.esper.cloud/developer-console/`
+- **Esper API Keys** - Get API Key and Enterprise ID to be able to access Esper APIs to integrate in your cloud and app development code. See here - `https://{{ esper_tenant_name }}.esper.cloud/developer-console/`
 - **Esper API Reference** - Checkout all APIs that you can use to manage your dedicated devices at [Esper APIs](https://api.esper.io) using HTTP/REST framework.
-- **Esper SDK For Python** - Install SDK for python using instructions [here](./pythonsdk.md)
-- **Esper CLI** - Quickly execute CLI commands to install/uninstall/manage deployment on your provisioned devices
-- **Esper Plugin For Android Studio** - Use Esper Plugin to easily deploy new versions of your app onto Esper dashboard and to your dedicated devices. This plugin enables you to remotely view/control your devices on Android studio as well.
+- **Esper SDK For Python** - Install SDK for Python using instructions [here](./pythonsdk.md)
+- **Esper CLI** - Quickly execute CLI commands to install/uninstall/manage deployment on your provisioned devices.
+- **Esper Plugin For Android Studio** - Use the Esper Plugin to easily deploy new versions of your app onto the Esper cloud and to your dedicated devices. This plugin enables you to remotely view/control your devices in Android Studio as well.
 - **Esper Docs With Quick Starts** - This is one stop for all documentation regarding API, CLI, SDK, Plugin and Console.
 
 ## Provisioning Methods
 
 Provisioning is the initial step in configuring and managing an Android device using the Esper Management Console and associated developer tools.
 
-Esper provides four different methods for provisioning Android devices, depending on the capabilities of the device being configured:
+Esper provides four main methods for provisioning Android devices, depending on the capabilities of the device being configured:
 
 ![Provisioning](./assets/provisioning/provisioning1.png)
 
@@ -84,22 +84,22 @@ If you find choosing between these methods confusing, we have provided an easy w
 
    ![Provisioning](./assets/provisioning/provisioning2.png)
    
-   Choose the android version of your device from the drop down menu. 
+   Choose the Android version of your device from the drop down menu. 
    
 :::tip
-Kitkat, Lollipop, Marshmallow etc are Google names for android versions 4.4, 5.0, 6.0 and so on. :::
+Kitkat, Lollipop, Marshmallow, etc. are Google names for Android versions 4.4, 5.0, 6.0. :::
 
    ![Provisioning](./assets/provisioning/provisioning3.png)
 
-- Esper Enhanced - Esper Enhanced Android is purpose-built optimized Android OS with enhanced performance, security and features such as zero touch provisioning, remote adb debugging and OTA android updates. Esper provides Esper Enhanced devices on request from customers. Click **YES**, if your devices are Esper Enhanced.
+- Esper Enhanced - Esper Enhanced Android is purpose-built optimized Android OS with enhanced performance, security and features such as seamless, no-touch provisioning, remote adb debugging and OTA Android updates. Esper provides Esper Enhanced devices on request from customers. Click **YES**, if your devices are Esper Enhanced.
 
-- GMS support - Click **YES**, if your android device supports Google Mobile Services. If Play Store app exists in your device, your device is a GMS device.
+- GMS support - Click **YES**, if your Android device supports Google Mobile Services. If the Play Store app exists on your device, your device is most likely a GMS device.
 
 - Camera -  Choose **YES**, if your device has a working camera.
 
 Finally, click **Suggest Provisioning Method**. 
 
-Based on your selections, the tool will suggest one of the four provisioning methods by highlighting it. Click on it to see the steps to provision your device.
+Based on your selections, Esper will suggest one of the four provisioning methods by highlighting it. Click on it to see the steps to provision your device.
 
 Here are the prerequisites for each of the four provisioning methods. Click the name of a method to learn more about it.
 
@@ -121,31 +121,31 @@ Here are the prerequisites for each of the four provisioning methods. Click the 
 
     - All Android Devices - GMS or Non-GMS
     - Devices with or without camera
-    - Devices running old as well as new Android versions (inclusive of Android 4.4, 5.1 and so on)
-    - USB cable required to connect device for adb access from developer options
+    - Devices running old as well as new Android versions (inclusive of Android 4.4 and 5.1)
+    - USB cable required to connect device for adb access from Developer Options
     - Factory reset required
 
 4.  [Seamless provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
-    - Used for Esper Enhanced Android Devices
+    - Used for Esper Enhanced Android devices
     - IMEI/Serial Number method is use for bulk provisioning of devices
     - Enables zero touch provisioning
 
     :::tip
-    In case a device gets stuck during provisioning, we have introduced a cheat way to skip out of it. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process. :::
+    In case a device gets stuck during provisioning, we have introduced a way to exit provisioning and factory reset the device. Tap 7 times on Esper logo on provision screen to show reset button if this action needs to be performed during the provisioning process. :::
 
 
-If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Send us an email at andi@esper.io or support@esper.io.
+If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Send us an email at support@esper.io.
 
 
 ## Provisioning Templates
 
-### How to Use Esper's Provisioning Templates.
+### How to Use Esper's Provisioning Templates
 
-Provisioning templates offer a simple means for you to quickly provision devices. To do so, you create create a profile for the device in which you choose the policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, and used to provision at a later point.
+Provisioning templates offer a simple means for you to quickly provision devices. To do so, you create a profile for the device in which you choose the Compliance Policy, apps, device settings, Device Group, and the wallpapers that you want to be provisioned on the device. Device Templates can be created, saved, cloned, and used to provision at a later point.
 
 ![Device Template](./assets/template/provisioning_templates.png)
 
-Clicking on the elipses are the top right of one of the template tiles opens a pop-up menu that enables you to do the following to that template:
+Clicking on the ellipses located in the top right of one of the template tiles opens a pop-up menu that enables you to do the following to that template:
 
 - Preview
 - Edit
@@ -168,11 +168,11 @@ Clicking on the elipses are the top right of one of the template tiles opens a p
 
 Click **Next**.
 
-### In the Policy Section
+### In the Compliance Policy Section
 
-Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices.
+The Compliance Policy is a standard set of rules or permissions that are related to security of the devices and apps that the admin can apply on the devices to be provisioned via the template. The admin may set default app permissions, choose the Android setting app, set the system updates policy, set password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices.
 
-Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
+Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance Policy that can be configured and reapplied as per requirements of the customer after provisioning.
 
 ### Dropdown Menus
 
