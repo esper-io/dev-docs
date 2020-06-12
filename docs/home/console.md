@@ -60,7 +60,7 @@ When you click it a panel will slide in from the right side of the screen; scrol
 Most notifications on your Esper console will appear as toast notifications at the bottom left corner of your screen. These notifications disappear after a few seconds; if you prefer, you can click on the X to dismiss them. If there are multiple notifications queued, click the X of the topmost notification to get to the next one in the queue.
 ![Toast](./assets/NewConsole/Toast.png)
 
-These types of notifications are called “toast notifications” because they pop up like toast from a toaster.
+These types of notifications are called "toast notifications" because they pop up like toast from a toaster.
 
 ### Informational Slider Screen and Dropdowns
 
@@ -135,7 +135,7 @@ The first time you log in to a newly created Esper console, you’ll see a defau
 
 ![Esper console](./assets/NewConsole/DashboardInitial.png) 
 
-If you’d like to simulate an Android device, click Simulare Device. You will see a momentary “You are all set!” message after which a mock device will be available for you to experiment with and learn on until you’re ready to provision an actual device.
+If you’d like to simulate an Android device, click Simulare Device. You will see a momentary "You are all set!" message after which a mock device will be available for you to experiment with and learn on until you’re ready to provision an actual device.
 
 Capabilities such as Apps, Remote View and Capture log may not be available on a Simulated device.
 
@@ -271,11 +271,12 @@ To copy a template, click Duplicate. You can then rename the template and update
 ### Upload IMEI CSV
 
 To upload a set of IMEI/Serial Numbers for devices you want to provision using the AfW or for Esper Enhanced Android devices with this template, click **Upload IMEI CSV**. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
-   - The CSV requires the first entry of “imei1, imei2, serial number”.
-   - Then on each cell below enter “[IMEI #], [IMEI #], [Serial Number]”.
+
+   - The CSV requires the first entry of "imei1, imei2, serial number".
+   - Then on each cell below enter "[IMEI #], [IMEI #], [Serial Number]".
    - If you don’t want to add a second IMEI or serial number, leave the space blank between the commas
-   - Thus if you are entering just IMEIs, you can make each row either “[IMEI #], [IMEI #],” or “[IMEI #], ,” or “, [IMEI #],”.
-   - If you are entering just serial numbers, you can make each cell “, , [Serial #]”.
+   - Thus if you are entering just IMEIs, you can make each row either "[IMEI #], [IMEI #]," or "[IMEI #], ," or ", [IMEI #],".
+   - If you are entering just serial numbers, you can make each cell ", , [Serial #]".
    - The comma separation is required.
    - The IMEI numbers need to be valid 15-digit numbers; IMEIs are being validated through Luhn’s algorithm.
    - File should not be empty.
@@ -335,7 +336,7 @@ Lock screen must be on in order to set Lock screen password rules. If you select
     Default app permissions determine enforcement of the runtime-permission rule across all the apps on a device including Enterprise apps installed by Esper, in-ROM apps that are enabled, as well as any installed via Managed Google Play. This ensures you can control the user experience on the device regarding how run-time permissions are granted. There are three possible settings:
 
    **Allow Automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user. This is the typical setting used for single-purpose solutions using a fully trusted, customer-supplied application.
-   **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”. This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions—contact us directly to find out more.
+   **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as "Allow app X to access Gallery? Allow/Deny". This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions—contact us directly to find out more.
    **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can grant permissions to apps individually from the Esper Console.
 
 **System Updates** 
@@ -351,7 +352,7 @@ Lock screen must be on in order to set Lock screen password rules. If you select
    **None**: No icon for any settings app will be available for the user to choose from the device’s Home screen.
    **Esper settings app**: Esper offers a custom settings app that gives device users access to a subset of the available Android settings when servicing a device. The Esper settings app is intended for use by technicians servicing a device locally. It’s protected by the Dock & Esper Settings App password to prevent unauthorized access. This app offers a reduced number of settings:
       - Wi-Fi: Change the Wi-Fi access point used by the device.
-      - Torch: Turn on the Torch (AKA “flashlight”) if the device has a camera flash LED.
+      - Torch: Turn on the Torch (AKA "flashlight") if the device has a camera flash LED.
       - Auto-Rotation: Turn auto-rotation on or off.
       - Factory Reset: Perform a factory reset of the device, regardless of the Compliance Policy applied. 
       - Kiosk App: Change the app that runs in kiosk mode. The device user can choose any installed app on the device to act as the kiosk app, with the Esper Console kept in sync on the configuration stats.
@@ -404,7 +405,7 @@ When you turn on the FRP button, you’ll need to enter the Google ID of the acc
 
 See [here](./console/policy-management/getgoogleaccount.md) to know how to get the Google account ID of your account and how FRP protects your device.
 
-**Lock Screen**<br> If Lock Screen is on, it enables the default “lock screen” to be displayed upon a screen timeout as specified in the Settings section. If this is on, the device user will have the option to set the password. If Lock screen password rules are defined, the device user will be required to enter a password that conforms with these rules. <br/>
+**Lock Screen**<br> If Lock Screen is on, it enables the default "lock screen" to be displayed upon a screen timeout as specified in the Settings section. If this is on, the device user will have the option to set the password. If Lock screen password rules are defined, the device user will be required to enter a password that conforms with these rules. <br/>
 **Safe-Mode Login**<br> TWhen Safe-mode login is on, users will be able to boot to Safe Mode on their device; when Safe-mode login is off, users will be unable to boot to Safe Mode.<br/>
 **Factory Reset**<br> Factory Reset controls whether or not the user can perform a factory reset on the device using the Android Settings app. When Factory Reset is off, the user will not be able to perform a factory reset on the device. This does not prevent a hard-key factory reset, see Factory Reset Protection to prevent hard-key factory reset. <br/>
 **Notification bar**<br> If you want device users to be able to swipe down to see the notification bar, set Notification Bar to on. If you don’t, set it to off. You will typically want this off for Kiosk mode-based solutions. Conversely in most cases a user is required to submit a Bug Report that was requested through Esper via the Notification Bar, thus inaccessible with the Notification Bar turned off. <br/>
@@ -546,7 +547,7 @@ Most of these are fairly straightforward:
 *If the device only uses Wi-Fi for Internet connectivity, since Esper requires the device to be connected to the Internet in order for the Esper system to work, Esper will turn Wi-Fi on after 10 seconds to establish the required Internet connectivity.
 *Some device makers swap the settings for Landscape and Portrait. If your device was provisioned with a specific orientation but is locked into the other orientation, try swapping this setting to achieve the proper screen orientation setting.
 
-The Time Zone field has a robust search capability. As you begin to type, suggestions will be displayed. For example, typing “Pacific” will bring up all the time zones that start with “Pacific.” Listings are by country, for example to find the timezones for the U.S.A., search for “America” or “US”.
+The Time Zone field has a robust search capability. As you begin to type, suggestions will be displayed. For example, typing "Pacific" will bring up all the time zones that start with "Pacific." Listings are by country, for example to find the timezones for the U.S.A., search for "America" or "US".
 ![Timezone](./assets/NewConsole/Timezone.png)
    
 **ADB**
@@ -555,7 +556,7 @@ Android Debug Bridge (ADB) is a command-line tool that enables administrators to
 ![ADB Duration](./assets/NewConsole/ADBDuration.png)
    
 :::tip
-Keeping ADB set to “Always ON” is NOT recommended for security reasons.
+Keeping ADB set to "Always ON" is NOT recommended for security reasons.
 :::
 
 **WIFI Access Points**
@@ -694,7 +695,7 @@ There are checkboxes on the top of the page with categories such as  that can be
 - High risk devices - devices with security status high
 - No risk devices - device with security status 'secure'
 
- See the [Security](https://docs.esper.io/home/console/device-management/-/#security) section to know how the security status of a device is determined
+ See the [Security](./console/device-management/-/index.md#security) section to know how the security status of a device is determined
 
 ### Search
 
@@ -946,7 +947,7 @@ There are 5 tabs under the Group Details -
     - Ethernet, Wi-Fi and Cellular connection name and status
     - Link to device details
 
-    See more about information about individual devices in the [Devices](https://docs.esper.io/home/console.md#devices) section on this document.
+    See more about information about individual devices in the [Devices](./console.md#devices) section on this document.
 
     There are six filters provided to sort through the list of device tiles based on the following categories - 
 
@@ -955,7 +956,7 @@ There are 5 tabs under the Group Details -
     - Under provisioning - Devices in the group that are currently undergoing provisioning
     - Active devices - Devices in the group that are currently active ie online
     - Inactive devices - Devices in the group that are currently inactive ie offline
-    - Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](https://docs.esper.io/home/console/device-management/-/#security_) in [Devices](https://docs.esper.io/home/console/device-management/-/) for more information on how the security risk level of a device is calculated)
+    - Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](./console/device-management/-/index.md#security_) in [Devices](./console/device-management/-/index.md) for more information on how the security risk level of a device is calculated)
     - Devices with low battery - Devices in the group with battery percentage less than 15%
     - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
 
@@ -1038,7 +1039,7 @@ There are 5 tabs under the Group Details -
 
     Choose between Install and Uninstall actions in the drop-down select app action. The Select App dropdown then shows a list of all uploaded private APKs and approved Google apps. 
 
-    After selecting a version from the “Select Version” dropdown, in the 'App Details Preview', you can see under the heading 'App type' indicating whether its a private app (App type - Enterprise) or a Google app (App type - Google) as shown below. 
+    After selecting a version from the "Select Version" dropdown, in the 'App Details Preview', you can see under the heading 'App type' indicating whether its a private app (App type - Enterprise) or a Google app (App type - Google) as shown below. 
 
     ![Group Management](./assets/groups/groupsapps2.png)
 
@@ -1365,7 +1366,7 @@ Below is a list of features you can turn on or off in the policy section. These 
 
     Allow automatically: This rule will grant all the permissions any app requests without showing a prompt to the user.
 
-    Ask user: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”
+    Ask user: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as "Allow app X to access Gallery? Allow/Deny"
 
     Deny automatically: This rule will deny any permission request from any app on the device.<br/>
 
@@ -1388,7 +1389,7 @@ Below is a list of features you can turn on or off in the policy section. These 
     _Esper settings app_: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. This app is made secure via the Esper settings app password protection. Settings provided via this app are limited to:
     1. Changing the Wi-Fi Access Point
 
-    2. Enabling the “flashlight” if there’s a camera flash LED on the device
+    2. Enabling the "flashlight" if there’s a camera flash LED on the device
 
     3. Control the display orientation of the device.
 
@@ -1430,7 +1431,7 @@ On turning on the FRP button, user needs to enter the Google ID of the account t
 
 Other Compliance Policy Toggle Buttons-<br>
 
-1.  Lock Screen<br> If Locked screen is switched ON, it enables the default “lock screen” to be displayed upon a screen timeout as specified in the Settings section. If it is enabled, the user has an option to set the password rule in the dropdown above. <br/>
+1.  Lock Screen<br> If Locked screen is switched ON, it enables the default "lock screen" to be displayed upon a screen timeout as specified in the Settings section. If it is enabled, the user has an option to set the password rule in the dropdown above. <br/>
 2.  Safe-Mode Login<br> Turn Safe mode login On to allow users to boot to safe mode on their device. Leave Off to prevent Safe mode login.<br/>
 3.  Factory Reset<br> Factory reset dictates whether or not the user can perform a factory reset on the device. Turning it Off prevents a factory reset by the user. This is not inclusive of the hard key factory reset. <br/>
 4.  Notification bar<br> Notification bar dictates whether or not a user can swipe down to display the notification bar. Turn On to enable access to the Notification bar. <br/>
@@ -1468,7 +1469,7 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 :::
  <br>
 
-ADB - Google defines ADB as “Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device.”
+ADB - Google defines ADB as "Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device."
  
 If checked in policy, dashboard user may turn on ADB via Dashboard Settings for a configurable time period.  If unchecked, ADB can not be turned on from Settings.
  
@@ -1703,7 +1704,7 @@ You can then copy (or renew if needed) your API key.
 
 The **API key** and **Enterprise ID** can be copied from the dashboard as shown above and can be used to access our [CLI platform](https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](https://api.esper.io) (api.esper.io) in your development and management systems.
 
-Checkout the relevant documentation on the top right of this page by clicking on [Developer Hub](https://docs.esper.io/) and [API Documentation](https://api.esper.io/).
+Checkout the relevant documentation on the top right of this page by clicking on [Developer Hub](../readme.md) and [API Documentation](https://api.esper.io/).
 
 ## Secure Remote ADB
 
