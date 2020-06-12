@@ -1,9 +1,11 @@
 # Esper console
+
 The Esper console is a feature-rich user interface for you to operate and manage your fleet of Android devices. Esper provides a range of super simple options to deploy company‑owned devices at scale.
 
 ## Static Interface Elements
 
 ### Navigation Bar
+
 No matter where you are in the Esper Console, there will be a navigation bar along the left side of the screen. This enables you to quickly navigate to each of the other sections of the Esper Console. These sections are:
 
    - Dashboard
@@ -24,6 +26,7 @@ No matter where you are in the Esper Console, there will be a navigation bar alo
 You can hide the names in the navigation bar to show just icons by clicking on the chevron at the top. Click on the chevron again to slide the navigation bar back out to show the names.
 
 ### Feedback Widget
+
 No matter where you are in the Console, the blue Feedback button at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
 ![](./assets/NewConsole/Feedback.png)
 
@@ -43,6 +46,7 @@ When you’re ready to submit your feedback, click the check-mark to the right o
 ![](./assets/NewConsole/FeedbackType.png)
 
 ### What’s New Button
+
 At the top right of the screen is the **What’s New** button.
 
 ![](./assets/NewConsole/WhatsNew.png)
@@ -52,12 +56,14 @@ When you click it a panel will slide in from the right side of the screen; scrol
 ![](./assets/NewConsole/WhatsNewContent.png)
 
 ### Toast Notifications
+
 Most notifications on your Esper console will appear as toast notifications at the bottom left corner of your screen. These notifications disappear after a few seconds; if you prefer, you can click on the X to dismiss them. If there are multiple notifications queued, click the X of the topmost notification to get to the next one in the queue.
 ![](./assets/NewConsole/Toast.png)
 
 These types of notifications are called “toast notifications” because they pop up like toast from a toaster.
 
 ### Informational Slider Screen and Dropdowns
+
 Many actions in the Esper console can be carried out on multiple devices across a wide variety of situations. Some devices may be offline or have poor internet connectivity. When these types of action are taken, a status screen will slide out from the right side of the console, showing the status of the action on each of the devices on which it is being executed.
 
 You will encounter these slider screens frequently as you use your Esper console.
@@ -70,22 +76,24 @@ For certain operations performed on a set of devices in a group, a popdown will 
 ![](./assets/NewConsole/Wipe.png)
 
 ### Logging Out
+
 To log out of the Console, click on the user icon at the top-right corner of the screen and select Log Out from the drop down menu.
 
-![](./assets/NewConsole/Logout.png)
+![Logging out](./assets/NewConsole/Logout.png)
    
 ### Users
+
 Esper’s user management functions can be reached by clicking on the user icon at the top-right of the screen, then selecting **User Management** from the dropdown menu.
 
-![](./assets/NewConsole/UserManagement.png)
+![User management](./assets/NewConsole/UserManagement.png)
 
 Access to this page is only available to those with Enterprise Admin roles, those with other roles will not see the User management option in the drop down. Click on **User Management**.
 
-![](./assets/NewConsole/UsersSummary.png)
+![User summary](./assets/NewConsole/UsersSummary.png)
 
 There are four main roles for Esper Console users: *Enterprise Administrator, Enterprise Viewer, Group Administrator*, and *Group Viewer*. Each role has different permissions, ranging from an Enterprise Administrator, who is able to view or change anything, down to a Group Viewer, who can view those things having to do with those groups to which the Group Viewer is assigned.
 The privileges and permissions for each role are as follows:
-![](./assets/NewConsole/GroupRole.png)
+![Group Roles](./assets/NewConsole/GroupRole.png)
 ![](./assets/NewConsole/GroupRoleCtd.png)
 
 ### Adding a New User
@@ -104,12 +112,14 @@ If you’re creating a Group Admin or Group Viewer, assign to the appropriate gr
 After adding a user, be sure to give the user their login credentials so that they can log in.
 
 ### Editing a User
+
 The User Management screen also enables you to edit the details of a user. To do so, click on the pencil icon in line with that user’s listing.
 ![](./assets/NewConsole/UserEdit.png)
 
 You will be able to change the username, email, full name, password, and role assigned to the user. If you do that, be sure to pass the changes on to the account owner so they can continue to access the Esper console.
 
 ### Deleting a User
+
 To delete a user from the enterprise, click on the trash can icon in line with that user’s listing. That user will no longer be able to access their account:
 ![](./assets/NewConsole/UserDelete.png)
 
@@ -135,16 +145,21 @@ Once you enroll and provision your first device, this screen changes to the full
 ### Status Panels
 
 The main body of the Dashboard contains four status panels:
+
 #### 1\. Deployment Status
+
 The Deployment status panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the [Device Dashboard](./console.md#Devices) section, filtered to show the devices currently in that status.
 
 #### 2\. Security summary
+
 The Security summary panel provides a snapshot of security status of all your deployed devices, with the number of devices in each of four possible statues: high risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show you the devices in the risk category indicated.
 
 #### 3\. Where are your devices?
+
 The Where are your devices? panel shows the physical location reported by each of your devices on a map. Immediately below the map is a summary of cities worldwide containing the highest number of devices.
 
 #### 4\.Alerts status
+
 The Alerts status panel provides a summary of alerts you’ve created and the number of times each has fired. You can see the number of alerts fired by selecting that alert from the dropdown menu.
 
 ## Provisioning methods
@@ -231,6 +246,7 @@ You can easily open up the QR code to use during AfW or 6-Tap QR Code provisioni
 Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet. For those cases where distributing a QR code outside of your organization would be required, instead consider using AfW IMEI/Serial Number provisioning with a passcode.
 
 ### Actions on Template Tiles
+
 Clicking on the ellipses (...) at the top right of one of the template tiles opens a pop-up menu that enables you to do the following to that template:
    - Preview
    - Edit
@@ -250,7 +266,7 @@ To edit a template, click Edit. You can update the Policy, Apps, Branding, Setti
 **Duplicate**
 To copy a template, click Duplicate. You can then rename the template and update the Policy, Apps, Branding, Settings, Group and Add Devices options as you wish. Any IMEI or Serial Numbers in the original template will not be carried over to the duplicated template. To save the changes, click on the Update button on the Preview page.
 
-###Upload IMEI CSV
+### Upload IMEI CSV
 To upload a set of IMEI/Serial Numbers for devices you want to provision using the AfW or for Esper Enhanced Android devices with this template, click Upload IMEI CSV. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
    - The CSV requires the first entry of “imei1, imei2, serial number”.
    - Then on each cell below enter “[IMEI #], [IMEI #], [Serial Number]”.
@@ -642,21 +658,21 @@ It consists of the following sections -
 1.  [Getting Started](./console.md#getting-started)
 2.  [Categories](./console.md#categories)
 3.  [Search](./console.md#search)
-4.  [Device Tile (also, Grid View)](./console.md#device-tile)
+4.  [Device Tile (also, Grid View)](./console.md#device-tiles)
 5.  [Map View of Devices](./console.md#map-view)
 6.  Further Device Management functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
 
     a. [Device information](./console/device-management/-/index.md#information) - Hardware, software, memory, location, storage and other detail of the device.
 
-    b. [Actions](./console/device-management/-/index.md#device-actions) - Admin can take actions such as reboot, lock, lockdown, ping or exit kiosk mode.
+    b. [Actions](./console/device-management/-/index.md#device-settings) - Admin can take actions such as reboot, lock, lockdown, ping or exit kiosk mode.
 
-    c. [Event Feed](./console/device-management/-/index.md#event-feed) - Admin can view event feed log of the device.
+    c. [Event Feed](./console/device-management/-/index.md) - Admin can view event feed log of the device.
 
     d. [Device Graphs](./console/device-management/-/index.md#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
 
     e. [Apps](./console/device-management/-/index.md#apps) - Admin can un-hide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
 
-    f. [Compliance Policy](./#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
+    f. [Compliance Policy](./console.md#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
 
     g. [Security](https://docs.esper.io/home/console/device-management/-/#security) - This section gives details regarding the security status of the device.
 
@@ -946,7 +962,7 @@ There are 5 tabs under the Group Details -
     - Ethernet, Wi-Fi and Cellular connection name and status
     - Link to device details
 
-    See more about information about individual devices in the [Devices](https://docs.esper.io/home/console.html#devices) section on this document.
+    See more about information about individual devices in the [Devices](https://docs.esper.io/home/console.md#devices) section on this document.
 
     There are six filters provided to sort through the list of device tiles based on the following categories - 
 
