@@ -136,7 +136,7 @@ Once you enroll and provision your first device, this screen changes to the full
 
 The main body of the Dashboard contains four status panels:
 #### 1\. Deployment Status
-The Deployment status panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show the devices currently in that status.
+The Deployment status panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the [Device Dashboard](./console.md#Devices) section, filtered to show the devices currently in that status.
 
 #### 2\. Security summary
 The Security summary panel provides a snapshot of security status of all your deployed devices, with the number of devices in each of four possible statues: high risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show you the devices in the risk category indicated.
@@ -174,7 +174,7 @@ Each of the four provisioning methods is suited to different situations. Click t
    You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, for devices without a camera, and it prevents repurposing the device by exploiting factory reset. It requires a passcode, which is the same as the password used by the Esper Settings app set up in the Compliance Policy. See the **Upload IMEI CSV** section below for more information on how to load IMEIs and Serial Numbers into a template.
 
 2.  [6-Tap QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
-    6-Tap QR code provisioning is best used for:
+       6-Tap QR code provisioning is best used for:
       - Devices that have Google Mobile Services (GMS) support enabled
       - Devices with a camera for QR code scanning
       - Android 7.0 and above
@@ -182,7 +182,7 @@ Each of the four provisioning methods is suited to different situations. Click t
    Beginning with Android 9 you can include credentials for the Wi-Fi network to be used for provisioning in your template. They’ll be included in the QR code, eliminating the need to enter them on the device to establish the required Internet connectivity.
 
 3.  [Provisioner Tool](./console/device-provisioning/adb-provisioning/index.md) 
-   The Provisioner Tool is a user-friendly provisioning tool by Esper that runs on Mac and Windows. You can conveniently use this to provision:
+      The Provisioner Tool is a user-friendly provisioning tool by Esper that runs on Mac and Windows. You can conveniently use this to provision:
       - All Android Devices—GMS and most Non-GMS—running Android 4.4 or newer
       - Devices with or without camera
       - Multiple devices at once
@@ -194,7 +194,7 @@ The Provisioner Tool does not support Google Single Sign-on (SSO). If you set up
 
 
 4.  [Seamless provisioning](./console/device-provisioning/imei-or-serial-number-based-provisioning/index.md)
-     Seamless provisioning is only for devices running Esper Enhanced Android:
+      Seamless provisioning is only for devices running Esper Enhanced Android:
       - IMEI/Serial Number method is use for bulk provisioning of devices
       - Enables true no-touch provisioning using a predetermined Wi-Fi access point
      
@@ -218,6 +218,7 @@ If you still have trouble figuring the provisioning process, Esper support will 
 
 :::TIP: In case a device stalls during provisioning, there’s a way to exit out and factory reset the device. On any provisioning screen showing the Esper logo, tap the logo seven times; this will bring up the Factory Reset button. Simply touch the button to start the reset process.
 :::
+
 ![](./assets/NewConsole/DeviceFactoryReset.jpg)
 
 ## Provisioning Templates
@@ -249,7 +250,7 @@ To edit a template, click Edit. You can update the Policy, Apps, Branding, Setti
 **Duplicate**
 To copy a template, click Duplicate. You can then rename the template and update the Policy, Apps, Branding, Settings, Group and Add Devices options as you wish. Any IMEI or Serial Numbers in the original template will not be carried over to the duplicated template. To save the changes, click on the Update button on the Preview page.
 
-**Upload IMEI CSV**
+###Upload IMEI CSV
 To upload a set of IMEI/Serial Numbers for devices you want to provision using the AfW or for Esper Enhanced Android devices with this template, click Upload IMEI CSV. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
    - The CSV requires the first entry of “imei1, imei2, serial number”.
    - Then on each cell below enter “[IMEI #], [IMEI #], [Serial Number]”.
@@ -301,7 +302,7 @@ Hovering your mouse cursor over any item will give you a short explanation on-sc
 
 **Lock Screen Password Rules**
   The Lock screen password rule specifies the conditions for the device unlock password, with the default being None. If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to 25—use the small up/down arrows to set your required password length:
-(./assets/NewConsole/LockPwdLength.png)
+![](./assets/NewConsole/LockPwdLength.png)
    
   **Alphabetic**: Restricts acceptable password to only upper and lowercase alphabetic characters (A to Z, and a to z).
   **Alphanumeric**: Expands acceptable password to include numbers, and special characters in addition to alphabetic characters.
@@ -342,7 +343,7 @@ Lock screen must be on in order to set Lock screen password rules. If you select
 **Dock & Esper Settings App** 
     The dock is specifically for devices in Kiosk mode. When a device is in kiosk mode, you can access the dock by tapping 3 times in the upper left corner of the screen, or by pressing the power button consecutively 3 times with a slight pause between each press. When you do so, an expander arrow will slide out of the upper right corner:
 Tap the expander arrow; you’ll need to enter the password you set in the Compliance Policy.
-(./assets/NewConsole/DeviceAppSlider.jpg)
+![](./assets/NewConsole/DeviceAppSlider.jpg)
 
    Once you’ve entered the password, a dock will slide out that gives you three options:
       - Exit Kiosk mode. If the device is in multi-app mode, no action is taken.
@@ -481,7 +482,7 @@ The Play store apps section of the Your App tab gives you the ability to load ap
 
 **Play Store Tab**
 For convenience, a **Play Store** tab has been provided on this page where you can approve Google apps you’d like to add to your template. This option is only available if you have set up a [Managed Google Play] account, and is mirrored in [Apps].
-(./assets/NewConsole/PlayStore.png)
+![](./assets/NewConsole/PlayStore.png)
 
 **TIP**: Only once you approve a Google Play Store app, you may add it from the list shown in the Provisioning Template under Your app.
 When you are satisfied with your apps settings, click **Next**.
@@ -525,7 +526,7 @@ The Time Zone field has a robust search capability. As you begin to type, sugges
 **ADB**
 
 Android Debug Bridge (ADB) is a command-line tool that enables administrators to use a Unix shell to communicate with an android device. If ADB was checked in the Compliance Policy section, you can turn on ADB here for a configurable time period. If ADB wasn’t checked in the Compliance Policy section, ADB can not be turned on here.
-(./assets/NewConsole/ADBDuration.png)
+![](./assets/NewConsole/ADBDuration.png)
    
 :::tip
 Keeping ADB set to “Always ON” is NOT recommended for security reasons.
@@ -594,7 +595,7 @@ To select an existing group, click the radio button next to its name. If you’d
 When you are satisfied with your group selection, click **Next**.
 
 **Add Devices (IMEI Provisioning)**
-If you are editing a template—rather than creating one—the next section will be Add Devices. The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions found [here].
+If you are editing a template—rather than creating one—the next section will be Add Devices. The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions found [here](./console.md#Upload-IMEI-CSV).
 ![](./assets/NewConsole/TemplateAdddevices.png)
 
 To manually add a device to be provisioned, enter either its serial number or its IMEI in the **Add IMEI/Serial Number** field and click on the **Add** button.
