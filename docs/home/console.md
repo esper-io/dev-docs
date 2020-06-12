@@ -149,7 +149,7 @@ The main body of the Dashboard contains four status panels:
 
 #### 1\. Deployment Status
 
-The Deployment status panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the [Device Dashboard](./console.md#Devices) section, filtered to show the devices currently in that status.
+The Deployment status panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show the devices currently in that status.
 
 #### 2\. Security summary
 
@@ -270,7 +270,7 @@ To copy a template, click Duplicate. You can then rename the template and update
 
 ### Upload IMEI CSV
 
-To upload a set of IMEI/Serial Numbers for devices you want to provision using the AfW or for Esper Enhanced Android devices with this template, click Upload IMEI CSV. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
+To upload a set of IMEI/Serial Numbers for devices you want to provision using the AfW or for Esper Enhanced Android devices with this template, click **Upload IMEI CSV**. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
    - The CSV requires the first entry of “imei1, imei2, serial number”.
    - Then on each cell below enter “[IMEI #], [IMEI #], [Serial Number]”.
    - If you don’t want to add a second IMEI or serial number, leave the space blank between the commas
@@ -622,7 +622,7 @@ To select an existing group, click the radio button next to its name. If you’d
 When you are satisfied with your group selection, click **Next**.
 
 **Add Devices (IMEI Provisioning)**
-If you are editing a template—rather than creating one—the next section will be Add Devices. The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions found [here](./console.md#Upload-IMEI-CSV).
+If you are editing a template—rather than creating one—the next section will be Add Devices. The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions in **Upload IMEI CSV** section.
 ![Add Devices Template](./assets/NewConsole/TemplateAdddevices.png)
 
 To manually add a device to be provisioned, enter either its serial number or its IMEI in the **Add IMEI/Serial Number** field and click on the **Add** button.
@@ -663,33 +663,6 @@ You can delete a Provisioning Template by clicking on **Delete Template**. If yo
 ## Devices
 
 This section talks about understanding how to manage your Esper provisioned device after the provisioning steps are complete.
-
-It consists of the following sections -
-
-1.  [Getting Started](./console.md#getting-started)
-2.  [Categories](./console.md#categories)
-3.  [Search](./console.md#search)
-4.  [Device Tile (also, Grid View)](./console.md#device-tiles)
-5.  [Map View of Devices](./console.md#map-view)
-6.  Further Device Management functionalities found on clicking the `Details` button for an **individual device** are listed as follows -
-
-    a. [Device information](./console/device-management/-/index.md#information) - Hardware, software, memory, location, storage and other detail of the device.
-
-    b. [Actions](./console/device-management/-/index.md#device-settings) - Admin can take actions such as reboot, lock, lockdown, ping or exit kiosk mode.
-
-    c. [Event Feed](./console/device-management/-/index.md) - Admin can view event feed log of the device.
-
-    d. [Device Graphs](./console/device-management/-/index.md#device-graphs) - Admin can view in graphical format 15 unique device metrics represented for individual devices.
-
-    e. [Apps](./console/device-management/-/index.md#apps) - Admin can un-hide preloaded apps, install/uninstall private apps and hide installed google apps from here. Admin also has the capability to clear app data for supported apps from this section.
-
-    f. [Compliance Policy](./console.md#compliance-policy) - Admin can apply pre-created compliance policy on the selected device from this section.
-
-    g. [Security](https://docs.esper.io/home/console/device-management/-/#security) - This section gives details regarding the security status of the device.
-
-    h. [Remote View](./console/device-management/-/index.md#remote-viewer) - Admin can remote view the device if device user accepts the request.
-
-    i. [Capture log](./console/device-management/-/index.md#capture-logs) - Admin can capture device's android bug report front his section in case any issue arises.
 
 ### Getting Started
 
