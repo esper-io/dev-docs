@@ -35,16 +35,20 @@ Clicking **Feedback** brings up a screen with the following tools:
    - Line tool – Underline, strikethrough, draw a straight line.
    - Line with arrow tool – Point to something.
    - Comment tool – Drop a pin and make a comment.
+   
 ![](./assets/NewConsole/FeedbackTools.png)
 
 When you’re ready to submit your feedback, click the check-mark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click Send. Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
+
 ![](./assets/NewConsole/FeedbackType.png)
 
 ### What’s New Button
 At the top right of the screen is the **What’s New** button.
+
 ![](./assets/NewConsole/WhatsNew.png)
 
 When you click it a panel will slide in from the right side of the screen; scroll through it to learn more about updates and improvements to your Esper experience.
+
 ![](./assets/NewConsole/WhatsNewContent.png)
 
 ### Toast Notifications
@@ -67,13 +71,16 @@ For certain operations performed on a set of devices in a group, a popdown will 
 
 ### Logging Out
 To log out of the Console, click on the user icon at the top-right corner of the screen and select Log Out from the drop down menu.
+
 ![](./assets/NewConsole/Logout.png)
    
 ### Users
 Esper’s user management functions can be reached by clicking on the user icon at the top-right of the screen, then selecting **User Management** from the dropdown menu.
+
 ![](./assets/NewConsole/UserManagement.png)
 
 Access to this page is only available to those with Enterprise Admin roles, those with other roles will not see the User management option in the drop down. Click on **User Management**.
+
 ![](./assets/NewConsole/UsersSummary.png)
 
 There are four main roles for Esper Console users: *Enterprise Administrator, Enterprise Viewer, Group Administrator*, and *Group Viewer*. Each role has different permissions, ranging from an Enterprise Administrator, who is able to view or change anything, down to a Group Viewer, who can view those things having to do with those groups to which the Group Viewer is assigned.
@@ -164,7 +171,7 @@ Each of the four provisioning methods is suited to different situations. Click t
       - Devices with a camera for QR code scanning
       - Android 6.0 and above
       - Factory reset of device required
-   You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, for devices without a camera, and it prevents repurposing the device by exploiting factory reset. It requires a passcode, which is the same as the password used by the Esper Settings app set up in the Compliance Policy. See the Upload IMEI CSV for more information on how to load IMEIs and Serial Numbers into a template.
+   You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, for devices without a camera, and it prevents repurposing the device by exploiting factory reset. It requires a passcode, which is the same as the password used by the Esper Settings app set up in the Compliance Policy. See the **Upload IMEI CSV** section below for more information on how to load IMEIs and Serial Numbers into a template.
 
 2.  [6-Tap QR Code Provisioning](./console/device-provisioning/qr-code-provisioning/index.md)
     6-Tap QR code provisioning is best used for:
