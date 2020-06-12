@@ -93,13 +93,13 @@ To add a new user, click on New User
 ![](./assets/NewConsole/UserNew.png)
 
 Enter the new user’s name, username, email, and password. Re-enter the password and click **Next**.
-![](./assets/NewConsole/UserCreate.png)
+![](./assets/NewConsole/UserCreate.jpg)
 
 Select the new user’s role from the dropdown menu.
-![](./assets/NewConsole/UserRole.png)
+![](./assets/NewConsole/UserRole.jpg)
 
 If you’re creating a Group Admin or Group Viewer, assign to the appropriate groups and click **Confirm**.
-![](./assets/NewConsole/UserAddGroup.png)
+![](./assets/NewConsole/UserAddGroup.jpg)
 
 After adding a user, be sure to give the user their login credentials so that they can log in.
 
@@ -218,7 +218,7 @@ If you still have trouble figuring the provisioning process, Esper support will 
 
 :::TIP: In case a device stalls during provisioning, there’s a way to exit out and factory reset the device. On any provisioning screen showing the Esper logo, tap the logo seven times; this will bring up the Factory Reset button. Simply touch the button to start the reset process.
 :::
-![](./assets/NewConsole/DeviceFactoryReset.png)
+![](./assets/NewConsole/DeviceFactoryReset.jpg)
 
 ## Provisioning Templates
 
@@ -595,7 +595,7 @@ When you are satisfied with your group selection, click **Next**.
 
 **Add Devices (IMEI Provisioning)**
 If you are editing a template—rather than creating one—the next section will be Add Devices. The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions found [here].
-![](./assets/NewConsole/TemplateAddDevices.png)
+![](./assets/NewConsole/TemplateAdddevices.png)
 
 To manually add a device to be provisioned, enter either its serial number or its IMEI in the **Add IMEI/Serial Number** field and click on the **Add** button.
 ![](./assets/NewConsole/TemplateIMEIAdd.png)
