@@ -956,7 +956,7 @@ There are 5 tabs under the Group Details -
     - Under provisioning - Devices in the group that are currently undergoing provisioning
     - Active devices - Devices in the group that are currently active ie online
     - Inactive devices - Devices in the group that are currently inactive ie offline
-    - Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](./console/device-management/-/index.md#security_) in [Devices](./console/device-management/-/index.md) for more information on how the security risk level of a device is calculated)
+    - Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](./console/device-management/-/index.md#security) in [Devices](./console/device-management/-/index.md) for more information on how the security risk level of a device is calculated)
     - Devices with low battery - Devices in the group with battery percentage less than 15%
     - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
 
