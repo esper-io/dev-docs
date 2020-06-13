@@ -156,7 +156,9 @@ This section is related to the Wifi and Internet settings of the device.
 
 WiFi - User can toggle on/off the Wifi for the device. This can be done if the device has an alternative connection available such as cellular network via sim card.
 
-:::tip In case the dashboard user tries to switch off WiFi when no other connection is available, in-order to maintain communication with the cloud backend, the device will turn WiFi on automatically after attempting to find alternative internet connection for 10s. :::
+:::tip 
+In case the dashboard user tries to switch off WiFi when no other connection is available, in-order to maintain communication with the cloud backend, the device will turn WiFi on automatically after attempting to find alternative internet connection for 10s. 
+:::
 
 WiFi access points - User can predefine preferred WiFi networks by entering WiFi access point details such as WiFi SSID, WiFi Security Type, WiFi Password and whether its a "Hidden" network.
 
@@ -164,7 +166,9 @@ WiFi access points - User can predefine preferred WiFi networks by entering WiFi
 
 The device will automatically connect to the given WiFi access points as per the availability and network strength.
 
-:::tip The WiFi on/off and WiFi access points feature are not available for android 10.0 and above :::
+:::tip 
+The WiFi on/off and WiFi access points feature are not available for android 10.0 and above 
+:::
 
 ### 10. Location
 
@@ -222,7 +226,9 @@ After the completion of this time period from the point of provisioning, the ADB
 
 With our supervisor plugin, we have enabled you to change timezone of device remotely via dashboard.
 
-:::tip Timezone feature is only available for devices which are running Esper Enhanced Android or the devices for which Esper's supervisor plugin has been signed by the manufacturer of the device. :::
+:::tip
+Timezone feature is only available for devices which are running Esper Enhanced Android or the devices for which Esper's supervisor plugin has been signed by the manufacturer of the device. 
+:::
 
 ![Timezone](../../../assets/settings/timezone.png)
 
@@ -338,7 +344,9 @@ Disable - installed but can not be used.
 
 Here you may click on any of 3 states to choose the state for the app selected. Click Save changes.
 
-:::tip Please note that some In-ROM (preloaded) apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. :::
+:::tip
+Please note that some In-ROM (preloaded) apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled. 
+:::
 
 ## Compliance Policy
 
@@ -442,4 +450,6 @@ This section lets the user capture bug report from the device in question. You c
 
 ![Device Management](../../../assets/OLD_DASHBOARD/10_DM.png)
 
-:::tip Please note that the user on the device side needs to swipe down the notification bar and click on the bug report line. On being prompted, the device user needs to choose `Share`. If they choose `Decline` the Bug Report will not be shared. :::
+:::tip
+Please note that the user on the device side needs to swipe down the notification bar and click on the bug report line. On being prompted, the device user needs to choose `Share`. If they choose `Decline` the Bug Report will not be shared.
+:::
