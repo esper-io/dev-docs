@@ -1778,8 +1778,6 @@ Once all changes are made, click Apply changes to push them out to the device, o
 
 A popdown will show the progress of the action or actions, indicating the number of successful and unsuccessful attempts. In this example we changed settings for alarm volume, notification volume, music volume, and ring volume for the group.
 
-![Groups](./assets/NewConsole/SettingsSound.png)
-
 Click on See details for any of the popdowns and a slide out will appear specific to that setting.
 
 ![Groups](./assets/NewConsole/SetStreamVolume.png)
