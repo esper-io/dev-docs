@@ -1653,7 +1653,7 @@ The Manage tab is the default view for Groups. It shows the device tiles for all
 
 ![Groups](./assets/NewConsole/GroupManage.png)
 
-You will find more information about individual devices in the [Devices](./console.md#Devices) section of this document.
+You will find more information about individual devices in the [Devices](./console.md#devices) section of this document.
 
 You can filter the list of devices using one or more of six filters:
    Under provisioning — Devices in the group that are currently undergoing provisioning
