@@ -1836,7 +1836,7 @@ A popdown will show the progress of the action, indicating the number of success
 
 Click on See details and a slide out will appear.
 
-![Groups](./assets/NewConsole/BluetoothCommandStatus.png)
+![Groups](./assets/NewConsole/BluetoothCommandstatus.png)
 
 Once the set of Bluetooth commands are sent, a success toast message will appear at the bottom left corner of the screen.
 
@@ -2310,7 +2310,7 @@ Add email addresses in the field provided, the click **Save**.
 
 Select devices on which you’d like to see alerts by clicking the plus symbol next to their names from the list displayed. To add a group rather than an individual device, click Groups, then select the group for which you’d like to see alerts, then click **Next**.
 
-![Alerts](./assets/NewConsole/AlertLinkDeviceGroups.png)
+![Alerts](./assets/NewConsole/Alertlinkdevicegroups.png)
 
 :::tip
 An alert cannot be linked to a combination of devices and groups. It needs to be either only devices, or only groups.
