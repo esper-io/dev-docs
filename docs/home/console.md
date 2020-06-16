@@ -864,7 +864,7 @@ By default, the list is sorted in descending order of device registration date (
 
 To use the Actions button, check the box next to the device or devices you wish to take an action, then click the Actions button. 
 
-![Actions](./assets/NewConsole/ListViewActions.png)
+![Actions](./assets/NewConsole/ListviewActions.png)
 
 If you have not selected a device, Actions will be greyed out and you will see a pop up advising you to select at least one device.
 
@@ -950,7 +950,7 @@ Clicking the Device Details icon when no devices are selected brings a slide out
 
 ![Reboot](./assets/NewConsole/RebootPreview.png)
 
-![Reboot](./assets/NewConsole/DeviceActivityFeed.png)
+![Reboot](./assets/NewConsole/DeviceActivityFeed.jpg)
 
 Clicking **View Details** will show more details (including the current status) of each command. The pop-up box will then provide details of each command—including the devices that are currently in an In progress, Success, Queued, or Failed state.
 
@@ -1003,7 +1003,7 @@ This is the first tab that comes in view when clicking on View Details on the De
 
 ![Reboot](./assets/NewConsole/DeviceNetworkInfo.png)
 
-![Reboot](./assets/NewConsole/BluetoothNoPaired.png)
+![Reboot](./assets/NewConsole/BleutoothNoPaired.png)
 
 ![Reboot](./assets/NewConsole/DisplayInfo.png)
 
@@ -1027,7 +1027,7 @@ Clicking Reboot and then Confirm will reboot the device. This can be useful when
 
 Clicking Screen Lock and then Confirm will lock the screen on the device. The device user will then need to enter the device password—if a password has been set—to use the device again. This can be used to avoid unwanted usage if the device were ever to fall into the wrong hands.
 
-![Reboot](./assets/NewConsole/ScreenLock.png)
+![Reboot](./assets/NewConsole/Screenlock.png)
 
 **Heart Beat**
 
@@ -1299,7 +1299,7 @@ The New App Install button lets you install new apps on the device.
 
 A dialog box will slide in from the left:
 
-![Reboot](./assets/NewConsole/InstallNewApp.png)
+![Reboot](./assets/NewConsole/InstallNewApp.jpg)
  
 Select the app from the list of all approved Google apps and all uploaded Enterprise apps. Then select the app version number and click **Install**.
 
@@ -1926,7 +1926,7 @@ Then select the app you’d like to install from the **Select App** dropdown. Yo
 
 Once you’ve selected an app, its details will appear in the **App Details Preview** section, including the app’s version, package name, and app type—that is, whether it’s an Enterprise app or a Google app.
 
-![Groups](./assets/NewConsole/GroupAppInstall.png)
+![Groups](./assets/NewConsole/GroupInstallApp.png)
 
 Select a version from the Select Version dropdown and click Install. A sidebar will slide in from the right showing the status of the installation.
 
@@ -2360,7 +2360,7 @@ To create a new Compliance Policy, click New Policy. This will bring up a screen
 
 Enter a unique name for your new compliance policy in the Policy Name field; enter an optional description in the Description field.
 
-![CompliancePolicy](./assets/NewConsole/CompliancePolicyCreate.png)
+![CompliancePolicy](./assets/NewConsole/CompPolicyCreate.png)
 
 **Lock Screen Password Rules**
 
