@@ -1858,7 +1858,7 @@ A popdown will show the progress of the action, indicating the number of success
 
 Click on See details and a slide out will appear.
 
-![Groups](./assets/NewConsole/.png)
+![Groups](./assets/NewConsole/CommandStatus.png)
 
 Once the set of commands are sent, a success toast message will appear at the bottom left corner of the screen.
 
@@ -2356,7 +2356,7 @@ Use Search to find an already created Compliance Policy by Policy name.
 
 To create a new Compliance Policy, click New Policy. This will bring up a screen in which you can set all the configurations of the new Compliance Policy. The layout is the same as when you [define a Compliance Policy in a Provisioning Template], but uniquely includes the name and description.
 
-![CompliancePolicy](./assets/NewConsole/.png)
+![CompliancePolicy](./assets/NewConsole/CreatePolicy.png)
 
 **Enter a Policy Name and Description**
 
@@ -2479,7 +2479,7 @@ Factory Reset Protection (FRP) enables you to lock a device if a user factory re
 
 When you turn on the FRP button, you’ll need to enter the Google ID of the account you want to use to authorize post factory resets on the devices provisioned with this template.
 
-![CompliancePolicy](./assets/NewConsole/.png)
+![CompliancePolicy](./assets/NewConsole/SettingsFactoryReset.png)
 
 :::tip
 This feature is only available on GMS devices running Android 5.1 and above.
