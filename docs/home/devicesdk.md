@@ -7,10 +7,9 @@ The Esper Device SDK exposes an API to conduct privileged operations on Esper Ma
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
 
+Current version: 1.2
 
-Current version: 1.1
-
-Release name: Tessarion_MR1
+Release name: Tessarion_MR2
 
 Table of Contents: 
 
@@ -26,10 +25,10 @@ Table of Contents:
 
 ## Downloading the SDK
 
-Download the .aar file of the SDK from [here](https://downloads.esper.io/device-sdk/esperdevicesdk-release-may-05-2020.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
+Download the .aar file of the SDK from [here](https://downloads.esper.io/device-sdk/esperdevicesdk-release-v1_2-3.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
 
 ```
-implementation files('libs/esperdevicesdk-release-may-05-2020.aar')
+implementation files('libs/esperdevicesdk-release-v1_2-3.aar')
 ```
 
 ## Initializing the SDK
@@ -50,9 +49,14 @@ The EsperDeviceInfo object contains information regarding your Esper managed dev
 ```
 sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
     @Override
-    public void onResponse(@Nullable EsperDeviceInfo response)
-        String deviceId = response.getDeviceId();
-    }
+    public void onResponse(@Nullable EsperDeviceInfo esperDeviceInfo)
+        String deviceId = esperDeviceInfo.getDeviceId();
+        if (sdk.getAPILevel() >= EsperSDKVersions.ESSARION_MR2) {
+            String serialNo = esperDeviceInfo.getSerialNo();
+            String imei1 = esperDeviceInfo.getImei1();
+            String imei2 = esperDeviceInfo.getImei2();
+        }
+     }
 
     @Override
     public void onFailure(Throwable t) {
@@ -62,7 +66,7 @@ sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
 
 ```
 
-onResponse callback will be called if the device info is successfully retrieved from the device. The device information is stored in an `EsperDeviceInfo` object. The object can be further queried to retrieve several bits of information such as `getDeviceId()`.
+onResponse callback will be called if the device info is successfully retrieved from the device. The device information is stored in an `EsperDeviceInfo` object. The object can be further queried to retrieve several bits of information such as `getDeviceId()`, `getSerialNo()`, `getImei1()` and `getImei2()`.
 
 `onFailure` will be called when there is failure in the operation. The `Throwable` will one of the following exceptions: `EsperSDKNotFoundException`, `InterruptedException`.
 
