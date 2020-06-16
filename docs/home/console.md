@@ -1559,306 +1559,475 @@ Until the device is rebooted, you’ll be able to connect to the device remotely
 
 ## Groups
 
-Using Groups devices can be sectioned into groups and mass actions can be performed on a group of devices. Users can perform mass reboot, lock, check heartbeat, apply a compliance policy, install/uninstall apps and OS updates on thousands of devices in one click using Group features. 
+The **Groups** section enables you to assign devices to groups. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
 
-There is a pre-existing group called "All Devices", which is the default group where devices fall unless otherwise specified during provisioning via template.
+![Groups](./assets/NewConsole/GroupsTiles.png)
+
+There is a "Default" group called where devices are automatically added unless otherwise specified during provisioning via template. It is also used as the collection point when devices are moved between groups.
 
 ### Creating a Group
 
-You can create a Group by clicking the button `Create Group` on the top right. 
+You can create a Group by clicking **Create Group**. 
 
-![Group Management](./assets/groups/creategroup2.png)
+![Groups](./assets/NewConsole/GroupCreateButton.png)
 
-Enter a unique name and click Create. 
+Enter a unique name in the text box and click **Create**. 
 
-![Group Management](./assets/groups/creategroup1.png)
+![Groups](./assets/NewConsole/GroupCreateName.png)
 
-Once you create a Group, you have the option to add devices from the  default **All devices** group. To move devices, users can -
+The next step is to add devices to the group from the *Default group *(in this screen called *All devices*). This means you first have to remove any devices you want in the new group from any other group they are in to put them in the Default group. To move devices into your new group from the Default group, click the checkbox to the left of the names of the devices that need to be moved and click **Add Selected**, or for a single device once it is selected click on the + button that appears to the right.
 
-- click on the checkboxes on the left of the device that needs to be moved.  
-- select all devices by clicking on the top checkbox. 
-- search for a particular device by enter device code via Search box. 
-- sort the device list by 'last updated'. 
+![Groups](./assets/NewConsole/GroupAddDevices.png)
 
-![Group Management](./assets/groups/creategroup3.png)
+Devices can be moved back to the Default Group by selecting the checkbox next to the device name and clicking on **Remove Selected**.
 
-Once the required devices are selected, user can click on `Add devices` to add the selected devices to the Group. Individual devices can be added by clicking on the plus sign on right end.
+Once the desired devices have been moved to the Group, click **Save**.
 
-![Group Management](./assets/groups/creategroup4.png)
+You can also create a new group when creating a new Provisioning Template. In the Group section on the new template, you can create a group such that any device provisioned using the said template will fall in the newly created and selected group.
 
-Devices can be moved back to All Devices by selecting checkbox and clicking on `Remove selected`. Individual devices can be removed by clicking on the trash button on right end.
+### Moving Devices Between Groups
 
-![Group Management](./assets/groups/creategroup5.png)
+Moving devices from one group to another group requires two steps:
+   First remove the device or devices from the group they are in; this will move them to the Default group.
+   Navigate to the destination group and add the devices from the Default group.
 
-Once the correct set of devices have been moved to the Group. Click `Save`. You should receive a message "Successfully updated the group" on the left corner of the dashboard. 
+To remove one or more devices from a group, first click **View Details** for that group in the group’s tile:
 
-![Group Management](./assets/groups/creategroup6.png)
+![Groups](./assets/NewConsole/GroupViewDetails.png)
 
-You should now view list of all groups created in tile view. We will know more about 'group tile' further below into this document.
+Then click the ellipses on the left side of the screen and select Remove device.
 
-![Group Management](./assets/OLD_DASHBOARD/1_GM.png)
+![Groups](./assets/NewConsole/GroupRemoveDevice.png)
 
-Another way to create a groups is during [template creation](./console/device-template/index.md). In the group section on template, user can pre create a group such that any device provisioned using the said template will fall in the (created and) selected group.
+Your screen is now in multi-select mode. Click on each device you wish to remove from the group.
 
-![Group Management](./assets/groups/creategroup7.png)
+![Groups](./assets/NewConsole/GroupManageSelect.png)
 
-Refer to Device Template->Group section for more information on this. 
+Click on the **Remove selected devices** button in the bottom right hand corner. The following dialog will appear asking you to confirm the deletion.
+
+![Groups](./assets/NewConsole/DeviceDeleteConfirm.png)
+
+You will then see a success toast message in the bottom left corner of your screen. The devices are now in the Default group.
+
+You can also remove individual devices by clicking on the ellipses on the device’s tile and click on **Remove from group**. This is also available in the Devices view.
+
+![Groups](./assets/NewConsole/DeviceRemoveGroup.png)
+
+Now click **View Details** for the group you want to move these devices to. Click on the Add device button.
+
+![Groups](./assets/NewConsole/AddDevice.png)
+
+Now use the same process to add the desired devices to move to the group from the Default Group as described in [Creating a Group].
 
 ### Deleting a Group
 
-You can delete a Group by selecting one or many Groups using the top right button **`Delete group`**. 
+To remove one or more groups, first click on **Delete Groups**.
 
-- Click on `Delete Group` (shown in image below)
-- Select by clicking on the groups you wish to delete
-- Click on bottom right `Delete Selected Groups`  
+![Groups](./assets/NewConsole/GroupDelete.png)
 
-![Group Management](./assets/groups/groupsdelete1.png)
+Then select the tiles for the groups you want to delete by clicking on each one. Now click **Delete Selected Groups** at the bottom right of the screen. 
 
-### Refresh Groups list
-There is an option to refresh groups screen by clicking on a button `Refresh` on the top right corner to view recent changes.
+![Groups](./assets/NewConsole/GroupsSelect.png)
 
-![Group Management](./assets/groups/refreshgroup1.png)
+A dialog box will appear to confirm the action. Click on Delete groups to complete the deletion.
 
-### Search Group
+![Groups](./assets/NewConsole/GroupDeleteConfirm.png)
 
-User can search for a group by typing the group name in the search box on top right. 
+Once the group or groups are deleted, you will see a success toast message in the lower left corner of your screen. Any devices that were part of the deleted group will be moved to the Default group.
 
-![Group Management](./assets/groups/searchgroup1.png)
- 
-### Group Tile 
- 
- The Groups are listed in tile view that contain show the group icon, name and number of devices in the Group.
+### Searching for a Group
 
-![Group Management](./assets/groups/grouptile1.png)
+You can search for a group by typing the group name in the search box and clicking the magnifying glass icon. Note once you view the devices in the group, the search context changes from *Groups to Devices*.
 
-On clicking **`Details`**, you can take actions such as reboot, lock, ping, and wipe for the devices in the Group
+### Viewing Group Details 
 
-![Group Management](./assets/groups/groupdetail1.png)
+Clicking **View Details** on a group tile will give you full details about the group, including all the devices in it. The context for Search is now for the information in Devices, not Group names.
 
-There are 5 tabs under the Group Details - 
+![Groups](./assets/NewConsole/GroupManage.png)
 
-- Manage 
-- Actions
-- Compliance Policy
-- Apps
-- OS updates
+The Group Details view has six tabs that provide access to different actions you can take on the devices in the group.
 
+#### The Manage Tab
 
-1. **Manage** 
+The Manage tab is the default view for Groups. It shows the device tiles for all the devices in the group.
 
-    This section is to view the `Device tile` of all devices present in the group. 
+![Groups](./assets/NewConsole/GroupManage.png)
 
-    ![Group Management](./assets/groups/groupdetail1.png)
+You will find more information about individual devices in the [Devices](./console.md#Devices) section of this document.
 
-    The device tiles will show the following information for each device in the group - 
+You can filter the list of devices using one or more of six filters:
+   Under provisioning — Devices in the group that are currently undergoing provisioning
+   Online devices — Devices in the group that are currently active (online)
+   Offline devices — Devices in the group that are currently inactive (offline)
+   Devices at risk — Devices in the group that are at high, medium or low security risk
+   Devices with low battery — Devices in the group with less than 15% charge in their batteries
+   Recently added devices — Devices in this group which were provisioned in the last 3 days
+   
+You may click on “Clear all filters” (extreme right) to view the complete list of devices again. 
 
-    - Device name
-    - Device manufacturer
-    - Last seen date, time and location
-    - Active/Inactive status
-    - Gms/Non-Gms
-    - Risk Status
-    - Ethernet, Wi-Fi and Cellular connection name and status
-    - Link to device details
+![Groups](./assets/NewConsole/ClearAllFilters.png)
 
-    See more about information about individual devices in the [Devices](./console.md#devices) section on this document.
+#### The Settings Tab
 
-    There are six filters provided to sort through the list of device tiles based on the following categories - 
+The Settings tab enables you to change the settings on all the devices in a group as a mass action. This includes taking actions like rebooting, locking the screens, and requesting a heartbeat.
 
-    ![Group Management](./assets/groups/groupsmanage1.png)
+![Groups](./assets/NewConsole/GroupSettings.png)
 
-    - Under provisioning - Devices in the group that are currently undergoing provisioning
-    - Active devices - Devices in the group that are currently active ie online
-    - Inactive devices - Devices in the group that are currently inactive ie offline
-    - Devices at risk - Devices in the group that are at high, medium or low security risk (See [Security](./console/device-management/-/index.md#security) in [Devices](./console/device-management/-/index.md) for more information on how the security risk level of a device is calculated)
-    - Devices with low battery - Devices in the group with battery percentage less than 15%
-    - Recently added devices - Devices in this group which are provisioned in the time period of last 3 days
-
-2. **Actions**
-    The groups actions such as Reboot, Screen lock and Heartbeat can be applied on all the devices in a group as a mass action. 
-    
-    ![Group Management](./assets/groups/groupsactions1.png)
-
-    Reboot - When the Reboot action is applied on a group, all active devices will receive the command to reboot. The live report generated will show the progress bar of reboot action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
-
-    ![Group Management](./assets/groups/groupsactions2.png)
-
-    On clicking "See details", a live status update of successful and unsuccessful devices and reason for failure appears in a sidebar such as follows -
-
-    ![Group Management](./assets/groups/groupsactionsstatus2.png)
-
-    Refresh button can be clicked to get the latest update. Clicking on 'Success' will show details of succeeded devices and 'Failed' shows status of failed devices.
-
-    Screen lock - When the Screen lock action is applied on a group, all active devices will receive the command to lock screen. The live report generated will show the progress bar of locking action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
-    
-
-    Heart beat - When the Heart beat action is applied on a group, all active devices will receive the command to report whether they are online (or alive). The live report generated will show the progress bar of 'ping' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
-
-    Wipe device - When the Wipe action is applied on a group, all active devices will receive the command to reset themselves to factory settings. The live report generated will show the progress bar of 'wipe' action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
-
-    Push a WiFi access point - When a WiFi access point is pushed to a group, dashboard user will be asked to enter the details of WiFi access point.
-
-    ![Group Management](./assets/devicesettings/devicewifiap.png)
-
-    All active devices will receive the command to connect to the given WiFi access point. The live report generated will show the progress bar of the action on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices in similar fashion as shown in images of the Reboot action.
-
-
-    :::tip
-    The groups actions will get applied on active (online) devices. The inactive devices currently do not get the command if they are not online at the time the action was applied.
-    :::
-
-3. **Compliance Policy** 
-    A pre created compliance policy can be chosen from the drop down and applied to all devices in the group in one click. A preview of the chosen policy can be viewed under the drop down as seen below. 
-
-    ![Group Management](./assets/groups/groupspolicy.png)
-
-    When a Compliance Policy is applied on a group, all active devices will receive the command to comply by the given policy. The live report generated will show the progress bar of application of policy on group and count of successful and unsuccessful attempts on active devices as well as the number of inactive devices as seen below- 
-
-    ![Group Management](./assets/groups/groupspolicy1.png)
-
-    On clicking `Show more` user can see the details such as name of active devices, model, current policy and last updated for Active as well as Inactive devices.
-
-    Active device detail status for policy application-
-    ![Group Management](./assets/groups/groupspolicy2.png)
-
-    Inactive device detail status for policy application-
-    ![Group Management](./assets/groups/groupspolicy4.png)
-
-    Once the policy application process is completed, another line is added detailing the policy application failure on devices. This lists Device names, model and reason for failure as shown below-
-    ![Group Management](./assets/groups/groupspolicy3.png)
-
-
-    :::tip
-    The compliance policy will get applied on active (online) devices. The inactive devices currently do not get the policy if they are not online at the time the action was applied.
-    :::
-
-4. **Apps** 
-
-    To address the need to manage app actions on fleet of devices, we rolled out our initial implementation of a robust App Unification feature on our Cloud backend which enables Esper to easily handle all types of apps and app-related actions for customers at the Group level.
-
-    The app section in group has 3 sub sections- 
-    1. Install/Uninstall
-    2. Scheduled Install
-    3. Approvals
-
-
-    **Install/Uninstall**
-
-    This section is used to install of uninstall **privately uploaded apps (also knowns as Enterprise apps) and Google Play apps** to the groups.
-
-    To deploy a Google app or a private app to a group, go to Groups > Details for the group you wish to deploy the app on. Go to the Apps tab where you will view this screen.
-
-
-    ![Group Management](./assets/groups/groupsapps1.png)
-
-    Choose between Install and Uninstall actions in the drop-down select app action. The Select App dropdown then shows a list of all uploaded private APKs and approved Google apps. 
-
-    After selecting a version from the "Select Version" dropdown, in the 'App Details Preview', you can see under the heading 'App type' indicating whether its a private app (App type - Enterprise) or a Google app (App type - Google) as shown below. 
-
-    ![Group Management](./assets/groups/groupsapps2.png)
-
-    Additionally, you can also view the app icon, app name, version number and package name of the app in this section. Clicking the Install button on the bottom right will deploy the app on the group.
-
-    ![Group Management](./assets/groups/groupsapps3.png)
-
-    A collapsible sidebar will appear on the right showing the latest status of the install command fired on the devices in the group. Click on Success and Failed to view the device name, model and status of the devices that received the commands successfully and devices that failed to receive the command respectively. 
-
-    ![Group Management](./assets/groups/groupsapps4.png)
-
-    It will continue to update the status over a period of 3 minutes after which you can use the refresh function to get the latest installation status from the devices.  
-
-
-    Groups Uninstall works similarly as above if the App action chosen is 'Uninstall' in the dropdown menu.
-
-
-    History of Groups App commands - 
-    The history sections shows the history of the group commands for installation and uninstallation of apps fired on the group. 
-
-    ![Group Management](./assets/groups/groupsappshistory.png)
-
-    Details such as app name, action applied, app type, app version, package name and status can be viewed in columns in a paginated report. The Results column has a link to 'View' which can show the detailed report on the collapsible sidebar for successful and failed devices for that command. 
-
-    Both the command history and detailed sidebar reports are refreshable manually by dashboard user.
-
-
-
-    **Scheduled install**
-
-    You may create a scheduled app install by clicking the `Create Scheduled install` button. Enter the App name, version, schedule the start and end date/time for the app install. Lastly, give this schedule a unique name and click "Create Schedule" to get started.
-
-    ![Group Management](./assets/OLD_DASHBOARD/5.1_GM.png)
-
-    You can also view scheduled app installation for Group along with start and end time.
-
-    ![Group Management](./assets/OLD_DASHBOARD/5_GM.png)
-
-
-    You can click on **`View Results`** to see the number of successful and unsuccessful device installations:
-
-    ![Group Management](./assets/OLD_DASHBOARD/6_GM.png)
-
-    **Approvals**
-
-    The approvals section is to show, hide or disable In-ROM apps (also referred to as Preloaded apps) on devices.
-
-    The catch is that admin needs to enter the exact package name of the In-ROM app that they wish to approve or unapprove. The best way to get the exact package name of an In-ROM app is via an adb command as shown below - 
-
-
-    `adb shell pm list packages`
-
-    User should turn on adb for the device (physically connected via USB) from Device->Actions(Settings), authorize adb usage from the device and run the above command to get the exact package name as shown -  
-
-    ![Group Management](./assets/groups/groupsapps11.png)
-
-
-    Once you have the exact package name of the In-ROM app you wish to execute the action on, go to Approvals section in Groups. The following screen will show - 
-
-    ![Group Management](./assets/groups/groupsapprovals1.png)
-
-    There are three options here - Show, Hide and Disable. You may enter the package name and choose any of these 3 options. Click 'Apply'. 
-
-    A prompt such as below will appear (in this example, we chose 'Show') - 
-
-    ![Group Management](./assets/groups/groupsapprovals2.png)
-
-    Click 'Yes' and the group command status will start to show -
-
-
-    ![Group Management](./assets/groups/groupsapprovals3.png)
-
-    Just like other group commands, click 'See details' to view the collapsible sidebar report - 
-
-    ![Group Management](./assets/groups/groupsapprovals4.png)
-
-    Similar functionality is present for Hide and Disable actions for In-ROM apps.
-
-5. **OS Updates**
-
-This section is only relevant for fleet of Esper Enhanced Android devices.  
-
-Here you can see a list of the Esper Enhanced Android updates that have been deployed on the current group with details such as build number, device type, number of devices, and date deployed along with an option to view results.
-
-![Group Management](./assets/groups/groupsos1.png)
-
-By clicking on the **`Deploy OS Updates`** button you may choose any available Build number by then clicking on **`Select Build`**.
-
-![Group Management](./assets/groups/groupsos2.png)
-
-:::tip
-Please note that currently only the latest 30 builds of the Esper Enhanced Android updates will be visible to the user for deployment
+:::tip 
+Any actions initiated to a group are immediate, they are not queued. Devices that are offline (inactive) will be unable to receive the command for these actions. Esper employs a combination of popdowns and slide outs to give you both status and summary of an action taken with a group of devices.
 :::
 
-![Group Management](./assets/groups/groupsos3.png)
+**Reboot**
+When you click Reboot, the Esper Console will send the command to reboot all the active devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
 
-The **`Number of devices`** will populate with the devices in the group on which this update is applicable; this pertains to those that have an OS build version lower than the selected version for the deployment:
+![Groups](./assets/NewConsole/Reboot.png)
 
-![Group Management](./assets/groups/groupsos4.png)
+Click on See details to see the status of each of the devices in the group.
 
-You may add the installation name, any pertinent notes, and after that click **`Save`**:
+![Groups](./assets/NewConsole/RebootDetails.png)
 
+Once the set of reboot commands are sent, a success toast notification will appear in the bottom left corner of the screen.
 
-Coming Soon! 
-In a future update users will have the option to choose the time window for their OS update installation.
+**Screen Lock**
+
+When you click Screen lock, the Esper Console will send the command to lock screen to all the active devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
+
+![Groups](./assets/NewConsole/ScreenLockStatus.png)
+
+Click on See details to see the status of each of the devices in the group.
+
+![Groups](./assets/NewConsole/LockStatus.png)
+
+Once the set of screen lock commands are sent, a success toast will appear in the bottom left hand corner of the screen.
+
+**Heart Beat**  
+
+When you click Heart beat, the Esper Console will attempt to ping all the devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
+
+![Groups](./assets/NewConsole/Heartbeat.png)
+
+Click on **See details** and a slide out will appear.
+
+![Groups](./assets/NewConsole/HeartbeatDetails.png)
+
+Once the set of ping commands are sent, a success toast will appear in the bottom left hand corner of the screen.
+
+**Wipe**
+
+When you click **Wipe**, the Esper Console will send a command to all the devices in the group to reset themselves to original factory settings—much like performing a factory reset. They will be removed from the Esper console. 
+
+If you’d like to wipe external data as part of the same command, click the **Yes** radio button under Wipe external Data. Then click **Confirm**.
+
+![Groups](./assets/NewConsole/WipeConfirmation.png)
+
+A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
+
+![Groups](./assets/NewConsole/Wipe.png)
+
+Click on See details and a slide out will appear.
+
+![Groups](./assets/NewConsole/WipeDetails.png)
+
+Once the set of wipe commands are sent, a success toast will appear in the bottom left hand corner of the screen.
+
+**Push a Wi-Fi Access Point**
+
+When you push a Wi-Fi access point to a group, you’ll be asked to enter the details of the Wi-Fi access point.
+
+![Groups](./assets/NewConsole/WIFIAccessPointDetails.png)
+
+When you click **Save** all the active devices will receive the command to connect to the new Wi-Fi access point. As with the other action commands in this section, a popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts on active devices as well as the number of inactive devices.
+
+**Display**
+
+This section lets you adjust the display settings of the device. 
+
+![Groups](./assets/NewConsole/DisplayScreenOrientation.png)
+
+Use the **Brightness** slider to Increase or decrease the brightness of the screen.
+
+Use the **Screen Orientation** buttons to select your preferred screen orientation, whether auto, landscape, or portrait.
+
+Select a time from the **Screen Timeout** dropdown menu.
+
+Once all changes are made, click **Apply changes** to push them out to the group, or **Cancel** if you wish to keep the current settings.
+
+A popdown will show the progress of the action or actions, indicating the number of successful and unsuccessful attempts.. In this example we changed settings for brightness, screen orientation, and screen timeout for the group.
+
+![Groups](./assets/NewConsole/BrightnessScreen.png)
+
+Click on **See details** for any of the popdowns and a slide out will appear specific to that setting.
+
+![Groups](./assets/NewConsole/SetBrightnessDetails.png)
+
+A toast message or messages will appear in the bottom right section of the screen indicating success for executing the command or commands to the group of devices.
+
+**Sound**
+
+This section lets you adjust the sound settings of the devices in the group. Use the sliders to adjust the:
+   Alarm volume
+   Notification volume
+   Music volume
+   Ring volume
+
+![Groups](./assets/NewConsole/SettingsSound.png)
+
+Once all changes are made, click Apply changes to push them out to the device, or Cancel if you wish to keep the current settings.
+
+![Groups](./assets/NewConsole/CancelApplyChanges.png)
+
+A popdown will show the progress of the action or actions, indicating the number of successful and unsuccessful attempts. In this example we changed settings for alarm volume, notification volume, music volume, and ring volume for the group.
+
+![Groups](./assets/NewConsole/SettingsSound.png)
+
+Click on See details for any of the popdowns and a slide out will appear specific to that setting.
+
+![Groups](./assets/NewConsole/SetStreamVolume.png)
+
+After applying any changes, individual toast messages will appear in the bottom right corner of the screen indicating success or error for each change made.
+
+**Wi-Fi & Internet**
+
+Wi-Fi & Internet enables you to turn Wi-Fi connectivity on or off for all devices in the group. 
+
+![Groups](./assets/NewConsole/WIFIInternetON.png)
+
+This can be done if the device has an alternative connection available such as cellular network via SIM card or Ethernet. You will need to Confirm turning it off before this action is pushed to the group.
+
+![Groups](./assets/NewConsole/WIFIConfirm.png)
+
+A popdown will show the progress of the action or actions, indicating the number of successful and unsuccessful attempts.
+
+![Groups](./assets/NewConsole/WIFI.png)
+
+Click on **See details** and a slide out will appear.
+
+![Groups](./assets/NewConsole/SetWIFIStateDetails.png)
+
+Once the set of Wi-Fi commands are sent, a success toast message will appear at the bottom left corner of the screen.
+
+:::tip
+If you switch off Wi-Fi when no other connection is available, Esper will turn Wi-Fi back on after 10 seconds if no other internet connection is available so Esper can maintain communication with the cloud backend.
+:::
+
+**Location**
+
+Location enables you to adjust the location settings for all the devices in the group. Choose a location mode from the drop down, and once selected the command will immediately be sent to the devices in the group.
+
+![Groups](./assets/NewConsole/LocationGPS.png)
+
+A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
+
+![Groups](./assets/NewConsole/GPS.png)
+
+Click on See details and a slide out will appear.
+
+![Groups](./assets/NewConsole/GPSStateDetails.png)
+
+Once the set of location commands are sent, a success toast message will appear at the bottom left corner of the screen.
+
+**Bluetooth & Devices**
+
+Bluetooth & Devices enables you to turn Bluetooth connectivity on or off for all the devices in the group. Immediately upon switching either on or off, the command will be fired to the devices.
+
+![Groups](./assets/NewConsole/BluetoothDevices.png)
+
+A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
+
+![Groups](./assets/NewConsole/BluetoothStatus.png)
+
+Click on See details and a slide out will appear.
+
+![Groups](./assets/NewConsole/BluetoothCommandStatus.png)
+
+Once the set of Bluetooth commands are sent, a success toast message will appear at the bottom left corner of the screen.
+
+**ADB Access**
+
+ADB Access enables you to turn Android Debug Bridge on or off for all the devices in the group.
+
+![Groups](./assets/NewConsole/ADBAccess1.png)
+
+Clicking ON will then open a drop down menu to select the desired session duration. Once selected, click Apply changes to push the command to the devices, or Cancel if you wish to keep the current settings.
+
+![Groups](./assets/NewConsole/CancelApplyChanges.png)
+
+A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
+
+![Groups](./assets/NewConsole/ADBON.png)
+
+Click on See details and a slide out will appear.
+
+![Groups](./assets/NewConsole/.png)
+
+Once the set of commands are sent, a success toast message will appear at the bottom left corner of the screen.
+
+### The Event Feed Tab
+
+The Event Feed tab provides a record of all the actions taken on the group, including details about each event. This is very useful for viewing the status of any queued commands for offline devices.
+
+![Groups](./assets/NewConsole/GroupEventFeed.png)
+
+Clicking on **More Details** next to one of the events listed will cause a sidebar to slide in from the right showing the status of the installation.
+
+![Groups](./assets/NewConsole/SetWIFIStateDetails.png)
+
+### The Compliance Policy Tab
+
+Compliance Policy lets you apply an existing compliance policy to all the devices in your group. You have two choices for how a Compliance Policy is applied to a Group: apply only to online devices, or queue them for offline devices to apply if they come online for 24 hours after the new policy has been applied.
+
+![Groups](./assets/NewConsole/GroupPolicy.png)
+
+Select a previously created compliance policy from the **Select Policy** drop down, you can also search for policies by typing in the box. 
+
+![Groups](./assets/NewConsole/PolicySelect.png)
+
+A preview of the chosen policy will appear below the box.
+
+![Groups](./assets/NewConsole/CompliancePolicyPreview.png)
+
+When you apply a Compliance Policy to a group, all the online devices will receive a command to comply with the policy. If you select the checkbox next to, “Queue requests for offline devices,” the system will queue policy updates to be pushed to all offline devices that come back online within the next 24 hours. 
+
+![Groups](./assets/NewConsole/QueueRequests.png)
+
+Click Apply policy to push the Compliance Policy out to the group. A slide out appears displaying the status of applying the new policy to the devices in the group.
+
+![Groups](./assets/NewConsole/CompPolicySuccess.png)
+
+If you selected Queue requests for offline devices, then any offline devices will be displayed under the Queued tab.
+
+![Groups](./assets/NewConsole/StatusDetails.png)
+
+If you closed out of the slide out and wish to return later to check the status of the queued devices, simply go to the **Event Feed** and select **More details** for the event where you applied, this will take you back to the slide out and you can view the status.
+
+### The Apps Tab
+
+The Apps tab lets you manage the apps on all the devices in the group. This includes installing new apps, uninstalling apps, scheduling an app installation, and approving apps for the group.
+
+![Groups](./assets/NewConsole/GroupApps.png)
+
+:::tip 
+If you wish to update a currently installed app to a new version, you install that new version using any of the available means.
+:::
+
+:::tip
+You cannot uninstall in-ROM apps (called Preloaded apps). Instead you can Disable these apps using Approvals.
+:::
+
+#### Install/Uninstall
+
+The Apps section lets you install or uninstall both privately uploaded apps—also known as Enterprise Apps—and Google Play apps to the groups immediately. The action will only be performed on online devices. 
+
+To install an app on all the devices in the group first select **Install/Uninstall**, then select **Install** from the **Select App Action** dropdown. 
+
+![Groups](./assets/NewConsole/GroupInstall.png)
+
+Then select the app you’d like to install from the **Select App** dropdown. You can also type the first few letters of the app’s name into the search box to quickly find the app.
+
+![Groups](./assets/NewConsole/GroupInstallSelectApp.png)
+
+Once you’ve selected an app, its details will appear in the **App Details Preview** section, including the app’s version, package name, and app type—that is, whether it’s an Enterprise app or a Google app.
+
+![Groups](./assets/NewConsole/GroupAppInstall.png)
+
+Select a version from the Select Version dropdown and click Install. A sidebar will slide in from the right showing the status of the installation.
+
+![Groups](./assets/NewConsole/InstallSuccessDetails.png)
+
+Group Uninstall works much the same. Simply select **Uninstall** rather than **Install** from the **Select App Action** dropdown. 
+
+#### Scheduled Install
+
+This section lets you schedule an app installation or uninstallation for a specific point in the future. To schedule an install or uninstall, first select **Schedule install**.
+
+![Groups](./assets/NewConsole/ScheduledInstall.png)
+
+To schedule an app installation or uninstallation, click on the **Create scheduled install** button. You will be taken to a new screen where you enter the schedule details.
+
+![Groups](./assets/NewConsole/ScheduledInstallCreate1.png)
+
+Enter a unique name for the scheduled installation or uninstallation in the Name field. Names cannot be reused. Select Install or Uninstall from the Select App Action dropdown.
+
+![Groups](./assets/NewConsole/GroupInstall.png)
+
+Select the app you want to install or uninstall from the Select App dropdown.
+
+![Groups](./assets/NewConsole/GroupInstallSelectApp.png)
+
+Use the radio buttons to choose between using the device’s time or your console’s time when scheduling an application installation or uninstallation for a group. If you select **Device time** when you schedule an app installation, the installation (or uninstallation) will be performed on the devices in that group whenever it’s the specified time on each device.
+
+![Groups](./assets/NewConsole/ScheduledInstallDeviceTime.png)
+
+You also have the option to define a recurring schedule by selecting **Recurring schedule** — for instance, to schedule an application installation every Monday between 2:00 AM and 5:00 AM from May 1st to May 10th.
+
+Select start and end dates from the Start Date and End Date dropdowns and start and stop times from the Start Time and End Time dropdowns. The click **Create Schedule**.
+
+After the scheduled installation has been completed, you can see the status of the action by clicking **View Results** next to the entry for the installation.
+
+![Groups](./assets/NewConsole/GroupApps.png)
+
+#### Approvals
+
+The Approvals section enables you to show, hide or disable in-ROM apps (also referred to as Preloaded apps) on all the devices in the group.
+
+![Groups](./assets/NewConsole/GroupApprovals.png)
+
+To change the approval status of an app, enter its package name in the box and click **Show, Hide**, or **Disable**.
+
+Click **Apply**. The console will display the group command status.
+
+![Groups](./assets/NewConsole/SettingsActionStatus.png)
+
+Clicking See Details will cause a sidebar to slide in from the right showing the status of the installation.
+
+![Groups](./assets/NewConsole/AppStateDetails.png)
+
+:::tip 
+You will need to enter the exact package name of any in-ROM apps you wish to show, hide, or delete. For example, Chrome’s package name is “com.android.chrome;” just entering “Chrome” or “Google Chrome” will not work.
+:::
+
+**Finding Package Names**
+
+The best way to get the exact package name of an in-ROM app is to use an Android Debug Bridge (ADB) command to retrieve the names of all the packages.
+
+Physically connect to the device using a USB cable and authorize ADB usage on the device by going to Device > Settings. Once ADB usage is authorized, the following command will retrieve the names of all the package names:
+ 
+*adb shell pm list packages*
+ 
+ADB will return a list of all the apps running on the device:
+
+![Groups](./assets/NewConsole/ADBCommands.png)
+
+You can also view the package names for any apps installed on a device by viewing the device’s details and selecting Apps. The package name for each app is displayed in the resulting list view.
+
+### OS Updates
+
+The OS Updates section enables you to push operating-system updates to all the devices in the group that run Esper Enhanced Android.
+
+![Groups](./assets/NewConsole/GroupOSUpdates.png)
+
+:::tip
+The OS Updates section is only relevant for groups containing only Esper Enhanced Android devices.  
+:::
+
+To deploy an OS update to all the devices in a group, click **Deploy OS Updates**.
+
+![Groups](./assets/NewConsole/GroupDeployOSUpdates.png)
+
+Click **Select Build** to select one of the available builds.
+
+![Groups](./assets/NewConsole/GroupNewInstall.png)
+
+Click the radio button next to the build you want to deploy.
+
+:::tip
+Only the latest 30 builds of the Esper Enhanced Android updates will be available for deployment.
+:::
+
+![Groups](./assets/NewConsole/SelectBuild.png)
+
+The **Number of Devices** field will populate with the devices in the group on which this update is applicable; that is, the number of devices that have an OS build version lower than the selected version for the deployment. Add the installation name and any pertinent notes and click Save.
+
 
 ## Apps
 
@@ -2162,168 +2331,282 @@ To delete an alert, click on the ellipsis (...) next to its listing on the Alert
 
 ## Compliance Policy
 
-Policy is a standard set of rules or permissions that are related to security of the devices and apps that admin can apply on the devices to be provisioned via template. Admin may set default app permissions, Android setting app, system updates, password rules, and turn on the toggle buttons for the settings he/she wishes to enable on the devices.
+A Compliance Policy is a set of rules or permissions related to the device configurations that can be applied to devices managed by Esper. The Compliance Policy section enables you to create a policy that sets these parameters. 
 
-- A new policy is created and can be deployed on any device.
-- The new policy gets listed on the **'Compliance Policy'** page which can be edited or deleted as required:
+![CompliancePolicy](./assets/NewConsole/CompliancePolicy.png)
 
-![Policy Management](./assets/OLD_DASHBOARD/3_PM.png)
+The **Compliance Policy** section lists all the policies that have already been created. 
+You have four options with these, indicated by the four icons to the right of each compliance policy listing.
 
+![CompliancePolicy](./assets/NewConsole/Actions.png)
 
-### Create a policy
+The options are:
+   Duplicate the Policy (two pages icon)
+      Clicking this icon duplicates an existing compliance policy so you can use it as the basis for a new policy.
+   View the Policy (eye icon)
+      Clicking this icon lets you view an existing compliance policy.
+   Edit the Policy (pencil icon)
+      Clicking this icon lets you make changes to an existing compliance policy. Once the policy has been applied to a device       or devices, it cannot be changed and this option will be greyed out.
+   Delete the Policy (garbage can icon)
+      Clicking this icon deletes a policy.
+   
+Use Search to find an already created Compliance Policy by Policy name.
 
-Click on `New Policy` to start creating a new policy.
+### Creating a New Compliance Policy
 
-![Policy Management](./assets/policy/createpolicy1.png)
+To create a new Compliance Policy, click New Policy. This will bring up a screen in which you can set all the configurations of the new Compliance Policy. The layout is the same as when you [define a Compliance Policy in a Provisioning Template], but uniquely includes the name and description.
 
-Dashboard users and admins create policies in a context, for example a compliance policy for any device operating at retail outlets in Texas. The description box enables the context to be associated and saved with Compliance Policies.
+![CompliancePolicy](./assets/NewConsole/.png)
 
-![Policy Management](./assets/policy/createpolicy2.png)
+**Enter a Policy Name and Description**
 
-Below is a list of features you can turn on or off in the policy section. These are part of our standard Compliance policy that can be configured and reapplied as per requirements of the customer after provisioning.
+Enter a unique name for your new compliance policy in the Policy Name field; enter an optional description in the Description field.
 
-### Available policy options
+![CompliancePolicy](./assets/NewConsole/CompliancePolicyCreate.png)
 
-1.  Device Password Rules - If you choose alphabetic or alphanumeric, a minimum password length can be entered. The default minimum password length is 4. <br> The Password rule is a policy that specifies the rules for the device unlock password that users can set.
+**Lock Screen Password Rules**
 
-    Alphabetic: Restricts acceptable password to contain only alphabetic characters (A to Z) in both upper and lower case.
+The Lock screen password rule specifies the conditions for the device unlock password, with the default being None.
 
-    Alphanumeric: Expands from Alphabetic to also include numbers and special characters.
+![CompliancePolicy](./assets/NewConsole/LockScreenPwd.png)
 
-    None: There is no password required to lock the device.
+If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to 25—use the small up/down arrows to set your required password length:
 
-    The password for a device is setup during the initial setup of the device by the user.
+![CompliancePolicy](./assets/NewConsole/LockPwdLength.png)
 
-    <br/>
+**Alphabetic**: Restricts acceptable password to only upper and lowercase alphabetic characters (A to Z, and a to z).
+**Alphanumeric**: Expands acceptable password to include numbers, and special characters in addition to alphabetic characters.
+**None**: There is no password required to unlock the device.
 
-2.  Default App Permission<br> 
+The password for a device will be set up during the initial setup of the device by the user.
 
-    Default app permissions determines enforcement of the runtime-permission rule across all the apps on a device (e.g. Gallery, Camera).
+Lock screen must be on in order to set Lock screen password rules. If you select either Alphabetic or Alphanumeric password rules, then Lock screen will be set to On by Esper if it is currently Off.
 
+**Default App Permission**
 
-    Allow automatically: This rule will grant all the permissions any app requests without showing a prompt to the user.
+Default app permissions determine enforcement of the runtime-permission rule across all the apps on a device including Enterprise apps installed by Esper, in-ROM apps that are enabled, as well as any installed via Managed Google Play. This ensures you can control the user experience on the device regarding how run-time permissions are granted.
 
-    Ask user: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as "Allow app X to access Gallery? Allow/Deny"
+![CompliancePolicy](./assets/NewConsole/TemplateAppPermission.png)
 
-    Deny automatically: This rule will deny any permission request from any app on the device.<br/>
+There are three possible settings:
 
-3.  System Updates<br> The System updates option allows you to enforce a system update policy on the device when a system update/OTA update is available.
+**Allow Automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user. This is the typical setting used for single-purpose solutions using a fully trusted, customer-supplied application.
 
-    Update automatically: Enforcing this rule will install any OTA update automatically and reboot the device without requesting the user.
+**Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”. This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions—contact us directly to find out more.
 
-    Postpone installation: This option postpones installation of an OTA update for 30 days.
+**Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can grant permissions to apps individually from the Esper Console.
 
-    Windowed installation: This option allows you to define a time window during a full day period inside which the OTA update will be installed.
+**System Updates**
 
-     <br/>
+The System updates option allows you to enforce a system update policy on the device when a system update is available via the device’s over-the-air (OTA) update service.
 
-4.  Android Settings App<br> Android settings app determines how users can access the Android device settings. There are three options to choose for the type of settings app to be made available on the device as follows - 
+![CompliancePolicy](./assets/NewConsole/TemplateSysUpdates.png)
 
-    _Default setting app_: Selecting this will show the icon for the default Android settings app. Clicking this icon will take the user to the default Android settings.
+There are four possible settings:
 
-    _No settings app_: No icon for any settings app will be available for the user to choose from the device’s dashboard.
+**Update automatically**: This option will install any over-the-air (OTA) updates automatically as soon as they become available without user interaction,  and reboot the devices when necessary.
+**Postpone installation**: This option postpones installation of an OTA update for 30 days. After 30 days, the system will prompt the device user to install the update. Subsequent updates will also follow the same 30-day postponement. This is ideal when you need time to validate your solution against new system updates before they are installed.
+**Windowed Installation**: This option allows you to define a window of time during which the OTA update will be installed without user interaction. This option is ideal for devices with a known down period. A drop-down will appear to enable you to set the start and end times for the maintenance window.
+**Disable Update**: This option allows you to disable updates on the device. It is available for a limited set of OTA services that support this feature. If the device does not support disabling updates, it will default to Postpone installation. Before setting this option please contact Esper directly to make sure the devices you plan to provision support this configuration.
 
-    _Esper settings app_: Esper offers a custom Settings’ app that limits the user to only a subset of the available Android settings. This app is made secure via the Esper settings app password protection. Settings provided via this app are limited to:
-    1. Changing the Wi-Fi Access Point
+**Android Settings App**
 
-    2. Enabling the "flashlight" if there’s a camera flash LED on the device
+Android settings app determines how users can access the Android device settings.
 
-    3. Control the display orientation of the device.
+![CompliancePolicy](./assets/NewConsole/AndroidSettingsApp.png)
 
-    4. A robust means for users to be able to factory reset their device irrespective of the policy. 
-        
-    5. About - We have added information regarding provisioning endpoint in the about section for the user to be able to view the endpoint name the device is registered in, in case they have access to multiple endpoints.
-        
-    6. Kiosk app - An option to switch the kiosk app from this menu. User can choose any installed app on device to act as the kiosk app.
-        
-    7. Esper Branding - User can turn off the Esper logo in case they wish to use their own logo as a reseller of Esper platform.
-        
+There are three possible settings:
+
+**System settings app**: This setting will display the icon for the default Android settings app on the Home screen. Clicking this icon will take the user to the default Android settings. Depending on the other configurations set by the Compliance Policy, some options may be disabled to the user. If an app is set up in Kiosk mode on the device, the System settings app will be inaccessible to the device user while the app is in Kiosk mode.
+
+**None**: No icon for any settings app will be available for the user to choose from the device’s Home screen.
+
+**Esper settings app**: Esper offers a custom settings app that gives device users access to a subset of the available Android settings when servicing a device. The Esper settings app is intended for use by technicians servicing a device locally. It’s protected by the Dock & Esper Settings App password to prevent unauthorized access. This app offers a reduced number of settings:
+   Wi-Fi: Change the Wi-Fi access point used by the device.
+   Torch: Turn on the Torch (AKA “flashlight”) if the device has a camera flash LED.
+   Auto-Rotation: Turn auto-rotation on or off.
+   Factory Reset: Perform a factory reset of the device, regardless of the Compliance Policy applied. 
+   Kiosk App: Change the app that runs in kiosk mode. The device user can choose any installed app on the device to act as       the kiosk app, with the Esper Console kept in sync on the configuration stats.
+   Esper Branding: Turn off the Esper logo on the Home screen.
+   About: Supplies information regarding the endpoint name the device is enrolled in, in case the customer has access to multiple Esper endpoints.
+   
+   ![CompliancePolicy](./assets/NewConsole/EsperSettingsApp.png)
     
-    ![Esper Branding](./assets/esperSettingsApp/espersettingapp1.png)
+**Dock & Empty Settings App Password**
 
-    <br/>
+The dock is specifically for devices in Kiosk mode. When a device is in kiosk mode, you can access the dock by tapping 3 times in the upper left corner of the screen, or by pressing the power button consecutively 3 times with a slight pause between each press. When you do so, an expander arrow will slide out of the upper right corner:
 
+Tap the expander arrow; you’ll need to enter the password you set in the Compliance Policy.
 
+![CompliancePolicy](./assets/NewConsole/DeviceAppSlider.jpg)
 
-### Google Account Restrictions
+Once you’ve entered the password, a dock will slide out that gives you three options:
+   Exit Kiosk mode. If the device is in multi-app mode, no action is taken.
+   Reboot the device.
+   Open the  Esper Settings app; selecting the Esper Settings app will require you to enter the password again to gain access.
 
- This feature gives users an option to restrict the number of Google accounts that can be added on the device and be used with Google apps such as Gmail, Google Play Store, Youtube etc. By default, the addition of any number of accounts is allowed, however, if the admin applies a Compliance policy by checking the box shown below, the number of allowed accounts will be restricted to the admin entered value. For example, if the admin has set it to 2, after adding two accounts on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
-Note: If user has not checked this box in the applied policy, it is recommended that they disable Google Play Store to prevent installation of unapproved apps.
-
-
-![Google Account Restrictions](./assets/GoogleAccountid/googleaccountpermission1.png)
+To slide the dock back in, click on the expander arrow again; it will disappear after a few seconds.
 
 :::tip
-The Google Account Restriction feature is applicable only to GMS android devices ie the android devices that support Google Mobile Services.
+If you exit Kiosk mode into multi-app mode, you can still activate the expander arrow by pressing the power button 3 times to ensure you can put the device back into Kiosk mode locally even if the Esper Settings app was not included on the Home screen.
 :::
 
+**Dock and Esper Settings App Password**
 
-### Factory Reset Protection <br>
+ This password controls access to the hidden dock available in kiosk mode, the Esper Settings app, and serves as the PIN used for IMEI-based provisioning via AfW. The password is alphanumeric and can be from 1 to 10 characters.
 
-_FRP Toggle Button_ - FRP or Factory Reset Protection enables you to lock your device if a user tries to factory reset it via soft/hard keys. In case of a factory reset, the device will get locked and will only be reusable by a pre-authorized google account ID. See Policy section in docs to know how to get your google account id. Note that this feature is only available on android versions 5 and above. <br>
+![CompliancePolicy](./assets/NewConsole/DockEsperSettingsPassword.png)
 
-![Factory Reset Protection](./assets/GoogleAccountid/factory_reset_protection.png)
+The default password is 1234. It is possible to set up a template without a password for these features, or just leave the default password; Esper strongly recommends setting up a more complex password for stronger security. The same password will be set for all devices provisioned using the template.
 
-On turning on the FRP button, user needs to enter the Google ID of the account they wish to authorize to enable usage of the device post factory reset. <br/> See [here](./console/policy-management/getgoogleaccount.md) to know how to get the Google account ID of your account and how FRP protects your device.
+:::tip 
+If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings app or the Android settings app as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.
+:::
 
-Other Compliance Policy Toggle Buttons-<br>
+**Google Account Restrictions**
 
-1.  Lock Screen<br> If Locked screen is switched ON, it enables the default "lock screen" to be displayed upon a screen timeout as specified in the Settings section. If it is enabled, the user has an option to set the password rule in the dropdown above. <br/>
-2.  Safe-Mode Login<br> Turn Safe mode login On to allow users to boot to safe mode on their device. Leave Off to prevent Safe mode login.<br/>
-3.  Factory Reset<br> Factory reset dictates whether or not the user can perform a factory reset on the device. Turning it Off prevents a factory reset by the user. This is not inclusive of the hard key factory reset. <br/>
-4.  Notification bar<br> Notification bar dictates whether or not a user can swipe down to display the notification bar. Turn On to enable access to the Notification bar. <br/>
-5.  Screenshot<br> Screenshot allows or prevents a user from taking screenshots on the device using available screenshot actions. Turn On to allow screenshots. <br/>
-6.  USB connectivity<br> USB connectivity allows or prevents the user to be able to communicate via USB on-the-go. Turn On to allow. <br/>
-7.  SMS<br> SMS controls the ability of the device to send or receive SMS. If it is turned Off it prevents the device from using SMS regardless of which SMS app is used. Turn On if you wish to enable the device to send and receive SMS. <br/>
-8.  Outgoing calls <br> Outgoing calls determines whether a user can make outgoing calls from the device. Turn On to allow outgoing calls, turn Off to prevent. <br/>
-9.  Camera Access<br> Camera access allows or prevents a user to access the device’s camera. Turn On to allow.<br/>
-10. NFC <br> NFC controls the device’s ability to use NFC if it is supported by the device. Turning Off prevents the device or any app from using NFC. Turn On if any of your apps require NFC. <br/>
-11. Google PlayStore<br> Google PlayStore determines if the Google PlayStore app is available to the user on the device. Turn On to allow the user access to the Google PlayStore of admin approved Google Play Apps.<br/>
-12. Wifi <br> Wifi can be turned off on the device if there are other type of networks such as cellular present on the device. In case on no network availability, the Wifi policy will auto switch to on in-order to ensure the connectivity of the device with the cloud. <br/>
-13. USB tethering<br> USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop<br/>
-14. Edit date and time<br> Edit date and time determines if the user can change the date and time on device. Turn On to allow changes by the user. <br/>
-15. Application uninstall<br> For devices running Android 4.4 or 5.1, turning this setting On will block app uninstallation, especially important for private apps. This setting is not needed if you are running Android 6.0 or above. <br/>
-16. USB File transfer <br> Turning off USB file transfer will prevent the user from transferring files from the device to a computer and vice versa using a USB cable<br/>
-17. Google Assistant  <br> Enables/disables voice command via Google Assistant. Available only for Android devices supporting Google Assistant. For example - If you wish to have Google Play Store show up on the device, you may turn on the toggle button. <br>
-18. Local App Install<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings->Apps and notifications-> Special app permissions ->Install Unknown Apps and choose the route they wish to install the apps from. For example, if device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned Off, the device user will not be allowed to install apps from any unknown sources.<br>
+This setting enables you to restrict the number of Google accounts that can be added on the device and used with Google apps like Gmail, Google Play Store, and YouTube. By default, any number of accounts can be added to a specific device; this setting restricts this number. For example, if you set this setting to two, only two accounts will be permitted on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 
-![LocalAppInstall](./assets/policy/localappinstall.png)
- <br/>
-
-Checkbox-<br> `Restrict outgoing/incoming calls using customised dialer.` <br>
-
-![Restrictcall](./assets/policy/restrictcall.png)
-
-If clicked, this opens up two more checkboxes-<br>
-
-1.  `Restrict incoming calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br>
-2.  `Restrict outgoing calls to uploaded contacts only <upload a CSV file of allowed contacts>`<br>
-
-In order to restrict phone numbers that can make or receive calls to the device, upload a .csv file with the allowed phone numbers.<br>
+If you don’t check the Google account restrictions box and plan to provision your device in Multi application mode, we recommend disabling Google Play Store to prevent installation of unapproved apps.
 
 :::tip
+The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set Number of accounts to 0.
+:::
+
+**Factory Reset Protection** 
+
+Factory Reset Protection (FRP) enables you to lock a device if a user factory resets it via soft/hard keys on GMS devices. In case of a factory reset, the device will get locked and can only be unlocked by entering a pre-authorized google account ID. Additional information about how to get your Google Account ID is available in the Compliance Policy section.
+
+When you turn on the FRP button, you’ll need to enter the Google ID of the account you want to use to authorize post factory resets on the devices provisioned with this template.
+
+![CompliancePolicy](./assets/NewConsole/.png)
+
+:::tip
+This feature is only available on GMS devices running Android 5.1 and above.
+:::
+
+**Lock Screen**
+
+If Lock Screen is on, it enables the default “lock screen” to be displayed upon a screen timeout as specified in the Settings section. If this is on, the device user will have the option to set the password. If Lock screen password rules are defined, the device user will be required to enter a password that conforms with these rules.
+
+**Safe-Mode Login**
+
+When Safe-mode login is on, users will be able to boot to Safe Mode on their device; when Safe-mode login is off, users will be unable to boot to Safe Mode.
+
+**Factory Reset**
+
+Factory Reset controls whether or not the user can perform a factory reset on the device using the Android Settings app. When Factory Reset is off, the user will not be able to perform a factory reset on the device. This does not prevent a hard-key factory reset, see Factory Reset Protection to prevent hard-key factory reset.
+
+**Notification Bar**
+
+If you want device users to be able to swipe down to see the notification bar, set Notification Bar to on. If you don’t, set it to off. You will typically want this off for Kiosk mode-based solutions. 
+Conversely in most cases a user is required to submit a Bug Report that was requested through Esper via the Notification Bar, thus inaccessible with the Notification Bar turned off.
+
+**Screenshot**
+
+If you want device users to be able to take screenshots, set Screenshot to On. If you don’t, set it to Off. This will prevent users from initiating a screenshot using the appropriate hardkey sequence or available softkey on the device.
+
+**USB Connectivity**
+
+USB connectivity allows users to connect USB devices—things like flash drives, digital cameras, mice, or keyboards—to the device. If you want device users to be able to connect other hardware to the device, set USB Connectivity to on. If you don’t, set it to off.
+
+**SMS**
+
+SMS controls the ability of the device to send or receive text messages via short-message service (SMS). If it is turned Off, the device will not send or receive text messages regardless of which SMS app is used. Set SMS to on if you wish to enable the device to send and receive text messages via SMS.
+
+**Outgoing Calls**
+
+If you want device users to be able to make outgoing calls, set Outgoing Calls to on. If you don’t, set it to off.
+
+**Camera Access**
+
+If you want device users to be able to use the camera, set Camera Access to on. If you don’t, set it to off.
+
+:::tip
+Your app will still be able to access the camera if this setting is set to off.
+:::
+
+**NFC**
+
+If you want device users to be able to use near-field communication (NFC) on their devices—on those devices that support NFC—set NFC to on; if you don’t, set it to off. If any of your apps require NFC, make sure this setting is set to on.
+
+**Google Play Store**
+
+If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to On; if you don’t, set it to Off. You’ll still be able to install any approved Google Play Store apps from Esper onto the device. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.
+
+**USB Tethering**
+
+USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to On; if you don’t, set it to Off.
+
+**Edit Date and Time**
+If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to On; if you don’t set it to Off.
+
+**Application Uninstall**
+
+Setting Application uninstall to On will block app uninstallation both locally on the device and using Esper. Set it to off if you need to be able to uninstall applications remotely using Esper. 
+
+:::tip
+With this set to on you will still be able to update your application installed on the device using Esper.
+:::
+
+**USB File Transfer**
+
+If you’d like device users to be able to transfer files to or from the device using a USB cable or flash drive, set USB file transfer to On; if you don’t, set it to Off.
+
+**Google Assistant**
+
+If you’d like device users to be able to use voice command via Google Assistant on devices where this is supported, set Google Assistant to On; if you don’t, set it to Off.
+
+:::tip
+On a few devices, this setting may need to be on if you wish to have Google Play Store show up on the device. 
+:::
+
+**Local App Install**
+
+This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. Settings >Apps and Notifications > Special App Permissions> Install Unknown Apps and choose the route they wish to install the apps from. For example, if the device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned off, the device user will not be allowed to install apps from any unknown sources.
+
+**Restrict Incoming and Outgoing Calls**
+
+Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
+   Restrict incoming calls to uploaded contacts only
+   Restrict outgoing calls to uploaded contacts only
+   
+![CompliancePolicy](./assets/NewConsole/TemplateCustomDialer.png)
+
+Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file.
+
+:::tip 
 All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
 :::
- <br>
 
-ADB - Google defines ADB as "Android Debug Bridge (adb) is a versatile command-line tool that provides access to Unix shell to communicate with an android device."
- 
-If checked in policy, dashboard user may turn on ADB via Dashboard Settings for a configurable time period.  If unchecked, ADB can not be turned on from Settings.
- 
-NOTE: We NEVER allow turning on ADB from device end for an Esper provisioned device.
- 
- 
-![ADB](./assets/template/adbinpolicy.png)
- 
- 
-Here is how the Compliance Policy page of the Dashboard looks like -
-<br>
- 
-![Compliance Policy](./assets/OLD_DASHBOARD/newpolicy.png)
- 
- 
-You may reset these values to default at any time by clicking `Reset to Default` button at the bottom.
- 
+### ADB
+
+Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via **Devices > Device > Settings** for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here].
+
+:::tip
+We never allow turning on ADB from the device on any Esper-provisioned device.
+:::
+
+### Resetting to Default Settings
+
+You may reset these values to default at any time by clicking the Reset to Default button at the bottom of this panel.
+When you are satisfied with your compliance settings, click **Next**.
+
+### Duplicating a Compliance Policy
+
+If you’d like to base a new Compliance Policy on an existing Compliance Policy, click on the copy icon (two boxes) in the Compliance Policy list view. A duplicate will be made you can then edit, rename, and modify as needed.
+
+![CompliancePolicy](./assets/NewConsole/CompliancePolicyCopy.png)
+
+### Editing a Compliance Policy
+
+If you’d like to edit an existing Compliance Policy, click on the Edit icon (pencil) in the Compliance Policy list view.
+
+![CompliancePolicy](./assets/NewConsole/CompliancePolicyEdit.png)
+
+NOTE: When a Compliance Policy has already been applied to devices, it can’t be edited, and the icon will be grayed out on the menu.
+
+![CompliancePolicy](./assets/NewConsole/CompPolicyMessage.png)
 
 ## Reports
 Your Esper Console provides reports on the performance of the devices and groups of devices it manages. The Reports section explains how these reports work and how they can be customized to better meet your needs.
