@@ -44,7 +44,7 @@ Please read more details regarding [interacting with Web Console](./console.md) 
 
 ### 5. Developing with Esper
 
-The first step to Developing with Esper is to acquire an API key and the environment ID of your endpoint. The process of acquiring these two has been described in our [Developer Options page](./console.md#developer-options). With this information, you can start using the Esper [REST APIs](https://api.esper.io), [Esper Python SDK](./pythonsdk.md), or the [Esper CLI](./espercli.md).
+The first step to Developing with Esper is to acquire an API key and the environment ID of your endpoint. The process of acquiring these two has been described in our [API Key Management page](./console.md#api-key-management). With this information, you can start using the Esper [REST APIs](https://api.esper.io), [Esper Python SDK](./pythonsdk.md), or the [Esper CLI](./espercli.md).
 
 As you begin your application development on Android Studio, be sure to leverage the freely available [Esper Android Plugin](./esperplugin.md). This will help you in leveraging the Esper APIs to develop, deploy and test applications running on your target devices.
 
@@ -56,7 +56,7 @@ Below are the quick links to the guide for specific actions on the Esper platfor
 
 - [Signup for an Esper Account.](https://esper.io/signup)
 - [Provision an Android Device to Esper.](./console/device-provisioning/index.md)
-- [Get yourself an API Key.](./console.md#developer-options)
+- [Get yourself an API Key.](./console.md#api-key-management)
 - [Getting started with Esper SDK.](./pythonsdk.md)
 - [Getting started with Esper CLI.](./espercli.md)
 - [Checkout our tutorials.](./tutorials.md)
