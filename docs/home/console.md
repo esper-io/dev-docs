@@ -175,7 +175,7 @@ Provisioning is the initial step of enrolling, configuring, and managing an Andr
 Esper provides several different methods for provisioning Android devices, depending on the capabilities of the device being configured:
 
    - Android for Work, part of Android for Enterprise
-   - 6-Tap QR Code, part of Android for Enterprise
+   - 6 Tap QR Code, part of Android for Enterprise
    - The Provisioner Tool
    - Seamless Provisioning
    
@@ -202,9 +202,9 @@ You can also use IMEI / Serial Numbers with the AfW provisioning method on some 
 
 Go [here](./console.md#) for detailed instructions to provision a device using AfW.
 
-#### 6-Tap QR Code Provisioning
+#### 6 Tap QR Code Provisioning
 
-6-Tap QR code provisioning is best used for:
+6 Tap QR code provisioning is best used for:
       - Devices that have Google Mobile Services (GMS) support enabled
       - Devices with a camera for QR code scanning
       - Android 7.0 and above
@@ -212,7 +212,7 @@ Go [here](./console.md#) for detailed instructions to provision a device using A
       
    Beginning with Android 9 you can include credentials for the Wi-Fi network to be used for provisioning in your template. They’ll be included in the QR code, eliminating the need to enter them on the device to establish the required Internet connectivity.
 
-Go [here](./console.md#6\--tap-qr-code-provisioning) for detailed instructions to provision a device using 6-Tap QR Code.
+Go [here](./console.md#6-tap-qr-code-provisioning) for detailed instructions to provision a device using 6 Tap QR Code.
 
 #### Device Provisioner
 
@@ -429,15 +429,15 @@ After this step, your provisioning will be finished and you’ll see your device
 
 ![Factory Reset](./assets/NewConsole/DeviceScreen.png)
 
-### 6-Tap QR Code Provisioning
+### 6 Tap QR Code Provisioning
 
-Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the AfW provisioning method. The particular screens and flow varies across Android versions, noting 6-Tap QR Code support was first delivered in Android 7. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with 6-Tap QR Code-based provisioning please [email us](mailto:support@esper.io).
+Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the AfW provisioning method. The particular screens and flow varies across Android versions, noting 6 Tap QR Code support was first delivered in Android 7. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with 6 Tap QR Code-based provisioning please [email us](mailto:support@esper.io).
 
 :::tip
 Device makers and carriers customize the setup process, thus it is likely you’ll encounter unique setup screens specific to your device. Generally you can either skip or decline most of the options, noting there are a handful of system specific notifications called out in the instructions for which you’ll need to make the proper selections.
 :::
 
-From the Provisioning Methods screen, if you select **6 Tap QR Code** you will be taken step through instructions using the 6-Tap QR Code provisioning process. You may follow through these steps easily by clicking **Next**.
+From the Provisioning Methods screen, if you select **6 Tap QR Code** you will be taken step through instructions using the 6 Tap QR Code provisioning process. You may follow through these steps easily by clicking **Next**.
 
 ![Factory Reset](./assets/NewConsole/SixTapFirstScreen.png)
 
@@ -763,7 +763,7 @@ The Provisioning Templates are shown as tiles with the most-recently created at 
 
 ![Template View](./assets/NewConsole/TemplateView.png)
    
-You can easily open up the QR code to use during AfW or 6-Tap QR Code provisioning by clicking on **View QR Code**. 
+You can easily open up the QR code to use during AfW or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
 Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet. For those cases where distributing a QR code outside of your organization would be required, instead consider using AfW IMEI/Serial Number provisioning with a passcode.
 
 ### Actions on Template Tiles
