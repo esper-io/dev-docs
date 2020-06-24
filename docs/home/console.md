@@ -294,7 +294,7 @@ Device makers and carriers customize the setup process, thus it is likely you’
 
 From the Provisioning Methods screen, if you select **Android for Work** you will be taken step through instructions using the AfW provisioning process. You may follow through these steps easily by clicking **Next**.
 
-![Factory Reset](./assets/NewConsole/.png)
+![Factory Reset](./assets/NewConsole/AFWFirstScreen.png)
 
 The below steps are a more detailed version of the same steps provided in the Console. Be sure to have your [Provisioning Template](./console.md#provisioning-templates) created so you can access the QR code you will use to provision your device.
 
@@ -586,7 +586,7 @@ Typically (but not always) you will need to resolve the permission for Esper to 
 
 You are taken to the Can modify system settings screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![Factory Reset](./assets/NewConsole/ModifySettingsEDMNo.png)
+![Factory Reset](./assets/NewConsole/ModifySettingsEDMNO.png)
 
 You will then be taken to Modify system settings for Esper Device Management. Turn on the switch located on the right side of the screen to Allow modify system settings.
 
@@ -614,7 +614,7 @@ You will then be taken to *Display over other apps* or *Draw over other apps* fo
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/.png)
+![Factory Reset](./assets/NewConsole/DrawOverOtherApps.png)
 
 You will now be taken back to the *Display over other apps screen*, noting *Esper Device Management* is now set to *Yes* or *Allowed* for drawing over other apps. Now click the back button in the Nav bar. 
 
@@ -714,7 +714,7 @@ Typically (but not always) you will need to resolve the permission for Esper to 
 
 You are taken to the Can modify system settings screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![IMEI](./assets/NewConsole/ModifySettingsEDMNo.png)
+![IMEI](./assets/NewConsole/ModifySettingsEDMNO.png)
 
 You will then be taken to *Modify system settings* for *Esper Device Management*. Turn on the switch located on the right side of the screen to *Allow modify system settings*.
 
