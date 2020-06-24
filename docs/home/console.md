@@ -831,22 +831,28 @@ If you have already added an IMEI or serial number to a provisioning template an
 You can also upload a CSV or individually add IMEIs and Serial Numbers when [editing a template](./console.md#provisioning-templates).
 
 **Download Config**
+
 Clicking Download Config will enable you to download the config.json file for use during ADB and by IMEI-based provisioning methods. Contact Esper if you have any questions. 
 
 **Delete**
+
 Click on Delete to delete a selected template. You will still be able to view the policy, apps, and settings of the template when viewing a device previously provisioned using that template.
 
 
 ### Creating a Provisioning Template
 
 To create a provisioning template, click **Create Template**.
+
 ![Create Template](./assets/NewConsole/TemplateCreate.png)
+
    Enter a unique name and an optional description for the Provisioning Template, then click **Next**.
+   
 ![Create PageTemplate](./assets/NewConsole/TemplateCreatePage.png)
 
 ### Compliance Policy Section
 
 A Compliance Policy is a set of configurations or permissions that will be applied to all the devices provisioned through the template. Each configuration determines particular system behavior, in some cases including whether the device user is able to change a configuration on the device using the Android Settings app. This section lets you set the Compliance Policy that will govern all the devices provisioned using this template. You can change this after provisioning by defining a new Compliance Policy and then applying it to a Device or a Group.
+
 ![Template Policy](./assets/NewConsole/TemplatePolicy.png)
 
 Hovering your mouse cursor over any item will give you a short explanation on-screen. Below is a detailed explanation of each of the configurations you can set in this section.
@@ -870,6 +876,7 @@ The password for a device will be set up during the initial setup of the device 
 Lock screen must be on in order to set Lock screen password rules. If you select either Alphabetic or Alphanumeric password rules, then Lock screen will be set to On by Esper if it is currently Off.
 
 **Default App Permission** 
+
     Default app permissions determine enforcement of the runtime-permission rule across all the apps on a device including Enterprise apps installed by Esper, in-ROM apps that are enabled, as well as any installed via Managed Google Play. This ensures you can control the user experience on the device regarding how run-time permissions are granted. There are three possible settings:
 
    **Allow Automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user. This is the typical setting used for single-purpose solutions using a fully trusted, customer-supplied application.
@@ -879,9 +886,10 @@ Lock screen must be on in order to set Lock screen password rules. If you select
    **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#allow-app-permissions) from the Esper Console.
 
 **System Updates** 
+
     The System updates option allows you to enforce a system update policy on the device when a system update is available via the device’s over-the-air (OTA) update service. There are four possible settings:
     
-   **Update automatically**: This option will install any over-the-air (OTA) updates automatically as soon as they become available without user interaction,  and reboot the devices when necessary.
+   **Update automatically**: This option will install any over-the-air (OTA) updates automatically as soon as they become available without user interaction,  and reboot the devices nwhen necessary.
    
    **Postpone installation**: This option postpones installation of an OTA update for 30 days. After 30 days, the system will prompt the device user to install the update. Subsequent updates will also follow the same 30-day postponement. This is ideal when you need time to validate your solution against new system updates before they are installed.
    
@@ -954,7 +962,6 @@ If you don’t check the Google account restrictions box and plan to provision y
 The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.
 :::
 
-
 ### Factory Reset Protection 
 
 Factory Reset Protection (FRP) enables you to lock a device if a user factory resets it via soft/hard keys on GMS devices. In case of a factory reset, the device will get locked and can only be unlocked by entering a pre-authorized google account ID. Additional information about how to get your Google Account ID is available in the Compliance Policy section.
@@ -987,7 +994,7 @@ Your app will still be able to access the camera if this setting is set to off.<
 **Edit date and time**<br> If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to On; if you don’t set it to Off.<br/>
 **Application uninstall**<br> Setting Application uninstall to On will block app uninstallation both locally on the device and using Esper. Set it to off if you need to be able to uninstall applications remotely using Esper. 
 :::tip
-With this set to on you will still be able to update your application installed on the device using Esper. <br/> 
+With this set to on you will still be able to update your application installed on the device using Esper.
 :::
 
 **USB File transfer** <br>If you’d like device users to be able to transfer files to or from the device using a USB cable or flash drive, set USB file transfer to On; if you don’t, set it to Off.<br/>
@@ -1003,6 +1010,7 @@ On a few devices, this setting may need to be on if you wish to have Google Play
    Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
       - Restrict incoming calls to uploaded contacts only
       - Restrict outgoing calls to uploaded contacts only
+      
 Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file.
 The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code - see the example below.
 
@@ -1017,7 +1025,7 @@ Spreadsheets commonly interpret + as part of a mathematical formula. Use the app
 
 ### ADB
 
-Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via Devices > Device > Settings for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper here.
+Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via Devices > Device > Settings for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-adb).
 
 :::tip
 We never allow turning on ADB from the device on any Esper-provisioned device.
@@ -1072,7 +1080,9 @@ There is also a checkbox that allows you to include or bypass Google Play setup 
 Once you have made your selection, click **Close**.
 
 **Preloaded Apps**
+
 Android devices normally come with a number of apps loaded onto them in ROM. This field enables you to select which of these will be available on the device after provisioning. Enter the package names of any preloaded apps you want to show up into this field. Package names must be separated by commas.
+
 :::tip
 One easy way to find the package names is to provision one of your devices and then view the Preloaded Apps on that device—the package name for each app will be listed. You can also use ADB as well. You currently can not set a Preloaded App as the Kiosk mode app via a Provisioning Template, but you can do so at the Device level after the device has been provisioned.
 :::
@@ -1080,6 +1090,7 @@ One easy way to find the package names is to provision one of your devices and t
 ![Preloaded Apps](./assets/NewConsole/PreloadedApps.png)
 
 **Esper Cloud Apps**
+
 The **Esper Cloud Apps** tab gives you the ability to load any Enterprise apps and approved Managed Google Play apps onto the device when it is provisioned. These apps must have been previously uploaded to Esper as an Enterprise app through Apps or previously approved through Managed Google Play.
 
 :::tip
@@ -1090,6 +1101,7 @@ Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select 
 ![App Version](./assets/NewConsole/EsperCloudAppVersion.png)
  
 **Play Store Apps**
+
 The Play store apps section of the Your App tab gives you the ability to load approved apps from the Google Play Store onto the device as it is provisioned. This section will only appear if you have enrolled your endpoint in [Managed Google Play]. These apps must have been approved through Play for Work before they can be selected here. Simply click on the approved Play Store app you wish to install, and it will be added to the list of apps.
 
 ![PlayStore Apps](./assets/NewConsole/PlayStoreApps.png)
@@ -1099,6 +1111,7 @@ If you include a Google Play Store app in your template but use it to provision 
 :::
 
 **Play Store Tab**
+
 For convenience, a **Play Store** tab has been provided on this page where you can approve Google apps you’d like to add to your template. This option is only available if you have set up a [Managed Google Play] account, and is mirrored in [Apps].
 
 ![Play Store](./assets/NewConsole/PlayStore.png)
@@ -1106,6 +1119,7 @@ For convenience, a **Play Store** tab has been provided on this page where you c
 :::tip
 Only once you approve a Google Play Store app, you may add it from the list shown in the Provisioning Template under Your app.
 :::
+
 When you are satisfied with your apps settings, click **Next**.
 
 ### Branding section
@@ -1132,6 +1146,7 @@ If the **Android Settings App** is enabled for a device in Multi application mod
 :::
 
 **General Device Settings**
+
 Most of these are fairly straightforward:
    - Turn Bluetooth on or off.
    - Turn Wi-Fi on or off*.
@@ -1196,7 +1211,8 @@ If you select EAP, an extra dropdown menu will appear to enable you to select a 
 The Wi-Fi On/Off and Wi-Fi Access Points feature are not available for Android 10.0 and newer.
 :::
 
-**Add Wi-Fi Credentials to Be Used During Provisioning***
+**Add Wi-Fi Credentials to Be Used During Provisioning**
+
 This feature gives you the capability to include the required Wi-Fi credentials in the QR code generated by a Provisioning Template. After reading the QR code, the provisioned device will automatically connect to these access points as they become available.
 
 ![Add WIFI Template](./assets/NewConsole/TemplateAddWifi.png)
@@ -1232,6 +1248,7 @@ To select an existing group, click the radio button next to its name. If you’d
 When you are satisfied with your group selection, click **Next**.
 
 **Add Devices (IMEI Provisioning)**
+
 If you are editing a template—rather than creating one—the next section will be Add Devices. The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions in **Upload IMEI CSV** section.
 
 ![Add Devices Template](./assets/NewConsole/TemplateAdddevices.png)
@@ -1261,6 +1278,7 @@ When you are satisfied with your template, click **Save**. You will see a pop-up
 ![Confirm Save](./assets/NewConsole/SaveConfirm.png)
    
 **Template Tiles**
+
 Your new Provisioning Template will now be visible as a tile on the Provisioning Templates page. You can search for it in the search bar. 
 You can also sort the tiles using the sorting dropdown:
    - Recently Created
@@ -1286,14 +1304,14 @@ If you’re logging in to your Console for the first time you will see the follo
 
 ![Simulare Page](./assets/NewConsole/DevicesInitial.png)
 
-If you’d like to provision a real Android device, first create a [Provisioning Template] and then use one of the available [Provisioning Methods].
+If you’d like to provision a real Android device, first create a [Provisioning Template](./console.md#provisioning-templates) and then use one of the available [Provisioning Methods](./console.md#provisioning-methods).
 
-If you’d rather simulate an Android device, click **Simulare Device**. You will see a momentary “You are all set!” message after which a mock device will be available for you to experiment with and learn on until you’re ready to provision an actual device. You can also provision an Android Studio AVD using the [Provisioner Tool].
+If you’d rather simulate an Android device, click **Simulare Device**. You will see a momentary “You are all set!” message after which a mock device will be available for you to experiment with and learn on until you’re ready to provision an actual device. You can also provision an Android Studio AVD using the Provisioner Tool.
 
 Capabilities such as Apps, Remote View and Capture log may not be available on a Simulated device.
 
 :::tip
-This feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, contact us.
+This feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, [contact us](mailto:support@esper.io).
 :::
 
 ### Device View
@@ -1305,7 +1323,7 @@ Once you’ve added actual or simulated devices to the Console, the **Devices** 
 There are three ways to view the devices in your Console: Grid, List and Maps. The default is grid view, but you can click on list or maps to access the list view or the map view.
 
 :::tip
-If you want to remove a device from Esper, execute a Wipe device command from Settings. If you perform a factory reset locally on the device, it will still continue to show up in Esper but will be offline. The only devices that can be directly deleted from the Esper Console without a Wipe device command are devices that are Under provisioning. If a device becomes inoperable and you wish to remove it from your Esper Endpoint, please contact us.
+If you want to remove a device from Esper, execute a Wipe device command from Settings. If you perform a factory reset locally on the device, it will still continue to show up in Esper but will be offline. The only devices that can be directly deleted from the Esper Console without a Wipe device command are devices that are Under provisioning. If a device becomes inoperable and you wish to remove it from your Esper Endpoint, please [contact us](mailto:support@esper.io).
 :::
 
 #### Search Box
@@ -1325,17 +1343,17 @@ You can use Grid view by clicking on the grid icon under the Devices heading on 
 
 You can filter the list of devices managed by your console by category. To do so, check the boxes next to the categories you would like displayed. The available categories are:
 
-   Under provisioning — devices undergoing provisioning 
-   Online devices — currently online  
-   Offline devices — currently offline
-   No risk devices — device with security status secure
-   Low risk devices — device with security status low
-   Medium risk devices — devices with security status medium
-   High risk devices — devices with security status high
-   Devices with low battery — devices with battery level under 30% charge
-   Recently added devices — devices provisioned within the last 3 days
+   - Under provisioning — devices undergoing provisioning 
+   - Online devices — currently online  
+   - Offline devices — currently offline
+   - No risk devices — device with security status secure
+   - Low risk devices — device with security status low
+   - Medium risk devices — devices with security status medium
+   - High risk devices — devices with security status high
+   - Devices with low battery — devices with battery level under 30% charge
+   - Recently added devices — devices provisioned within the last 3 days
    
-You’ll find more information about how we determine the security status of a device in [Security].
+You’ll find more information about how we determine the security status of a device in [Security](./console.md#security-tab).
 You can also search for a specific device using the **Search** box at the top of the screen. The device alias, Device ID, and any tags are all included in the search scope.
 
 #### Grid View Drop Down Options
@@ -1345,14 +1363,14 @@ Clicking on the ellipsis button (...) on the top right corner of the device tile
 
 #### View on Map
 
-Click View on maps to see the location of the device on a map:
+Click **View on maps** to see the location of the device on a map:
 
 ![MapView](./assets/NewConsole/Maps.png)
 
 #### Add or Edit tags
 
-Click on Add tags to add tags to the device. Tags can make it easier to identify devices in a specific location, types of devices, Wi-Fi, SSID or any other information that would be useful. If a tag already exists for a device, the drop down choice changes to Edit Tags. You can also click on + ADD A TAG on the tile itself to add or edit tags - this option only shows if one or more tags are available to be added to that device.
-When you click Add Tags, the following pop up will appear: 
+Click on **Add tags** to add tags to the device. Tags can make it easier to identify devices in a specific location, types of devices, Wi-Fi, SSID or any other information that would be useful. If a tag already exists for a device, the drop down choice changes to **Edit Tags**. You can also click on **+ ADD A TAG** on the tile itself to add or edit tags - this option only shows if one or more tags are available to be added to that device.
+When you click **Add Tags**, the following pop up will appear: 
 
 ![Add Tags](./assets/NewConsole/TagsAdd.png)
 
@@ -1398,7 +1416,7 @@ By default, the list is sorted in descending order of device registration date (
 
 #### Actions Button
 
-To use the Actions button, check the box next to the device or devices you wish to take an action, then click the Actions button. 
+To use the **Actions** button, check the box next to the device or devices you wish to take an action, then click the **Actions** button. 
 
 ![Actions](./assets/NewConsole/ListviewActions.png)
 
@@ -1437,11 +1455,11 @@ You can click **View results** for additional detail.
 
 ![Reboot Details](./assets/NewConsole/ViewDetailsInProgress.png)
 
-Clicking on App install will launch the App install sidebar:
+Clicking on **App install** will launch the App install sidebar:
 
 ![App Install](./assets/NewConsole/AppInstallPreview.png)
 
-Select an app from the dropdown menu, then click Install.
+Select an app from the dropdown menu, then click **Install**.
 
 ![Reboot](./assets/NewConsole/AppInstallDetails.png)
 
@@ -1482,9 +1500,9 @@ Clicking the **Download Devices List** button enables you to download the device
 
 #### Activity Feed Button
 
-Clicking the Device Details icon when no devices are selected brings a slide out from the right side of the screen listing the history of all commands fired by any user for the devices on the list.
+Clicking the **Activity Feed** icon when no devices are selected brings a slide out from the right side of the screen listing the history of all commands fired by any user for the devices on the list.
 
-![Reboot](./assets/NewConsole/RebootPreview.png)
+![Reboot](./assets/NewConsole/ListViewActivityFeed.png)
 
 ![Reboot](./assets/NewConsole/DeviceActivityFeed.jpg)
 
@@ -1492,7 +1510,7 @@ Clicking **View Details** will show more details (including the current status) 
 
 ![Reboot](./assets/NewConsole/StatusSuccess.jpg)
 
-If you’ve selected a single device,clicking the Device Details icon will show the details and activity for that device. The Activity tab will show all activities done on that device. If you selected more than one device, no details will be shown.
+If you’ve selected a single device,clicking the **Activity Feed** icon will show the details and activity for that device. The Activity tab will show all activities done on that device. If you selected more than one device, no details will be shown.
 
 ![Reboot](./assets/NewConsole/ListViewActivityFeed.jpg)
 
@@ -1503,7 +1521,8 @@ The Map view shows device locations on a map. This view can be filtered by selec
 ![Reboot](./assets/NewConsole/DevicesMapView.png)
 
 To view the devices in a cluster, click on the cluster icon. Click on an individual device to see information about that device. Devices without location information will not be shown on the map. 
-Clicking on a device pin will bring up the Device Tile for that device. To go to that device’s Information page, simply click on View Details.
+
+Clicking on a device pin will bring up the Device Tile for that device. To go to that device’s Information page, simply click on **View Details**.
 
 ![Reboot](./assets/NewConsole/MapDevice.png)
 
@@ -1519,17 +1538,17 @@ Clicking **View Details** at the bottom of a device tile enables you to see addi
 
 ### Information Tab
 
-This is the first tab that comes in view when clicking on View Details on the Device tile. This section provides extensive information about the device, including:
+This is the first tab that comes in view when clicking on **View Details** on the **Device** tile. This section provides extensive information about the device, including:
 
-   Storage (total storage available, storage used, OS-occupied storage, and internal storage)
-   Memory Information (total, in-use, average used, free)
-   Battery information (status of charge, current temperature)
-   Information (device name, last seen on, registered on, GMS/Non-GMS, tags, Group name, applied Compliance Policy (Applied         policy), and applied Provisioning Template (Applied template))
-   Device’s Location (on a map)
-   Software Information (installed Esper client version, security patch level, device kernel version, bootloader version,           android build number, supported ABI, Android API level, Android build date and Android version)
-   Hardware information (manufacturer, hardware chip set, brand, serial number, model, baseband version)
-   Network information (IMEI/MEID, Mac Address, DNS, Wi-Fi Mac ID, Cellular network status, Wi-Fi Access point, Connectivity     duration, IP address, Ethernet status)
-   Display Information (resolution, refresh rate)
+   - Storage (total storage available, storage used, OS-occupied storage, and internal storage)
+   - Memory Information (total, in-use, average used, free)
+   - Battery information (status of charge, current temperature)
+   - Information (device name, last seen on, registered on, GMS/Non-GMS, tags, Group name, applied Compliance Policy (Applied         policy), and applied Provisioning Template (Applied template))
+   - Device’s Location (on a map)
+   - Software Information (installed Esper client version, security patch level, device kernel version, bootloader version,           Android build number, supported ABI, Android API level, Android build date and Android version)
+   - Hardware information (manufacturer, hardware chip set, brand, serial number, model, baseband version)
+   - Network information (IMEI/MEID, Mac Address, DNS, Wi-Fi Mac ID, Cellular network status, Wi-Fi Access point, Connectivity duration, IP address, Ethernet status)
+   - Display Information (resolution, refresh rate)
     
 ![Reboot](./assets/NewConsole/DeviceInfo.png)
 
@@ -1545,7 +1564,7 @@ This is the first tab that comes in view when clicking on View Details on the De
 
 ### Settings Tab
 
-The Settings tab enables you to remotely adjust the settings on any of the devices you manage through the Console. By default many of the options are collapsed—to expand an option simply click on the drop down icon located on the right side of each option. The image below shows Settings with all the options expanded.
+The **Settings** tab enables you to remotely adjust the settings on any of the devices you manage through the Console. By default many of the options are collapsed—to expand an option simply click on the drop down icon located on the right side of each option. The image below shows **Settings** with all the options expanded.
  
 ![Reboot](./assets/NewConsole/DeviceSettingsAll.png)
 
@@ -1555,26 +1574,26 @@ Some details for each action and setting:
 
 **Reboot**
 
-Clicking Reboot and then Confirm will reboot the device. This can be useful when you’re having trouble communicating with the device or when the system is unstable.
+Clicking **Reboot** and then **Confirm** will reboot the device. This can be useful when you’re having trouble communicating with the device or when the system is unstable.
 
 ![Reboot](./assets/NewConsole/RebootButton.png)
 
 **Screen Lock**
 
-Clicking Screen Lock and then Confirm will lock the screen on the device. The device user will then need to enter the device password—if a password has been set—to use the device again. This can be used to avoid unwanted usage if the device were ever to fall into the wrong hands.
+Clicking **Screen Lock** and then **Confirm** will lock the screen on the device. The device user will then need to enter the device password—if a password has been set—to use the device again. This can be used to avoid unwanted usage if the device were ever to fall into the wrong hands.
 
 ![Reboot](./assets/NewConsole/Screenlock.png)
 
 **Heart Beat**
 
 Esper Managed devices are continuously communicating with our Cloud and updating their statuses every minute. If a device dozes off due to inactivity or a bad network connection, our Cloud will regularly wake them and ask for a status update.
-Clicking Ping Device lets you accomplish the same task manually.
+Clicking **Ping Device** lets you accomplish the same task manually.
 
 ![Reboot](./assets/NewConsole/HeartbeatButton.png)
 
 **Device Lockdown**
 
-Clicking Lockdown triggers a complete lockdown of the device. This is useful to prevent unauthorized use or relocation.
+Clicking **Lockdown** triggers a complete lockdown of the device. This is useful to prevent unauthorized use or relocation.
 
 ![Reboot](./assets/NewConsole/Lockdown.png)
 
@@ -1628,13 +1647,13 @@ This section lets you adjust the display settings of the device.
 
 ![Reboot](./assets/NewConsole/DisplayScreenOrientation.png)
 
-Use the Brightness slider to Increase or decrease the brightness of the screen.
+Use the **Brightness** slider to Increase or decrease the brightness of the screen.
 
-Use the Screen Orientation buttons to select your preferred screen orientation, whether auto, landscape, or portrait.
+Use the **Screen Orientation** buttons to select your preferred screen orientation, whether auto, landscape, or portrait.
 
-Select a time from the Screen Timeout dropdown menu.
+Select a time from the **Screen Timeout** dropdown menu.
 
-Once all changes are made, click Apply changes to push them out to the device, or Cancel if you wish to keep the current settings.
+Once all changes are made, click **Apply changes** to push them out to the device, or **Cancel** if you wish to keep the current settings.
 
 ![Reboot](./assets/NewConsole/SettingsDisplay.png)
 
@@ -1647,14 +1666,15 @@ A toast message will appear in the bottom right section of the screen indicating
 **Sound**
 
 This section lets you adjust the sound settings of the device. Use the sliders to adjust the:
-   Alarm volume
-   Notification volume
-   Music volume
-   Ring volume
+
+   - Alarm volume
+   - Notification volume
+   - Music volume
+   - Ring volume
 
 ![Reboot](./assets/NewConsole/SettingsSound.png)
 
-Once all changes are made, click Apply changes to push them out to the device, or Cancel if you wish to keep the current settings.
+Once all changes are made, click **Apply changes** to push them out to the device, or **Cancel** if you wish to keep the current settings.
 
 ![Reboot](./assets/NewConsole/CancelApplyChanges.png)
 
@@ -1686,7 +1706,7 @@ Enter the details for the new access point, including the Wi-Fi SSID, Wi-Fi Secu
 
 After clicking **Save**, a toast message will appear in the bottom left corner of the screen indicating success or error for adding the new access point.
 
-The device will now automatically connect to the specified Wi-Fi access points as they become available. Additional detail on configuring Wi-Fi security can be found [here].
+The device will now automatically connect to the specified Wi-Fi access points as they become available. Additional detail on configuring Wi-Fi security can be found [here](./console.md#settings-section).
 
 To delete an access point, click on the ellipses and then **Delete**.
 
@@ -1703,10 +1723,11 @@ This section lets you adjust the use of Global Positioning System (GPS) by the d
 ![Reboot](./assets/NewConsole/Location.png)
 
 There are four GPS accuracy settings:
-**High Accuracy** — Optimizes for accuracy using extra inferences and heuristics for quicker location resolution.
-**Device Only** — Uses just the GPS chipset of device and not any extra inferences or heuristics. This can slow location resolution.
-**Battery Saver** — Optimizes for longer battery life at the cost of location accuracy.
-**Off** — Turns off device GPS.
+
+- **High Accuracy** — Optimizes for accuracy using extra inferences and heuristics for quicker location resolution.
+- **Device Only** — Uses just the GPS chipset of device and not any extra inferences or heuristics. This can slow location resolution.
+- **Battery Saver** — Optimizes for longer battery life at the cost of location accuracy.
+- **Off** — Turns off device GPS.
 
 Once a change is made, a toast message will appear in the bottom right corner of the screen indicating success or error for changing the GPS settings.
 
@@ -1726,7 +1747,7 @@ When a Bluetooth device has paired with the Android device and is currently conn
 
 ![Reboot](./assets/NewConsole/Bluetooth.png)
 
-When a Bluetooth device is connected, the Console will show the device name as well as its IP address. If the Bluetooth device is disconnected, it will continue to show in the Paired Devices list, but the connection status will change to “Disconnected.”
+When a Bluetooth device is connected, the Console will show the device name as well as its IP address. If the Bluetooth device is disconnected, it will continue to show in the **Paired Devices** list, but the connection status will change to “Disconnected.”
 
 Once a change is made, a toast message will appear in the bottom right corner of the screen indicating success or error for turning Bluetooth on or off.
 
@@ -1756,21 +1777,23 @@ Android Debug Bridge (ADB) is a command-line tool that lets you communicate with
 ![Reboot](./assets/NewConsole/ADBAccessON.png)
 
 On a managed device, you can turn on ADB using the toggle switch to enable a secure remote ADB session using Esper. When you turn on ADB, you must set the duration of the ADB session:
-   Always On
-   1 hour
-   3 hours
-   8 hours
-   1 day
+
+   - Always On
+   - 1 hour
+   - 3 hours
+   - 8 hours
+   - 1 day
    
 After the completion of this time period from the point of provisioning, ADB will automatically turn off for the device.
 
-You can choose the **Always On** option to keep ADB on, but Esper does not recommend this practice; ADB is a gateway to communication with the core of the device and should be used in a highly secure manner. You can find out more about using ADB with Esper.
+You can choose the **Always On** option to keep ADB on, but Esper does not recommend this practice; ADB is a gateway to communication with the core of the device and should be used in a highly secure manner. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-adb).
 
 :::tip
 We never allow turning on ADB from the device on any Esper-provisioned device.
 :::
 
 ### Event Feed Tab
+
 The Event Feed tab lists all the interactions the device has had with the Console. It displays each command taken on the device and includes the Esper use that initiated the command with a date and time stamp.
 
 ![Reboot](./assets/NewConsole/EventfeedGeofence.png)
@@ -1779,20 +1802,20 @@ The Event Feed tab lists all the interactions the device has had with the Consol
 
 This section provides a graphic representation of various telemetry for a specific device over the last 24 hour period. Fourteen metrics are displayed:
 
-   Battery Capacity Total
-   Battery Capacity Count
-   Battery Current Average
-   Battery Level
-   Battery Voltage
-   Battery Temperature
-   Available RAM
-   Available Internal Storage
-   Battery Current
-   Data Usage
-   Wi-Fi Signal Strength
-   OS Occupied Storage
-   Wi-Fi Frequency
-   Wi-Fi Link Speed
+   - Battery Capacity Total
+   - Battery Capacity Count
+   - Battery Current Average
+   - Battery Level
+   - Battery Voltage
+   - Battery Temperature
+   - Available RAM
+   - Available Internal Storage
+   - Battery Current
+   - Data Usage
+   - Wi-Fi Signal Strength
+   - OS Occupied Storage
+   - Wi-Fi Frequency
+   - Wi-Fi Link Speed
 
 ![Reboot](./assets/NewConsole/Graphs.png)
 
@@ -1811,10 +1834,11 @@ You can search for a particular application by entering part or all of the appli
 ![Reboot](./assets/NewConsole/InstallAppSearch.png)
 
 The apps that are already installed on the device are specified in this list with the following filters:
-   **All Apps** installed on the device
-   **Enterprise Apps** which are private apps that have installed using the Esper Cloud.
-   **Google Apps** installed using your managed Google Play account.
-   **Preloaded Apps** which were pre-installed by the device maker in ROM.
+
+   - **All Apps** installed on the device
+   - **Enterprise Apps** which are private apps that have installed using the [Esper Cloud](./console.md#uploading-enterprise-apps-to-the-esper-cloud).
+   - **Google Apps** installed using your managed Google Play account.
+   - **Preloaded Apps** which were pre-installed by the device maker in ROM.
 
 ![Reboot](./assets/NewConsole/AppTypes.png)
 
@@ -1829,7 +1853,7 @@ You can refresh the list of apps and corresponding data by clicking the **Refres
 
 ![Reboot](./assets/NewConsole/RefreshButton.png)
 
-The New App Install button lets you install new apps on the device. 
+The **New App Install** button lets you install new apps on the device. 
 
 ![Reboot](./assets/NewConsole/NewAppInstall.png)
 
@@ -1851,7 +1875,7 @@ The Actions column enables you to uninstall an app, clear its data, set its perm
 
 #### Uninstall
 
-Selecting **Uninstall** removes the app from the device. When you click Uninstall, a panel will slide in from the right side of the screen.
+Selecting **Uninstall** removes the app from the device. When you click **Uninstall**, a panel will slide in from the right side of the screen.
 
 ![Reboot](./assets/NewConsole/AppUninstallconfirm.png)
 
@@ -1876,6 +1900,7 @@ Selecting **Clear Data** clears the app data from the device. A panel will slide
 The panel will show a progress bar. Once the progress bar is filled, the Console will display the message “Successfully uninstalled the app.” Click **Close**.
 
 #### Set App Permission
+
 This lets you define detailed app permission such as location granularity, access to camera, read phone state and writing to external storage.
 
 On clicking this, a dialogue box will appear.
@@ -1885,7 +1910,8 @@ On clicking this, a dialogue box will appear.
 Simply choosing the options from the dropdown will execute the command. The permissions which are available to choose are dependent on the type of in-ROM app that is being looked at.
 
 #### Set App State
-An app can have 3 states: Show, Hide, and Disable. This action gives you control over the app’s state. Clicking Set App State brings up a dialog box:
+
+An app can have 3 states: Show, Hide, and Disable. This action gives you control over the app’s state. Clicking **Set App State** brings up a dialog box:
 
 ![Reboot](./assets/NewConsole/AppState.png)
 
@@ -1902,7 +1928,7 @@ Click on the info icon to the extreme right to view history of app installation 
 
 ### Compliance Policy Tab
 
-You can change the Compliance Policy applied to a device. This can only be done on an online device. To install a new Compliance Policy on the device, first select the policy from the dropdown menu. You need to first create a Compliance Policy to have it available in the dropdown. You’ll find more information on compliance policies in the [Compliance Policy section].
+You can change the Compliance Policy applied to a device. This can only be done on an online device. To install a new Compliance Policy on the device, first select the policy from the dropdown menu. You need to first create a Compliance Policy to have it available in the dropdown. You’ll find more information on compliance policies in the [Compliance Policy section](./console.md#compliance-policy-tab).
 
 ![Reboot](./assets/NewConsole/DeviceCompPolicy.png)
 
@@ -1922,14 +1948,15 @@ Following are the criterion on which the security risks are calculated:
 BasicIntegrity gives you a signal about the general integrity of the device and its API. Rooted devices fail basicIntegrity, as do emulators, virtual devices, and devices with signs of tampering, such as API hooks.
 
 **CtsProfileMatch**
+
 CtsProfileMatch gives you a much stricter signal about the compatibility of the device. Only unmodified devices that have been certified by Google can pass ctsProfileMatch. Devices that will fail ctsProfileMatch include the following:
   
-   Devices that fail basicIntegrity
-   Devices with an unlocked bootloader.
-   Devices with a custom system image (custom ROM)
-   Devices for which the manufactured didn’t apply for, or pass, Google certification
-   Devices with a system image built directly from Android Open Source Program source files
-   Devices with a system image distributed as part of a beta or developer preview program (including the Android Beta Program)
+   - Devices that fail basicIntegrity
+   - Devices with an unlocked bootloader.
+   - Devices with a custom system image (custom ROM)
+   - Devices for which the manufactured didn’t apply for, or pass, Google certification
+   - Devices with a system image built directly from Android Open Source Program source files
+   - Devices with a system image distributed as part of a beta or developer preview program (including the Android Beta Program)
 
 When this alarm is thrown, the advice parameter will provide additional information which is then displayed by Esper. 
 
@@ -1940,22 +1967,25 @@ The last updated security patch version is used to determine if the device is up
 **Calculating the Security Score**
 
 Your Esper console will receive the above values and calculate the security state as follows:
-   If basicIntegrity is false, then the device is a high risk device (<=5 points)
-   If basicIntegrity is true, the Console gives a little more weight to ctsProfile (3) and to Security Patch (2). if both are    false (= 5 points), the device is considered medium risk.
-   If basicIntegrity is true, ctsProfileMatch is also true, and the patch version is greater than three months old, the          device is considered low risk.
+
+   - If basicIntegrity is false, then the device is a high risk device (<=5 points)
+   - If basicIntegrity is true, the Console gives a little more weight to ctsProfile (3) and to Security Patch (2). if both are    false (= 5 points), the device is considered medium risk.
+   - If basicIntegrity is true, ctsProfileMatch is also true, and the patch version is greater than three months old, the          device is considered low risk.
 
 The points table works out as follows:
-   0-5 points → High Risk
-   5-7 points → Medium Risk
-   8-9 points → Low Risk
-   9-10 points → Secure
+
+   - 0-5 points → High Risk
+   - 5-7 points → Medium Risk
+   - 8-9 points → Low Risk
+   - 9-10 points → Secure
    
 **Security Check Frequency**
 
 BasicIntegrity and CtsProfileMatch are calculated on three instances:
-   During provisioning
-   Every five hours thereafter
-   When requested from the Esper Console
+
+   - During provisioning
+   - Every five hours thereafter
+   - When requested from the Esper Console
 
 ### Remote Viewer Tab
 
@@ -1973,7 +2003,7 @@ If your device is running with an app in Kiosk mode and a permission is required
 
 The session will end automatically after 15 minutes. To end the session earlier, click **Stop Session**.
 
-Click the **Take Screenshot** button to capture the current device screen. There is a recorded history of all screenshots captured per device at the bottom of the Remote Viewer section.
+Click the **Take Screenshot** button to capture the current device screen. There is a recorded history of all screenshots captured per device at the bottom of the **Remote Viewer** section.
 
 The **Portrait** button allows you to rotate the screen to portrait as well as landscape mode.
 
@@ -1989,7 +2019,7 @@ To enter **Full screen** mode click the button below the device screen.
 
 ![Reboot](./assets/NewConsole/DeviceFullScreen.png)
 
-To exit the full screen view, simply press your esc on your PC’s keyboard.
+To exit the full screen view, simply press **esc** on your PC’s keyboard.
 
 #### Remote Control
 
@@ -2031,7 +2061,7 @@ Android Debug Bridge (ABD) is a command-line tool that lets you communicate with
 
 #### Esper-Provisioned Android Devices
 
-To connect with an Esper-provisioned Android device, navigate to Devices > Settings.
+To connect with an Esper-provisioned Android device, navigate to **Devices > Settings**.
 
 ![Reboot](./assets/NewConsole/DeviceSettings.png)
 
@@ -2039,7 +2069,7 @@ At the bottom of the page, click **ADB Access**.
 
 ![Reboot](./assets/NewConsole/ADBAccess.png)
 
-To start you simply need to switch ADB to on:
+To start you simply need to switch **ADB** to on:
 
 ![Reboot](./assets/NewConsole/ADB.png)
 
@@ -2053,15 +2083,15 @@ You will need a PC running some form of terminal with Android Debug Bridge (ADB)
 
 Connect the Android device to the PC using a USB cable and run the following command to enable ADB over TCP/IP:
 
-*adb tcpip 5555*
+***adb tcpip 5555***
 
 The Android device should return the following:
 
-*restarting in TCP mode port: 5555*
+***restarting in TCP mode port: 5555***
 
 Enter the espercli command secureadb giving it the device ID for your debugging target. In this case the device ID is ESP-DMO-AZ40:
 
-*espercli secureadb connect -d ESP-DMO-AZ40*
+***espercli secureadb connect -d ESP-DMO-AZ40***
 
 :::tip 
 Be sure to first have the Esper CLI configured for your Esper Endpoint with the required Enterprise ID and a valid API key.
@@ -2069,7 +2099,7 @@ Be sure to first have the Esper CLI configured for your Esper Endpoint with the 
 
 The Android device should return the following:
 
-*Initiating Remote ADB Session. This may take a few seconds…*
+***Initiating Remote ADB Session. This may take a few seconds…***
 
 After a few seconds, the Android device should return the following. The endpoint address shown below will likely be different for your session:
  
@@ -2081,11 +2111,11 @@ Press Ctrl+C to quit!*
  
 Switch to a new terminal window and start up your ADB connection using the IP address supplied by the secureadb command from the espercli:
  
-*adb connect 127.0.0.1:51556*
+***adb connect 127.0.0.1:51556***
 
 You’ll get this message back:
 
-*Connected to 127.0.0.1:51556*
+***Connected to 127.0.0.1:51556***
 
 You now have a secure remote ADB session with that device.
 
@@ -2119,19 +2149,20 @@ Devices can be moved back to the Default Group by selecting the checkbox next to
 
 Once the desired devices have been moved to the Group, click **Save**.
 
-You can also create a new group when creating a new Provisioning Template. In the Group section on the new template, you can create a group such that any device provisioned using the said template will fall in the newly created and selected group.
+You can also create a new group when creating a new [Provisioning Template](./console.md#provisioning-templates). In the Group section on the new template, you can create a group such that any device provisioned using the said template will fall in the newly created and selected group.
 
 ### Moving Devices Between Groups
 
 Moving devices from one group to another group requires two steps:
-   First remove the device or devices from the group they are in; this will move them to the Default group.
-   Navigate to the destination group and add the devices from the Default group.
+
+   - First remove the device or devices from the group they are in; this will move them to the Default group.
+   - Navigate to the destination group and add the devices from the Default group.
 
 To remove one or more devices from a group, first click **View Details** for that group in the group’s tile:
 
 ![Groups](./assets/NewConsole/GroupViewDetails.png)
 
-Then click the ellipses on the left side of the screen and select Remove device.
+Then click the ellipses on the left side of the screen and select **Remove device**.
 
 ![Groups](./assets/NewConsole/GroupRemoveDevice.png)
 
@@ -2145,15 +2176,15 @@ Click on the **Remove selected devices** button in the bottom right hand corner.
 
 You will then see a success toast message in the bottom left corner of your screen. The devices are now in the Default group.
 
-You can also remove individual devices by clicking on the ellipses on the device’s tile and click on **Remove from group**. This is also available in the Devices view.
+You can also remove individual devices by clicking on the ellipses on the device’s tile and click on **Remove from group**. This is also available in the [Devices view](./console.md#devices).
 
 ![Groups](./assets/NewConsole/DeviceRemoveGroup.png)
 
-Now click **View Details** for the group you want to move these devices to. Click on the Add device button.
+Now click **View Details** for the group you want to move these devices to. Click on the **Add device** button.
 
 ![Groups](./assets/NewConsole/AddDevice.png)
 
-Now use the same process to add the desired devices to move to the group from the Default Group as described in [Creating a Group].
+Now use the same process to add the desired devices to move to the group from the Default Group as described in [Creating a Group](./console.md#creating-a-group).
 
 ### Deleting a Group
 
@@ -2165,7 +2196,7 @@ Then select the tiles for the groups you want to delete by clicking on each one.
 
 ![Groups](./assets/NewConsole/GroupsSelect.png)
 
-A dialog box will appear to confirm the action. Click on Delete groups to complete the deletion.
+A dialog box will appear to confirm the action. Click on **Delete groups** to complete the deletion.
 
 ![Groups](./assets/NewConsole/GroupDeleteConfirm.png)
 
@@ -2192,12 +2223,13 @@ The Manage tab is the default view for Groups. It shows the device tiles for all
 You will find more information about individual devices in the [Devices](./console.md#devices) section of this document.
 
 You can filter the list of devices using one or more of six filters:
-   Under provisioning — Devices in the group that are currently undergoing provisioning
-   Online devices — Devices in the group that are currently active (online)
-   Offline devices — Devices in the group that are currently inactive (offline)
-   Devices at risk — Devices in the group that are at high, medium or low security risk
-   Devices with low battery — Devices in the group with less than 15% charge in their batteries
-   Recently added devices — Devices in this group which were provisioned in the last 3 days
+
+   - Under provisioning — Devices in the group that are currently undergoing provisioning
+   - Online devices — Devices in the group that are currently active (online)
+   - Offline devices — Devices in the group that are currently inactive (offline)
+   - Devices at risk — Devices in the group that are at high, medium or low security risk
+   - Devices with low battery — Devices in the group with less than 15% charge in their batteries
+   - Recently added devices — Devices in this group which were provisioned in the last 3 days
    
 You may click on “Clear all filters” (extreme right) to view the complete list of devices again. 
 
@@ -2214,11 +2246,12 @@ Any actions initiated to a group are immediate, they are not queued. Devices tha
 :::
 
 **Reboot**
-When you click Reboot, the Esper Console will send the command to reboot all the active devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
+
+When you click **Reboot**, the Esper Console will send the command to reboot all the active devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
 
 ![Groups](./assets/NewConsole/Reboot.png)
 
-Click on See details to see the status of each of the devices in the group.
+Click on **See details** to see the status of each of the devices in the group.
 
 ![Groups](./assets/NewConsole/RebootDetails.png)
 
@@ -2226,11 +2259,11 @@ Once the set of reboot commands are sent, a success toast notification will appe
 
 **Screen Lock**
 
-When you click Screen lock, the Esper Console will send the command to lock screen to all the active devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
+When you click **Screen lock**, the Esper Console will send the command to lock screen to all the active devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
 
 ![Groups](./assets/NewConsole/ScreenLockStatus.png)
 
-Click on See details to see the status of each of the devices in the group.
+Click on **See details** to see the status of each of the devices in the group.
 
 ![Groups](./assets/NewConsole/LockStatus.png)
 
@@ -2238,7 +2271,7 @@ Once the set of screen lock commands are sent, a success toast will appear in th
 
 **Heart Beat**  
 
-When you click Heart beat, the Esper Console will attempt to ping all the devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
+When you click **Heart beat**, the Esper Console will attempt to ping all the devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
 
 ![Groups](./assets/NewConsole/Heartbeat.png)
 
@@ -2260,7 +2293,7 @@ A popdown will show the progress of the action, indicating the number of success
 
 ![Groups](./assets/NewConsole/Wipe.png)
 
-Click on See details and a slide out will appear.
+Click on **See details** and a slide out will appear.
 
 ![Groups](./assets/NewConsole/WipeDetails.png)
 
@@ -2301,20 +2334,21 @@ A toast message or messages will appear in the bottom right section of the scree
 **Sound**
 
 This section lets you adjust the sound settings of the devices in the group. Use the sliders to adjust the:
-   Alarm volume
-   Notification volume
-   Music volume
-   Ring volume
+
+   - Alarm volume
+   - Notification volume
+   - Music volume
+   - Ring volume
 
 ![Groups](./assets/NewConsole/SettingsSound.png)
 
-Once all changes are made, click Apply changes to push them out to the device, or Cancel if you wish to keep the current settings.
+Once all changes are made, click **Apply changes** to push them out to the device, or **Cancel** if you wish to keep the current settings.
 
 ![Groups](./assets/NewConsole/CancelApplyChanges.png)
 
 A popdown will show the progress of the action or actions, indicating the number of successful and unsuccessful attempts. In this example we changed settings for alarm volume, notification volume, music volume, and ring volume for the group.
 
-Click on See details for any of the popdowns and a slide out will appear specific to that setting.
+Click on **See details** for any of the popdowns and a slide out will appear specific to that setting.
 
 ![Groups](./assets/NewConsole/SetStreamVolume.png)
 
@@ -2348,13 +2382,13 @@ If you switch off Wi-Fi when no other connection is available, Esper will turn W
 
 Location enables you to adjust the location settings for all the devices in the group. Choose a location mode from the drop down, and once selected the command will immediately be sent to the devices in the group.
 
-![Groups](./assets/NewConsole/LocationGPS.png)
+![Groups](./assets/NewConsole/Location.png)
 
 A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
 
 ![Groups](./assets/NewConsole/GPS.png)
 
-Click on See details and a slide out will appear.
+Click on **See details** and a slide out will appear.
 
 ![Groups](./assets/NewConsole/GPSStateDetails.png)
 
@@ -2370,7 +2404,7 @@ A popdown will show the progress of the action, indicating the number of success
 
 ![Groups](./assets/NewConsole/BluetoothStatus.png)
 
-Click on See details and a slide out will appear.
+Click on **See details** and a slide out will appear.
 
 ![Groups](./assets/NewConsole/BluetoothCommandstatus.png)
 
@@ -2382,7 +2416,7 @@ ADB Access enables you to turn Android Debug Bridge on or off for all the device
 
 ![Groups](./assets/NewConsole/ADBAccess1.png)
 
-Clicking ON will then open a drop down menu to select the desired session duration. Once selected, click Apply changes to push the command to the devices, or Cancel if you wish to keep the current settings.
+Clicking **ON** will then open a drop down menu to select the desired session duration. Once selected, click **Apply changes(( to push the command to the devices, or **Cancel** if you wish to keep the current settings.
 
 ![Groups](./assets/NewConsole/CancelApplyChanges.png)
 
@@ -2390,7 +2424,7 @@ A popdown will show the progress of the action, indicating the number of success
 
 ![Groups](./assets/NewConsole/ADBON.png)
 
-Click on See details and a slide out will appear.
+Click on **See details** and a slide out will appear.
 
 ![Groups](./assets/NewConsole/CommandStatus.png)
 
@@ -2398,7 +2432,7 @@ Once the set of commands are sent, a success toast message will appear at the bo
 
 ### The Event Feed Tab
 
-The Event Feed tab provides a record of all the actions taken on the group, including details about each event. This is very useful for viewing the status of any queued commands for offline devices.
+The **Event Feed** tab provides a record of all the actions taken on the group, including details about each event. This is very useful for viewing the status of any queued commands for offline devices.
 
 ![Groups](./assets/NewConsole/GroupEventFeed.png)
 
@@ -2408,7 +2442,7 @@ Clicking on **More Details** next to one of the events listed will cause a sideb
 
 ### The Compliance Policy Tab
 
-Compliance Policy lets you apply an existing compliance policy to all the devices in your group. You have two choices for how a Compliance Policy is applied to a Group: apply only to online devices, or queue them for offline devices to apply if they come online for 24 hours after the new policy has been applied.
+**Compliance Policy** lets you apply an existing compliance policy to all the devices in your group. You have two choices for how a Compliance Policy is applied to a Group: apply only to online devices, or queue them for offline devices to apply if they come online for 24 hours after the new policy has been applied.
 
 ![Groups](./assets/NewConsole/GroupPolicy.png)
 
@@ -2424,7 +2458,7 @@ When you apply a Compliance Policy to a group, all the online devices will recei
 
 ![Groups](./assets/NewConsole/QueueRequests.png)
 
-Click Apply policy to push the Compliance Policy out to the group. A slide out appears displaying the status of applying the new policy to the devices in the group.
+Click **Apply policy** to push the Compliance Policy out to the group. A slide out appears displaying the status of applying the new policy to the devices in the group.
 
 ![Groups](./assets/NewConsole/CompPolicySuccess.png)
 
@@ -2436,7 +2470,7 @@ If you closed out of the slide out and wish to return later to check the status 
 
 ### The Apps Tab
 
-The Apps tab lets you manage the apps on all the devices in the group. This includes installing new apps, uninstalling apps, scheduling an app installation, and approving apps for the group.
+The **Apps** tab lets you manage the apps on all the devices in the group. This includes installing new apps, uninstalling apps, scheduling an app installation, and approving apps for the group.
 
 ![Groups](./assets/NewConsole/GroupApps.png)
 
@@ -2445,7 +2479,7 @@ If you wish to update a currently installed app to a new version, you install th
 :::
 
 :::tip
-You cannot uninstall in-ROM apps (called Preloaded apps). Instead you can Disable these apps using Approvals.
+You cannot uninstall in-ROM apps (called Preloaded apps). Instead you can **Disable** these apps using **Approvals**.
 :::
 
 #### Install/Uninstall
@@ -2464,7 +2498,7 @@ Once you’ve selected an app, its details will appear in the **App Details Prev
 
 ![Groups](./assets/NewConsole/GroupInstallApp.png)
 
-Select a version from the Select Version dropdown and click Install. A sidebar will slide in from the right showing the status of the installation.
+Select a version from the **Select Version** dropdown and click **Install**. A sidebar will slide in from the right showing the status of the installation.
 
 ![Groups](./assets/NewConsole/InstallSuccessDetails.png)
 
@@ -2480,11 +2514,11 @@ To schedule an app installation or uninstallation, click on the **Create schedul
 
 ![Groups](./assets/NewConsole/ScheduledInstallCreate1.png)
 
-Enter a unique name for the scheduled installation or uninstallation in the Name field. Names cannot be reused. Select Install or Uninstall from the Select App Action dropdown.
+Enter a unique name for the scheduled installation or uninstallation in the **Name** field. Names cannot be reused. Select **Install** or **Uninstall** from the **Select App** Action dropdown.
 
 ![Groups](./assets/NewConsole/GroupInstall.png)
 
-Select the app you want to install or uninstall from the Select App dropdown.
+Select the app you want to install or uninstall from the **Select App** dropdown.
 
 ![Groups](./assets/NewConsole/GroupInstallSelectApp.png)
 
@@ -2494,7 +2528,7 @@ Use the radio buttons to choose between using the device’s time or your consol
 
 You also have the option to define a recurring schedule by selecting **Recurring schedule** — for instance, to schedule an application installation every Monday between 2:00 AM and 5:00 AM from May 1st to May 10th.
 
-Select start and end dates from the Start Date and End Date dropdowns and start and stop times from the Start Time and End Time dropdowns. The click **Create Schedule**.
+Select start and end dates from the **Start Date** and **End Date** dropdowns and start and stop times from the **Start Time** and **End Time** dropdowns. The click **Create Schedule**.
 
 After the scheduled installation has been completed, you can see the status of the action by clicking **View Results** next to the entry for the installation.
 
@@ -2502,7 +2536,7 @@ After the scheduled installation has been completed, you can see the status of t
 
 #### Approvals
 
-The Approvals section enables you to show, hide or disable in-ROM apps (also referred to as Preloaded apps) on all the devices in the group.
+The **Approvals** section enables you to show, hide or disable in-ROM apps (also referred to as Preloaded apps) on all the devices in the group.
 
 ![Groups](./assets/NewConsole/GroupApprovals.png)
 
@@ -2512,7 +2546,7 @@ Click **Apply**. The console will display the group command status.
 
 ![Groups](./assets/NewConsole/SettingsActionStatus.png)
 
-Clicking See Details will cause a sidebar to slide in from the right showing the status of the installation.
+Clicking **See Details** will cause a sidebar to slide in from the right showing the status of the installation.
 
 ![Groups](./assets/NewConsole/AppStateDetails.png)
 
@@ -2524,19 +2558,19 @@ You will need to enter the exact package name of any in-ROM apps you wish to sho
 
 The best way to get the exact package name of an in-ROM app is to use an Android Debug Bridge (ADB) command to retrieve the names of all the packages.
 
-Physically connect to the device using a USB cable and authorize ADB usage on the device by going to Device > Settings. Once ADB usage is authorized, the following command will retrieve the names of all the package names:
+Physically connect to the device using a USB cable and authorize ADB usage on the device by going to **Device > Settings**. Once ADB usage is authorized, the following command will retrieve the names of all the package names:
  
-*adb shell pm list packages*
+***adb shell pm list packages***
  
 ADB will return a list of all the apps running on the device:
 
 ![Groups](./assets/NewConsole/ADBCommands.png)
 
-You can also view the package names for any apps installed on a device by viewing the device’s details and selecting Apps. The package name for each app is displayed in the resulting list view.
+You can also view the package names for any apps installed on a device by viewing the [device’s details and selecting Apps](./console.md#devices). The package name for each app is displayed in the resulting list view.
 
 ### OS Updates
 
-The OS Updates section enables you to push operating-system updates to all the devices in the group that run Esper Enhanced Android.
+The **OS Updates** section enables you to push operating-system updates to all the devices in the group that run Esper Enhanced Android.
 
 ![Groups](./assets/NewConsole/GroupOSUpdates.png)
 
@@ -2560,7 +2594,7 @@ Only the latest 30 builds of the Esper Enhanced Android updates will be availabl
 
 ![Groups](./assets/NewConsole/SelectBuild.png)
 
-The **Number of Devices** field will populate with the devices in the group on which this update is applicable; that is, the number of devices that have an OS build version lower than the selected version for the deployment. Add the installation name and any pertinent notes and click Save.
+The **Number of Devices** field will populate with the devices in the group on which this update is applicable; that is, the number of devices that have an OS build version lower than the selected version for the deployment. Add the installation name and any pertinent notes and click **Save**.
 
 
 ## Apps
@@ -2571,19 +2605,21 @@ This section enables you to manage the applications used on the Android devices 
 
 There are two different types of Apps you can authorize on your Android devices:
 
-   Enterprise Apps (APK files)
+   - Enterprise Apps (APK files)
+   
       You can upload Android Packages (APKs) for Enterprise apps to the Esper cloud; (APK is the package file format used by       the Android operating system for distribution and installation of mobile apps).
       
-   Google Play Apps
+   - Google Play Apps
+   
       You can authorize—or disallow—apps from your managed Google Play store.
       
 :::tip
-You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by entering the package name in the Apps screen. You can also do so after provisioning using **Groups > Apps > Approvals**.
+You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates). You can also do so after provisioning using [**Groups > Apps > Approvals**](./console.md#groups).
 :::
 
 ### Uploading Enterprise Apps to the Esper Cloud
 
-To upload an APK for a Enterprise app to the Esper cloud, click on Upload Apps in the top right corner of the screen. A popup box will appear into which you can drag the APK file for your Enterprise app; to select the file from your computer, click on Select APK.
+To upload an APK for a Enterprise app to the Esper cloud, click on **Upload Apps** in the top right corner of the screen. A popup box will appear into which you can drag the APK file for your Enterprise app; to select the file from your computer, click on **Select APK**.
 
 ![Apps](./assets/NewConsole/APKUpload.png)
 
@@ -2591,26 +2627,27 @@ Once uploaded, your Enterprise app will be shown under the “Uploaded Apps” s
 
 All app APK files must adhere to certain conditions to succeed uploading and provisioning:
 
-   The APK must have a unique version name and number.
-   The APK cannot be larger than 500 MB.
-   The APK file itself must have the .apk extension.
-   The APK file must include signature verification.
-   The app cannot set itself as the default launcher; this will cause conflict with the Esper Agent (DPC).
-   The app must adhere to the latest Android APK standards (currently we allow APKs without icons).		
+   - The APK must have a unique version name and number.
+   - The APK cannot be larger than 500 MB.
+   - The APK file itself must have the .apk extension.
+   - The APK file must include signature verification.
+   - The app cannot set itself as the default launcher; this will cause conflict with the Esper Agent (DPC).
+   - The app must adhere to the latest Android APK standards (currently we allow APKs without icons).		
    
 If you attempt to upload an APK file that has a V2 or V3 signature, but not a V1 signature, it will be rejected. Older Android platforms—those running Marshmallow (6.0) and earlier—require v1 signatures.
 
 Clicking on **View Details** on an app tile will show details for the app:
-   App name
-   Package name
-   App icon
-   Version code (for each version). Note that the same app can have various versions.
-   App installed on - the number of devices the app is installed on
-   Build number
-   Size of the app
-   Compatibility with SDK version
-   Uploaded on — the date and time the app was uploaded to the Esper Cloud
-   App description — an optional field for you to add a description or release notes
+
+   - App name
+   - Package name
+   - App icon
+   - Version code (for each version). Note that the same app can have various versions.
+   - App installed on - the number of devices the app is installed on
+   - Build number
+   - Size of the app
+   - Compatibility with SDK version
+   - Uploaded on — the date and time the app was uploaded to the Esper Cloud
+   - App description — an optional field for you to add a description or release notes
    
 ![Apps](./assets/NewConsole/AppDetails.png)
 
@@ -2618,10 +2655,11 @@ Clicking on the number of devices on which the app is installed will launch a po
 
 ![Apps](./assets/NewConsole/AppVersionDetails.png)
 
-There is an ellipsis (...) under Actions. Clicking the ellipsis enables you to to:
-   Delete the app version from the Esper Cloud
-   Edit the description — You can add and edit description or release notes per version of the app
-   Download the app version locally to your PC
+There is an ellipsis (...) under **Actions**. Clicking the ellipsis enables you to to:
+
+   - Delete the app version from the Esper Cloud
+   - Edit the description — You can add and edit description or release notes per version of the app
+   - Download the app version locally to your PC
 
 ![Apps](./assets/NewConsole/AppActions.png)
 
@@ -2692,7 +2730,7 @@ In the popup box that appears, click on **Approve**.
 
 ![Apps](./assets/NewConsole/GooglePlayApprove.png)
 
-Select the radio button next to the way you would like to handle new app permission requests. Selecting Keep approved results in the best user experience as the user will not have to grant any new permissions on the device, however you need to be sure you trust the app provider if you choose this option. If  you’d like to receive email notification whenever an app requests new permissions, click on the Notifications tab and add your email address in the space provided. Then click **Done**.
+Select the radio button next to the way you would like to handle new app permission requests. Selecting **Keep approved** results in the best user experience as the user will not have to grant any new permissions on the device, however you need to be sure you trust the app provider if you choose this option. If  you’d like to receive email notification whenever an app requests new permissions, click on the **Notifications** tab and add your email address in the space provided. Then click **Done**.
 
 ![Apps](./assets/NewConsole/GoogleAppApproval.png)
 
@@ -2755,7 +2793,7 @@ To remove an app from the collection displayed, click the (x) icon above and to 
 
 ![Apps](./assets/NewConsole/GooglePlayApp.png)
 
-To add an app to this collection, click + Add Apps.
+To add an app to this collection, click **+ Add Apps**.
 
 ![Apps](./assets/NewConsole/AddApps.png)
 
@@ -2781,7 +2819,7 @@ You can unapprove an app from all devices. To unapprove an app, click on the til
 
 ![Apps](./assets/NewConsole/GooglePlayAppsSelect.png)
 
-On the detail screen for the app, click Unapprove.
+On the detail screen for the app, click **Unapprove**.
 
 ![Apps](./assets/NewConsole/GooglePlayUnapprove.png)
 
@@ -2795,7 +2833,7 @@ Alerts enable you to monitor the performance of your devices and have the system
 
 ![Alerts](./assets/NewConsole/AlertsSummary.png)
 
-The Alerts section displays all the alerts you have created, indicating the name, alert type, alert condition, linked groups, and total number of times the alert has fired. The ellipses (...) at the far right of each alert listing enables you to view details about the alert, edit the alert, or delete the alert.
+The **Alerts** section displays all the alerts you have created, indicating the name, alert type, alert condition, linked groups, and total number of times the alert has fired. The ellipses (...) at the far right of each alert listing enables you to view details about the alert, edit the alert, or delete the alert.
 
 ![Alerts](./assets/NewConsole/AlertActions.png)
 
@@ -2804,19 +2842,19 @@ Clicking the name of an alert brings up details about that alert.
 ![Alerts](./assets/NewConsole/AlertSummary.png)
 
 ### Creating an Alert
-To create a new alert, click on New Alert.
+To create a new alert, click on **New Alert**.
 
 ![Alerts](./assets/NewConsole/AlertNew.png)
 
 **Select an Alert Type**
 
-Enter a name for your new alert in the Alert Name field; select an alert type by clicking on the icon for the alert type you want. Then click Next.
+Enter a name for your new alert in the **Alert Name** field; select an alert type by clicking on the icon for the alert type you want. Then click **Next**.
 
 ![Alerts](./assets/NewConsole/AlertCreate1.png)
 
 **Set the Alert Condition**
 
-Set the alert condition which is specific to the alert type, then click Next.
+Set the alert condition which is specific to the alert type, then click **Next**.
 
 ![Alerts](./assets/NewConsole/AlertFrequency.png)
 
@@ -2834,7 +2872,7 @@ If you need to create a new channel, click on **Create New Channel**.
 
 ![Alerts](./assets/NewConsole/AlertCreateChannelButton.png)
 
-Enter a name for your new channel in the Channel Name field and click **Next**.
+Enter a name for your new channel in the **Channel Name** field and click **Next**.
 
 ![Alerts](./assets/NewConsole/AlertsCreateChannel.png)
 
@@ -2844,7 +2882,7 @@ Add email addresses in the field provided, the click **Save**.
 
 **Link Devices**
 
-Select devices on which you’d like to see alerts by clicking the plus symbol next to their names from the list displayed. To add a group rather than an individual device, click Groups, then select the group for which you’d like to see alerts, then click **Next**.
+Select devices on which you’d like to see alerts by clicking the plus symbol next to their names from the list displayed. To add a group rather than an individual device, click **Groups**, then select the group for which you’d like to see alerts, then click **Next**.
 
 ![Alerts](./assets/NewConsole/Alertlinkdevicegroups.png)
 
@@ -2854,7 +2892,7 @@ An alert cannot be linked to a combination of devices and groups. It needs to be
 
 **Preview and Save**
 
-Preview your alert. If everything is as it should be, click Save. If not, click Back until you get to the panel that needs changing.
+Preview your alert. If everything is as it should be, click **Save**. If not, click **Back** until you get to the panel that needs changing.
 
 ![Alerts](./assets/NewConsole/AlertPreview.png)
 
@@ -2875,32 +2913,33 @@ You have four options with these, indicated by the four icons to the right of ea
 ![CompliancePolicy](./assets/NewConsole/Actions.png)
 
 The options are:
-   Duplicate the Policy (two pages icon)
+
+   - **Duplicate the Policy** (two pages icon)
       Clicking this icon duplicates an existing compliance policy so you can use it as the basis for a new policy.
-   View the Policy (eye icon)
+   - **View the Policy** (eye icon)
       Clicking this icon lets you view an existing compliance policy.
-   Edit the Policy (pencil icon)
+   - **Edit the Policy** (pencil icon)
       Clicking this icon lets you make changes to an existing compliance policy. Once the policy has been applied to a device       or devices, it cannot be changed and this option will be greyed out.
-   Delete the Policy (garbage can icon)
+   - **Delete the Policy** (garbage can icon)
       Clicking this icon deletes a policy.
    
-Use Search to find an already created Compliance Policy by Policy name.
+Use **Search** to find an already created Compliance Policy by Policy name.
 
 ### Creating a New Compliance Policy
 
-To create a new Compliance Policy, click New Policy. This will bring up a screen in which you can set all the configurations of the new Compliance Policy. The layout is the same as when you [define a Compliance Policy in a Provisioning Template], but uniquely includes the name and description.
+To create a new Compliance Policy, click New Policy. This will bring up a screen in which you can set all the configurations of the new Compliance Policy. The layout is the same as when you [define a Compliance Policy in a Provisioning Template](./console.md#provisioning-templates), but uniquely includes the name and description.
 
 ![CompliancePolicy](./assets/NewConsole/CreatePolicy.png)
 
 **Enter a Policy Name and Description**
 
-Enter a unique name for your new compliance policy in the Policy Name field; enter an optional description in the Description field.
+Enter a unique name for your new compliance policy in the **Policy Name** field; enter an optional description in the **Description** field.
 
 ![CompliancePolicy](./assets/NewConsole/CompPolicyCreate.png)
 
 **Lock Screen Password Rules**
 
-The Lock screen password rule specifies the conditions for the device unlock password, with the default being None.
+The Lock screen password rule specifies the conditions for the device unlock password, with the default being **None**.
 
 ![CompliancePolicy](./assets/NewConsole/LockScreenPwd.png)
 
@@ -2908,9 +2947,9 @@ If you choose alphabetic or alphanumeric, you must set a minimum password length
 
 ![CompliancePolicy](./assets/NewConsole/LockPwdLength.png)
 
-**Alphabetic**: Restricts acceptable password to only upper and lowercase alphabetic characters (A to Z, and a to z).
-**Alphanumeric**: Expands acceptable password to include numbers, and special characters in addition to alphabetic characters.
-**None**: There is no password required to unlock the device.
+- **Alphabetic**: Restricts acceptable password to only upper and lowercase alphabetic characters (A to Z, and a to z).
+- **Alphanumeric**: Expands acceptable password to include numbers, and special characters in addition to alphabetic characters.
+- **None**: There is no password required to unlock the device.
 
 The password for a device will be set up during the initial setup of the device by the user.
 
@@ -2924,11 +2963,11 @@ Default app permissions determine enforcement of the runtime-permission rule acr
 
 There are three possible settings:
 
-**Allow Automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user. This is the typical setting used for single-purpose solutions using a fully trusted, customer-supplied application.
+- **Allow Automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user. This is the typical setting used for single-purpose solutions using a fully trusted, customer-supplied application.
 
-**Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”. This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions— [contact us](mailto:support@esper.io) directly to find out more.
+- **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”. This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions— [contact us](mailto:support@esper.io) directly to find out more.
 
-**Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#allow-app-permissions) from the Esper Console.
+- **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#allow-app-permissions) from the Esper Console.
 
 **System Updates**
 
@@ -2938,10 +2977,10 @@ The System updates option allows you to enforce a system update policy on the de
 
 There are four possible settings:
 
-**Update automatically**: This option will install any over-the-air (OTA) updates automatically as soon as they become available without user interaction,  and reboot the devices when necessary.
-**Postpone installation**: This option postpones installation of an OTA update for 30 days. After 30 days, the system will prompt the device user to install the update. Subsequent updates will also follow the same 30-day postponement. This is ideal when you need time to validate your solution against new system updates before they are installed.
-**Windowed Installation**: This option allows you to define a window of time during which the OTA update will be installed without user interaction. This option is ideal for devices with a known down period. A drop-down will appear to enable you to set the start and end times for the maintenance window.
-**Disable Update**: This option allows you to disable updates on the device. It is available for a limited set of OTA services that support this feature. If the device does not support disabling updates, it will default to Postpone installation. Before setting this option please contact Esper directly to make sure the devices you plan to provision support this configuration.
+- **Update automatically**: This option will install any over-the-air (OTA) updates automatically as soon as they become available without user interaction,  and reboot the devices when necessary.
+- **Postpone installation**: This option postpones installation of an OTA update for 30 days. After 30 days, the system will prompt the device user to install the update. Subsequent updates will also follow the same 30-day postponement. This is ideal when you need time to validate your solution against new system updates before they are installed.
+- **Windowed Installation**: This option allows you to define a window of time during which the OTA update will be installed without user interaction. This option is ideal for devices with a known down period. A drop-down will appear to enable you to set the start and end times for the maintenance window.
+- **Disable Update**: This option allows you to disable updates on the device. It is available for a limited set of OTA services that support this feature. If the device does not support disabling updates, it will default to Postpone installation. Before setting this option please [contact Esper](mailto:support@esper.io) directly to make sure the devices you plan to provision support this configuration.
 
 **Android Settings App**
 
@@ -2951,18 +2990,19 @@ Android settings app determines how users can access the Android device settings
 
 There are three possible settings:
 
-**System settings app**: This setting will display the icon for the default Android settings app on the Home screen. Clicking this icon will take the user to the default Android settings. Depending on the other configurations set by the Compliance Policy, some options may be disabled to the user. If an app is set up in Kiosk mode on the device, the System settings app will be inaccessible to the device user while the app is in Kiosk mode.
+- **System settings app**: This setting will display the icon for the default Android settings app on the Home screen. Clicking this icon will take the user to the default Android settings. Depending on the other configurations set by the Compliance Policy, some options may be disabled to the user. If an app is set up in Kiosk mode on the device, the System settings app will be inaccessible to the device user while the app is in Kiosk mode.
 
-**None**: No icon for any settings app will be available for the user to choose from the device’s Home screen.
+- **None**: No icon for any settings app will be available for the user to choose from the device’s Home screen.
 
-**Esper settings app**: Esper offers a custom settings app that gives device users access to a subset of the available Android settings when servicing a device. The Esper settings app is intended for use by technicians servicing a device locally. It’s protected by the Dock & Esper Settings App password to prevent unauthorized access. This app offers a reduced number of settings:
-   Wi-Fi: Change the Wi-Fi access point used by the device.
-   Torch: Turn on the Torch (AKA “flashlight”) if the device has a camera flash LED.
-   Auto-Rotation: Turn auto-rotation on or off.
-   Factory Reset: Perform a factory reset of the device, regardless of the Compliance Policy applied. 
-   Kiosk App: Change the app that runs in kiosk mode. The device user can choose any installed app on the device to act as       the kiosk app, with the Esper Console kept in sync on the configuration stats.
-   Esper Branding: Turn off the Esper logo on the Home screen.
-   About: Supplies information regarding the endpoint name the device is enrolled in, in case the customer has access to multiple Esper endpoints.
+- **Esper settings app**: Esper offers a custom settings app that gives device users access to a subset of the available Android settings when servicing a device. The Esper settings app is intended for use by technicians servicing a device locally. It’s protected by the Dock & Esper Settings App password to prevent unauthorized access. This app offers a reduced number of settings:
+
+   - **Wi-Fi**: Change the Wi-Fi access point used by the device.
+   - **Torch**: Turn on the Torch (AKA “flashlight”) if the device has a camera flash LED.
+   - **Auto-Rotation**: Turn auto-rotation on or off.
+   - **Factory Reset**: Perform a factory reset of the device, regardless of the Compliance Policy applied. 
+   - **Kiosk App**: Change the app that runs in kiosk mode. The device user can choose any installed app on the device to act as the kiosk app, with the Esper Console kept in sync on the configuration stats.
+   - **Esper Branding**: Turn off the Esper logo on the Home screen.
+   - **About**: Supplies information regarding the endpoint name the device is enrolled in, in case the customer has access to multiple Esper endpoints.
    
    ![CompliancePolicy](./assets/NewConsole/EsperSettingsApp.png)
     
@@ -2975,9 +3015,10 @@ Tap the expander arrow; you’ll need to enter the password you set in the Compl
 ![CompliancePolicy](./assets/NewConsole/DeviceAppSlider.jpg)
 
 Once you’ve entered the password, a dock will slide out that gives you three options:
-   Exit Kiosk mode. If the device is in multi-app mode, no action is taken.
-   Reboot the device.
-   Open the  Esper Settings app; selecting the Esper Settings app will require you to enter the password again to gain access.
+
+   - Exit Kiosk mode. If the device is in multi-app mode, no action is taken.
+   - Reboot the device.
+   - Open the  Esper Settings app; selecting the Esper Settings app will require you to enter the password again to gain access.
 
 To slide the dock back in, click on the expander arrow again; it will disappear after a few seconds.
 
@@ -3001,10 +3042,10 @@ If your device is set up in Kiosk mode, the dock will be accessible even if you 
 
 This setting enables you to restrict the number of Google accounts that can be added on the device and used with Google apps like Gmail, Google Play Store, and YouTube. By default, any number of accounts can be added to a specific device; this setting restricts this number. For example, if you set this setting to two, only two accounts will be permitted on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 
-If you don’t check the Google account restrictions box and plan to provision your device in Multi application mode, we recommend disabling Google Play Store to prevent installation of unapproved apps.
+**NOTE**: If you don’t check the Google account restrictions box and plan to provision your device in Multi application mode, we recommend disabling Google Play Store to prevent installation of unapproved apps.
 
 :::tip
-The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set Number of accounts to 0.
+The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.
 :::
 
 **Factory Reset Protection** 
@@ -3029,7 +3070,7 @@ When Safe-mode login is on, users will be able to boot to Safe Mode on their dev
 
 **Factory Reset**
 
-Factory Reset controls whether or not the user can perform a factory reset on the device using the Android Settings app. When Factory Reset is off, the user will not be able to perform a factory reset on the device. This does not prevent a hard-key factory reset, see Factory Reset Protection to prevent hard-key factory reset.
+Factory Reset controls whether or not the user can perform a factory reset on the device using the Android Settings app. When Factory Reset is off, the user will not be able to perform a factory reset on the device. This does not prevent a hard-key factory reset, see [Factory Reset Protection](./console.md# to prevent hard-key factory reset.
 
 **Notification Bar**
 
@@ -3073,11 +3114,11 @@ If you want device users to have access to your Managed Google Play Store, set t
 USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to **On**; if you don’t, set it to **Off**.
 
 **Edit Date and Time**
-If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to On; if you don’t set it to Off.
+If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to **On**; if you don’t set it to **Off**.
 
 **Application Uninstall**
 
-Setting Application uninstall to On will block app uninstallation both locally on the device and using Esper. Set it to off if you need to be able to uninstall applications remotely using Esper. 
+Setting Application uninstall to **On** will block app uninstallation both locally on the device and using Esper. Set it to **off** if you need to be able to uninstall applications remotely using Esper. 
 
 :::tip
 With this set to ON you will still be able to update your application installed on the device using Esper.
@@ -3103,8 +3144,8 @@ This feature allows installation of apps from unknown sources on the device. To 
 
 Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
 
-   Restrict incoming calls to uploaded contacts only
-   Restrict outgoing calls to uploaded contacts only
+   - Restrict incoming calls to uploaded contacts only
+   - Restrict outgoing calls to uploaded contacts only
    
 ![CompliancePolicy](./assets/NewConsole/TemplateCustomDialer.png)
 
@@ -3124,7 +3165,7 @@ We never allow turning on ADB from the device on any Esper-provisioned device.
 
 ### Resetting to Default Settings
 
-You may reset these values to default at any time by clicking the Reset to Default button at the bottom of this panel.
+You may reset these values to default at any time by clicking the **Reset to Default** button at the bottom of this panel.
 When you are satisfied with your compliance settings, click **Next**.
 
 ### Duplicating a Compliance Policy
@@ -3135,11 +3176,11 @@ If you’d like to base a new Compliance Policy on an existing Compliance Policy
 
 ### Editing a Compliance Policy
 
-If you’d like to edit an existing Compliance Policy, click on the Edit icon (pencil) in the Compliance Policy list view.
+If you’d like to edit an existing Compliance Policy, click on the **Edit** icon (pencil) in the Compliance Policy list view.
 
 ![CompliancePolicy](./assets/NewConsole/CompliancePolicyEdit.png)
 
-NOTE: When a Compliance Policy has already been applied to devices, it can’t be edited, and the icon will be grayed out on the menu.
+**NOTE**: When a Compliance Policy has already been applied to devices, it can’t be edited, and the icon will be grayed out on the menu.
 
 ![CompliancePolicy](./assets/NewConsole/CompPolicyMessage.png)
 
@@ -3150,35 +3191,38 @@ Your Esper Console provides reports on the performance of the devices and groups
 
 ### Daily Reports
 
-Esper automatically generates a daily report for your fleet. The **Reports** section lists the available **Daily Reports**, with the most recent reports being at the top of the list. To view a Daily Report, click on the **View** icon in line with its listing or click on Daily Reports under Report type. To download a Daily Report in a CSV file format, click the **Download** icon in line with its listing.
+Esper automatically generates a daily report for your fleet. The **Reports** section lists the available **Daily Reports**, with the most recent reports being at the top of the list. To view a Daily Report, click on the **View** icon in line with its listing or click on **Daily Reports** under **Report type**. To download a Daily Report in a CSV file format, click the **Download** icon in line with its listing.
 
 ![Report](./assets/NewConsole/DailyReports.png)
 
 The Daily Report lists the following information:
-   Number of Registered devices, e.g. devices provisioned on your endpoint
-   Peak number of active devices
-   Number of newly provisioning devices, e.g. within the last 3 days
+
+   - Number of Registered devices, e.g. devices provisioned on your endpoint
+   - Peak number of active devices
+   - Number of newly provisioning devices, e.g. within the last 3 days
 
 For each group, it also lists: 
-   Number of Registered devices
-   Number of Active devices
-   Number of Inactive devices
-   Newly provisioned devices
+
+   - Number of Registered devices
+   - Number of Active devices
+   - Number of Inactive devices
+   - Newly provisioned devices
 
 Clicking > next to one of the groups will give you additional detail about the devices in that group: 
 
 ![Report](./assets/NewConsole/ReportDetails.png)
 
-This view lists the following details per device - 
-   Device name
-   Serial number
-   Status
-   Registered on
-   Location as of the report date
-   Whether or not the device has recently changed location
-   Brand
-   Model
-   Any tags assigned to the device
+This view lists the following details per device:
+
+   - Device name
+   - Serial number
+   - Status
+   - Registered on
+   - Location as of the report date
+   - Whether or not the device has recently changed location
+   - Brand
+   - Model
+   - Any tags assigned to the device
    
 This information can also be downloaded as a .pdf file, an Excel spreadsheet, or a .csv file by clicking **Download** and selecting a file format from the dropdown menu.
 
@@ -3186,11 +3230,11 @@ This information can also be downloaded as a .pdf file, an Excel spreadsheet, or
 
 ### Custom Reports
 
-You can generate custom reports that cover a specific period of time. To generate a custom report, click the Custom Reports tab.
+You can generate custom reports that cover a specific period of time. To generate a custom report, click the **Custom Reports** tab.
 
 ![Report](./assets/NewConsole/ReportsCustom.png)
 
-Select the device group you want to be covered by the report from the Select Device Group dropdown menu. Click the Start Date box to enter the beginning of the reporting period. Click the End Date box to enter the end of the reporting period. Then click Generate Report.
+Select the device group you want to be covered by the report from the **Select Device Group** dropdown menu. Click the **Start Date** box to enter the beginning of the reporting period. Click the **End Date** box to enter the end of the reporting period. Then click **Generate Report**.
 
 ![Report](./assets/NewConsole/ReportsCustomConfigure.png)
 
@@ -3200,20 +3244,22 @@ This Custom Report will contain the same information as the Daily Report, but it
 
 ### Subscribing to Reports
 
-You can subscribe via email to the reports automatically generated by the system. To subscribe, click the Email subscription button at the top right of the Reports window.
+You can subscribe via email to the reports automatically generated by the system. To subscribe, click the **Email subscription** button at the top right of the Reports window.
 
 ![Report](./assets/NewConsole/ReportsEmailSubscription.png)
 
-The **Email subscription** pane will slide in from the right. Enter the email addresses for any users into the Enter your email ID field. You can enter multiple email addresses into the field; simply use commas to separate them. Then click **Subscribe**.
+The **Email subscription** pane will slide in from the right. Enter the email addresses for any users into the **Enter your email ID** field. You can enter multiple email addresses into the field; simply use commas to separate them. Then click **Subscribe**.
 
 ![Report](./assets/NewConsole/ReportsEmail.png)
 
 To unsubscribe users from the daily report email, click on the checkboxes next to the email address in the **Subscribers** list and click **Unsubscribe**. You can unsubscribe all email addresses by selecting the **Subscribers** checkbox at the top of the list and clicking **Unsubscribe**.
 
 There are some limitations to the report email subscription service:
-   A maximum of ten subscriptions can be done for each endpoint.
-   Duplicate email addresses are not allowed.
-   All subscriptions will be subjected to an automated check for invalid email address format and for invalid domains.
+   
+   - A maximum of ten subscriptions can be done for each endpoint.
+   - Duplicate email addresses are not allowed.
+ 
+ All subscriptions will be subjected to an automated check for invalid email address format and for invalid domains.
 
 
 ## Geofence
@@ -3224,7 +3270,7 @@ In order for geofencing to work, the mobile device needs internet connectivity a
 
 ![Geofence](./assets/NewConsole/GeofenceLockdown.png)
 
-Any geofencing you have set up will be shown in list view. If you prefer to see them as tiles, click on the Tile View icon.
+Any geofencing you have set up will be shown in list view. If you prefer to see them as tiles, click on the **Tile View** icon.
 
 ![Geofence](./assets/NewConsole/GeofenceSummary.png)
 
@@ -3232,11 +3278,11 @@ To look at an existing geofence, click on its name in the list. This will bring 
 
 ![Geofence](./assets/NewConsole/GeofenceMapView.png)
 
-To view the devices on the fence—that is, the devices subject to that geofence—click Devices on Fence.
+To view the devices on the fence—that is, the devices subject to that geofence—click **Devices on Fence**.
 
 ![Geofence](./assets/NewConsole/GeofenceSuccess.png)
 
-To unassign devices from the Geofence, click the ellipsis (...) next to that device’s entry on the list and click Unapply from the pop-up box. Devices that haven't been successfully assigned to the group can be assigned using the same method.
+To unassign devices from the Geofence, click the ellipsis (...) next to that device’s entry on the list and click **Unapply** from the pop-up box. Devices that haven't been successfully assigned to the group can be assigned using the same method.
 
 ### Setting Up a Geofence
 
@@ -3248,11 +3294,11 @@ Enter the address for the center of the circle in the **Location** field; the ma
 
 ![Geofence](./assets/NewConsole/GeofenceMap.png)
 
-Click the check box next to each device you’d like to assign to this geofence and click Next.
+Click the check box next to each device you’d like to assign to this geofence and click **Next**.
 
 ![Geofence](./assets/NewConsole/GeofenceAssignDevices.png)
 
-To define the action to be taken whenever a device leaves the geofence, click Lock Devices, Beep, or both and click Create.
+To define the action to be taken whenever a device leaves the geofence, click **Lock Devices**, **Beep**, or both and click **Create**.
 
 ![Geofence](./assets/NewConsole/GeofenceActions.png)
 
@@ -3282,13 +3328,13 @@ To create a new pipeline, click on **New Pipeline**.
 
 ![Pipeline](./assets/NewConsole/PipelineNew.png)
 
-Enter a name for your new pipeline in the Name your pipeline field. Enter a description in the Add description field. Then click **Next**.
+Enter a name for your new pipeline in the **Name your pipeline** field. Enter a description in the **Add description** field. Then click **Next**.
 
 ![Pipeline](./assets/NewConsole/PipelineCreate.png)
 
 Select the trigger that will set your pipeline in motion from the **Select the trigger** dropdown menu. Any time the defined trigger occurs—through the dashboard, through an API call, or through a CLI command—the pipeline will automatically start running. For V1 we currently only support the trigger where a new Enterprise app version is uploaded to the Esper Cloud. 
 
-Select the app you would like to use as a trigger from the Select the app dropdown menu and click **Next**.
+Select the app you would like to use as a trigger from the **Select the app** dropdown menu and click **Next**.
 
 ![Pipeline](./assets/NewConsole/PipelineTrigger.png)
 
@@ -3310,30 +3356,31 @@ Your pipeline can be edited later as necessary.
 
 ### Editing a Pipeline
 
-To edit an existing pipeline, click the ellipsis (...) on its tile and select Edit from the popup.
+To edit an existing pipeline, click the ellipsis (...) on its tile and select **Edit** from the popup.
 
 ![Pipeline](./assets/NewConsole/PipelineActions.png)
 
 ### Deleting a Pipeline
 
-To delete a pipeline, click the ellipsis (...) on its tile and select Delete from the popup.
+To delete a pipeline, click the ellipsis (...) on its tile and select **Delete** from the popup.
 
 ![Pipeline](./assets/NewConsole/PipelineActions.png)
 
 ## Company Settings
 
-The Company Settings section displays your company’s information. You can edit your company’s information by clicking on the Edit Profile button at the top right of the screen.
+The Company Settings section displays your company’s information. You can edit your company’s information by clicking on the **Edit Profile** button at the top right of the screen.
 
 ![Company Settings](./assets/NewConsole/CompanySettings.png)
 
 Please enter the following:
-   Registered name
-   Location
-   Name
-   Zip code
-   Email
-   Address
-   Phone number
+   
+   - Registered name
+   - Location
+   - Name
+   - Zip code
+   - Email
+   - Address
+   - Phone number
 
 ### Company Short Code for Device ID
 
@@ -3355,7 +3402,7 @@ Esper Enhanced Android devices are devices that are shipped with a customized An
 
 ![EEA](./assets/NewConsole/EEA.png)
 
-If you’re using Esper Enhanced Android devices, you can update the operating systems on your devices using our over-the-air (OTA) functionality. To deploy a new available build on a group, navigate to **Group > OS Update**. See the Group section for more details.
+If you’re using Esper Enhanced Android devices, you can update the operating systems on your devices using our over-the-air (OTA) functionality. To deploy a new available build on a group, navigate to **Group > OS Update**. See the [Group section](./console.md#groups) for more details.
 
 :::tip
 Currently only the latest thirty builds of Esper Enhanced Android updates will be listed and available for deployment.
@@ -3385,9 +3432,9 @@ You can then copy (or renew if needed) your API key. API keys need to be renewed
 
 ![API](./assets/NewConsole/AuthAccessToken.png)
 
-You will need your API key and Enterprise ID to access our [CLI platform] as well as to use the [SDK/API] in your development and management systems.
+You will need your API key and Enterprise ID to access our [CLI platform](https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](https://api.esper.io/) in your development and management systems.
 
-You can find additional information about this process by clicking on [Developer Hub] and [API Documentation].
+You can find additional information about this process by clicking on [Developer Hub](https://docs.esper.io/) and [API Documentation](http://api.esper.io/).
 
 :::tip
 An API key is tied to the user account used to create the key. If you delete a user via User management, then any API keys associated with that user will also be deleted and will be immediately invalidated for API, SDK, and CLI use. To avoid the situation where API keys are unintendedly deleted when a user account is deleted, a best practice is to create a specific user account just for API key management. The Enterprise ID is specific to your endpoint and does not change.
