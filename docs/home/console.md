@@ -190,7 +190,7 @@ If you meet the prerequisites, you may provision your device using any of the ab
 
 Each of the four provisioning methods is suited to different situations. Click the name of a method to get specific instructions. All methods require Internet connectivity.
 
-#### Android for Work (AFW) provisioning
+**Android for Work (AFW) provisioning**
 
 The AfW method is best used for:
       - Devices that have GMS (Google Mobile Services) support enabled
@@ -202,7 +202,7 @@ You can also use IMEI / Serial Numbers with the AfW provisioning method on some 
 
 Go [here](./console.md#) for detailed instructions to provision a device using AfW.
 
-#### 6 Tap QR Code Provisioning
+**6 Tap QR Code Provisioning**
 
 6 Tap QR code provisioning is best used for:
       - Devices that have Google Mobile Services (GMS) support enabled
@@ -214,7 +214,7 @@ Go [here](./console.md#) for detailed instructions to provision a device using A
 
 Go [here](./console.md#6-tap-qr-code-provisioning) for detailed instructions to provision a device using 6 Tap QR Code.
 
-#### Device Provisioner
+**Device Provisioner**
 
 The Device Provisioner is a user-friendly provisioning tool by Esper that runs on Mac and Windows. You can conveniently use this to provision:
 
@@ -228,7 +228,7 @@ Requires you on the device to turn on Developer Options and enable USB Debugging
 
 The Device Provisioner does not support Google Single Sign-on (SSO). If you set up your Esper Console login using Google SSO, simply go to your account on the Esper Console, enter in a password, and save it—you will no longer be using Google SSO and can now sign in on the Device Provisioner and continue to use the login method on the Esper Console.
 
-#### Seamless Provisioning
+**Seamless Provisioning**
    
 Seamless provisioning is only for devices running Esper Enhanced Android:
 
@@ -256,7 +256,7 @@ In case a device stalls during provisioning, there’s a way to exit out and fac
 
 ![Factory Reset](./assets/NewConsole/DeviceFactoryReset.jpg)
 
-## How to Factory Reset your Device
+### How to Factory Reset your Device
 
 Performing a factory reset before provisioning is typically required. Here are general instructions for how to do so on a typical Android device using a Pixel 3 running Android 9 as the example.
 
