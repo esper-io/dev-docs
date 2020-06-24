@@ -198,7 +198,7 @@ The AfW method is best used for:
       - Android 6.0 and above
       - Factory reset of device required
       
-You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, for devices without a camera, and it prevents repurposing the device by exploiting factory reset. It requires a passcode, which is the same as the password used by the Esper Settings app set up in the Compliance Policy. To learn about how to provision devices using the IMEI or serial number method, go [here](./console.md#imei-serial-number-based-provisioning). See the [Upload IMEI CSV](./console.md#actions-on-templates-tiles) for more information on how to load IMEIs and Serial Numbers into a Provisioning Template.
+You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, for devices without a camera, and it prevents repurposing the device by exploiting factory reset. It requires a passcode, which is the same as the password used by the Esper Settings app set up in the Compliance Policy. To learn about how to provision devices using the IMEI or serial number method, go [here](./console.md#imei-serial-number-based-provisioning). See the [Upload IMEI CSV](./console.md#actions-on-template-tiles) for more information on how to load IMEIs and Serial Numbers into a Provisioning Template.
 
 Go [here](./console.md#) for detailed instructions to provision a device using AfW.
 
@@ -212,7 +212,7 @@ Go [here](./console.md#) for detailed instructions to provision a device using A
       
    Beginning with Android 9 you can include credentials for the Wi-Fi network to be used for provisioning in your template. They’ll be included in the QR code, eliminating the need to enter them on the device to establish the required Internet connectivity.
 
-Go [here](./console.md#6-tap-qr-code-provisioning) for detailed instructions to provision a device using 6-Tap QR Code.
+Go [here](./console.md#6\--tap-qr-code-provisioning) for detailed instructions to provision a device using 6-Tap QR Code.
 
 #### Device Provisioner
 
@@ -760,6 +760,7 @@ After this step, your provisioning will be finished and you’ll see your device
 
 Provisioning Templates give you a straightforward way to enroll and provision multiple devices. You create templates for devices in which you specify the compliance policy, apps, device settings, device group—even the wallpapers—you want to be provisioned on your devices.
 The Provisioning Templates are shown as tiles with the most-recently created at the top. You can easily find templates by name using the **Search Templates** feature:
+
 ![Template View](./assets/NewConsole/TemplateView.png)
    
 You can easily open up the QR code to use during AfW or 6-Tap QR Code provisioning by clicking on **View QR Code**. 
@@ -883,7 +884,7 @@ Lock screen must be on in order to set Lock screen password rules. If you select
    
    **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as "Allow app X to access Gallery? Allow/Deny". This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions— [contact us](mailto:support@esper.io) directly to find out more.
    
-   **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#allow-app-permissions) from the Esper Console.
+   **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#apps-tab) from the Esper Console.
 
 **System Updates** 
 
@@ -1025,7 +1026,7 @@ Spreadsheets commonly interpret + as part of a mathematical formula. Use the app
 
 ### ADB
 
-Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via Devices > Device > Settings for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-adb).
+Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via Devices > Device > Settings for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
 
 :::tip
 We never allow turning on ADB from the device on any Esper-provisioned device.
@@ -1786,7 +1787,7 @@ On a managed device, you can turn on ADB using the toggle switch to enable a sec
    
 After the completion of this time period from the point of provisioning, ADB will automatically turn off for the device.
 
-You can choose the **Always On** option to keep ADB on, but Esper does not recommend this practice; ADB is a gateway to communication with the core of the device and should be used in a highly secure manner. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-adb).
+You can choose the **Always On** option to keep ADB on, but Esper does not recommend this practice; ADB is a gateway to communication with the core of the device and should be used in a highly secure manner. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
 
 :::tip
 We never allow turning on ADB from the device on any Esper-provisioned device.
@@ -2967,7 +2968,7 @@ There are three possible settings:
 
 - **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as “Allow app X to access Gallery? Allow/Deny”. This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions— [contact us](mailto:support@esper.io) directly to find out more.
 
-- **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#allow-app-permissions) from the Esper Console.
+- **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#apps-tab) from the Esper Console.
 
 **System Updates**
 
@@ -3157,7 +3158,7 @@ All numbers must be preceded by +country code (for example +1 for US). All numbe
 
 ### ADB
 
-Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via **Devices > Device > Settings** for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-adb).
+Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via **Devices > Device > Settings** for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
 
 :::tip
 We never allow turning on ADB from the device on any Esper-provisioned device.
