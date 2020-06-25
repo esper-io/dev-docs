@@ -202,7 +202,7 @@ You can also use IMEI / Serial Numbers with the AfW provisioning method on some 
 
 Go [here](./console.md#) for detailed instructions to provision a device using AfW.
 
-**6 Tap QR Code Provisioning**
+**Six Tap QR Code Provisioning**
 
 6 Tap QR code provisioning is best used for:
       - Devices that have Google Mobile Services (GMS) support enabled
@@ -212,7 +212,7 @@ Go [here](./console.md#) for detailed instructions to provision a device using A
       
    Beginning with Android 9 you can include credentials for the Wi-Fi network to be used for provisioning in your template. They’ll be included in the QR code, eliminating the need to enter them on the device to establish the required Internet connectivity.
 
-Go [here](./console.md#6-tap-qr-code-provisioning) for detailed instructions to provision a device using 6 Tap QR Code.
+Go [here](./console.md#six-tap-qr-code-provisioning) for detailed instructions to provision a device using 6 Tap QR Code.
 
 **Device Provisioner**
 
@@ -429,7 +429,7 @@ After this step, your provisioning will be finished and you’ll see your device
 
 ![Factory Reset](./assets/NewConsole/DeviceScreen.png)
 
-### 6 Tap QR Code Provisioning
+### Six Tap QR Code Provisioning
 
 Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the AfW provisioning method. The particular screens and flow varies across Android versions, noting 6 Tap QR Code support was first delivered in Android 7. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with 6 Tap QR Code-based provisioning please [email us](mailto:support@esper.io).
 
