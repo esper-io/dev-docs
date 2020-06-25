@@ -32,19 +32,19 @@ First download [Esper Device Provisioner](https://downloads.esper.io/esper-provi
 
 Now open Finder and navigate to where you have downloaded the file. If you haven’t specified otherwise, it will probably be in your **Downloads** folder.
 
-![Provisioner](./assets/NewConsole/DownloadsFolder.png)
+![Provisioner](./assets/NewProvisioner/DownloadsFolder.png)
 
 Move the *Esper Device Provisioner* to *Applications* folder.
 
-![Provisioner](./assets/NewConsole/EDPApplications.png)
+![Provisioner](./assets/NewProvisioner/EDPApplications.png)
 
 By default, MacOS doesn’t trust executable files downloaded from the Internet. As a result, you have to allow MacOS to download and install the Device Provisioner file. Navigate to **System Preferences > Security & Privacy** and click **Open Anyway**.
 
-![Provisioner](./assets/NewConsole/GeneralRequirePassword.png)
+![Provisioner](./assets/NewProvisioner/GeneralRequirePassword.png)
 
 Click **Open** in the dialog box that pops up.
 
-![Provisioner](./assets/NewConsole/EDPPrompt.png)
+![Provisioner](./assets/NewProvisioner/EDPPrompt.png)
 
 Once installed, the Device Provisioner is ready to be configured.
 
@@ -52,7 +52,7 @@ Once installed, the Device Provisioner is ready to be configured.
 
 Once the Device Provisioner is installed, start it to set up using it with your Esper Endpoint.
 
-![Provisioner](./assets/NewConsole/Logo.jpg)
+![Provisioner](./assets/NewProvisioner/Logo.jpg)
  
 :::warning
 The Device Provisioner does not support Google Single Sign-on (SSO). If you set up your Esper Console login using Google SSO, simply go to your account on the Esper Console, enter in a password, and save it—you will no longer be using Google SSO and can now sign in on the Device Provisioner and continue to use the login method on the Esper Console.
@@ -62,15 +62,15 @@ Enter the name or URL of your Esper endpoint in the **Endpoint** box. For exampl
 
 Then enter your username in the **Username** box; click **Continue**.
 
-![Provisioner](./assets/NewConsole/EndpointURL.png)
+![Provisioner](./assets/NewProvisioner/EndpointURL.png)
 
 Enter your password and click **Login**.
 
-![Provisioner](./assets/NewConsole/LoginPassword.png)
+![Provisioner](./assets/NewProvisioner/LoginPassword.png)
 
 The device provisioner will perform any required set up immediately after first login. After that you will now be on the Get started screen. Device Provisioner is now set up to be used with your Endpoint.
 
-![Provisioner](./assets/NewConsole/GetStartedAboutPhone.png)
+![Provisioner](./assets/NewProvisioner/GetStartedAboutPhone.png)
 
 ## Preparing a Device for Provisioning
 
@@ -78,7 +78,7 @@ You need to prepare your device before it can be provisioned using the Device Pr
 
 The full instructions are provided on the *Get started* screen.
 
-![Provisioner](./assets/NewConsole/GetStartedAboutPhone.png)
+![Provisioner](./assets/NewProvisioner/GetStartedAboutPhone.png)
 
 For your convenience, the same instructions are provided below.
 
@@ -92,13 +92,13 @@ Some AOSP devices ship with Developer options already enabled by default - if th
 
 Developer options should now appear in Settings (it can take a few moments for these options to become available in the Settings menu).
 
-![Provisioner](./assets/NewConsole/AboutPhone.png)
+![Provisioner](./assets/NewProvisioner/AboutPhone.png)
 
 On the device, navigate to **Settings > Developer** options.
 
 Scroll down to the DEBUGGING section, and then turn on **USB debugging**. A popup will appear, click **OK** to *Allow USB Debugging*.
 
-![Provisioner](./assets/NewConsole/AllowUSBPrompt.png)
+![Provisioner](./assets/NewProvisioner/AllowUSBPrompt.png)
 
 :::tip
 Some AOSP devices ship with USB debugging already turned on - if that’s the case for your device you can skip this step. Once provisioned onto Esper and depending on the provisioning settings set up in your Provisioning Template, Esper prevents local ADB debugging sessions unless enabled by you using Esper.
@@ -110,7 +110,7 @@ If you are using a USB cable to connect your Android device to your development 
 
 Plug the USB cable into the Android device and then connect it to your development computer. An authorization dialog box to Allow USB debugging will pop up. Click **OK**. Checking **Always allow from this computer** is optional.
 
-![Provisioner](./assets/NewConsole/AllowUSBPrompt1.png)
+![Provisioner](./assets/NewProvisioner/AllowUSBPrompt1.png)
 
 **NOTE**: If your AOSP device is configured to automatically allow an ADB connection to a development PC, you will not see this dialog box. If you have ADB installed on your development PC, you can verify you are connected by going to the command line and executing adb devices. You should see your device listed if this is the case. You can also see which device or devices are connected on the Select Devices screen.
 
@@ -146,7 +146,7 @@ Note your Android device’s IP address, typically found in **Settings > About t
 
 If you clicked **Next** on the Get started screen, you should now be viewing the Select template screen. Select the template that you would like to use to provision your device by simply clicking on the radio button for that template. The available templates are listed in order from most recently created. You can use the Search box to type in the first few letters of the template name to filter the templates shown.
 
-![Provisioner](./assets/NewConsole/TemplateSelect.png)
+![Provisioner](./assets/NewProvisioner/TemplateSelect.png)
 
 You need to have already created your **Provisioning Template** in the Esper Console in order to have it available for the Device Provisioner to use. You can not create a template in the Device Provisioner, it can only be done through the Esper Console. 
 
@@ -154,7 +154,7 @@ If you are in a session on the Device Provisioner on the *Select template* scree
 
 If you selected the wrong template, simply click on the **X** next to the template name in the Selected template field, and select the proper template.
 
-![Provisioner](./assets/NewConsole/SoundZero.png)
+![Provisioner](./assets/NewProvisioner/SoundZero.png)
 
 Once you have your template selected, click **Next**.
 
@@ -162,7 +162,7 @@ Once you have your template selected, click **Next**.
 
 You will now be on the *Download Applications* screen. The Device Provisioner will display all the Enterprise Apps associated with the selected Provisioning Template.
 
-![Provisioner](./assets/NewConsole/DownloadPermissions.png)
+![Provisioner](./assets/NewProvisioner/DownloadPermissions.png)
 
 **NOTE**: Only the apps that are uploaded to your Esper Endpoint (called Enterprise Apps) will be displayed. If there are managed Google Play apps associated with your template, they will not be shown here but will still be included in provisioning if your device is GMS. Typically the Device Provisioner is used for AOSP devices that do not include Google Play.
  
@@ -170,7 +170,7 @@ These Enterprise Apps will be downloaded to your PC to be installed on the devic
 
 A limited number of use cases require an app be side-loaded in addition to the ones listed in the template. To do so, under Additional Application first select whether the APK you wish to install when provisioning is located on your development PC (**Local Application Path** which is the default) or is downloaded via a URL (**URL of Application**). If Local Application Path is selected then click on **Select a local apk** and navigate to where you have the APK stored on your PC. If **URL of Application** is selected, then you enter the URL of the download point for the APK in the entry field and then click **Add**.
 
-![Provisioner](./assets/NewConsole/SelectALocalAPK.png)
+![Provisioner](./assets/NewProvisioner/SelectALocalAPK.png)
 
 **NOTE**: Any additional applications included for installation via this method will be set to Hide by Esper. You will need to manually Show them either in **Devices->Apps->Actions** or in **Groups->Apps->Approvals** if you want the shortcut available for the app or apps on the Home screen.
  
@@ -178,7 +178,7 @@ You also have the option to modify the permissions for application install. One 
 
 Some device firmware is implemented such that it prevents enrollment of the device into Esper. We may supply you with a special Esper debug agent and helper to help us determine the issue or issues with enrollment. If that’s the case, turn **Debug Esper Agent** to on. Two fields will appear - one to enter the full path for the agent, and another for the full path of the agent helper. You will need to manually enter these paths.
 
-![Provisioner](./assets/NewConsole/DebugEsperAgent.png)
+![Provisioner](./assets/NewProvisioner/DebugEsperAgent.png)
 
 Once you are satisfied with your selections on the Download Applications screen, click **Next**.
 
@@ -186,19 +186,19 @@ Once you are satisfied with your selections on the Download Applications screen,
 
 If the Esper Device Provisioner has connected to the device or devices you are provisioning, the device will appear on the screen of your computer. It is possible to see multiple devices listed if you are set up to provision more than one device, or if you happen to have other devices on your local network that have ADB enabled. Be sure to select only the device or devices you wish to provision by checking the appropriate selector next to each device listed under Select Devices.
 
-![Provisioner](./assets/NewConsole/AddDevices.png)
+![Provisioner](./assets/NewProvisioner/AddDevices.png)
 
 ### Devices Connected via USB
 
 If your device or devices are connected using a USB, and you have allowed USB debugging on the device or devices, they will be listed under **Select Devices**. Simply select the checkbox next to each device you wish to provision (or Select all if you have multiple devices and wish to provision all of them), and then click **Install** in the lower right hand corner. 
 
-![Provisioner](./assets/NewConsole/SelectDevicesCheckAll.png)
+![Provisioner](./assets/NewProvisioner/SelectDevicesCheckAll.png)
 
 ### Devices Connected via Wi-Fi or Ethernet
 
 If your device is connected via either Wi-Fi or Ethernet and your device is not already listed under Select Devices, enter the device’s **IP address** and **Port number** in the fields under Add Devices, and click the **Connect** button. 
 
-![Provisioner](./assets/NewConsole/IPDetails.png)
+![Provisioner](./assets/NewProvisioner/IPDetails.png)
 
 :::tip
 The default port number for ADB is 5555, unless you’ve changed it as part of connecting your device or devices via ADB. Note you have to enter the port number in the field, the 5555 text displayed in the box is for example only, the field is not actually filled in.
@@ -206,47 +206,47 @@ The default port number for ADB is 5555, unless you’ve changed it as part of c
 
 Once you click **Connect**, the device will be displayed under Select Devices. If you have more than one device to add, repeat the above steps. Once all devices have been added and then selected by either checking each individual checkbox per device or you have selected Select all, click on **Install**.
 
-![Provisioner](./assets/NewConsole/SelectDevicesCheckAll.png)
+![Provisioner](./assets/NewProvisioner/SelectDevicesCheckAll.png)
 
 ## Install
 
 After clicking on Install in the Select devices screen, you will be taken to the Install screen showing you the installation progress of the Esper agent on the device or devices to be provisioned. Note this is not actually performing the provisioning, instead it is installing the required device-side software needed to provision your device or devices. To complete the process you will need to follow the prompts from the Esper agent locally on your device.
 
-![Provisioner](./assets/NewConsole/DeviceName.png)
+![Provisioner](./assets/NewProvisioner/DeviceName.png)
 
 There is an indicator showing the percent installation progress on the device on the right side of the Device name information bar.
 
-![Provisioner](./assets/NewConsole/Hundred.png)
+![Provisioner](./assets/NewProvisioner/Hundred.png)
 
 You have the option to click the downward arrow to see details of the installation. To stop viewing the details, click on the arrow again noting it will now be an upward arrow.
 
-![Provisioner](./assets/NewConsole/DeviceNameDown.png)
+![Provisioner](./assets/NewProvisioner/DeviceNameDown.png)
 
 When in the details view you will see the step-by-step progress for installing the Esper agent on your device.
 
-![Provisioner](./assets/NewConsole/InstallStatus.png)
+![Provisioner](./assets/NewProvisioner/InstallStatus.png)
 
 To view detailed installation logs as the device-side software is installed, toggle the **Logs** switch. These logs are useful to Esper support if you are unsuccessful in installing the Esper agent software on your device, but are unneeded for typical use.
 
 A log window will appear showing you the installation progress on the device. Note you need to have selected the downward arrow to see details in order for the installation log window to display.
 
-![Provisioner](./assets/NewConsole/CMD.png)
+![Provisioner](./assets/NewProvisioner/CMD.png)
 
 To download a copy of the logs to share with Esper, click the download button. A dialog box will appear to save the log file as locally on your development PC without an extension (it is a text file). You do not need to have **Logs** set to on in order to download the log file.
 
-![Provisioner](./assets/NewConsole/LogsUpload.png)
+![Provisioner](./assets/NewProvisioner/LogsUpload.png)
 
 Once the Esper agent is successfully installed on the device, the progress indicator will show 100.
 
-![Provisioner](./assets/NewConsole/Hundred.png)
+![Provisioner](./assets/NewProvisioner/Hundred.png)
 
 If you are viewing details the last step of Starting esper agent on device will show as 100.
 
-![Provisioner](./assets/NewConsole/StartingEsperAgent.png)
+![Provisioner](./assets/NewProvisioner/StartingEsperAgent.png)
 
 You are now done with the Device Provisioner, and you can click **Close** which will exit the Device Provisioner.
 
-![Provisioner](./assets/NewConsole/DeviceNameClose.png)
+![Provisioner](./assets/NewProvisioner/DeviceNameClose.png)
 
 To complete the provisioning process, please now go to your device or devices that have installed the Esper agent.
 
@@ -254,19 +254,19 @@ To complete the provisioning process, please now go to your device or devices th
 
 Upon successful installation of the Esper agent on the device, the agent will automatically start and begin enrollment and provisioning of the device moving through several setup screens.
 
-![Provisioner](./assets/NewConsole/CheckingUpdates.png)
+![Provisioner](./assets/NewProvisioner/CheckingUpdates.png)
  
 During provisioning you may encounter various notifications related to specific variations in the Android firmware.  If the device displays a prompt like the one shown below, select Decline. If you accept it is possible that the security check may block the installation of apps by the Device Provisioner.
 
-![Provisioner](./assets/NewConsole/Decline.png)
+![Provisioner](./assets/NewProvisioner/Decline.png)
  
 If your device includes Google Play, that service will need to be updated which can take some time. Additionally if you’ve included Google Play apps in your Provisioning Template on a device that supports Google Play, those apps will be installed by the Google Play service thus is dependent on Google Play’s current system load and quality of service.
 
-![Provisioner](./assets/NewConsole/Preparing1.png)
+![Provisioner](./assets/NewProvisioner/Preparing1.png)
 
 If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
 
-![Provisioner](./assets/NewConsole/Preparing.png)
+![Provisioner](./assets/NewProvisioner/Preparing.png)
 
 You typically will need to take several actions on the device, depending on the state of the device’s firmware. The example below is based on an Android 7.1 GMS device. Earlier Android versions such as Android 4.4 and Android 5.1 will exhibit slightly different behavior (e.g Activate device administrator and enabling accessibility services) - follow the prompts provided by the Esper agent to successfully complete enrollment and provisioning. On devices without a touch screen or if navigation buttons are not displayed, an external peripheral device like a mouse will be required.
 
@@ -274,51 +274,51 @@ On some devices these actions will not need to be taken, in these cases you will
 
 Typically you will need to resolve the permission for Esper to modify System settings, to do so touch or click on **RESOLVE** to open up the Android System settings app to provide the permission.
 
-![Provisioner](./assets/NewConsole/ResolveModify.png)
+![Provisioner](./assets/NewProvisioner/ResolveModify.png)
 
 You are taken to the *Can modify system settings* screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see *Esper Device Management* currently set to *No* or *Not allowed*. Touch or click on **Esper Device Management**.
 
-![Provisioner](./assets/NewConsole/EDMNo.png)
+![Provisioner](./assets/NewProvisioner/EDMNo.png)
 
 You will then be taken to Modify system settings for *Esper Device Management*. Turn on the switch located on the right side of the screen to *Allow modify system settings*.
 
-![Provisioner](./assets/NewConsole/AllowModifySettings.png)
+![Provisioner](./assets/NewProvisioner/AllowModifySettings.png)
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Provisioner](./assets/NewConsole/ModifyBack.png)
+![Provisioner](./assets/NewProvisioner/ModifyBack.png)
 
 You will now be taken back to the *Can modify system settings* screen, noting *Esper Device Management* is now set to *Yes* or *Allowed* for modifying system settings. Now click the back button in the Nav bar.
 
-![Provisioner](./assets/NewConsole/EDMYes.png)
+![Provisioner](./assets/NewProvisioner/EDMYes.png)
  
 You will now return to the Esper agent. You will typically need to grant another permission to allow Esper to draw over other apps, we do this to ensure a smooth experience for Kiosk mode apps. Touch or click on **RESOLVE** to open up the Android system settings app to provide the permission.
 
-![Provisioner](./assets/NewConsole/ResolveDraw.png)
+![Provisioner](./assets/NewProvisioner/ResolveDraw.png)
 
 You are taken to the *Display over other apps* or *Draw over other apps* screen where you will see a list of apps that have been granted or are requesting permission to display over other apps - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![Provisioner](./assets/NewConsole/EDMNoDraw.png)
+![Provisioner](./assets/NewProvisioner/EDMNoDraw.png)
 
 You will then be taken to *Display over other apps* or *Draw over other apps* for *Esper Device Management*. Turn on the switch located on the right side of the screen to *Allow display over other apps* or *Permit drawing over other apps*.
   
-![Provisioner](./assets/NewConsole/DrawYes.png)
+![Provisioner](./assets/NewProvisioner/DrawYes.png)
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Provisioner](./assets/NewConsole/DrawOverOtherAppsBack.png)
+![Provisioner](./assets/NewProvisioner/DrawOverOtherAppsBack.png)
 
 You will now be taken back to the *Display over other apps* screen, noting *Esper Device Management* is now set to *Yes* or *Allowed* for *drawing over other apps*. Now click the back button in the Nav bar. 
 
-![Provisioner](./assets/NewConsole/EDMYesDraw.png)
+![Provisioner](./assets/NewProvisioner/EDMYesDraw.png)
 
 You will now return to the Esper agent to install any Esper Enterprise apps.
 
-![Provisioner](./assets/NewConsole/Installing.png)
+![Provisioner](./assets/NewProvisioner/Installing.png)
 
 After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
 
-![Provisioner](./assets/NewConsole/DeviceScreen.png)
+![Provisioner](./assets/NewProvisioner/DeviceScreen.png)
 
 ### Handling Other Notifications During Provisioning
 
@@ -339,37 +339,37 @@ Once the AVD is running, start the Device Provisioner and follow the steps to [p
 
 When you get to the Select devices screen, you will see your AVD displayed as an emulated device. (In some cases you may need to first successfully execute **adb tcpip 5555** via the command line on the AVD in order for the Device Provisioner to connect to the AVD.) Select it and click on **Install**.
 
-![Provisioner](./assets/NewConsole/AndroidSDK.png)
+![Provisioner](./assets/NewProvisioner/AndroidSDK.png)
 
 Once the [installation process of the Esper agent](./provisioner.md#install) on the device is successfully completed, take the appropriate [actions on the device](./provisioner.md#steps-on-the-device) to finish enrollment and provisioning. Once that’s done the AVD is not part of your Esper fleet. You can manage it as you would an actual Android device.
 
-![Provisioner](./assets/NewConsole/DeviceScreen.png)
+![Provisioner](./assets/NewProvisioner/DeviceScreen.png)
 
 ## Logging Out of the Device Provisioner
 
 To log the Device Provisioner out of your endpoint, simply click on the person icon in the upper righthand corner of your screen. A dropdown will appear showing the account you are logged into. Click **Log out** to log out of your account.
 
-![Provisioner](./assets/NewConsole/Logout.png)
+![Provisioner](./assets/NewProvisioner/Logout.png)
 
 If you only have a single endpoint configured with the Device Provisioner, you will be presented with the login screen again before you can use the application. If you have multiple endpoints configured, you can then select which account you either want to log back into, or switch to if you are already logged in.
 
-![Provisioner](./assets/NewConsole/Login.png)
+![Provisioner](./assets/NewProvisioner/Login.png)
 
 ## Using the Device Provisioner with Multiple Esper Endpoints
 
 The Device Provisioner can be configured to work with multiple Esper Endpoints. To add your account for an additional endpoint, click on the person icon in the upper righthand corner of your screen then click **Add account**.
 
-![Provisioner](./assets/NewConsole/AddAccount.png)
+![Provisioner](./assets/NewProvisioner/AddAccount.png)
 
 You will be taken to the login screen, click on **Add another account**.
 
-![Provisioner](./assets/NewConsole/AddAnotherAccount.png)
+![Provisioner](./assets/NewProvisioner/AddAnotherAccount.png)
 
 You will now be taken to the login screen. Follow the same steps used when you set up your first endpoint login.
 
 Once completed, to switch accounts you simply open up the Device Provisioner, click on the person icon in the upper righthand corner, and then click on **Switch Account** for the account you wish to use. Note you cannot switch account when you are on the Install screen. Simply close the Device Provisioner, open it again and then change the account.
 
-![Provisioner](./assets/NewConsole/SwitchAccount.png)
+![Provisioner](./assets/NewProvisioner/SwitchAccount.png)
 
 :::tip
 To exit the account dropdown, click the person icon.
