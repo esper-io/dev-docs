@@ -9,7 +9,7 @@ This tool is supported on both Windows 10 and MacOS; a development PC running ei
 The means to provision multiple devices in series using the Device Provisioner depends on the provisioning method you use across the available choices of USB, Wi-Fi, or Ethernet. If you use USB, you will need a USB hub enabling multiple devices to be connected to your development PC. With Wi-Fi, devices need to be connected to the same access point as your development PC, noting with many devices you first need to run an ADB command via USB for ADB via Wi-Fi to work. For Ethernet you need to have all devices connected to the same subnet as your development PC. You can provision up to 16 devices at once using the Device Provisioner.
 
 :::warning
-In order to use the Esper Device Provisioner, you must have created at least one Provisioning Template in the Esper Console. You will find instructions for doing so in [Provisioning Templates](./home/console.md#provisioning-templates).
+In order to use the Esper Device Provisioner, you must have created at least one Provisioning Template in the Esper Console. You will find instructions for doing so in [Provisioning Templates](./console.md#provisioning-templates).
 :::
 
 ## Windows 10 Installation
