@@ -993,7 +993,7 @@ Your app will still be able to access the camera if this setting is set to off.<
 **Google PlayStore**<br>If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to On; if you don’t, set it to Off. You’ll still be able to install any approved Google Play Store apps from Esper onto the device. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.<br/>
 **USB tethering**<br>USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to On; if you don’t, set it to Off.<br/>
 **Edit date and time**<br> If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to On; if you don’t set it to Off.<br/>
-**Application uninstall**<br> Setting Application uninstall to On will block app uninstallation both locally on the device and using Esper. Set it to off if you need to be able to uninstall applications remotely using Esper. 
+**Application uninstall**<br> Setting Application uninstall to OFF will block app uninstallation both locally on the device and using Esper. Set it to ON if you need to be able to uninstall applications remotely using Esper and locally on the device. 
 :::tip
 With this set to on you will still be able to update your application installed on the device using Esper.
 :::
@@ -2156,7 +2156,7 @@ You can also create a new group when creating a new [Provisioning Template](./co
 
 Moving devices from one group to another group requires two steps:
 
-   - First remove the device or devices from the group they are in; this will move them to the Default group.
+   - First remove the device or devices from the group they are in. This will move them to the Default group.
    - Navigate to the destination group and add the devices from the Default group.
 
 To remove one or more devices from a group, first click **View Details** for that group in the group’s tile:
