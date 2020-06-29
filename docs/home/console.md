@@ -993,7 +993,7 @@ Your app will still be able to access the camera if this setting is set to off.<
 **Google PlayStore**<br>If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to On; if you don’t, set it to Off. You’ll still be able to install any approved Google Play Store apps from Esper onto the device. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.<br/>
 **USB tethering**<br>USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to On; if you don’t, set it to Off.<br/>
 **Edit date and time**<br> If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to On; if you don’t set it to Off.<br/>
-**Application uninstall**<br> Setting Application uninstall to On will block app uninstallation both locally on the device and using Esper. Set it to off if you need to be able to uninstall applications remotely using Esper. 
+**Application uninstall**<br> Setting Application uninstall to OFF will block app uninstallation both locally on the device and using Esper. Set it to ON if you need to be able to uninstall applications remotely using Esper and locally on the device. 
 :::tip
 With this set to on you will still be able to update your application installed on the device using Esper.
 :::
@@ -1509,7 +1509,7 @@ Clicking the **Activity Feed** icon when no devices are selected brings a slide 
 
 Clicking **View Details** will show more details (including the current status) of each command. The pop-up box will then provide details of each command—including the devices that are currently in an In progress, Success, Queued, or Failed state.
 
-![Reboot](./assets/NewConsole/StatusSuccess.jpg)
+![Reboot](./assets/NewConsole/StatusSuccess.png)
 
 If you’ve selected a single device,clicking the **Activity Feed** icon will show the details and activity for that device. The Activity tab will show all activities done on that device. If you selected more than one device, no details will be shown.
 
@@ -2156,7 +2156,7 @@ You can also create a new group when creating a new [Provisioning Template](./co
 
 Moving devices from one group to another group requires two steps:
 
-   - First remove the device or devices from the group they are in; this will move them to the Default group.
+   - First remove the device or devices from the group they are in. This will move them to the Default group.
    - Navigate to the destination group and add the devices from the Default group.
 
 To remove one or more devices from a group, first click **View Details** for that group in the group’s tile:
@@ -2501,9 +2501,9 @@ Once you’ve selected an app, its details will appear in the **App Details Prev
 
 Select a version from the **Select Version** dropdown and click **Install**. A sidebar will slide in from the right showing the status of the installation.
 
-![Groups](./assets/NewConsole/InstallSuccessDetails.png)
-
 Group Uninstall works much the same. Simply select **Uninstall** rather than **Install** from the **Select App Action** dropdown. 
+
+![Groups](./assets/NewConsole/InstallSuccessDetails.png)
 
 #### Scheduled Install
 
@@ -2517,11 +2517,11 @@ To schedule an app installation or uninstallation, click on the **Create schedul
 
 Enter a unique name for the scheduled installation or uninstallation in the **Name** field. Names cannot be reused. Select **Install** or **Uninstall** from the **Select App** Action dropdown.
 
-![Groups](./assets/NewConsole/GroupInstall.png)
+![Groups](./assets/NewConsole/GroupScheduleAppSelect.png)
 
 Select the app you want to install or uninstall from the **Select App** dropdown.
 
-![Groups](./assets/NewConsole/GroupInstallSelectApp.png)
+![Groups](./assets/NewConsole/ScheduledInstallApp.png)
 
 Use the radio buttons to choose between using the device’s time or your console’s time when scheduling an application installation or uninstallation for a group. If you select **Device time** when you schedule an app installation, the installation (or uninstallation) will be performed on the devices in that group whenever it’s the specified time on each device.
 
@@ -2739,38 +2739,6 @@ Select the radio button next to the way you would like to handle new app permiss
 Be sure the app supports the appropriate minimum API level for the GMS devices you wish to deploy the app to, and that you are in a supported country for the app. If either of these are mismatched, Google Play will prevent installation of the app onto non-conforming devices either during provisioning or while installing from Esper.
 :::
 
-#### Installing Google Play Apps
-
-Once you have approved a Google Play app, GMS device users will be able to download it from the Google Play Store if you’ve provisioned your devices with Google Play available to users. You can also install the app to a group of devices in **Groups**, or to a single device in **Devices**.
-
-Alternatively you can also install it on a single device device in **Apps** by clicking on the tile for the app giving you access to additional install options.
-
-![Apps](./assets/NewConsole/GooglePlayAppsSelect.png)
-
-On the detail screen for the app, click **Select**.
-
-![Apps](./assets/NewConsole/GooglePlaySelect.png)
-
-In the popup box, select the device onto which you want to install the app from the dropdown box.
-
-![Apps](./assets/NewConsole/SelectDevice.png)
-
-:::tip
-Esper supports managed configurations.
-:::
-
-You can also turn on or off whether or not the app is allowed to use local printing APIs or can be installed on a device without Google accounts using the switches.
-
-![Apps](./assets/NewConsole/ManagedConfigPermission.png)
-
-When you’re ready to install the app, click **Install**.
-
-![Apps](./assets/NewConsole/ManagedConfig.png)
-
-Once the app is installed on the device, a toast notification will indicate the app was successfully installed:
-
-![Apps](./assets/NewConsole/InstallSuccess.png)
-
 #### Controlling Which Apps Show Up on the Google Play Store
 
 You have control over the apps that appear in the Google Play Store on the devices you manage.
@@ -2797,22 +2765,6 @@ To remove an app from the collection displayed, click the (x) icon above and to 
 To add an app to this collection, click **+ Add Apps**.
 
 ![Apps](./assets/NewConsole/AddApps.png)
-
-#### Uninstalling an App
-
-You also have the option to update or uninstall an app from a specific device. To uninstall it from a device, click on the tile for the app.
-
-![Apps](./assets/NewConsole/GooglePlayAppsSelect.png)
-
-On the detail screen for the app, click **Select**.
-
-![Apps](./assets/NewConsole/GooglePlaySelect.png)
-
-In the popup box, select the device from which you want to uninstall the app from the dropdown box.
-
-![Apps](./assets/NewConsole/SelectDevice.png)
-
-Click on **Uninstall**.
 
 #### Unapproving Apps
 
