@@ -395,7 +395,7 @@ You will then be taken to *Modify system settings* for *Esper Device Management*
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/ModifySystemSettings.png)
+![Factory Reset](./assets/NewConsole/ModifyBack.png)
 
 You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
 
@@ -415,7 +415,7 @@ You will then be taken to *Display over other apps* or *Draw over other apps* fo
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/DrawOverOtherApps.png)
+![Factory Reset](./assets/NewConsole/DrawOverOtherAppsBack.png)
 
 You will now be taken back to the Display over other apps screen, noting Esper Device Management is now set to Yes or Allowed for drawing over other apps. Now click the back button in the Nav bar. 
 
@@ -594,7 +594,7 @@ You will then be taken to Modify system settings for Esper Device Management. Tu
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/ModifySystemSettings.png)
+![Factory Reset](./assets/NewConsole/ModifyBack.png)
 
 You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
 
@@ -614,7 +614,7 @@ You will then be taken to *Display over other apps* or *Draw over other apps* fo
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/DrawOverOtherApps.png)
+![Factory Reset](./assets/NewConsole/DrawOverOtherAppsBack.png)
 
 You will now be taken back to the *Display over other apps screen*, noting *Esper Device Management* is now set to *Yes* or *Allowed* for drawing over other apps. Now click the back button in the Nav bar. 
 
@@ -722,7 +722,7 @@ You will then be taken to *Modify system settings* for *Esper Device Management*
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![IMEI](./assets/NewConsole/ModifySystemSettings.png)
+![IMEI](./assets/NewConsole/ModifyBack.png)
 
 You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
 
@@ -742,7 +742,7 @@ You will then be taken to Display over other apps or Draw over other apps for Es
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![IMEI](./assets/NewConsole/DrawOverOtherApps.png)
+![IMEI](./assets/NewConsole/DrawOverOtherAppsBack.png)
 
 You will now be taken back to the Display over other apps screen, noting Esper Device Management is now set to Yes or Allowed for drawing over other apps. Now click the back button in the Nav bar. 
 
