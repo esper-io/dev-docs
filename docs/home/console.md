@@ -1,4 +1,4 @@
-# Esper console
+# Esper Console
 
 The Esper console is a feature-rich user interface for you to operate and manage your fleet of Android devices. Esper provides a range of super simple options to deploy company‑owned devices at scale.
 
@@ -169,7 +169,7 @@ The **Where are your devices?** panel shows the physical location reported by ea
 
 The **Alerts status** panel provides a summary of alerts you’ve created and the number of times each has fired. You can see the number of alerts fired by selecting that alert from the dropdown menu.
 
-## Provisioning methods
+## Provisioning Methods
 
 Provisioning is the initial step of enrolling, configuring, and managing an Android device using the Esper platform and associated developer tools.
 Esper provides several different methods for provisioning Android devices, depending on the capabilities of the device being configured:
