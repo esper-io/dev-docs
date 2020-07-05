@@ -262,26 +262,26 @@ Performing a factory reset before provisioning is typically required. Here are g
 
 First open up the **Settings** app, and select **System**.
 
-<img src="./assets/NewConsole/SettingsSystem.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/SettingsSystem.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Next select **Advanced**.
 
-<img src="./assets/NewConsole/SystemAdvanced.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/SystemAdvanced.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Select **Reset options**.
 
-<img src="./assets/NewConsole/SystemResetOptions.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/SystemResetOptions.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Click or touch **Erase all data (factory reset)**.
 
-![Factory Reset](./assets/NewConsole/EraseAllData.png)
-<img src="./assets/NewConsole/EraseAllData.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/EraseAllData.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Confirm your choice on the screen or screens that follow. 
 
-<img src="./assets/NewConsole/ResetPhone.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/ResetPhone.png" alt="SystemSettings" style="max-width:200px;"/>
 
-<img src="./assets/NewConsole/EraseEverything.png" alt="alt text" width="75%" height="75%">
+
+<img src="./assets/NewConsole/EraseEverything.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Be patient as it can take several minutes to complete a factory reset. Once you see the setup welcome screen you are ready to enroll and provision your device.
 
@@ -309,55 +309,55 @@ If your device does not have an active cellular data network connection, you wil
 
 If you have a cellular device without a SIM, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise proceed to insert your SIM with cellular data support.
 
-<img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" style="max-width:200px;"/>
 
 When presented with the *Copy apps & data screen* (noting on some devices this may appear after establishing a Wi-Fi connection), select Set up as new (may also be Don’t copy or another variant).
 
-<img src="./assets/NewConsole/SetupAsNew.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/SetupAsNew.png" alt="alt text" style="max-width:200px;"/>
 
 If you are using Wi-Fi complete the steps to connect to your desired access point. 
 
-<img src="./assets/NewConsole/EsperSSID.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/EsperSSID.png" alt="alt text" style="max-width:200px;"/>
 
 You will see a *Checking for updates…* screen that may change to *Just a sec…* and / or *Checking info…. Please be patient* as the device is prepared for enrollment.
 
-<img src="./assets/NewConsole/CheckingUpdates.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/CheckingUpdates.png" alt="alt text" style="max-width:200px;"/>
 
 It will take a few moments for the *Google Sign in* screen to appear. Once it does, in the Email or phone field enter **afw#esper** and then click **Next**. As a certified Google EMM partner, this is a special keyword used by the AfW provisioning process that will then start the process to enroll your device into Esper.
 
-<img src="./assets/NewConsole/EmailPhone.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/EmailPhone.png" alt="alt text" style="max-width:200px;"/>
 
 After a Checking info… screen, you will typically need to give permission to install the Esper agent on your device to begin the enrollment process. Click **INSTALL**.
 
-<img src="./assets/NewConsole/DeviceEDMInstall.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/DeviceEDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
 Next the Esper agent will be downloaded to your device along, please be patient.
 
-<img src="./assets/NewConsole/EDMDownloadStatus.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/EDMDownloadStatus.png" alt="alt text" style="max-width:200px;"/>
 
 On some devices you will need to click INSTALL again after the agent downloads.
 
-<img src="./assets/NewConsole/EDMInstall.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/EDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
 You may then see a screen to accept specific terms from Google regarding Esper managing your device. Click ACCEPT & CONTINUE.
 
-<img src="./assets/NewConsole/AcceptContinue.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/AcceptContinue.png" alt="alt text" style="max-width:200px;"/>
 
 The Esper agent will now start and you’ll see a series of screens as Esper prepares for the enrollment.
 
-<img src="./assets/NewConsole/StartingServices.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/StartingServices.png" alt="alt text" style="max-width:200px;"/>
 
 Now go to the Esper Console and click on **Provisioning Templates** in the left menu bar. Find the template you want to use, and click on **View QR code**.
 
-<img src="./assets/NewConsole/ViewQRCode.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/ViewQRCode.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code for the template will now appear on your screen.
 
-<img src="./assets/NewConsole/QRCodeProvision.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/QRCodeProvision.png" alt="alt text" style="max-width:200px;"/>
 
 If you are using the instructions provided in Provisioning Methods, you can also display the QR code in Step 6 by selecting the Provisioning Template from the **Select Template** drop down and then clicking **View QR code**.
 
-<img src="./assets/NewConsole/SelectTemplate.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/SelectTemplate.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code scanner should appear on your device, hold up the device’s camera to your computer screen centering it on the QR code.
 
@@ -400,23 +400,23 @@ Next click the back button in the upper lefthand corner of the screen.
 
 You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
 
-<img src="./assets/NewConsole/ModifySystemSettingsEDM.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/ModifySystemSettingsEDM.png" alt="alt text" style="max-width:200px;">
 
 You will now return to the Esper agent. You will typically need to grant another permission to allow Esper to draw over other apps, we do this to ensure a smooth experience for Kiosk mode apps. Touch or click on **RESOLVE** to open up the Android system settings app to provide the permission.
 
-<img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;">
 
 You are taken to the Display over other apps or Draw over other apps screen where you will see a list of apps that have been granted or are requesting permission to display over other apps - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-<img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" style="max-width:200px;">
 
 You will then be taken to *Display over other apps* or *Draw over other apps* for Esper Device Management. Turn on the switch located on the right side of the screen to *Allow display over other apps* or *Permit drawing over other apps*.
   
-<img src="./assets/NewConsole/PermitDrawing.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/PermitDrawing.png" alt="alt text" style="max-width:200px;">
 
 Next click the back button in the upper lefthand corner of the screen.
 
-<img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" style="max-width:200px;">
 
 You will now be taken back to the Display over other apps screen, noting Esper Device Management is now set to Yes or Allowed for drawing over other apps. Now click the back button in the Nav bar. 
 
