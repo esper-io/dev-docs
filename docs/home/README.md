@@ -31,7 +31,7 @@ Many of the above Console features are available via the Esper APIs, so please b
 
 ## Sign Up for an Esper Trial Account
 
-To try out Esper simply sign up for a developer trial account on the [Esper Website](https://esper.io/signup/). Once the account is setup and you generate your API key, you can test out all the features of our innovative platform—whether building out a kiosk, point of sale solution, or for an entirely new Dedicated Device category. It is the best platform designed for the Android app developer targeting Dedicated Devices. Check out the [Developer Hub](https://docs.esper.io) and the [API Documentation](https://api.esper.io).
+To try out Esper simply sign up for a developer trial account on the [Esper Website](https://esper.io/signup/). Once the account is setup and you generate your API key, you can test out all the features of our innovative platform—whether building out a kiosk, point of sale solution, or for an entirely new Dedicated Device category. It is the best platform designed for the Android app developer targeting Dedicated Devices. Check out the [Developer Hub](../readme.md) and the [API Documentation](https://api.esper.io).
 
 ## Scale your Deployment
 
@@ -41,7 +41,7 @@ Coupled with the intuitive Esper Dev Console and Esper Manage Dashboard, Esper a
 
 Esper gives you access to a suite of development tools you need to build, deliver, and maintain dedicated device solutions all in one place. Below is an overview of the Esper Tools:
 
-- **[Esper Dev Portal](https://docs.esper.io/)**: Provides all Esper documentation in a portal that’s easy to access and use.
+- **[Esper Dev Portal](../readme.md)**: Provides all Esper documentation in a portal that’s easy to access and use.
 - **Esper Dev Console**: A developer specific console organizing all of the Esper tools.
 - **Esper Cloud**: A private Cloud dedicated to each development team.
 - **[Esper Virtual Device](./esperplugin.md#esper-android-virtual-device)**: An emulation environment for development and verification testing use with Esper Enhanced Android. You can also use emulation in Android Studio with a stock Android image running our Esper Agent.
