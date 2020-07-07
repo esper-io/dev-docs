@@ -73,7 +73,7 @@ Some operations—such as installing a new version of your app after hours acros
 ![Close Slider](./assets/NewConsole/SliderClose.png)
 
 For certain operations performed on a set of devices in a group, a popdown will appear on the screen. This gives you a quick summary of the top level status, with an option to open up the accompanying detailed slider screen.
-![Wipe](./assets/NewConsole/Wipe.png)
+<img src="./assets/NewConsole/Wipe.png" alt="wipe" width="75%" height="75%">
 
 ### Logging Out
 
@@ -262,25 +262,26 @@ Performing a factory reset before provisioning is typically required. Here are g
 
 First open up the **Settings** app, and select **System**.
 
-![Factory Reset](./assets/NewConsole/SettingsSystem.png)
+<img src="./assets/NewConsole/SettingsSystem.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Next select **Advanced**.
 
-![Factory Reset](./assets/NewConsole/SystemAdvanced.png)
+<img src="./assets/NewConsole/SystemAdvanced.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Select **Reset options**.
 
-![Factory Reset](./assets/NewConsole/SystemResetOptions.png)
+<img src="./assets/NewConsole/SystemResetOptions.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Click or touch **Erase all data (factory reset)**.
 
-![Factory Reset](./assets/NewConsole/EraseAllData.png)
+<img src="./assets/NewConsole/EraseAllData.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Confirm your choice on the screen or screens that follow. 
 
-![Factory Reset](./assets/NewConsole/ResetPhone.png)
+<img src="./assets/NewConsole/ResetPhone.png" alt="SystemSettings" style="max-width:200px;"/>
 
-![Factory Reset](./assets/NewConsole/EraseEverything.png)
+
+<img src="./assets/NewConsole/EraseEverything.png" alt="SystemSettings" style="max-width:200px;"/>
 
 Be patient as it can take several minutes to complete a factory reset. Once you see the setup welcome screen you are ready to enroll and provision your device.
 
@@ -308,55 +309,55 @@ If your device does not have an active cellular data network connection, you wil
 
 If you have a cellular device without a SIM, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise proceed to insert your SIM with cellular data support.
 
-![Factory Reset](./assets/NewConsole/ConnectMobile.png)
+<img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" style="max-width:200px;"/>
 
 When presented with the *Copy apps & data screen* (noting on some devices this may appear after establishing a Wi-Fi connection), select Set up as new (may also be Don’t copy or another variant).
 
-![Factory Reset](./assets/NewConsole/SetupAsNew.png)
+<img src="./assets/NewConsole/SetupAsNew.png" alt="alt text" style="max-width:200px;"/>
 
 If you are using Wi-Fi complete the steps to connect to your desired access point. 
 
-![Factory Reset](./assets/NewConsole/EsperSSID.png)
+<img src="./assets/NewConsole/EsperSSID.png" alt="alt text" style="max-width:200px;"/>
 
 You will see a *Checking for updates…* screen that may change to *Just a sec…* and / or *Checking info…. Please be patient* as the device is prepared for enrollment.
 
-![Factory Reset](./assets/NewConsole/CheckingUpdates.png)
+<img src="./assets/NewConsole/CheckingUpdates.png" alt="alt text" style="max-width:200px;"/>
 
 It will take a few moments for the *Google Sign in* screen to appear. Once it does, in the Email or phone field enter **afw#esper** and then click **Next**. As a certified Google EMM partner, this is a special keyword used by the AfW provisioning process that will then start the process to enroll your device into Esper.
 
-![Factory Reset](./assets/NewConsole/EmailPhone.png)
+<img src="./assets/NewConsole/EmailPhone.png" alt="alt text" style="max-width:200px;"/>
 
 After a Checking info… screen, you will typically need to give permission to install the Esper agent on your device to begin the enrollment process. Click **INSTALL**.
 
-![Factory Reset](./assets/NewConsole/DeviceEDMInstall.png)
+<img src="./assets/NewConsole/DeviceEDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
 Next the Esper agent will be downloaded to your device along, please be patient.
 
-![Factory Reset](./assets/NewConsole/EDMDownloadStatus.png)
+<img src="./assets/NewConsole/EDMDownloadStatus.png" alt="alt text" style="max-width:200px;"/>
 
 On some devices you will need to click INSTALL again after the agent downloads.
 
-![Factory Reset](./assets/NewConsole/EDMInstall.png)
+<img src="./assets/NewConsole/EDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
 You may then see a screen to accept specific terms from Google regarding Esper managing your device. Click ACCEPT & CONTINUE.
 
-![Factory Reset](./assets/NewConsole/AcceptContinue.png)
+<img src="./assets/NewConsole/AcceptContinue.png" alt="alt text" style="max-width:200px;"/>
 
 The Esper agent will now start and you’ll see a series of screens as Esper prepares for the enrollment.
 
-![Factory Reset](./assets/NewConsole/StartingServices.png)
+<img src="./assets/NewConsole/StartingServices.png" alt="alt text" style="max-width:200px;"/>
 
 Now go to the Esper Console and click on **Provisioning Templates** in the left menu bar. Find the template you want to use, and click on **View QR code**.
 
-![Factory Reset](./assets/NewConsole/ViewQRCode.png)
+<img src="./assets/NewConsole/ViewQRCode.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code for the template will now appear on your screen.
 
-![Factory Reset](./assets/NewConsole/QRCodeProvision.png)
+<img src="./assets/NewConsole/QRCodeProvision.png" alt="alt text" style="max-width:200px;"/>
 
 If you are using the instructions provided in Provisioning Methods, you can also display the QR code in Step 6 by selecting the Provisioning Template from the **Select Template** drop down and then clicking **View QR code**.
 
-![Factory Reset](./assets/NewConsole/SelectTemplate.png)
+<img src="./assets/NewConsole/SelectTemplate.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code scanner should appear on your device, hold up the device’s camera to your computer screen centering it on the QR code.
 
@@ -369,65 +370,65 @@ The QR code is densely populated, so in case the device’s camera has trouble s
 
 Once Esper has successfully read the QR code, provisioning will start and you’ll see this screen.
 
-![Factory Reset](./assets/NewConsole/StartingProvisioning.png)
+<img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
 
 :::tip
 If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
 :::
 
-![Factory Reset](./assets/NewConsole/SendingDeviceDetails.png)
+<img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
 If your Provisioning Template enables Google Play, Google Play Services will not be updated. Be patient as this is being done by Google and depends on their current quality of service.
 
-![Factory Reset](./assets/NewConsole/GPlayUpgrade.png)
+<img src="./assets/NewConsole/GPlayUpgrade.png" alt="alt text" style="max-width:200px;"/>
 
 Typically (but not always) you will need to resolve the permission for Esper to modify System settings, to do so touch or click on **RESOLVE** to open up the Android System settings app to provide the permission.
 
-![Factory Reset](./assets/NewConsole/ResolveAppPermission.png)
+<img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;"/>
 
 You are taken to the Can modify system settings screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![Factory Reset](./assets/NewConsole/ModifySettingsEDMNO.png)
+<img src="./assets/NewConsole/ModifySettingsEDMNO.png" alt="alt text" style="max-width:200px;"/>
 
 You will then be taken to *Modify system settings* for *Esper Device Management*. Turn on the switch located on the right side of the screen to Allow modify system settings.
 
-![Factory Reset](./assets/NewConsole/AllowModifySettings.png)
+<img src="./assets/NewConsole/AllowModifySettings.png" alt="alt text" style="max-width:200px;"/>
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/ModifySystemSettings.png)
+<img src="./assets/NewConsole/ModifyBack.png" alt="alt text" style="max-width:200px;"/>
 
 You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
 
-![Factory Reset](./assets/NewConsole/ModifySystemSettingsEDM.png)
+<img src="./assets/NewConsole/ModifySystemSettingsEDM.png" alt="alt text" style="max-width:200px;">
 
 You will now return to the Esper agent. You will typically need to grant another permission to allow Esper to draw over other apps, we do this to ensure a smooth experience for Kiosk mode apps. Touch or click on **RESOLVE** to open up the Android system settings app to provide the permission.
 
-![Factory Reset](./assets/NewConsole/ResolveAppPermission.png)
+<img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;">
 
 You are taken to the Display over other apps or Draw over other apps screen where you will see a list of apps that have been granted or are requesting permission to display over other apps - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![Factory Reset](./assets/NewConsole/DeviceEDM.png)
+<img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" style="max-width:200px;">
 
 You will then be taken to *Display over other apps* or *Draw over other apps* for Esper Device Management. Turn on the switch located on the right side of the screen to *Allow display over other apps* or *Permit drawing over other apps*.
   
-![Factory Reset](./assets/NewConsole/PermitDrawing.png)
+<img src="./assets/NewConsole/PermitDrawing.png" alt="alt text" style="max-width:200px;">
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/DrawOverOtherApps.png)
+<img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" style="max-width:200px;">
 
 You will now be taken back to the Display over other apps screen, noting Esper Device Management is now set to Yes or Allowed for drawing over other apps. Now click the back button in the Nav bar. 
 
-![Factory Reset](./assets/NewConsole/DrawAppsEDMYes.png)
+<img src="./assets/NewConsole/DrawAppsEDMYes.png" alt="alt text" style="max-width:200px;"/>
 
 You will now return to the Esper agent to install any Esper Enterprise apps.
 
-![Factory Reset](./assets/NewConsole/DeviceInstalling.png)
+<img src="./assets/NewConsole/DeviceInstalling.png" alt="alt text" style="max-width:200px;"/>
 
 After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
 
-![Factory Reset](./assets/NewConsole/DeviceScreen.png)
+<img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
 ### Six Tap QR Code Provisioning
 
@@ -488,71 +489,71 @@ If your device does not have an active cellular data network connection or isn�
 
 You may then see a screen to accept specific terms from Google regarding Esper managing your device. Click **ACCEPT & CONTINUE**.
 
-![QRCode](./assets/NewConsole/AcceptContinue.png)
+<img src="./assets/NewConsole/AcceptContinue.png" alt="alt text" style="max-width:200px;"/">
 
 Once the Esper agent has successfully downloaded and started, provisioning will start and you’ll see this screen.
 
-![QRCode](./assets/NewConsole/StartingProvisioning.png)
+<img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
 
 :::tip
 If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
 :::
 
-![QRCode](./assets/NewConsole/SendingDeviceDetails.png)
+<img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
 If your Provisioning Template enables Google Play, Google Play Services will not be updated. Be patient as this is being done by Google and depends on their current quality of service.
 
-![QRCode](./assets/NewConsole/GPlayUpgrade.png)
+<img src="./assets/NewConsole/GPlayUpgrade.png" alt="alt text" style="max-width:200px;"/>
 
 Oftentimes the device will complete provisioning without any permissions needing to be granted on the device. Occasionally you will need to resolve the permission for Esper to modify System settings, and/or Esper to draw over other apps. Please grant these permissions if prompted.
 
 The Esper agent to install any Esper Enterprise apps to finish up the provisioning process.
 
-![QRCode](./assets/NewConsole/DeviceInstalling.png)
+<img src="./assets/NewConsole/DeviceInstalling.png" alt="alt text" style="max-width:200px;"/>
 
 After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
 
-![QRCode](./assets/NewConsole/DeviceScreen.png)
+<img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
 #### QR Code Reader Setup
 
 On the QR code setup screen click **Next**.
 
-![Factory Reset](./assets/NewConsole/QRCodeSetup.png)
+<img src="./assets/NewConsole/QRCodeSetup.png" alt="alt text" style="max-width:200px;"/>
 
 If you have a cellular device without a SIM, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise proceed to insert your SIM with cellular data support.
 
-![Factory Reset](./assets/NewConsole/ConnectMobile.png)
+<img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" style="max-width:200px;"/>
 
 If you are using Wi-Fi complete the steps to connect to your desired access point. 
 
-![Factory Reset](./assets/NewConsole/EsperSSID.png)
+<img src="./assets/NewConsole/EsperSSID.png" alt="alt text" style="max-width:200px;"/>
 
 You will see a *Checking for updates…* screen. Please be patient as the QR code reader is downloaded to the device.
 
-![Factory Reset](./assets/NewConsole/CheckingUpdates.png)
+<img src="./assets/NewConsole/CheckingUpdates.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code reader will be installed.
 
 Once installed, you’ll see the QR code reader on your screen.
 
-![Factory Reset](./assets/NewConsole/CaptureScreen.png)
+<img src="./assets/NewConsole/CaptureScreen.png" alt="alt text" style="max-width:200px;"/>
 
 Now go to the Esper Console and click on Provisioning Templates in the left menu bar. Find the template you want to use, and click on View QR code.
 
-![Factory Reset](./assets/NewConsole/ViewQRCode.png)
+<img src="./assets/NewConsole/ViewQRCode.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code for the template will now appear on your screen.
 
-![Factory Reset](./assets/NewConsole/QRCode.png)
+<img src="./assets/NewConsole/QRCode.png" alt="alt text" style="max-width:200px;"/>
 
 If you are using the instructions provided in Provisioning Methods, you can also display the QR code in Step 3 by selecting the Provisioning Template from the **Select Template** drop down and then clicking **View QR code**.
 
-![Factory Reset](./assets/NewConsole/SixTapQRCode.png)
+<img src="./assets/NewConsole/SixTapQRCode.png" alt="alt text" style="max-width:200px;"/>
 
 Hold up the device’s camera to your computer screen centering it on the QR code.
 
-![Factory Reset](./assets/NewConsole/QRCode1.png)
+<img src="./assets/NewConsole/QRCode1.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code is densely populated, so in case the device’s camera has trouble scanning it, follow these tips.
    Increasing brightness of your PC’s screen
@@ -561,72 +562,72 @@ The QR code is densely populated, so in case the device’s camera has trouble s
 
 Once Esper has successfully read the QR code, you’ll see the Set up your device screen. Touch **ACCEPT & CONTINUE**.
 
-![Factory Reset](./assets/NewConsole/AcceptContinue.png)
+<img src="./assets/NewConsole/AcceptContinue.png" alt="alt text" style="max-width:200px;"/>
 
 You’ll see the Setting up work device screen while the device is downloading the Esper agent.
 
-![Factory Reset](./assets/NewConsole/WorkDevice.png)
+<img src="./assets/NewConsole/WorkDevice.png" alt="alt text" style="max-width:200px;"/>
 
 Once the Esper agent has successfully downloaded and started, provisioning will start and you’ll see this screen.
 
-![Factory Reset](./assets/NewConsole/StartingProvisioning.png)
+<img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
 
 :::tip If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
 :::
 
-![Factory Reset](./assets/NewConsole/SendingDeviceDetails.png)
+<img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
 If your Provisioning Template enables Google Play, Google Play Services will not be updated. Be patient as this is being done by Google and depends on their current quality of service.
 
-![Factory Reset](./assets/NewConsole/GPlayUpgrade.png)
+<img src="./assets/NewConsole/GPlayUpgrade.png" alt="alt text" style="max-width:200px;"/>
 
 Typically (but not always) you will need to resolve the permission for Esper to modify System settings, to do so touch or click on **RESOLVE** to open up the Android System settings app to provide the permission.
 
-![Factory Reset](./assets/NewConsole/ResolveAppPermission.png)
+<img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;"/>
 
 You are taken to the Can modify system settings screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![Factory Reset](./assets/NewConsole/ModifySettingsEDMNO.png)
+<img src="./assets/NewConsole/ModifySettingsEDMNO.png" alt="alt text" style="max-width:200px;"/>
 
 You will then be taken to Modify system settings for Esper Device Management. Turn on the switch located on the right side of the screen to Allow modify system settings.
 
-![Factory Reset](./assets/NewConsole/AllowModifySettings.png)
+<img src="./assets/NewConsole/AllowModifySettings.png" alt="alt text" style="max-width:200px;"/>
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/ModifySystemSettings.png)
+<img src="./assets/NewConsole/ModifyBack.png" alt="alt text" style="max-width:200px;"/>
 
 You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
 
-![Factory Reset](./assets/NewConsole/ModifySystemSettingsEDM.png)
- 
+<img src="./assets/NewConsole/ModifySystemSettingsEDM.png" alt="alt text" style="max-width:200px;"/>
+
 You will now return to the Esper agent. You will typically need to grant another permission to allow Esper to draw over other apps, we do this to ensure a smooth experience for Kiosk mode apps. Touch or click on **RESOLVE** to open up the Android system settings app to provide the permission.
 
-![Factory Reset](./assets/NewConsole/DeviceResolveDraw.png)
+<img src="./assets/NewConsole/DeviceResolveDraw.png" alt="alt text" style="max-width:200px;"/>
 
 You are taken to the Display over other apps or Draw over other apps screen where you will see a list of apps that have been granted or are requesting permission to display over other apps - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![Factory Reset](./assets/NewConsole/DeviceEDM.png)
+<img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" style="max-width:200px;"/>
 
 You will then be taken to *Display over other apps* or *Draw over other apps* for *Esper Device Management*. Turn on the switch located on the right side of the screen to Allow display over other apps or *Permit drawing over other apps*.
 
-![Factory Reset](./assets/NewConsole/DrawOverOtherApps.png)
+<img src="./assets/NewConsole/DrawOverOtherApps.png" alt="alt text" style="max-width:200px;"/>
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![Factory Reset](./assets/NewConsole/DrawOverOtherApps.png)
+<img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" style="max-width:200px;"/>
 
 You will now be taken back to the *Display over other apps screen*, noting *Esper Device Management* is now set to *Yes* or *Allowed* for drawing over other apps. Now click the back button in the Nav bar. 
 
-![Factory Reset](./assets/NewConsole/DrawAppsEDMYes.png)
+<img src="./assets/NewConsole/DrawAppsEDMYes.png" alt="alt text" style="max-width:200px;"/>
 
 You will now return to the Esper agent to install any Esper Enterprise apps.
 
-![Factory Reset](./assets/NewConsole/DeviceInstalling.png)
+<img src="./assets/NewConsole/DeviceInstalling.png" alt="alt text" style="max-width:200px;"/>
 
 After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
 
-![Factory Reset](./assets/NewConsole/DeviceScreen.png)
+<img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
 ### Handling Other Notifications During Provisioning
 
@@ -656,105 +657,105 @@ If your device does not have an active cellular data network connection, you wil
 
 If you have a cellular device without a SIM, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise proceed to insert your SIM with cellular data support.
 
-![IMEI](./assets/NewConsole/ConnectMobile.png)
+<img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" style="max-width:200px;"/>
 
 When presented with the *Copy apps & data* screen (noting on some devices this may appear after establishing a Wi-Fi connection), select Set up as new (may also be Don’t copy or another variant).
 
-![IMEI](./assets/NewConsole/SetupAsNew.png)
+<img src="./assets/NewConsole/SetupAsNew.png" alt="alt text" style="max-width:200px;"/>
 
 If you are using Wi-Fi complete the steps to connect to your desired access point. 
 
-![IMEI](./assets/NewConsole/EsperSSID.png)
+<img src="./assets/NewConsole/EsperSSID.png" alt="alt text" style="max-width:200px;"/>
 
 You will see a *Checking for updates…* screen that may change to *Just a sec…* and / or *Checking info…*. Please be patient as the device is prepared for enrollment.
 
-![IMEI](./assets/NewConsole/CheckingUpdates.png)
+<img src="./assets/NewConsole/CheckingUpdates.png" alt="alt text" style="max-width:200px;"/>
 
 It will take a few moments for the Google Sign in screen to appear. Once it does, in the Email or phone field enter **afw#esper** and then click **Next**. As a certified Google EMM partner, this is a special keyword used by the AfW provisioning process that will then start the process to enroll your device into Esper.
 
-![IMEI](./assets/NewConsole/EmailPhone.png)
+<img src="./assets/NewConsole/EmailPhone.png" alt="alt text" style="max-width:200px;"/>
 
 After a Checking info… screen, you will typically need to give permission to install the Esper agent on your device to begin the enrollment process. Click **INSTALL**.
 
-![IMEI](./assets/NewConsole/DeviceEDMInstall.png)
+<img src="./assets/NewConsole/DeviceEDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
 Next the Esper agent will be downloaded to your device along, please be patient.
 
-![IMEI](./assets/NewConsole/EDMDownloadStatus.png)
+<img src="./assets/NewConsole/EDMDownloadStatus.png" alt="alt text" style="max-width:200px;"/>
 
 On some devices you will need to click **INSTALL** again after the agent downloads.
 
-![IMEI](./assets/NewConsole/EDMInstall.png)
+<img src="./assets/NewConsole/EDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
 The Esper agent will now start and you’ll see a series of screens as Esper prepares for the enrollment.
 
-![IMEI](./assets/NewConsole/StartingServices.png)
+<img src="./assets/NewConsole/StartingServices.png" alt="alt text" style="max-width:200px;"/>
 
 The screen flow will stop on the Authentication screen. Enter the Passcode that you set up in the associated Provisioning Template. If you purposely did not set a passcode, leave the Passcode field blank. Once ready, touch CONTINUE.
 
-![IMEI](./assets/NewConsole/AuthenticationContinue.png)
+<img src="./assets/NewConsole/AuthenticationContinue.png" alt="alt text" style="max-width:200px;"/>
 
 Once Esper has successfully read the QR code, provisioning will start and you’ll see this screen.
 
-![IMEI](./assets/NewConsole/StartingProvisioning.png)
+<img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
 
 :::tip
 If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
 :::
 
-![IMEI](./assets/NewConsole/SendingDeviceDetails.png)
+<img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
 If your Provisioning Template enables Google Play, Google Play Services will not be updated. Be patient as this is being done by Google and depends on their current quality of service.
 
-![IMEI](./assets/NewConsole/GPlayUpgrade.png)
+<img src="./assets/NewConsole/GPlayUpgrade.png" alt="alt text" style="max-width:200px;"/>
 
 Typically (but not always) you will need to resolve the permission for Esper to modify System settings, to do so touch or click on **RESOLVE** to open up the Android System settings app to provide the permission.
 
-![IMEI](./assets/NewConsole/ResolveAppPermission.png)
+<img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;"/>
 
 You are taken to the Can modify system settings screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![IMEI](./assets/NewConsole/ModifySettingsEDMNO.png)
+<img src="./assets/NewConsole/ModifySettingsEDMNO.png" alt="alt text" style="max-width:200px;"/>
 
 You will then be taken to *Modify system settings* for *Esper Device Management*. Turn on the switch located on the right side of the screen to *Allow modify system settings*.
 
-![IMEI](./assets/NewConsole/AllowModifySettings.png)
+<img src="./assets/NewConsole/AllowModifySettings.png" alt="alt text" style="max-width:200px;"/>
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![IMEI](./assets/NewConsole/ModifySystemSettings.png)
+<img src="./assets/NewConsole/ModifyBack.png" alt="alt text" style="max-width:200px;"/>
 
 You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
 
-![IMEI](./assets/NewConsole/ModifySystemSettingsEDM.png)
+<img src="./assets/NewConsole/ModifySystemSettingsEDM.png" alt="alt text" style="max-width:200px;"/>
 
 You will now return to the Esper agent. You will typically need to grant another permission to allow Esper to draw over other apps, we do this to ensure a smooth experience for Kiosk mode apps. Touch or click on **RESOLVE** to open up the Android system settings app to provide the permission.
 
-![IMEI](./assets/NewConsole/ResolveAppPermission.png)
+<img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;"/>
 
 You are taken to the Display over other apps or Draw over other apps screen where you will see a list of apps that have been granted or are requesting permission to display over other apps - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
 
-![IMEI](./assets/NewConsole/DeviceEDM.png)
+<img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" style="max-width:200px;"/>
 
 You will then be taken to Display over other apps or Draw over other apps for Esper Device Management. Turn on the switch located on the right side of the screen to Allow display over other apps or Permit drawing over other apps.
 
-![IMEI](./assets/NewConsole/PermitDrawing.png)
+<img src="./assets/NewConsole/PermitDrawing.png" alt="alt text" style="max-width:200px;"/>
 
 Next click the back button in the upper lefthand corner of the screen.
 
-![IMEI](./assets/NewConsole/DrawOverOtherApps.png)
+<img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" style="max-width:200px;"/>
 
 You will now be taken back to the Display over other apps screen, noting Esper Device Management is now set to Yes or Allowed for drawing over other apps. Now click the back button in the Nav bar. 
 
-![IMEI](./assets/NewConsole/DrawAppsEDMYes.png)
+<img src="./assets/NewConsole/DrawAppsEDMYes.png" alt="alt text" style="max-width:200px;"/>
 
 You will now return to the Esper agent to install any Esper Enterprise apps.
 
-![IMEI](./assets/NewConsole/DeviceInstalling.png)
+<img src="./assets/NewConsole/DeviceInstalling.png" alt="alt text" style="max-width:200px;"/>
 
 After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
 
-![IMEI](./assets/NewConsole/DeviceScreen.png)
+<img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
 ## Provisioning Templates
 
@@ -907,13 +908,14 @@ Lock screen must be on in order to set Lock screen password rules. If you select
    **None**: No icon for any settings app will be available for the user to choose from the device’s Home screen.
    
    **Esper settings app**: Esper offers a custom settings app that gives device users access to a subset of the available Android settings when servicing a device. The Esper settings app is intended for use by technicians servicing a device locally. It is protected by the Dock & Esper Settings App password to prevent unauthorized access. This app offers a reduced number of settings. 
-      - Wi-Fi: Change the Wi-Fi access point used by the device.
-      - Torch: Turn on the Torch (AKA "flashlight") if the device has a camera flash LED.
-      - Auto-Rotation: Turn auto-rotation on or off.
-      - Factory Reset: Perform a factory reset of the device, regardless of the Compliance Policy applied. 
-      - Kiosk App: Change the app that runs in kiosk mode. The device user can choose any installed app on the device to act as the kiosk app, with the Esper Console kept in sync on the configuration stats.
-      - Esper Branding: Turn off the Esper logo on the Home screen.
-      - About: Supplies information regarding the endpoint name the device is enrolled in, in case the customer has access to multiple Esper endpoints.
+   
+   - Wi-Fi: Change the Wi-Fi access point used by the device.
+   - Torch: Turn on the Torch (AKA "flashlight") if the device has a camera flash LED.
+   - Auto-Rotation: Turn auto-rotation on or off.
+   - Factory Reset: Perform a factory reset of the device, regardless of the Compliance Policy applied. 
+   - Kiosk App: Change the app that runs in kiosk mode. The device user can choose any installed app on the device to act as the kiosk app, with the Esper Console kept in sync on the configuration stats.
+   - Esper Branding: Turn off the Esper logo on the Home screen.
+   - About: Supplies information regarding the endpoint name the device is enrolled in, in case the customer has access to multiple Esper endpoints.
       
 ![Esper Settings](./assets/NewConsole/EsperSettingsApp.png)
 
@@ -921,15 +923,15 @@ Lock screen must be on in order to set Lock screen password rules. If you select
 
 Tap the expander arrow; you’ll need to enter the password you set in the Compliance Policy.
 
-![Slider](./assets/NewConsole/DeviceAppSlider.jpg)
+<img src="./assets/NewConsole/DeviceAppSlider.jpg" alt="alt text" width="75%" height="75%">
 
-   Once you’ve entered the password, a dock will slide out that gives you three options:
-   
-      Exit Kiosk mode. If the device is in multi-app mode, no action is taken.
-      Reboot the device.
-      Open the  Esper Settings app; selecting the Esper Settings app will require you to enter the password again to gain access.
+Once you’ve entered the password, a dock will slide out that gives you three options.
+
+   - Exit Kiosk mode. If the device is in multi-app mode, no action is taken.
+   - Reboot the device.
+   - Open the  Esper Settings app, selecting the Esper Settings app will require you to enter the password again to gain access.
       
-![Settings App](./assets/NewConsole/SettingsAppDevice.jpg)
+<img src="./assets/NewConsole/SettingsAppDevice.jpg" alt="alt text" width="75%" height="75%">
 
 To slide the dock back in, click on the expander arrow again; it will disappear after a few seconds.
 
@@ -941,7 +943,7 @@ If you exit Kiosk mode into multi-app mode, you can still activate the expander 
 
 This password controls access to the hidden dock available in kiosk mode, the Esper Settings app, and serves as the PIN used for IMEI-based provisioning via AfW. The password is alphanumeric and can be from 1 to 10 characters.
 
-![Dock Esper Settings](./assets/NewConsole/DockEsperSettings.png)
+<img src="./assets/NewConsole/DockEsperSettings.png" alt="alt text" width="75%" height="75%">
 
 The default password is 1234. It is possible to set up a template without a password for these features, or just leave the default password; Esper strongly recommends setting up a more complex password for stronger security. The same password will be set for all devices provisioned using the template.
 
