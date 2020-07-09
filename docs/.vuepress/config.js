@@ -7,12 +7,13 @@ module.exports = {
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
     ['@vuepress/back-to-top', true],
     ['@vuepress/plugin-medium-zoom', true],
-    [
-      ('@vuepress/google-analytics',
-      {
-        ga: 'UA-141392027-1', // UA-00000000-0
-      }),
-    ],
+    // [
+    //   ('@vuepress/google-analytics',
+    //   {
+    //     ga: 'UA-141392027-1', // UA-00000000-0
+    //   }),
+    // ],
+    ['vuepress-plugin-google-tag-manager', { gtm: 'GTM-WSQ32KQ'}],
     [
       'check-md',
       {
@@ -21,23 +22,6 @@ module.exports = {
     ],
   ],
   head: [
-    [
-      'script',
-      { src: '//js.hs-scripts.com/5868902.js', async: true, defer: true },
-    ],
-    [
-      'script',
-      {},
-      `(function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:1485078,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  `,
-    ],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
   ],
   themeConfig: {

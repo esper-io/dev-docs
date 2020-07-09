@@ -28,7 +28,7 @@ Once installed, the Device Provisioner is ready to be configured.
 
 ## MacOS Installation
 
-First download [Esper Device Provisioner](https://downloads.esper.io/esper-provisioner/windows/EsperDeviceProvisioner.exe) to your MacOS development PC.
+First download [Esper Device Provisioner](https://downloads.esper.io/esper-provisioner/mac/EsperDeviceProvisioner.dmg) to your MacOS development PC.
 
 Now open Finder and navigate to where you have downloaded the file. If you haven’t specified otherwise, it will probably be in your **Downloads** folder.
 
