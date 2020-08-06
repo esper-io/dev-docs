@@ -38,4 +38,4 @@ The Alerts Status tile gives a summary of Alerts you've created and Alerts that 
 
 ![Home Dashboard](../../assets/OLD_DASHBOARD/01.png)
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)
