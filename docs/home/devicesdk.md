@@ -11,6 +11,7 @@ In it's current development state, the SDK provides limited features but the lis
 Current version: 1.1
 
 Release name: Tessarion_MR1
+
 Release date: 5th May 2020
 
 Table of Contents: 
