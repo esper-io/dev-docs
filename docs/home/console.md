@@ -2,9 +2,35 @@
 
 The Esper console is a feature-rich user interface for you to operate and manage your fleet of Android devices. Esper provides a range of super simple options to deploy company‑owned devices at scale.
 
-## Static Interface Elements
+# Table of contents
+1. [Static Interface Elements](#static-interface)
+2. [Navigation Bar](#navigation-bar)
+3. [Feedback Widget](#feedback-widget)
+4. [What's New Button](#whats-new-button)
+5. [Toast Notifications](#toast-notifications)
+6. [Informational Slider Screen and Dropdowns](#informal-slider)
+7. [Logging Out](#logging-out)
+8. [Users](#users)
+9. [Adding a New User](#add-new-user)
+10. [Editing A User](#editing-a-user)
+11. [Deleting A User](#deleting-a-user)
+12. [Dashboard](#dashboard)
+13. [Status Panels](#status-panels)
+14. [Provisioning Methods](#provisioning-methods)
+15. [Selecting a Provisioning Method](#selecting-provisioning-methods)
+16. [Need Help Choosing?](#need-help-choosing)
+17. [How to Factory Reset Your Device](#factory-reset)
+18. [Android for Work Provisioning](#android-for-work)
+19. [Six Tap QR Code Provisioning](#six-tap-qr-code)
+20. [QR Code in ROM](#qr-code-in-ROM)
+21. [QR Code Reader Setup](#qr-code-reader-setup)
+22. [Handling Other Notifications During Provisioning](#handling-other-notifications)
+23. [IMEI/Serial-Number Based Provisioning](#imei-serial-provisioning)
+24. [Provisioning Templates](#provisioning-templates)
 
-### Navigation Bar
+## Static Interface Elements <a name="static-interface"></a>
+
+### Navigation Bar <a name="navigation-bar"></a>
 
 No matter where you are in the Esper Console, there will be a navigation bar along the left side of the screen. This enables you to quickly navigate to each of the other sections of the Esper Console. These sections are:
 
@@ -25,7 +51,7 @@ No matter where you are in the Esper Console, there will be a navigation bar alo
 
 You can hide the names in the navigation bar to show just icons by clicking on the chevron at the top. Click on the chevron again to slide the navigation bar back out to show the names.
 
-### Feedback Widget
+### Feedback Widget <a name="feedback-widget"></a>
 
 No matter where you are in the Console, the blue Feedback button at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
 ![Feedback](./assets/NewConsole/Feedback.png)
@@ -45,7 +71,7 @@ When you’re ready to submit your feedback, click the check-mark to the right o
 
 ![Feedback Type](./assets/NewConsole/FeedbackType.png)
 
-### What’s New Button
+### What’s New Button <a name="whats-new-button"></a>
 
 At the top right of the screen is the **What’s New** button.
 
@@ -55,14 +81,14 @@ When you click it a panel will slide in from the right side of the screen; scrol
 
 ![WhatsNew](./assets/NewConsole/WhatsNewContent.png)
 
-### Toast Notifications
+### Toast Notifications <a name="toast-notifications"></a>
 
 Most notifications on your Esper console will appear as toast notifications at the bottom left corner of your screen. These notifications disappear after a few seconds; if you prefer, you can click on the X to dismiss them. If there are multiple notifications queued, click the X of the topmost notification to get to the next one in the queue.
 ![Toast](./assets/NewConsole/Toast.png)
 
 These types of notifications are called "toast notifications" because they pop up like toast from a toaster.
 
-### Informational Slider Screen and Dropdowns
+### Informational Slider Screen and Dropdowns <a name="informal-slider"></a>
 
 Many actions in the Esper console can be carried out on multiple devices across a wide variety of situations. Some devices may be offline or have poor internet connectivity. When these types of action are taken, a status screen will slide out from the right side of the console, showing the status of the action on each of the devices on which it is being executed.
 
@@ -75,13 +101,13 @@ Some operations—such as installing a new version of your app after hours acros
 For certain operations performed on a set of devices in a group, a popdown will appear on the screen. This gives you a quick summary of the top level status, with an option to open up the accompanying detailed slider screen.
 <img src="./assets/NewConsole/Wipe.png" alt="wipe" width="75%" height="75%">
 
-### Logging Out
+### Logging Out <a name="logging-out"></a>
 
 To log out of the Console, click on the user icon at the top-right corner of the screen and select Log Out from the drop down menu.
 
 ![Logging out](./assets/NewConsole/Logout.png)
    
-### Users
+### Users <a name="users"></a>
 
 Esper’s user management functions can be reached by clicking on the user icon at the top-right of the screen, then selecting **User Management** from the dropdown menu.
 
@@ -100,7 +126,7 @@ The privileges and permissions for each role are as follows:
 ![Group Roles](./assets/NewConsole/GroupRole.png)
 ![Group Role](./assets/NewConsole/GroupRoleCtd.png)
 
-### Adding a New User
+### Adding a New User <a name="add-new-user"></a>
 
 To add a new user, click on **New User**.
 ![New User](./assets/NewConsole/UserNew.png)
@@ -116,19 +142,19 @@ If you’re creating a Group Admin or Group Viewer, assign to the appropriate gr
 
 After adding a user, be sure to give the user their login credentials so that they can log in.
 
-### Editing a User
+### Editing a User <a name="editing-a-user"></a>
 
 The User Management screen also enables you to edit the details of a user. To do so, click on the pencil icon in line with that user’s listing.
 ![Edit User](./assets/NewConsole/UserEdit.png)
 
 You will be able to change the username, email, full name, password, and role assigned to the user. If you do that, be sure to pass the changes on to the account owner so they can continue to access the Esper console.
 
-### Deleting a User
+### Deleting a User <a name="deleting-a-user"></a>
 
 To delete a user from the enterprise, click on the trash can icon in line with that user’s listing. That user will no longer be able to access their account:
 ![Delete User](./assets/NewConsole/UserDelete.png)
 
-## Dashboard
+## Dashboard <a name="dashboard"></a>
 
 When you enter the Esper Console, the first page you encounter is the Dashboard. It acts as the homepage for the console and provides useful, at-a-glance information about the status of your Android fleet.
 
@@ -149,7 +175,7 @@ This feature is only available on accounts created after Friday, September 27, 2
 
 Once you enroll and provision your first device, this screen changes to the full Dashboard view.
 
-### Status Panels
+### Status Panels <a name="status-panels"></a>
 
 The main body of the Dashboard contains four status panels:
 
@@ -169,7 +195,7 @@ The **Where are your devices?** panel shows the physical location reported by ea
 
 The **Alerts status** panel provides a summary of alerts you’ve created and the number of times each has fired. You can see the number of alerts fired by selecting that alert from the dropdown menu.
 
-## Provisioning methods
+## Provisioning Methods <a name="provisioning-methods"></a>
 
 Provisioning is the initial step of enrolling, configuring, and managing an Android device using the Esper platform and associated developer tools.
 Esper provides several different methods for provisioning Android devices, depending on the capabilities of the device being configured:
@@ -186,11 +212,11 @@ If you meet the prerequisites, you may provision your device using any of the ab
 
 ![Provisioning](./assets/NewConsole/ProvisionAFW.png)
 
-### Selecting a Provisioning Method
+### Selecting a Provisioning Method <a name="selecting-provisioning-methods"></a>
 
 Each of the four provisioning methods is suited to different situations. Click the name of a method to get specific instructions. All methods require Internet connectivity.
 
-**Android for Work (AFW) provisioning**
+**Android for Work (AFW) Provisioning** 
 
 The AfW method is best used for:
       - Devices that have GMS (Google Mobile Services) support enabled
@@ -237,7 +263,7 @@ Seamless provisioning is only for devices running Esper Enhanced Android:
 
 [Contact Esper](mailto:support@esper.io) to find out more about Esper Enhanced Android and Seamless Provisioning.
 
-### Need Help Choosing?
+### Need Help Choosing? <a name="need-help-choosing"></a>
 
 If you find choosing between these methods confusing, we have provided an easy way to find the best provisioning method: Fill the form on the right side. You’ll need to provide the following information:
    - **Android version** — Check the android version on your device by navigating to Settings > About >  Android Version. Choose the correct version of Android for your device from the dropdown menu.
@@ -256,7 +282,7 @@ In case a device stalls during provisioning, there’s a way to exit out and fac
 
 ![Factory Reset](./assets/NewConsole/DeviceFactoryReset.jpg)
 
-### How to Factory Reset your Device
+### How to Factory Reset Your Device <a name="factory-reset"></a>
 
 Performing a factory reset before provisioning is typically required. Here are general instructions for how to do so on a typical Android device using a Pixel 3 running Android 9 as the example.
 
@@ -285,7 +311,7 @@ Confirm your choice on the screen or screens that follow.
 
 Be patient as it can take several minutes to complete a factory reset. Once you see the setup welcome screen you are ready to enroll and provision your device.
 
-### Android for Work (AfW) Provisioning
+### Android for Work (AfW) Provisioning <a name="android-for-work"></a>
 
 Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the AfW provisioning method. The particular screens and flow varies across Android versions, noting AfW support was first delivered in Android 6.0. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with AfW-based provisioning please [email us](mailto:support@esper.io).
 
@@ -430,7 +456,7 @@ After this step, your provisioning will be finished and you’ll see your device
 
 <img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
-### Six Tap QR Code Provisioning
+### Six Tap QR Code Provisioning <a name="six-tap-qr-code"></a>
 
 Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the AfW provisioning method. The particular screens and flow varies across Android versions, noting 6 Tap QR Code support was first delivered in Android 7. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with 6 Tap QR Code-based provisioning please [email us](mailto:support@esper.io).
 
@@ -458,7 +484,7 @@ If your device has the QR code reader in ROM, instead you’ll see a QR code rea
 
 ![Factory Reset](./assets/NewConsole/CaptureScreen.png)
 
-#### QR Code Reader In ROM
+#### QR Code Reader In ROM <a name="qr-code-in-ROM"></a>
 
 After tapping 6 times in the open space of the first set up screen, you will see the QR code reader screen.
 
@@ -515,7 +541,7 @@ After this step, your provisioning will be finished and you’ll see your device
 
 <img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
-#### QR Code Reader Setup
+#### QR Code Reader Setup <a name="qr-code-reader-setup"></a>
 
 On the QR code setup screen click **Next**.
 
@@ -629,7 +655,7 @@ After this step, your provisioning will be finished and you’ll see your device
 
 <img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
-### Handling Other Notifications During Provisioning
+### Handling Other Notifications During Provisioning <a name="handling-other-notifications"></a>
 
 If you plan to use the Esper Cloud to install your own Enterprise apps, we recommend not enabling Google Play Protect to prevent your apps from being blocked. You also don’t need to report the Esper agent app to Google Play Protect.
 
@@ -637,7 +663,7 @@ Occasionally the device ships with a custom launcher app in ROM. In that case yo
 
 You may also encounter notifications to improve location accuracy. Agreeing to use these services means you are passing your location data to a third party. While you typically need to accept end user licensing agreements (EULAs) in order for the device to function, optional choices regarding diagnostic data and additional services are frequently presented. You should evaluate the tradeoff based on your specific use case and decide accordingly - we typically recommend declining these services.
 
-### IMEI/Serial Number-Based Provisioning
+### IMEI/Serial Number-Based Provisioning <a name="imei-serial-provisioning"></a>
 
 Esper enables you to use IMEI and serial numbers to enroll and provision your devices using the Android for Work (AfW) method. Only Android GMS devices running Android 6.0 or above support AfW. It works by using the AfW provisioning process to pass the available IMEIs and serial number for the device to Esper which we then matched to a Provisioning Template that includes any one of the IMEI or serial number. That template is then used to provision the device.
 
@@ -757,7 +783,7 @@ After this step, your provisioning will be finished and you’ll see your device
 
 <img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
-## Provisioning Templates
+## Provisioning Templates <a name="provisioning-templates"></a>
 
 Provisioning Templates give you a straightforward way to enroll and provision multiple devices. You create templates for devices in which you specify the compliance policy, apps, device settings, device group—even the wallpapers—you want to be provisioned on your devices.
 The Provisioning Templates are shown as tiles with the most-recently created at the top. You can easily find templates by name using the **Search Templates** feature:
@@ -859,7 +885,7 @@ A Compliance Policy is a set of configurations or permissions that will be appli
 
 Hovering your mouse cursor over any item will give you a short explanation on-screen. Below is a detailed explanation of each of the configurations you can set in this section.
 
-### Dropdown menus
+### Dropdown Menus
 
 **Lock Screen Password Rules**
 
