@@ -42,7 +42,7 @@ The Esper console is a feature-rich user interface for you to operate and manage
 37. [Settings Section](#settings-section)
 38. [Group Section](#group-section)
 39. [Preview Section](#preview-section)
-40. [Devices Section(]#devices-section)
+40. [Devices Section](#devices-section)
 41. [Getting Started](#getting-started)
 42. [Grid View](#grid-view)
 43. [List View](#list-view)
@@ -72,9 +72,6 @@ The Esper console is a feature-rich user interface for you to operate and manage
 67. [Company Settings](#company-settings)
 68. [Esper Enhanced Updates](#esper-enhanced-updates)
 69. [API Key Management](#api-key-management)
-70. 
-
-
 
 
 ## Static Interface Elements <a name="static-interface"></a>
