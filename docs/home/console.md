@@ -27,6 +27,55 @@ The Esper console is a feature-rich user interface for you to operate and manage
 22. [Handling Other Notifications During Provisioning](#handling-other-notifications)
 23. [IMEI/Serial-Number Based Provisioning](#imei-serial-provisioning)
 24. [Provisioning Templates](#provisioning-templates)
+25. [Creating a Provisioning Template](#create-provisioning-template)
+26. [Compliance Policy Section](#compliance-policy-section)
+27. [Dropown Menus](#dropdown-menus)
+28. [Google Account Restrictions](#google-account-restrictions)
+29. [Factory Reset Protection](#factory-reset-protection)
+30. [Restrict Incoming and Outgoing Calls](#restrict-incoming-outgoing-calls)
+31. [ADB](#adb)
+32. [Resetting to Default](#reset-to-default)
+33. [Apps Section](#apps-section)
+34. [Kiosk or Multi App Mode](#kiosk-multi-app-mode)
+35. [Advanced Settings](#advanced-settings)
+36. [Branding Section](#branding-section)
+37. [Settings Section](#settings-section)
+38. [Group Section](#group-section)
+39. [Preview Section](#preview-section)
+40. [Devices Section(]#devices-section)
+41. [Getting Started](#getting-started)
+42. [Grid View](#grid-view)
+43. [List View](#list-view)
+44. [Map View](#map-view)
+45. [Device Details](#device-details)
+46. [Information Tab](#information-tab)
+47. [Settings Tab](#settings-tab)
+48. [Event Feed Tab](#event-feed-tab)
+49. [Device Graphs Tab](#device-graphs-tab)
+50. [Apps Tab](#apps-tab)
+51. [Compliance Policy Tab](#compliance-policy-tab)
+52. [Security Tab](#security-tab)
+53. [Remote Viewer Tab](#remote-viewer-tab)
+54. [Capture Logs Tab](#capture-logs-tab)
+55. [Connecting to a Device Using Secure Remote ADB](#connecting-using-remote-adb)
+56. [Groups](#groups)
+57. [The Apps Tab](#apps-tab)
+58. [OS Updates](#os-updates)
+59. [Apps](#apps)
+60. [Uploading Enterprise Apps to the Esper Cloud](#upload-enterprise-apps-to-esper-cloud)
+61. [Google Play](#google-play)
+62. [Alerts](#alerts)
+63. [Compliance Policy](#compliance-policy)
+64. [Reports](#reports)
+65. [Geofence](#geofence)
+66. [Esper Pipeline](#esper-pipeline)
+67. [Company Settings](#company-settings)
+68. [Esper Enhanced Updates](#esper-enhanced-updates)
+69. [API Key Management](#api-key-management)
+70. 
+
+
+
 
 ## Static Interface Elements <a name="static-interface"></a>
 
@@ -793,7 +842,7 @@ The Provisioning Templates are shown as tiles with the most-recently created at 
 You can easily open up the QR code to use during AfW or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
 Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet. For those cases where distributing a QR code outside of your organization would be required, instead consider using AfW IMEI/Serial Number provisioning with a passcode.
 
-### Actions on Template Tiles
+### Actions on Template Tiles 
 
 Clicking on the ellipses (...) at the top right of one of the template tiles opens a pop-up menu that enables you to do the following to that template:
    - Preview
@@ -867,7 +916,7 @@ Clicking Download Config will enable you to download the config.json file for us
 Click on Delete to delete a selected template. You will still be able to view the policy, apps, and settings of the template when viewing a device previously provisioned using that template.
 
 
-### Creating a Provisioning Template
+### Creating a Provisioning Template <a name="create-provisioning-template"></a>
 
 To create a provisioning template, click **Create Template**.
 
@@ -877,7 +926,7 @@ To create a provisioning template, click **Create Template**.
    
 ![Create PageTemplate](./assets/NewConsole/TemplateCreatePage.png)
 
-### Compliance Policy Section
+### Compliance Policy Section <a name="compliance-policy-section"></a>
 
 A Compliance Policy is a set of configurations or permissions that will be applied to all the devices provisioned through the template. Each configuration determines particular system behavior, in some cases including whether the device user is able to change a configuration on the device using the Android Settings app. This section lets you set the Compliance Policy that will govern all the devices provisioned using this template. You can change this after provisioning by defining a new Compliance Policy and then applying it to a Device or a Group.
 
@@ -885,7 +934,7 @@ A Compliance Policy is a set of configurations or permissions that will be appli
 
 Hovering your mouse cursor over any item will give you a short explanation on-screen. Below is a detailed explanation of each of the configurations you can set in this section.
 
-### Dropdown Menus
+### Dropdown Menus <a name="dropdown-menus"></a>
 
 **Lock Screen Password Rules**
 
@@ -977,7 +1026,7 @@ The default password is 1234. It is possible to set up a template without a pass
 If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings app or the Android settings app as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.
 :::
 
-### Google Account Restrictions
+### Google Account Restrictions <a name="google-account-restrictions"></a>
 
 This setting enables you to restrict the number of Google accounts that can be added on the device and used with Google apps like Gmail, Google Play Store, and YouTube. By default, any number of accounts can be added to a specific device; this setting restricts this number. For example, if you set this setting to two, only two accounts will be permitted on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 
@@ -991,7 +1040,7 @@ If you don’t check the Google account restrictions box and plan to provision y
 The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.
 :::
 
-### Factory Reset Protection 
+### Factory Reset Protection <a name="factory-reset-protection"></a>
 
 Factory Reset Protection (FRP) enables you to lock a device if a user factory resets it via soft/hard keys on GMS devices. In case of a factory reset, the device will get locked and can only be unlocked by entering a pre-authorized google account ID. Additional information about how to get your Google Account ID is available in the Compliance Policy section.
 
@@ -1034,7 +1083,7 @@ On a few devices, this setting may need to be on if you wish to have Google Play
 
 **Local App Install**<br>TThis feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. **Settings >Apps and Notifications > Special App Permissions> Install Unknown Apps** and choose the route they wish to install the apps from. For example, if the device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned off, the device user will not be allowed to install apps from any unknown sources.</br>
 
-### Restrict Incoming and Outgoing calls
+### Restrict Incoming and Outgoing Calls <a name="restrict-incoming-outgoing-calls"></a>
 
    Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
       - Restrict incoming calls to uploaded contacts only
@@ -1052,7 +1101,7 @@ If you wish to enable outbound calls, be sure to include your device’s phone a
 Spreadsheets commonly interpret + as part of a mathematical formula. Use the appropriate method specific to that spreadsheet to indicate the number is not part of a formula. For example in Excel you prepend a ‘ to each entry. Remember to save the file as a .csv.
 :::
 
-### ADB
+### ADB <a name="adb"></a>
 
 Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via Devices > Device > Settings for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
 
@@ -1060,19 +1109,19 @@ Android Debug Bridge (ADB) is a command-line tool that enables developers to use
 We never allow turning on ADB from the device on any Esper-provisioned device.
 :::
 
-### Resetting to Default Settings
+### Resetting to Default Settings <a name="reset-to-default"></a>
 
 You may reset these values to default at any time by clicking the **Reset to defaults** button at the bottom of this panel.
 When you are satisfied with your Compliance Policy configurations, click **Next**.
 
 
-### Apps section
+### Apps Section <a name="apps-section"></a>
 
 The Apps section lets you choose the apps you would like to have installed on your device during provisioning. You may choose to install Enterprise apps uploaded via the [App Management](./console.md#apps) section of the Console or apps approved via [Play For Work](./console/play-work/index.md) from your Managed Google Play Store account.  
 
 ![App Template](./assets/NewConsole/TemplateApps.png)
 
-### Kiosk or Multi App Mode 
+### Kiosk or Multi App Mode <a name="kiosk-multi-app-mode"></a>
 
 Your first step is click a radio button to choose either Kiosk mode or Multi application mode.
 
@@ -1084,9 +1133,9 @@ Your first step is click a radio button to choose either Kiosk mode or Multi app
 For an optimal Kiosk mode implementation other Compliance Policy configurations need to be properly set. See this [technical article](https://blog.esper.io/kiosk-on-esper) for more details.
 :::
 
-In **Multi application mode**, the device user is free to use any Enterprise or Google Play app approved and installed using Esper.
+In **Multi-Application mode**, the device user is free to use any Enterprise or Google Play app approved and installed using Esper.
 
-### Advanced Settings
+### Advanced Settings <a name="advanced-settings"></a>
 
 Clicking on **Advanced Settings** will launch a dialog box in which you can select either the Esper DPC Launcher or the default Android launcher.
 
@@ -1151,7 +1200,7 @@ Only once you approve a Google Play Store app, you may add it from the list show
 
 When you are satisfied with your apps settings, click **Next**.
 
-### Branding section
+### Branding Section <a name="branding-section"></a>
 
 The Branding section lets you customize the devices you’re provisioning by uploading the wallpapers that will be displayed on the device once it’s provisioned. You can upload separate portrait and landscape wallpapers. If your device is fixed to a display orientation you only need to upload the wallpaper for that orientation.
 
@@ -1164,7 +1213,7 @@ Supported image formats are JPEG, PNG, or JPG with a 25MB size limit. Be sure to
 To preview the Portrait wallpaper you uploaded, click **See preview**.
 When you are satisfied with your wallpaper, click **Next**.
 
-### Settings section
+### Settings Section <a name="settings-section"></a>
 
 The Settings section lets you determine levels for most of the device settings—things like screen brightness, alarm volume, and screen timeout. You can also set up devices with Wi-Fi credentials, along with determining the duration of an ADB session if ADB was enabled in the [Compliance Policy] section.
 
@@ -1264,7 +1313,7 @@ If you select EAP, an extra dropdown menu will appear to enable you to select a 
 Hidden access points are not supported for use during provisioning.
 When you are satisfied with your settings, click **Next**.
 
-### Group section
+### Group Section <a name="group-section"></a>
 
 The Group section lets you assign devices provisioned using this template to an existing group, or to create a new group.
 
@@ -1296,7 +1345,7 @@ Esper validates all IMEI numbers entered. If you enter an IMEI that cannot be ve
 
 Click **Next**.
 
-### Preview
+### Preview Section <a name="preview-section"></a>
 
 The Preview section gives you a preview of the entire Provisioning Template. If you wish to edit any settings, use the Back button to go back to the appropriate screen:
 
@@ -1323,11 +1372,11 @@ These templates will also be available for use via the Esper Device Provisioner.
 You can delete a Provisioning Template by clicking on **Delete Template**. If you do so, the information about the Provisioning Template will be saved to display for any device that has been provisioned using the deleted template.
  
 
-## Devices
+## Devices Section <a name="devices-section"></a>
 
 The Devices section is where you manage your Esper-provisioned devices after the provisioning steps have been completed.
 
-### Getting Started
+### Getting Started <a name="getting-started"></a>
 
 If you’re logging in to your Console for the first time you will see the following screen which gives you a choice to either provision a device or Simulate a device.
 
@@ -1343,7 +1392,7 @@ Capabilities such as Apps, Remote View and Capture log may not be available on a
 This feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, [contact us](mailto:support@esper.io).
 :::
 
-### Device View
+### Device View <a name="device-view"></a>
 
 Once you’ve added actual or simulated devices to the Console, the **Devices** view will list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID which uses a short code prefix followed by a 4 character identifier. For example, the below devices are all ESP-DDM. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name, noting the Device ID is often used as a parameter by the Esper API.
 
@@ -1355,11 +1404,11 @@ There are three ways to view the devices in your Console: Grid, List and Maps. T
 If you want to remove a device from Esper, execute a Wipe device command from Settings. If you perform a factory reset locally on the device, it will still continue to show up in Esper but will be offline. The only devices that can be directly deleted from the Esper Console without a Wipe device command are devices that are Under provisioning. If a device becomes inoperable and you wish to remove it from your Esper Endpoint, please [contact us](mailto:support@esper.io).
 :::
 
-#### Search Box
+#### Search Box 
 
 You can search device attributes for both the Grid and List views. The Search Box enables you to search for specific devices, with the search encompassing Device ID, Alias, Tags, and each Device’s information. To clear the search, simply refresh the page.
 
-### Grid View 
+### Grid View <a name="grid-view"></a>
 Devices which are being managed by your Esper system, or that are undergoing provisioning and have started communicating with the backend, are displayed as device tiles in the grid view.
 
 ![Tile Details](./assets/NewConsole/DeviceTileView.png)
@@ -1368,7 +1417,7 @@ You can use Grid view by clicking on the grid icon under the Devices heading on 
 
 ![Grid View](./assets/NewConsole/GridView.png)
 
-#### Filtering the Grid View Device List by Category
+#### Filtering the Grid View Device List by Category 
 
 You can filter the list of devices managed by your console by category. To do so, check the boxes next to the categories you would like displayed. The available categories are:
 
@@ -1396,7 +1445,7 @@ Click **View on maps** to see the location of the device on a map:
 
 ![MapView](./assets/NewConsole/Maps.png)
 
-#### Add or Edit tags
+#### Add or Edit Tags
 
 Click on **Add tags** to add tags to the device. Tags can make it easier to identify devices in a specific location, types of devices, Wi-Fi, SSID or any other information that would be useful. If a tag already exists for a device, the drop down choice changes to **Edit Tags**. You can also click on **+ ADD A TAG** on the tile itself to add or edit tags - this option only shows if one or more tags are available to be added to that device.
 When you click **Add Tags**, the following pop up will appear: 
@@ -1427,7 +1476,7 @@ Esper assigns a unique Device ID to every device enrolled on the Esper platform.
 
 The new device name will appear in all Console views, including the device home screen. This name is actually an alias; we’ll still continue to use the Device ID under the hood. You can revert it to its original Device ID at any time using this same technique.
 
-### List View
+### List View <a name="list-view"></a>
 
 Once you have enough devices under management, it becomes impractical to view or sort them in the Grid view. List View enables you to see a list of all devices available on the dashboard along with configurable device information columns including online/offline status, serial number, group name, Android version, and tags.
 
@@ -1543,7 +1592,7 @@ If you’ve selected a single device,clicking the **Activity Feed** icon will sh
 
 ![Reboot](./assets/NewConsole/ListViewActivityFeed.jpg)
 
-### Map View
+### Map View <a name="map-view"></a>
 
 The Map view shows device locations on a map. This view can be filtered by selecting the types of devices from the dropdown.
 
@@ -1559,13 +1608,13 @@ Clicking on a device pin will bring up the Device Tile for that device. To go to
 Bear in mind that some devices—such as Wi-Fi only or Ethernet connected devices—may not report an accurate geolocation. The view is currently limited to 100 devices; once you exceed 100 provisioned devices this view is no longer available.
 :::
 
-### Device Details
+### Device Details <a name="device-details"></a>
 
 Clicking **View Details** at the bottom of a device tile enables you to see additional detail about that device in either Grid View or Map View. You can also go to a device’s detail in List View by clicking on the Device Name in the list. 
 
 ![Reboot](./assets/NewConsole/DeviceTileDetails.png)
 
-### Information Tab
+### Information Tab <a name="information-tab"></a>
 
 This is the first tab that comes in view when clicking on **View Details** on the **Device** tile. This section provides extensive information about the device, including:
 
@@ -1591,7 +1640,7 @@ This is the first tab that comes in view when clicking on **View Details** on th
 
 ![Reboot](./assets/NewConsole/DisplayInfo.png)
 
-### Settings Tab
+### Settings Tab <a name="settings-tab"></a>
 
 The **Settings** tab enables you to remotely adjust the settings on any of the devices you manage through the Console. By default many of the options are collapsed—to expand an option simply click on the drop down icon located on the right side of each option. The image below shows **Settings** with all the options expanded.
  
@@ -1821,13 +1870,13 @@ You can choose the **Always On** option to keep ADB on, but Esper does not recom
 We never allow turning on ADB from the device on any Esper-provisioned device.
 :::
 
-### Event Feed Tab
+### Event Feed Tab <a name="event-feed-tab"></a>
 
 The Event Feed tab lists all the interactions the device has had with the Console. It displays each command taken on the device and includes the Esper use that initiated the command with a date and time stamp.
 
 ![Reboot](./assets/NewConsole/EventfeedGeofence.png)
 
-### Device Graphs Tab
+### Device Graphs Tab <a name="device-graphs-tab"></a>
 
 This section provides a graphic representation of various telemetry for a specific device over the last 24 hour period. Fourteen metrics are displayed:
 
@@ -1852,7 +1901,7 @@ If a device stays inactive for more than seven days, you will see an alert askin
 
 ![Reboot](./assets/NewConsole/DeviceGraphError.png)
 
-### Apps Tab
+### Apps Tab <a name="apps-tab"></a>
 
 This section lists the Apps that are installed on the device. Each lists the App Name, App Type, Version Code, Package Name, App State, and Actions. 
 
@@ -1896,13 +1945,13 @@ Select the app from the list of all approved Google apps and all uploaded Enterp
 
 The app installation screen also includes an estimated total time required for the installation. If an error occurs, the console will display an error message.
 
-#### Actions Column
+#### Actions Column 
 
 The Actions column enables you to uninstall an app, clear its data, set its permissions, and set the app state. To take one of these actions, click the ellipsis (...) in line with its listing.
 
 ![Reboot](./assets/NewConsole/SetAppState.png)
 
-#### Uninstall
+#### Uninstall 
 
 Selecting **Uninstall** removes the app from the device. When you click **Uninstall**, a panel will slide in from the right side of the screen.
 
@@ -1955,7 +2004,7 @@ Click on the info icon to the extreme right to view history of app installation 
 
 ![Reboot](./assets/NewConsole/AppInstallInfo.png)
 
-### Compliance Policy Tab
+### Compliance Policy Tab <a name="compliance-policy-tab"></a>
 
 You can change the Compliance Policy applied to a device. This can only be done on an online device. To install a new Compliance Policy on the device, first select the policy from the dropdown menu. You need to first create a Compliance Policy to have it available in the dropdown. You’ll find more information on compliance policies in the [Compliance Policy section](./console.md#compliance-policy-tab).
 
@@ -1963,7 +2012,7 @@ You can change the Compliance Policy applied to a device. This can only be done 
 
 Once selected the policy is selected, you will be able to see a preview of the policy to review it before applying. To apply the click on Apply policy. A progress bar will then appear to show your the status of the policy being applied to the device.
 
-### Security Tab
+### Security Tab <a name="security-tab"></a>
 
 The Security tab shows the security risks faced by the device, if any. If there are risks, it will show the threat level, cause of the threat, and provide recommendations to secure the device.
 
@@ -2016,7 +2065,7 @@ BasicIntegrity and CtsProfileMatch are calculated on three instances:
    - Every five hours thereafter
    - When requested from the Esper Console
 
-### Remote Viewer Tab
+### Remote Viewer Tab <a name="remote-viewer-tab"></a>
 
 The Remote viewer section enables you to remotely view a device and take screenshots. To remotely view a device, click on **Start Session**.
 
@@ -2072,7 +2121,7 @@ When in Full screen mode, the widget includes the hard keys. You can grab and mo
 
 Additionally, we have enabled keyboard events so users can use the keyboard on their system to type and are not forced to use the keyboard on the device by clicking on each character using the mouse pointer. This makes the experience of remote control more convenient.
 
-### Capture Logs Tab
+### Capture Logs Tab <a name="capture-logs-tab"></a>
 
 This feature enables you to capture a bug report from the device. To do so, click on **Capture logs** then click on **Start**. As the report is gathered, the status will change from Requesting Report to Permission Granted to Download. The Download status is actually a live link; clicking **Download** will download the bug report with date and time stamp from the device to help your technical staff debug any issues.
 
@@ -2084,7 +2133,7 @@ When you request a capture log from a specific device, a notification will pop u
 If the target device is in Kiosk mode or the notification bar has not been enabled, you will be unable to capture a bug report. Kiosk mode prevents the notification bar from being displayed and the device user will not be able to grant permission for the report. To get around this you can temporarily apply a Compliance Policy with notification bar enabled.
 :::
 
-### Connecting to a Device Using Secure Remote ADB
+### Connecting to a Device Using Secure Remote ADB <a name="connecting-using-remote-adb"></a>
 
 Android Debug Bridge (ABD) is a command-line tool that lets you communicate with Android devices using a Unix shell. With that connection up and running, you can run a variety of commands on the device.
 
@@ -2152,7 +2201,7 @@ You now have a secure remote ADB session with that device.
 Until the device is rebooted, you’ll be able to connect to the device remotely using Esper CLI. After rebooting, you’ll need to re-establish the ADB connection.
 :::
 
-## Groups
+## Groups <a name="groups"></a>
 
 The **Groups** section enables you to assign devices to groups. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
 
@@ -2459,7 +2508,7 @@ Click on **See details** and a slide out will appear.
 
 Once the set of commands are sent, a success toast message will appear at the bottom left corner of the screen.
 
-### The Event Feed Tab
+### The Event Feed Tab <a name="event-feed-tab"></a>
 
 The **Event Feed** tab provides a record of all the actions taken on the group, including details about each event. This is very useful for viewing the status of any queued commands for offline devices.
 
@@ -2469,7 +2518,7 @@ Clicking on **More Details** next to one of the events listed will cause a sideb
 
 ![Groups](./assets/NewConsole/SetWIFIStateDetails.png)
 
-### The Compliance Policy Tab
+### The Compliance Policy Tab <a name="compliance-policy-tab"></a>
 
 **Compliance Policy** lets you apply an existing compliance policy to all the devices in your group. You have two choices for how a Compliance Policy is applied to a Group: apply only to online devices, or queue them for offline devices to apply if they come online for 24 hours after the new policy has been applied.
 
@@ -2497,7 +2546,7 @@ If you selected Queue requests for offline devices, then any offline devices wil
 
 If you closed out of the slide out and wish to return later to check the status of the queued devices, simply go to the **Event Feed** and select **More details** for the event where you applied, this will take you back to the slide out and you can view the status.
 
-### The Apps Tab
+### The Apps Tab <a name="apps-tab"></a>
 
 The **Apps** tab lets you manage the apps on all the devices in the group. This includes installing new apps, uninstalling apps, scheduling an app installation, and approving apps for the group.
 
@@ -2597,7 +2646,7 @@ ADB will return a list of all the apps running on the device:
 
 You can also view the package names for any apps installed on a device by viewing the [device’s details and selecting Apps](./console.md#devices). The package name for each app is displayed in the resulting list view.
 
-### OS Updates
+### OS Updates <a name="os-updates"></a>
 
 The **OS Updates** section enables you to push operating-system updates to all the devices in the group that run Esper Enhanced Android.
 
@@ -2626,7 +2675,7 @@ Only the latest 30 builds of the Esper Enhanced Android updates will be availabl
 The **Number of Devices** field will populate with the devices in the group on which this update is applicable; that is, the number of devices that have an OS build version lower than the selected version for the deployment. Add the installation name and any pertinent notes and click **Save**.
 
 
-## Apps
+## Apps <a name="apps"></a>
 
 This section enables you to manage the applications used on the Android devices you manage. The devices you manage will only be able to install and use those apps you authorize. In most cases, device users won’t even be able to see anything else.
 
@@ -2646,7 +2695,7 @@ There are two different types of Apps you can authorize on your Android devices:
 You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates). You can also do so after provisioning using [**Groups > Apps > Approvals**](./console.md#groups).
 :::
 
-### Uploading Enterprise Apps to the Esper Cloud
+### Uploading Enterprise Apps to the Esper Cloud <a name="upload-enterprise-apps-to-esper-cloud"></a>
 
 To upload an APK for a Enterprise app to the Esper cloud, click on **Upload Apps** in the top right corner of the screen. A popup box will appear into which you can drag the APK file for your Enterprise app; to select the file from your computer, click on **Select APK**.
 
@@ -2698,7 +2747,7 @@ If you delete an app version from the Esper Cloud and the app is currently insta
 
 A success toast will appear in the bottom left corner of your screen upon successful completion.
 
-### Google Play
+### Google Play <a name="google-play"></a>
 
 The Esper Console gives you access to Play for Work, the enterprise version of Google Play. Within Play for Work you can approve apps, which can then be downloaded onto your GMS devices (AOSP devices are not supported by Google Play). If you give device users access to the Google Play Store app on the device, you can limit installable apps from the Play Store to only to those approved through Esper. Note that Google Play is a service provided by Google, Esper does not control the user experience for Google Play.
 
@@ -2736,7 +2785,7 @@ Once the process completes, you’ll have Play Store apps available to use with 
 
 ![Apps](./assets/NewConsole/PlayStore-Apps.png)
 
-#### Approving a Google Play Store App
+#### Approving a Google Play Store App 
 
 The Esper Console gives you access to Play for Work, the enterprise version of Google Play. Within Play for Work you can approve apps, which can then be downloaded onto your devices. You can also unapprove apps, which will then cease to be visible or available in the Google Play store on your devices.
 To approve a Google Play app, click on **Google Play**. 
@@ -2808,7 +2857,7 @@ On the detail screen for the app, click **Unapprove**.
 Unapproving an app does not mean uninstalling it. If the app was approved earlier, it will remain on any devices on which it was installed until it is explicitly uninstalled. After uninstalling it, if it has been unapproved, the device user will not be able to reinstall it on the device.
 :::
 
-## Alerts
+## Alerts <a name="alerts"></a>
 
 Alerts enable you to monitor the performance of your devices and have the system notify you when one of your devices exceeds certain thresholds. Currently supported alerts cover battery level, network connectivity, and Bluetooth.
 
@@ -2822,7 +2871,7 @@ Clicking the name of an alert brings up details about that alert.
 
 ![Alerts](./assets/NewConsole/AlertSummary.png)
 
-### Creating an Alert
+### Creating an Alert 
 To create a new alert, click on **New Alert**.
 
 ![Alerts](./assets/NewConsole/AlertNew.png)
@@ -2882,7 +2931,7 @@ To delete an alert, click on the ellipsis (...) next to its listing on the Alert
 
 ![Alerts](./assets/NewConsole/AlertActions.png)
 
-## Compliance Policy
+## Compliance Policy <a name="compliance-policy"></a>
 
 A Compliance Policy is a set of rules or permissions related to the device configurations that can be applied to devices managed by Esper. The Compliance Policy section enables you to create a policy that sets these parameters. 
 
@@ -3136,7 +3185,7 @@ Selecting either or both of these checkboxes will restrict incoming or outgoing 
 All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
 :::
 
-### ADB
+### ADB 
 
 Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via **Devices > Device > Settings** for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
 
@@ -3144,18 +3193,18 @@ Android Debug Bridge (ADB) is a command-line tool that enables developers to use
 We never allow turning on ADB from the device on any Esper-provisioned device.
 :::
 
-### Resetting to Default Settings
+### Resetting to Default Settings 
 
 You may reset these values to default at any time by clicking the **Reset to Default** button at the bottom of this panel.
 When you are satisfied with your compliance settings, click **Next**.
 
-### Duplicating a Compliance Policy
+### Duplicating a Compliance Policy 
 
 If you’d like to base a new Compliance Policy on an existing Compliance Policy, click on the copy icon (two boxes) in the Compliance Policy list view. A duplicate will be made you can then edit, rename, and modify as needed.
 
 ![CompliancePolicy](./assets/NewConsole/CompliancePolicyCopy.png)
 
-### Editing a Compliance Policy
+### Editing a Compliance Policy 
 
 If you’d like to edit an existing Compliance Policy, click on the **Edit** icon (pencil) in the Compliance Policy list view.
 
@@ -3165,7 +3214,7 @@ If you’d like to edit an existing Compliance Policy, click on the **Edit** ico
 
 ![CompliancePolicy](./assets/NewConsole/CompPolicyMessage.png)
 
-## Reports
+## Reports <a name="reports"></a>
 Your Esper Console provides reports on the performance of the devices and groups of devices it manages. The Reports section explains how these reports work and how they can be customized to better meet your needs.
 
 ![Report](./assets/NewConsole/Reports.png)
@@ -3243,7 +3292,7 @@ There are some limitations to the report email subscription service:
  All subscriptions will be subjected to an automated check for invalid email address format and for invalid domains.
 
 
-## Geofence
+## Geofence <a name="geofence"></a>
 
 Geofencing lets you use a device’s location—generated by GPS—to trigger an alert when the device enters or leaves a defined area. Geofencing enables you to make sure a fleet of delivery devices stay in their delivery zone, warehousing devices don’t stray far from the warehouse, and restaurant ordering devices don’t leave the restaurant.
 
@@ -3291,7 +3340,7 @@ If you chose to Lockdown the device, the user will see the following screen if t
 The performance of Geofencing is dependent on the accuracy of the GPS built into the devices. Additionally, ability to track location of the device is also dependent on Wi-Fi, Bluetooth, cellular connectivity, and internet connectivity of the device. This feature is not supported for Android version 4.x.
 :::
 
-## Pipeline
+## Esper Pipeline <a name="esper-pipeline"></a>
 
 Esper Pipeline enables you to ensure smooth completion of actions on large fleets of devices by providing a way to automate them. Using a pipeline you define the stages through which the actions must go and the events that trigger each of those stages, providing an effective way to control complex or large processes.
 
@@ -3347,7 +3396,7 @@ To delete a pipeline, click the ellipsis (...) on its tile and select **Delete**
 
 ![Pipeline](./assets/NewConsole/PipelineActions.png)
 
-## Company Settings
+## Company Settings <a name="company-settings"></a>
 
 The Company Settings section displays your company’s information. You can edit your company’s information by clicking on the **Edit Profile** button at the top right of the screen.
 
@@ -3377,7 +3426,7 @@ Once you’ve entered all the information, click on **Save**.
 If you change your short code after you’ve provisioned devices, those devices will display the old short code prefix on the device but the new short code will be displayed in the Esper Console and also be used for API, SDK, and CLI calls. Thus it is best to change to your desired short code before you provision any devices.
 :::
 
-## Esper Enhanced Updates
+## Esper Enhanced Updates <a name="esper-enhanced-updates"></a>
 
 Esper Enhanced Android devices are devices that are shipped with a customized Android OS that delivers improved security, faster deployment, superior debugging, and a better user experience for single-purpose devices.
 
@@ -3389,7 +3438,7 @@ If you’re using Esper Enhanced Android devices, you can update the operating s
 Currently only the latest thirty builds of Esper Enhanced Android updates will be listed and available for deployment.
 :::
 
-## API Key Management
+## API Key Management <a name="api-key-management"></a>
 
 Esper is focused on helping developers build, deliver, and maintain dedicated-device applications—whether a restaurant kiosk, retail POS, or logistics hub. We have made our APIs available to developers worldwide so they can move repetitive app and device management actions into reusable code. The API key (along with the Enterprise ID) is required to use our Cloud API, Device SDK, Python SDK, and CLI. We also offer the Esper Plugin for the Android Studio with tools improving the challenging task of app diagnostics—including working with deployed apps running on dedicated devices in the field.
 
