@@ -9,7 +9,7 @@ In its current development state, the SDK provides limited features but the list
 
 Current version: 1.2
 
-Release name: Tessarion_MR2
+Release name: Tessarion_MR3
 
 Table of Contents: 
 
@@ -19,16 +19,18 @@ Table of Contents:
 - Clearing App Data
 - Manage AppOp Permissions
 - Manage Dock
+- Activate SDK
+- Start/Stop Wi-Fi Hotspot
 
 
 
 
 ## Downloading the SDK
 
-Download the .aar file of the SDK from [here](https://downloads.esper.io/device-sdk/esperdevicesdk-release-v1_2-3.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
+Download the .aar file of the SDK from [here](https://downloads.esper.io/device-sdk/esperdevicesdk-release-v1.2.4.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
 
 ```
-implementation files('libs/esperdevicesdk-release-v1_2-3.aar')
+implementation files('libs/esperdevicesdk-release-v1.2.4.aar')
 ```
 
 ## Initializing the SDK
