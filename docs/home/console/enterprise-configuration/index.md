@@ -22,4 +22,4 @@ Learn about Esper's Company Settings.
 
 ![Company Settings](../../assets/OLD_DASHBOARD/3_EC.png)
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)
