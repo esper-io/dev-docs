@@ -7,6 +7,17 @@ module.exports = {
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
     ['@vuepress/back-to-top', true],
     ['@vuepress/plugin-medium-zoom', true],
+    [
+      'sitemap',
+      {
+          hostname: 'https://docs.esper.io',
+      },
+    ],
+    [ 'robots', {
+      host: 'https://docs.esper.io',
+      allowAll: true,    
+    } 
+    ],
     // [
     //   ('@vuepress/google-analytics',
     //   {

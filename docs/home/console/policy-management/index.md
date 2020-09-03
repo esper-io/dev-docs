@@ -17,4 +17,4 @@ Learn about Esper's Policy Management.
 
 ![Policy Management](../../assets/OLD_DASHBOARD/3_PM.png)
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)

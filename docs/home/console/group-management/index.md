@@ -52,4 +52,4 @@ You may add the installation name, any pertinent notes, and after that click **'
 
 In a future update we will give users the option to choose the time window for their OS update installation.
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)
