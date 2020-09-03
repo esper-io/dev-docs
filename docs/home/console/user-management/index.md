@@ -29,4 +29,4 @@ Delete icon
 
 ![User Management](../../assets/OLD_DASHBOARD/5_UM.png)
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)

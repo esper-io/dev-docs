@@ -118,4 +118,4 @@ While editing a template, you also have the option to add IMEI/Serial numbers of
 
 Click on the 'Delete Template' option on top right to delete a selected template.
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)
