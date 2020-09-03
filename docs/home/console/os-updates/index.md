@@ -8,4 +8,4 @@ You can update the Esper Enhanced Android version using our OTA functionality. C
 Please note that currently only the latest 30 builds of Esper Enhanced Android updates will be visible to the user for deployment.
 :::
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)
