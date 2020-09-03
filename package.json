@@ -37,7 +37,9 @@
     "eslint-plugin-vue": "6.2.2",
     "prettier": "2.0.5",
     "vuepress": "1.5.2",
-    "vuepress-plugin-google-tag-manager": "0.0.4"
+    "vuepress-plugin-google-tag-manager": "0.0.4",
+    "vuepress-plugin-robots": "^1.0.1",
+    "vuepress-plugin-sitemap": "^2.3.1"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "1.5.2",
