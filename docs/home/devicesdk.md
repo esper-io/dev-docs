@@ -206,7 +206,7 @@ sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
 });
 ```
 If the check is successful, the API will return a boolean in ​onResponse​ indicating whether or not the SDK is activated.
-* This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4 Otherwise, if there are any issues when checking activation status, ​onFailure​ will becalled.
+* This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will becalled.
 
 ## Start/Stop Wifi-Hotspot:
 Wifi Hotspot can be enabled/disabled with a provision to set SSID and password. 
