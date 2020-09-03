@@ -51,4 +51,4 @@ sets up email notifications for anyone requesting new permissions to the specifi
 
 ![Play For Work](../../assets/OLD_DASHBOARD/8_PW.png)
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)
