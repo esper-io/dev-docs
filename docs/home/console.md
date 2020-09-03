@@ -1,12 +1,12 @@
 # Esper console
 
-The Esper console is a feature-rich user interface for you to operate and manage your fleet of Android devices. Esper provides a range of super simple options to deploy company‑owned devices at scale.
+The Esper console is a feature-rich user interface for you to operate and manage your fleet of Android devices. Esper provides a range of options to deploy company‑owned devices at scale.
 
 ## Static Interface Elements
 
 ### Navigation Bar
 
-No matter where you are in the Esper Console, there will be a navigation bar along the left side of the screen. This enables you to quickly navigate to each of the other sections of the Esper Console. These sections are:
+No matter where you are in the Esper Console, there will be a navigation bar along the left side of the screen. This enables you to quickly navigate to each of the other sections in the Esper Console. These sections are:
 
    - Dashboard
    - Provisioning Methods
@@ -23,16 +23,16 @@ No matter where you are in the Esper Console, there will be a navigation bar alo
    - Esper Enhanced Updates
    - API Key Management
 
-You can hide the names in the navigation bar to show just icons by clicking on the chevron at the top. Click on the chevron again to slide the navigation bar back out to show the names.
+At any time, you can collapse the full Navigation Bar displayed by clicking on the chevron ('<' icon) at the top left side of the console, directly to the right of the text that says, 'Dashboard.' After collapsing the Navigation Bar by clicking the chevron, the Console will display only graphical icons for each item listed in the Navigation Bar. Clicking on the chevron again will expand the navigation bar and display the names of each menu item again.
 
 ### Feedback Widget
 
-No matter where you are in the Console, the blue Feedback button at the bottom right corner of the Console will allow you to share detailed feedback and report issues without leaving the screen.
+No matter where you are in the Console, clicking the blue 'Feedback' button at the bottom right corner of the Console will allow you to share detailed feedback with the Esper engineering team. Clicking 'Feedback' also allows you to report any issues you may encounter while using Esper Console without leaving the screen.
 ![Feedback](./assets/NewConsole/Feedback.png)
 
 Clicking **Feedback** brings up a screen with the following tools:
 
-   - Box tool – Highlight a specific area of the page and comment on that area. If you prefer, don’t enter a comment; simply leave the box outline.
+   - Box tool – Highlight a specific area of the page and comment on that area. If you prefer not to leave a comment, simply leave the box outline highlighting the Console area you would like to draw attention to.
    - Blackout tool – Blackout any sensitive information on the screen.
    - Pen tool – Draw anything you like! Circle and Point works great with a touch screen and pen.
    - Line tool – Underline, strikethrough, draw a straight line.
@@ -41,7 +41,7 @@ Clicking **Feedback** brings up a screen with the following tools:
    
 ![Feedback Tools](./assets/NewConsole/FeedbackTools.png)
 
-When you’re ready to submit your feedback, click the check-mark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click Send. Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
+When you’re ready to submit your feedback, click on the checkmark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click 'Send.' Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
 
 ![Feedback Type](./assets/NewConsole/FeedbackType.png)
 
@@ -51,25 +51,25 @@ At the top right of the screen is the **What’s New** button.
 
 ![What's New](./assets/NewConsole/WhatsNew.png)
 
-When you click it a panel will slide in from the right side of the screen; scroll through it to learn more about updates and improvements to your Esper experience.
+When you click it, a panel will slide in from the right side of the screen. Scroll through it to learn more about updates and improvements to your Esper experience.
 
 ![WhatsNew](./assets/NewConsole/WhatsNewContent.png)
 
 ### Toast Notifications
 
-Most notifications on your Esper console will appear as toast notifications at the bottom left corner of your screen. These notifications disappear after a few seconds; if you prefer, you can click on the X to dismiss them. If there are multiple notifications queued, click the X of the topmost notification to get to the next one in the queue.
+Most notifications on your Esper console will appear as toast notifications at the bottom left corner of your screen. These notifications disappear after a few seconds. If you prefer, you can click on the 'X' to dismiss them. If there are multiple notifications queued, click the 'X' of the topmost notification to get to the next one in the queue.
 ![Toast](./assets/NewConsole/Toast.png)
 
-These types of notifications are called "toast notifications" because they pop up like toast from a toaster.
+:::tip These types of notifications are called "toast notifications" because they pop up like toast from a toaster. :::
 
 ### Informational Slider Screen and Dropdowns
 
-Many actions in the Esper console can be carried out on multiple devices across a wide variety of situations. Some devices may be offline or have poor internet connectivity. When these types of action are taken, a status screen will slide out from the right side of the console, showing the status of the action on each of the devices on which it is being executed.
+Many actions in the Esper console can be carried out on multiple devices, and are applicable across a wide variety of situations. Some devices may be offline, or have poor internet connectivity. When these types of actions are taken, a status screen will slide out from the right side of the Console, showing the status of the action on each of the devices on which it is being executed.
 
 You will encounter these slider screens frequently as you use your Esper console.
 ![Info Slider](./assets/NewConsole/InfoSlider.png)
  
-Some operations—such as installing a new version of your app after hours across thousands of devices—can be performed over hours or days. Fortunately, you don’t need to watch the status reported on the informational slide out screen the whole time. To force an update to the overall status displayed in the slider, click the refresh button in the upper right hand corner. To exit a slider, click the X next to the refresh button. You return to the slider by clicking on the link or button associated with that action. 
+Some operations, for example, installing a new version of your app after hours across thousands of devices, can be performed in a matter of hours, while some may take days. Fortunately, you don’t need to watch the status screen the whole time an operation is running. To force an update to the overall status displayed on the slider, click the 'Refresh' button in the upper right hand corner. To exit a slider, click the 'X' next to the 'Refresh' button. You can then return to the slider by clicking on the link or button associated with that action. 
 ![Close Slider](./assets/NewConsole/SliderClose.png)
 
 For certain operations performed on a set of devices in a group, a popdown will appear on the screen. This gives you a quick summary of the top level status, with an option to open up the accompanying detailed slider screen.
@@ -77,7 +77,7 @@ For certain operations performed on a set of devices in a group, a popdown will 
 
 ### Logging Out
 
-To log out of the Console, click on the user icon at the top-right corner of the screen and select Log Out from the drop down menu.
+To log out of the Console, click on the user icon at the top-right corner of the screen and select 'Log Out' from the drop down menu.
 
 ![Logging out](./assets/NewConsole/Logout.png)
    
@@ -91,11 +91,10 @@ Click on **User Management**.
 
 ![User summary](./assets/NewConsole/UsersSummary.png)
 
-:::tip
-Access to this page is only available to those with Enterprise Admin roles, those with other roles will not see the User management option in the drop down.
-:::
+:::tip Access to this page is only available to those with Enterprise Admin roles, those with other roles will not see the User management option in the drop down. :::
 
-There are four main roles for Esper Console users: *Enterprise Administrator, Enterprise Viewer, Group Administrator*, and *Group Viewer*. Each role has different permissions, ranging from an Enterprise Administrator, who is able to view or change anything, down to a Group Viewer, who can view those things having to do with those groups to which the Group Viewer is assigned.
+There are four main roles for Esper Console users: *Enterprise Administrator, Enterprise Viewer, Group Administrator*, and *Group Viewer*. When setting up a Group, be mindful that each role has different permissions. Enterprise Administators have the highest level of permissions, and are able to view or change anything, while a Group Viewer has far less permissions, and can only view tasks having to do with the devices and groups which they have been assigned permissions in.
+
 The privileges and permissions for each role are as follows:
 ![Group Roles](./assets/NewConsole/GroupRole.png)
 ![Group Role](./assets/NewConsole/GroupRoleCtd.png)
@@ -114,28 +113,28 @@ Select the new user’s role from the dropdown menu.
 If you’re creating a Group Admin or Group Viewer, assign to the appropriate groups and click **Confirm**.
 ![Add GroupUser](./assets/NewConsole/UserAddGroup.jpg)
 
-After adding a user, be sure to give the user their login credentials so that they can log in.
+After adding a user, be sure to provide the user with their login credentials so that they can succesfully log in.
 
 ### Editing a User
 
 The User Management screen also enables you to edit the details of a user. To do so, click on the pencil icon in line with that user’s listing.
 ![Edit User](./assets/NewConsole/UserEdit.png)
 
-You will be able to change the username, email, full name, password, and role assigned to the user. If you do that, be sure to pass the changes on to the account owner so they can continue to access the Esper console.
+You will be able to change the username, email, full name, password, and role assigned to the user. If you modify a user's details, be sure to pass the changes on to the account owner so they can continue to access the Esper console.
 
 ### Deleting a User
 
-To delete a user from the enterprise, click on the trash can icon in line with that user’s listing. That user will no longer be able to access their account:
+To delete a user from the enterprise, click on the trash can icon in line with that user’s listing. That user will no longer be able to access their account.
 ![Delete User](./assets/NewConsole/UserDelete.png)
 
 ## Dashboard
 
-When you enter the Esper Console, the first page you encounter is the Dashboard. It acts as the homepage for the console and provides useful, at-a-glance information about the status of your Android fleet.
+When you enter the Esper Console, the first page you encounter is the Dashboard. It acts as the homepage for the Console and provides useful, at-a-glance information about the status of your Android device fleet.
 
 ![Esper console](./assets/NewConsole/Dashboard.png)
 
 
-The first time you log in to a newly created Esper console, you’ll see a default screen indicating you do not have any devices enrolled and offering the option to create a cloud-based simulated Android device, called a Simulare:
+The first time you log in to a newly created Esper console, you’ll see a default screen indicating you do not have any devices enrolled, and offering the option to create a cloud-based simulated Android device, called a Simulare:
 
 ![Esper console](./assets/NewConsole/DashboardInitial.png) 
 
@@ -143,9 +142,7 @@ If you’d like to simulate an Android device, click **Simulare Device**. You wi
 
 Capabilities such as Apps, Remote View and Capture log may not be available on a Simulated device.
 
-:::tip
-This feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, [contact us](mailto:support@esper.io).
-:::
+:::tip This feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, [contact us](mailto:support@esper.io). :::
 
 Once you enroll and provision your first device, this screen changes to the full Dashboard view.
 
@@ -159,7 +156,7 @@ The **Deployment status** panel shows the current deployment status of all your 
 
 #### 2\. Security summary
 
-The **Security summary** panel provides a snapshot of security status of all your deployed devices, with the number of devices in each of four possible statues: high risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show you the devices in the risk category indicated.
+The **Security summary** panel provides a snapshot of the security status of all your deployed devices, with four possible statuses available for a device: High risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show you the devices in the risk category indicated.
 
 #### 3\. Where are your devices?
 
@@ -167,7 +164,7 @@ The **Where are your devices?** panel shows the physical location reported by ea
 
 #### 4\.Alerts status
 
-The **Alerts status** panel provides a summary of alerts you’ve created and the number of times each has fired. You can see the number of alerts fired by selecting that alert from the dropdown menu.
+The **Alerts status** panel provides a summary of alerts you’ve created, and the number of times each has fired. You can see the number of alerts fired by selecting that alert from the dropdown menu.
 
 ## Provisioning methods
 
@@ -188,7 +185,7 @@ If you meet the prerequisites, you may provision your device using any of the ab
 
 ### Selecting a Provisioning Method
 
-Each of the four provisioning methods is suited to different situations. Click the name of a method to get specific instructions. All methods require Internet connectivity.
+Each of the four provisioning methods is best suited to different situations. Click the name of a method to get specific instructions. All provisioning methods require Internet connectivity.
 
 **Android for Work (AFW) provisioning**
 
@@ -198,7 +195,7 @@ The AfW method is best used for:
       - Android 6.0 and above
       - Factory reset of device required
       
-You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, for devices without a camera, and it prevents repurposing the device by exploiting factory reset. It requires a passcode, which is the same as the password used by the Esper Settings app set up in the Compliance Policy. To learn about how to provision devices using the IMEI or serial number method, go [here](./console.md#imei-serial-number-based-provisioning). See the [Upload IMEI CSV](./console.md#actions-on-template-tiles) for more information on how to load IMEIs and Serial Numbers into a Provisioning Template.
+You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, or for devices without a camera. It also prevents users from repurposing the device by exploiting the ability to conduct a factory reset. Using this provisioning method requires a passcode, which is the same as the password used by the Esper Settings app set up in the Compliance Policy. To learn about how to provision devices using the IMEI or serial number method, please review [IMEI/Serial Number Based Provisioning](./console.md#imei-serial-number-based-provisioning). See the [Upload IMEI CSV](./console.md#actions-on-template-tiles) for more information on how to load IMEIs and Serial Numbers into a Provisioning Template.
 
 Go [here](./console.md#) for detailed instructions to provision a device using AfW.
 
