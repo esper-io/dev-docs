@@ -113,7 +113,7 @@ Select the new user’s role from the dropdown menu.
 If you’re creating a Group Admin or Group Viewer, assign to the appropriate groups and click **Confirm**.
 ![Add GroupUser](./assets/NewConsole/UserAddGroup.jpg)
 
-After adding a user, be sure to provide the user with their login credentials so that they can succesfully log in.
+After adding a user, be sure to provide the user with their login credentials so that they can successfully log in.
 
 ### Editing a User
 
