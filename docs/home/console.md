@@ -566,7 +566,7 @@ You’ll see the Setting up work device screen while the device is downloading t
 
 Once the Esper agent has successfully downloaded and started, provisioning will start and a screen will display saying, 'Preparing Your Device, Step One of Three,' underneath an image of a woman standing at a chalkboard, which reads, 'Starting Provisioning, this may take a while.'
 
-<img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
+<img src="./assets/NewConsole/StartingProvisioning.png" alt="A black screen with horizontal white text saying, 'Preparing Your Device, Step One of Three,' underneath this text is an image of a woman standing at a chalkboard. Underneath this image is the text, 'Starting Provisioning, this may take a while.'" style="max-width:200px;"/>
 
 :::tip If you wish to exit the provisioning process for any reason, click on the Esper logo 6 times to bring up the option to factory reset the device.
 :::
