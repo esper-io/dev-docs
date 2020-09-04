@@ -323,7 +323,7 @@ It will take a few moments for the *Google Sign in* screen to appear. Once it do
 
 <img src="./assets/NewConsole/EmailPhone.png" alt="alt text" style="max-width:200px;"/>
 
-After a Checking info… screen, you will typically need to give permission to install the Esper agent on your device to begin the enrollment process. Select **INSTALL**.
+After the 'Checking info…' screen, you will typically need to give permission to install the Esper agent on your device to begin the enrollment process. Select **INSTALL**.
 
 <img src="./assets/NewConsole/DeviceEDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
@@ -331,11 +331,11 @@ Next, the Esper agent will be downloaded to your device along, please be patient
 
 <img src="./assets/NewConsole/EDMDownloadStatus.png" alt="alt text" style="max-width:200px;"/>
 
-On some devices you will need to click INSTALL again after the agent downloads.
+On some devices, you will need to click INSTALL again after the agent downloads.
 
 <img src="./assets/NewConsole/EDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
-A screen may display asking you to accept specific terms from Google regarding Esper managing your device. Click 'ACCEPT & CONTINUE.'
+A screen may display asking you to accept specific terms from Google regarding Esper managing your device. Click or touch 'ACCEPT & CONTINUE.'
 
 <img src="./assets/NewConsole/AcceptContinue.png" alt="alt text" style="max-width:200px;"/>
 
@@ -343,7 +343,7 @@ The Esper agent will now start, and a series of screens will display as Esper pr
 
 <img src="./assets/NewConsole/StartingServices.png" alt="alt text" style="max-width:200px;"/>
 
-Now go to the Esper Console and click on **Provisioning Templates** in the left menu bar. Find the template you want to use, and click on **View QR code**.
+Now go to the Esper Console and click on **Provisioning Templates** in the left menu bar. Find the template you want to use, and click or tap on **View QR code**.
 
 <img src="./assets/NewConsole/ViewQRCode.png" alt="alt text" style="max-width:200px;"/>
 
@@ -406,15 +406,15 @@ You are taken to the Display over other apps or Draw over other apps screen wher
 
 <img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" style="max-width:200px;">
 
-You will then be taken to *Display over other apps* or *Draw over other apps* for Esper Device Management. Turn on the switch located on the right side of the screen to *Allow display over other apps* or *Permit drawing over other apps*.
+You will then be taken to *Display Over Other Apps* or *Draw Over Other Apps* for Esper Device Management. Tap or click on the toggle switch located on the right side of the screen to *Allow display over other apps* or *Permit Drawing Over Other Apps*.
   
 <img src="./assets/NewConsole/PermitDrawing.png" alt="alt text" style="max-width:200px;">
 
-Next click the back button in the upper lefthand corner of the screen.
+Next, click or tap the back button in the upper left-hand corner of the screen.
 
 <img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" style="max-width:200px;">
 
-You will now be taken back to the Display over other apps screen, noting Esper Device Management is now set to Yes or Allowed for drawing over other apps. Now click the back button in the Nav bar. 
+You will now be taken back to the 'Display Over Other Apps' screen, noting Esper Device Management is now set to 'Yes' or 'Allowed' for drawing over other apps. Next, click or tap the back button in the Navigation bar. 
 
 <img src="./assets/NewConsole/DrawAppsEDMYes.png" alt="alt text" style="max-width:200px;"/>
 
@@ -428,10 +428,10 @@ After this step, provisioning will be finished and your device will be set up ac
 
 ### Six Tap QR Code Provisioning
 
-Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the AfW provisioning method. The particular screens and flow varies across Android versions, noting 6 Tap QR Code support was first delivered in Android 7. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with 6 Tap QR Code-based provisioning please [email us](mailto:support@esper.io).
+Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the Android for Work (AfW) provisioning method. The particular provisioning screens and device provisioning flow vary across Android versions, noting 6 Tap QR Code support was first delivered in Android 7. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with 6 Tap QR Code-based provisioning, please [email us](mailto:support@esper.io).
 
 :::tip
-Device makers and carriers customize the setup process, thus it is likely you’ll encounter unique setup screens specific to your device. Generally you can either skip or decline most of the options, noting there are a handful of system specific notifications called out in the instructions for which you’ll need to make the proper selections.
+Device makers and carriers customize the setup process, thus it is likely you’ll encounter unique setup screens specific to your device. Generally, you can either skip or decline most of the options, noting there are a handful of system specific notifications called out in the instructions for which you’ll need to make the proper selections.
 :::
 
 From the Provisioning Methods screen, if you select **6 Tap QR Code** you will be taken step through instructions using the 6 Tap QR Code provisioning process. You can progress through these steps easily by clicking **Next**.
@@ -456,11 +456,11 @@ If your device has the QR code reader in ROM, instead you’ll see a QR code rea
 
 #### QR Code Reader In ROM
 
-After tapping 6 times in the open space of the first set up screen, you will see the QR code reader screen.
+After tapping six times in the open space of the first set up screen, the QR code reader screen will be opened.
 
 ![QRCode](./assets/NewConsole/CaptureScreen.png)
 
-Next, go to the Esper Console and select 'Provisioning Templates' in the left menu bar. Find the template you want to use, and select 'View QR code.'
+Next, go to the Esper Console and select 'Provisioning Templates' in the left menu bar. Find the template you want to use, and then select 'View QR code.'
 
 ![Factory Reset](./assets/NewConsole/ViewQRCode.png)
 
@@ -468,11 +468,11 @@ The QR code for the template will now appear on your screen.
 
 ![Factory Reset](./assets/NewConsole/QRCode.png)
 
-If you are using the instructions provided in Provisioning Methods, you can also display the QR code in Step 3 by selecting the Provisioning Template from the **Select Template** drop down and then clicking **View QR code**.
+If you are using the instructions provided in 'Provisioning Methods,' you can also display the QR code listed in Step Three by selecting the Provisioning Template from the **Select Template** drop down menu, and then clicking **View QR Code**.
 
 ![QRCode](./assets/NewConsole/SixTapQRCode.png)
 
-Hold up the device’s camera to your computer screen centering it on the QR code.
+Hold up the device’s camera to your computer screen, centering it on the QR code.
 
 ![QRCode](./assets/NewConsole/QRCode1.png)
 
@@ -481,7 +481,7 @@ Note that the QR code is densely populated. If your device’s camera has troubl
    * Changing the distance between the camera and the screen - move your device closer or further from the QR code
    * Hold the device still for a few seconds once you have adjusted the distance
    
-If your device does not have an active cellular data network connection, or isn’t set up to connect to a Wi-Fi access point specified in the QR code to use for provisioning, you will next need to connect the device to the internet either using the cellular or Wi-Fi. If that’s the case, you will need to either enable your SIM or enter your Wi-Fi access point credentials. 
+If your device does not have an active cellular data network connection, or isn’t set up to connect to a Wi-Fi access point specified in the QR code to use for provisioning, you will need to connect the device to the internet either using the cellular data, or via Wi-Fi. To do so, you will need to either enable your SIM or enter your Wi-Fi access point credentials. 
 
 You may then see a screen to accept specific terms from Google regarding Esper managing your device. Click **ACCEPT & CONTINUE**.
 
@@ -497,17 +497,17 @@ If you wish to exit the provisioning process for any reason, touch or click on t
 
 <img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
-If your Provisioning Template enables Google Play, Google Play Services will not be updated. Be patient as this is being done by Google and depends on their current quality of service.
+If your Provisioning Template enables Google Play, Google Play Services will not be updated. Be patient during this process, as it is conducted by Google and depends on their current quality of service.
 
 <img src="./assets/NewConsole/GPlayUpgrade.png" alt="alt text" style="max-width:200px;"/>
 
-Oftentimes the device will complete provisioning without any permissions needing to be granted on the device. Occasionally, you will need to resolve permissions for Esper to modify System settings, and/or Esper to draw over other apps. Please grant these permissions if prompted.
+Oftentimes, the device will complete provisioning without any permissions needing to be granted on the device. Occasionally, you will need to resolve permissions for Esper to modify System settings, and/or Esper to draw over other apps. Please grant these permissions if prompted.
 
-The Esper agent to install any Esper Enterprise apps to finish up the provisioning process.
+You will now return to the Esper agent to install any Esper Enterprise apps, and complete the provisioning process.
 
 <img src="./assets/NewConsole/DeviceInstalling.png" alt="alt text" style="max-width:200px;"/>
 
-After this step, provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
+After this step, provisioning will be complete, and you’ll see your device set up according to your provisioning template. In this example, we’ve provisioned in multi application mode with three Enterprise apps installed from the Esper Cloud, and managed Google Play enabled.
 
 <img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
@@ -517,7 +517,7 @@ On the QR code setup screen click **Next**.
 
 <img src="./assets/NewConsole/QRCodeSetup.png" alt="alt text" style="max-width:200px;"/>
 
-If you have a cellular device without a SIM, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise proceed to insert your SIM with cellular data support.
+If you have a cellular device without a SIM, you may encounter this screen first - If you plan to use Wi-Fi, click or tap on **SKIP**. Otherwise, proceed to insert your SIM with cellular data support.
 
 <img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" style="max-width:200px;"/>
 
@@ -525,17 +525,17 @@ If you are using Wi-Fi, complete the steps to connect to your desired access poi
 
 <img src="./assets/NewConsole/EsperSSID.png" alt="alt text" style="max-width:200px;"/>
 
-You will see a *Checking for updates…* screen. Please be patient as the QR code reader is downloaded to the device.
+You will see a *Checking for Updates…* screen. Please be patient as the QR code reader is downloaded to the device.
 
 <img src="./assets/NewConsole/CheckingUpdates.png" alt="alt text" style="max-width:200px;"/>
 
 The QR code reader will be installed.
 
-Once installed, you’ll see the QR code reader on your screen.
+Once installed, the QR code reader will be displayed on your screen.
 
 <img src="./assets/NewConsole/CaptureScreen.png" alt="alt text" style="max-width:200px;"/>
 
-Now go to the Esper Console and click on Provisioning Templates in the left menu bar. Find the template you want to use, and click on View QR code.
+Next, go to the Esper Console and click or tap on 'Provisioning Templates,' in the left menu bar. Find the template you want to use, and click or tap on 'View QR Code.'
 
 <img src="./assets/NewConsole/ViewQRCode.png" alt="alt text" style="max-width:200px;"/>
 
@@ -543,11 +543,11 @@ The QR code for the template will now appear on your screen.
 
 <img src="./assets/NewConsole/QRCode.png" alt="alt text" style="max-width:200px;"/>
 
-If you are using the instructions provided in Provisioning Methods, you can also display the QR code in Step 3 by selecting the Provisioning Template from the **Select Template** drop down and then clicking **View QR code**.
+If you are using the instructions provided in Provisioning Methods, you can also display the QR code in Step 3 by selecting the Provisioning Template from the **Select Template** drop down menu, and then clicking **View QR code**.
 
 <img src="./assets/NewConsole/SixTapQRCode.png" alt="alt text" style="max-width:200px;"/>
 
-Hold up the device’s camera to your computer screen centering it on the QR code.
+Hold up the device’s camera to your computer screen, centering it on the QR code.
 
 <img src="./assets/NewConsole/QRCode1.png" alt="alt text" style="max-width:200px;"/>
 
@@ -556,7 +556,7 @@ Note that the QR code is densely populated. If your device’s camera has troubl
    * Changing the distance between the camera and the screen - move your device closer or further from the QR code
    * Hold the device still for a few seconds once you have adjusted the distance
 
-Once Esper has successfully read the QR code, you’ll see the Set up your device screen. Touch **ACCEPT & CONTINUE**.
+Once Esper has successfully read the QR code, you’ll see the 'Set Up Your Device,' screen. Touch or Click **ACCEPT & CONTINUE**.
 
 <img src="./assets/NewConsole/AcceptContinue.png" alt="alt text" style="max-width:200px;"/>
 
@@ -564,7 +564,7 @@ You’ll see the Setting up work device screen while the device is downloading t
 
 <img src="./assets/NewConsole/WorkDevice.png" alt="alt text" style="max-width:200px;"/>
 
-Once the Esper agent has successfully downloaded and started, provisioning will start and you’ll see this screen.
+Once the Esper agent has successfully downloaded and started, provisioning will start and a screen will display saying, 'Preparing Your Device, Step One of Three,' underneath an image of a woman standing at a chalkboard, which reads, 'Starting Provisioning, this may take a while.'
 
 <img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
 
