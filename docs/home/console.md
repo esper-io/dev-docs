@@ -32,12 +32,12 @@ No matter where you are in the Console, clicking the blue 'Feedback' button at t
 
 Clicking **Feedback** brings up a screen with the following tools:
 
-   - Box tool – Highlight a specific area of the page and comment on that area. If you prefer not to leave a comment, simply leave the box outline highlighting the Console area you would like to draw attention to.
-   - Blackout tool – Blackout any sensitive information on the screen.
-   - Pen tool – Draw anything you like! Circle and Point works great with a touch screen and pen.
-   - Line tool – Underline, strikethrough, draw a straight line.
-   - Line with arrow tool – Point to something.
-   - Comment tool – Drop a pin and make a comment.
+   * Box tool – Highlight a specific area of the page and comment on that area. If you prefer not to leave a comment, simply leave the box outline highlighting the Console area you would like to draw attention to.
+   * Blackout tool – Blackout any sensitive information on the screen.
+   * Pen tool – Draw anything you like! Circle and Point works great with a touch screen and pen.
+   * Line tool – Underline, strikethrough, draw a straight line.
+   * Line with arrow tool – Point to something.
+   * Comment tool – Drop a pin and make a comment.
    
 ![Feedback Tools](./assets/NewConsole/FeedbackTools.png)
 
@@ -236,7 +236,7 @@ Seamless provisioning is only for devices running Esper Enhanced Android:
 ### Need Help Choosing?
 
 If you find choosing between these methods confusing, we have provided an easy way to find the best provisioning method: Fill the form on the right side. You’ll need to provide the following information:
-   - **Android version** — Check the android version on your device by navigating to Settings > About >  Android Version. Choose the correct version of Android for your device from the dropdown menu.
+   - **Android version** — Check the Android version on your device by navigating to Settings > About >  Android Version. Choose the correct version of Android for your device from the dropdown menu.
    - **Esper Enhanced** — Esper Enhanced Android is purpose-built Android OS, optimized for deployment under the Esper system. Esper provides Esper Enhanced devices on request from customers. Click YES, if your devices are Esper Enhanced.
    - **GMS support** — Click YES, if your Android device supports Google Mobile Services. If the Play Store app is included on your device, your device is likely a GMS device.
    - **Camera** —  Choose YES, if your device has a working camera.
@@ -577,11 +577,11 @@ If your Provisioning Template enables Google Play, Google Play Services will not
 
 <img src="./assets/NewConsole/GPlayUpgrade.png" alt="alt text" style="max-width:200px;"/>
 
-Typically (but not always) you will need to resolve permission for Esper to modify your device's System settings. To do so, touch or click on **RESOLVE** to open up the Android System settings app to provide the permission.
+Typically (but not always) you will need to resolve permission for Esper to modify your device's System settings. To do so, touch or click on **RESOLVE** to open up the Android System settings app to provide the necessary permissions.
 
 <img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;"/>
 
-You are taken to the Can modify system settings screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
+You are then taken to the 'Can modify system settings,' screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to 'No' or 'Not Allowed.' Touch or click on **Esper Device Management**.
 
 <img src="./assets/NewConsole/ModifySettingsEDMNO.png" alt="alt text" style="max-width:200px;"/>
 
@@ -609,19 +609,19 @@ You will then be taken to *Display over other apps* or *Draw over other apps* fo
 
 <img src="./assets/NewConsole/DrawOverOtherApps.png" alt="alt text" style="max-width:200px;"/>
 
-Next click the back button in the upper lefthand corner of the screen.
+Next, click the back button in the upper lefthand corner of the screen.
 
 <img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" style="max-width:200px;"/>
 
-You will now be taken back to the *Display over other apps screen*, noting *Esper Device Management* is now set to *Yes* or *Allowed* for drawing over other apps. Now click the back button in the Nav bar. 
+You will be taken back to the *Display over other apps screen*, noting *Esper Device Management* is now set to *Yes* or *Allowed* for drawing over other apps. Now click the back button in the Nav bar. 
 
 <img src="./assets/NewConsole/DrawAppsEDMYes.png" alt="alt text" style="max-width:200px;"/>
 
-You will now return to the Esper agent to install any Esper Enterprise apps.
+You will then return to the Esper agent to install any Esper Enterprise apps.
 
 <img src="./assets/NewConsole/DeviceInstalling.png" alt="alt text" style="max-width:200px;"/>
 
-After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
+After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example, we’ve provisioned in multi-application mode with three Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
 
 <img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
@@ -629,7 +629,7 @@ After this step, your provisioning will be finished and you’ll see your device
 
 If you plan to use the Esper Cloud to install your own Enterprise apps, we recommend not enabling Google Play Protect to prevent your apps from being blocked. You also don’t need to report the Esper agent app to Google Play Protect.
 
-Occasionally the device ships with a custom launcher app in ROM. In that case you’ll get a popup to choose which app is used as the Home app. Choose **Esper**, select **Always**.
+Occasionally, the device ships with a custom launcher app in ROM. In that case, you’ll get a popup to choose which app is used as the Home app. Choose **Esper**, select **Always**.
 
 You may also encounter notifications to improve location accuracy. Agreeing to use these services means you are passing your location data to a third party. While you typically need to accept end user licensing agreements (EULAs) in order for the device to function, optional choices regarding diagnostic data and additional services are frequently presented. You should evaluate the tradeoff based on your specific use case and decide accordingly - we typically recommend declining these services.
 
@@ -640,26 +640,26 @@ Esper enables you to use IMEI and serial numbers to enroll and provision your de
 You first need to prepare a Provisioning Template, and then go back to either edit the template to [add IMEI and/or serial numbers](./console.md#provisioning-templates) you wish to be provisioned by this template, or upload a CSV file from the Provisioning Template’s tile.
 
 :::tip
-A passcode is used to validate that the device’s end user has permission to enroll and provision the device. This passcode is the Dock and Esper Settings app password that is specified in the Compliance Policy screen in your Provisioning Template. If you don’t want a passcode, just leave the password field empty noting it will of course impact accessing the Dock and Esper Settings app - an important consideration if you are running your app in Kiosk mode. 
+A passcode is used to validate that the device’s end user has permission to enroll and provision the device. This passcode is the Dock and Esper Settings app password that is specified in the Compliance Policy screen in your Provisioning Template. If you don’t want a passcode, just leave the password field empty. Note that doing so will impact accessing the Dock and Esper Settings app -- this is an important consideration if you are running your app in Kiosk mode. 
 :::
 
 Begin on the device by performing a [factory reset](./console.md#how-to-factory-reset-your-device).
 
-Once the factory reset is completed, in the first setup screen click on **START** (the button title may be a variation of getting started, setting up your device, or let’s go).
+Once the factory reset is completed, in the first setup screen click on **START** (Note that the button's title may be a variation of 'Getting Started,' 'Setting Up Your Device,' or 'Let’s Go').
 
 ![IMEI](./assets/NewConsole/HiThere.png)
 
-If your device does not have an active cellular data network connection, you will next need to connect the device to the internet either using the cellular or Wi-Fi. 
+If your device does not have an active cellular data network connection, you will next need to connect the device to the internet using Wi-Fi. 
 
-If you have a cellular device without a SIM, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise proceed to insert your SIM with cellular data support.
+If you have a cellular device without a SIM card, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise, proceed to insert your SIM card with cellular data support.
 
 <img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" style="max-width:200px;"/>
 
-When presented with the *Copy apps & data* screen (noting on some devices this may appear after establishing a Wi-Fi connection), select Set up as new (may also be Don’t copy or another variant).
+When presented with the *Copy apps & data* screen (Note: On some devices, this may appear after establishing a Wi-Fi connection), select 'Set Up as New' (This screen may also say 'Don’t Copy' or another variant).
 
 <img src="./assets/NewConsole/SetupAsNew.png" alt="alt text" style="max-width:200px;"/>
 
-If you are using Wi-Fi complete the steps to connect to your desired access point. 
+If you are using Wi-Fi, complete the steps to connect to your desired access point. 
 
 <img src="./assets/NewConsole/EsperSSID.png" alt="alt text" style="max-width:200px;"/>
 
