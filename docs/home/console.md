@@ -635,23 +635,23 @@ You may also encounter notifications to improve location accuracy. Agreeing to u
 
 ### IMEI/Serial Number-Based Provisioning
 
-Esper enables you to use IMEI and serial numbers to enroll and provision your devices using the Android for Work (AfW) method. Only Android GMS devices running Android 6.0 or above support AfW. It works by using the AfW provisioning process to pass the available IMEIs and serial number for the device to Esper which we then matched to a Provisioning Template that includes any one of the IMEI or serial number. That template is then used to provision the device.
+Esper enables you to use IMEI and serial numbers to enroll and provision your devices using the Android for Work (AfW) method. Only Android GMS devices running Android 6.0 or above support AfW. It works by using the AfW provisioning process to pass the available IMEIs and serial number for the device to Esper which are then matched to a Provisioning Template that includes either the device's IMEI or serial number. That template is then used to provision the device.
 
 You first need to prepare a Provisioning Template, and then go back to either edit the template to [add IMEI and/or serial numbers](./console.md#provisioning-templates) you wish to be provisioned by this template, or upload a CSV file from the Provisioning Template’s tile.
 
 :::tip
-A passcode is used to validate that the device’s end user has permission to enroll and provision the device. This passcode is the Dock and Esper Settings app password that is specified in the Compliance Policy screen in your Provisioning Template. If you don’t want a passcode, just leave the password field empty. Note that doing so will impact accessing the Dock and Esper Settings app -- this is an important consideration if you are running your app in Kiosk mode. 
+A passcode is used to validate that the device’s end user has permission to enroll and provision the device. This passcode is the Dock and Esper Settings app password that is specified in the 'Compliance Policy' screen in your Provisioning Template. If you don’t want a passcode, just leave the 'Password' field blank. Note that doing so will impact accessing the Dock and Esper Settings app -- this is an important consideration if you are running your app in Kiosk mode. 
 :::
 
-Begin on the device by performing a [factory reset](./console.md#how-to-factory-reset-your-device).
+To begin the process of creating an IMEI and/or serial number enrolled provisioning template, you will need to first perform a [factory reset](./console.md#how-to-factory-reset-your-device) on your device.
 
-Once the factory reset is completed, in the first setup screen click on **START** (Note that the button's title may be a variation of 'Getting Started,' 'Setting Up Your Device,' or 'Let’s Go').
+Once the factory reset has completed, on the first setup screen, click or tap on **START** (Note that the button's title may be a variation of 'Getting Started,' 'Setting Up Your Device,' or 'Let’s Go').
 
 ![IMEI](./assets/NewConsole/HiThere.png)
 
-If your device does not have an active cellular data network connection, you will next need to connect the device to the internet using Wi-Fi. 
+If your device does not have an active cellular data network connection, you will need to connect the device to the internet using Wi-Fi. 
 
-If you have a cellular device without a SIM card, you may encounter this screen first - just click **SKIP** if you plan to use Wi-Fi. Otherwise, proceed to insert your SIM card with cellular data support.
+If you have a cellular device without a SIM card, you may encounter this screen first -- Click or tap **SKIP** if you plan to use Wi-Fi. Otherwise, proceed to insert your SIM card with cellular data support.
 
 <img src="./assets/NewConsole/ConnectMobile.png" alt="alt text" style="max-width:200px;"/>
 
@@ -667,33 +667,33 @@ You will see a *Checking for updates…* screen that may change to *Just a sec�
 
 <img src="./assets/NewConsole/CheckingUpdates.png" alt="alt text" style="max-width:200px;"/>
 
-It will take a few moments for the Google Sign in screen to appear. Once it does, in the Email or phone field enter **afw#esper** and then click **Next**. As a certified Google EMM partner, this is a special keyword used by the AfW provisioning process that will then start the process to enroll your device into Esper.
+It will take a few moments for the Google Sign-In screen to appear. Once it does, in the Email or phone field enter **afw#esper** and then click **Next**. As a certified Google EMM partner, this is a special keyword used by the AfW provisioning process that will then start the process to enroll your device into Esper.
 
 <img src="./assets/NewConsole/EmailPhone.png" alt="alt text" style="max-width:200px;"/>
 
-After a Checking info… screen, you will typically need to give permission to install the Esper agent on your device to begin the enrollment process. Click **INSTALL**.
+After the 'Checking Info…' screen is displayed, you will typically need to give permission to install the Esper agent on your device to begin the enrollment process. Click **INSTALL**.
 
 <img src="./assets/NewConsole/DeviceEDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
-Next the Esper agent will be downloaded to your device along, please be patient.
+Next, the Esper agent will be downloaded to your device.
 
 <img src="./assets/NewConsole/EDMDownloadStatus.png" alt="alt text" style="max-width:200px;"/>
 
-On some devices you will need to click **INSTALL** again after the agent downloads.
+On some devices, you will need to click or tap **INSTALL** again after the agent downloads.
 
 <img src="./assets/NewConsole/EDMInstall.png" alt="alt text" style="max-width:200px;"/>
 
-The Esper agent will now start and you’ll see a series of screens as Esper prepares for the enrollment.
+The Esper agent will now start. A series of loading screens will display as Esper prepares the device for enrollment.
 
 <img src="./assets/NewConsole/StartingServices.png" alt="alt text" style="max-width:200px;"/>
 
-The screen flow will stop on the Authentication screen. Enter the Passcode that you set up in the associated Provisioning Template. If you purposely did not set a passcode, leave the Passcode field blank. Once ready, touch CONTINUE.
+The screen flow will stop on the Authentication screen. Enter the Passcode that you set up in the associated Provisioning Template. If you purposely did not set a passcode, leave the Passcode field blank. Once the device is ready, click or tap on **CONTINUE**.
 
 <img src="./assets/NewConsole/AuthenticationContinue.png" alt="alt text" style="max-width:200px;"/>
 
-Once Esper has successfully read the QR code, provisioning will start and you’ll see this screen.
+Once Esper has successfully read the QR code, provisioning will start and the 'Starting Provisioning' screen will display.
 
-<img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
+<img src="./assets/NewConsole/StartingProvisioning.png" alt="'Preparing Your Device, Step One of Three,' underneath an image of a woman standing at a chalkboard, which reads, 'Starting Provisioning, this may take a while.'" style="max-width:200px;"/>
 
 :::tip
 If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
