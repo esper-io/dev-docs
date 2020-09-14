@@ -701,47 +701,47 @@ If you wish to exit the provisioning process for any reason, touch or click on t
 
 <img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
-If your Provisioning Template enables Google Play, Google Play Services will not be updated. Be patient as this is being done by Google and depends on their current quality of service.
+If your Provisioning Template enables Google Play, Google Play Services will not be updated. Please be patient, as this process is managed by Google, and depends on their current quality of service.
 
 <img src="./assets/NewConsole/GPlayUpgrade.png" alt="alt text" style="max-width:200px;"/>
 
-Typically (but not always) you will need to resolve the permission for Esper to modify System settings, to do so touch or click on **RESOLVE** to open up the Android System settings app to provide the permission.
+Typically (but not always) you will need to allow permission for Esper to modify your device's System settings. To do so, touch or click on **RESOLVE** to open up the Android System settings app to grant permission.
 
 <img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;"/>
 
-You are taken to the Can modify system settings screen where you will see a list of apps that have been granted or are requesting permission to modify system settings - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
+You will then be taken to the 'Can Modify System Settings' screen, where a list of apps will be displayed that have been granted or are requesting permission to modify system settings. Esper Device Management will currently be set to 'No' or 'Not Allowed.' Touch or click on **Esper Device Management**.
 
 <img src="./assets/NewConsole/ModifySettingsEDMNO.png" alt="alt text" style="max-width:200px;"/>
 
-You will then be taken to *Modify system settings* for *Esper Device Management*. Turn on the switch located on the right side of the screen to *Allow modify system settings*.
+You will then be taken to *Modify system settings* for *Esper Device Management*. Tap or click on the toggle switch located on the right side of the screen to *Allow modify system settings*.
 
 <img src="./assets/NewConsole/AllowModifySettings.png" alt="alt text" style="max-width:200px;"/>
 
-Next click the back button in the upper lefthand corner of the screen.
+Next, click or tap on the 'Back' button located in the upper left-hand corner of the screen.
 
 <img src="./assets/NewConsole/ModifyBack.png" alt="alt text" style="max-width:200px;"/>
 
-You will now be taken back to the Can modify system settings screen, noting Esper Device Management is now set to Yes or Allowed for modifying system settings. Now click the back button in the Nav bar.
+You will now be taken back to the 'Can Modify System Settings' screen. Note that Esper Device Management is now set to, 'Yes' or 'Allowed' for modifying system settings. Next, click the 'Back' button in the Navigation bar.
 
 <img src="./assets/NewConsole/ModifySystemSettingsEDM.png" alt="alt text" style="max-width:200px;"/>
 
-You will now return to the Esper agent. You will typically need to grant another permission to allow Esper to draw over other apps, we do this to ensure a smooth experience for Kiosk mode apps. Touch or click on **RESOLVE** to open up the Android system settings app to provide the permission.
+You will now return to the Esper agent. You will typically need to grant a second permission to allow Esper to draw over other applications. We do this to ensure a smooth experience for Kiosk mode apps. Touch or click on **RESOLVE** to open up the Android System Settings application to grant this permission.
 
 <img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;"/>
 
-You are taken to the Display over other apps or Draw over other apps screen where you will see a list of apps that have been granted or are requesting permission to display over other apps - you will see Esper Device Management currently set to No or Not allowed. Touch or click on **Esper Device Management**.
+You are then taken to the, 'Display Over Other Apps' or, 'Draw Over Other Apps' screen. This is where a list of applications that have been granted or are requesting permission to display over other apps will be displayed. Note that Esper Device Management is currently set to 'No' or, 'Not Allowed.' Touch or click on **Esper Device Management**.
 
 <img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" style="max-width:200px;"/>
 
-You will then be taken to Display over other apps or Draw over other apps for Esper Device Management. Turn on the switch located on the right side of the screen to Allow display over other apps or Permit drawing over other apps.
+You will then be taken to 'Display Over Other Apps' or 'Draw Over Other Apps' for Esper Device Management. Tap or cick on the toggle switch located on the right side of the screen to, 'Allow Display Over Other Apps' or 'Permit Drawing Over Other Apps.'
 
 <img src="./assets/NewConsole/PermitDrawing.png" alt="alt text" style="max-width:200px;"/>
 
-Next click the back button in the upper lefthand corner of the screen.
+Next, click the back button in the upper left-hand corner of the screen.
 
 <img src="./assets/NewConsole/DrawOverOtherAppsBack.png" alt="alt text" style="max-width:200px;"/>
 
-You will now be taken back to the Display over other apps screen, noting Esper Device Management is now set to Yes or Allowed for drawing over other apps. Now click the back button in the Nav bar. 
+You will now be taken back to the 'Display over other apps' screen, noting Esper Device Management is now set to 'Yes' or 'Allowed' for drawing over other apps. Now, click the back button in the Navigation bar. 
 
 <img src="./assets/NewConsole/DrawAppsEDMYes.png" alt="alt text" style="max-width:200px;"/>
 
@@ -749,23 +749,25 @@ You will now return to the Esper agent to install any Esper Enterprise apps.
 
 <img src="./assets/NewConsole/DeviceInstalling.png" alt="alt text" style="max-width:200px;"/>
 
-After this step, your provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example we’ve provisioned in multi application mode with 3 Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
+After this step, your device provisioning will be finished and you’ll see your device set up according to your provisioning template. In this example, we’ve provisioned in multi-application mode with three Enterprise apps installed from the Esper Cloud and managed Google Play enabled.
 
 <img src="./assets/NewConsole/DeviceScreen.png" alt="alt text" style="max-width:200px;"/>
 
 ## Provisioning Templates
 
-Provisioning Templates give you a straightforward way to enroll and provision multiple devices. You create templates for devices in which you specify the compliance policy, apps, device settings, device group—even the wallpapers—you want to be provisioned on your devices.
-The Provisioning Templates are shown as tiles with the most-recently created at the top. You can easily find templates by name using the **Search Templates** feature:
+Provisioning Templates give you a straightforward way to enroll and provision multiple devices. These allow you to create templates for devices in which you specify the compliance policy, applications, device settings, device group, and even the wallpapers you want to be added to your devices.
+
+Provisioning Templates are shown as tiles with the most-recently created at the top. You can find templates by name using the **Search Templates** feature:
 
 ![Template View](./assets/NewConsole/TemplateView.png)
    
-You can easily open up the QR code to use during AfW or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
-Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet. For those cases where distributing a QR code outside of your organization would be required, instead consider using AfW IMEI/Serial Number provisioning with a passcode.
+You can access the QR Code for a specific template during Android for Work or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
+
+**Note: Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet.** In cases where distributing a QR code outside of your organization is required, consider using Android for Work IMEI/Serial Number provisioning with a passcode.
 
 ### Actions on Template Tiles
 
-Clicking on the ellipses (...) at the top right of one of the template tiles opens a pop-up menu that enables you to do the following to that template:
+Clicking on the ellipses (...) at the top right of one of the template tiles opens a pop-up menu that enables you to take the following actions on that template:
    - Preview
    - Edit
    - Duplicate
@@ -783,15 +785,15 @@ Click **Preview** to preview the Provisioning Template. Click on the **+** sign 
 
 **Edit**
 
-To edit a template, click **Edit**. You can update the Policy, Apps, Branding, Settings, Group and Add Devices options as you wish. To save the changes, click on the **Update** button on the Preview page.
+To edit a template, click **Edit**. You can update the Policy, Apps, Branding, Settings, Group and Add Devices options as you wish. To save your changes, click on the **Update** button on the Preview page.
 
 **Duplicate**
 
-To copy a template, click **Duplicate**. You can then rename the template and update the Policy, Apps, Branding, Settings, Group and Add Devices options as you wish. Any IMEI or Serial Numbers in the original template will not be carried over to the duplicated template. To save the changes, click on the **Update** button on the Preview page.
+To copy a template, click **Duplicate**. You can then rename the template and update the Policy, Apps, Branding, Settings, Group, and Add Devices options as you wish. Note that any IMEI or Serial Numbers included in the original template will **not** be carried over to the duplicated template. To save your changes, click on the **Update** button on the Preview page.
 
 ### Upload IMEI CSV
 
-To upload a set of IMEI/Serial Numbers for devices you want to provision using the AfW or for Esper Enhanced Android devices with this template, click **Upload IMEI CSV**. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
+To upload a set of IMEI/Serial Numbers for devices you want to provision using Android for Work, or for Esper Enhanced Android devices with this template, click **Upload IMEI CSV**. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
 
    - The CSV requires the first entry of "imei1, imei2, serial number".
    - Then on each cell below enter "[IMEI #], [IMEI #], [Serial Number]".
@@ -817,29 +819,29 @@ Below is an example set of entries for a CSV file:
    
 ![IMEI](./assets/NewConsole/IMEI.png)
 
-You can use either the IMEI or serial number for a particular device. As cellular devices will have both an IMEI and serial number, or in some cases have two IMEIs (dual SIM) and a serial number, the Esper system follows a particular order when processing a new device for IMEI-based provisioning.
-   IMEI 1
-   IMEI 2
-   Serial number
+You can use either the IMEI or serial number for a particular device. As cellular devices will have both an IMEI and serial number, or in some cases have two IMEIs (dual SIM) and a serial number, the Esper system follows a particular order when processing a new device for IMEI-based provisioning:
+
+   * IMEI 1
+   * IMEI 2
+   * Serial Number
    
 This means if you added IMEI 1 to Provisioning Template 1, IMEI 2 to Provisioning Template 2, and serial number to Provisioning Template 3, then Esper will provision the device according to Provisioning Template 1.
 
-If you have already added an IMEI or serial number to a provisioning template and try to upload it again to another provisioning template, Esper will not use the uploaded CSV and return a toast error message in the lower left corner of your screen.
+If you have already added an IMEI or serial number to a provisioning template and try to upload it again to another provisioning template, Esper will not use the uploaded CSV, and will return a toast error message in the lower left corner of your screen.
 
 You can also upload a CSV or individually add IMEIs and Serial Numbers when [editing a template](./console.md#provisioning-templates).
 
 **Download Config**
 
-Clicking Download Config will enable you to download the config.json file for use during ADB and by IMEI-based provisioning methods. Contact Esper if you have any questions. 
+Clicking 'Download Config' will enable you to download the config.json file for use during Android Debug Bridge (ADB) and by IMEI-based provisioning methods. Please don't hesitate to [contact us](https://esper.io/contact-us) if you have any questions. 
 
 **Delete**
 
-Click on Delete to delete a selected template. You will still be able to view the policy, apps, and settings of the template when viewing a device previously provisioned using that template.
-
+Click on 'Delete' to delete a selected template. You will still be able to view the policy, apps, and settings of the template when viewing a device previously provisioned using that template.
 
 ### Creating a Provisioning Template
 
-To create a provisioning template, click **Create Template**.
+To create a provisioning template, then click or tap on **Create Template**.
 
 ![Create Template](./assets/NewConsole/TemplateCreate.png)
 
@@ -859,7 +861,7 @@ Hovering your mouse cursor over any item will give you a short explanation on-sc
 
 **Lock Screen Password Rules**
 
-  The **Lock screen password** rule specifies the conditions for the device unlock password, with the default being **None**. If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to 25—use the small up/down arrows to set your required password length.
+  The **Lock Screen Password** rule specifies the conditions for the device unlock password, with the default being **None**. If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to a maximum length of 25 characters. Use the Up/Down arrows to set your required password length.
   
 ![Lock Password](./assets/NewConsole/LockPwdLength.png)
    
@@ -871,15 +873,15 @@ Hovering your mouse cursor over any item will give you a short explanation on-sc
   
 The password for a device will be set up during the initial setup of the device by the user.
 
-Lock screen must be on in order to set Lock screen password rules. If you select either Alphabetic or Alphanumeric password rules, then Lock screen will be set to On by Esper if it is currently Off.
+Note that the Lock Screen must be 'On' in order to set Lock Screen Password rules. If you select either Alphabetic or Alphanumeric password rules, then Lock screen will be set to 'On' by Esper if it is currently set to 'Off.'
 
 **Default App Permission** 
 
-    Default app permissions determine enforcement of the runtime-permission rule across all the apps on a device including Enterprise apps installed by Esper, in-ROM apps that are enabled, as well as any installed via Managed Google Play. This ensures you can control the user experience on the device regarding how run-time permissions are granted. There are three possible settings:
+    Default app permissions determine enforcement of the runtime-permission rule across all the applications on a device including Enterprise apps installed by Esper, in-ROM apps that are enabled, as well as any installed via Managed Google Play. This ensures you can control the user experience on the device regarding how run-time permissions are granted. There are three possible settings:
 
    **Allow Automatically**: This rule will grant all the permissions any app requests without showing a prompt to the user. This is the typical setting used for single-purpose solutions using a fully trusted, customer-supplied application.
    
-   **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as "Allow app X to access Gallery? Allow/Deny". This may be unsuitable for some solutions, especially Kiosk-based apps. It can be useful for certain unusual situations dealing with App permissions— [contact us](mailto:support@esper.io) directly to find out more.
+   **Ask User**: This keeps the default behavior intact with regards to permission management. All apps on the device will show a prompt to the user to request permission. For example, by choosing this option then every app will ask the user each time before accessing a device module with a message such as "Allow app X to access Gallery? Allow/Deny". This may be unsuitable for some solutions, especially Kiosk-based apps. This setting can be useful for certain unusual situations dealing with App permissions. [contact us](mailto:support@esper.io) directly to find out more.
    
    **Deny Automatically**: This rule will deny any permission request from any app on the device. No notification will be shown to the user. You can [grant permissions to apps individually](./console.md#apps-tab) from the Esper Console.
 
@@ -887,17 +889,17 @@ Lock screen must be on in order to set Lock screen password rules. If you select
 
     The System updates option allows you to enforce a system update policy on the device when a system update is available via the device’s over-the-air (OTA) update service. There are four possible settings:
     
-   **Update automatically**: This option will install any over-the-air (OTA) updates automatically as soon as they become available without user interaction,  and reboot the devices nwhen necessary.
+   **Update automatically**: This option will install any over-the-air (OTA) updates automatically as soon as they become available without user interaction, and reboot the devices nwhen necessary.
    
    **Postpone installation**: This option postpones installation of an OTA update for 30 days. After 30 days, the system will prompt the device user to install the update. Subsequent updates will also follow the same 30-day postponement. This is ideal when you need time to validate your solution against new system updates before they are installed.
    
-   **Windowed Installation**: This option allows you to define a window of time during which the OTA update will be installed without user interaction. This option is ideal for devices with a known down period. A drop-down will appear to enable you to set the start and end times for the maintenance window.
+   **Windowed Installation**: This option allows you to define a window of time during which the OTA update will be installed without user interaction. This option is ideal for devices with a known down period. A drop-down menu will appear to enable you to set the start and end times for the maintenance window.
    
    **Disable Update**: This option allows you to disable updates on the device. It is available for a limited set of OTA services that support this feature. If the device does not support disabling updates, it will default to Postpone installation. Before setting this option please [contact Esper](mailto:support@esper.io) directly to make sure the devices you plan to provision support this configuration.
 
-**Android Settings App**
+**Android Settings Application**
 
-   Android settings app determines how device users can access the Android device settings. There are three possible settings:
+   The Android Settings App determines how device users can access the Android Device Settings. There are three possible settings:
    
    **System settings app**: This setting will display the icon for the default Android settings app on the Home screen. Clicking this icon will take the user to the default Android settings. Depending on the other configurations set by the Compliance Policy, some options may be disabled to the user. If an app is set up in Kiosk mode on the device, the System settings app will be inaccessible to the device user while the app is in Kiosk mode.
    
@@ -915,7 +917,7 @@ Lock screen must be on in order to set Lock screen password rules. If you select
       
 ![Esper Settings](./assets/NewConsole/EsperSettingsApp.png)
 
-**Dock & Esper Settings App**: The dock is specifically for devices in Kiosk mode. When a device is in kiosk mode, you can access the dock by tapping 3 times in the upper left corner of the screen, or by pressing the power button consecutively 3 times with a slight pause between each press. When you do so, an expander arrow will slide out of the upper right corner:
+**Dock & Esper Settings App**: The dock is specifically for devices in Kiosk mode. When a device is in kiosk mode, you can access the dock by tapping three times in the upper left corner of the screen, or by pressing the power button consecutively three times with a slight pause between each press. When you do so, an expander arrow will slide out of the upper right corner:
 
 Tap the expander arrow; you’ll need to enter the password you set in the Compliance Policy.
 
@@ -937,14 +939,14 @@ If you exit Kiosk mode into multi-app mode, you can still activate the expander 
 
 **Dock and Esper Settings App Password**
 
-This password controls access to the hidden dock available in kiosk mode, the Esper Settings app, and serves as the PIN used for IMEI-based provisioning via AfW. The password is alphanumeric and can be from 1 to 10 characters.
+This password controls access to the hidden dock available in Kiosk Mode, the Esper Settings app, and serves as the PIN used for IMEI-based provisioning via Android for Work. The password is alphanumeric and can be from 1 to 10 characters.
 
 <img src="./assets/NewConsole/DockEsperSettings.png" alt="alt text" width="75%" height="75%">
 
-The default password is 1234. It is possible to set up a template without a password for these features, or just leave the default password; Esper strongly recommends setting up a more complex password for stronger security. The same password will be set for all devices provisioned using the template.
+The default password is 1234. It is possible to set up a template without a password for these features, or use the default password. Esper strongly recommends setting up a more complex password for stronger security. The same password will be set for all devices provisioned using the template.
 
 :::tip
-If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings app or the Android settings app as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.
+If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings application or the Android settings application as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.
 :::
 
 ### Google Account Restrictions
