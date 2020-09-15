@@ -4,59 +4,93 @@
 
 The following figure illustrates the process of getting started with Esper.
 
-![Esper Setup Overview](./assets/GettingStarted/GettingStartedOverview.png)
+![Esper Setup Overview](./assets/GettingStarted/GettingStartedOverviewUpdated.png)
 
-Each of these parts are described in detail below:
+Each of these steps is described in detail below:
 
-### 1. Signup for an Account
+### 1. Sign Up for an Account
 
-The first step to start developing with Esper is to create a developer account. [Signup for a trial account](https://esper.io/signup). During the signup process you will will be asked to enter a few, quick details to set up your environment:
+Your first step is to [sign up for a free trial account](https://esper.io/signup). During the signup process you will will be asked to enter a few quick details to set up your environment:
 
 ![Signup screen](./assets/GettingStarted/SingupScreen.png)
 
-Once you click in the `Start My Free Trial` button, you'll be automatically logged in, and redirected to your very own environment's endpoint. At the same time, you'll get an email with your temporary login credentials, along with the URL of your endpoint (it will be something like `{{ esper_tenant_name }}.esper.cloud`, where "{{ esper_tenant_name }}" is the randomly chosen name of your environment). If you would like a customized endpoint name, like `acme.esper.cloud`, please email us at <mailto:support@esper.io>, and we'll be glad to help you change it.
+Once you click **Start My Free Trial**, you'll be automatically logged into your new environment’s Console. You’ll also get an email with your temporary login credentials, along with the URL of your console. (It will be something like *foooo*.esper.cloud, where “foooo” is the randomly generated 5 letter name of your environment).
 
-> Please change your password when you are redirected to your endpoint!
+**Note: Please change your password when you are redirected to your endpoint!**
 
-### 2. Create a Provisioning Template
+### 2. Upload Your App to the Esper Cloud
 
-Now that you have your very own endpoint, the next step is to create an Esper Device Template. A Device Template is where you define the initial profile for your device by specifying the configuration, apps to be loaded, and unique settings you wish to apply to devices that will be provisioned. Once the template is created, a device is then provisioned using the Device Template settings.
+When you first enter your Esper Console, there are no apps available. If you want to include your app to include it when you provision your first device, upload it to your Esper Endpoint as an Enterprise App stored in the Esper Cloud. This works with both AOSP and GMS devices. Be sure that your APK is signed with the V1 signature as that’s the signature we check for when apps are uploaded. Upload your app by going to Apps in your left sidebar, and then click the Upload Apps button. Learn more about uploading apps to the Esper Cloud [here.](./console.md#apps)
 
-You can start the template-creation process by clicking on the `Device Template` link that appears in the left sidebar of your endpoint:
+If you're feeling adventurous, upload several versions of your app so you can try out pushing new versions to your device to try out Esper’s app management capabilities.
 
-![Create an Esper Device Template](./assets/GettingStarted/TemplateEntryPoint.png)
+Alternatively, if you are provisioning a GMS device you can use Google Play apps by setting up a managed Google Play account—you need to first do the account setup before Google Play apps will be available for approval to be used in your Endpoint and for installation on your provisioned devices. Go to Apps, and then click **Google Play** to get started. Find out more about enrolling in managed Google Play [here.](./console.md#signing-up-for-play-for-work)
 
-Please see the [Creating a Device Template](./console/device-template/index.md) section for more information on this process.
+This is an optional step, you don’t have to include any apps when you start—but depending on your use case you may wish to have your Enterprise App available, a desired Play Store app, or any combination of the two.
 
-### 3. Provision your Dedicated Android Device
 
-Any Android device that meets Esper [requirements](./requirements.md) can act as a target device for your applications and can be provisioned against an Esper endpoint. Once provisioned, Esper enables developers to communicate with their target device so they can deploy and test the application on them. During the process of provisioning, an Esper Device Agent is installed on the device. Please see the Instructions for [Provisioning a device](./console/device-provisioning/index.md) to follow the process most suited for your device and workflow.
+### 3. Modify Company Shortcode
 
-> Esper ships with an [Esper-Enhanced Android Virtual Device](./esperplugin.md#esper-android-virtual-device), which you can use to try Esper without the need for any hardware! This virtual device can be installed via our Android Studio plugin. Esper also has some pre-approved Developer Kits which you can acquire from us for your applications. Simply email us at <mailto:support@esper.io> if you'd like one.
+We use a Device Name to reference devices that are provisioned in Esper. They are mapped to a GUID-based Device ID we use at the API level. The Device Name is displayed on the Home screen of provisioned devices (noting it is possible to remove the Device Name for certain use cases).
 
-### 4. Using the Web Console
+We create a system-generated Device Name prefix consisting of 6 characters. If you are unhappy with the system-generated prefix, feel free to change it by going to **Company Settings** on your left sidebar and then click **Edit Profile**, the company short code will be at the bottom. Or you can just go with the default prefix. Find out more about Company Settings and the short code [here.](./console.md#company-short-code-for-device-id)
 
-One way to explore and interact with your devices is to use Esper's Web Console. Once your device is provisioned, you can start seeing it on the web console. A sample screenshot of how this may look has been shown below:
+### 4. Create a Provisioning Template
 
-![Preview of Web Console](./assets/GettingStarted/WebConsolePreview.png)
+Now that you have your very own endpoint, the next step is to create a Provisioning Template. A Provisioning Template enables you to define the initial profile for your devices by specifying the configuration, apps to be loaded, and unique settings you wish to apply. Once you’ve created a template, you can use it to provision as many devices as you need.
 
-Please read more details regarding [interacting with Web Console](./console.md) for exploring Esper via the Console.
+To start creating a template, click on the **Provisioning Templates** link that appears in the left sidebar of your endpoint:
 
-### 5. Developing with Esper
+![Provisioning Template](./assets/GettingStarted/ProvisioningTemplatesUpdated.png)
 
-The first step to Developing with Esper is to acquire an API key and the environment ID of your endpoint. The process of acquiring these two has been described in our [API Key Management page](./console.md#api-key-management). With this information, you can start using the Esper [REST APIs](https://api.esper.io), [Esper Python SDK](./pythonsdk.md), or the [Esper CLI](./espercli.md).
+Please read [Steps to Create a Device Template](./console.md#provisioning-templates) for more information on this process.
 
-As you begin your application development on Android Studio, be sure to leverage the freely available [Esper Android Plugin](./esperplugin.md). This will help you in leveraging the Esper APIs to develop, deploy and test applications running on your target devices.
+### 5. Provision a Dedicated Android Device
 
-Lastly, check out some wonderful [Tutorials](./tutorials.md) to get you started!
+You can use any Android device that meets Esper’s [requirements](./requirements.md) as a target device for your applications and can be provisioned by the Esper Console. Once provisioned, you’ll be able to communicate with your device, and to deploy and test apps on it. During the process of provisioning, an Esper Device Agent will be installed on the device. Please see [Provisioning Your Device](./console/device-provisioning/index.md) and follow the process best suited to your device and workflow.
+
+If you are an Android developer and wish to use an AVD, you can easily provision your AVD using the Esper Device Provisioner tool. Simply install the Device Provisioner on your development PC, create an AVD in Android Studio, then run the Device Provisioner to provision the AVD. Find out more [here](./provisioner.html#provisioning-an-avd).
+
+You can also create a cloud-based device to try out called a Simulare—this is only available on brand new Esper endpoints. It gives you limited capabilities, but if you have nothing else to try it is an option. We recommend using an actual device or an Android Studio AVD. Once you provision your first Android device or AVD, the option to create a Simulare device is removed.
+
+### 6. Start Using the Web Console
+
+One way to explore and interact with your devices is to use Esper’s Web Console. Once your device is provisioned, you’ll start seeing it on your Console:
+
+![Web Console](./assets/GettingStarted/WebConsoleUpdated.png)
+
+Here are some of the interesting things you can try out:
+
+* Define a Compliance Policy (read more [here](./console.md#compliance-policy)) and then push it out to your device ([here](./console.md#compliance-policy-tab)).
+* Update an app you installed on your device to a newer version.
+* Initiate a remote view (or if supported remote control) session (read more [here](./console.md#remote-viewer-tab)).
+* Experiment with a Kiosk mode application (read more [here](./console.md#settings-tab)).
+
+Once you get the fundamentals of Esper down, now you can move on to Esper’s Group management capabilities by provisioning additional devices and putting them into the same group.
+
+Please see [Esper Console](./console.md) for details on using the Esper Console.
+
+### 7. Start Developing
+
+The first step to Developing with Esper is to generate an API key and obtain the Enterprise ID of your endpoint. The process of acquiring these two has been described in our [API Key Management Page](./console.md#api-key-management). With this information, you can start using the [Esper REST Application Programming Interfaces (APIs)](https://api.esper.io/), [Esper Python Software Developer Kit (SDK)](./pythonsdk.md), or the [Esper Command-Line Interface (CLI)](./espercli.md).
+
+When you begin your app development in Android Studio, you can use the [Esper Android Plugin](./esperplugin.md). This will help you leverage the Esper APIs to develop, deploy, and test apps on your target devices.
+
+**Note: API keys are tied to individual accounts. Esper's recommended best practice is to create a dedicated account for API keys with the credentials securely stored.**
+
+
+### 8. Get Your Team Involved!
+
+Esper makes it easy to add team members to your endpoint enabling you to give them specific roles down to the Group level.
+
+Feel free to add accounts for additional team members and pass them their credentials so they can join the fun.
 
 ## Quick links
 
-Below are the quick links to the guide for specific actions on the Esper platform.
+Below are quick links to guide you on how to perform specific actions on the Esper platform:
 
-- [Signup for an Esper Account.](https://esper.io/signup)
-- [Provision an Android Device to Esper.](./console/device-provisioning/index.md)
-- [Get yourself an API Key.](./console.md#api-key-management)
-- [Getting started with Esper SDK.](./pythonsdk.md)
-- [Getting started with Esper CLI.](./espercli.md)
-- [Checkout our tutorials.](./tutorials.md)
+- [Signing up for an Esper Account](https://esper.io/signup)
+- [Provisioning Your Device](./console/device-provisioning/index.md)
+- [Getting an API Key](./console.md#api-key-management)
+- [Esper SDK for Python](./pythonsdk.md)
+- [Getting started with Esper CLI](./espercli.md)
