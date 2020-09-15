@@ -51,9 +51,9 @@ The EsperDeviceInfo object contains information regarding your Esper managed dev
 ```
 sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
     @Override
-    public void onResponse(@Nullable EsperDeviceInfo esperDeviceInfo)
+    public void onResponse(@Nullable EsperDeviceInfo esperDeviceInfo) {
         String deviceId = esperDeviceInfo.getDeviceId();
-        if (sdk.getAPILevel() >= EsperSDKVersions.ESSARION_MR2) {
+        if (sdk.getAPILevel() >= EsperSDKVersions.TESSARION_MR2) {
             String serialNo = esperDeviceInfo.getSerialNo();
             String imei1 = esperDeviceInfo.getImei1();
             String imei2 = esperDeviceInfo.getImei2();
@@ -64,7 +64,7 @@ sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
     public void onFailure(Throwable t) {
         t.printStackTrace();
     }
-}));
+});
 
 ```
 
