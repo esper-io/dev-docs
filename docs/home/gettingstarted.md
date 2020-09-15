@@ -43,11 +43,11 @@ To start creating a template, click on the **Provisioning Templates** link that 
 
 ![Provisioning Template](./assets/GettingStarted/ProvisioningTemplatesUpdated.png)
 
-Please read [Steps to Create a Device Template](./console.md#device-template) for more information on this process.
+Please read [Steps to Create a Device Template](./console.md#provisioning-templates) for more information on this process.
 
 ### 5. Provision a Dedicated Android Device
 
-You can use any Android device that meets Esper’s [requirements](./requirements.md) as a target device for your applications and can be provisioned by the Esper Console. Once provisioned, you’ll be able to communicate with your device, and to deploy and test apps on it. During the process of provisioning, an Esper Device Agent will be installed on the device. Please see [Provisioning Your Device](./console/device-provisioning/index.md") and follow the process best suited to your device and workflow.
+You can use any Android device that meets Esper’s [requirements](./requirements.md) as a target device for your applications and can be provisioned by the Esper Console. Once provisioned, you’ll be able to communicate with your device, and to deploy and test apps on it. During the process of provisioning, an Esper Device Agent will be installed on the device. Please see [Provisioning Your Device](./console/device-provisioning/index.md) and follow the process best suited to your device and workflow.
 
 If you are an Android developer and wish to use an AVD, you can easily provision your AVD using the Esper Device Provisioner tool. Simply install the Device Provisioner on your development PC, create an AVD in Android Studio, then run the Device Provisioner to provision the AVD. Find out more [here](./provisioner.html#provisioning-an-avd).
 
@@ -72,7 +72,7 @@ Please see [Esper Console](./console.md) for details on using the Esper Console.
 
 ### 7. Start Developing
 
-The first step to Developing with Esper is to generate an API key and obtain the Enterprise ID of your endpoint. The process of acquiring these two has been described in our [API Key Management Page](./console.md#developer-options"). With this information, you can start using the [Esper REST Application Programming Interfaces (APIs)]("https://api.esper.io/"), [Esper Python Software Developer Kit (SDK)](./home/pythonsdk.md), or the [Esper Command-Line Interface (CLI)](./espercli.md).
+The first step to Developing with Esper is to generate an API key and obtain the Enterprise ID of your endpoint. The process of acquiring these two has been described in our [API Key Management Page](./console.md#api-key-management). With this information, you can start using the [Esper REST Application Programming Interfaces (APIs)](https://api.esper.io/), [Esper Python Software Developer Kit (SDK)](./pythonsdk.md), or the [Esper Command-Line Interface (CLI)](./espercli.md).
 
 When you begin your app development in Android Studio, you can use the [Esper Android Plugin](./esperplugin.md). This will help you leverage the Esper APIs to develop, deploy, and test apps on your target devices.
 
