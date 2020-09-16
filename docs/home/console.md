@@ -906,7 +906,7 @@ Note that the Lock Screen must be 'On' in order to set Lock Screen Password rule
       
 ![Esper Settings](./assets/NewConsole/EsperSettingsApp.png)
 
-**Dock & Esper Settings App**: The dock is specifically for devices in Kiosk mode. When a device is in kiosk mode, you can access the dock by tapping three times in the upper left corner of the screen, or by pressing the power button consecutively three times with a slight pause between each press. When you do so, an expander arrow will slide out of the upper right corner:
+**Dock & Esper Settings App**: The dock is specifically for devices in Kiosk mode. When a device is in Kiosk mode, you can access the dock by tapping three times in the upper left corner of the screen, or by pressing the power button consecutively three times with a slight pause between each press. When you do so, an expander arrow will slide out of the upper right corner:
 
 Tap the expander arrow; you’ll need to enter the password you set in the Compliance Policy.
 
@@ -942,8 +942,7 @@ This setting enables you to restrict the number of Google accounts that can be a
 
 ![Google Account Restrictions](./assets/NewConsole/GoogleAccountRestrictions.png)
 
-***Tip:
-The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.**
+***Tip: The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.***
 
 ### Factory Reset Protection 
 
@@ -1069,8 +1068,7 @@ Android devices normally come with a number of apps loaded onto them in ROM. Thi
 
 The **Esper Cloud Apps** tab gives you the ability to load any Enterprise apps and approved Managed Google Play apps onto the device when it is provisioned. These apps must have been previously uploaded to Esper as an Enterprise app through Apps or previously approved through Managed Google Play.
 
-***Tip: Before using a managed Google Play account, you need to set up a Managed Google Play account through Esper.
-Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select it from the dropdown menu, then select the version, and click on Add to add it to your template.***
+***Tip: Before using a managed Google Play account, you need to set up a Managed Google Play account through Esper. Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select it from the dropdown menu, then select the version, and click on Add to add it to your template.***
 
 ![App Version](./assets/NewConsole/EsperCloudAppVersion.png)
  
@@ -1099,7 +1097,7 @@ When you are satisfied with your apps settings, click **Next**.
 
 The Branding section lets you customize the devices you’re provisioning by uploading the wallpapers that will be displayed on the device once it’s provisioned. You can upload separate portrait and landscape wallpapers. If your device is fixed to a display orientation you only need to upload the wallpaper for that orientation.
 
-This does not apply to devices deployed in Kiosk mode.
+*Note: This does not apply to devices deployed in Kiosk mode.*
 
 Supported image formats are JPEG, PNG, or JPG with a 25MB size limit. Be sure to crop the image to match the screen resolution of the devices you plan to provision with this template, otherwise they will be stretched to fit.
 
@@ -1110,34 +1108,29 @@ When you are satisfied with your wallpaper, click **Next**.
 
 ### Settings section
 
-The Settings section lets you determine levels for most of the device settings—things like screen brightness, alarm volume, and screen timeout. You can also set up devices with Wi-Fi credentials, along with determining the duration of an ADB session if ADB was enabled in the [Compliance Policy] section.
+The Settings section lets you determine levels for most of the device settings: These include things like screen brightness, alarm volume, and screen timeout. You can also set up devices with Wi-Fi credentials, along with determining the duration of an ADB session if ADB was enabled in the [Compliance Policy] section.
 
 ![Template Settings](./assets/NewConsole/TemplateSettings.png)
    
-:::tip 
-If the **Android Settings App** is enabled for a device in Multi application mode, the device user can access these settings and change them on the device.
-:::
+***Tip: If the **Android Settings App** is enabled for a device in Multi application mode, the device user can access these settings and change them on the device.***
 
 **General Device Settings**
 
-Most of these are fairly straightforward:
-   - Turn Bluetooth on or off.
-   - Turn Wi-Fi on or off*.
-   - Select GPS accuracy from the dropdown menu.
-   - Set the brightness of the screen using a slider.
-   - Set the alarm volume using a slider.
-   - Set notification volume using a slider.
-   - Set music volume using a slider.
-   - Set ring volume using a slider.
-   - Select screen orientation from the dropdown menu (Auto, Landscape, or Portrait)*.
-   - Select screen timeout duration—the time after which the device screen will turn off if left idle—ranging from 15 seconds to Never (meaning the screen will always be on, important for Kiosk mode deployments.
-   - Select the time zone in which the device will be deployed; after deployment, you will have the ability to change the device’s time zone remotely via dashboard. If you don’t specify a device time zone, the time zone set by the device will be used.
-   
-*If the device only uses Wi-Fi for Internet connectivity, since Esper requires the device to be connected to the Internet in order for the Esper system to work, Esper will turn Wi-Fi on after 10 seconds to establish the required Internet connectivity.*
-
-*Some device makers swap the settings for Landscape and Portrait. If your device was provisioned with a specific orientation but is locked into the other orientation, try swapping this setting to achieve the proper screen orientation setting.*
-
-The Time Zone field has a robust search capability. As you begin to type, suggestions will be displayed. For example, typing "Pacific" will bring up all the time zones that start with "Pacific." Listings are by country, for example to find the timezones for the U.S.A., search for "America" or "US".
+   * Turn Bluetooth on or off.
+   * Turn Wi-Fi on or off
+      * Note that if a device only uses Wi-Fi for Internet connectivity, that Esper requires the device to be connected to the Internet in order for the Esper system to work. 
+      Esper will turn Wi-Fi on after 10 seconds to establish the required Internet connectivity.
+   * Select GPS accuracy from the dropdown menu.
+   * Set the brightness of the screen using a slider.
+   * Set the alarm volume using a slider.
+   * Set notification volume using a slider.
+   * Set music volume using a slider.
+   * Set ring volume using a slider.
+   * Select screen orientation from the dropdown menu (Auto, Landscape, or Portrait)
+      * Some device makers swap the settings for Landscape and Portrait. If your device was provisioned with a specific orientation but is locked into the other orientation, try swapping this setting to achieve the proper screen orientation setting.
+   * Select screen timeout duration—the time after which the device screen will turn off if left idle—ranging from 15 seconds to Never (meaning the screen will always be on, important for Kiosk mode deployments.
+   * Select the time zone in which the device will be deployed; after deployment, you will have the ability to change the device’s time zone remotely via dashboard. If you don’t specify a device time zone, the time zone set by the device will be used.
+      * The Time Zone field has a robust search capability. As you begin to type, suggestions will be displayed. For example, typing "Pacific" will bring up all the time zones that start with "Pacific." Listings are by country, for example to find the timezones for the U.S.A., search for "America" or "US".
 
 ![Timezone](./assets/NewConsole/Timezone.png)
    
@@ -1147,21 +1140,17 @@ Android Debug Bridge (ADB) is a command-line tool that enables administrators to
 
 ![ADB Duration](./assets/NewConsole/ADBDuration.png)
    
-:::tip
-Keeping ADB set to "Always ON" is NOT recommended for security reasons.
-:::
+***Tip: Keeping ADB set to "Always ON" is **NOT** recommended for security reasons.***
 
 **WIFI Access Points**
 
-You can preload preferred Wi-Fi networks to which the provisioned device will automatically connect as they become available.
+You can pre-load preferred Wi-Fi networks to which the provisioned device will automatically connect as they become available.
 
 ![WIFI Network](./assets/NewConsole/WIFIAccessPoint.png)
    
-The device will automatically connect to the given WiFi access points as per the availability and network strength after provisioning.
+The device will automatically connect to the given Wi-Fi access points as per the availability and network strength after provisioning.
  
-:::tip
-The WiFi on/off and WiFi access points feature are not available for android 10.0 and above
-:::
+***Tip: The Wi-Fi on/off and WiFi access points feature are not available for devices running Android 10.0 and above***
 
 This section has four fields to configure: Wi-Fi SSID, Wi-Fi Password, Wi-Fi Security type, and whether the access point is hidden. The Wi-Fi SSID and Wi-Fi Password fields are text fields into which you enter the SSID and password for the access point. Select the security type from the dropdown menu. There are four possible choices:
    - NONE
@@ -1180,17 +1169,18 @@ If you select EAP, an extra dropdown menu will appear to enable you to select a 
    
 ![WIFI Network Details](./assets/NewConsole/WIFIAccessPointDetails.png)
 
-:::tip
-The Wi-Fi On/Off and Wi-Fi Access Points feature are not available for Android 10.0 and newer.
-:::
+***Tip: The Wi-Fi On/Off and Wi-Fi Access Points feature are not available for devices running Android 10.0 and above.***
 
 **Add Wi-Fi Credentials to Be Used During Provisioning**
 
-This feature gives you the capability to include the required Wi-Fi credentials in the QR code generated by a Provisioning Template. After reading the QR code, the provisioned device will automatically connect to these access points as they become available.
+This feature gives you the capability to include the required Wi-Fi credentials in the QR code generated by a Provisioning Template. 
+After reading the QR code, the provisioned device will automatically connect to these access points as they become available.
 
 ![Add WIFI Template](./assets/NewConsole/TemplateAddWifi.png)
    
-Like  Wi-Fi Access Points, this section has three fields: Wi-Fi SSID, Wi-Fi Password, and Wi-Fi Security type. The Wi-Fi SSID and Wi-Fi Password fields are text fields into which you enter the SSID and password for the access point. Select the security type from the dropdown menu. There are four possible choices:
+Like  Wi-Fi Access Points, this section has three fields: Wi-Fi SSID, Wi-Fi Password, and Wi-Fi Security type. 
+The Wi-Fi SSID and Wi-Fi Password fields are text fields into which you enter the SSID and password for the access point. 
+Select the security type from the dropdown menu. There are four possible choices:
    - NONE
    - WPA
    - WEP
@@ -1214,7 +1204,9 @@ The Group section lets you assign devices provisioned using this template to an 
 
 ![Template Group](./assets/NewConsole/TemplateGroup.png)
    
-To select an existing group, click the radio button next to its name. If you’d like to create a new group, click **Create a new group**. Enter a unique name for the new group into the popup menu that appears. Once the new group is created, it will automatically be selected and used with this template.
+To select an existing group, click the radio button next to its name. If you’d like to create a new group, click **Create a new group**. 
+Enter a unique name for the new group into the popup menu that appears. 
+Once the new group is created, it will automatically be selected and used with this template.
 
 ![Create Group](./assets/NewConsole/GroupCreateName.png)
 
@@ -1222,7 +1214,9 @@ When you are satisfied with your group selection, click **Next**.
 
 **Add Devices (IMEI Provisioning)**
 
-If you are editing a template—rather than creating one—the next section will be Add Devices. The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions in **Upload IMEI CSV** section.
+If you are editing a template rather than creating one, the next section will be 'Add Devices.'
+ 
+The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions in **Upload IMEI CSV** section.
 
 ![Add Devices Template](./assets/NewConsole/TemplateAdddevices.png)
 
@@ -1234,9 +1228,7 @@ Within a few seconds, the IMEI or serial number will be registered with the back
 
 ![Success Message](./assets/NewConsole/SuccessMessage.png)
 
-:::tip
-Esper validates all IMEI numbers entered. If you enter an IMEI that cannot be verified as an valid IMEI number, you’ll get an error. Additionally if the IMEI or Serial Number is already associated with another Provisioning Template, you’ll also get an error.
-:::
+***Tip: Esper validates all IMEI numbers entered. If you enter an IMEI that cannot be verified as an valid IMEI number, you’ll get an error. Additionally if the IMEI or Serial Number is already associated with another Provisioning Template, you’ll also get an error.***
 
 Click **Next**.
 
