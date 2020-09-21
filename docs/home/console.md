@@ -60,7 +60,7 @@ When you click it, a panel will slide in from the right side of the screen. Scro
 Most notifications on your Esper console will appear as toast notifications at the bottom left corner of your screen. These notifications disappear after a few seconds. If you prefer, you can click on the 'X' to dismiss them. If there are multiple notifications queued, click the 'X' of the topmost notification to get to the next one in the queue.
 ![Toast](./assets/NewConsole/Toast.png)
 
-:::tip These types of notifications are called "toast notifications" because they pop up like toast from a toaster. :::
+***Tip: These types of notifications are called "toast notifications" because they pop up like toast from a toaster.***
 
 ### Informational Slider Screen and Dropdowns
 
@@ -91,7 +91,7 @@ Click on **User Management**.
 
 ![User summary](./assets/NewConsole/UsersSummary.png)
 
-:::tip Access to this page is only available to those with Enterprise Admin roles, those with other roles will not see the User management option in the drop down. :::
+***Tip: Access to this page is only available to those with Enterprise Admin roles, those with other roles will not see the User management option in the drop down.***
 
 There are four main roles for Esper Console users: *Enterprise Administrator, Enterprise Viewer, Group Administrator*, and *Group Viewer*. When setting up a Group, be mindful that each role has different permissions. Enterprise Administators have the highest level of permissions, and are able to view or change anything, while a Group Viewer has far less permissions, and can only view tasks having to do with the devices and groups which they have been assigned permissions in.
 
@@ -170,10 +170,10 @@ The **Alerts status** panel provides a summary of alerts you’ve created, and t
 Provisioning is the initial step of enrolling, configuring, and managing an Android device using the Esper platform and associated developer tools.
 Esper provides several different methods for provisioning Android devices, depending on the capabilities of the device being configured:
 
-   - Android for Work, part of Android for Enterprise
-   - 6 Tap QR Code, part of Android for Enterprise
-   - The Provisioner Tool
-   - Seamless Provisioning
+   * Android for Work, part of Android for Enterprise
+   * 6 Tap QR Code, part of Android for Enterprise
+   * The Provisioner Tool
+   * Seamless Provisioning
    
 Additional provisioning methods may be available including Google Zero-Touch Enrollment, Samsung Knox Mobile Enrollment, IMEI/Serial Number-based, NFC-based, and in some specific cases using a downloaded APK. Please [contact Esper](mailto: support@esper.io) directly to find out if your account qualifies and your device is supported.
 ![Provisioning](./assets/NewConsole/ProvisioningMethods.png)
@@ -189,10 +189,11 @@ Each of the four provisioning methods is best suited to different situations. Cl
 **Android for Work (AFW) provisioning**
 
 The AfW method is best used for:
-      - Devices that have GMS (Google Mobile Services) support enabled
-      - Devices with a camera for QR code scanning
-      - Android 6.0 and above
-      - Factory reset of device required
+
+      * Devices that have GMS (Google Mobile Services) support enabled
+      * Devices with a camera for QR code scanning
+      * Android 6.0 and above
+      * Factory reset of device required
       
 You can also use IMEI / Serial Numbers with the AfW provisioning method on some devices. This is useful when shipping a device directly to a customer so they can provision it themselves, or for devices without a camera. It also prevents users from repurposing the device by exploiting the ability to conduct a factory reset. To learn about how to provision devices using the IMEI or serial number method, please review [IMEI/Serial Number Based Provisioning](./console.md#imei-serial-number-based-provisioning). View the [Upload IMEI CSV](./console.md#actions-on-template-tiles) for more information on how to load IMEIs and Serial Numbers into a Provisioning Template.
 
@@ -201,10 +202,11 @@ Go [here](./console.md#) for detailed instructions to provision a device using A
 **Six Tap QR Code Provisioning**
 
 6 Tap QR code provisioning is best used for:
-      - Devices that have Google Mobile Services (GMS) support enabled
-      - Devices with a camera for QR code scanning
-      - Android 7.0 and above
-      - Factory reset of device required
+
+      * Devices that have Google Mobile Services (GMS) support enabled
+      * Devices with a camera for QR code scanning
+      * Android 7.0 and above
+      * Factory reset of device required
       
    Beginning with Android 9 you can include credentials for the Wi-Fi network to be used for provisioning in your template. They’ll be included in the QR code, eliminating the need to enter them on the device to establish the required Internet connectivity.
 
@@ -246,9 +248,7 @@ Then click **Suggest Provisioning Method**.
 Based on your selections, the tool will suggest one of the four provisioning methods by highlighting it. Click on it to see the steps to provision your device.
 If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Send an email to support@esper.io.
 
-:::tip
-In case a device stalls during provisioning, there’s a way to exit out and factory reset the device. On any provisioning screen showing the Esper logo, tap the logo seven times; this will bring up the Factory Reset button. Simply touch the button to start the reset process.
-:::
+***Tip: If a device stalls during provisioning, there’s a way to exit out and factory reset the device. On any provisioning screen showing the Esper logo, tap the logo seven times; this will bring up the Factory Reset button. Simply touch the button to start the reset process.***
 
 ![Factory Reset](./assets/NewConsole/DeviceFactoryReset.jpg)
 
@@ -285,9 +285,7 @@ Be patient, as it can take several minutes to complete a factory reset. Once the
 
 Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the AfW provisioning method. The particular screens and flow varies across Android versions, noting AfW support was first delivered in Android 6.0. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with AfW-based provisioning please [email us](mailto:support@esper.io).
 
-:::tip 
-Device makers and carriers customize the setup process, thus it is likely you’ll encounter unique setup screens specific to your device. Generally you can either skip or decline most of the options, noting there are a handful of system specific notifications called out in the instructions for which you’ll need to make the proper selections.
-:::
+***Tip: Device makers and carriers customize the setup process, thus it is likely you’ll encounter unique setup screens specific to your device. Generally you can either skip or decline most of the options, noting there are a handful of system specific notifications called out in the instructions for which you’ll need to make the proper selections.***
 
 From the Provisioning Methods screen, if you select **Android for Work** you will be taken step through instructions using the AfW provisioning process. You may follow through these steps easily by clicking **Next**.
 
@@ -360,6 +358,7 @@ The QR code scanner should appear on your device, hold up the device’s camera 
 ![Factory Reset](./assets/NewConsole/QRCode1.png)
 
 Note that the QR code is densely populated. If your device’s camera has trouble scanning it, follow these tips:
+
    * Increasing brightness of your PC’s screen
    * Changing the distance between the camera and the screen - move your device closer or further from the QR code
    * Hold the device still for a few seconds once you have adjusted the distance
@@ -368,9 +367,7 @@ Once Esper has successfully read the QR code, provisioning will start and this s
 
 <img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
 
-:::tip
-If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
-:::
+***Tip: If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.***
 
 <img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
@@ -402,7 +399,7 @@ You will now return to the Esper agent. You will typically need to grant another
 
 <img src="./assets/NewConsole/ResolveAppPermission.png" alt="alt text" style="max-width:200px;">
 
-You are taken to the Display over other apps or Draw over other apps screen where a list of apps will be shown that have been granted or are requesting permission to display over other apps - Esper Device Management will currently be set to 'No,' or 'Not Allowed.' Touch or click on **Esper Device Management**.
+You are taken to the 'Display Over Other Apps' or 'Draw Over Other Apps' screen where a list of apps will be shown that have been granted or are requesting permission to display over other apps - Esper Device Management will currently be set to 'No,' or 'Not Allowed.' Touch or click on **Esper Device Management**.
 
 <img src="./assets/NewConsole/DeviceEDM.png" alt="alt text" style="max-width:200px;">
 
@@ -430,9 +427,7 @@ After this step, provisioning will be finished and your device will be set up ac
 
 Android devices that have Google Mobile Services (GMS) support and a camera can be enrolled and provisioned onto Esper using the Android for Work (AfW) provisioning method. The particular provisioning screens and device provisioning flow vary across Android versions, noting 6 Tap QR Code support was first delivered in Android 7. On some Android versions, primarily Android 9 and above, some of these screens may not appear at all. If you have any questions or issues with 6 Tap QR Code-based provisioning, please [email us](mailto:support@esper.io).
 
-:::tip
-Device makers and carriers customize the setup process, thus it is likely you’ll encounter unique setup screens specific to your device. Generally, you can either skip or decline most of the options, noting there are a handful of system specific notifications called out in the instructions for which you’ll need to make the proper selections.
-:::
+***Tip: Device makers and carriers customize the setup process, thus it is likely you’ll encounter unique setup screens specific to your device. Generally, you can either skip or decline most of the options, noting there are a handful of system specific notifications called out in the instructions for which you’ll need to make the proper selections.***
 
 From the Provisioning Methods screen, if you select **6 Tap QR Code** you will be taken step through instructions using the 6 Tap QR Code provisioning process. You can progress through these steps easily by clicking **Next**.
 
@@ -491,9 +486,8 @@ Once the Esper agent has successfully downloaded and started, provisioning will 
 
 <img src="./assets/NewConsole/StartingProvisioning.png" alt="alt text" style="max-width:200px;"/>
 
-:::tip
-If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
-:::
+***Tip:
+If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.***
 
 <img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
@@ -568,8 +562,7 @@ Once the Esper agent has successfully downloaded and started, provisioning will 
 
 <img src="./assets/NewConsole/StartingProvisioning.png" alt="A black screen with horizontal white text saying, 'Preparing Your Device, Step One of Three,' underneath this text is an image of a woman standing at a chalkboard. Underneath this image is the text, 'Starting Provisioning, this may take a while.'" style="max-width:200px;"/>
 
-:::tip If you wish to exit the provisioning process for any reason, click on the Esper logo 6 times to bring up the option to factory reset the device.
-:::
+***Tip If you wish to exit the provisioning process for any reason, click on the Esper logo 6 times to bring up the option to factory reset the device.***
 
 <img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
@@ -639,9 +632,7 @@ Esper enables you to use IMEI and serial numbers to enroll and provision your de
 
 You first need to prepare a Provisioning Template, and then go back to either edit the template to [add IMEI and/or serial numbers](./console.md#provisioning-templates) you wish to be provisioned by this template, or upload a CSV file from the Provisioning Template’s tile.
 
-:::tip
-A passcode is used to validate that the device’s end user has permission to enroll and provision the device. This passcode is the Dock and Esper Settings app password that is specified in the 'Compliance Policy' screen in your Provisioning Template. If you don’t want a passcode, just leave the 'Password' field blank. Note that doing so will impact accessing the Dock and Esper Settings app -- this is an important consideration if you are running your app in Kiosk mode. 
-:::
+***Tip: A passcode is used to validate that the device’s end user has permission to enroll and provision the device. This passcode is the Dock and Esper Settings app password that is specified in the 'Compliance Policy' screen in your Provisioning Template. If you don’t want a passcode, just leave the 'Password' field blank. Note that doing so will impact accessing the Dock and Esper Settings app -- this is an important consideration if you are running your app in Kiosk mode.***
 
 To begin the process of creating an IMEI and/or serial number enrolled provisioning template, you will need to first perform a [factory reset](./console.md#how-to-factory-reset-your-device) on your device.
 
@@ -695,9 +686,7 @@ Once Esper has successfully read the QR code, provisioning will start and the 'S
 
 <img src="./assets/NewConsole/StartingProvisioning.png" alt="'Preparing Your Device, Step One of Three,' underneath an image of a woman standing at a chalkboard, which reads, 'Starting Provisioning, this may take a while.'" style="max-width:200px;"/>
 
-:::tip
-If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.
-:::
+***Tip: If you wish to exit the provisioning process for any reason, touch or click on the Esper logo 6 times to bring up the option to factory reset the device.***
 
 <img src="./assets/NewConsole/SendingDeviceDetails.png" alt="alt text" style="max-width:200px;"/>
 
@@ -933,9 +922,7 @@ Once you’ve entered the password, a dock will slide out that gives you three o
 
 To slide the dock back in, click on the expander arrow again; it will disappear after a few seconds.
 
-:::tip
-If you exit Kiosk mode into multi-app mode, you can still activate the expander arrow to ensure you can put the device back into Kiosk mode locally even if the Esper Settings app was not included on the Home screen. 
-:::
+***Tip: If you exit Kiosk mode into multi-app mode, you can still activate the expander arrow to ensure you can put the device back into Kiosk mode locally even if the Esper Settings app was not included on the Home screen.***
 
 **Dock and Esper Settings App Password**
 
@@ -945,23 +932,18 @@ This password controls access to the hidden dock available in Kiosk Mode, the Es
 
 The default password is 1234. It is possible to set up a template without a password for these features, or use the default password. Esper strongly recommends setting up a more complex password for stronger security. The same password will be set for all devices provisioned using the template.
 
-:::tip
-If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings application or the Android settings application as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.
-:::
+***Tip: If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings application or the Android settings application as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.***
 
 ### Google Account Restrictions
 
 This setting enables you to restrict the number of Google accounts that can be added on the device and used with Google apps like Gmail, Google Play Store, and YouTube. By default, any number of accounts can be added to a specific device; this setting restricts this number. For example, if you set this setting to two, only two accounts will be permitted on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
 
-:::tip 
-If you don’t check the Google account restrictions box and plan to provision your device in [Multi-application mode](./console.md#kiosk-or-multi-app-mode), we recommend disabling Google Play Store to prevent installation of unapproved apps.
-:::
+***Tip: If you don’t check the Google account restrictions box and plan to provision your device in [Multi-application mode](./console.md#kiosk-or-multi-app-mode), we recommend disabling Google Play Store to prevent installation of unapproved apps.***
 
 ![Google Account Restrictions](./assets/NewConsole/GoogleAccountRestrictions.png)
 
-:::tip
-The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.
-:::
+***Tip:
+The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.**
 
 ### Factory Reset Protection 
 
@@ -971,72 +953,66 @@ When you turn on the FRP button, you’ll need to enter the Google ID of the acc
 
 ![Factory Reset Protection](./assets/NewConsole/SettingsFactoryReset.png)
 
-:::tip
-This feature is only available on GMS devices running Android 5.1 and above.
-:::
+***Tip: This feature is only available on GMS devices running Android 5.1 and above.***
 
 See [here](./console/policy-management/getgoogleaccount.md) to know how to get the Google account ID of your account and how FRP protects your device.
 
-**Lock Screen**<br> If Lock Screen is on, it enables the default "lock screen" to be displayed upon a screen timeout as specified in the Settings section. If this is on, the device user will have the option to set the password. If Lock screen password rules are defined, the device user will be required to enter a password that conforms with these rules. <br/>
-**Safe-Mode Login**<br> TWhen Safe-mode login is on, users will be able to boot to Safe Mode on their device; when Safe-mode login is off, users will be unable to boot to Safe Mode.<br/>
+**Lock Screen**<br> If Lock Screen is on, it enables the default "lock screen" to be displayed upon a screen timeout interval as specified in the 'Settings' section. If this is on, the device user will have the option to set a password. If Lock Screen password rules are defined, the device user will be required to enter a password that conforms with these rules. <br/>
+**Safe-Mode Login**<br> When Safe-Mode login is on, users will be able to boot to Safe Mode on their device. When Safe-Mode login is off, users will be unable to boot to Safe Mode.<br/>
 **Factory Reset**<br> Factory Reset controls whether or not the user can perform a factory reset on the device using the Android Settings app. When Factory Reset is off, the user will not be able to perform a factory reset on the device. This does not prevent a hard-key factory reset, see Factory Reset Protection to prevent hard-key factory reset. <br/>
-**Notification bar**<br> If you want device users to be able to swipe down to see the notification bar, set Notification Bar to on. If you don’t, set it to off. You will typically want this off for Kiosk mode-based solutions. Conversely in most cases a user is required to submit a Bug Report that was requested through Esper via the Notification Bar, thus inaccessible with the Notification Bar turned off. <br/>
-**Screenshot**<br> If you want device users to be able to take screenshots, set Screenshot to On. If you don’t, set it to Off. This will prevent users from initiating a screenshot using the appropriate hardkey sequence or available softkey on the device. <br/>
-**USB connectivity**<br> USB connectivity allows users to connect USB devices—things like flash drives, digital cameras, mice, or keyboards—to the device. If you want device users to be able to connect other hardware to the device, set USB Connectivity to on. If you don’t, set it to off.<br/>
-**SMS**<br> SMS controls the ability of the device to send or receive text messages via short-message service (SMS). If it is turned Off, the device will not send or receive text messages regardless of which SMS app is used. Set SMS to on if you wish to enable the device to send and receive text messages via SMS. <br/>
-**Outgoing calls** <br> OIf you want device users to be able to make outgoing calls, set Outgoing Calls to on. If you don’t, set it to off. <br/>
-**Camera Access**<br> If you want device users to be able to use the camera, set Camera Access to on. If you don’t, set it to off. 
-:::tip 
-Your app will still be able to access the camera if this setting is set to off.<br/>
-:::
-**NFC** <br> If you want device users to be able to use near-field communication (NFC) on their devices—on those devices that support NFC—set NFC to on; if you don’t, set it to off. If any of your apps require NFC, make sure this setting is set to on. <br/>
-**Google PlayStore**<br>If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to On; if you don’t, set it to Off. You’ll still be able to install any approved Google Play Store apps from Esper onto the device. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.<br/>
-**USB tethering**<br>USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to On; if you don’t, set it to Off.<br/>
-**Edit date and time**<br> If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to On; if you don’t set it to Off.<br/>
-**Application uninstall**<br> Setting Application uninstall to OFF will block app uninstallation both locally on the device and using Esper. Set it to ON if you need to be able to uninstall applications remotely using Esper and locally on the device. 
-:::tip
-With this set to on you will still be able to update your application installed on the device using Esper.
-:::
+**Notification Bar**<br> If you want device users to be able to swipe down to see the notification bar, set Notification Bar to 'On.' If you don’t, set it to 'Off.' You will typically want this off for Kiosk mode-based solutions. Conversely, in most cases a user is required to submit a Bug Report that was requested through Esper via the Notification Bar, which is inaccessible with the Notification Bar turned off. <br/>
+**Screenshot**<br> If you want device users to be able to take screenshots, set Screenshot to 'On.' If you don’t, set it to 'Off.' This will prevent users from initiating a screenshot using the appropriate hardkey sequence or available softkey on the device. <br/>
+**USB connectivity**<br> USB connectivity allows users to connect USB devices to their device. Examples of USB devices a user may connect include external hardware such as: Flash drives, digital cameras, mice, or keyboards. If you want device users to be able to connect other hardware to the device, set USB Connectivity to 'On.' If you don’t, set it to 'Off.'<br/>
+**SMS**<br> SMS controls the ability of the device to send or receive text messages via short-message service (SMS). If it is turned Off, the device will not send or receive text messages regardless of which SMS app is used. Set SMS to 'On' if you wish to enable the device to send and receive text messages via SMS. <br/>
+**Outgoing calls** <br> If you want device users to be able to make outgoing calls, set Outgoing Calls to 'On.' If you don’t, set it to 'Off.' <br/>
+**Camera Access**<br> If you want device users to be able to use the camera, set Camera Access to 'On.' If you don’t, set it to 'Off.' 
 
-**USB File transfer** <br>If you’d like device users to be able to transfer files to or from the device using a USB cable or flash drive, set USB file transfer to On; if you don’t, set it to Off.<br/>
-**Google Assistant** <br> If you’d like device users to be able to use voice command via Google Assistant on devices where this is supported, set Google Assistant to On; if you don’t, set it to Off.
-:::tip 
-On a few devices, this setting may need to be on if you wish to have Google Play Store show up on the device.  <br> 
-:::
+***Tip: Your app will still be able to access the camera if this setting is set to off.<**
 
-**Local App Install**<br>TThis feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. **Settings >Apps and Notifications > Special App Permissions> Install Unknown Apps** and choose the route they wish to install the apps from. For example, if the device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned off, the device user will not be allowed to install apps from any unknown sources.</br>
+**NFC** <br> If you want device users to be able to use near-field communication (NFC) on their devices (on those devices that support NFC) set NFC to 'On'; if you don’t, set it to 'Off.' If any of your applications require NFC, make sure this setting is set to 'On.' <br/>
+**Google PlayStore**<br>If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to 'On'; if you don’t, set it to 'Off.' You’ll still be able to install any approved Google Play Store apps from Esper onto the device. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.<br/>
+**USB Tethering**<br>USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to 'On'; if you don’t, set it to 'Off.'<br/>
+**Edit Date and Time**<br> If you’d like device users to be able to set the date and time on the device, set the 'Edit Date and Time' setting to 'On'; if you don’t set it to 'Off'.<br/>
+**Application Uninstall**<br> Setting Application uninstall to 'Off' will block app uninstallation both locally on the device and using Esper. Set it to 'On' if you need to be able to uninstall applications remotely using Esper and locally on the device. 
+
+***Tip: With this set to 'On' you will still be able to update your application installed on the device using Esper.***
+
+
+**USB File transfer** <br>If you’d like device users to be able to transfer files to or from the device using a USB cable or flash drive, set USB file transfer to 'On'; if you don’t, set it to 'Off'.<br/>
+**Google Assistant** <br> If you’d like device users to be able to use voice command via Google Assistant on devices where this is supported, set Google Assistant to 'On'; if you don’t, set it to 'Off'.
+
+***Tip:  On a few devices, this setting may need to be on if you wish to have Google Play Store show up on the device.**
+
+**Local App Install**<br>This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. **Settings >Apps and Notifications > Special App Permissions> Install Unknown Apps** and choose the route they wish to install the apps from. For example, if the device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned off, the device user will not be allowed to install apps from any unknown sources.</br>
 
 ### Restrict Incoming and Outgoing calls
 
    Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
-      - Restrict incoming calls to uploaded contacts only
-      - Restrict outgoing calls to uploaded contacts only
+      * Restrict incoming calls to uploaded contacts only
+      * Restrict outgoing calls to uploaded contacts only
       
 Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file.
+
 The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code - see the example below.
 
 ![Upload Phone](./assets/NewConsole/PhoneNumberCSV.png)
 
-Only one upload file is stored for each, if you upload a new file the old entries are deleted and only the entries from the new file are used.
+Only one upload file is stored for each, if you upload a new file, the old entries are deleted and only the entries from the new file are used.
 If you wish to enable outbound calls, be sure to include your device’s phone app as a package name for [Preloaded apps in Apps] if the phone app is preinstalled.
 
-:::tip
-Spreadsheets commonly interpret + as part of a mathematical formula. Use the appropriate method specific to that spreadsheet to indicate the number is not part of a formula. For example in Excel you prepend a ‘ to each entry. Remember to save the file as a .csv.
-:::
+***Tip
+Spreadsheets commonly interpret + as part of a mathematical formula. Use the appropriate method specific to that spreadsheet to indicate the number is not part of a formula. For example in Excel you prepend a ‘ to each entry. Remember to save the file as a .csv.***
 
-### ADB
+### Android Debug Bridge
 
 Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via Devices > Device > Settings for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
 
-:::tip
-We never allow turning on ADB from the device on any Esper-provisioned device.
-:::
+***Tip: We never allow turning on ADB from the device on any Esper-provisioned device.***
 
 ### Resetting to Default Settings
 
-You may reset these values to default at any time by clicking the **Reset to defaults** button at the bottom of this panel.
+You may reset these values to default at any time by clicking the **Reset to Defaults** button at the bottom of this panel. 
 When you are satisfied with your Compliance Policy configurations, click **Next**.
-
 
 ### Apps section
 
@@ -1046,17 +1022,15 @@ The Apps section lets you choose the apps you would like to have installed on yo
 
 ### Kiosk or Multi App Mode 
 
-Your first step is click a radio button to choose either Kiosk mode or Multi application mode.
+Begin by clicking a radio button to choose either Kiosk Mode or Multi-Application Mode.
 
 ![AppMode Template](./assets/NewConsole/TemplateAppMode.png)
 
-**Kiosk mode** pins a selected Enterprise or Google Play Store app to the device unless the user exits kiosk mode. This is useful for cases in which the device will be used for a single purpose—for example, an airport kiosk—and only the selected app needs to run on it.
+**Kiosk Mode** pins a selected Enterprise or Google Play Store app to the device unless the user exits kiosk mode. This is useful for cases in which the device will be used for a single purpose (for example, as an airport kiosk) and only the selected app needs to run on it.
 
-:::tip 
-For an optimal Kiosk mode implementation other Compliance Policy configurations need to be properly set. See this [technical article](https://blog.esper.io/kiosk-on-esper) for more details.
-:::
+***Tip: For an optimal Kiosk Mode implementation, other Compliance Policy configurations need to be properly set. See this [technical article](https://blog.esper.io/kiosk-on-esper) for more details.***
 
-In **Multi application mode**, the device user is free to use any Enterprise or Google Play app approved and installed using Esper.
+In **Multi-Application Mode**, the device user is free to use any Enterprise or Google Play app approved and installed using Esper.
 
 ### Advanced Settings
 
@@ -1064,29 +1038,30 @@ Clicking on **Advanced Settings** will launch a dialog box in which you can sele
 
 ![Launcher](./assets/NewConsole/Launcher.png)
 
-Most users will use the default setting: the Esper DPC Launcher. If you select **Esper DPC Launcher**, the Esper Device agent will take administrative control of the device and only approved apps will be able to be installed or used. All the features of Esper Device agents will be functional. This gives you more control over the apps that can be used and the actions that can be taken on the device.
+Most users will use the default setting: The Esper DPC Launcher. If you select **Esper DPC Launcher**, the Esper Device agent will take administrative control of the device, and only approved apps will be able to be installed or used. All the features of Esper Device agents will be functional. This gives you more control over the apps that can be used, and the actions that can be taken on the device.
 
-If you select **Default Android Launcher**, the default Android launcher will be used. The device user will be able to exit the Esper Agent (DPC) as they would any other Android app. DPC will continue to run in the background and provide some device management, but many management features will not be available. Specifically, the following will be unavailable:
-   - Capture Screenshot
-   - Remote View and Remote Control
-   - Over-the-Air OS updates for Esper Enhanced Android OS
-   - Latest Device Agent updates for Devices with Android version less than 6.0
+If you select **Default Android Launcher**, the default Android launcher will be used. The device user will be able to exit the Esper Agent (DPC) as they would any other Android app. DPC will continue to run in the background and provide some device management, but many management features will not be available.
+
+Specifically, the following features will be unavailable:
+   * Capture Screenshot
+   * Remote View and Remote Control
+   * Over-the-Air OS updates for Esper Enhanced Android OS
+   * Latest Device Agent updates for Devices running an Android version less than 6.0
    
-The device screen will look and act much like a regular Android device with Esper Device Agent showing up as an app that can be opened and closed.
+The device screen will look and act much like a regular Android device, with the Esper Device Agent showing up as an app that can be opened and closed.
 
 ![EsperApp](./assets/NewConsole/DeviceEsperApp.png)
    
-Even when the device user has exited Esper Device Agent they‘ll be able to see it running in the background in the notification bar. This feature is for very specific use cases, if you are unsure whether you should use the Default Android Launcher please contact Esper.
-There is also a checkbox that allows you to include or bypass Google Play setup during provisioning on GMS devices. If this is unchecked, the Google Play store will not be set up on the device—reducing provisioning time dramatically. If you have enrolled the device into a Managed Google Play account, the default value for this is on; if the endpoint is not enrolled then the default is off. It does not apply to Android Open Source Project devices that are non-GMS.
+Even when the device user has exited Esper Device Agent, they‘ll be able to see it running in the background in the notification bar. This feature is for very specific use cases. If you are unsure whether you should use the Default Android Launcher please contact Esper.
+
+There is also a checkbox that allows you to include or bypass Google Play setup during provisioning on GMS devices. If this is unchecked, the Google Play store will not be set up on the device, reducing provisioning time dramatically. If you have enrolled the device into a Managed Google Play account, the default value for this is set to On'; if the endpoint is not enrolled, then the default is 'Off'. It does not apply to Android Open Source Project devices that are non-GMS.
 Once you have made your selection, click **Close**.
 
 **Preloaded Apps**
 
 Android devices normally come with a number of apps loaded onto them in ROM. This field enables you to select which of these will be available on the device after provisioning. Enter the package names of any preloaded apps you want to show up into this field. Package names must be separated by commas.
 
-:::tip
-One easy way to find the package names is to provision one of your devices and then view the Preloaded Apps on that device—the package name for each app will be listed. You can also use ADB as well. You currently can not set a Preloaded App as the Kiosk mode app via a Provisioning Template, but you can do so at the Device level after the device has been provisioned.
-:::
+***Tip: One easy way to find the package names is to provision one of your devices and then view the Preloaded Apps on that device. The package name for each app will be listed. You can also use ADB as well. You currently cannot set a Preloaded App as the Kiosk mode app via a Provisioning Template, but you can do so at the Device level after the device has been provisioned.***
 
 ![Preloaded Apps](./assets/NewConsole/PreloadedApps.png)
 
@@ -1094,22 +1069,19 @@ One easy way to find the package names is to provision one of your devices and t
 
 The **Esper Cloud Apps** tab gives you the ability to load any Enterprise apps and approved Managed Google Play apps onto the device when it is provisioned. These apps must have been previously uploaded to Esper as an Enterprise app through Apps or previously approved through Managed Google Play.
 
-:::tip
-Before using a managed Google Play account, you need to set up a Managed Google Play account through Esper.
-Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select it from the dropdown menu, then select the version, and click on Add to add it to your template.
-:::
+***Tip: Before using a managed Google Play account, you need to set up a Managed Google Play account through Esper.
+Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select it from the dropdown menu, then select the version, and click on Add to add it to your template.***
 
 ![App Version](./assets/NewConsole/EsperCloudAppVersion.png)
  
 **Play Store Apps**
 
-The Play store apps section of the Your App tab gives you the ability to load approved apps from the Google Play Store onto the device as it is provisioned. This section will only appear if you have enrolled your endpoint in [Managed Google Play]. These apps must have been approved through Play for Work before they can be selected here. Simply click on the approved Play Store app you wish to install, and it will be added to the list of apps.
+The 'Play Store Apps' section of the 'Your Apps' tab gives you the ability to load approved apps from the Google Play Store onto the device as it is provisioned. This section will only appear if you have enrolled your endpoint in [Managed Google Play]. These apps must have been approved through Play for Work before they can be selected here. Click on the approved Play Store app you wish to install, and it will be added to the list of apps.
 
 ![PlayStore Apps](./assets/NewConsole/PlayStoreApps.png)
    
-:::tip 
-If you include a Google Play Store app in your template but use it to provision a non-GMS device without support for Google Play, the app will not be installed when provisioned.
-:::
+***Tip: 
+If you include a Google Play Store app in your template but use it to provision a non-GMS device without support for Google Play, the app will not be installed when provisioned.***
 
 **Play Store Tab**
 
