@@ -2975,44 +2975,44 @@ The Google Account Restriction feature is applicable only to Google Mobile Servi
 
 **Factory Reset Protection** 
 
-Factory Reset Protection (FRP) enables you to lock a device if a user factory resets it via soft/hard keys on GMS devices. In case of a factory reset, the device will get locked and can only be unlocked by entering a pre-authorized google account ID. Additional information about how to get your Google Account ID is available in the [Compliance Policy section](./console.md#compliance-policy).
+Factory Reset Protection (FRP) places an auto-lock on a GMS-certified device if a user factory resets it with soft or hard keys. FRP will auto-lock the device and keep it locked until a pre-authorized Google account ID is entered. Additional information about getting your Google Account ID can be found in the [Compliance Policy section](./console.md#compliance-policy).
 
-When you turn on the FRP button, you’ll need to enter the Google ID of the account you want to use to authorize post factory resets on the devices provisioned with this template.
+When you turn on the FRP button in the provisioning template, you’ll need to pick a Google account to authorize future device unlocks. Your chosen Google account ID will reverse any future auto-lock events triggered by user factory resets for all devices provisioned with this template.  
 
 ![CompliancePolicy](./assets/NewConsole/SettingsFactoryReset.png)
 
-:::tip
-This feature is only available on GMS devices running Android 5.1 and above.
-:::
+***Tip:
+Factory reset protection is only available on GMS devices running Android 5.1 and above.***
 
 **Lock Screen**
 
-If Lock Screen is on, it enables the default “lock screen” to be displayed upon a screen timeout as specified in the Settings section. If this is on, the device user will have the option to set the password. If [Lock screen password](./console.md#creating-a-new-compliance-policy) rules are defined, the device user will be required to enter a password that conforms with these rules.
+The lock screen template setting enables the default lock screen to be displayed whenever a device screen times out, according to the default time out specified in the Settings section. If this is on, the device user will have the option to set the password. If [Lock screen password](./console.md#creating-a-new-compliance-policy) rules are defined, users must enter a password that conforms with these rules.
 
 **Safe-Mode Login**
 
-When Safe-mode login is on, users will be able to boot to Safe Mode on their device; when Safe-mode login is off, users will be unable to boot to Safe Mode.
+When Safe-Mode login is on, users will be able to boot to Safe Mode on the device; when Safe-Mode login is off, users will be unable to boot to Safe Mode.
 
 **Factory Reset**
 
-Factory Reset controls whether or not the user can perform a factory reset on the device using the Android Settings app. When Factory Reset is off, the user will not be able to perform a factory reset on the device. This does not prevent a hard-key factory reset, see [Factory Reset Protection](./console.md# to prevent hard-key factory reset.
+Factory Reset controls if users can perform a factory reset using the Android Settings app. When Factory Reset is off, the user will not be able to perform a factory reset on the device. This does not prevent a hard-key factory reset, see [Factory Reset Protection](./console.md# to prevent hard-key factory reset.
 
 **Notification Bar**
 
-If you want device users to be able to swipe down to see the notification bar, set Notification Bar to **ON**. If you don’t, set it to **OFF**. You will typically want this off for Kiosk mode-based solutions. 
-Conversely in most cases a user is required to submit a Bug Report that was requested through Esper via the Notification Bar, thus inaccessible with the Notification Bar turned off.
+If you want device users to be able to swipe down to see the notification bar, set Notification Bar to on. If you don’t, set it to off. You will typically want notification bar turned off for Android kiosk mode. 
+But, you may choose to leave this setting on if you will request bug report submissions from device users. User bug report requests from Esper generally must be sent via notification bar. 
+
 
 **Screenshot**
 
-If you want device users to be able to take screenshots, set Screenshot to **ON**. If you don’t, set it to **OFF**. This will prevent users from initiating a screenshot using the appropriate hardkey sequence or available softkey on the device.
+If you want device users to be able to take screenshots, set Screenshot to on. If you don’t, set it to off. Turning this setting off blocks users from taking a screenshot using hardkey sequence or available softkeys.
 
 **USB Connectivity**
 
-USB connectivity allows users to connect USB devices—things like flash drives, digital cameras, mice, or keyboards—to the device. If you want device users to be able to connect other hardware to the device, set USB Connectivity to on. If you don’t, set it to off.
+USB connectivity allows users to connect USB devices, such as flash drives, digital cameras, mice, or keyboards, to the device. If you want device users to be able to connect other hardware to the device, set USB Connectivity to on. If you don’t, set it to off.
 
 **SMS**
 
-SMS controls the ability of the device to send or receive text messages via short-message service (SMS). If it is turned Off, the device will not send or receive text messages regardless of which SMS app is used. Set SMS to on if you wish to enable the device to send and receive text messages via SMS.
+SMS controls sending and receiving of SMS, or text, messages. If SMS is turned off, the device will not send or receive text messages from any SMS app. Set SMS to on if you wish to enable sending and receiving of text messages.
 
 **Outgoing Calls**
 
@@ -3022,71 +3022,72 @@ If you want device users to be able to make outgoing calls, set Outgoing Calls t
 
 If you want device users to be able to use the camera, set Camera Access to on. If you don’t, set it to off.
 
-:::tip
-Your app will still be able to access the camera if this setting is set to off.
-:::
+***Tip
+Your app can still access the camera if this setting is set to off.***
 
 **NFC**
 
-If you want device users to be able to use near-field communication (NFC) on their devices—on those devices that support NFC—set NFC to on; if you don’t, set it to off. If any of your apps require NFC, make sure this setting is set to on.
+If you want device users to use near-field communication (NFC) on their devices when supported, set NFC to on; if you don’t, set it to off. If any of your apps require NFC, make sure this setting is on.
 
 **Google Play Store**
 
-If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to **On**; if you don’t, set it to **Off**. You’ll still be able to install any approved Google Play Store apps from Esper onto the device. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.
+If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to **On**; if you don’t, set it to **Off**. 
+
+You’ll still be able to install any approved Google Play Store apps from Esper on if Play Store is turned off. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.
 
 **USB Tethering**
 
-USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to **On**; if you don’t, set it to **Off**.
+USB tethering specifies if the user can share a mobile connection to another device such as a laptop. If you’d like device users to share a mobile connection with other devices, set the USB tethering to **On**; if you don’t, set it to **Off**.
 
 **Edit Date and Time**
-If you’d like device users to be able to set the date and time on the device, set the Edit Date and Time setting to **On**; if you don’t set it to **Off**.
+If you’d like device users to be able to set device date and time, set the Edit Date and Time setting to **On**; if you don’t set it to **Off**.
 
 **Application Uninstall**
 
-Setting Application uninstall to **On** will block app uninstallation both locally on the device and using Esper. Set it to **off** if you need to be able to uninstall applications remotely using Esper. 
+Setting Application Uninstall to **On** will block app uninstalls locally on the device and via Esper's cloud console. Set it to **off** if you need to uninstall apps remotely. 
 
-:::tip
-With this set to ON you will still be able to update your application installed on the device using Esper.
-:::
+***Tip:
+You can update your application installed on the device using Esper if Application Uninstall is set to ON.***
 
 **USB File Transfer**
 
-If you’d like device users to be able to transfer files to or from the device using a USB cable or flash drive, set USB file transfer to **On**; if you don’t, set it to **Off**.
+If you’d like device users to be able to transfer files from the device using a USB cable or flash drive, set USB file transfer to **On**; if you don’t, set it to **Off**.
 
 **Google Assistant**
 
-If you’d like device users to be able to use voice command via Google Assistant on devices where this is supported, set Google Assistant to **On**; if you don’t, set it to **Off**.
+If you’d like device users to be able to use voice command via Google Assistant on supported devices, set Google Assistant to **On**; if you don’t, set it to **Off**.
 
-:::tip
-On a few devices, this setting may need to be on if you wish to have Google Play Store show up on the device. 
-:::
+***Tip:
+On some devices, this setting may need to be on if you wish to have Google Play Store show up on the device.***
 
 **Local App Install**
 
-This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. **Settings >Apps and Notifications > Special App Permissions> Install Unknown Apps** and choose the route they wish to install the apps from. For example, if the device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned off, the device user will not be allowed to install apps from any unknown sources.
+This feature allows installation of apps from unknown sources on the device. To enable this on the device, the user needs to follow these instructions. **Settings >Apps and Notifications > Special App Permissions> Install Unknown Apps** and choose the route they wish to install the apps from. 
+
+For example, if the device user chooses Chrome, they will be able to download and install apps from the Chrome browser on the device. If turned off, the device user will not be allowed to install apps from any unknown sources.
 
 **Restrict Incoming and Outgoing Calls**
 
-Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
+Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two checkboxes:
 
    - Restrict incoming calls to uploaded contacts only
    - Restrict outgoing calls to uploaded contacts only
    
 ![CompliancePolicy](./assets/NewConsole/TemplateCustomDialer.png)
 
-Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file.
+Selecting one or both checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to upload to the device using a .csv file.
 
-:::tip 
-All numbers must be preceded by +country code (for example +1 for US). All numbers must be separated by comma.
-:::
+***Tip:
+All numbers must be preceded by +country code (for example, +1 for US). All numbers must be separated by comma.***
 
 ### ADB
 
-Android Debug Bridge (ADB) is a command-line tool that enables developers to use a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via **Devices > Device > Settings** for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB can not be turned on from Settings. Most stock Android devices will require opening the port on the device for the Esper agent to set up a secure connection to the Esper Cloud for ADB debugging. You can find out more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
+Android Debug Bridge (ADB) is a command-line tool that provides a Unix shell to communicate with an Android device. If the ADB option is checked in the device’s Compliance Policy, you may turn on ADB via **Devices > Device > Settings** for a configurable time period. If the ADB option is unchecked in the Compliance Policy, ADB cannot be turned on from Settings. 
 
-:::tip
-We never allow turning on ADB from the device on any Esper-provisioned device.
-:::
+Opening the device ADB port is required on most stock Android devices before the Esper agent can securely connect to the Esper Cloud for ADB debugging. Learn more about using ADB with Esper [here](./console.md#connecting-to-a-device-using-secure-remote-adb).
+
+***Tip
+Turning on ADB from the device is never allowed on any Esper-provisioned device.***
 
 ### Resetting to Default Settings
 
@@ -3095,7 +3096,7 @@ When you are satisfied with your compliance settings, click **Next**.
 
 ### Duplicating a Compliance Policy
 
-If you’d like to base a new Compliance Policy on an existing Compliance Policy, click on the copy icon (two boxes) in the Compliance Policy list view. A duplicate will be made you can then edit, rename, and modify as needed.
+If you’d like to base a new Compliance Policy on an existing Compliance Policy, click on the copy icon (two boxes) in the Compliance Policy list view. You can then edit, rename, and modify the duplicate policy.
 
 ![CompliancePolicy](./assets/NewConsole/CompliancePolicyCopy.png)
 
@@ -3105,46 +3106,48 @@ If you’d like to edit an existing Compliance Policy, click on the **Edit** ico
 
 ![CompliancePolicy](./assets/NewConsole/CompliancePolicyEdit.png)
 
-**NOTE**: When a Compliance Policy has already been applied to devices, it can’t be edited, and the icon will be grayed out on the menu.
+**NOTE**: When a Compliance Policy is applied to devices, it can’t be edited. The icon will be displayed in gray on the menu.
 
 ![CompliancePolicy](./assets/NewConsole/CompPolicyMessage.png)
 
 ## Reports
-Your Esper Console provides reports on the performance of the devices and groups of devices it manages. The Reports section explains how these reports work and how they can be customized to better meet your needs.
+Your Esper Console provides reports on device and device group performance. The Reports section explains how these reports work and how to customize your reporting.
 
 ![Report](./assets/NewConsole/Reports.png)
 
 ### Daily Reports
 
-Esper automatically generates a daily report for your fleet. The **Reports** section lists the available **Daily Reports**, with the most recent reports being at the top of the list. To view a Daily Report, click on the **View** icon in line with its listing or click on **Daily Reports** under **Report type**. To download a Daily Report in a CSV file format, click the **Download** icon in line with its listing.
+Esper automatically generates a daily report for your fleet. The **Reports** section lists available **Daily Reports**. The most recent reports are filed at the top of the list. To view a Daily Report, click the **View** icon  or click **Daily Reports** under **Report type**. 
+
+To download a Daily Report in a CSV file format, click the **Download** icon next to the report listing.
 
 ![Report](./assets/NewConsole/DailyReports.png)
 
 The Daily Report lists the following information:
 
-   - Number of Registered devices, e.g. devices provisioned on your endpoint
+   - Number of Registered devices, or devices provisioned on your endpoint
    - Peak number of active devices
-   - Number of newly provisioning devices, e.g. within the last 3 days
+   - Number of newly provisioned devices, or devices provisioned within the last 3 days
 
-For each group, it also lists: 
+For each device group, it also lists: 
 
    - Number of Registered devices
    - Number of Active devices
    - Number of Inactive devices
-   - Newly provisioned devices
+   - Newly Provisioned devices
 
 Clicking > next to one of the groups will give you additional detail about the devices in that group: 
 
 ![Report](./assets/NewConsole/ReportDetails.png)
 
-This view lists the following details per device:
+The additional details view offers the following data for each device:
 
    - Device name
    - Serial number
    - Status
-   - Registered on
-   - Location as of the report date
-   - Whether or not the device has recently changed location
+   - Registration date
+   - Location on the report date
+   - Recent changes to device location
    - Brand
    - Model
    - Any tags assigned to the device
@@ -3155,25 +3158,25 @@ This information can also be downloaded as a .pdf file, an Excel spreadsheet, or
 
 ### Custom Reports
 
-You can generate custom reports that cover a specific period of time. To generate a custom report, click the **Custom Reports** tab.
+You can generate custom reports to cover a specific period of time. To generate a custom report, click the **Custom Reports** tab.
 
 ![Report](./assets/NewConsole/ReportsCustom.png)
 
-Select the device group you want to be covered by the report from the **Select Device Group** dropdown menu. Click the **Start Date** box to enter the beginning of the reporting period. Click the **End Date** box to enter the end of the reporting period. Then click **Generate Report**.
+Select the device group you want included in your report from the **Select Device Group** dropdown menu. Click the **Start Date** box to enter the beginning of the reporting period. Click the **End Date** box to enter the end of the reporting period. Click **Generate Report**.
 
 ![Report](./assets/NewConsole/ReportsCustomConfigure.png)
 
-This Custom Report will contain the same information as the Daily Report, but it will cover the specified time period and groups.
+This Custom Report will contain the same information as the Daily Report, but it will cover the time period and groups you specified.
 
 ![Report](./assets/NewConsole/ReportDaily.png)
 
 ### Subscribing to Reports
 
-You can subscribe via email to the reports automatically generated by the system. To subscribe, click the **Email subscription** button at the top right of the Reports window.
+You can subscribe via email to automatically generated system reports. To subscribe, click the **Email subscription** button at the top right of the Reports window.
 
 ![Report](./assets/NewConsole/ReportsEmailSubscription.png)
 
-The **Email subscription** pane will slide in from the right. Enter the email addresses for any users into the **Enter your email ID** field. You can enter multiple email addresses into the field; simply use commas to separate them. Then click **Subscribe**.
+The **Email subscription** pane slides in from the right. Enter user email addresses in the **Enter your email ID** field. You can enter multiple email addresses into this field, just use commas to separate them. Click **Subscribe**.
 
 ![Report](./assets/NewConsole/ReportsEmail.png)
 
@@ -3181,21 +3184,21 @@ To unsubscribe users from the daily report email, click on the checkboxes next t
 
 There are some limitations to the report email subscription service:
    
-   - A maximum of ten subscriptions can be done for each endpoint.
+   - A maximum of ten subscriptions can be created for each endpoint.
    - Duplicate email addresses are not allowed.
  
- All subscriptions will be subjected to an automated check for invalid email address format and for invalid domains.
+ All subscriptions will be subject to an automated check for invalid email address format and invalid domain.
 
 
 ## Geofence
 
-Geofencing lets you use a device’s location—generated by GPS—to trigger an alert when the device enters or leaves a defined area. Geofencing enables you to make sure a fleet of delivery devices stay in their delivery zone, warehousing devices don’t stray far from the warehouse, and restaurant ordering devices don’t leave the restaurant.
+Geofencing lets you use a device’s location — generated by GPS — to trigger an alert when the device enters or leaves a defined area. Geofencing can offer protection against theft, loss, and unauthorized use. 
 
-In order for geofencing to work, the mobile device needs internet connectivity and location services enabled. Thus geofencing is typically used for cellular-connected devices with high accuracy location services enabled—whether smartphones or tablets.
+In order for geofencing to work, you must enable device internet connectivity and location service. Geofencing is typically used for cellular-connected devices with high accuracy location services enabled, such as  smartphones or tablets.
 
 ![Geofence](./assets/NewConsole/GeofenceLockdown.png)
 
-Any geofencing you have set up will be shown in list view. If you prefer to see them as tiles, click on the **Tile View** icon.
+Any geofencing you set up is included in list view. If you prefer to see geofences as tiles, click on the **Tile View** icon.
 
 ![Geofence](./assets/NewConsole/GeofenceSummary.png)
 
@@ -3203,7 +3206,7 @@ To look at an existing geofence, click on its name in the list. This will bring 
 
 ![Geofence](./assets/NewConsole/GeofenceMapView.png)
 
-To view the devices on the fence—that is, the devices subject to that geofence—click **Devices on Fence**.
+To view the devices in relationship to your geofence, click **Devices on Fence**.
 
 ![Geofence](./assets/NewConsole/GeofenceSuccess.png)
 
@@ -3215,7 +3218,9 @@ To set up a geofence, click on **New Geofence**.
 
 ![Geofence](./assets/NewConsole/GeofenceNew.png)
 
-Enter the address for the center of the circle in the **Location** field; the map will adjust to center the address. Use the slider to set the radius of the geofence. The geofence is a circle; its radius can be as small as 100 meters and as large as 10 kilometers. Note that GPS can drift and jump, thus a geofence smaller than 100m can cause false positives. Enter a name and description in the appropriate fields and click **Next**.
+Enter the address for the center of the circle in the **Location** field; the map will adjust to center the address. 
+
+Next, use the slider to set the geofence radius. The geofence is a circle; its radius can be as small as 100 meters and as large as 10 kilometers. Note that GPS can drift and jump, thus a geofence smaller than 100m can cause false positives. Enter a geofence name and description and click **Next**.
 
 ![Geofence](./assets/NewConsole/GeofenceMap.png)
 
@@ -3223,51 +3228,52 @@ Click the check box next to each device you’d like to assign to this geofence 
 
 ![Geofence](./assets/NewConsole/GeofenceAssignDevices.png)
 
-To define the action to be taken whenever a device leaves the geofence, click **Lock Devices**, **Beep**, or both and click **Create**.
+To define the action when a device leaves the geofence, click **Lock Devices**, **Beep**, or click both and click **Create**.
 
 ![Geofence](./assets/NewConsole/GeofenceActions.png)
 
-If you chose to Lockdown the device, the user will see the following screen if the device is taken outside the geofence boundary:
+If you chose to Lockdown the device, a lock screen will be displayed if the device is taken outside the geofence boundary:
 
 ![Geofence](./assets/NewConsole/DeviceGeofence.png)
 
-:::tip
-The performance of Geofencing is dependent on the accuracy of the GPS built into the devices. Additionally, ability to track location of the device is also dependent on Wi-Fi, Bluetooth, cellular connectivity, and internet connectivity of the device. This feature is not supported for Android version 4.x.
-:::
+***Tip
+Geofencing performance depends on the quality of GPS built into the devices. Also, your ability to track device location is dependent on Wi-Fi, Bluetooth, cellular connectivity, and internet connectivity. Geofencing is not supported for Android version 4.x.***
 
 ## Pipeline
 
-Esper Pipeline enables you to ensure smooth completion of actions on large fleets of devices by providing a way to automate them. Using a pipeline you define the stages through which the actions must go and the events that trigger each of those stages, providing an effective way to control complex or large processes.
+Esper's Android DevOps Pipeline automates rollouts and rollbacks to large fleets of devices. Pipelines define stages and events that trigger each stage to control complex or large processes.
 
-Esper Pipeline currently only supports app installation and requires a break of 5 or more seconds between the completion of one state and the triggering of the next.
+Esper's Pipeline currently only supports app installation. A five-second break is required after completing each pipeline stage.
 
 ![Pipeline](./assets/NewConsole/PipelineSummary.png)
 
-Pipeline lets you specify any number of stages or operations for automating a given task—reducing the manual work to do so step by step.
+You can specify any number of pipeline stages or operations to automate a task. 
 
 ![Pipeline](./assets/NewConsole/PipelinePreview.png)
 
 ### Creating a Pipeline
 
-To create a new pipeline, click on **New Pipeline**.
+To create a new pipeline, click **New Pipeline**.
 
 ![Pipeline](./assets/NewConsole/PipelineNew.png)
 
-Enter a name for your new pipeline in the **Name your pipeline** field. Enter a description in the **Add description** field. Then click **Next**.
+Enter a name for your new pipeline in the **Name Your Pipeline** field. Next, enter a pipeline description in the **Add Description** field. Click **Next**.
 
 ![Pipeline](./assets/NewConsole/PipelineCreate.png)
 
-Select the trigger that will set your pipeline in motion from the **Select the trigger** dropdown menu. Any time the defined trigger occurs—through the dashboard, through an API call, or through a CLI command—the pipeline will automatically start running. For V1 we currently only support the trigger where a new Enterprise app version is uploaded to the Esper Cloud. 
+Select a trigger to automatically initiate your pipeline from the **Select the Trigger** dropdown menu. 
 
-Select the app you would like to use as a trigger from the **Select the app** dropdown menu and click **Next**.
+Any time your chosen trigger occurs via console, API call, or CLI command, your pipeline will automatically start running. The only trigger supported in V1 pipelines is new enterprise app version uploads to the Esper cloud. 
+
+Select the app you would like to use as a trigger from the **Select the app** dropdown menu. Click **Next**.
 
 ![Pipeline](./assets/NewConsole/PipelineTrigger.png)
 
-Next, define the stages your pipeline will go through once triggered. For each state, give a name and description, then add the operations that are to take place. For each operation, you then need to give a name and description, an operation type, and select a group of devices on which the operation will occur.
+Next, define the pipeline stages that will occur post-trigger. Give a name and description for each stage. Next, define the operations that will take place during each stage. Add an operation name and description, an operation type, and select a target device group.
 
-Currently these operations are limited to uninstalling apps.
+Currently, pipeline operations are limited to uninstalling apps.
 
-You can create any number of stages to accommodate the process you are automating. When your pipeline is complete, click on **See Preview**.
+You can pick the right number of pipeline stages for your process automation requirements. When your pipeline stages and operations are complete, click on **See Preview**.
 
 ![Pipeline](./assets/NewConsole/PipelineAddStage.png)
 
@@ -3275,7 +3281,7 @@ You can create any number of stages to accommodate the process you are automatin
 
 If your pipeline is ready, click **Done**.
 
-Your pipeline can be edited later as necessary.
+You can edit your pipeline later.
 
 ![Pipeline](./assets/NewConsole/PipelinePreview.png)
 
@@ -3293,74 +3299,75 @@ To delete a pipeline, click the ellipsis (...) on its tile and select **Delete**
 
 ## Company Settings
 
-The Company Settings section displays your company’s information. You can edit your company’s information by clicking on the **Edit Profile** button at the top right of the screen.
+The Company Settings section displays your company’s information. You can edit your company’s information by clicking the **Edit Profile** button at the top right of the screen.
 
 ![Company Settings](./assets/NewConsole/CompanySettings.png)
 
-Please enter the following:
+Please enter the following company information to complete all fields:
    
    - Registered name
    - Location
    - Name
    - Zip code
-   - Email
+   - Primary Email
    - Address
    - Phone number
 
 ### Company Short Code for Device ID
 
-The Company Settings tab also enables you to enter two 3-letter codes called the short code intended for your company name and location, but how you use them are up to you. These will be used as the prefix to name all the devices you control in Esper.
+You can enter two 3-letter codes called short code in the Company Settings tab. Short codes can be an abbreviation for your company name and location. But, you can also customize these codes. Your short codes become a prefix to the name of all devices you control in Esper.
 
 ![Company Settings](./assets/NewConsole/CompanyShortCode.png)
 
-In this example, ESP is a three-letter abbreviation for our company, Esper, and DOC signifies the documentation team.
+In this example, ESP is a three-letter abbreviation for our company, Esper. DOC signifies the documentation team.
 
-Once you’ve entered all the information, click on **Save**.
+Once you’ve entered all the information, click **Save**.
 
-:::tip
-If you change your short code after you’ve provisioned devices, those devices will display the old short code prefix on the device but the new short code will be displayed in the Esper Console and also be used for API, SDK, and CLI calls. Thus it is best to change to your desired short code before you provision any devices.
-:::
+***Tip:
+If you change your short code after you’ve provisioned devices, those devices will display the old short code prefix. But, the new short code will be displayed in the Esper Console and used for API, SDK, and CLI calls. It's a best practice to make changes to short code before you provision any devices.***
 
 ## Esper Enhanced Updates
 
-Esper Enhanced Android devices are devices that are shipped with a customized Android OS that delivers improved security, faster deployment, superior debugging, and a better user experience for single-purpose devices.
+Esper Enhanced Android devices are shipped with custom Android OS for improved security, faster deployments, and superior debugging. Esper's custom Android OS creates a better user experience on single-purpose devices.
 
 ![EEA](./assets/NewConsole/EEA.png)
 
-If you’re using Esper Enhanced Android devices, you can update the operating systems on your devices using our over-the-air (OTA) functionality. To deploy a new available build on a group, navigate to **Group > OS Update**. See the [Group section](./console.md#groups) for more details.
+If you’re using Esper Enhanced Android, you can update device operating systems remotely, or over-the-air (OTA). To deploy an Esper Enhanced Android update OTA, navigate to **Group > OS Update**. Head to [Group section](./console.md#groups) for more details.
 
-:::tip
-Currently only the latest thirty builds of Esper Enhanced Android updates will be listed and available for deployment.
-:::
+***Tip:
+Only the latest thirty build versions of Esper Enhanced Android are listed for deployment.***
 
 ## API Key Management
 
-Esper is focused on helping developers build, deliver, and maintain dedicated-device applications—whether a restaurant kiosk, retail POS, or logistics hub. We have made our APIs available to developers worldwide so they can move repetitive app and device management actions into reusable code. The API key (along with the Enterprise ID) is required to use our Cloud API, Device SDK, Python SDK, and CLI. We also offer the Esper Plugin for the Android Studio with tools improving the challenging task of app diagnostics—including working with deployed apps running on dedicated devices in the field.
+Esper offers a complete set of open APIs to empower devs to build, deploy, and manage single-purpose Android experiences for any use case - including restaurant kiosks, retail POS, and smart fitness gear. Our APIs are available to help Android product devs turn repetitive app and device management tasks into reusable code. 
+
+You'll need an API key and Enterprise ID to use Esper's Cloud API, Device SDK, Python SDK, and CLI. We also offer a Plugin for the Android Studio. The plugin simplifies app diagnostics from the Android Studio IDE, so you can remotely fine-tune apps deployed to field devices. 
 
 ### Generating an API Key
 
-The first step in interacting with our API is to generate an API key you can tie to it. Do this by clicking **Register App**.
+The first step to interact with Esper's API is generating an API key. Click **Register App**.
 
-You can also easily copy the Enterprise ID, necessary for API calls, by clicking on the copy icon next to Enterprise ID on top right of this section.
+Copy your Enterprise ID for API calls by clicking on the copy icon. It's located next to Enterprise ID in the top right of the current section view.
 
 ![API](./assets/NewConsole/APIKeyManagementRegister.png)
 
-Enter a unique app name and description (optional) and click **Register Application**.
+Next, enter a unique app name. Optionally, you can choose to enter an app description. Click **Register Application**.
 
 ![API](./assets/NewConsole/AppRegister.png)
 
-Click **Generate Token**. This will generate a unique OAuth-based API key.
+Last, click **Generate Token**. This will generate a unique, OAuth-based API key.
 
 ![API](./assets/NewConsole/AuthAccessTokenGenerate.png)
 
-You can then copy (or renew if needed) your API key. API keys need to be renewed every 3 months.
+Now, you can copy your API key or renew it. API keys need to be renewed every 3 months.
 
 ![API](./assets/NewConsole/AuthAccessToken.png)
 
-You will need your API key and Enterprise ID to access our [CLI platform](https://github.com/esper-io/esper-cli) as well as to use the [SDK/API](https://api.esper.io/) in your development and management systems.
+You will need your API key and Enterprise ID to access our [CLI platform](https://github.com/esper-io/esper-cli) or the [SDK/API](https://api.esper.io/).
 
-You can find additional information about this process by clicking on [Developer Hub](https://docs.esper.io/) and [API Documentation](http://api.esper.io/).
+You can find additional information about Generating API keys in [Developer Hub](https://docs.esper.io/) and [API Documentation](http://api.esper.io/).
 
-:::tip
-An API key is tied to the user account used to create the key. If you delete a user via User management, then any API keys associated with that user will also be deleted and will be immediately invalidated for API, SDK, and CLI use. To avoid the situation where API keys are unintendedly deleted when a user account is deleted, a best practice is to create a specific user account just for API key management. The Enterprise ID is specific to your endpoint and does not change.
-:::
+***Tip:
+An API key is tied to the user account that created the key. If a user is deleted, all API key(s) created by that user are also deleted and becomey invalid for API, SDK, and CLI use. 
+To avoid a situation where API keys are accidentally deleted at the same time as a user account, create a user account to manage API keys.
+***
