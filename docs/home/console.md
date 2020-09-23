@@ -1377,9 +1377,9 @@ Click **View on Maps** to see the location of the device on a map:
 
 ![MapView](./assets/NewConsole/Maps.png)
 
-#### Add or Edit tags
+#### Add or Edit Tags
 
-Click on **Add tags** to add tags to the device. Tags can make it easier to identify devices in a specific location, types of devices, Wi-Fi, SSID or any other information that would be useful. If a tag already exists for a device, the drop down choice changes to **Edit Tags**. You can also click on **+ ADD A TAG** on the tile itself to add or edit tags. *Note: This option only shows if one or more tags are available to be added to that device.*
+Click on **Add Tags** to add tags to the device. Tags can make it easier to identify devices in a specific location, types of devices, Wi-Fi, SSID or any other information that would be useful. If a tag already exists for a device, the drop down choice changes to **Edit Tags**. You can also click on **+ ADD A TAG** on the tile itself to add or edit tags. *Note: This option only shows if one or more tags are available to be added to that device.*
 
 When you click **Add Tags**, the following pop up will appear: 
 
@@ -1395,7 +1395,7 @@ If tags already exist for a device, you’ll also be able to edit or delete exis
 
 Click the pencil icon next to a tag to edit it; and click the garbage can icon to delete it. You may edit or delete the tags using actions. 
 
-Upon clicking, the text box lets you edit and update the tag.
+Upon clicking, the text box lets you edit and update the tag as shown below.
 
 #### Remove from Group
 
@@ -1415,12 +1415,38 @@ The new device name will appear in all Console views, including the device home 
 This name is actually an alias; we’ll still continue to use the Device ID under the hood. 
 You can revert it to its original Device ID at any time using this same technique.
 
+#### Filter Button
+
+You can also apply filters to your Grid view by clicking on the **Filter** button. 
+You can filter the list of devices managed by your console by category. To do so, check the boxes next to the categories you would like displayed.
+
+You can filter by multiple values of each value. For example, you can choose Group A, Policy B and Online and Offline devices which will give you a filtered list of devices in Group A which are Online and Offline and have policy B applied on them.
+
+Once you select the filter parameters, click **Apply** to update the Grid view. 
+
+Custom filters to Device List view are stored locally via browser caching. Your sort preferences will be applied automatically when you return to this page unless you update your preferences or clear your cache. You can return to the unfiltered view by clicking **Reset.**
+
+### Download Devices List Button
+
+Clicking the **Download Devices List** button enables you to download the device data for your current set of devices in Grid View to an CSV or Excel spreadsheet. 
+
+*Note: Currently, this feature is only supported for customers with up to 500 devices.*
+
+### Device Details Button
+
+Clicking the **Device Details** icon when no devices are selected brings a slide out from the right side of the screen listing the history of all commands fired by any user for the devices on the Grid. This section is named as Activity Feed. 
+
+Clicking **View Results** will show more details (including the current status) of each command. It provides details of each command—including the devices that are currently in an In progress, Success, Queued, Failed or Cancelled state.
+
+If you’ve selected a single device, clicking the **Device Details** icon will show the details and activity for that device. The Activity tab will show all activities done on that device. If you selected more than one device, no details will be shown.
+
 ### List View
 
-Once you have enough devices under management, it can become cumbersome to view or sort them in 'Grid View.'
+Once you have enough devices under management, it becomes impractical to view or sort them in Grid view. 
 
-List View enables you to see a list of all devices available on the dashboard along with configurable device information columns 
-including online/offline status, serial number, group name, Android version, and tags.
+List View enables you to see a list of all devices available on the dashboard along with configurable device information columns including alias name, online/offline status, group name, policy name, registered date and tags. 
+
+You can now save your custom device view for a user session including the column configuration, column filters, column sorting, and pagination. 
 
 ![List View](./assets/NewConsole/DeviceListView.png)
 
@@ -1577,7 +1603,7 @@ To go to that device’s Information page, simply click on **View Details**.
 
 ![Reboot](./assets/NewConsole/MapDevice.png)
 
-**Tip: Keep in mind that some devices (such as Wi-Fi only or Ethernet connected devices) may not report an accurate geolocation. The view is currently limited to 100 devices. Once you exceed 100 provisioned devices, this view is no longer available.**
+***Tip: Keep in mind that some devices (such as Wi-Fi only or Ethernet connected devices) may not report an accurate geolocation. The view is currently limited to 100 devices. Once you exceed 100 provisioned devices, this view is no longer available.***
 
 ### Device Details
 
@@ -1597,7 +1623,7 @@ This section provides extensive information about the device, including:
    * Information (device name, last seen on, registered on, GMS/Non-GMS, tags, Group name, applied Compliance Policy (Applied         policy), and applied Provisioning Template (Applied template))
    * Device’s Location (on a map)
    * Software Information (installed Esper client version, security patch level, device kernel version, bootloader version,           Android build number, supported ABI, Android API level, Android build date and Android version)
-   * Hardware information (manufacturer, hardware chip set, brand, serial number, model, baseband version)
+   * Hardware information (manufacturer, hardware chip set, brand, serial number, custom serial number (if available), model, baseband version)
    * Network information (IMEI/MEID, Mac Address, DNS, Wi-Fi Mac ID, Cellular network status, Wi-Fi Access point, Connectivity duration, IP address, Ethernet status)
    * Display Information (resolution, refresh rate)
     
@@ -1633,6 +1659,8 @@ This can be useful when you’re having trouble communicating with the device, o
 
 ![Reboot](./assets/NewConsole/RebootButton.png)
 
+Please note that in order to use this command for Android 4.4 - Android 6, you will need the device manufacturers to provide a platform signature for the Esper plugin. Please contact Esper Support at support@esper.io if you would like to use this feature.
+
 **Screen Lock**
 
 Clicking **Screen Lock** and then **Confirm** will lock the screen on the device. 
@@ -1641,7 +1669,7 @@ This can be used to avoid unwanted usage if the device were ever to fall into th
 
 ![Reboot](./assets/NewConsole/Screenlock.png)
 
-**Heart Beat**
+**Heartbeat**
 
 Esper Managed devices are continuously communicating with our Cloud and updating their statuses every minute. 
 If a device dozes off due to inactivity or a bad network connection, Esper Cloud will regularly wake them and ask for a status update.
@@ -1665,9 +1693,16 @@ In this example, after the device has been locked down, the user will see the fo
 
 After locking down a device, the button will change to Unlock to enable you to unlock the device from the Console.
 
-**Wipe Device**
+**Delete Device from Dashboard**
 
-Click **Wipe Device** to perform a remote factory reset on the device. If you want to wipe the external storage also (if available), select the **Yes** radio button under **Wipe external data?**. Confirm by clicking **Confirm**.
+The **Wipe Device** Command has been renamed to “Remove/Factory Reset,” providing additional capability. 
+
+Users will have an option to “remove devices” from the Esper Dashboard. This is applicable to one or more devices or groups. 
+
+This can be applied from Device Settings, Group Settings & also from List View actions.
+
+There is an option to check, ‘Factory Reset Devices’ (Note that by default this option will be checked). 
+Also, there is an option to check, 'Wipe External Storage.'
 
 ![Reboot](./assets/NewConsole/WipeAction.png)
 
@@ -1676,7 +1711,15 @@ It can also be used if the device’s system has crashed and is unusable.
 Wiping the device will bring it back to its original factory settings so the device can be freshly 
 configured, and the device will be removed from the Esper Cloud.
 
-***Tip: If the device user executes a factory reset directly on the device, the device will still appear in your Esper Endpoint as an offline device. If you re-provision the same device on your Esper Endpoint, it will keep the same Device ID but you will need to re-enter the custom alias and any tags you previously added for the device.***
+From Device settings: 
+
+From Group settings:
+
+From List View actions: 
+
+
+
+***Tip: If the device user executes a factory reset directly on the device, the device will still appear in your Esper Endpoint as an offline device. If you re-provision the same device on your Esper Endpoint, it will keep the same Device ID, but you will need to re-enter the custom alias and any tags you previously added for the device.***
 
 **Device Mode**
 
@@ -1877,7 +1920,7 @@ It displays each command taken on the device, and includes the Esper use that in
 
 ### Device Graphs Tab
 
-This section provides a graphic representation of various telemetry for a specific device over the last 24 hour period. 
+This section provides a graphic representation of various telemetry for a specific device over the last 7 days. 
 
 Fourteen metrics are displayed:
 
@@ -1945,7 +1988,7 @@ The **New App Install** button lets you install new apps on the device.
 
 ![Reboot](./assets/NewConsole/NewAppInstall.png)
 
-A dialog box will slide in from the left:
+A dialog box will slide in from the right:
 
 ![Reboot](./assets/NewConsole/InstallNewApp.jpg)
  
