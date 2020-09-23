@@ -141,7 +141,7 @@ If you’d like to simulate an Android device, click **Simulare Device**. A noti
 
 Capabilities such as Apps, Remote View, and Capture Log may not be available on a simulated device.
 
-:::tip The Simulare feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, [contact us](mailto:support@esper.io). :::
+***Tip: The Simulare feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, please [contact us](mailto:support@esper.io).*** 
 
 Once you enroll and provision your first device, this screen changes to the full Dashboard view.
 
@@ -632,8 +632,6 @@ Esper enables you to use IMEI and serial numbers to enroll and provision your de
 
 You first need to prepare a Provisioning Template, and then go back to either edit the template to [add IMEI and/or serial numbers](./console.md#provisioning-templates) you wish to be provisioned by this template, or upload a CSV file from the Provisioning Template’s tile.
 
-***Tip: A passcode is used to validate that the device’s end user has permission to enroll and provision the device. This passcode is the Dock and Esper Settings app password that is specified in the 'Compliance Policy' screen in your Provisioning Template. If you don’t want a passcode, just leave the 'Password' field blank. Note that doing so will impact accessing the Dock and Esper Settings app -- this is an important consideration if you are running your app in Kiosk mode.***
-
 To begin the process of creating an IMEI and/or serial number enrolled provisioning template, you will need to first perform a [factory reset](./console.md#how-to-factory-reset-your-device) on your device.
 
 Once the factory reset has completed, on the first setup screen, click or tap on **START** (Note that the button's title may be a variation of 'Getting Started,' 'Setting Up Your Device,' or 'Let’s Go').
@@ -971,6 +969,7 @@ See [here](./console/policy-management/getgoogleaccount.md) to know how to get t
 **NFC** <br> If you want device users to be able to use near-field communication (NFC) on their devices (on those devices that support NFC) set NFC to 'On'; if you don’t, set it to 'Off.' If any of your applications require NFC, make sure this setting is set to 'On.' <br/>
 **Google PlayStore**<br>If you want device users to have access to your Managed Google Play Store, set the Google Play Store setting to 'On'; if you don’t, set it to 'Off.' You’ll still be able to install any approved Google Play Store apps from Esper onto the device. This only applies to GMS devices, as AOSP devices do not include Google Play Store support.<br/>
 **USB Tethering**<br>USB tethering specifies if the user is able to use their device to share a mobile connection to another device such as a laptop. If you’d like device users to let their devices share a mobile connection with other devices, set the USB tethering to 'On'; if you don’t, set it to 'Off.'<br/>
+***Tip: Please note that disabling USB tethering also disables Wi-Fi tethering.***
 **Edit Date and Time**<br> If you’d like device users to be able to set the date and time on the device, set the 'Edit Date and Time' setting to 'On'; if you don’t set it to 'Off'.<br/>
 **Application Uninstall**<br> Setting Application uninstall to 'Off' will block app uninstallation both locally on the device and using Esper. Set it to 'On' if you need to be able to uninstall applications remotely using Esper and locally on the device. 
 
@@ -1021,7 +1020,7 @@ The Apps section lets you choose the apps you would like to have installed on yo
 
 ### Kiosk or Multi App Mode 
 
-Begin by clicking a radio button to choose either Kiosk Mode or Multi-Application Mode.
+Begin by clicking a radio button to choose whether you would like to provision your devices in either Kiosk Mode or Multi-Application Mode.
 
 ![AppMode Template](./assets/NewConsole/TemplateAppMode.png)
 
@@ -1030,6 +1029,24 @@ Begin by clicking a radio button to choose either Kiosk Mode or Multi-Applicatio
 ***Tip: For an optimal Kiosk Mode implementation, other Compliance Policy configurations need to be properly set. See this [technical article](https://blog.esper.io/kiosk-on-esper) for more details.***
 
 In **Multi-Application Mode**, the device user is free to use any Enterprise or Google Play app approved and installed using Esper.
+
+### Add Application
+
+The **'Add Application'** section gives you the ability to load any Enterprise apps and approved Managed Google Play apps onto the device when it is provisioned. These apps must have been previously uploaded to Esper as an Enterprise app through **'Apps'** or previously approved through Managed Google Play.
+
+Approved Managed Google Play apps will only appear if you have enrolled your endpoint in Managed Google Play. 
+These apps must have been approved through Play for Work before they can be selected here. 
+Simply find the Play store application you wish to install in the Get Play Store App, and it will be added to the list of apps. 
+Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select it from the dropdown menu, 
+then select the version, and click on **'Add'** to add it to your template.
+
+***Tip: Before using a managed Google Play account, you need to set up a Managed Google Play account through Esper.***
+
+**Note:  If you include a Google Play Store app in your template but use it to provision a non-GMS device without support for Google Play, the app will not be installed when provisioned.**
+
+### Installation Rule
+
+Users can enable faster provisioning by choosing to install a given app during provisioning or afterwards. For applications pinned on boot, the installation rule is set to during provisioning. 
 
 ### Advanced Settings
 
@@ -1070,7 +1087,27 @@ The **Esper Cloud Apps** tab gives you the ability to load any Enterprise apps a
 
 ***Tip: Before using a managed Google Play account, you need to set up a Managed Google Play account through Esper. Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select it from the dropdown menu, then select the version, and click on Add to add it to your template.***
 
+
 ![App Version](./assets/NewConsole/EsperCloudAppVersion.png)
+
+You can access the Advanced Settings section by navigating to 'Provisioning Template,' then select 'Apps,' and finally, click or tap on 'Advanced Settings.'
+
+The second option available pertains to Preloaded Apps in Advanced Settings.
+
+An Esper customer can explicitly set the App state to “Show”, “Hide” or “Disable” after adding a preloaded app package as shown in the screenshot above. In the field below the text “Enter package name of preloaded apps”, users may enter the package name of the apps which are pre-existing in the In-ROM memory of the device as packaged by the hardware manufacturer of the specific device.
+
+**Note:** *One easy way to find the package names in your device is to provision one of your devices and then view the Preloaded Apps on that device—the package name for each app will be listed. You can also use ADB as well. You currently can not set a Preloaded App as the Kiosk mode app via a Provisioning Template, but you can do so at the Device level after the device has been provisioned.*
+
+In this example screenshot, we have added packages “com.facebook.android”, “com.google.android.maps” and “com.chrome.android”. 
+We have set the state of the app as “Show”, “Hide," and “Disable”. 
+
+Show/Hide will simply either show or hide the preloaded app on the device screen. 
+
+By default, after provisioning an Android device on the Esper platform, preloaded apps are hidden. By using this section, users may choose to show them.
+The “Disable” feature lets the IT Admin prevent the app from functioning, unless chosen otherwise. 
+
+This feature to disable preloaded apps is also available via 'Device Settings' as well as during the Device Provisioning process via this section in the Template.
+
  
 **Play Store Apps**
 
@@ -1087,6 +1124,11 @@ For convenience, a **Play Store** tab has been provided on this page where you c
 ![Play Store](./assets/NewConsole/PlayStore.png)
 
 ***Tip: Once you approve a Google Play Store app, you can add it from the list shown in the Provisioning Template under 'Your App.'***
+
+**Upload Apps**
+
+For convenience, an **Upload Apps** option has been provided on this page where you can directly upload the app APK. 
+The Uploaded app will be shown in the ‘Add Application list.’
 
 When you are satisfied with your application's settings, click **Next**.
 
@@ -1197,11 +1239,13 @@ When you are satisfied with your settings, click **Next**.
 
 ### Group section
 
-The Group section lets you assign devices provisioned using this template to an existing group, or to create a new group.
+The *Group* section lets you assign devices provisioned using this template to an existing group, a sub-group, 
+and allows you to create a new sub-group.
 
 ![Template Group](./assets/NewConsole/TemplateGroup.png)
    
-To select an existing group, click the radio button next to its name. If you’d like to create a new group, click **Create a new group**. 
+To select an existing group, click the radio button next to its name. If you’d like to create a new group, click on the ‘+’ Button to create sub-group.
+
 Enter a unique name for the new group into the popup menu that appears. 
 Once the new group is created, it will automatically be selected and used with this template.
 
