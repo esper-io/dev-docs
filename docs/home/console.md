@@ -761,7 +761,7 @@ Provisioning Templates give you a straightforward way to enroll and provision mu
 
 Provisioning Templates are shown as tiles with the most-recently created at the top. You can find templates by name using the **Search Templates** feature:
 
-![Template View](./assets/NewConsole/TemplateView.png)
+![Template View](./assets/NewConsole/udatedprovisioningtemplate.png)
    
 You can access the QR Code for a specific template during Android for Work or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
 
@@ -953,7 +953,7 @@ This setting enables you to restrict the number of Google accounts that can be a
 
 ***Tip: If you don’t check the Google account restrictions box and plan to provision your device in [Multi-application mode](./console.md#kiosk-or-multi-app-mode), we recommend disabling Google Play Store to prevent installation of unapproved apps.***
 
-![Google Account Restrictions](./assets/NewConsole/GoogleAccountRestrictions.png)
+![Google Account Restrictions](./assets/NewConsole/accountrestrictionsupdated.png)
 
 ***Tip: The Google Account Restriction feature is applicable only to Google Mobile Services (GMS) Android devices. If you include the Android Settings App and wish to prevent any Google accounts from being added, set **Number of accounts** to 0.***
 
@@ -1067,7 +1067,7 @@ Users can enable faster provisioning by choosing to install a given app during p
 
 Clicking on **Advanced Settings** will launch a dialog box in which you can select either the Esper DPC Launcher or the default Android launcher.
 
-![Launcher](./assets/NewConsole/Launcher.png)
+![Launcher](./assets/NewConsole/advancedsettingsupdated.png)
 
 Most users will use the default setting: The Esper DPC Launcher. If you select **Esper DPC Launcher**, the Esper Device agent will take administrative control of the device, and only approved apps will be able to be installed or used. All the features of Esper Device agents will be functional. This gives you more control over the apps that can be used, and the actions that can be taken on the device.
 
@@ -1090,39 +1090,30 @@ Once you have made your selection, click **Close**.
 
 **Preloaded Apps**
 
-Android devices normally come with a number of apps loaded onto them in ROM. This field enables you to select which of these will be available on the device after provisioning. Enter the package names of any preloaded apps you want to show up into this field. Package names must be separated by commas.
+Android devices normally come with a number of apps loaded onto them in ROM. The Preloaded Apps section enables you to select which of these will be available on the device after provisioning. 
+
+You can access the Advanced Settings section from Provisioning Template->Apps->Advanced Settings.
+
+![Preloaded Apps](./assets/NewConsole/preloadedappsadvancedsettings.png)
+
+The second section pertains to Preloaded Apps in Advanced Settings:
+
+![Preloaded Apps](./assets/NewConsole/preloadedapps2.png)
+
+An Esper customer can explicitly set the App state to “Show”, “Hide” or “Disable” after adding a preloaded app package as shown in the screenshot above. 
+
+In the field below the text “Enter package name of preloaded apps”, users may enter the package name of the apps which 
+are pre-existing in the In-ROM memory of the device as packaged by the hardware manufacturer of the specific device.
 
 ***Tip: One easy way to find the package names is to provision one of your devices and then view the Preloaded Apps on that device. The package name for each app will be listed. You can also use ADB as well. You currently cannot set a Preloaded App as the Kiosk mode app via a Provisioning Template, but you can do so at the Device level after the device has been provisioned.***
 
-![Preloaded Apps](./assets/NewConsole/PreloadedApps.png)
-
-**Esper Cloud Apps**
-
-The **Esper Cloud Apps** tab gives you the ability to load any Enterprise apps and approved Managed Google Play apps onto the device when it is provisioned. These apps must have been previously uploaded to Esper as an Enterprise app through Apps or previously approved through Managed Google Play.
-
-***Tip: Before using a managed Google Play account, you need to set up a Managed Google Play account through Esper. Once an Enterprise app has been uploaded into your Esper Cloud Endpoint, select it from the dropdown menu, then select the version, and click on Add to add it to your template.***
-
-
-![App Version](./assets/NewConsole/EsperCloudAppVersion.png)
-
-You can access the Advanced Settings section by navigating to 'Provisioning Template,' then select 'Apps,' and finally, click or tap on 'Advanced Settings.'
-
-The second option available pertains to Preloaded Apps in Advanced Settings.
-
-An Esper customer can explicitly set the App state to “Show”, “Hide” or “Disable” after adding a preloaded app package as shown in the screenshot above. In the field below the text “Enter package name of preloaded apps”, users may enter the package name of the apps which are pre-existing in the In-ROM memory of the device as packaged by the hardware manufacturer of the specific device.
-
-**Note:** *One easy way to find the package names in your device is to provision one of your devices and then view the Preloaded Apps on that device—the package name for each app will be listed. You can also use ADB as well. You currently can not set a Preloaded App as the Kiosk mode app via a Provisioning Template, but you can do so at the Device level after the device has been provisioned.*
-
 In this example screenshot, we have added packages “com.facebook.android”, “com.google.android.maps” and “com.chrome.android”. 
-We have set the state of the app as “Show”, “Hide," and “Disable”. 
+We have set the state of the app as “Show”, “Hide”, “Disable”. Show/Hide will simply either show or hide the preloaded app on the device screen. 
 
-Show/Hide will simply either show or hide the preloaded app on the device screen. 
+By default, after provisioning an android device on Esper platform, the preloaded apps are being hidden. By using this section, users may choose to show them.
+The “Disable” feature lets the IT Admin prevent the app from functioning unless chosen otherwise. 
 
-By default, after provisioning an Android device on the Esper platform, preloaded apps are hidden. By using this section, users may choose to show them.
-The “Disable” feature lets the IT Admin prevent the app from functioning, unless chosen otherwise. 
-
-This feature to disable preloaded apps is also available via 'Device Settings' as well as during the Device Provisioning process via this section in the Template.
-
+The feature to disable preloaded apps is also available via 'Device Settings' as well as during the Device Provisioning process via this section in the Template.
  
 **Play Store Apps**
 
