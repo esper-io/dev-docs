@@ -2304,17 +2304,19 @@ You can search for a group by typing the group name in the search box and clicki
 
 ### Viewing Group Details 
 
-Clicking **View Details** on a group tile will give you full details about the group, including all the devices in it. The context for Search is now for the information in Devices, not Group names.
+Clicking **More actions** - **Properties** on a group will take you to the details view.
 
-![Groups](./assets/NewConsole/GroupManage.png)
+![Groups](./assets/NewConsole/GroupDetails.png)
 
 The Group Details view has six tabs that provide access to different actions you can take on the devices in the group.
+
+![Groups](./assets/NewConsole/GroupDetails2.png)
 
 #### The Manage Tab
 
 The Manage tab is the default view for Groups. It shows the device tiles for all the devices in the group.
 
-![Groups](./assets/NewConsole/GroupManage.png)
+![Groups](./assets/NewConsole/ManageTab1.png)
 
 You will find more information about individual devices in the [Devices](./console.md#devices) section of this document.
 
@@ -2329,7 +2331,13 @@ You can filter the list of devices using one or more of six filters:
    
 You may click on “Clear all filters” (extreme right) to view the complete list of devices again. 
 
-![Groups](./assets/NewConsole/ClearAllFilters.png)
+![Groups](./assets/NewConsole/ManageTab3.png)
+
+You may click on “Info Button” (extreme right) to view the Group activity feed. 
+
+![Groups](./assets/NewConsole/ManageTab4.png)
+
+![Groups](./assets/NewConsole/ManageTab5.png)
 
 #### The Settings Tab
 
@@ -2377,17 +2385,17 @@ Click on **See details** and a slide out will appear.
 
 Once the set of ping commands are sent, a success toast will appear in the bottom left hand corner of the screen.
 
-**Wipe**
+**Remove/Factory Reset**
 
-When you click **Wipe**, the Esper Console will send a command to all the devices in the group to reset themselves to original factory settings—much like performing a factory reset. They will be removed from the Esper console. 
+The Wipe Command has been renamed to“Remove/Factory Reset,” providing additional capability. Users will have an option to ‘Remove Devices’ from the Esper Dashboard. 
 
-If you’d like to wipe external data as part of the same command, click the **Yes** radio button under Wipe external Data. Then click **Confirm**.
+When you click **Remove/Factory Reset**, the Esper Console will send a command to all the devices in the group to Factory Reset  For online devices, factory reset will be enabled always. 
 
-![Groups](./assets/NewConsole/WipeConfirmation.png)
+![Groups](./assets/NewConsole/RFR1.png)
 
 A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
 
-![Groups](./assets/NewConsole/Wipe.png)
+![Groups](./assets/NewConsole/RFR2.png)
 
 Click on **See details** and a slide out will appear.
 
@@ -2630,13 +2638,15 @@ After the scheduled installation has been completed, you can see the status of t
 
 ![Groups](./assets/NewConsole/GroupApps.png)
 
-#### Approvals
+#### App State
 
-The **Approvals** section enables you to show, hide or disable in-ROM apps (also referred to as Preloaded apps) on all the devices in the group.
+The **App State** section enables you to show, hide or disable in-ROM apps (also referred to as Preloaded apps) on all the devices in the group.
 
-![Groups](./assets/NewConsole/GroupApprovals.png)
+![Groups](./assets/NewConsole/AppState1.png)
 
-To change the approval status of an app, enter its package name in the box and click **Show, Hide**, or **Disable**.
+To change the app state status of an app, enter its package name in the box and click **Show**, **Hide**, or **Disable**.
+
+![Groups](./assets/NewConsole/AppState2.png)
 
 Click **Apply**. The console will display the group command status.
 
