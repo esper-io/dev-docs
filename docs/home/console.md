@@ -1242,14 +1242,15 @@ When you are satisfied with your settings, click **Next**.
 The *Group* section lets you assign devices provisioned using this template to an existing group, a sub-group, 
 and allows you to create a new sub-group.
 
-![Template Group](./assets/NewConsole/TemplateGroup.png)
+![SubGroups](./assets/NewConsole/SubGroups.png)
    
 To select an existing group, click the radio button next to its name. If you’d like to create a new group, click on the ‘+’ Button to create sub-group.
 
 Enter a unique name for the new group into the popup menu that appears. 
 Once the new group is created, it will automatically be selected and used with this template.
 
-![Create Group](./assets/NewConsole/GroupCreateName.png)
+![Create Group](./assets/NewConsole/SubGroups2.png)
+![Create Group](./assets/NewConsole/SubGroups3.png)
 
 When you are satisfied with your group selection, click **Next**.
 
@@ -1418,9 +1419,10 @@ You can revert it to its original Device ID at any time using this same techniqu
 #### Filter Button
 
 You can also apply filters to your Grid view by clicking on the **Filter** button. 
-You can filter the list of devices managed by your console by category. To do so, check the boxes next to the categories you would like displayed.
 
 You can filter by multiple values of each value. For example, you can choose Group A, Policy B and Online and Offline devices which will give you a filtered list of devices in Group A which are Online and Offline and have policy B applied on them.
+
+![Filters](.assets/NewConsole/filtersupdated.png)
 
 Once you select the filter parameters, click **Apply** to update the Grid view. 
 
@@ -1522,6 +1524,21 @@ Hovering over the progress bar offers additional detail about the process, which
 ![Reboot](./assets/NewConsole/QueuedMessage.png)
 
 Hovering over the progress bar will provide additional detail about the process on any command status progress menu.
+
+#### Queing Actions
+
+Queuing is applicable on offline devices for following actions in the list view of devices:
+
+* Reboot Device
+* Apply Policy
+* Install Application
+* Uninstall Application
+* Steps to queue 
+   * Select the devices in the list view
+   * Select the action you want to perform
+   * Select the checkbox to queue the action for offline devices
+
+![QueingActions](./assets/NewConsole/querequests.png)
 
 #### Table Settings Button
 
@@ -1704,20 +1721,23 @@ This can be applied from Device Settings, Group Settings & also from List View a
 There is an option to check, ‘Factory Reset Devices’ (Note that by default this option will be checked). 
 Also, there is an option to check, 'Wipe External Storage.'
 
-![Reboot](./assets/NewConsole/WipeAction.png)
+For online devices, factory reset will be enabled.
 
-This command is useful when a device needs to be reprovisioned using a different template. 
-It can also be used if the device’s system has crashed and is unusable. 
-Wiping the device will bring it back to its original factory settings so the device can be freshly 
-configured, and the device will be removed from the Esper Cloud.
+[!FactoryReset](./assets/NewConsole/removefactoryresetupdated.png)
+
+Removing the device will factory reset settings so the device will be freshly configured & will be removed from the Esper Cloud.
 
 From Device settings: 
 
+[!FactoryResetDeviceSettings](./assets/NewConsole/factoryresetdevicesettings.png)
+
 From Group settings:
+
+[!FactoryResetGroupSettings](./assets/NewConsole/factoryresetgroupsettings.png)
 
 From List View actions: 
 
-
+[!FactoryResetListView](./assets/NewConsole/factoryresetlistsettings.png)
 
 ***Tip: If the device user executes a factory reset directly on the device, the device will still appear in your Esper Endpoint as an offline device. If you re-provision the same device on your Esper Endpoint, it will keep the same Device ID, but you will need to re-enter the custom alias and any tags you previously added for the device.***
 
@@ -2316,7 +2336,7 @@ There is a "Default" group called where devices are automatically added unless o
 
 ### Creating a Group
 
-You can create a Group by clicking **Create Group**. 
+You can create a Group by clicking on the “+” icon in an existing Group. This will create a new sub-group under the selected parent group. 
 
 ![Groups](./assets/NewConsole/GroupCreateButton.png)
 
@@ -2324,9 +2344,10 @@ Enter a unique name in the text box and click **Create**.
 
 ![Groups](./assets/NewConsole/GroupCreateName.png)
 
-The next step is to add devices to the group from the *Default group *(in this screen called *All devices*). This means you first have to remove any devices you want in the new group from any other group they are in to put them in the Default group. To move devices into your new group from the Default group, click the checkbox to the left of the names of the devices that need to be moved and click **Add Selected**, or for a single device once it is selected click on the + button that appears to the right.
+The next step is to move the devices from another group. Click on the group you wish to move devices from and select the specific devices. Click on **Actions - Move Devices.** A new pop-up window will appear asking you to select the destination group. Once selected, click on **Move Devices.** 
 
 ![Groups](./assets/NewConsole/GroupAddDevices.png)
+![Groups](.assets/NewConsole/movegroupsupdated.png)
 
 Devices can be moved back to the Default Group by selecting the checkbox next to the device name and clicking on **Remove Selected**.
 
@@ -2371,19 +2392,11 @@ Now use the same process to add the desired devices to move to the group from th
 
 ### Deleting a Group
 
-To remove one or more groups, first click on **Delete Groups**.
+If a group is deleted, all the sub-groups and devices linked will be moved to the immediate parent group. To remove a group, click on the **More Actions** icon and then **Delete.**
 
 ![Groups](./assets/NewConsole/GroupDelete.png)
 
-Then select the tiles for the groups you want to delete by clicking on each one. Now click **Delete Selected Groups** at the bottom right of the screen. 
-
-![Groups](./assets/NewConsole/GroupsSelect.png)
-
-A dialog box will appear to confirm the action. Click on **Delete groups** to complete the deletion.
-
-![Groups](./assets/NewConsole/GroupDeleteConfirm.png)
-
-Once the group or groups are deleted, you will see a success toast message in the lower left corner of your screen. Any devices that were part of the deleted group will be moved to the Default group.
+A popup window will appear. Click on **Delete** to confirm. There will be a toast notification indicating the status of this deletion. 
 
 ### Searching for a Group
 
@@ -2452,9 +2465,9 @@ Click on **See details** to see the status of each of the devices in the group.
 
 Once the set of screen lock commands are sent, a success toast will appear in the bottom left hand corner of the screen.
 
-**Heart Beat**  
+**Heartbeat**  
 
-When you click **Heart beat**, the Esper Console will attempt to ping all the devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
+When you click **Heartbeat**, the Esper Console will attempt to ping all the devices in the group. A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts. 
 
 ![Groups](./assets/NewConsole/Heartbeat.png)
 
@@ -2464,11 +2477,14 @@ Click on **See details** and a slide out will appear.
 
 Once the set of ping commands are sent, a success toast will appear in the bottom left hand corner of the screen.
 
-**Wipe**
+**Remove/Factory Reset**
 
-When you click **Wipe**, the Esper Console will send a command to all the devices in the group to reset themselves to original factory settings—much like performing a factory reset. They will be removed from the Esper console. 
+The Wipe Command has been renamed to **“Remove/Factory Reset,”** providing additional capability. 
 
-If you’d like to wipe external data as part of the same command, click the **Yes** radio button under Wipe external Data. Then click **Confirm**.
+Users will have an option to ‘Remove Devices’ from the Esper Dashboard. When you click Remove/Factory Rest, 
+the Esper Console will send a command to all the devices in the group to Factory Reset.
+
+For online devices, Factory Reset will be enabled always. 
 
 ![Groups](./assets/NewConsole/WipeConfirmation.png)
 
@@ -2617,7 +2633,7 @@ Once the set of commands are sent, a success toast message will appear at the bo
 
 The **Event Feed** tab provides a record of all the actions taken on the group, including details about each event. This is very useful for viewing the status of any queued commands for offline devices.
 
-![Groups](./assets/NewConsole/GroupEventFeed.png)
+![Groups](./assets/NewConsole/updatedeventfeed.png)
 
 Clicking on **More Details** next to one of the events listed will cause a sidebar to slide in from the right showing the status of the installation.
 
