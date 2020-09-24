@@ -45,6 +45,21 @@ When you’re ready to submit your feedback, click on the checkmark to the right
 
 ![Feedback Type](./assets/NewConsole/FeedbackType.png)
 
+### Learning Centre
+
+The Learning Centre is designed to help a new user get comfortable with the Esper console and various features. It starts with a curated tour detailing various aspects that a new user gets to experience (or choose to skip). Learning Centre will also be available at the top right section of the console. 
+
+It also includes:
+
+* Tutorial videos aimed at getting a better understanding of how to leverage Esper capabilities. 
+* Frequently Asked Questions - Documentation covering popular questions and solutions. 
+* Product Tour - a curated tour exploring widely used features of Esper. 
+* What’s New Section covering updates and improvements to the Esper experience. 
+
+![LearningCentre](./assets/NewConsole/learningcentre1.png)
+![LearningCentre](./assets/NewConsole/learningcentre2.png)
+
+
 ### What’s New Button
 
 At the top right of the screen is the **What’s New** button.
@@ -1016,13 +1031,13 @@ When you are satisfied with your Compliance Policy configurations, click **Next*
 
 The Apps section lets you choose the apps you would like to have installed on your device during provisioning. You may choose to install Enterprise apps uploaded via the [App Management](./console.md#apps) section of the Console or apps approved via [Play For Work](./console/play-work/index.md) from your Managed Google Play Store account.  
 
-![App Template](./assets/NewConsole/TemplateApps.png)
+![App Template](./assets/NewConsole/kioskmultiappupdated.png)
 
 ### Kiosk or Multi App Mode 
 
 Begin by clicking a radio button to choose whether you would like to provision your devices in either Kiosk Mode or Multi-Application Mode.
 
-![AppMode Template](./assets/NewConsole/TemplateAppMode.png)
+![AppMode Template](./assets/NewConsole/applicationmanagementupdated.png)
 
 **Kiosk Mode** pins a selected Enterprise or Google Play Store app to the device unless the user exits kiosk mode. This is useful for cases in which the device will be used for a single purpose (for example, as an airport kiosk) and only the selected app needs to run on it.
 
@@ -1936,7 +1951,7 @@ You can find out more about using ADB with Esper [here](./console.md#connecting-
 The Event Feed tab lists all the interactions the device has had with the Console. 
 It displays each command taken on the device, and includes the Esper use that initiated the command with a date and time stamp.
 
-![Reboot](./assets/NewConsole/EventfeedGeofence.png)
+![Reboot](./assets/NewConsole/updatedeventfeed.png)
 
 ### Device Graphs Tab
 
@@ -2633,7 +2648,7 @@ Once the set of commands are sent, a success toast message will appear at the bo
 
 The **Event Feed** tab provides a record of all the actions taken on the group, including details about each event. This is very useful for viewing the status of any queued commands for offline devices.
 
-![Groups](./assets/NewConsole/updatedeventfeed.png)
+![Groups](./assets/NewConsole/GroupEventFeed.png)
 
 Clicking on **More Details** next to one of the events listed will cause a sidebar to slide in from the right showing the status of the installation.
 
