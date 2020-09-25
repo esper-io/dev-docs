@@ -2353,7 +2353,7 @@ Enter a unique name in the text box and click **Create**.
 The next step is to move the devices from another group. Click on the group you wish to move devices from and select the specific devices. Click on **Actions - Move Devices.** A new pop-up window will appear asking you to select the destination group. Once selected, click on **Move Devices.** 
 
 ![Groups](./assets/NewConsole/GroupAddDevices.png)
-![Groups](.assets/NewConsole/movegroupsupdated.png)
+![Groups](./assets/NewConsole/movegroupsupdated.png)
 
 Devices can be moved back to the Default Group by selecting the checkbox next to the device name and clicking on **Remove Selected**.
 
