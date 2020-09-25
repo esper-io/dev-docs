@@ -1428,7 +1428,7 @@ You can also apply filters to your Grid view by clicking on the **Filter** butto
 
 You can filter by multiple values of each value. For example, you can choose Group A, Policy B and Online and Offline devices which will give you a filtered list of devices in Group A which are Online and Offline and have policy B applied on them.
 
-![Filters](.assets/NewConsole/filtersupdated.png)
+![Filters](./assets/NewConsole/filtersupdated.png)
 
 Once you select the filter parameters, click **Apply** to update the Grid view. 
 
