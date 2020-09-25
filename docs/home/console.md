@@ -761,7 +761,7 @@ Provisioning Templates give you a straightforward way to enroll and provision mu
 
 Provisioning Templates are shown as tiles with the most-recently created at the top. You can find templates by name using the **Search Templates** feature:
 
-![Template View](./assets/NewConsole/udatedprovisioningtemplate.png)
+![Template View](./assets/provisioning/udatedprovisioningtemplate.png )
    
 You can access the QR Code for a specific template during Android for Work or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
 
