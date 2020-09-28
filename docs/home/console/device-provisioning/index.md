@@ -22,4 +22,4 @@ Esper provides multiple methods of provisioning a device, which involves downloa
     * Enables zero touch provisioning
 
 
-[Return to Introduction](../index.md)
+[Return to Introduction](../../console.md)
