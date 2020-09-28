@@ -25,7 +25,7 @@ Table of Contents:
 
 Download the .aar file of the SDK from [here](https://downloads.esper.io/device-sdk/esperdevicesdk-release-v1.2.4.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
 
-```
+```java
 implementation files('libs/esperdevicesdk-release-v1.2.4.aar')
 ```
 
@@ -33,7 +33,7 @@ implementation files('libs/esperdevicesdk-release-v1.2.4.aar')
 
 Before any operation can be done with the SDK, it needs to be initialized first.
 
-```
+```java
 EsperDeviceSDK sdk = EsperDeviceSDK.getInstance(getApplicationContext());
 ```
 
@@ -44,7 +44,7 @@ The EsperDeviceSDK object can then be used to perform different operations.
 
 The EsperDeviceInfo object contains information regarding your Esper managed device.
 
-```
+```java
 sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
     @Override
     public void onResponse(@Nullable EsperDeviceInfo esperDeviceInfo) {
@@ -61,7 +61,6 @@ sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
         t.printStackTrace();
     }
 });
-
 ```
 
 onResponse callback will be called if the device info is successfully retrieved from the device. The device information is stored in an `EsperDeviceInfo` object. The object can be further queried to retrieve several bits of information such as `getDeviceId()`, `getSerialNo()`, `getImei1()` and `getImei2()`.
@@ -89,6 +88,7 @@ This API requires authentication, else will return InactiveSDKException. The res
 
 **Code Snippet to use Device Settings API:**
 
+```java
 sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
    @Override
    public void onResponse(@Nullable JSONObject response) {   
@@ -98,6 +98,7 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
    public void onFailure(Throwable t) {       
    }
 });
+```
 
 **onResponse** is called if the device settings are successfully retrieved from the device.The device settings are stored in a JSONObject.
 
@@ -105,7 +106,7 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
 
 
 **Sample JSON response:**
-
+```json
 {
    "adbTimeout":3600000,
    "brightnessScale":9,
@@ -139,12 +140,13 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
    "screenOffTimeout":-1,
    "wifiState":false
 }
+```
 
 ### Clearing App Data
 
 The SDK exposes APIs to clear data of an installed app. The API requires the device to run Android 7.0 and above.
 
-```
+```java
 /**
   * @param packageNames - list of package names whose data is to be cleared
   * @param callback     - callback implementation to be invoked upon completion
@@ -167,7 +169,7 @@ The API allows you to pass a list of packages whose data is to be cleared. The A
 ### Manage AppOpp Permissions
 
 Android 6.0 introduced new category of permissions named "Special app access" which needs manual process to grant those permissions. Permissions such as "Display over other other apps"and "Usage access"—among many others—are part of this category. Esper Device SDK allows to automatically grant these permissions to your app without the need to ask the user to grant them.
-```
+```java
 /**
  * @param appOpMode - integer value of the AppOp permission for which grant status is to be set
  * @param granted   - true or false
@@ -196,7 +198,7 @@ In Kiosk mode, Device user can access a hidden dock consisting of menu items suc
 
 <b>Show Dock:</b>
 
-```
+```java
 sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
     @Override
     public void onResponse(Void response) {
@@ -213,7 +215,7 @@ sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
 
 <b>Hide Dock: </b>
 
-```
+```java
 sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
     @Override
     public void onResponse(Void response) {
@@ -236,7 +238,7 @@ To activate the SDK, you must provide an OAuth Access Token generated from an AP
 
 After successfully activating the SDK for an application, this status will persist until the application is uninstalled.(note: If the Esper Agent Device SDK API level is lower than version 4, the SDK is always “active” by default)
 
-```
+```java
 sdk.activateSDK(token, new EsperDeviceSDK.Callback<Void>() {
     @Override public void onResponse(Void response) {
         //Activation was successful    
@@ -262,7 +264,7 @@ In this case, the SDK was unable to be activated.
 
 You can check whether the SDK has been activated for the current application before attempting other operations. This way, you do not need to activate the SDK every time you restart an application, as you can verify the app has been previously activated using this method:
 
-```
+```java
 sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
     @Override public void onResponse(Boolean active) {
         if (active) {
@@ -289,6 +291,7 @@ true = start mobile data & false = stop mobile data
 EsperDeviceSDK.Callback for the results.
 response also is boolean with true = changing mobile data state success.
 
+```java
 sdk.enableMobileData(false, new EsperDeviceSDK.Callback<Boolean>() {
    @Override
    public void onResponse(@Nullable Boolean response) {
@@ -300,6 +303,7 @@ sdk.enableMobileData(false, new EsperDeviceSDK.Callback<Boolean>() {
        Log.e(TAG, "onFailure: ", t);
    }
 });
+```
 
 ### Start/Stop Wifi-Hotspot:
 
@@ -316,7 +320,7 @@ In case the password is passed as empty, open Wifi hotspot will be created.
 
 **param 3 >** true / false (true = start hotspot, false = stop hotspot)
 
-```
+```java
 sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new​ ​EsperDeviceSDK​.​Callback​<​String​>() {  
     @Override ​public​ ​void​ onResponse(@Nullable ​String​ response) {
         ​Log​.d(TAG, ​"onResponse: "​ + response);            
