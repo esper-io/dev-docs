@@ -1729,21 +1729,21 @@ Also, there is an option to check, 'Wipe External Storage.'
 
 For online devices, factory reset will be enabled.
 
-[!FactoryReset](./assets/NewConsole/removefactoryresetupdated.png)
+![FactoryReset](./assets/NewConsole/removefactoryresetupdated.png)
 
 Removing the device will factory reset settings so the device will be freshly configured & will be removed from the Esper Cloud.
 
 From Device settings: 
 
-[!FactoryResetDeviceSettings](./assets/NewConsole/factoryresetdevicesettings.png)
+![FactoryResetDeviceSettings](./assets/NewConsole/factoryresetdevicesettings.png)
 
 From Group settings:
 
-[!FactoryResetGroupSettings](./assets/NewConsole/factoryresetgroupsettings.png)
+![FactoryResetGroupSettings](./assets/NewConsole/factoryresetgroupsettings.png)
 
 From List View actions: 
 
-[!FactoryResetListView](./assets/NewConsole/factoryresetlistsettings.png)
+![FactoryResetListView](./assets/NewConsole/factoryresetlistsettings.png)
 
 ***Tip: If the device user executes a factory reset directly on the device, the device will still appear in your Esper Endpoint as an offline device. If you re-provision the same device on your Esper Endpoint, it will keep the same Device ID, but you will need to re-enter the custom alias and any tags you previously added for the device.***
 
