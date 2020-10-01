@@ -142,6 +142,29 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
 }
 ```
 
+### Reboot Device via Esper Device SDK
+
+Reboot API required supervisor support until Android 6.0 (Marshmallow), from Android 7.0 & above, the ability to Reboot a device via the Esper Device SDK is supported without a supervisor.
+
+Reboot API was introduced in Esper SDK version <code> TESSARION_MR5. </code>
+
+Enabling the <code> Reboot </code> function of the SDK requires a callback in arguments. 
+
+As soon as the <code> Reboot </code> API is called, the device will be rebooted.
+
+```java
+sdk.reboot(new EsperDeviceSDK.Callback<Void>() {
+   @Override
+   public void onResponse(Void response) {
+   }
+
+   @Override
+   public void onFailure(Throwable t) {
+       Log.e(TAG, "onFailure: ", t);
+   }
+});
+```
+
 ### Clearing App Data
 
 The SDK exposes APIs to clear data of an installed app. The API requires the device to run Android 7.0 and above.
@@ -330,3 +353,4 @@ sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new
     }
 });
 ```
+
