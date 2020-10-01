@@ -73,7 +73,9 @@ The response contains information about device settings as well as the DPC Param
 
 This API requires authentication, else will return InactiveSDKException. The response is JSONObject. Model class can be created using this configuration:
 
-| adbTimeout   | Long value  |
+|            |              |
+|------------|--------------|
+| adbTimeout | Long value  |
 | brightnessScale  | Integer value  |
 | gpsState  | String value  |
 | adbEnabled  | boolean value  |
