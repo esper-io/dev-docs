@@ -73,7 +73,9 @@ The response contains information about device settings as well as the DPC Param
 
 This API requires authentication, else will return InactiveSDKException. The response is JSONObject. Model class can be created using this configuration:
 
-| adbTimeout   | Long value  |
+|            |              |
+|------------|--------------|
+| adbTimeout | Long value  |
 | brightnessScale  | Integer value  |
 | gpsState  | String value  |
 | adbEnabled  | boolean value  |
@@ -140,6 +142,29 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
    "screenOffTimeout":-1,
    "wifiState":false
 }
+```
+
+### Reboot Device via Esper Device SDK
+
+Reboot API required supervisor support until Android 6.0 (Marshmallow), from Android 7.0 & above, the ability to Reboot a device via the Esper Device SDK is supported without a supervisor.
+
+Reboot API was introduced in Esper SDK version <code> TESSARION_MR5. </code>
+
+Enabling the <code> Reboot </code> function of the SDK requires a callback in arguments. 
+
+As soon as the <code> Reboot </code> API is called, the device will be rebooted.
+
+```java
+sdk.reboot(new EsperDeviceSDK.Callback<Void>() {
+   @Override
+   public void onResponse(Void response) {
+   }
+
+   @Override
+   public void onFailure(Throwable t) {
+       Log.e(TAG, "onFailure: ", t);
+   }
+});
 ```
 
 ### Clearing App Data
@@ -330,3 +355,4 @@ sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new
     }
 });
 ```
+
