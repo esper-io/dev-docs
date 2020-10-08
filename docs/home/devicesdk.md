@@ -40,6 +40,58 @@ EsperDeviceSDK sdk = EsperDeviceSDK.getInstance(getApplicationContext());
 
 The EsperDeviceSDK object can then be used to perform different operations.
 
+### Activating the SDK
+
+When an application using the SDK is first installed on a managed device, it must be activated before it can access privileged operations. 
+
+To activate the SDK, you must provide an OAuth Access Token generated from an API Key that belongs to your endpoint. 
+
+After successfully activating the SDK for an application, this status will persist until the application is uninstalled.(note: If the Esper Agent Device SDK API level is lower than version 4, the SDK is always “active” by default)
+
+```java
+sdk.activateSDK(token, new EsperDeviceSDK.Callback<Void>() {
+    @Override public void onResponse(Void response) {
+        //Activation was successful    
+    }
+    @Override public void onFailure(Throwable t) {
+        t.printStackTrace();
+    }
+});
+```
+The ``​onResponse​`` callback will be called with ​null​ in two cases:
+
+* The SDK was successfully activated with the provided token string
+* Esper Agent Device SDK API level is lower than version 4, in which case the SDK was active by default 
+
+In this case, all privileged operations(​getEsperDeviceInfo()​, ​clearAppData()​, etc.)can now be used.
+
+The ​onFailure​ will be called when there is a failure in the operation. 
+
+In this case, the SDK was unable to be activated.
+* If the throwable received is an ​ActivationFailedException​, the provided token was invalid, or there was an error when connecting to the device’s endpoint when validating the token
+
+### Checking Activation Status
+
+You can check whether the SDK has been activated for the current application before attempting other operations. This way, you do not need to activate the SDK every time you restart an application, as you can verify the app has been previously activated using this method:
+
+```java
+sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
+    @Override public void onResponse(Boolean active) {
+        if (active) {
+            //SDK is activated
+        } else {
+            //SDK is not activated
+        }
+    }
+    @Override public void onFailure(Throwable t) {
+        //There was an issue retrieving activation status        
+        t.printStackTrace();    
+    }
+});
+```
+If the check is successful, the API will return a boolean in ​onResponse​ indicating whether or not the SDK is activated.
+* This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will becalled.
+
 ### Getting Device Info
 
 The EsperDeviceInfo object contains information regarding your Esper managed device.
@@ -254,58 +306,6 @@ sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
     }
 });
 ```
-
-### Activating the SDK
-
-When an application using the SDK is first installed on a managed device, it must be activated before it can access privileged operations. 
-
-To activate the SDK, you must provide an OAuth Access Token generated from an API Key that belongs to your endpoint. 
-
-After successfully activating the SDK for an application, this status will persist until the application is uninstalled.(note: If the Esper Agent Device SDK API level is lower than version 4, the SDK is always “active” by default)
-
-```java
-sdk.activateSDK(token, new EsperDeviceSDK.Callback<Void>() {
-    @Override public void onResponse(Void response) {
-        //Activation was successful    
-    }
-    @Override public void onFailure(Throwable t) {
-        t.printStackTrace();
-    }
-});
-```
-The ``​onResponse​`` callback will be called with ​null​ in two cases:
-
-* The SDK was successfully activated with the provided token string
-* Esper Agent Device SDK API level is lower than version 4, in which case the SDK was active by default 
-
-In this case, all privileged operations(​getEsperDeviceInfo()​, ​clearAppData()​, etc.)can now be used.
-
-The ​onFailure​ will be called when there is a failure in the operation. 
-
-In this case, the SDK was unable to be activated.
-* If the throwable received is an ​ActivationFailedException​, the provided token was invalid, or there was an error when connecting to the device’s endpoint when validating the token
-
-### Checking Activation Status
-
-You can check whether the SDK has been activated for the current application before attempting other operations. This way, you do not need to activate the SDK every time you restart an application, as you can verify the app has been previously activated using this method:
-
-```java
-sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
-    @Override public void onResponse(Boolean active) {
-        if (active) {
-            //SDK is activated
-        } else {
-            //SDK is not activated
-        }
-    }
-    @Override public void onFailure(Throwable t) {
-        //There was an issue retrieving activation status        
-        t.printStackTrace();    
-    }
-});
-```
-If the check is successful, the API will return a boolean in ​onResponse​ indicating whether or not the SDK is activated.
-* This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will becalled.
 
 ### Start/Stop Mobile Data
 
