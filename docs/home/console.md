@@ -2410,17 +2410,19 @@ You can search for a group by typing the group name in the search box and clicki
 
 ### Viewing Group Details 
 
-Clicking **View Details** on a group tile will give you full details about the group, including all the devices in it. The context for Search is now for the information in Devices, not Group names.
+Clicking **More actions** - **Properties** on a group will take you to the details view.
 
-![Groups](./assets/NewConsole/GroupManage.png)
+![Groups](./assets/NewConsole/GroupDetails.png)
 
 The Group Details view has six tabs that provide access to different actions you can take on the devices in the group.
+
+![Groups](./assets/NewConsole/GroupDetails2.png)
 
 #### The Manage Tab
 
 The Manage tab is the default view for Groups. It shows the device tiles for all the devices in the group.
 
-![Groups](./assets/NewConsole/GroupManage.png)
+![Groups](./assets/NewConsole/ManageTab1.png)
 
 You will find more information about individual devices in the [Devices](./console.md#devices) section of this document.
 
@@ -2435,7 +2437,13 @@ You can filter the list of devices using one or more of six filters:
    
 You may click on “Clear all filters” (extreme right) to view the complete list of devices again. 
 
-![Groups](./assets/NewConsole/ClearAllFilters.png)
+![Groups](./assets/NewConsole/ManageTab3.png)
+
+You may click on “Info Button” (extreme right) to view the Group activity feed. 
+
+![Groups](./assets/NewConsole/ManageTab4.png)
+
+![Groups](./assets/NewConsole/ManageTab5.png)
 
 #### The Settings Tab
 
@@ -2485,18 +2493,15 @@ Once the set of ping commands are sent, a success toast will appear in the botto
 
 **Remove/Factory Reset**
 
-The Wipe Command has been renamed to **“Remove/Factory Reset,”** providing additional capability. 
+The Wipe Command has been renamed to“Remove/Factory Reset,” providing additional capability. Users will have an option to ‘Remove Devices’ from the Esper Dashboard. 
 
-Users will have an option to ‘Remove Devices’ from the Esper Dashboard. When you click Remove/Factory Rest, 
-the Esper Console will send a command to all the devices in the group to Factory Reset.
+When you click **Remove/Factory Reset**, the Esper Console will send a command to all the devices in the group to Factory Reset  For online devices, factory reset will be enabled always. 
 
-For online devices, Factory Reset will be enabled always. 
-
-![Groups](./assets/NewConsole/WipeConfirmation.png)
+![Groups](./assets/NewConsole/RFR1.png)
 
 A popdown will show the progress of the action, indicating the number of successful and unsuccessful attempts.
 
-![Groups](./assets/NewConsole/Wipe.png)
+![Groups](./assets/NewConsole/RFR2.png)
 
 Click on **See details** and a slide out will appear.
 
@@ -2739,13 +2744,15 @@ After the scheduled installation has been completed, you can see the status of t
 
 ![Groups](./assets/NewConsole/GroupApps.png)
 
-#### Approvals
+#### App State
 
-The **Approvals** section enables you to show, hide or disable in-ROM apps (also referred to as Preloaded apps) on all the devices in the group.
+The **App State** section enables you to show, hide or disable in-ROM apps (also referred to as Preloaded apps) on all the devices in the group.
 
-![Groups](./assets/NewConsole/GroupApprovals.png)
+![Groups](./assets/NewConsole/AppState1.png)
 
-To change the approval status of an app, enter its package name in the box and click **Show, Hide**, or **Disable**.
+To change the app state status of an app, enter its package name in the box and click **Show**, **Hide**, or **Disable**.
+
+![Groups](./assets/NewConsole/AppState2.png)
 
 Click **Apply**. The console will display the group command status.
 
@@ -2828,6 +2835,23 @@ To upload an APK for a Enterprise app to the Esper cloud, click on **Upload Apps
 
 ![Apps](./assets/NewConsole/APKUpload.png)
 
+On clicking select APK, the system will allow you to browse and choose the apk version. Once you open the version, a screen similar to the following will be displayed when the app upload is in progress:
+
+![Apps](./assets/NewConsole/AppUploadStatus.png)
+
+When the progress bar completes, you will notice an automatically generated release tag as well as an option to add description:
+
+![Apps](./assets/NewConsole/AppUploadStatus2.png)
+
+On clicking add description, a user can add text describing the app:
+
+![Apps](./assets/NewConsole/AppUploadStatus3.png)
+
+On clicking the edit icon next to the purple release tag, user will get an option to edit the release tag:
+
+![Apps](./assets/NewConsole/AppUploadStatus4.png)
+
+You may choose to add a description and edit the release tag. Once you are done, click Close or click outside of the window to exit the app upload screen. This will complete the app upload.
 Once uploaded, your Enterprise app will be shown under the “Uploaded Apps” section.
 
 All app APK files must adhere to certain conditions to succeed uploading and provisioning:
@@ -2854,7 +2878,7 @@ Clicking on **View Details** on an app tile will show details for the app:
    - Uploaded on — the date and time the app was uploaded to the Esper Cloud
    - App description — an optional field for you to add a description or release notes
    
-![Apps](./assets/NewConsole/AppDetails.png)
+![Apps](./assets/NewConsole/AppDeviceID.png)
 
 Clicking on the number of devices on which the app is installed will launch a popup window that provides a quick overview of the devices onto which the app has been installed and app version for each installation. Clicking on any device in the list will open a new tab with the device details for that device. 
 
@@ -2915,21 +2939,21 @@ Once the process completes, you’ll have Play Store apps available to use with 
 #### Approving a Google Play Store App
 
 The Esper Console gives you access to Play for Work, the enterprise version of Google Play. Within Play for Work you can approve apps, which can then be downloaded onto your devices. You can also unapprove apps, which will then cease to be visible or available in the Google Play store on your devices.
-To approve a Google Play app, click on **Google Play**. 
+To approve a Google Play app, click on **Play Store**. 
 
-![Apps](./assets/NewConsole/GooglePlayButton.png)
+![Apps](./assets/NewConsole/AppStore1.png)
 
 Enter the name of the App into the Google Play search box and click on the magnifying glass.
 
-![Apps](./assets/NewConsole/GooglePlaySearch.png)
+![Apps](./assets/NewConsole/AppStore4.png)
 
 Click on the tile for the app.
 
-![Apps](./assets/NewConsole/GooglePlayAppsSelect.png)
+![Apps](./assets/NewConsole/AppStore5.png)
 
 Click on **Approve**.
 
-![Apps](./assets/NewConsole/GoogleAppApprove.png)
+![Apps](./assets/NewConsole/AppStore6.png)
 
 In the popup box that appears, click on **Approve**.
 
@@ -2950,17 +2974,17 @@ In the Esper Console, click **Apps** in the navigation sidebar.
 
 ![Apps](./assets/NewConsole/AppsSection.png)
 
-Click the **Google Play** button.
+Click the **Play Store** button.
 
-![Apps](./assets/NewConsole/GooglePlayButton.png)
+![Apps](./assets/NewConsole/AppStore1.png)
 
 Hover over the sidebar within the Google Play screen and click on **Organize Apps** from the popup menu.
 
-![Apps](./assets/NewConsole/GooglePlayOrganize.png)
+![Apps](./assets/NewConsole/AppStore2.png)
 
 Any app listed in the collections on this page will show up in the Google Play Store app on the device.
 
-![Apps](./assets/NewConsole/GooglePlay.png)
+![Apps](./assets/NewConsole/AppStore3.png)
 
 To remove an app from the collection displayed, click the (x) icon above and to the right of its icon.
 
@@ -3007,13 +3031,33 @@ To create a new alert, click on **New Alert**.
 
 Enter a name for your new alert in the **Alert Name** field; select an alert type by clicking on the icon for the alert type you want. Then click **Next**.
 
-![Alerts](./assets/NewConsole/AlertCreate1.png)
+Battery Alert Type 
+
+![Alerts](./assets/NewConsole/CreateAlert1.png)
+
+Network Alert Type
+
+![Alerts](./assets/NewConsole/CreateAlert2.png)
+
+Bluetooth Alert Type
+
+![Alerts](./assets/NewConsole/CreateAlert3.png)
 
 **Set the Alert Condition**
 
 Set the alert condition which is specific to the alert type, then click **Next**.
 
-![Alerts](./assets/NewConsole/AlertFrequency.png)
+Battery Alert Condition
+
+![Alerts](./assets/NewConsole/AlertCondition1.png)
+
+Network Alert Condition
+
+![Alerts](./assets/NewConsole/AlertCondition2.png)
+
+Bluetooth Alert Condition
+
+![Alerts](./assets/NewConsole/AlertCondition3.png)
 
 **Set the Alert Channel**
 
@@ -3211,7 +3255,7 @@ Factory Reset Protection (FRP) places an auto-lock on a GMS-certified device if 
 
 When you turn on the FRP button in the provisioning template, you’ll need to pick a Google account to authorize future device unlocks. Your chosen Google account ID will reverse any future auto-lock events triggered by user factory resets for all devices provisioned with this template.  
 
-![CompliancePolicy](./assets/NewConsole/SettingsFactoryReset.png)
+![CompliancePolicy](./assets/NewConsole/FRP1.png)
 
 ***Tip:
 Factory reset protection is only available on GMS devices running Android 5.1 and above.***
@@ -3351,7 +3395,7 @@ Your Esper Console provides reports on device and device group performance. The 
 
 Esper automatically generates a daily report for your fleet. The **Reports** section lists available **Daily Reports**. The most recent reports are filed at the top of the list. To view a Daily Report, click the **View** icon  or click **Daily Reports** under **Report type**. 
 
-To download a Daily Report in a CSV file format, click the **Download** icon next to the report listing.
+This information can also be downloaded as a .pdf file, an Excel spreadsheet, or a .csv file by clicking the **Download** icon in line with its listing and selecting a file format from the dropdown menu.
 
 ![Report](./assets/NewConsole/DailyReports.png)
 
@@ -3364,9 +3408,9 @@ The Daily Report lists the following information:
 For each device group, it also lists: 
 
    - Number of Registered devices
-   - Number of Active devices
-   - Number of Inactive devices
-   - Newly Provisioned devices
+   - Number of Online devices
+   - Number of Offline devices
+   - Newly provisioned devices
 
 Clicking > next to one of the groups will give you additional detail about the devices in that group: 
 
@@ -3387,6 +3431,7 @@ The additional details view offers the following data for each device:
 This information can also be downloaded as a .pdf file, an Excel spreadsheet, or a .csv file by clicking **Download** and selecting a file format from the dropdown menu.
 
 ![Report](./assets/NewConsole/ReportDownloadType.png)
+![Report](./assets/NewConsole/ReportsSample1.png)
 
 ### Custom Reports
 
@@ -3473,55 +3518,74 @@ Geofencing performance depends on the quality of GPS built into the devices. Als
 
 ## Pipeline
 
-Esper's Android DevOps Pipeline automates rollouts and rollbacks to large fleets of devices. Pipelines define stages and events that trigger each stage to control complex or large processes.
+Esper Pipeline enables you to ensure smooth completion of actions on large fleets of devices by providing a way to automate them. Using a pipeline you define the stages through which the actions must go and the events that trigger each of those stages, providing an effective way to control complex or large processes.
 
-Esper's Pipeline currently only supports app installation. A five-second break is required after completing each pipeline stage.
+Esper Pipeline currently only supports app installation and requires the user to manually promote to the next stage. Clicking on a new pipeline will create a default pipeline for you, with three stages. You only need to update the target device(s) or group(s) to make it ready to use. You can create one or more jobs for each pipeline and select the corresponding operation. In this case, Application Installation is the operation and the particular application version. 
 
-![Pipeline](./assets/NewConsole/PipelineSummary.png)
+Key Terminologies (for reference)
 
-You can specify any number of pipeline stages or operations to automate a task. 
+Pipeline - A chain of processes/functions connected in serial manner.
 
-![Pipeline](./assets/NewConsole/PipelinePreview.png)
+Operation - An operation is defined as the action to be performed. Installation of an application is an operation. 
+
+Stage - Logical separation to perform any checks between execution of an operation. 
+
+Target - Destination intended for a specific operation in each stage. For instance, if operation is installation of an application, target is the device/list of devices the application is to be installed in.
+
+Job - A job defines the action to be done (operation) as part of a pipeline. For instance, a pipeline could have two separate jobs - one for application installation, another for DPC updates. 
+
+Run - An instance of pipeline in execution. 
+
+Trigger - A prompt to force execution of a pipeline stage. This could be manual (prompted by a user) or automatic (prompted as result of a successful criteria like an online device).
+
+*A new pipeline (base) can be created with three default stages. Update targets (list of devices/groups) for each stage.
+*Create a new Job that will indicate the operation (App Install in this case) and corresponding application/version. 
+*Start a new Run to initiate execution of a pipeline - the user can choose to update the app version to be installed before starting a new run. A Run can be started, paused, resumed or terminated.
+*Any pipeline could have multiple jobs created and each job could have multiple runs (only one active at a time) associated with it.
+
+![Pipeline](./assets/NewConsole/PipelinesNew1.png)
 
 ### Creating a Pipeline
 
 To create a new pipeline, click **New Pipeline**.
 
-![Pipeline](./assets/NewConsole/PipelineNew.png)
+![Pipeline](./assets/NewConsole/PipelineNew2.png)
 
-Enter a name for your new pipeline in the **Name Your Pipeline** field. Next, enter a pipeline description in the **Add Description** field. Click **Next**.
+You will see a default pipeline created with three stages. 
 
-![Pipeline](./assets/NewConsole/PipelineCreate.png)
+![Pipeline](./assets/NewConsole/PipelineNew3.png)
 
-Select a trigger to automatically initiate your pipeline from the **Select the Trigger** dropdown menu. 
+You can choose to add a suitable name and description for the newly created pipeline. 
 
-Any time your chosen trigger occurs via console, API call, or CLI command, your pipeline will automatically start running. The only trigger supported in V1 pipelines is new enterprise app version uploads to the Esper cloud. 
+Also, you will be able to view the pipeline on the main page now. Your pipeline can be edited later as necessary.
 
-Select the app you would like to use as a trigger from the **Select the app** dropdown menu. Click **Next**.
+![Pipeline](./assets/NewConsole/PipelineNew4.png)
 
-![Pipeline](./assets/NewConsole/PipelineTrigger.png)
+### Creating a Job
 
-Next, define the pipeline stages that will occur post-trigger. Give a name and description for each stage. Next, define the operations that will take place during each stage. Add an operation name and description, an operation type, and select a target device group.
+Click on “Create Job” to create a new job for the selected pipeline. App Installation will be selected by default. Select the application version and click on either:
 
-Currently, pipeline operations are limited to uninstalling apps.
+1. Create and Run - This will create the job and start a new run.
+2. Create - This will only create the job. Users can choose to start a run at a later time. 
 
-You can pick the right number of pipeline stages for your process automation requirements. When your pipeline stages and operations are complete, click on **See Preview**.
+There is no option to delete a job. If a job is not required any more, the user can cease to start new runs and create a new job instead.
 
-![Pipeline](./assets/NewConsole/PipelineAddStage.png)
+![Pipeline](./assets/NewConsole/PipelineNew5.png)
 
-![Pipeline](./assets/NewConsole/PipelineStage.png)
+### Starting a Run
 
-If your pipeline is ready, click **Done**.
+Users can start a new run by selecting an application version for a specific job at any time. Please note that there can only be one active run at any point in time. 
 
-You can edit your pipeline later.
+For a run in progress, the user can only pause or terminate. For a paused run, the user can only resume or terminate. For a completed run, no actions allowed.
 
-![Pipeline](./assets/NewConsole/PipelinePreview.png)
+![Pipeline](./assets/NewConsole/PipelineNew6.png)
 
 ### Editing a Pipeline
 
-To edit an existing pipeline, click the ellipsis (...) on its tile and select **Edit** from the popup.
+To edit an existing pipeline, click the ellipsis (...) on its tile and select Edit from the popup. This will allow the user to edit name or description, change the number of stages (between 1-3) and update the target groups or devices.
 
 ![Pipeline](./assets/NewConsole/PipelineActions.png)
+![Pipeline](./assets/NewConsole/PipelineNew.png)
 
 ### Deleting a Pipeline
 
@@ -3533,7 +3597,7 @@ To delete a pipeline, click the ellipsis (...) on its tile and select **Delete**
 
 The Company Settings section displays your company’s information. You can edit your company’s information by clicking the **Edit Profile** button at the top right of the screen.
 
-![Company Settings](./assets/NewConsole/CompanySettings.png)
+![Company Settings](./assets/NewConsole/CompanySettingsNew.png)
 
 Please enter the following company information to complete all fields:
    
@@ -3577,29 +3641,27 @@ You'll need an API key and Enterprise ID to use Esper's Cloud API, Device SDK, P
 
 ### Generating an API Key
 
-The first step to interact with Esper's API is generating an API key. Click **Register App**.
+The first step in interacting with our API is to generate an API key you can tie to it. Do this by clicking **Create Key**.
 
-Copy your Enterprise ID for API calls by clicking on the copy icon. It's located next to Enterprise ID in the top right of the current section view.
+You can also copy the Enterprise ID, necessary for API calls, by clicking on the copy icon next to Enterprise ID on top right of this section.
 
-![API](./assets/NewConsole/APIKeyManagementRegister.png)
+![API](./assets/NewConsole/APIKey1.png)
 
-Next, enter a unique app name. Optionally, you can choose to enter an app description. Click **Register Application**.
+Enter a unique app name and description (optional) and click Create Key.
 
-![API](./assets/NewConsole/AppRegister.png)
+![API](./assets/NewConsole/APIKey2.png)
 
-Last, click **Generate Token**. This will generate a unique, OAuth-based API key.
+Click Generate Token. This will generate a unique OAuth-based API key.
 
-![API](./assets/NewConsole/AuthAccessTokenGenerate.png)
+![API](./assets/NewConsole/APIKey3.png)
 
-Now, you can copy your API key or renew it. API keys need to be renewed every 3 months.
+You can then copy (or renew if needed) your API key. API keys need to be renewed every 3 months.
 
-![API](./assets/NewConsole/AuthAccessToken.png)
+![API](./assets/NewConsole/APIKey4.png)
 
-You will need your API key and Enterprise ID to access our [CLI platform](https://github.com/esper-io/esper-cli) or the [SDK/API](https://api.esper.io/).
+You will need your API key and Enterprise ID to access our [CLI platform](https://github.com/esper-io/esper-cli) as well as to use the SDK/API in your development and management systems.
+You can find additional information about this process by clicking on [Developer Hub](https://docs.esper.io/) and [API Documentation](https://api.esper.io/).
 
-You can find additional information about Generating API keys in [Developer Hub](https://docs.esper.io/) and [API Documentation](http://api.esper.io/).
+***Tip: An API key is tied to the user account used to create the key. If you delete a user via User management, then any API keys associated with that user will also be deleted and will be immediately invalidated for API, SDK, and CLI use. 
+To avoid the situation where API keys are unintendedly deleted when a user account is deleted, a best practice is to create a specific user account just for API key management. The Enterprise ID is specific to your endpoint and does not change.***
 
-***Tip:
-An API key is tied to the user account that created the key. If a user is deleted, all API key(s) created by that user are also deleted and becomey invalid for API, SDK, and CLI use. 
-To avoid a situation where API keys are accidentally deleted at the same time as a user account, create a user account to manage API keys.
-***
