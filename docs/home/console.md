@@ -11,8 +11,7 @@ No matter where you are in the Esper Console, there will be a navigation bar alo
    - Dashboard
    - Provisioning Methods
    - Provisioning Templates
-   - Devices
-   - Groups
+   - Devices & Groups
    - Apps
    - Alerts
    - Compliance Policy
@@ -1243,12 +1242,20 @@ If you select EAP, an extra dropdown menu will appear to enable you to select a 
 Hidden access points are not supported for use during provisioning.
 When you are satisfied with your settings, click **Next**.
 
-### Group section
+### Devices and Groups
 
-The *Group* section lets you assign devices provisioned using this template to an existing group, a sub-group, 
-and allows you to create a new sub-group.
+The Devices & Groups section is now a consolidated experience, enabling you to manage devices and groups in one place. You can assign devices to groups or move devices/groups from one group to another. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
 
-![SubGroups](./assets/NewConsole/SubGroups.png)
+We also provide the capability of “Nested Groups” now which is essentially a hierarchical structure of groups that enhances flexibility of taking actions for devices. Thus introducing two more concepts:
+
+* Parent Group - A group at a higher level of hierarchy. Users can create multiple parent groups at the same level. 
+* Sub-Group - A group at a lower level of hierarchy associated with a parent group. Any action intended for a parent group will be cascaded to all sub-groups as well. 
+
+By default, there will be an “All Devices” group which will be the parent group for any new groups created.Also, devices are automatically added to this group unless otherwise specified during provisioning via template. Excluding “All Devices”, five levels of hierarchy are allowed.  
+
+
+![SubGroups](./assets/NewConsole/newgroupcompliancepolicy.png)
+![NestedGroups](./assets/NewConsole/newgroupcompliancepolicy2.png)
    
 To select an existing group, click the radio button next to its name. If you’d like to create a new group, click on the ‘+’ Button to create sub-group.
 
