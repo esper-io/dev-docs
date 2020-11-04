@@ -11,8 +11,7 @@ No matter where you are in the Esper Console, there will be a navigation bar alo
    - Dashboard
    - Provisioning Methods
    - Provisioning Templates
-   - Devices
-   - Groups
+   - Devices and Groups
    - Apps
    - Alerts
    - Compliance Policy
@@ -1307,11 +1306,6 @@ These templates will also be available for use via the Esper Device Provisioner.
 You can delete a Provisioning Template by clicking on **Delete Template**. 
 If you do so, the information about the Provisioning Template will be saved to display for any device that has been provisioned using the deleted template.
  
-
-## Devices
-
-The Devices section is where you manage your Esper provisioned devices after provisioning has completed.
-
 ### Getting Started
 
 Upon logging in to your Console for the first time, you will see the following screen which gives you a choice to either provision a device or Simulate a device.
@@ -1328,7 +1322,7 @@ Capabilities such as Apps, Remote View and Capture log may not be available on a
 
 ### Device View
 
-Once you’ve added actual or simulated devices to the Console, the **Devices** view will list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all ESP-DDM. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name, noting the Device ID is often used as a parameter by the Esper API.
+Once you’ve added actual or simulated devices to the Console, the **Devices and Groups** view will list all the devices and groups under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all ESP-DDM. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name, noting the Device ID is often used as a parameter by the Esper API.
 
 ![Device Tiles](./assets/NewConsole/DeviceTile.png)
 
@@ -2332,11 +2326,18 @@ You now have a secure remote ADB session with that device.
 Until the device is rebooted, you’ll be able to connect to the device remotely using Esper CLI. After rebooting, you’ll need to re-establish the ADB connection.
 :::
 
-## Groups
+## Devices and Groups
 
-The **Groups** section enables you to assign devices to groups. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
+The **Devices & Groups** section is now a consolidated experience, enabling you to manage devices and groups in one place. You can assign devices to groups or move devices/groups from one group to another. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
 
 ![Groups](./assets/NewConsole/GroupsTiles.png)
+
+We also provide the capability of “Nested Groups” now which is essentially a hierarchical structure of groups that enhances flexibility of taking actions for devices. Thus introducing two more concepts:
+
+* Parent Group - A group at a higher level of hierarchy. Users can create multiple parent groups at the same level. 
+* Sub- Group - A group at a lower level of hierarchy associated with a parent group. Any action intended for a parent group will be cascaded to all sub-groups as well.
+
+By default, there will be an “All Devices” group which will be the parent group for any new groups created.Also, devices are automatically added to this group unless otherwise specified during provisioning via template. Excluding “All Devices”, five levels of hierarchy are allowed.  
 
 There is a "Default" group called where devices are automatically added unless otherwise specified during provisioning via template. It is also used as the collection point when devices are moved between groups.
 
