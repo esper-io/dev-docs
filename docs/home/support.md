@@ -1,25 +1,40 @@
 # Support
 
-If you face any issues while using Esper, we are here to help you! We welcome any questions or concerns, and we're always eager to hear feedback or suggestions from you. Feel free to reach out to us using any of methods listed below. If you are unsure, just send us a note at <mailto:support@esper.io>.
+If you face any issues while using Esper, we are here to help you! Support options available to you depend on your Esper tier:
 
-## GitHub Issues
+* Esper Starter - [Esper Support Forum]
+* Esper Essentials - support@esper.io
+* Esper Pro - Direct ticketing of support issues by customers
 
-1.  For problems related to API usage or specifications, please [raise an issue on our API repo](https://github.com/esper-io/esper-api-spec/issues)
-2.  For problems related to Python SDK, please [raise an issue on our Python SDK repo](https://github.com/esper-io/esper-client-py/issues)
-3.  For problems related to Esper CLI, please [raise an issue on CLI repo](https://github.com/esper-io/esper-cli/issues)
+Esper Trial users receive 15 days of evaluation support after signup via support@esper.io. Please be sure to check our support forums first before emailing support. **After 15 days, the default support option will be the Esper Support Forum unless you’ve purchased an Esper Essentials or Pro licensing pack.**
 
-## Slack
+If you are having any problems signing up for an Esper Trial, please email support@esper.io.
 
-Use [this form](https://forms.gle/XEiVZM6h9CZ2xmeZA) to join the [Esper Slack Workspace](https://esperhq.slack.com). Once you submit the form, you should get an email with instructions to login into the Slack Workspace.
+## Feedback
+You are welcome to provide feedback at any time through the Esper Console using the built-in [Feedback Widget]. For any of Esper developer tools, please engage us via [GitHub]. 
 
-## Gitter
+## Additional Esper Documentation Pages
 
-[![Gitter](https://badges.gitter.im/esper-dev/community.svg)](https://gitter.im/esper-dev/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+* [Esper Tools]
+* [Contact Us] - Visit our support page with options for how to contact Esper.
+* [Feature Support] - If you have any questions about what feature support we offer for your device, please post it on our support forum.
+* [Need Help Choosing] - Based on your selections, the tool will suggest one of the four provisioning methods by highlighting it. Click on it to see the steps to provision your device. If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Visit our support page to find the appropriate channel to reach out to us.
+[Dropdown Menus] - Disable Update: This option allows you to disable updates on the device. It is available for a limited set of OTA services that support this feature. If the device does not support disabling updates, it will default to Postpone installation. Before setting this option please contact Esper directly to make sure the devices you plan to provision support this configuration.
+[Settings Tab] - Please note that in order to use this command for Android 4.4 - Android 6, you will need the device manufacturers to provide a platform signature for the Esper plugin. Please contact Esper Support if you would like to use this feature.
+[Creating a New Compliance Policy] 
 
-1.  [Esper community](https://gitter.im/esper-dev/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link): For general discussion, questions and feedback.
-2.  [Esper API/SDK](https://gitter.im/esper-dev/esper-sdk?utm_source=share-link&utm_medium=link&utm_campaign=share-link): For API and SDK related discussion
-3.  [Esper CLI](https://gitter.im/esper-dev/esper-cli?utm_source=share-link&utm_medium=link&utm_campaign=share-link): For CLI tool related discussion
 
-## Email
+[Esper Support Form]: https://esperhelp.freshdesk.com/support/home
+[Feedback Widget]: https://docs.esper.io/home/console.html#feedback-widget
+[GitHub]: https://github.com/esper-io
+[Esper Tools]: https://docs.esper.io/home/#esper-tools
+[Contact Us]: https://docs.esper.io/home/#contact-us
+[Feature Support]: https://docs.esper.io/home/requirements.html#esper-feature-support
+[Need Help Choosing]: https://docs.esper.io/home/console.html#need-help-choosing
+[Dropdown Menus]: https://docs.esper.io/home/console.html#dropdown-menus
+[Settings Tab]: https://docs.esper.io/home/console.html#settings-tab
+[Creating a New Compliance Policy]: https://docs.esper.io/home/console.html#creating-a-new-compliance-policy
 
-You can reach out to us at <mailto:support@esper.io>. We will get back to you as soon as possible!
+
+
+
