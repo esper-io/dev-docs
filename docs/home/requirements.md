@@ -67,6 +67,13 @@ Dedicated devices are often behind corporate firewalls, preventing the Esper bac
 * [turn.shoonyacloud.com]
 * 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
 
+ 
+For customers that are provisioning devices behind a firewall there are a few additional URLs to allow:
+
+* dpcdownloads.esper.cloud
+* [downloads.esper.io]
+* [services.shoonyacloud.com] (only for serial number-based provisioning)
+
 
 ### Ports
 
@@ -107,4 +114,6 @@ If you face any issues setting up your requirements for Esper, please don't hesi
 
 [mqtt.shoonyacloud.com:1883]: http://mqtt.shoonyacloud.com:1883/
 [turn.shoonyacloud.com]: http://turn.shoonyacloud.com/
+[downloads.esper.io]: http://downloads.esper.io/
+[services.shoonyacloud.com]: http://services.shoonyacloud.com/
 
