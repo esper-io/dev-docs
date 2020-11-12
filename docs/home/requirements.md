@@ -56,17 +56,24 @@ Esper Development Devices running Esper Enhanced Android will always be supporte
 
 ## Infrastructure
 
-Dedicated devices are often behind corporate firewalls, preventing Esper backend to communicate with them (or vice-versa). Please make sure to whitelist the following URLs and Ports, in case your fleet is running behind such a firewall.
+Dedicated devices are often behind corporate firewalls, preventing the Esper backend from communicating with them (or vice-versa). Please make sure to whitelist the following URLs and Ports, in case your fleet is running behind such a firewall.
 
 ### URLs
 
-- \*.s3.amazonaws.com
-- clients3.google.com
-- google.com
-- mqtt.shoonyacloud.com:1883
-- \*.shoonyacloud.com
-- \*.esper.cloud
-- 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
+* *.amazonaws.com
+* [mqtt.shoonyacloud.com:1883] (device telemetry/management)
+* [customer endpoint].esper.cloud:443
+* [customer-endpoint]-api.esper.cloud
+* [turn.shoonyacloud.com]
+* 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
+
+ 
+For customers that are provisioning devices behind a firewall there are a few additional URLs to allow:
+
+* dpcdownloads.esper.cloud
+* [downloads.esper.io]
+* [services.shoonyacloud.com] (only for serial number-based provisioning)
+
 
 ### Ports
 
@@ -102,3 +109,11 @@ At Esper, our developers use all of the above platforms to interact with Esper i
 ## Help
 
 If you face any issues setting up your requirements for Esper, please don't hesitate to [ask for some help!](./support.md) We'll be happy to assist you.
+
+
+
+[mqtt.shoonyacloud.com:1883]: http://mqtt.shoonyacloud.com:1883/
+[turn.shoonyacloud.com]: http://turn.shoonyacloud.com/
+[downloads.esper.io]: http://downloads.esper.io/
+[services.shoonyacloud.com]: http://services.shoonyacloud.com/
+
