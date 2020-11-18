@@ -1,6 +1,6 @@
-# Esper console
+# Esper Console
 
-The Esper console is a feature-rich user interface for you to operate and manage your fleet of Android devices. Esper provides a range of options to deploy company‑owned devices at scale.
+The Esper Console is a feature-rich user interface for you to operate and manage your fleet of Android devices. Esper provides a range of options to deploy company‑owned devices at scale.
 
 ## Static Interface Elements
 
@@ -808,17 +808,43 @@ To upload a set of IMEI/Serial Numbers for devices you want to provision using A
    - Don’t upload duplicate IMEIs.
    - Don’t switch the order of IMEI and serial numbers.
    - Any time a CSV is uploaded, the previous IMEIs and Serial Numbers for that template will be deleted and replaced by the new additions from the CSV. This will not impact any devices that have already been provisioned.
-   
-Below is an example set of entries for a CSV file:
-   - The required header
-   - Two IMEIs and one Serial Number
-   - Two IMEIs
-   - One IMEI and one Serial Number
-   - One IMEI as first entry
-   - One IMEI as second entry
-   - One Serial Number
-   
-![IMEI](./assets/NewConsole/IMEI.png)
+
+The example below is using a text editor to create the CSV file:
+
+![IMEI](./assets/NewConsole/2IMEIUploadTextEditor.png)
+
+If you are using a spreadsheet program instead of a text editor, each field goes into three consecutive columns by row.
+
+See the example below using Excel:
+
+![IMEI](./assets/NewConsole/3ExcelIMEI.png)
+
+If you only have IMEIs, you can copy and paste them into the first column after the header row. If you are using only serial numbers, copy and paste them into the third column after the header row.
+Note that Excel’s default cell format is General which will turn an IMEI into an Exponential causing an error when uploading. 
+
+![IMEI](./assets/NewConsole/4ExcelExponential.png)
+
+To prevent this the cell range must be properly formatted BEFORE the data is copied over.
+Start by selecting the cell range where the data will be copied to. The right click to bring up the options for the range, and select Format Cells:
+
+![IMEI](./assets/NewConsole/5ExcelFormatCells.png)
+
+Now select Number, and then set the decimal places to 0. Click OK.
+
+![IMEI](./assets/NewConsole/6ExcelNumberFormat.png)
+
+If the list is just serial numbers, copy them to the third column (C) underneath the first row. If Serial Numbers are numeric only you may encounter the exponential problem requiring formatting the cell range as described for IMEI.
+
+However if the serial number starts with 0, Excel will automatically remove the preceding and any following 0s. To prevent this from happening you need to append a ' in front of the number.
+If the serial number is alphanumeric, you should have no problems with the default cell formatting.
+
+Finally, remember to save the file as CSV. Do this by choosing File | Save As…
+
+![IMEI](./assets/NewConsole/7ExcelSaveAs.png)
+
+And then choose the file type of CSV, then save the file.
+
+![IMEI](./assets/NewConsole/8ExcelCSV.png)
 
 You can use either the IMEI or serial number for a particular device. As cellular devices will have both an IMEI and serial number, or in some cases have two IMEIs (dual SIM) and a serial number, the Esper system follows a particular order when processing a new device for IMEI-based provisioning:
 
@@ -834,7 +860,7 @@ You can also upload a CSV or individually add IMEIs and Serial Numbers when [edi
 
 **Download Config**
 
-Clicking 'Download Config' will enable you to download the config.json file for use during Android Debug Bridge (ADB) and by IMEI-based provisioning methods. Please don't hesitate to [contact us](https://esper.io/contact-us) if you have any questions. 
+Clicking 'Download Config' will enable you to download the config.json file for use during Android Debug Bridge (ADB) and by IMEI-based provisioning methods. Please don't hesitate to [contact us](https://docs.esper.io/home/support.html#support) if you have any questions. 
 
 **Delete**
 
@@ -846,9 +872,11 @@ To create a provisioning template, then click or tap on **Create Template**.
 
 ![Create Template](./assets/NewConsole/TemplateCreate.png)
 
-   Enter a unique name and an optional description for the Provisioning Template, then click **Next**.
-   
-![Create PageTemplate](./assets/NewConsole/TemplateCreatePage.png)
+You have a choice to **Create Full Template**, or **Create Quick Template**. If you create a quick template, you simply enter a unique template name, select the app or apps to install when you provision the device along with whether you will put one in Kiosk mode, then preview and save the template. Once you save the template you can go back and edit it at any time with the full template options.
+
+![Create PageTemplate](./assets/NewConsole/9QuickTemplate.png)
+
+If you choose **Create Full Template**, enter a unique name and an optional description for the Provisioning Template, then click Next.
 
 ### Compliance Policy Section
 
@@ -1005,12 +1033,15 @@ See [here](./console/policy-management/getgoogleaccount.md) to know how to get t
       
 Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file.
 
-The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code - see the example below.
+The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code. If you are using a text editor, seperate each phone by a carriage return and save as csv:
 
-![Upload Phone](./assets/NewConsole/PhoneNumberCSV.png)
+![Upload Phone](./assets/NewConsole/1PhoneNumbers.png)
 
-Only one upload file is stored for each, if you upload a new file, the old entries are deleted and only the entries from the new file are used.
-If you wish to enable outbound calls, be sure to include your device’s phone app as a package name for [Preloaded apps in Apps] if the phone app is preinstalled.
+If you are using a spreadsheet program, enter each phone number in the first column by row:
+
+![Upload Phone](./assets/NewConsole/0PhoneNumbers.png)
+
+Only one upload file is stored for each, if you upload a new file, the old entries are deleted and only the entries from the new file are used. If you wish to enable outbound calls, be sure to include your device’s phone app as a package name for [Preloaded apps in Apps] if the phone app is preinstalled.
 
 ***Tip
 Spreadsheets commonly interpret + as part of a mathematical formula. Use the appropriate method specific to that spreadsheet to indicate the number is not part of a formula. For example in Excel you prepend a ‘ to each entry. Remember to save the file as a .csv.***
@@ -1137,24 +1168,11 @@ The Uploaded app will be shown in the ‘Add Application list.’
 
 When you are satisfied with your application's settings, click **Next**.
 
-### Branding section
-
-The Branding section lets you customize the devices you’re provisioning by uploading the wallpapers that will be displayed on the device once it’s provisioned. You can upload separate portrait and landscape wallpapers. If your device is fixed to a display orientation, you only need to upload the wallpaper for that orientation.
-
-*Note: This does not apply to devices deployed in Kiosk mode.*
-
-Supported image formats are JPEG, PNG, or JPG with a 25MB size limit. Be sure to crop the image to match the screen resolution of the devices you plan to provision with this template, otherwise they will be stretched to fit.
-
-![Template Branding](./assets/NewConsole/TemplateBranding.png)
-   
-To preview the Portrait wallpaper you uploaded, click **See preview**.
-When you are satisfied with your wallpaper, click **Next**.
-
 ### Settings section
 
-The Settings section lets you determine levels for most of the device settings: These include things like screen brightness, alarm volume, and screen timeout. You can also set up devices with Wi-Fi credentials, along with determining the duration of an ADB session if ADB was enabled in the [Compliance Policy] section.
+The Settings section lets you determine levels for most of the device settings: These include things like screen brightness, wallpaper, alarm volume, and screen timeout. You can also set up devices with Wi-Fi credentials, along with determining the duration of an ADB session if ADB was enabled in the [Compliance Policy] section.
 
-![Template Settings](./assets/NewConsole/TemplateSettings.png)
+![Template Settings](./assets/NewConsole/10Settings.png)
    
 ***Tip: If the **Android Settings App** is enabled for a device in Multi application mode, the device user can access these settings and change them on the device.***
 
@@ -1168,6 +1186,9 @@ The Settings section lets you determine levels for most of the device settings: 
    * Set the brightness of the screen using a slider.
    * Set the alarm volume using a slider.
    * Set notification volume using a slider.
+   * Add branding to the device by setting both Portrait and Landscape mode wallpaper, as well as Lock Screen wallpaper. 
+      * Supported image formats are JPEG, PNG, or JPG with a 25MB size limit. Be sure to crop the image to match the screen resolution of the devices you plan to provision with this template, otherwise they will be stretched to fit. You can preview and adjust each image after you upload them.
+* Set the alarm volume using a slider.
    * Set music volume using a slider.
    * Set ring volume using a slider.
    * Select screen orientation from the dropdown menu (Auto, Landscape, or Portrait)
@@ -1186,31 +1207,31 @@ Android Debug Bridge (ADB) is a command-line tool that enables administrators to
    
 ***Tip: Keeping ADB set to "Always ON" is **NOT** recommended for security reasons.***
 
-**WIFI Access Points**
+**WiFi Access Points**
 
-You can pre-load preferred Wi-Fi networks to which the provisioned device will automatically connect as they become available.
+You can preload preferred Wi-Fi networks to which the provisioned device will automatically connect as they become available.
 
-![WIFI Network](./assets/NewConsole/WIFIAccessPoint.png)
-   
+![WiFi Network](./assets/NewConsole/WIFIAccessPoint.png)
+
 The device will automatically connect to the given Wi-Fi access points as per the availability and network strength after provisioning.
- 
+
 ***Tip: The Wi-Fi on/off and WiFi access points feature are not available for devices running Android 10.0 and above***
 
 This section has four fields to configure: Wi-Fi SSID, Wi-Fi Password, Wi-Fi Security type, and whether the access point is hidden. The Wi-Fi SSID and Wi-Fi Password fields are text fields into which you enter the SSID and password for the access point. Select the security type from the dropdown menu. There are four possible choices:
-   - NONE
-   - WPA
-   - WEP
-   - EAP
-If you select EAP, an extra dropdown menu will appear to enable you to select a Phase 2 Authorization protocol:
-   - NONE
-   - PAP
-   - MSCHAP
-   - MSCHAPV2
-   - GTC
-   - SIM
-   - AKA
-   - AKA_PRIME
-   
+
+* NONE
+* WPA
+* WEP
+* EAP If you select EAP, an extra dropdown menu will appear to enable you to select a Phase 2 Authorization protocol:
+* NONE
+* PAP
+* MSCHAP
+* MSCHAPV2
+* GTC
+* SIM
+* AKA
+* AKA_PRIME
+ 
 ![WIFI Network Details](./assets/NewConsole/WIFIAccessPointDetails.png)
 
 ***Tip: The Wi-Fi On/Off and Wi-Fi Access Points feature are not available for devices running Android 10.0 and above.***
@@ -1241,51 +1262,6 @@ If you select EAP, an extra dropdown menu will appear to enable you to select a 
    
 Hidden access points are not supported for use during provisioning.
 When you are satisfied with your settings, click **Next**.
-
-### Devices and Groups
-
-The Devices & Groups section is now a consolidated experience, enabling you to manage devices and groups in one place. You can assign devices to groups or move devices/groups from one group to another. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
-
-We also provide the capability of “Nested Groups” now which is essentially a hierarchical structure of groups that enhances flexibility of taking actions for devices. Thus introducing two more concepts:
-
-* Parent Group - A group at a higher level of hierarchy. Users can create multiple parent groups at the same level. 
-* Sub-Group - A group at a lower level of hierarchy associated with a parent group. Any action intended for a parent group will be cascaded to all sub-groups as well. 
-
-By default, there will be an “All Devices” group which will be the parent group for any new groups created.Also, devices are automatically added to this group unless otherwise specified during provisioning via template. Excluding “All Devices”, five levels of hierarchy are allowed.  
-
-
-![SubGroups](./assets/NewConsole/newgroupcompliancepolicy.png)
-![NestedGroups](./assets/NewConsole/newgroupcompliancepolicy2.png)
-   
-To select an existing group, click the radio button next to its name. If you’d like to create a new group, click on the ‘+’ Button to create sub-group.
-
-Enter a unique name for the new group into the popup menu that appears. 
-Once the new group is created, it will automatically be selected and used with this template.
-
-![Create Group](./assets/NewConsole/SubGroups2.png)
-![Create Group](./assets/NewConsole/SubGroups3.png)
-
-When you are satisfied with your group selection, click **Next**.
-
-**Add Devices (IMEI Provisioning)**
-
-If you are editing a template rather than creating one, the next section will be 'Add Devices.'
- 
-The **Add Devices** section gives you the option to individually add or delete the International Mobile Equipment Identity (IMEI) or serial numbers of devices you want to provision with this template. You can also upload a CSV file containing IMEIs and Serial Numbers. Please format your CSV using the instructions in the **Upload IMEI CSV** section.
-
-![Add Devices Template](./assets/NewConsole/TemplateAdddevices.png)
-
-To manually add a device to be provisioned, enter either its serial number or its IMEI in the **Add IMEI/Serial Number** field and click on the **Add** button.
-
-![Add IMEI Template](./assets/NewConsole/TemplateIMEIAdd.png)
-
-Within a few seconds, the IMEI or serial number will be registered with the backend. The newly added device’s IMEI or serial number will appear in the **IMEI/Serial Number** field, and a toast notification will appear in the bottom left corner of the Console:
-
-![Success Message](./assets/NewConsole/SuccessMessage.png)
-
-***Tip: Esper validates all IMEI numbers entered. If you enter an IMEI that cannot be verified as an valid IMEI number, you’ll get an error. Additionally if the IMEI or Serial Number is already associated with another Provisioning Template, you’ll also get an error.***
-
-Click **Next**.
 
 ### Preview
 
@@ -1333,59 +1309,112 @@ Capabilities such as Apps, Remote View and Capture log may not be available on a
 
 ***Tip This feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, [contact us](mailto:support@esper.io)***
 
-### Device View
+## Devices Pane
+Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
+The default view for the Device Pane is List View.
 
-Once you’ve added actual or simulated devices to the Console, the **Devices** view will list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all ESP-DDM. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name, noting the Device ID is often used as a parameter by the Esper API.
+![DevicesPane](./assets/NewConsole/11ListView.png)
 
-![Device Tiles](./assets/NewConsole/DeviceTile.png)
+The default view for a group always shows the devices that are in the nested group underneath. If you wish to view only the devices in that group, turn off the switch for Show nested devices.
 
-There are three ways to view the devices in your Console: Grid, List and Maps. The default is grid view, but you can click on list or maps to access the list view or the map view.
+![DevicesPane](./assets/NewConsole/14NestedView.png)
 
-***Tip: If you want to remove a device from Esper, execute a 'Wipe Device' command from Settings. If you perform a factory reset locally on the device, it will still continue to show up in Esper, but will be offline. The only devices that can be directly deleted from the Esper Console without a 'Wipe Device' command are devices that are currently provisioning. If a device becomes inoperable and you wish to remove it from your Esper Endpoint, please [contact us](mailto:support@esper.io).***
+There are three ways to view the devices in your Console: Grid, List and Maps. The default is list view, but you can click on grid or maps to access the grid view or the map view.
 
-#### Search Box
+![DevicesPane](./assets/NewConsole/12ViewDrop.png) 
 
-You can search device attributes from both the Grid and List views via the Search Box. This enables you to search for specific devices by the following parameters:
+***Tip: If you want to remove a device from Esper, execute a 'Remove/Factory Reset' command from Settings. If you perform a factory reset locally on the device, it will still continue to show up in Esper, but will be offline. You can use the 'Remove/Factory Reset’ command to remove this type of device as well.***
 
-* Device ID 
-* Alias 
+### Search Box
+
+You can search device attributes from any of the views via the Search Devices box.
+
+![DevicesPane](./assets/NewConsole/23DeviceSearch.png)
+
+This enables you to search for specific devices by the following parameters:
+
+* Device ID
+* Alias
 * Tags
-* Device Information 
+* Device Information
 
+The scope of the search will be limited to the devices enumerated in the chosen group and potentially the nested groups.
 To clear the search, simply refresh the page.
 
+### Actions Drop Down
+
+The Actions drop down gives you a set of specific actions you can take on any devices you’ve selected when in Device Pane List view. It is unavailable for Grid and Map views.
+
+![DevicesPane](./assets/NewConsole/25MoreAct.png) 
+
+This is what you use to move devices between groups. Use filtering to get the List view to the devices to the devices you wish to move and then select all, or individually select the devices you wish to move. Go to Actions | Move Devices, and you can select the destination group to move the devices to using Search to easily find the destination group. Select the button on the right side of the group, then click Move devices.
+
+![DevicesPane](./assets/NewConsole/33DeviceMove.png) 
+
+### Filter Button
+
+You can apply filters to your view by clicking on the Filter button.
+
+![FilterButton](./assets/NewConsole/24Filter.png)
+
+Note the blue dot in the upper right corner indicates a filter has been applied.
+
+You can filter by multiple values of each value. For example, you can choose Group A, Policy B and Online and Offline devices which will give you a filtered list of devices in Group A which are Online and Offline and have policy B applied on them.
+
+Once you select the filter parameters, click Apply to update the view. Custom filters are stored locally via browser caching. Your sort preferences will be applied automatically when you return to this page unless you update your preferences or clear your cache. You can return to the unfiltered view by clicking Reset.
+
+Table settings is List view specific and gives you the option to choose the column spacing, as well as all the fields you wish to display in List view.
+
+![TableSet](./assets/NewConsole/26TableSet.png)
+
+Once pressed, a slide out appears providing column density options as well as the list of selectable columns - be sure to scroll down to find more columns. 
+
+![TableSlide](./assets/NewConsole/27TableSlide.png)
+
+Once you exit, your view will be updated.
+
+Note some columns are available to sort the List view, these columns will be indicated by side-by-side up/down arrows. Simply click on the arrows to perform the sort using that column.
+
+![ColumnSort](./assets/NewConsole/28ColumnSort.png)
+
+### Download Device List Button
+
+Clicking the Download Device List button enables you to download the device data for your current set of devices in Grid View to an CSV or Excel spreadsheet.
+
+![DLDeviceList](./assets/NewConsole/29DLDeviceList.png)
+
+**Note: Currently, this feature is only supported for up to 500 devices. Please adjust your filter appropriately to keep the list below 500 devices.**
+
+###Device Details Button 
+
+Clicking the Device Details icon brings a context-sensitive slide out from the right side of the screen. 
+
+![ActFeed](./assets/NewConsole/30ActFeed.png)
+
+This slide out is called the Activity Feed. If you are viewing a group, it lists the history of all commands fired by any user to the devices in the group. 
+
+![ActFeedGroup](./assets/NewConsole/31ActFeedGroup.png)
+
+Clicking View Results will show more details (including the current status) of each command. It provides details of each command—including the devices that are currently in an In progress, Success, Queued, Failed or Cancelled state.
+
+If you’ve selected a single device, clicking the Device Details icon will show the details and activity for that device. The Activity tab will show all activities done on that device. If you selected more than one device, no details will be shown.
+
 ### Grid View 
-Devices which are being managed by your Esper system, or that are undergoing provisioning and have started communicating with the backend, are displayed as device tiles in the grid view.
+Devices which are being managed by your Esper system, or that are undergoing provisioning and have started communicating with the backend, are displayed as device tiles when in the grid view.
 
 ![Tile Details](./assets/NewConsole/DeviceTileView.png)
 
 You can use Grid view by clicking on the grid icon under the Devices heading on the Devices page:
 
-![Grid View](./assets/NewConsole/GridView.png)
-
-#### Filtering the Grid View Device List by Category
-
-You can filter the list of devices managed by your console by category. To do so, check the boxes next to the categories you would like displayed. The available categories are:
-
-   * Under provisioning — Devices currently provisioning 
-   * Online devices — Currently online  
-   * Offline devices — Currently offline
-   * No risk devices — Device with security status secure
-   * Low risk devices — Device with security status low
-   * Medium risk devices — Devices with security status medium
-   * High risk devices — Devices with security status high
-   * Devices with low battery — Devices with battery level under 30% charge
-   * Recently added devices — Devices provisioned within the last 3 days
-   
-You’ll find more information about how we determine the security status of a device in [Security](./console.md#security-tab).
-You can also search for a specific device using the **Search Box** at the top of the screen. The device alias, Device ID, and any tags are all included in the search scope.
+![Grid View](./assets/NewConsole/13GridDrop.png)
 
 #### Grid View Drop Down Options
+
 Clicking on the ellipsis button (...) on the top right corner of the device tile brings up the following options: 
 
-![Device Actions](./assets/NewConsole/DeviceEllipsis.png)
+![Device Actions](./assets/NewConsole/32GridElip.png)
 
-#### View on Map
+#### View on Maps
 
 Click **View on Maps** to see the location of the device on a map:
 
@@ -1411,12 +1440,6 @@ Click the pencil icon next to a tag to edit it; and click the garbage can icon t
 
 Upon clicking, the text box lets you edit and update the tag as shown below.
 
-#### Remove from Group
-
-**Remove from Group** will only appear if the device is part of a group other than the Default group. 
-Clicking **Remove from Group** will remove the device from the group and make it a part of the Default Group. 
-Use this if you wish to stage the device in the Default Group to move it to another Group.
-
 #### Device Rename
 
 Esper assigns a unique Device ID to every device enrolled on the Esper platform. 
@@ -1428,193 +1451,6 @@ If you’d rather use your own naming convention, click **Device Rename**, enter
 The new device name will appear in all Console views, including the device home screen. 
 This name is actually an alias; we’ll still continue to use the Device ID under the hood. 
 You can revert it to its original Device ID at any time using this same technique.
-
-#### Filter Button
-
-You can also apply filters to your Grid view by clicking on the **Filter** button. 
-
-You can filter by multiple values of each value. For example, you can choose Group A, Policy B and Online and Offline devices which will give you a filtered list of devices in Group A which are Online and Offline and have policy B applied on them.
-
-![Filters](./assets/NewConsole/filtersupdated.png)
-
-Once you select the filter parameters, click **Apply** to update the Grid view. 
-
-Custom filters to Device List view are stored locally via browser caching. Your sort preferences will be applied automatically when you return to this page unless you update your preferences or clear your cache. You can return to the unfiltered view by clicking **Reset.**
-
-### Download Devices List Button
-
-Clicking the **Download Devices List** button enables you to download the device data for your current set of devices in Grid View to an CSV or Excel spreadsheet. 
-
-*Note: Currently, this feature is only supported for customers with up to 500 devices.*
-
-### Device Details Button
-
-Clicking the **Device Details** icon when no devices are selected brings a slide out from the right side of the screen listing the history of all commands fired by any user for the devices on the Grid. This section is named as Activity Feed. 
-
-Clicking **View Results** will show more details (including the current status) of each command. It provides details of each command—including the devices that are currently in an In progress, Success, Queued, Failed or Cancelled state.
-
-If you’ve selected a single device, clicking the **Device Details** icon will show the details and activity for that device. The Activity tab will show all activities done on that device. If you selected more than one device, no details will be shown.
-
-### List View
-
-Once you have enough devices under management, it becomes impractical to view or sort them in Grid view. 
-
-List View enables you to see a list of all devices available on the dashboard along with configurable device information columns including alias name, online/offline status, group name, policy name, registered date and tags. 
-
-You can now save your custom device view for a user session including the column configuration, column filters, column sorting, and pagination. 
-
-![List View](./assets/NewConsole/DeviceListView.png)
-
-To switch to List View, simply click on the 'List View' icon underneath the 'Devices' heading.
-
-![ListView Button](./assets/NewConsole/ListView.png)
-
-Each Device Name is a link that will take you to the details of that device. 
-
-By default, the list is sorted in descending order of device registration date (For example: The date the device was provisioned). 
-Several of the columns are sortable, you can identify them by the arrows to the right of the name.
-Simply click on the header for that column to use it as the sort criteria. 
-
-Upon clicking, the currently used sort criteria will be highlighted. 
-In this example, the sort criteria is from the most recently registered device.
-
-![List Sorting](./assets/NewConsole/RegisteredOn.png)
-
-#### Actions Button
-
-To use the **Actions** button, check the box next to the device or devices you wish to take an action, then click the **Actions** button. 
-
-![Actions](./assets/NewConsole/ListviewActions.png)
-
-If you have not selected a device, Actions will be greyed out and you will see a pop up advising you to select at least one device.
-
-![Actions Message](./assets/NewConsole/ListViewActionsMessage.png)
-
-You’ll be able to do the following actions via the drop down menu, without having to navigate to other sections of the Console:
-
-   * Ping
-   * Reboot
-   * App install
-   * App uninstall
-   * Apply policy
-
-When you select an action, a sidebar appears. You will then need to click on the action to initiate it. 
-For example, clicking 'Ping' will bring in a pane from the right side of the screen enabling you to ping the selected devices.
-
-![Ping](./assets/NewConsole/PingStatus.png)
-
-Click **Ping** to ping the selected devices; The pane will show you the progress for the Ping action.
-
-![Ping Device](./assets/NewConsole/PingDeviceInfo.png)
-
-You can click **View Results** for additional detail.
-
-![Ping Status](./assets/NewConsole/PingInProgress.png)
-
-Clicking on **Reboot** will bring in a pane from the right side of the screen enabling you to reboot the selected devices. 
-Rebooting can be done to online devices, and to offline devices once they come back online.
-
-![Reboot](./assets/NewConsole/RebootPreview.png)
-
-Click **Reboot** to reboot the selected devices; a new pane will slide in from the right showing progress.
-
-![Reboot Status](./assets/NewConsole/RebootStatus.png)
-
-You can click **View results** for additional detail.
-
-![Reboot Details](./assets/NewConsole/ViewDetailsInProgress.png)
-
-Clicking on **App Install** will launch the 'App Install' sidebar:
-
-![App Install](./assets/NewConsole/AppInstallPreview.png)
-
-Select an app from the dropdown menu, then click **Install**.
-
-![Reboot](./assets/NewConsole/AppInstallDetails.png)
-
-Hovering over the progress bar offers additional detail about the process, which in this case is application installation.
-
-![Reboot](./assets/NewConsole/QueuedMessage.png)
-
-Hovering over the progress bar will provide additional detail about the process on any command status progress menu.
-
-#### Queing Actions
-
-Queuing is applicable on offline devices for following actions in the list view of devices:
-
-* Reboot Device
-* Apply Policy
-* Install Application
-* Uninstall Application
-* Steps to queue 
-   * Select the devices in the list view
-   * Select the action you want to perform
-   * Select the checkbox to queue the action for offline devices
-
-![QueingActions](./assets/NewConsole/querequests.png)
-
-#### Table Settings Button
-
-Clicking on the **Table Settings** button (the button with a gear on it in between the **Actions** and **Filter** buttons) 
-will bring in a slide-in pane that allows you to add and remove columns, control the density of your table, 
-and perform other customization activities to improve the look and function of your Device Lists.
-
-![Reboot](./assets/NewConsole/TableSettings.png)   
-
-![Reboot](./assets/NewConsole/ListViewTableSettings.png)
-
-To add or remove columns from this list, click the down arrow. 
-Select any columns you wish to add; unselect any you wish to remove, and then click **Apply**. 
-
-You can change the table density by clicking on any of the three options.
-
-#### Filter Button
-
-You can apply filters to your List View by clicking on the **Filter** button.
-
-![Reboot](./assets/NewConsole/ListViewFilter.png)
-
-Currently, you can only filter by one value of each value. 
-For example, you can choose **Group A, Policy B and Active** which will give you a filtered list of devices 
-in **Group A** which are **Active** and have **Policy B** applied on them.
-
-![Reboot](./assets/NewConsole/ListViewFilterAndroid.png)
-
-Once you select the filter parameters, click **Apply** to update the List View. 
-Custom filters to Device List view are stored locally via browser caching. 
-Your sort preferences will be applied automatically when you return to this page, 
-unless you update your preferences or clear your cache. 
-
-You can return to the unfiltered view by clicking **Reset**.
-
-#### Download Devices List Button
-
-Clicking the **Download Devices List** button enables you to download the device data for your current 
-set of devices in List View to an CSV or Excel spreadsheet.
-
-![Reboot](./assets/NewConsole/ReportDownload.png)
-
-#### Activity Feed Button
-
-Clicking the **Activity Feed** icon when no devices are selected brings a slide out from the right side of the screen,
-listing the history of all commands fired by any user for the devices on the list.
-
-![Reboot](./assets/NewConsole/ListViewActivityFeed.png)
-
-![Reboot](./assets/NewConsole/DeviceActivityFeed.jpg)
-
-Clicking **View Details** will show more details (including the current status) of each command. 
-The pop-up box will then provide details of each command. 
-
-This includes devices that are currently in an In Progress, Success, Queued, or Failed state.
-
-![Reboot](./assets/NewConsole/StatusSuccess.png)
-
-If you’ve selected a single device, clicking the **Activity Feed** icon will show the details and activity for that device. 
-The 'Activity' tab will show all activities done on that device. 
-If you selected more than one device, no details will be shown.
-
-![Reboot](./assets/NewConsole/ListViewActivityFeed.jpg)
 
 ### Map View
 
@@ -1637,8 +1473,7 @@ To go to that device’s Information page, simply click on **View Details**.
 
 ### Device Details
 
-Clicking **View Details** at the bottom of a device tile enables you to see additional details about that device in either Grid View or Map View. 
-You can also go to a device’s detail in List View by clicking on the Device Name in the list. 
+Clicking **View Details** at the bottom of a device tile or the Device Name in List view enables you to see additional details about that device.
 
 ![Reboot](./assets/NewConsole/DeviceTileDetails.png)
 
@@ -1699,7 +1534,7 @@ This can be used to avoid unwanted usage if the device were ever to fall into th
 
 ![Reboot](./assets/NewConsole/Screenlock.png)
 
-**Heartbeat**
+**Heart beat**
 
 Esper Managed devices are continuously communicating with our Cloud and updating their statuses every minute. 
 If a device dozes off due to inactivity or a bad network connection, Esper Cloud will regularly wake them and ask for a status update.
@@ -1723,7 +1558,7 @@ In this example, after the device has been locked down, the user will see the fo
 
 After locking down a device, the button will change to Unlock to enable you to unlock the device from the Console.
 
-**Delete Device from Dashboard**
+**Delete the Device**
 
 The **Wipe Device** Command has been renamed to “Remove/Factory Reset,” providing additional capability. 
 
@@ -1804,8 +1639,12 @@ A toast message will appear in the bottom right section of the screen indicating
 
 ![Reboot](./assets/NewConsole/Toast.png)
 
-![Reboot](./assets/NewConsole/ErrorChangeSettings.png)   
-           
+![Reboot](./assets/NewConsole/ErrorChangeSettings.png)
+
+**Branding** 
+
+Use this section to change or add wallpaper to your device. You can set wallpaper for Portrait, Landscape, and Lock Screen.
+ 
 **Sound**
 
 This section lets you adjust the sound settings of the device. Use the sliders to adjust the:
@@ -2088,7 +1927,7 @@ This action gives you control over the app’s state. Clicking **Set App State**
 
 Click the button for the state you want this app to be in and click **Save Changes**.
 
-***Tip: Please note that some in-ROM (preloaded) apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled.***
+***Tip: Please note that in-ROM (preloaded) apps are designed to be uninstallable by the device manufacturers so they can be hidden but can not be uninstalled.***
 
 #### Activity Feed 
 
@@ -2218,7 +2057,7 @@ To exit the full screen view, simply press **esc** on your PC’s keyboard.
 
 #### Remote Control
 
-On Esper-Enhanced Android Devices, or devices that have a manufacturer signed Esper agent in the system, 
+On Esper Enhanced Android Devices, or devices that have a manufacturer signed Esper agent in the system, 
 there is an option to Remote Control the device. 
 
 This means you may interact with the remote device using your mouse as though you were physically touching the screen.
@@ -2339,120 +2178,72 @@ You now have a secure remote ADB session with that device.
 Until the device is rebooted, you’ll be able to connect to the device remotely using Esper CLI. After rebooting, you’ll need to re-establish the ADB connection.
 :::
 
-## Groups
+## Devices & Groups
 
-The **Groups** section enables you to assign devices to groups. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
+The Devices & Groups section enables you to manage devices and groups in one place. You can assign devices to groups or move devices/groups from one group to another. Once devices are assigned to groups, you can use a single command to perform an action on all the devices in the group. You can, for example, apply a Compliance Policy to all the devices in the group at once.
+
+We also provide the capability of “Nested Groups” now which is essentially a hierarchical structure of groups that enhances flexibility of taking actions for devices. Thus introducing two more concepts:
+
+* Parent Group - A group at a higher level of hierarchy. Users can create multiple parent groups at the same level. 
+* Sub-Group - A group at a lower level of hierarchy associated with a parent group. Any action intended for a parent group will be cascaded to all sub-groups as well. 
+
+By default, there will be an “All Devices” group which will be the parent group for any new groups created.Also, devices are automatically added to this group unless otherwise specified during provisioning via template. Excluding “All Devices”, five levels of hierarchy are allowed.  
+
+![SubGroups](./assets/NewConsole/newgroupcompliancepolicy.png)
+![NestedGroups](./assets/NewConsole/newgroupcompliancepolicy2.png)
+
+## Groups Pane
+
+As groups may be deeply nested, the Groups pane has a dynamic horizontal scroll bar that will appear to be able to pull those groups and their options into view. You can resize the pane by hovering over the vertical bar separating the Groups and Devices panes. You can also use the left pointer to collapse the Groups pane to give you the maximum view for the Devices Pane.
+
+![GroupsPane](./assets/NewConsole/20Scroll.png)
+
+To view all the devices in a group in the right Devices pane, click on the left side of the desired Group in the Groups pane.
+
+![GroupsPane](./assets/NewConsole/15ViewGroupsDevices.png)
+
+To perform group actions on a groupselect an existing group, click the eye iconradio button next to its name. 
+
+![GroupsPane](./assets/NewConsole/16Eye.png)
+
+This will take you to the Group actions you can take on that group - change Settings, view the group’s Event Feed, apply a new Compliance Policy, install or uninstall Apps, or manage Esper Enhanced Android OS updates.
+
+![GroupsPane](./assets/NewConsole/17GroupActions.png) 
+
+To return back to the main Devices & Groups page, simply click the back arrow to the right of the Group name at the top.
+
+![GroupsPane](./assets/NewConsole/18Return.png)
+
+If you’d like to create a new sub-group, click on the ‘+’ Button on the corresponding group to create the sub-groupto create sub-group.
+
+![GroupsPane](./assets/NewConsole/19Subcreate.png) 
+
+Enter a unique name for the new group into the popup menu that appears, then click **Create**. Once the new group is created, it will automatically be selected and the Devices pane will then display the new group.
+
+On the far right of each Group in the Groups pane is an ellipsis drop down with More Actions available for that Group. You can rename, move, or delete a group. Additionally you can view its properties, which will take you to the Group Actions page for that group.
+
+![GroupsPane](./assets/NewConsole/21MoreActDrop.png)
+
+You can find a group by name using Search groups.
+
+![GroupsPane](./assets/NewConsole/22SearchGroups.png)
+
+## Devices Pane
+
+Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
+The default view for the Device Pane is List View.
+
+![DevicesPane](./assets/NewConsole/11ListView.png)
 
 ![Groups](./assets/NewConsole/GroupsTiles.png)
 
 There is a "Default" group called where devices are automatically added unless otherwise specified during provisioning via template. It is also used as the collection point when devices are moved between groups.
 
-### Creating a Group
+## Group Detail
 
-You can create a Group by clicking on the “+” icon in an existing Group. This will create a new sub-group under the selected parent group. 
+The Group detail page provides commands and information at the Group level. To return to the Devices & Groups view, simply click on the left arrow next to the group’s name at the top of the page.
 
-![Groups](./assets/NewConsole/GroupCreateButton.png)
-
-Enter a unique name in the text box and click **Create**. 
-
-![Groups](./assets/NewConsole/GroupCreateName.png)
-
-The next step is to move the devices from another group. Click on the group you wish to move devices from and select the specific devices. Click on **Actions - Move Devices.** A new pop-up window will appear asking you to select the destination group. Once selected, click on **Move Devices.** 
-
-![Groups](./assets/NewConsole/GroupAddDevices.png)
-![Groups](./assets/NewConsole/movegroupsupdated.png)
-
-Devices can be moved back to the Default Group by selecting the checkbox next to the device name and clicking on **Remove Selected**.
-
-Once the desired devices have been moved to the Group, click **Save**.
-
-You can also create a new group when creating a new [Provisioning Template](./console.md#provisioning-templates). In the Group section on the new template, you can create a group such that any device provisioned using the said template will fall in the newly created and selected group.
-
-### Moving Devices Between Groups
-
-Moving devices from one group to another group requires two steps:
-
-   - First remove the device or devices from the group they are in. This will move them to the Default group.
-   - Navigate to the destination group and add the devices from the Default group.
-
-To remove one or more devices from a group, first click **View Details** for that group in the group’s tile:
-
-![Groups](./assets/NewConsole/GroupViewDetails.png)
-
-Then click the ellipses on the left side of the screen and select **Remove device**.
-
-![Groups](./assets/NewConsole/GroupRemoveDevice.png)
-
-Your screen is now in multi-select mode. Click on each device you wish to remove from the group.
-
-![Groups](./assets/NewConsole/GroupManageSelect.png)
-
-Click on the **Remove selected devices** button in the bottom right hand corner. The following dialog will appear asking you to confirm the deletion.
-
-![Groups](./assets/NewConsole/DeviceDeleteConfirm.png)
-
-You will then see a success toast message in the bottom left corner of your screen. The devices are now in the Default group.
-
-You can also remove individual devices by clicking on the ellipses on the device’s tile and click on **Remove from group**. This is also available in the [Devices view](./console.md#devices).
-
-![Groups](./assets/NewConsole/DeviceRemoveGroup.png)
-
-Now click **View Details** for the group you want to move these devices to. Click on the **Add device** button.
-
-![Groups](./assets/NewConsole/AddDevice.png)
-
-Now use the same process to add the desired devices to move to the group from the Default Group as described in [Creating a Group](./console.md#creating-a-group).
-
-### Deleting a Group
-
-If a group is deleted, all the sub-groups and devices linked will be moved to the immediate parent group. To remove a group, click on the **More Actions** icon and then **Delete.**
-
-![Groups](./assets/NewConsole/GroupDelete.png)
-
-A popup window will appear. Click on **Delete** to confirm. There will be a toast notification indicating the status of this deletion. 
-
-### Searching for a Group
-
-You can search for a group by typing the group name in the search box and clicking the magnifying glass icon. Note once you view the devices in the group, the search context changes from *Groups to Devices*.
-
-### Viewing Group Details 
-
-Clicking **More actions** - **Properties** on a group will take you to the details view.
-
-![Groups](./assets/NewConsole/GroupDetails.png)
-
-The Group Details view has six tabs that provide access to different actions you can take on the devices in the group.
-
-![Groups](./assets/NewConsole/GroupDetails2.png)
-
-#### The Manage Tab
-
-The Manage tab is the default view for Groups. It shows the device tiles for all the devices in the group.
-
-![Groups](./assets/NewConsole/ManageTab1.png)
-
-You will find more information about individual devices in the [Devices](./console.md#devices) section of this document.
-
-You can filter the list of devices using one or more of six filters:
-
-   - Under provisioning — Devices in the group that are currently undergoing provisioning
-   - Online devices — Devices in the group that are currently active (online)
-   - Offline devices — Devices in the group that are currently inactive (offline)
-   - Devices at risk — Devices in the group that are at high, medium or low security risk
-   - Devices with low battery — Devices in the group with less than 15% charge in their batteries
-   - Recently added devices — Devices in this group which were provisioned in the last 3 days
-   
-You may click on “Clear all filters” (extreme right) to view the complete list of devices again. 
-
-![Groups](./assets/NewConsole/ManageTab3.png)
-
-You may click on “Info Button” (extreme right) to view the Group activity feed. 
-
-![Groups](./assets/NewConsole/ManageTab4.png)
-
-![Groups](./assets/NewConsole/ManageTab5.png)
-
-#### The Settings Tab
+## The Settings Tab
 
 The Settings tab enables you to change the settings on all the devices in a group as a mass action. This includes taking actions like rebooting, locking the screens, and requesting a heartbeat.
 
@@ -2538,7 +2329,7 @@ Select a time from the **Screen Timeout** dropdown menu.
 
 Once all changes are made, click **Apply changes** to push them out to the group, or **Cancel** if you wish to keep the current settings.
 
-A popdown will show the progress of the action or actions, indicating the number of successful and unsuccessful attempts.. In this example we changed settings for brightness, screen orientation, and screen timeout for the group.
+A popdown will show the progress of the action or actions, indicating the number of successful and unsuccessful attempts. In this example we changed settings for brightness, screen orientation, and screen timeout for the group.
 
 ![Groups](./assets/NewConsole/BrightnessScreen.png)
 
@@ -2547,6 +2338,10 @@ Click on **See details** for any of the popdowns and a slide out will appear spe
 ![Groups](./assets/NewConsole/SetBrightnessDetails.png)
 
 A toast message or messages will appear in the bottom right section of the screen indicating success for executing the command or commands to the group of devices.
+
+**Branding**
+
+Use this section to change or add wallpaper to your device. You can set wallpaper for Portrait, Landscape, and Lock Screen.
 
 **Sound**
 
@@ -2833,8 +2628,7 @@ There are two different types of Apps you can authorize on your Android devices:
       You can authorize—or disallow—apps from your managed Google Play store.
       
 :::tip
-You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates). You can also do so after provisioning using [**Groups > Apps > Approvals**](./console.md#groups).
-:::
+You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates).:::
 
 ### Uploading Enterprise Apps to the Esper Cloud
 
@@ -3545,7 +3339,7 @@ Run - An instance of pipeline in execution.
 
 Trigger - A prompt to force execution of a pipeline stage. This could be manual (prompted by a user) or automatic (prompted as result of a successful criteria like an online device).
 
-*A new pipeline (base) can be created with three default stages. Update targets (list of devices/groups) for each stage.
+*A new pipeline (base) can be created with three default stages using the Console (more than 3 can be done via the Esper CLI).
 *Create a new Job that will indicate the operation (App Install in this case) and corresponding application/version. 
 *Start a new Run to initiate execution of a pipeline - the user can choose to update the app version to be installed before starting a new run. A Run can be started, paused, resumed or terminated.
 *Any pipeline could have multiple jobs created and each job could have multiple runs (only one active at a time) associated with it.
@@ -3600,6 +3394,57 @@ To delete a pipeline, click the ellipsis (...) on its tile and select **Delete**
 
 ![Pipeline](./assets/NewConsole/PipelineActions.png)
 
+## Content Management
+
+You can upload or transfer file(s) upto 2 GB, including config files and other file formats, to devices and device groups. Now, you can:
+
+* Store files in Esper’s cloud console. 
+* See the file transfer history for devices or device groups.
+* View file transfer status (success, failure, or in progress) and status details.
+
+Please note that for large files being transferred to a large number of devices, the process can take a long time to complete. You can use the Activity Feed covered below to get details on the status of any file transfer.
+
+The first step is uploading the file to the Esper Cloud. Simply click upload file, and either drag or browse for the desired file. Add a description if you wish.
+
+![ContentManagement](./assets/NewConsole/34ContUploadFile.png)
+
+Once the file is uploaded, it will appear on the file list. 
+
+![ContentManagement](./assets/NewConsole/35ContFileList.png)
+
+You can now push the file to devices or groups. Select the ellipsis on the right and a drop down will appear. In some cases you will need to scroll down to see the whole list. 
+
+![ContentManagement](./assets/NewConsole/36ContDropdown.png)
+
+The following options are available:
+
+* Transfer: If you select Transfer, you can choose either groups or individual devices to push the file to and then push the file. You can not mix the two in a single transfer.
+* View Details: A slide out will appear giving you the details about the file and the ability to execute a set of commands that are also included in the drop down.
+* Add Tags: Another means to add tags to the file.
+* Add Description: Include a description of the file to better inform your team.
+* Download: Download the file to your local PC.
+* Delete: Delete the file from the Esper Cloud.
+
+When you perform a transfer, you first select the Groups and/or Devices to push the file to. Simply click Link for any Group or Device to add it to the transfer list. Use search to easily find your device or group.
+
+![ContentManagement](./assets/NewConsole/37xfer1.png)
+
+You then choose the path on the devices where you want the file transferred to. Once completed click on Transfer.
+
+![ContentManagement](./assets/NewConsole/38xfer2.png)
+
+A success or fail toast will appear on the bottom left of your Console screen once the file transfer has been successfully completed. To see the status of a transfer in the Activity Feed, click on the information icon on the upper righthand corner of the Console.
+
+![ContentManagement](./assets/NewConsole/39ActFeed.png)
+
+A slide out will appear showing you the status of each transfer. 
+
+![ContentManagement](./assets/NewConsole/40ActFeedSlide.png)
+
+Click on View results to get more details for a transfer.
+
+![ContentManagement](./assets/NewConsole/41XferResults.png)
+
 ## Company Settings
 
 The Company Settings section displays your company’s information. You can edit your company’s information by clicking the **Edit Profile** button at the top right of the screen.
@@ -3634,8 +3479,6 @@ If you change your short code after you’ve provisioned devices, those devices 
 Esper Enhanced Android devices are shipped with custom Android OS for improved security, faster deployments, and superior debugging. Esper's custom Android OS creates a better user experience on single-purpose devices.
 
 ![EEA](./assets/NewConsole/EEA.png)
-
-If you’re using Esper Enhanced Android, you can update device operating systems remotely, or over-the-air (OTA). To deploy an Esper Enhanced Android update OTA, navigate to **Group > OS Update**. Head to [Group section](./console.md#groups) for more details.
 
 ***Tip:
 Only the latest thirty build versions of Esper Enhanced Android are listed for deployment.***
