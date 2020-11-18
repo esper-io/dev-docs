@@ -817,7 +817,7 @@ If you are using a spreadsheet program instead of a text editor, each field goes
 
 See the example below using Excel:
 
-![IMEI](./assets/NewConsole/NewConsole/3ExcelIMEI.png)
+![IMEI](./assets/NewConsole/3ExcelIMEI.png)
 
 If you only have IMEIs, you can copy and paste them into the first column after the header row. If you are using only serial numbers, copy and paste them into the third column after the header row.
 Note that Excel’s default cell format is General which will turn an IMEI into an Exponential causing an error when uploading. 
@@ -2196,7 +2196,7 @@ By default, there will be an “All Devices” group which will be the parent gr
 
 As groups may be deeply nested, the Groups pane has a dynamic horizontal scroll bar that will appear to be able to pull those groups and their options into view. You can resize the pane by hovering over the vertical bar separating the Groups and Devices panes. You can also use the left pointer to collapse the Groups pane to give you the maximum view for the Devices Pane.
 
-![GroupsPane](./assets/NewConsole/20scroll.png)
+![GroupsPane](./assets/NewConsole/20Scroll.png)
 
 To view all the devices in a group in the right Devices pane, click on the left side of the desired Group in the Groups pane.
 
