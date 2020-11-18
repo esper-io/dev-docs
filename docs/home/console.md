@@ -2628,8 +2628,7 @@ There are two different types of Apps you can authorize on your Android devices:
       You can authorize—or disallow—apps from your managed Google Play store.
       
 :::tip
-You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates). You can also do so after provisioning using [**Groups > Apps > Approvals**](./console.md#groups).
-:::
+You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates).:::
 
 ### Uploading Enterprise Apps to the Esper Cloud
 
@@ -3480,8 +3479,6 @@ If you change your short code after you’ve provisioned devices, those devices 
 Esper Enhanced Android devices are shipped with custom Android OS for improved security, faster deployments, and superior debugging. Esper's custom Android OS creates a better user experience on single-purpose devices.
 
 ![EEA](./assets/NewConsole/EEA.png)
-
-If you’re using Esper Enhanced Android, you can update device operating systems remotely, or over-the-air (OTA). To deploy an Esper Enhanced Android update OTA, navigate to **Group > OS Update**. Head to [Group section](./console.md#groups) for more details.
 
 ***Tip:
 Only the latest thirty build versions of Esper Enhanced Android are listed for deployment.***
