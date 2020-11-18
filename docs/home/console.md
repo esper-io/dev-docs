@@ -165,11 +165,11 @@ The main body of the Dashboard contains four status panels:
 
 #### 1\. Deployment Status
 
-The **Deployment status** panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show the devices currently in that status.
+The **Deployment status** panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the Device Dashboard section, filtered to show the devices currently in that status.
 
 #### 2\. Security summary
 
-The **Security summary** panel provides a snapshot of the security status of all your deployed devices, with four possible statuses available for a device: High risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show you the devices in the risk category indicated.
+The **Security summary** panel provides a snapshot of the security status of all your deployed devices, with four possible statuses available for a device: High risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the Device Dashboard section, filtered to show you the devices in the risk category indicated.
 
 #### 3\. Where are your devices?
 
@@ -2547,7 +2547,7 @@ ADB will return a list of all the apps running on the device:
 
 ![Groups](./assets/NewConsole/ADBCommands.png)
 
-You can also view the package names for any apps installed on a device by viewing the [device’s details and selecting Apps](./console.md#devices). The package name for each app is displayed in the resulting list view.
+You can also view the package names for any apps installed on a device by viewing the device’s details and selecting **Apps**. The package name for each app is displayed in the resulting list view.
 
 ### OS Updates
 
