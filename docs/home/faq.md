@@ -228,9 +228,9 @@ Devices - If a user wants to make change to an individual (Esper Managed) device
 
 Groups - If a user wants to make change to an entire group of (Esper Managed) devices, they need to go to Groups section on the sidebar menu. Here users can see Group tiles. Here also, on clicking 'Details' user can see various available Group functionalities under various menus. Find out more about Group functionalities by clicking below.
 
-[![Esper Device Template](./assets/faq/device-template-faq5.png)](./console.md#groups)
+[![Esper Device Template](./assets/faq/device-template-faq5.png)](./console.md#devices)
 
-In both Devices and Groups section, user will see a 'Compliance Policy' tab under which they can choose and apply a new Compliance policy for the individual device or the group. In order to apply a policy, user needs to create a new Compliance policy or choose an existing one.
+In the Devices & Groups section, user will see a 'Compliance Policy' tab under which they can choose and apply a new Compliance policy for the individual device or the group. In order to apply a policy, user needs to create a new Compliance policy or choose an existing one.
 
 
 ![Esper Device Template](./assets/faq/device-template-faq4.png)
