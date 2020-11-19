@@ -4,10 +4,9 @@ The Esper Device SDK exposes an API to conduct privileged operations on Esper Ma
 
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
+Current version: 2.0.6
 
-Current version: 1.2
-
-Release name: Tessarion_MR3
+Release name: Tessarion_MR8
 
 Table of Contents: 
 
@@ -21,9 +20,9 @@ Table of Contents:
 - Start/Stop Wi-Fi Hotspot
 
 
-### Downloading the SDK
+## Downloading the SDK
 
-Download the .aar file of the SDK from [here](https://downloads.esper.io/device-sdk/esperdevicesdk-release-v1.2.4.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
+Download the .aar file of the SDK from [here](https://artifact.esper.io/artifactory/esper-device-sdk/io/esper/devicesdk/app/2.0.6225.9/app-2.0.6225.9.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
 
 ```java
 implementation files('libs/esperdevicesdk-release-v1.2.4.aar')
@@ -36,7 +35,6 @@ Before any operation can be done with the SDK, it needs to be initialized first.
 ```java
 EsperDeviceSDK sdk = EsperDeviceSDK.getInstance(getApplicationContext());
 ```
-
 
 The EsperDeviceSDK object can then be used to perform different operations.
 
@@ -241,11 +239,13 @@ sdk.clearAppData(appsToBeCleared, new EsperDeviceSDK.Callback<ArrayList<String>>
     }
 });
 ```
+
 The API allows you to pass a list of packages whose data is to be cleared. The API will return a null in onResponse if it was successfully able to clear the data of all apps or it shall return the list of packages whose data it was unable to clear.
 
 ### Manage AppOpp Permissions
 
 Android 6.0 introduced new category of permissions named "Special app access" which needs manual process to grant those permissions. Permissions such as "Display over other other apps"and "Usage access"—among many others—are part of this category. Esper Device SDK allows to automatically grant these permissions to your app without the need to ask the user to grant them.
+
 ```java
 /**
  * @param appOpMode - integer value of the AppOp permission for which grant status is to be set
@@ -273,7 +273,7 @@ The constants of most-used AppOp permission codes is available in the class `io.
 
 In Kiosk mode, Device user can access a hidden dock consisting of menu items such as Esper settings app by tapping 3 times on top right corner or by clicking the power button three times. Alternatively, this API can be used to show / hide the dock whenever you need from within your app.
 
-<b>Show Dock:</b>
+**Show Dock:**
 
 ```java
 sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
@@ -290,7 +290,7 @@ sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
 });
 ```
 
-<b>Hide Dock: </b>
+**Hide Dock:**
 
 ```java
 sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
@@ -309,8 +309,10 @@ sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
 
 ### Start/Stop Mobile Data
 
-Mobile data can be started/stopped only with DPC on android 4.4 & requires supervisor plugin on android 5.0+. 
-enableMobileData function of SDK expects two arguments.
+Mobile data can be started/stopped only with DPC on android 4.4 & requires supervisor plugin on Android 5.0+.
+
+enableMobileData function of SDK expects two arguments:
+
 boolean value to start/stop mobile data.
 true = start mobile data & false = stop mobile data 
 EsperDeviceSDK.Callback for the results.
@@ -356,3 +358,159 @@ sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new
 });
 ```
 
+### Disable Users From Powering Off Devices
+
+This API will enable or disable the user to power off the device by pressing the power button. 
+
+* Once power off is disabled, powering off is enabled only if another call is made to re-enable it. 
+* If powering off is disabled, a toast notification with the message "Security policy prevents power off" appears when the user tries to power off the device.
+
+**This API is only available on Samsung KNOX enabled devices & is available from the Esper Device SDK version TESSARION_MR8.**
+
+The function call to allowPowerOff returns boolean if allowing or disallowing power off was successful.
+
+```java
+sdk.allowPowerOff(checked, new EsperDeviceSDK.Callback<Boolean>() {
+   @Override
+   public void onResponse(@Nullable Boolean response) {
+       Log.d(TAG, "onResponse: " + response);
+       showMethodResult(getString(R.string.result, "" + response));
+   }
+   @Override
+   public void onFailure(Throwable t) {
+       Log.e(TAG, "onFailure: ", t);
+       showFailureResult(t);
+   }
+});
+```
+
+### Configure APNs via the Esper Device SDK
+
+APIs to add/update/remove/setDefault APN confuguraton(s).
+
+These APIs are only available on Samsung KNOX enabled devices, via Supervisor plugin, and the Esper Device SDK version TESSARION_MR8.
+
+To create new / update an existing APN, a JSON string needs to be passed in SDK functions with APN config parameters mentioned.
+
+```java
+{
+  "name": "Esper Device SDK",
+  "apn": "Airtel",
+  "proxy": "",
+  "port": "80",
+  "mmsproxy": "",
+  "mmsport": "",
+  "user": "",
+  "server": "",
+  "password": "",
+  "mmsc": "",
+  "authtype": "-1",
+  "protocol": "IPV4V6",
+  "roaming_protocol": "IPV4V6",
+  "type": "",
+  "mcc": "404",
+  "mnc": "45",
+  "numeric": "40445",
+  "current": "1",
+  "bearer": "0",
+  "mvno_type": "",
+  "mvno_match_data": "",
+  "carrier_enabled": "1"
+}
+```
+
+To Update/Remove/Delete config, an APN ID needs to be passed.
+
+**MVNO_TYPE & MVNO_MATCH_DATA on Samsung devices is only available on Android API Level 29 & above.**
+
+### Add new APN
+
+```java
+sdk.addNewApnConfig(
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               showMethodResult("onResponse: APN ID: " + response);
+           }
+
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+}, apnConfigJSONString);
+```
+
+addNewApnConfig function returns a newly added APN ID as an integer in response. 
+
+ -1 Indicates a Failure. Users should keep a note of the APN ID returned, as there are no APIs to query. Please note that in case of incorrect parameters passed in the config, an APN may not show up in the list of APNs in settings.
+
+
+### Update Existing APN Config
+
+```java
+sdk.updateUpdateApnConfig(
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               showMethodResult("onResponse: Update Result: " + response);
+           }
+
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+}, apnID, apnConfigJSONString);
+```
+
+updateUpdateApnConfig expects first argument as APN ID returned by addNewApnConfig function & second as APN config JSON string. It returns Integer as a response. 
+
+1 indicates success & -1 a failure.
+
+### Remove APN Config
+
+```java
+sdk.removeApnConfig(
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               showMethodResult("onResponse: removeAPN Result: " + response);
+           }
+
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+}, apnID);
+```
+
+removeApnConfig expects APN ID in argument returned by addNewApnConfig function. 
+returns Integer as a response.
+
+1 indicates success & -1 a failure.
+
+### Set APN as Default
+
+```java
+sdk.setDefaultApn(
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               Log.d(TAG, "onResponse: " + response);
+               showMethodResult("onResponse: setDefaultAPN Result: " + response);
+           }
+
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+}, apnID);
+```
+
+removeApnConfig expects APN ID in argument returned by addNewApnConfig function. 
+returns Integer as a response.
+
+1 indicates success & -1 a failure.
