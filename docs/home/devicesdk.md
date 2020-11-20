@@ -24,15 +24,15 @@ Table of Contents:
 
 Download the .aar file of the SDK from [here](https://artifact.esper.io/artifactory/esper-device-sdk/io/esper/devicesdk/app/2.0.6225.9/app-2.0.6225.9.aar) and copy the aar inside the libs folder of your project and add the following line to your app’s gradle file inside the dependencies section.
 
-```java
-implementation files('libs/esperdevicesdk-release-v1.2.4.aar')
+```json
+implementation files('libs/app-2.0.6225.9')
 ```
 
 ### Initializing the SDK
 
 Before any operation can be done with the SDK, it needs to be initialized first.
 
-```java
+```json
 EsperDeviceSDK sdk = EsperDeviceSDK.getInstance(getApplicationContext());
 ```
 
@@ -46,7 +46,7 @@ To activate the SDK, you must provide an OAuth Access Token generated from an AP
 
 After successfully activating the SDK for an application, this status will persist until the application is uninstalled.(note: If the Esper Agent Device SDK API level is lower than version 4, the SDK is always “active” by default)
 
-```java
+```json
 sdk.activateSDK(token, new EsperDeviceSDK.Callback<Void>() {
     @Override public void onResponse(Void response) {
         //Activation was successful    
@@ -72,7 +72,7 @@ In this case, the SDK was unable to be activated.
 
 You can check whether the SDK has been activated for the current application before attempting other operations. This way, you do not need to activate the SDK every time you restart an application, as you can verify the app has been previously activated using this method:
 
-```java
+```JSON
 sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
     @Override public void onResponse(Boolean active) {
         if (active) {
@@ -94,7 +94,7 @@ If the check is successful, the API will return a boolean in ​onResponse​ in
 
 The EsperDeviceInfo object contains information regarding your Esper managed device.
 
-```java
+```json
 sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
     @Override
     public void onResponse(@Nullable EsperDeviceInfo esperDeviceInfo) {
@@ -140,7 +140,7 @@ This API requires authentication, else will return InactiveSDKException. The res
 
 **Code Snippet to use Device Settings API:**
 
-```java
+```JSON
 sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
    @Override
    public void onResponse(@Nullable JSONObject response) {   
@@ -204,7 +204,7 @@ Enabling the <code> Reboot </code> function of the SDK requires a callback in ar
 
 As soon as the <code> Reboot </code> API is called, the device will be rebooted.
 
-```java
+```JSON
 sdk.reboot(new EsperDeviceSDK.Callback<Void>() {
    @Override
    public void onResponse(Void response) {
@@ -221,7 +221,7 @@ sdk.reboot(new EsperDeviceSDK.Callback<Void>() {
 
 The SDK exposes APIs to clear data of an installed app. The API requires the device to run Android 7.0 and above.
 
-```java
+```JSON
 /**
   * @param packageNames - list of package names whose data is to be cleared
   * @param callback     - callback implementation to be invoked upon completion
@@ -246,7 +246,7 @@ The API allows you to pass a list of packages whose data is to be cleared. The A
 
 Android 6.0 introduced new category of permissions named "Special app access" which needs manual process to grant those permissions. Permissions such as "Display over other other apps"and "Usage access"—among many others—are part of this category. Esper Device SDK allows to automatically grant these permissions to your app without the need to ask the user to grant them.
 
-```java
+```JSON
 /**
  * @param appOpMode - integer value of the AppOp permission for which grant status is to be set
  * @param granted   - true or false
@@ -275,7 +275,7 @@ In Kiosk mode, Device user can access a hidden dock consisting of menu items suc
 
 **Show Dock:**
 
-```java
+```JSON
 sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
     @Override
     public void onResponse(Void response) {
@@ -292,7 +292,7 @@ sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
 
 **Hide Dock:**
 
-```java
+```JSON
 sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
     @Override
     public void onResponse(Void response) {
@@ -318,7 +318,7 @@ true = start mobile data & false = stop mobile data
 EsperDeviceSDK.Callback for the results.
 response also is boolean with true = changing mobile data state success.
 
-```java
+```JSON
 sdk.enableMobileData(false, new EsperDeviceSDK.Callback<Boolean>() {
    @Override
    public void onResponse(@Nullable Boolean response) {
@@ -347,7 +347,7 @@ In case the password is passed as empty, open Wifi hotspot will be created.
 
 **param 3 >** true / false (true = start hotspot, false = stop hotspot)
 
-```java
+```JSON
 sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new​ ​EsperDeviceSDK​.​Callback​<​String​>() {  
     @Override ​public​ ​void​ onResponse(@Nullable ​String​ response) {
         ​Log​.d(TAG, ​"onResponse: "​ + response);            
@@ -369,8 +369,8 @@ This API will enable or disable the user to power off the device by pressing the
 
 The function call to allowPowerOff returns boolean if allowing or disallowing power off was successful.
 
-```java
-sdk.allowPowerOff(checked, new EsperDeviceSDK.Callback<Boolean>() {
+```JSON
+sdk.allowPowerOff(true/false, new EsperDeviceSDK.Callback<Boolean>() {
    @Override
    public void onResponse(@Nullable Boolean response) {
        Log.d(TAG, "onResponse: " + response);
@@ -388,11 +388,11 @@ sdk.allowPowerOff(checked, new EsperDeviceSDK.Callback<Boolean>() {
 
 APIs to add/update/remove/setDefault APN confuguraton(s).
 
-These APIs are only available on Samsung KNOX enabled devices, via Supervisor plugin, and the Esper Device SDK version TESSARION_MR8.
+These APIs are only available on Samsung KNOX enabled devices, or via Supervisor plugin, and the Esper Device SDK version TESSARION_MR8.
 
 To create new / update an existing APN, a JSON string needs to be passed in SDK functions with APN config parameters mentioned.
 
-```java
+```JSON
 {
   "name": "Esper Device SDK",
   "apn": "Airtel",
@@ -425,7 +425,7 @@ To Update/Remove/Delete config, an APN ID needs to be passed.
 
 ### Add new APN
 
-```java
+```JSON
 sdk.addNewApnConfig(
        new EsperDeviceSDK.Callback<Integer>() {
            @Override
@@ -448,7 +448,7 @@ addNewApnConfig function returns a newly added APN ID as an integer in response.
 
 ### Update Existing APN Config
 
-```java
+```JSON
 sdk.updateUpdateApnConfig(
        new EsperDeviceSDK.Callback<Integer>() {
            @Override
@@ -470,7 +470,7 @@ updateUpdateApnConfig expects first argument as APN ID returned by addNewApnConf
 
 ### Remove APN Config
 
-```java
+```JSON
 sdk.removeApnConfig(
        new EsperDeviceSDK.Callback<Integer>() {
            @Override
@@ -493,7 +493,7 @@ returns Integer as a response.
 
 ### Set APN as Default
 
-```java
+```JSON
 sdk.setDefaultApn(
        new EsperDeviceSDK.Callback<Integer>() {
            @Override
@@ -510,7 +510,7 @@ sdk.setDefaultApn(
 }, apnID);
 ```
 
-removeApnConfig expects APN ID in argument returned by addNewApnConfig function. 
+setDefaultApn expects APN ID in argument returned by addNewApnConfig function. 
 returns Integer as a response.
 
 1 indicates success & -1 a failure.
