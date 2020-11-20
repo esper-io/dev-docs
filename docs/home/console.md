@@ -165,11 +165,11 @@ The main body of the Dashboard contains four status panels:
 
 #### 1\. Deployment Status
 
-The **Deployment status** panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show the devices currently in that status.
+The **Deployment status** panel shows the current deployment status of all your devices, with the number of devices in each of four possible statuses: online devices, offline devices, under provisioning, and recently added. Clicking one of these statuses will take you to the Device Dashboard section, filtered to show the devices currently in that status.
 
 #### 2\. Security summary
 
-The **Security summary** panel provides a snapshot of the security status of all your deployed devices, with four possible statuses available for a device: High risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the [Device Dashboard](./console.md#devices) section, filtered to show you the devices in the risk category indicated.
+The **Security summary** panel provides a snapshot of the security status of all your deployed devices, with four possible statuses available for a device: High risk, medium risk, low risk, or no risk. Clicking on one of these statuses will take you to the Device Dashboard section, filtered to show you the devices in the risk category indicated.
 
 #### 3\. Where are your devices?
 
@@ -1289,41 +1289,6 @@ When you have clicked **View QR Code**, you’ll also have the option to downloa
 These templates will also be available for use via the Esper Device Provisioner.
 You can delete a Provisioning Template by clicking on **Delete Template**. 
 If you do so, the information about the Provisioning Template will be saved to display for any device that has been provisioned using the deleted template.
- 
-
-## Devices
-
-The Devices section is where you manage your Esper provisioned devices after provisioning has completed.
-
-### Getting Started
-
-Upon logging in to your Console for the first time, you will see the following screen which gives you a choice to either provision a device or Simulate a device.
-
-![Simulare Page](./assets/NewConsole/DevicesInitial.png)
-
-If you’d like to provision a real Android device, first create a [Provisioning Template](./console.md#provisioning-templates) and then use one of the available [Provisioning Methods](./console.md#provisioning-methods).
-
-If you’d rather simulate an Android device, click **Simulare Device**. You will see a momentary “You are all set!” message after which a mock device will be available for you to experiment with and learn on until you’re ready to provision an actual device. You can also provision an Android Studio AVD using the Provisioner Tool.
-
-Capabilities such as Apps, Remote View and Capture log may not be available on a Simulated device.
-
-***Tip This feature is only available on accounts created after Friday, September 27, 2019. If you became an Esper client before then and would like access to a simulated device, [contact us](mailto:support@esper.io)***
-
-## Devices Pane
-Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
-The default view for the Device Pane is List View.
-
-![DevicesPane](./assets/NewConsole/11ListView.png)
-
-The default view for a group always shows the devices that are in the nested group underneath. If you wish to view only the devices in that group, turn off the switch for Show nested devices.
-
-![DevicesPane](./assets/NewConsole/14NestedView.png)
-
-There are three ways to view the devices in your Console: Grid, List and Maps. The default is list view, but you can click on grid or maps to access the grid view or the map view.
-
-![DevicesPane](./assets/NewConsole/12ViewDrop.png) 
-
-***Tip: If you want to remove a device from Esper, execute a 'Remove/Factory Reset' command from Settings. If you perform a factory reset locally on the device, it will still continue to show up in Esper, but will be offline. You can use the 'Remove/Factory Reset’ command to remove this type of device as well.***
 
 ### Search Box
 
@@ -2192,7 +2157,7 @@ By default, there will be an “All Devices” group which will be the parent gr
 ![SubGroups](./assets/NewConsole/newgroupcompliancepolicy.png)
 ![NestedGroups](./assets/NewConsole/newgroupcompliancepolicy2.png)
 
-## Groups Pane
+### Groups Pane
 
 As groups may be deeply nested, the Groups pane has a dynamic horizontal scroll bar that will appear to be able to pull those groups and their options into view. You can resize the pane by hovering over the vertical bar separating the Groups and Devices panes. You can also use the left pointer to collapse the Groups pane to give you the maximum view for the Devices Pane.
 
@@ -2228,20 +2193,22 @@ You can find a group by name using Search groups.
 
 ![GroupsPane](./assets/NewConsole/22SearchGroups.png)
 
-## Devices Pane
+### Devices Pane
 
 Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
 The default view for the Device Pane is List View.
 
 ![DevicesPane](./assets/NewConsole/11ListView.png)
 
-![Groups](./assets/NewConsole/GroupsTiles.png)
+The default view for a group always shows the devices that are in the nested group underneath. If you wish to view only the devices in that group, turn off the switch for Show nested devices.
 
-There is a "Default" group called where devices are automatically added unless otherwise specified during provisioning via template. It is also used as the collection point when devices are moved between groups.
+![DevicesPane](./assets/NewConsole/14NestedView.png)
 
-## Group Detail
+There are three ways to view the devices in your Console: Grid, List and Maps. The default is list view, but you can click on grid or maps to access the grid view or the map view.
 
-The Group detail page provides commands and information at the Group level. To return to the Devices & Groups view, simply click on the left arrow next to the group’s name at the top of the page.
+![DevicesPane](./assets/NewConsole/12ViewDrop.png) 
+
+***Tip: If you want to remove a device from Esper, execute a 'Remove/Factory Reset' command from Settings. If you perform a factory reset locally on the device, it will still continue to show up in Esper, but will be offline. You can use the 'Remove/Factory Reset’ command to remove this type of device as well.***
 
 ## The Settings Tab
 
@@ -2580,7 +2547,7 @@ ADB will return a list of all the apps running on the device:
 
 ![Groups](./assets/NewConsole/ADBCommands.png)
 
-You can also view the package names for any apps installed on a device by viewing the [device’s details and selecting Apps](./console.md#devices). The package name for each app is displayed in the resulting list view.
+You can also view the package names for any apps installed on a device by viewing the device’s details and selecting **Apps**. The package name for each app is displayed in the resulting list view.
 
 ### OS Updates
 
