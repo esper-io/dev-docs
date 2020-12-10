@@ -8,7 +8,7 @@ Current version: 2.0.6
 
 Release name: Tessarion_MR8
 
-Table of Contents: 
+Table of Contents:
 
 - Downloading the SDK
 - Initializing the SDK
@@ -98,6 +98,7 @@ sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
     }
 });
 ```
+
 If the check is successful, the API will return a boolean in ​onResponse​ indicating whether or not the SDK is activated.
 * This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will becalled.
 
@@ -163,7 +164,7 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
 });
 ```
 
-**onResponse** is called if the device settings are successfully retrieved from the device.The device settings are stored in a JSONObject.
+**onResponse** is called if the device settings are successfully retrieved from the device. The device settings are stored in a JSONObject.
 
 **onFailure** will be called when there is a failure in the operation.
 
@@ -525,3 +526,36 @@ setDefaultApn expects APN ID in argument returned by addNewApnConfig function.
 returns Integer as a response.
 
 1 indicates success & -1 a failure.
+
+### Change App State
+
+App state can now be changed from the SDK. Every app supports three states:
+
+* DISABLE: Requires Android 5.0 and above. DPC Disables the app on the managed device. 
+* SHOW: The app can be used by the managed device, and the shortcut is provided on the Home screen.
+* HIDE: Hides the app, making it unusable in the DPC. No shortcut is provided on the Home screen, but it is still possible for the app to run in the background.
+
+**Note: One cannot make state changes on an application if it is in kiosk mode.**
+
+The changeAppState function expects three arguments:
+
+```java
+
+packageName: (String) the app whose state we want to change.
+state: (String) either of "SHOW", "DISABLE", "ENABLE"
+EsperDeviceSDK.Callback for the results. Response is boolean with
+true = changing app state success.
+false = some error occurred.
+sdk.changeAppState(“com.android.chrome”, ”DISABLE”, new EsperDeviceSDK.Callback<Boolean>() {
+                @Override
+                public void onResponse(@Nullable Boolean response) {
+         String message = response ? “success” : “failed”;
+                    Log.d(TAG, message);
+                }
+
+                @Override
+                public void onFailure(Throwable t) {
+                    Log.d(TAG, "Error", t);
+                }
+});
+```
