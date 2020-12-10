@@ -20,8 +20,8 @@ Esper Development Devices running Esper Enhanced Android will always be supporte
 
 * :heavy_check_mark: - Feature Supported
 * :x: - Feature Not Supported
-* :exclamation: - A prompt will be provided to the user, which then has to be approved unless a suprevisor is present, in which case silent application install/uninstall is supported.
-* :question: - Partially supported. This option is only supported if a suprevisor is available.
+* :exclamation: - A prompt will be provided to the user, which then has to be approved unless a supervisor is present, in which case silent application install/uninstall is supported.
+* :question: - Partially supported. This option is only supported if a supervisor is available.
 
 
 |   |Android 4.4 (KitKat)   |Android 5.0 (Lollipop)   |Android 5.1 (Lollipop MR1)   |Android 6.0 (Marshmallow)   |Android 7.0 (Nougat)   |Android 7.1 (Nougat MR1)   |Android 8.0 (Oreo)   |Android 8.1 (Oreo MR1)   |Android 9.0 (Pie)   | Android 10.0 (Q)
