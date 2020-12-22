@@ -764,7 +764,20 @@ Provisioning Templates are shown as tiles with the most-recently created at the 
    
 You can access the QR Code for a specific template during Android for Work or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
 
-**Note: Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet.** In cases where distributing a QR code outside of your organization is required, consider using Android for Work IMEI/Serial Number provisioning with a passcode.
+Users operating Redmi devices are unable to use the 6-tap provisioning method due to a restriction imposed by Redmi. This cannot be overridden. 
+
+If you are provisioning a Redmi device, you will need to perform the steps mentioned below in order to access the device provisioner:
+
+* Settings > About Phone > MIUI version > Tap until "You are now a developer" pop-up comes
+* Settings > Additional Settings > Developer Options > Enable "USB debugging" > click "OK" on prompt
+* Settings > Additional Settings > Developer Options > Enable " Install via USB" (For this, you need SIM inserted into your device as well as need to sign-in to MI account)
+* Settings > Additional Settings > Developer Options > Disable "MIUI optimization"
+* Settings > Additional Settings > Developer Options > Click on "Revoke USB debugging authorization" > click "OK" on prompting
+* Settings > Additional Settings > Developer Options > Enable "USB Debugging**(Security settings)**
+
+**If provisioning still fails, You may need to remove google/mi account added previously.**
+
+Note: Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet.** In cases where distributing a QR code outside of your organization is required, consider using Android for Work IMEI/Serial Number provisioning with a passcode.
 
 ### Actions on Template Tiles
 
