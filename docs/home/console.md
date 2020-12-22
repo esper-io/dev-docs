@@ -987,6 +987,21 @@ The default password is 1234. It is possible to set up a template without a pass
 
 ***Tip: If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings application or the Android settings application as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.***
 
+Esper Settings can be configured to include both a user role and a password protected admin:
+
+* User Mode: No Password Required to Access Settings
+* Admin Mode: Password Required
+
+Customers can now select which settings actions are exposed to device users and admins. For example, you could choose to let users add new Wi-Fi access points while making Factory Reset available to only admins. 
+
+This feature update is visible to customers via Provisioning Templates > Compliance Policy. 
+
+**Note: This feature update will be applicable only if your devices are on the latest DPC version.** 
+
+<img src="./assets/NewConsole/CompliancePolicy1.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/CompliancePolicy2.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/CompliancePolicy3.png" alt="alt text" width="75%" height="75%">
+
 ### Google Account Restrictions
 
 This setting enables you to restrict the number of Google accounts that can be added on the device and used with Google apps like Gmail, Google Play Store, and YouTube. By default, any number of accounts can be added to a specific device; this setting restricts this number. For example, if you set this setting to two, only two accounts will be permitted on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
@@ -1087,6 +1102,12 @@ Begin by clicking a radio button to choose whether you would like to provision y
 ***Tip: For an optimal Kiosk Mode implementation, other Compliance Policy configurations need to be properly set. See this [technical article](https://blog.esper.io/kiosk-on-esper) for more details.***
 
 In **Multi-Application Mode**, the device user is free to use any Enterprise or Google Play app approved and installed using Esper.
+
+Users can now set one of the preloaded or in-built apps to single-app Android kiosk mode.  To do so, you’ll need the preloaded app package name when creating or modifying a provisioning template. 
+
+If the app isn’t preloaded to a device using the same provisioning template, the device will successfully provision in multi-app mode.
+
+<img src="./assets/NewConsole/PreLoadedAppKiosk.png" alt="alt text" width="75%" height="75%">
 
 ### Add Application
 
@@ -2170,6 +2191,10 @@ By default, there will be an “All Devices” group which will be the parent gr
 ![SubGroups](./assets/NewConsole/newgroupcompliancepolicy.png)
 ![NestedGroups](./assets/NewConsole/newgroupcompliancepolicy2.png)
 
+An improved option to quickly rename devices or add device tags can be accessed through the Actions column of the Devices & Groups section.
+
+![ImprovedGroups](./assets/NewConsole/QuickRename.png)
+
 ### Groups Pane
 
 As groups may be deeply nested, the Groups pane has a dynamic horizontal scroll bar that will appear to be able to pull those groups and their options into view. You can resize the pane by hovering over the vertical bar separating the Groups and Devices panes. You can also use the left pointer to collapse the Groups pane to give you the maximum view for the Devices Pane.
@@ -2209,6 +2234,7 @@ You can find a group by name using Search groups.
 ### Devices Pane
 
 Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
+
 The default view for the Device Pane is List View.
 
 ![DevicesPane](./assets/NewConsole/11ListView.png)
@@ -2464,6 +2490,10 @@ If you closed out of the slide out and wish to return later to check the status 
 
 The **Apps** tab lets you manage the apps on all the devices in the group. This includes installing new apps, uninstalling apps, scheduling an app installation, and approving apps for the group.
 
+We’ve expanded the contextual help available within Esper’s Apps section to help customers understand our console capabilities in one's daily workflow. Just look for the question mark next to any area where contextual help is available. 
+
+<img src="./assets/NewConsole/ContextualHelp.png" alt="alt text" width="75%" height="75%">
+
 ![Groups](./assets/NewConsole/GroupApps.png)
 
 :::tip 
@@ -2473,7 +2503,6 @@ If you wish to update a currently installed app to a new version, you install th
 :::tip
 You cannot uninstall in-ROM apps (called Preloaded apps). Instead you can **Disable** these apps using **Approvals**.
 :::
-
 #### Install/Uninstall
 
 The Apps section lets you install or uninstall both privately uploaded apps—also known as Enterprise Apps—and Google Play apps to the groups immediately. The action will only be performed on online devices. 
@@ -2609,6 +2638,10 @@ There are two different types of Apps you can authorize on your Android devices:
       
 :::tip
 You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates).:::
+
+The default install action for Google Play apps in the Esper provisioning template is now set to "Post Provisioning”. Previously our customers found that some Google Play Store apps were slow to install, freezing the provisioning process while customers waited for the install to complete. 
+
+Now, the default is to complete provisioning and then install any and all Google Play Store apps. You can of course change this behavior by selecting “During Provisioning” in your Provisioning Template Apps section if you wish to have the install occur during provisioning.
 
 ### Uploading Enterprise Apps to the Esper Cloud
 
