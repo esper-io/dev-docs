@@ -766,7 +766,7 @@ You can access the QR Code for a specific template during Android for Work or 6 
 
 Users operating Redmi devices are unable to use the 6-tap provisioning method due to a restriction imposed by Redmi. This cannot be overridden. 
 
-If you are provisioning a Redmi device, you will need to perform the steps mentioned below in order to access the device provisioner:
+If you are provisioning a Redmi device, you will need to perform the steps mentioned below and then use the Esper Device Provisioner to enroll your device into Esper:
 
 * Settings > About Phone > MIUI version > Tap until "You are now a developer" pop-up comes
 * Settings > Additional Settings > Developer Options > Enable "USB debugging" > click "OK" on prompt
