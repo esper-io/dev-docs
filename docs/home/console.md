@@ -807,7 +807,11 @@ To copy a template, click **Duplicate**. You can then rename the template and up
 
 ### Upload IMEI CSV
 
-To upload a set of IMEI/Serial Numbers for devices you want to provision using Android for Work, or for Esper Enhanced Android devices with this template, click **Upload IMEI CSV**. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
+To upload a set of IMEI/Serial Numbers for devices you want to provision using Android for Work, or for Esper Enhanced Android devices with this template, click Upload IMEI CSV. You can also manage your IMEI/Serial Numbers by using the Manage devices section of the provisioning template, available after you initially create your template:
+
+![IMEI](./assets/NewConsole/ManageDevicesCSV.png)
+
+You can enter your IMEI and/or Serial Number one at a time, or upload a csv file. Click Download sample CSV to get a sample template you can use. You can add or remove existing IMEI and Serial Numbers added to the template when viewing this screen.
 
    - The CSV requires the first entry of "imei1, imei2, serial number".
    - Then on each cell below enter "[IMEI #], [IMEI #], [Serial Number]".
@@ -903,13 +907,15 @@ Hovering your mouse cursor over any item will give you a short explanation on-sc
 
 **Lock Screen Password Rules**
 
-  The **Lock Screen Password** rule specifies the conditions for the device unlock password, with the default being **None**. If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to a maximum length of 25 characters. Use the Up/Down arrows to set your required password length.
+  The **Lock Screen Password** rule specifies the conditions for the device unlock password, with the default being **None**. If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to a maximum length of 16 characters. Use the Up/Down arrows to set your required password length.
   
 ![Lock Password](./assets/NewConsole/LockPwdLength.png)
    
   **Alphabetic**: Restricts acceptable password to only upper and lowercase alphabetic characters (A to Z, and a to z).
   
   **Alphanumeric**: Expands acceptable password to include numbers, and special characters in addition to alphabetic characters.
+
+ ** Numeric**: Restricts acceptable password to only numbers.
    
   **None**: There is no password required to unlock the device.
   
@@ -1056,12 +1062,15 @@ See [here](./console/policy-management/getgoogleaccount.md) to know how to get t
 ### Restrict Incoming and Outgoing calls
 
    Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
-      * Restrict incoming calls to uploaded contacts only
-      * Restrict outgoing calls to uploaded contacts only
-      
-Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file.
 
-The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code. If you are using a text editor, seperate each phone by a carriage return and save as csv:
+      * Restrict incoming calls 
+      * Restrict outgoing calls
+      
+Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file or manually enter into the template. To configure which telephone numbers are applied, click on **See Allowed Contacts** to bring up the contact list dialog for inbound and outbound:
+
+![Upload Phone](./assets/NewConsole/ContactsIncomingCalls.png)
+
+You can add numbers one at a time, or upload a csv. If you plan to use the same set of numbers for both inbound and outbound calls, you can select the **Sync** checkbox in the lower left corner. The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code. A sample csv file is available for you to download by clicking the **Get Sample CSV** button. If you are using a text editor, seperate each phone by a carriage return and save as csv:
 
 ![Upload Phone](./assets/NewConsole/1PhoneNumbers.png)
 
@@ -2297,7 +2306,15 @@ Once the set of ping commands are sent, a success toast will appear in the botto
 
 **Remove/Factory Reset**
 
-The Wipe Command has been renamed to“Remove/Factory Reset,” providing additional capability. Users will have an option to ‘Remove Devices’ from the Esper Dashboard. 
+Remove/Factory Reset can perform two different operations: 
+
+* Without Factory Reset option checked - Deletes the device from the console (Soft-Wipe). Works on both Online and Offline devices. 
+* With Factory Reset option checked - This device command factory resets the device and removes it from the console. 
+* If the factory reset is successful on the device, after five minutes have elapsed, the device is deleted from the console.
+* If the factory reset is unsuccessful on the device after five minutes have elapsed, the device is made active on the console.
+* If Esper does not receive factory reset status from the device, then a Soft-Wipe is performed and the device is deleted from Console.
+	
+The five minute gap period is called a Wipe-In-Progress.
 
 When you click **Remove/Factory Reset**, the Esper Console will send a command to all the devices in the group to Factory Reset  For online devices, factory reset will be enabled always. 
 
