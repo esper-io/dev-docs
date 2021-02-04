@@ -12,12 +12,26 @@ Table of Contents:
 
 - Downloading the SDK
 - Initializing the SDK
+- Activating the SDK
+- Checking Activation Status
 - Getting Device Info
+- Getting Device Settings
+- Reboot Device via Esper Device SDK
 - Clearing App Data
-- Manage AppOp Permissions
+- Manage AppOpp Permissions
 - Manage Dock
-- Activate SDK
-- Start/Stop Wi-Fi Hotspot
+- Start/Stop Mobile Data
+- Start/Stop Wifi-Hotspot:
+- Disable Users From Powering Off Devices
+- Configure APNs via the Esper Device SDK
+- Add new APN
+- Update Existing APN Config
+- Remove APN Config
+- Set APN as Default
+- Change App State
+- Set Brightness
+- Set Device Orientation
+
 
 
 ## Enabling the Esper SDK in your Application
@@ -135,20 +149,20 @@ The response contains information about device settings as well as the DPC Param
 
 This API requires authentication, else will return InactiveSDKException. The response is JSONObject. Model class can be created using this configuration:
 
-|            |              |
-|------------|--------------|
-| adbTimeout | Long value  |
-| brightnessScale  | Integer value  |
-| gpsState  | String value  |
-| adbEnabled  | boolean value  |
-| remoteAdbPort  | Integer value  |
-| remoteAdbEnabled  | Boolean value  |
-| bluetoothState  | Boolean value  |
-| DPC_PARAMS  | JSONObject value  |
-| audioSettings  | ArrayList  |
-| remoteAdbIp  | String value  |
-| screenOffTimeout  | Long value  |
-| wifiState  | Boolean value  |
+|                  |                  |
+| ---------------- | ---------------- |
+| adbTimeout       | Long value       |
+| brightnessScale  | Integer value    |
+| gpsState         | String value     |
+| adbEnabled       | boolean value    |
+| remoteAdbPort    | Integer value    |
+| remoteAdbEnabled | Boolean value    |
+| bluetoothState   | Boolean value    |
+| DPC_PARAMS       | JSONObject value |
+| audioSettings    | ArrayList        |
+| remoteAdbIp      | String value     |
+| screenOffTimeout | Long value       |
+| wifiState        | Boolean value    |
 
 **Code Snippet to use Device Settings API:**
 
@@ -557,5 +571,66 @@ sdk.changeAppState(“com.android.chrome”, ”DISABLE”, new EsperDeviceSDK.C
                 public void onFailure(Throwable t) {
                     Log.d(TAG, "Error", t);
                 }
+});
+```
+
+### Set Brightness
+
+We can now change and set brightness through SDK.
+
+The setBrightness function expects two arguments:
+
+```java
+
+scale: (int) the percentage of brightness for device
+EsperDeviceSDK.Callback for the results. Response is boolean with
+true = changing app state success.
+false = some error occurred.
+sdk.setBrightness(10, new EsperDeviceSDK.Callback<Boolean>() {
+                @Override
+                public void onResponse(@Nullable Boolean response) {
+                    if(response != null) {
+                        showMethodResult(response.toString());
+                    }
+                }
+
+                @Override
+                public void onFailure(Throwable t) {
+                    Log.d(TAG, "Error", t);
+                }
+});
+```
+
+### Set Device Orientation
+
+Esper SDK supports 5 orientations
+
+1. AUTO
+2. PORTRAIT
+3. INVERTED PORTRAIT
+4. LANDSCAPE
+5. INVERTED LANDSCAPE
+
+The setDeviceOrientation expects two arguments:
+
+```java
+
+Orientation option: (String) : Constants for multiple options are defined in EsperDeviceSDK class.
+ROTATION_STATE_AUTO
+ROTATION_STATE_PORTRAIT_ONLY
+ROTATION_STATE_LANDSCAPE_ONLY
+ROTATION_STATE_INVERTED_PORTRAIT_ONLY
+ROTATION_STATE_INVERTED_LANDSCAPE_ONLY
+EsperDeviceSDK.Callback for the results.
+sdk.setDeviceOrientation(orientation, new EsperDeviceSDK.Callback<Boolean>() {
+   @Override
+   public void onResponse(Boolean response) {
+   }
+
+   @Override
+   public void onFailure(Throwable t) {
+       Log.d(TAG, "orientation change failed", t);
+       showFailureResult(t);
+   }
 });
 ```
