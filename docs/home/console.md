@@ -3521,7 +3521,7 @@ You'll need an API key and Enterprise ID to use Esper's Cloud API, Device SDK, P
 
 ### Generating an API Key
 
-The first step in interacting with our API is to generate an API key you can tie to it. Do this by clicking **Create Key**.
+The first step in interacting with our API is to generate an API key you can tie to it. Any role can create API token. Do this by clicking **Create Key**.
 
 You can also copy the Enterprise ID, necessary for API calls, by clicking on the copy icon next to Enterprise ID on top right of this section.
 
