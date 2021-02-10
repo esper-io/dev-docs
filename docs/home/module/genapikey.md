@@ -1,6 +1,6 @@
 # Generating an API Key
 
-To access Esper APIs, SDK, or CLI an API key is needed. An additional piece of information called `Enterprise ID` is needed for APIs and SDK. You can find your `Enterprise ID` in `Company Settings` tab or top right corner on `Developer Options` tab on your dashboard.
+To access Esper APIs, SDK, or CLI an API key is needed. Any role can create an API token. An additional piece of information called `Enterprise ID` is needed for APIs and SDK. You can find your `Enterprise ID` in `Company Settings` tab or top right corner on `Developer Options` tab on your dashboard.
 
 To generate your API key, follow the steps mentioned below:
 
