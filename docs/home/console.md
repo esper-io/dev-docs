@@ -40,7 +40,7 @@ Clicking **Feedback** brings up a screen with the following tools:
    
 ![Feedback Tools](./assets/NewConsole/FeedbackTools.png)
 
-When you’re ready to submit your feedback, click on the checkmark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click 'Send.' Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
+When you are ready to submit your feedback, click on the checkmark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click 'Send.' Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
 
 ![Feedback Type](./assets/NewConsole/FeedbackType.png)
 
