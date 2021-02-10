@@ -2242,7 +2242,7 @@ You can find a group by name using Search groups.
 
 ### Devices Pane
 
-Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
+Once you have onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
 
 The default view for the Device Pane is List View.
 
