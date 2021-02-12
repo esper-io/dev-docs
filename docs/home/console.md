@@ -2030,8 +2030,8 @@ To remotely view a device, click on **Start Session**.
 ![Reboot](./assets/NewConsole/RemoteViewerStart.png)
 
 On devices using Android 9.0 and above, the Esper Console will establish a secure connection with the device, 
-and the device’s screen will be streamed to the Console. On devices Android 8.1 and earlier, 
-users would see a permission prompt requesting permission for the remote session unless the device is Supervisor enabled.  
+and the device’s screen will be streamed to the Console. On devices Android 7.0 and earlier, now Supervisor access is not needed to enable 
+permission for the remote session. It will be available by default.  
 
 Once the remote view request is allowed, a secure connection will be established, and the device’s screen will be streamed to the Console.
 
