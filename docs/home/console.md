@@ -764,7 +764,20 @@ Provisioning Templates are shown as tiles with the most-recently created at the 
    
 You can access the QR Code for a specific template during Android for Work or 6 Tap QR Code provisioning by clicking on **View QR Code**. 
 
-**Note: Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet.** In cases where distributing a QR code outside of your organization is required, consider using Android for Work IMEI/Serial Number provisioning with a passcode.
+Users operating Redmi devices are unable to use the 6-tap provisioning method due to a restriction imposed by Redmi. This cannot be overridden. 
+
+If you are provisioning a Redmi device, you will need to perform the steps mentioned below and then use the Esper Device Provisioner to enroll your device into Esper:
+
+* Settings > About Phone > MIUI version > Tap until "You are now a developer" pop-up comes
+* Settings > Additional Settings > Developer Options > Enable "USB debugging" > click "OK" on prompt
+* Settings > Additional Settings > Developer Options > Enable " Install via USB" (For this, you need SIM inserted into your device as well as need to sign-in to MI account)
+* Settings > Additional Settings > Developer Options > Disable "MIUI optimization"
+* Settings > Additional Settings > Developer Options > Click on "Revoke USB debugging authorization" > click "OK" on prompting
+* Settings > Additional Settings > Developer Options > Enable "USB Debugging**(Security settings)**
+
+**If provisioning still fails, You may need to remove google/mi account added previously.**
+
+Note: Be careful sharing the QR code as in some cases Wi-Fi access point credentials are included, and anyone with it can enroll a supported Android device into your fleet.** In cases where distributing a QR code outside of your organization is required, consider using Android for Work IMEI/Serial Number provisioning with a passcode.
 
 ### Actions on Template Tiles
 
@@ -794,7 +807,11 @@ To copy a template, click **Duplicate**. You can then rename the template and up
 
 ### Upload IMEI CSV
 
-To upload a set of IMEI/Serial Numbers for devices you want to provision using Android for Work, or for Esper Enhanced Android devices with this template, click **Upload IMEI CSV**. The CSV file containing the IMEI and serial numbers must adhere to the following conditions:
+To upload a set of IMEI/Serial Numbers for devices you want to provision using Android for Work, or for Esper Enhanced Android devices with this template, click Upload IMEI CSV. You can also manage your IMEI/Serial Numbers by using the Manage devices section of the provisioning template, available after you initially create your template:
+
+![IMEI](./assets/NewConsole/ManageDevicesCSV.png)
+
+You can enter your IMEI and/or Serial Number one at a time, or upload a csv file. Click Download sample CSV to get a sample template you can use. You can add or remove existing IMEI and Serial Numbers added to the template when viewing this screen.
 
    - The CSV requires the first entry of "imei1, imei2, serial number".
    - Then on each cell below enter "[IMEI #], [IMEI #], [Serial Number]".
@@ -890,13 +907,15 @@ Hovering your mouse cursor over any item will give you a short explanation on-sc
 
 **Lock Screen Password Rules**
 
-  The **Lock Screen Password** rule specifies the conditions for the device unlock password, with the default being **None**. If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to a maximum length of 25 characters. Use the Up/Down arrows to set your required password length.
+  The **Lock Screen Password** rule specifies the conditions for the device unlock password, with the default being **None**. If you choose alphabetic or alphanumeric, you must set a minimum password length of at least 4 characters and up to a maximum length of 16 characters. Use the Up/Down arrows to set your required password length.
   
 ![Lock Password](./assets/NewConsole/LockPwdLength.png)
    
   **Alphabetic**: Restricts acceptable password to only upper and lowercase alphabetic characters (A to Z, and a to z).
   
   **Alphanumeric**: Expands acceptable password to include numbers, and special characters in addition to alphabetic characters.
+
+ ** Numeric**: Restricts acceptable password to only numbers.
    
   **None**: There is no password required to unlock the device.
   
@@ -974,6 +993,21 @@ The default password is 1234. It is possible to set up a template without a pass
 
 ***Tip: If your device is set up in Kiosk mode, the dock will be accessible even if you choose either no settings application or the Android settings application as part of your applied Compliance Policy. That means you should set an appropriate password for the Dock & Esper Settings app if you plan to deploy your devices in Kiosk mode.***
 
+Esper Settings can be configured to include both a user role and a password protected admin:
+
+* User Mode: No Password Required to Access Settings
+* Admin Mode: Password Required
+
+Customers can now select which settings actions are exposed to device users and admins. For example, you could choose to let users add new Wi-Fi access points while making Factory Reset available to only admins. 
+
+This feature update is visible to customers via Provisioning Templates > Compliance Policy. 
+
+**Note: This feature update will be applicable only if your devices are on the latest DPC version.** 
+
+<img src="./assets/NewConsole/CompliancePolicy1.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/CompliancePolicy2.png" alt="alt text" width="75%" height="75%">
+<img src="./assets/NewConsole/CompliancePolicy3.png" alt="alt text" width="75%" height="75%">
+
 ### Google Account Restrictions
 
 This setting enables you to restrict the number of Google accounts that can be added on the device and used with Google apps like Gmail, Google Play Store, and YouTube. By default, any number of accounts can be added to a specific device; this setting restricts this number. For example, if you set this setting to two, only two accounts will be permitted on the device, further addition (or deletion) of accounts will not be possible unless a different Compliance policy is reapplied.
@@ -1028,12 +1062,15 @@ See [here](./console/policy-management/getgoogleaccount.md) to know how to get t
 ### Restrict Incoming and Outgoing calls
 
    Selecting the checkbox next to Restrict outgoing/incoming calls using customised dialer opens up two more checkboxes:
-      * Restrict incoming calls to uploaded contacts only
-      * Restrict outgoing calls to uploaded contacts only
-      
-Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file.
 
-The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code. If you are using a text editor, seperate each phone by a carriage return and save as csv:
+      * Restrict incoming calls 
+      * Restrict outgoing calls
+      
+Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file or manually enter into the template. To configure which telephone numbers are applied, click on **See Allowed Contacts** to bring up the contact list dialog for inbound and outbound:
+
+![Upload Phone](./assets/NewConsole/ContactsIncomingCalls.png)
+
+You can add numbers one at a time, or upload a csv. If you plan to use the same set of numbers for both inbound and outbound calls, you can select the **Sync** checkbox in the lower left corner. The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code. A sample csv file is available for you to download by clicking the **Get Sample CSV** button. If you are using a text editor, seperate each phone by a carriage return and save as csv:
 
 ![Upload Phone](./assets/NewConsole/1PhoneNumbers.png)
 
@@ -1074,6 +1111,12 @@ Begin by clicking a radio button to choose whether you would like to provision y
 ***Tip: For an optimal Kiosk Mode implementation, other Compliance Policy configurations need to be properly set. See this [technical article](https://blog.esper.io/kiosk-on-esper) for more details.***
 
 In **Multi-Application Mode**, the device user is free to use any Enterprise or Google Play app approved and installed using Esper.
+
+Users can now set one of the preloaded or in-built apps to single-app Android kiosk mode.  To do so, you’ll need the preloaded app package name when creating or modifying a provisioning template. 
+
+If the app isn’t preloaded to a device using the same provisioning template, the device will successfully provision in multi-app mode.
+
+<img src="./assets/NewConsole/PreLoadedAppKiosk.png" alt="alt text" width="75%" height="75%">
 
 ### Add Application
 
@@ -1987,8 +2030,8 @@ To remotely view a device, click on **Start Session**.
 ![Reboot](./assets/NewConsole/RemoteViewerStart.png)
 
 On devices using Android 9.0 and above, the Esper Console will establish a secure connection with the device, 
-and the device’s screen will be streamed to the Console. On devices Android 8.1 and earlier, 
-users would see a permission prompt requesting permission for the remote session unless the device is Supervisor enabled.  
+and the device’s screen will be streamed to the Console. On devices Android 7.0 and earlier, now Supervisor access is not needed to enable 
+permission for the remote session. It will be available by default.  
 
 Once the remote view request is allowed, a secure connection will be established, and the device’s screen will be streamed to the Console.
 
@@ -2157,6 +2200,10 @@ By default, there will be an “All Devices” group which will be the parent gr
 ![SubGroups](./assets/NewConsole/newgroupcompliancepolicy.png)
 ![NestedGroups](./assets/NewConsole/newgroupcompliancepolicy2.png)
 
+An improved option to quickly rename devices or add device tags can be accessed through the Actions column of the Devices & Groups section.
+
+![ImprovedGroups](./assets/NewConsole/QuickRename.png)
+
 ### Groups Pane
 
 As groups may be deeply nested, the Groups pane has a dynamic horizontal scroll bar that will appear to be able to pull those groups and their options into view. You can resize the pane by hovering over the vertical bar separating the Groups and Devices panes. You can also use the left pointer to collapse the Groups pane to give you the maximum view for the Devices Pane.
@@ -2196,6 +2243,7 @@ You can find a group by name using Search groups.
 ### Devices Pane
 
 Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
+
 The default view for the Device Pane is List View.
 
 ![DevicesPane](./assets/NewConsole/11ListView.png)
@@ -2258,7 +2306,15 @@ Once the set of ping commands are sent, a success toast will appear in the botto
 
 **Remove/Factory Reset**
 
-The Wipe Command has been renamed to“Remove/Factory Reset,” providing additional capability. Users will have an option to ‘Remove Devices’ from the Esper Dashboard. 
+Remove/Factory Reset can perform two different operations: 
+
+* Without Factory Reset option checked - Deletes the device from the console (Soft-Wipe). Works on both Online and Offline devices. 
+* With Factory Reset option checked - This device command factory resets the device and removes it from the console. 
+* If the factory reset is successful on the device, after five minutes have elapsed, the device is deleted from the console.
+* If the factory reset is unsuccessful on the device after five minutes have elapsed, the device is made active on the console.
+* If Esper does not receive factory reset status from the device, then a Soft-Wipe is performed and the device is deleted from Console.
+	
+The five minute gap period is called a Wipe-In-Progress.
 
 When you click **Remove/Factory Reset**, the Esper Console will send a command to all the devices in the group to Factory Reset  For online devices, factory reset will be enabled always. 
 
@@ -2451,6 +2507,10 @@ If you closed out of the slide out and wish to return later to check the status 
 
 The **Apps** tab lets you manage the apps on all the devices in the group. This includes installing new apps, uninstalling apps, scheduling an app installation, and approving apps for the group.
 
+We’ve expanded the contextual help available within Esper’s Apps section to help customers understand our console capabilities in one's daily workflow. Just look for the question mark next to any area where contextual help is available. 
+
+<img src="./assets/NewConsole/ContextualHelp.png" alt="alt text" width="75%" height="75%">
+
 ![Groups](./assets/NewConsole/GroupApps.png)
 
 :::tip 
@@ -2460,7 +2520,6 @@ If you wish to update a currently installed app to a new version, you install th
 :::tip
 You cannot uninstall in-ROM apps (called Preloaded apps). Instead you can **Disable** these apps using **Approvals**.
 :::
-
 #### Install/Uninstall
 
 The Apps section lets you install or uninstall both privately uploaded apps—also known as Enterprise Apps—and Google Play apps to the groups immediately. The action will only be performed on online devices. 
@@ -2596,6 +2655,10 @@ There are two different types of Apps you can authorize on your Android devices:
       
 :::tip
 You may approve in-ROM apps or Preloaded apps in a device from a Provisioning Template during provisioning by [entering the package name in the Apps screen](./console.md#provisioning-templates).:::
+
+The default install action for Google Play apps in the Esper provisioning template is now set to "Post Provisioning”. Previously our customers found that some Google Play Store apps were slow to install, freezing the provisioning process while customers waited for the install to complete. 
+
+Now, the default is to complete provisioning and then install any and all Google Play Store apps. You can of course change this behavior by selecting “During Provisioning” in your Provisioning Template Apps section if you wish to have the install occur during provisioning.
 
 ### Uploading Enterprise Apps to the Esper Cloud
 
