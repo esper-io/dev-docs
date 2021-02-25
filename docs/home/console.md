@@ -2538,6 +2538,24 @@ Once you’ve selected an app, its details will appear in the **App Details Prev
 
 Select a version from the **Select Version** dropdown and click **Install**. A sidebar will slide in from the right showing the status of the installation.
 
+
+If you choose the manage config check box, you will be prompted to enter a valid JSON code. This feature gives administrators the flexibility to remotely configure work apps.
+
+  
+
+![manage config](./assets/NewConsole/1-manageconfigCode.png)
+
+  
+**Notes:**
+
+  
+
+1.  Manage configurations can be applied to android devices 5.0 or above.
+    
+2.  All the apps will accept these JSON values. You will see the changes only on the apps that support managed configurations, and the key-value pairs are applicable.
+    
+3.  Manage configurations cannot be applied to a google play store app while installing it. However, an installed app can have managed configurations.
+
 Group Uninstall works much the same. Simply select **Uninstall** rather than **Install** from the **Select App Action** dropdown. 
 
 ![Groups](./assets/NewConsole/InstallSuccessDetails.png)
@@ -2593,6 +2611,70 @@ Clicking **See Details** will cause a sidebar to slide in from the right showing
 :::tip 
 You will need to enter the exact package name of any in-ROM apps you wish to show, hide, or delete. For example, Chrome’s package name is “com.android.chrome;” just entering “Chrome” or “Google Chrome” will not work.
 :::
+
+Manage configuration gives the admins the flexibility to manage work apps from the console. From the Device and Group screen, click on the name of the device you want to manage apps. Navigate to the ‘Apps’ tab.
+
+  
+
+Step 1: For the selected app, click on the ellipsis for more actions.
+
+  
+
+![Groups](./assets/NewConsole/114_Groups_devices_details_screen_app_uninstall.png)
+
+  
+
+Step 2: Choose ‘Manage Configurations’ from the drop-down. On the pop-up, type the JSON code for the key-value pair.
+
+![Groups](./assets/NewConsole/118_Groups_devices_details_screen_app_manage_configuration_modal.png)
+
+Step 3: Click Apply to save the changes. Clicking cancel will take you back to the app setting screen.
+
+  
+
+**Note**: If you have managed configurations applied for an app, you can edit the configurations. Only valid key-value pairs will be applied to the app and shown in the box below.
+
+![Groups](./assets/NewConsole/118-a-Manage_configEdit.png)
+
+  
+
+A toast message will indicate success or failure for the action.
+
+If you select the check box for managing configurations while installing an app for a group, you will be prompted to enter JSON code. Managed configurations will allow the administrator to configure work apps remotely.
+
+  
+  
+  
+
+![Groups](./assets/NewConsole/1-manageconfigCode.png)
+
+  
+
+**Notes**:
+
+  
+
+1.  Manage configurations can be applied to android devices 5.0 or above.
+    
+2.  All the apps will accept these JSON values. You will be able to see the changes only on the apps where the JSON values are applicable.
+    
+3.  Manage configurations cannot be applied to a google play store app while installing it. However, an installed app can have managed configurations.
+    
+
+  
+
+You can check the history of app installation/schedules etc. Here, if you click on the ‘view’ link under the manage configurations column, you will see the JSON code.
+
+  
+
+![Groups](./assets/NewConsole/48-2-ManageConfigViewLink.png)
+
+The Manage configuration section (apps-> manage configurations) enables you to view the group’s configurations. When you enter a valid package name, you will be able to see the JSON code. All the apps will accept these JSON values. You will be able to see the changes only on the apps where the JSON values are applicable.
+
+![Groups](./assets/NewConsole/66-DeviceGroups-ManageConfig.png)
+
+  
+**Note**: Manage configurations are supported only on android devices 5.0 or above.
 
 **Finding Package Names**
 
