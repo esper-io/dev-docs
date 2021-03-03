@@ -634,3 +634,327 @@ sdk.setDeviceOrientation(orientation, new EsperDeviceSDK.Callback<Boolean>() {
    }
 });
 ```
+**Managed App Configurations**
+
+  
+
+Managed Configurations (also known as app restrictions) allow the organization's IT admin to configure apps remotely. This capability is beneficial for organizations to apply rules on the apps deployed to a work profile.
+
+  
+
+For example, an organization might require that approved apps allow the IT admin to:
+
+-   Allow or block URLs for a web browser.
+    
+-   Configure whether an app is allowed to sync content via cellular or Wi-Fi
+    
+-   Configure the app’s email settings.
+    
+
+  
+
+**Note**:
+
+-   The API won’t work below Android API Level 21 (Lollipop)
+    
+
+  
+
+Usage:
+```
+sdk.updateAppConfigurations(appConfigurationString, new  EsperDeviceSDK.Callback<Boolean>() {
+
+@Override
+
+public void  onResponse(@Nullable  Boolean response) {
+
+Log.d(TAG, “updateAppConfigurations: was settings applied: “  + response);
+
+}
+
+  
+
+@Override
+
+public void  onFailure(Throwable throwable) {
+
+Log.e(TAG, “updateAppConfigurations: Error: “  + throwable.getMessage());
+
+}
+
+});
+```
+Params:
+
+-   appConfigurationString {String} : a JSON style configuration string
+    
+-   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+    
+
+  
+
+Schema:
+
+-   Managed App configuration JSON string schema:
+    
+```
+{
+
+“managedAppConfigurations”: {
+
+“app_package_name”: {
+
+“key1”: “value1”,
+
+“key2”: “value2”,
+
+.
+
+.
+
+.
+
+"keyN”: “valueN”
+
+}
+
+}
+
+}
+```
+
+**Set System Settings**
+
+  
+
+System settings contain miscellaneous system preferences. This table holds simple key/value pairs. setSystemSettings are convenient functions for accessing individual setting entries.
+
+  
+
+Usage:
+```
+sdk.setSystemlSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
+
+@Override
+
+public void  onResponse(@Nullable  Boolean response) {
+
+Log.d(TAG, “setGlobalSetting: is setting applied: “  + response);
+
+}
+
+  
+
+@Override
+
+public void  onFailure(Throwable throwable) {
+
+Log.e(TAG, “setGlobalSetting: Error: “  + throwable.getMessage());
+
+}
+
+}
+
+```  
+
+Params:
+
+-   key {String} : the name of the system setting
+    
+-   value {String} : the value of the system setting
+    
+-   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+    
+
+  
+
+Key-Value Reference:
+
+-   To know about possible key-value pairs, refer to official Android documentation on System Settings.
+    
+
+(https://developer.android.com/reference/android/provider/Settings.System)
+
+**Set Global Settings**
+
+  
+
+Global system settings containing preferences always apply identically to all defined users. Applications can read these but are not allowed to write, like the secure settings. These are for preferences that the user must explicitly modify through the system UI or specialized APIs for those values.
+
+  
+
+Usage:
+```
+sdk.setGlobalSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
+
+@Override
+
+public void  onResponse(@Nullable  Boolean response) {
+
+Log.d(TAG, “setGlobalSetting: is setting applied: “  + response);
+
+}
+
+  
+
+@Override
+
+public void  onFailure(Throwable throwable) {
+
+Log.e(TAG, “setGlobalSetting: Error: “  + throwable.getMessage());
+
+}
+
+}
+
+  
+```
+Params:
+
+-   Key {String} : the name of the global setting
+    
+-   value {String} : the value of the global setting
+    
+-   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+    
+
+  
+
+key-value Reference:
+
+-   To know about possible key-value pairs, refer to official Android documentation on Global Settings (https://developer.android.com/reference/android/provider/Settings.Global)
+
+**Configure No Network Fallback**
+
+  
+
+If an Android device encounters a "no network" situation, then the following JSON configuration is referred to as a follow-up strategy to regain the lost network.
+
+  
+
+Usage:
+
+sdk.configNoNetworkFallback(configJsonString, new  EsperDeviceSDK.Callback<Boolean>() {
+
+@Override
+
+public void  onResponse(@Nullable  Boolean response) {
+
+Log.d(TAG, “configNoNetworkFallback: is config applied: “  + response);
+
+}
+
+  
+
+@Override
+
+public void  onFailure(Throwable throwable) {
+
+Log.e(TAG, “configNoNetworkFallback: Error: “  + throwable.getMessage());
+
+}
+
+}
+
+  
+
+Params:
+
+-   configJsonString {String} : a JSON style configuration string
+    
+-   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+    
+
+  
+
+Schema:
+
+-   Configuring JSON string schema:
+    
+```
+{
+
+“networkFallbackEnabled”: Boolean,
+
+“fallbackDurationFlightModeOn”: Long,
+
+“fallbackDurationOff”: Long,
+
+“fallbackDurationReboot”: Long,
+
+“maxResetsInDay”: Integer,
+
+“networkFallbackAction”: Integer
+
+}
+```
+
+networkFallbackEnabled
+true : Enable
+false : Disable
+
+fallbackDurationFlightModeOn
+Duration in milliseconds to turn on Airplane mode. Not applicable for Reboot only mode
+
+fallbackDurationOff
+Duration in milliseconds to turn off Airplane Mode. Not applicable for Reboot only mode.
+
+fallbackDurationReboot
+Duration in milliseconds to Reboot device after the Internet is lost. Not applicable in the case of Airplane mode only.
+
+maxResetsInDay
+Number of times device can reset in a day(that date only)
+
+networkFallbackAction
+0: Airplane Mode Only
+1: Reboot Mode Only
+2: Airplane and Reboot
+
+**Getting Removable storage Path**
+
+  
+
+The response contains a cache path to removable storage such as an SD card. Any files inside this path are accessible by the other applications.
+
+  
+
+In Esper SDK version TESSARION_MR12, the Get storage path API was introduced.
+
+  
+
+Response Example: storage/140C-113C/Android/data/io.shoonya.shoonyadpc/cache/
+
+  
+
+**Note**: Apps using this path to access files must have READ_EXTERNAL_STORAGE granted.
+
+  
+This API requires authentication. Else, it will return InactiveSDKException. The response is a String.
+
+  
+
+This API requires Android API level 21 and won’t work beyond API level 29. InvalidAndroidSdkException will be returned for other Android versions.
+
+  
+
+In case there is no removable storage present, or if removable storage is not mounted, then PathNotFoundException will be returned.  
+  
+```  
+
+/**  
+* @param callback - callback implementation to be invoked upon completion of the operation.  
+*/  
+  
+  
+sdk.getEsperRemovableStorageCachePath(new EsperDeviceSDK.Callback<String>() {  
+@Override  
+public  void  onResponse(@Nullable String response) {  
+Log.d(TAG, "getEsperRemovableStoragePath successful. Path : " + response);  
+}  
+@Override  
+public  void  onFailure(Throwable t) {  
+Log.e(TAG, "getEsperRemovableStoragePath failure. Error : " + t.getMessage());  
+}  
+});  
+}
+ ```
