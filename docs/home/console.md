@@ -809,7 +809,7 @@ To copy a template, click **Duplicate**. You can then rename the template and up
 
 To upload a set of IMEI/Serial Numbers for devices you want to provision using Android for Work, or for Esper Enhanced Android devices with this template, click Upload IMEI CSV. You can also manage your IMEI/Serial Numbers by using the Manage devices section of the provisioning template, available after you initially create your template:
 
-![IMEI](./assets/NewConsole/ManageDevicesCSV.png)
+<!-- ![IMEI](./assets/NewConsole/ManageDevicesCSV.png) -->
 
 You can enter your IMEI and/or Serial Number one at a time, or upload a csv file. Click Download sample CSV to get a sample template you can use. You can add or remove existing IMEI and Serial Numbers added to the template when viewing this screen.
 
@@ -1068,7 +1068,7 @@ See [here](./console/policy-management/getgoogleaccount.md) to know how to get t
       
 Selecting either or both of these checkboxes will restrict incoming or outgoing calls to a specific list of telephone numbers, which you need to then upload to the device using a .csv file or manually enter into the template. To configure which telephone numbers are applied, click on **See Allowed Contacts** to bring up the contact list dialog for inbound and outbound:
 
-![Upload Phone](./assets/NewConsole/ContactsIncomingCalls.png)
+<!-- ![Upload Phone](./assets/NewConsole/ContactsIncomingCalls.png) -->
 
 You can add numbers one at a time, or upload a csv. If you plan to use the same set of numbers for both inbound and outbound calls, you can select the **Sync** checkbox in the lower left corner. The .csv file format is one phone number per cell row using the first column, with each number preceded by the country code. A sample csv file is available for you to download by clicking the **Get Sample CSV** button. If you are using a text editor, seperate each phone by a carriage return and save as csv:
 
