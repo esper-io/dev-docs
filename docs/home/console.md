@@ -1262,18 +1262,136 @@ The device will automatically connect to the given Wi-Fi access points as per th
 
 This section has four fields to configure: Wi-Fi SSID, Wi-Fi Password, Wi-Fi Security type, and whether the access point is hidden. The Wi-Fi SSID and Wi-Fi Password fields are text fields into which you enter the SSID and password for the access point. Select the security type from the dropdown menu. There are four possible choices:
 
-* NONE
-* WPA
-* WEP
-* EAP If you select EAP, an extra dropdown menu will appear to enable you to select a Phase 2 Authorization protocol:
-* NONE
-* PAP
-* MSCHAP
-* MSCHAPV2
-* GTC
-* SIM
-* AKA
-* AKA_PRIME
+**None**: None is a open type network.
+Requirement: SSID
+**WEP**: WEP is a open type network with password.
+Requirements: SSID, Password
+**WPA** :Android refers to WPA as WPA/WPA2 but technically WPA and WPA2 are little different from each other. WPA is an enhanced version of WEP.
+Requirements: SSID,Password
+**EAP**: Internally EAP is known as WPA/WPA2/WPA3-Enterprise. If you select EAP, an extra dropdown menu will appear to enable you to select a Phase 2 Authorization protocol:
+* -   PEAP-
+    
+
+    Phase 2 Authentication: None
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   TLS-
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+-   TTLS-
+    
+
+    Phase 2 Authentication: None
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+Password
+
+-   PWD-
+    
+
+    Identity (Optional)
+
+    Password (Optional)
+
+  
+
+Similarly, the Phase 2 Authentication is also a dropdown with the following options:
+
+-   NONE
+    
+-   PAP
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   MSCHAP
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   MSCHAPV2
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   GTC
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   SIM
+    
+-   AKA
+    
+-   AKA_PRIME
  
 ![WIFI Network Details](./assets/NewConsole/WIFIAccessPointDetails.png)
 
@@ -3541,7 +3659,10 @@ When you perform a transfer, you first select the Groups and/or Devices to push 
 
 ![ContentManagement](./assets/NewConsole/37xfer1.png)
 
-You then choose the path on the devices where you want the file transferred to. Once completed click on Transfer.
+You then choose the path on the devices where you want the file transferred to. Once completed click on Transfer.Previously, you could push files to the internal storage of a device. Now, you can push and store the files on a removable storage device like SD cards. All the removable storage devices will have an unique eight-character ID. But you don’t need to worry about the ID. You just need to add "ESPER_EXTERNAL" at the beginning of the file path to push a file into an SD card.
+
+Example ESPER_EXTERNAL/myfolder
+
 
 ![ContentManagement](./assets/NewConsole/38xfer2.png)
 
