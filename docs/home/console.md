@@ -40,7 +40,7 @@ Clicking **Feedback** brings up a screen with the following tools:
    
 ![Feedback Tools](./assets/NewConsole/FeedbackTools.png)
 
-When you’re ready to submit your feedback, click on the checkmark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click 'Send.' Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
+When you are ready to submit your feedback, click on the checkmark to the right of the toolbar. This will bring up a pop-up box that will enable you to select a feedback category and fill in your comments. To submit your feedback or comment, click 'Send.' Your feedback will go directly directly to Esper’s engineering team, who will then add it to our feature and issue tracking system.
 
 ![Feedback Type](./assets/NewConsole/FeedbackType.png)
 
@@ -2242,7 +2242,7 @@ You can find a group by name using Search groups.
 
 ### Devices Pane
 
-Once you’ve onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
+Once you have onboarded devices to Esper, the Devices Pane in Devices & Groups view will be available to list all the devices under management. Every device enrolled into an Esper endpoint receives a Device ID, which uses a short code prefix followed by a four character identifier. For example, the below devices are all HI-ANDI shown in the default List View. You can change this identifier in [Company Settings]. You can also assign a custom alias to each device to give it a friendly name in addition to the device name when in Grid View, noting the Device ID is often used as a parameter by the Esper API.
 
 The default view for the Device Pane is List View.
 
@@ -2538,6 +2538,24 @@ Once you’ve selected an app, its details will appear in the **App Details Prev
 
 Select a version from the **Select Version** dropdown and click **Install**. A sidebar will slide in from the right showing the status of the installation.
 
+
+If you choose the manage config check box, you will be prompted to enter a valid JSON code. This feature gives administrators the flexibility to remotely configure work apps.
+
+  
+
+![manage config](./assets/NewConsole/1-manageconfigCode.png)
+
+  
+**Notes:**
+
+  
+
+1.  Manage configurations can be applied to android devices 5.0 or above.
+    
+2.  All the apps will accept these JSON values. You will see the changes only on the apps that support managed configurations, and the key-value pairs are applicable.
+    
+3.  Manage configurations cannot be applied to a google play store app while installing it. However, an installed app can have managed configurations.
+
 Group Uninstall works much the same. Simply select **Uninstall** rather than **Install** from the **Select App Action** dropdown. 
 
 ![Groups](./assets/NewConsole/InstallSuccessDetails.png)
@@ -2593,6 +2611,70 @@ Clicking **See Details** will cause a sidebar to slide in from the right showing
 :::tip 
 You will need to enter the exact package name of any in-ROM apps you wish to show, hide, or delete. For example, Chrome’s package name is “com.android.chrome;” just entering “Chrome” or “Google Chrome” will not work.
 :::
+
+Manage configuration gives the admins the flexibility to manage work apps from the console. From the Device and Group screen, click on the name of the device you want to manage apps. Navigate to the ‘Apps’ tab.
+
+  
+
+Step 1: For the selected app, click on the ellipsis for more actions.
+
+  
+
+![Groups](./assets/NewConsole/114_Groups_devices_details_screen_app_uninstall.png)
+
+  
+
+Step 2: Choose ‘Manage Configurations’ from the drop-down. On the pop-up, type the JSON code for the key-value pair.
+
+![Groups](./assets/NewConsole/118_Groups_devices_details_screen_app_manage_configuration_modal.png)
+
+Step 3: Click Apply to save the changes. Clicking cancel will take you back to the app setting screen.
+
+  
+
+**Note**: If you have managed configurations applied for an app, you can edit the configurations. Only valid key-value pairs will be applied to the app and shown in the box below.
+
+![Groups](./assets/NewConsole/118-a-Manage_configEdit.png)
+
+  
+
+A toast message will indicate success or failure for the action.
+
+If you select the check box for managing configurations while installing an app for a group, you will be prompted to enter JSON code. Managed configurations will allow the administrator to configure work apps remotely.
+
+  
+  
+  
+
+![Groups](./assets/NewConsole/1-manageconfigCode.png)
+
+  
+
+**Notes**:
+
+  
+
+1.  Manage configurations can be applied to android devices 5.0 or above.
+    
+2.  All the apps will accept these JSON values. You will be able to see the changes only on the apps where the JSON values are applicable.
+    
+3.  Manage configurations cannot be applied to a google play store app while installing it. However, an installed app can have managed configurations.
+    
+
+  
+
+You can check the history of app installation/schedules etc. Here, if you click on the ‘view’ link under the manage configurations column, you will see the JSON code.
+
+  
+
+![Groups](./assets/NewConsole/48-2-ManageConfigViewLink.png)
+
+The Manage configuration section (apps-> manage configurations) enables you to view the group’s configurations. When you enter a valid package name, you will be able to see the JSON code. All the apps will accept these JSON values. You will be able to see the changes only on the apps where the JSON values are applicable.
+
+![Groups](./assets/NewConsole/66-DeviceGroups-ManageConfig.png)
+
+  
+**Note**: Manage configurations are supported only on android devices 5.0 or above.
 
 **Finding Package Names**
 
@@ -3521,7 +3603,7 @@ You'll need an API key and Enterprise ID to use Esper's Cloud API, Device SDK, P
 
 ### Generating an API Key
 
-The first step in interacting with our API is to generate an API key you can tie to it. Do this by clicking **Create Key**.
+The first step in interacting with our API is to generate an API key you can tie to it. Any role can create API token. Do this by clicking **Create Key**.
 
 You can also copy the Enterprise ID, necessary for API calls, by clicking on the copy icon next to Enterprise ID on top right of this section.
 
