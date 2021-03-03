@@ -2031,7 +2031,7 @@ To remotely view a device, click on **Start Session**.
 
 On devices using Android 9.0 and above, the Esper Console will establish a secure connection with the device, 
 and the device’s screen will be streamed to the Console. On devices Android 8.1 and earlier, 
-remote control is unabled by default.  
+remote control is unabled by default.
 
 Once the remote view request is allowed, a secure connection will be established, and the device’s screen will be streamed to the Console.
 
