@@ -1,16 +1,14 @@
 # Esper Device Provisioner
 
-The Esper Device Provisioner is designed to make provisioning single or multiple AOSP devices an easy task. Essentially the Device Provisioner uses ADB under the hood to provision devices while providing a great user experience so you can avoid the multiple command line steps otherwise required. 
+The Esper Device Provisioner is designed to make provisioning single or multiple AOSP devices an easy task. Essentially the Device Provisioner uses ADB under the hood to provision devices while providing a great user experience so you can avoid the multiple command line steps otherwise required.
 
-It can also provision GMS devices, useful for specialized GMS devices without a camera thus unable to read a QR code used with the 6-Tap and AfW provisioning methods. It is also used to provision Android Studio AVDs. 
+It can also provision GMS devices, useful for specialized GMS devices without a camera thus unable to read a QR code used with the 6-Tap and AfW provisioning methods. It is also used to provision Android Studio AVDs.
 
-This tool is supported on both Windows 10 and MacOS; a development PC running either of these operating systems is required. You generally do not have to install ADB yourself on your PC, the Device Provisioner takes care of that for you. However if you wish to use Wi-Fi or Ethernet for your provisioning means, in some cases you will need to execute an ADB command from your own ADB installation.
+This tool is supported on Windows 10, MacOS, and Linux; a development PC running either of these operating systems is required. You generally do not have to install ADB yourself on your PC, the Device Provisioner takes care of that for you. However if you wish to use Wi-Fi or Ethernet for your provisioning means, in some cases you will need to execute an ADB command from your own ADB installation.
 
 The means to provision multiple devices in series using the Device Provisioner depends on the provisioning method you use across the available choices of USB, Wi-Fi, or Ethernet. If you use USB, you will need a USB hub enabling multiple devices to be connected to your development PC. With Wi-Fi, devices need to be connected to the same access point as your development PC, noting with many devices you first need to run an ADB command via USB for ADB via Wi-Fi to work. For Ethernet you need to have all devices connected to the same subnet as your development PC. You can provision up to 16 devices at once using the Device Provisioner.
 
-:::warning
-In order to use the Esper Device Provisioner, you must have created at least one Provisioning Template in the Esper Console. You will find instructions for doing so in [Provisioning Templates](./console.md#provisioning-templates).
-:::
+**WARNING: In order to use the Esper Device Provisioner, you must have created at least one Provisioning Template in the Esper Console. You will find instructions for doing so in [Provisioning Templates](./console.md#provisioning-templates).**
 
 ## Windows 10 Installation
 
@@ -48,6 +46,17 @@ Click **Open** in the dialog box that pops up.
 
 Once installed, the Device Provisioner is ready to be configured.
 
+## Linux Installation
+
+The Device Provisioner is supported on the major Linux builds:
+
+* .deb file (Ubuntu & other Debian based distros)
+* .AppImage file (App image installer, for Linux Generic)
+* .snap (Snap installer for Linux Generic)
+* .pacman (For arch linux users)
+
+Download Esper Device Provisioner to your Linux development PC and follow the installation instructions.
+
 ## Configuring the Device Provisioner Upon First Use
 
 Once the Device Provisioner is installed, start it to set up using it with your Esper Endpoint.
@@ -71,6 +80,8 @@ Enter your password and click **Login**.
 The device provisioner will perform any required set up immediately after first login. After that you will now be on the Get started screen. Device Provisioner is now set up to be used with your Endpoint.
 
 <img src="./assets/NewProvisioner/GetStartedAboutPhone.png" alt="provisioner" style="max-width:200px;"/>
+
+The Device Provisioner supports Dark Mode, and is automatically set based on your system theme. You can also manually switch the Device Provisioner to Dark Mode on the **Get Started* screen.
 
 ## Preparing a Device for Provisioning
 

@@ -224,13 +224,13 @@ Now, after provisioning, if the admin changes their mind and wants to apply chan
 
 Devices - If a user wants to make change to an individual (Esper Managed) device, (let's call them 'Esper Managed Devices' post provisioning), they need to go to the Devices section on the sidebar menu. Here is a device dashboard where user can view tiles of all provisioned devices. They may click on 'Details' to take actions on that individual device such as change the compliance policy or install a new app or lockdown the device. Find more about individual devices by clicking below.
 
-[![Esper Device Template](./assets/faq/device-template-faq3.png)](./console.md#devices)
+[![Esper Device Template](./assets/faq/device-template-faq3.png)
 
 Groups - If a user wants to make change to an entire group of (Esper Managed) devices, they need to go to Groups section on the sidebar menu. Here users can see Group tiles. Here also, on clicking 'Details' user can see various available Group functionalities under various menus. Find out more about Group functionalities by clicking below.
 
-[![Esper Device Template](./assets/faq/device-template-faq5.png)](./console.md#groups)
+[![Esper Device Template](./assets/faq/device-template-faq5.png)
 
-In both Devices and Groups section, user will see a 'Compliance Policy' tab under which they can choose and apply a new Compliance policy for the individual device or the group. In order to apply a policy, user needs to create a new Compliance policy or choose an existing one.
+In the Devices & Groups section, user will see a 'Compliance Policy' tab under which they can choose and apply a new Compliance policy for the individual device or the group. In order to apply a policy, user needs to create a new Compliance policy or choose an existing one.
 
 
 ![Esper Device Template](./assets/faq/device-template-faq4.png)
