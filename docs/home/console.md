@@ -801,6 +801,20 @@ Click **Preview** to preview the Provisioning Template. Click on the **+** sign 
 
 To edit a template, click **Edit**. You can update the Policy, Apps, Branding, Settings, Group and Add Devices options as you wish. To save your changes, click on the **Update** button on the Preview page.
 
+#### Manage Devices
+
+The Manage device section is added only when you are editing a template.
+**Note**: This section is not available when you create a new template.
+
+You can add, upload or download IMEI or serial number through a CSV file using the Manage Devices section. You can delete IMEI/Serial numbers from the CSV table. If the IMEI/Serial number is on another template, Esper will confirm if you want to move the device to the new template.
+
+Clicking on the **Take a Tour** button gives you a walkthrough of how to upload an IMEI/Serial number CSV file.
+
+**Note**: Duplicate entries are not allowed. In duplicate entries, the list of duplicate IMEI/serial values (same template, different template, different endpoint) from the uploaded CSV file is returned.
+
+The **Next** button will take you to the “Preview” screen. Clicking on the **Back** button will bring you to the “Groups” screen. You can exit the editing template mode by clicking on the **Cancel** button.
+
+
 **Duplicate**
 
 To copy a template, click **Duplicate**. You can then rename the template and update the Policy, Apps, Branding, Settings, Group, and Add Devices options as you wish. Note that any IMEI or Serial Numbers included in the original template will **not** be carried over to the duplicated template. To save your changes, click on the **Update** button on the Preview page.
