@@ -2626,7 +2626,19 @@ Step 1: For the selected app, click on the ellipsis for more actions.
 
 Step 2: Choose ‘Manage Configurations’ from the drop-down. On the pop-up, type the JSON code for the key-value pair.
 
-![Groups](./assets/NewConsole/118_Groups_devices_details_screen_app_manage_configuration_modal.png)
+```json
+{
+   "HomepageLocation":"https://esper.io",
+   "URLBlocklist":[
+      "example.com",
+      "https://facebook.com/"
+   ],
+   "URLAllowlist":[
+      "example.com",
+      "https://ssl.server.com"
+   ]
+}
+```
 
 Step 3: Click Apply to save the changes. Clicking cancel will take you back to the app setting screen.
 
