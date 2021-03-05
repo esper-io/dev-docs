@@ -801,6 +801,20 @@ Click **Preview** to preview the Provisioning Template. Click on the **+** sign 
 
 To edit a template, click **Edit**. You can update the Policy, Apps, Branding, Settings, Group and Add Devices options as you wish. To save your changes, click on the **Update** button on the Preview page.
 
+#### Manage Devices
+
+The Manage device section is added only when you are editing a template.
+**Note**: This section is not available when you create a new template.
+
+You can add, upload or download IMEI or serial number through a CSV file using the Manage Devices section. You can delete IMEI/Serial numbers from the CSV table. If the IMEI/Serial number is on another template, Esper will confirm if you want to move the device to the new template.
+
+Clicking on the **Take a Tour** button gives you a walkthrough of how to upload an IMEI/Serial number CSV file.
+
+**Note**: Duplicate entries are not allowed. In duplicate entries, the list of duplicate IMEI/serial values (same template, different template, different endpoint) from the uploaded CSV file is returned.
+
+The **Next** button will take you to the “Preview” screen. Clicking on the **Back** button will bring you to the “Groups” screen. You can exit the editing template mode by clicking on the **Cancel** button.
+
+
 **Duplicate**
 
 To copy a template, click **Duplicate**. You can then rename the template and update the Policy, Apps, Branding, Settings, Group, and Add Devices options as you wish. Note that any IMEI or Serial Numbers included in the original template will **not** be carried over to the duplicated template. To save your changes, click on the **Update** button on the Preview page.
@@ -1262,18 +1276,136 @@ The device will automatically connect to the given Wi-Fi access points as per th
 
 This section has four fields to configure: Wi-Fi SSID, Wi-Fi Password, Wi-Fi Security type, and whether the access point is hidden. The Wi-Fi SSID and Wi-Fi Password fields are text fields into which you enter the SSID and password for the access point. Select the security type from the dropdown menu. There are four possible choices:
 
-* NONE
-* WPA
-* WEP
-* EAP If you select EAP, an extra dropdown menu will appear to enable you to select a Phase 2 Authorization protocol:
-* NONE
-* PAP
-* MSCHAP
-* MSCHAPV2
-* GTC
-* SIM
-* AKA
-* AKA_PRIME
+**None**: None is a open type network.
+Requirement: SSID
+**WEP**: WEP is a open type network with password.
+Requirements: SSID, Password
+**WPA** :Android refers to WPA as WPA/WPA2 but technically WPA and WPA2 are little different from each other. WPA is an enhanced version of WEP.
+Requirements: SSID,Password
+**EAP**: Internally EAP is known as WPA/WPA2/WPA3-Enterprise. If you select EAP, an extra dropdown menu will appear to enable you to select a Phase 2 Authorization protocol:
+* -   PEAP-
+    
+
+    Phase 2 Authentication: None
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   TLS-
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+-   TTLS-
+    
+
+    Phase 2 Authentication: None
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+Password
+
+-   PWD-
+    
+
+    Identity (Optional)
+
+    Password (Optional)
+
+  
+
+Similarly, the Phase 2 Authentication is also a dropdown with the following options:
+
+-   NONE
+    
+-   PAP
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   MSCHAP
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   MSCHAPV2
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   GTC
+    
+
+    CA Certificate: Use system certificate
+
+    Domain
+
+    Do not valid
+
+    Identity (Optional)
+
+    Anonymous Identity (Optional)
+
+    Password
+
+-   SIM
+    
+-   AKA
+    
+-   AKA_PRIME
  
 ![WIFI Network Details](./assets/NewConsole/WIFIAccessPointDetails.png)
 
@@ -2626,7 +2758,19 @@ Step 1: For the selected app, click on the ellipsis for more actions.
 
 Step 2: Choose ‘Manage Configurations’ from the drop-down. On the pop-up, type the JSON code for the key-value pair.
 
-![Groups](./assets/NewConsole/118_Groups_devices_details_screen_app_manage_configuration_modal.png)
+```json
+{
+   "HomepageLocation":"https://esper.io",
+   "URLBlocklist":[
+      "example.com",
+      "https://facebook.com/"
+   ],
+   "URLAllowlist":[
+      "example.com",
+      "https://ssl.server.com"
+   ]
+}
+```
 
 Step 3: Click Apply to save the changes. Clicking cancel will take you back to the app setting screen.
 
@@ -3541,7 +3685,10 @@ When you perform a transfer, you first select the Groups and/or Devices to push 
 
 ![ContentManagement](./assets/NewConsole/37xfer1.png)
 
-You then choose the path on the devices where you want the file transferred to. Once completed click on Transfer.
+You then choose the path on the devices where you want the file transferred to. Once completed click on Transfer.Previously, you could push files to the internal storage of a device. Now, you can push and store the files on a removable storage device like SD cards. All the removable storage devices will have an unique eight-character ID. But you don’t need to worry about the ID. You just need to add "ESPER_EXTERNAL" at the beginning of the file path to push a file into an SD card.
+
+Example ESPER_EXTERNAL/myfolder
+
 
 ![ContentManagement](./assets/NewConsole/38xfer2.png)
 
