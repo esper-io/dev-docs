@@ -133,6 +133,21 @@ Now go back to the Device Provisioner once the device is prepared, and on the Ge
 AOSP devices typically have multiple USB ports. Oftentimes only one of them is enabled for ADB. Please consult the accompanying manual for the device. Alternatively you can try each USB port plugging it into your development PC until you find the one that invokes the Allow USB debugging dialog on your development PC. Frequently a Type A Male to Type A Male cable is needed, but it depends on the available USB ports on your development PC (e.g. USB C instead of Type A), as well as the appropriate port used by the device (it can be USB C, Mini, Micro, or Type A). 
 :::
 
+Following are the additional steps required to provision Xiaomi/Redmi devices:
+
+Settings > About Phone > MIUI version > Tap until "You are now a developer" pop-up is displayed.
+Settings > Additional Settings > Developer Options > Enable "USB debugging" > click "OK" on prompt.
+Settings > Additional Settings > Developer Options > Enable " Install via USB".
+
+**Note:** You need SIM inserted into your device, and you need to sign-in to your MI account.
+
+Settings > Additional Settings > Developer Options > Disable "MIUI optimization".
+Settings > Additional Settings > Developer Options > Click on "Revoke USB debugging authorization" > click "OK".
+Settings > Additional Settings > Developer Options > Enable "USB Debugging*(Security settings)*"
+
+**Note:** If provisioning still fails, You may need to remove the Google/MI account added previously.
+
+
 ### Provisioning via Wi-Fi
 
 To enable ADB via Wi-Fi on the same subnet used by your development PC you typically first need to execute an ADB command to the device when it is connected via USB to your development PC (thus you need to have ADB installed on your system). But it may be possible your device’s firmware is already set up for ADB over Wi-Fi, which is useful for provisioning a large number of devices at once. Otherwise you will have to connect the device via USB cable to your development PC to start, in which case completing the process via a USB connection may be more efficient.
