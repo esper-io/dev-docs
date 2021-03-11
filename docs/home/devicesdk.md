@@ -36,7 +36,7 @@ Table of Contents:
 
 ## Enabling the Esper SDK in your Application
 
-* In your root-level (project-level) Gradle file (build.gradle), add the following repository URL:
+* In your root-level (project-level) Gradle file (build.gradle) under allprojects, add the following repository URL:
 
  maven {
     url "https://artifact.esper.io/artifactory/esper-device-sdk/"
