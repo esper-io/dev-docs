@@ -48,14 +48,26 @@ Once installed, the Device Provisioner is ready to be configured.
 
 ## Linux Installation
 
-The Device Provisioner is supported on the major Linux builds:
+First, download the  corresponding version of the  Device Provisioner  to your Linux development PC.
 
-* .deb file (Ubuntu & other Debian based distros)
-* .AppImage file (App image installer, for Linux Generic)
-* .snap (Snap installer for Linux Generic)
-* .pacman (For arch linux users)
+-   [AppImage](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.AppImage)
+    
+-   [deb](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.deb)
+    
+-   [pacman](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.pacman)
+    
+-   [snap](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.snap)
+    
 
-Download Esper Device Provisioner to your Linux development PC and follow the installation instructions.
+Navigate to the downloaded file. Double-click on the file to start the installation.![](./assets/NewProvisioner/1-download.png)
+
+The following screen will be displayed once the installation is complete.
+
+![](./assets/NewProvisioner/2-AfterInstallation.png)
+
+The Device Provisioner is ready to be configured. Double click on the Device Provisioner icon to start provisioning the devices.
+
+![](./assets/NewProvisioner/3-AppSearch.jpg)
 
 ## Configuring the Device Provisioner Upon First Use
 
