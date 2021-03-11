@@ -4,7 +4,7 @@ The Esper Device SDK exposes an API to conduct privileged operations on Esper Ma
 
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
-Current version: 2.0.6
+Current version: 2.0.7882.13
 
 Release name: Tessarion_MR8
 
