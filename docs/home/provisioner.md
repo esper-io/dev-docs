@@ -97,6 +97,31 @@ The Device Provisioner supports Dark Mode, and is automatically set based on you
 
 ## Preparing a Device for Provisioning
 
+On the top right corner of your Esper Device Provisioner tool, you will see a toggle button to switch between dark and light mode.
+
+  
+
+![](./assets/NewProvisioner/1-toggleMode.png)
+
+  
+![](./assets/NewProvisioner/3-darkmode.png) 
+Dark Mode 
+
+![](./assets/NewProvisioner/2-lightmode.png)
+
+Light Mode
+
+  
+
+When you click on the profile icon at the top right corner, you will see all your Esper endpoints.
+
+  
+
+![](./assets/NewProvisioner/4-profile.png)
+
+  
+**Note:** It will also show the endpoint you are signed in to.
+
 You need to prepare your device before it can be provisioned using the Device Provisioner.
 
 The full instructions are provided on the *Get started* screen.
@@ -144,6 +169,32 @@ Now go back to the Device Provisioner once the device is prepared, and on the Ge
 :::tip
 AOSP devices typically have multiple USB ports. Oftentimes only one of them is enabled for ADB. Please consult the accompanying manual for the device. Alternatively you can try each USB port plugging it into your development PC until you find the one that invokes the Allow USB debugging dialog on your development PC. Frequently a Type A Male to Type A Male cable is needed, but it depends on the available USB ports on your development PC (e.g. USB C instead of Type A), as well as the appropriate port used by the device (it can be USB C, Mini, Micro, or Type A). 
 :::
+
+The following are the additional steps required to provision Xiaomi/Redmi devices:
+
+-   Settings > About Phone > MIUI version > Tap until "You are now a developer" pop-up is displayed.
+    
+-   Settings > Additional Settings > Developer Options > Enable "USB debugging" > click "OK" on prompt.
+    
+-   Settings > Additional Settings > Developer Options > Enable " Install via USB".
+    
+
+  
+
+**Note**: You need SIM inserted into your device, and you need to sign-in to your MI account.
+
+  
+
+-   Settings > Additional Settings > Developer Options > Disable "MIUI optimization".
+    
+-   Settings > Additional Settings > Developer Options > Click on "Revoke USB debugging authorization" > click "OK".
+    
+-   Settings > Additional Settings > Developer Options > Enable "USB Debugging*(Security settings)*"
+    
+
+  
+
+**Note**: If provisioning still fails, you may need to remove the Google/MI account previously added.
 
 ### Provisioning via Wi-Fi
 
