@@ -6,7 +6,7 @@ Sign up for the free Esper Trial! Create an endpoint for your company to run all
 
 ## How long does the Esper Trial last?
 
-The Esper Trial lasts for 6 months after your endpoint is created, and is intended for development and evaluation use - not for commercial deployments. Contact Esper if you have any further questions about the Trial, we’d be happy to help.
+The Esper Starter Plan is free forever once your endpoint is created, and is intended for development and evaluation use - not for commercial deployments. Contact Esper if you have any further questions about the Trial, we’d be happy to help.
 
 ## Can I invite other members of my team to use the Esper Trial?
 

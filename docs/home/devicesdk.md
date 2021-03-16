@@ -4,7 +4,7 @@ The Esper Device SDK exposes an API to conduct privileged operations on Esper Ma
 
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
-Current version: 2.0.6
+Current version: 2.0.7882.13
 
 Release name: Tessarion_MR8
 
@@ -36,7 +36,7 @@ Table of Contents:
 
 ## Enabling the Esper SDK in your Application
 
-* In your root-level (project-level) Gradle file (build.gradle), add the following repository URL:
+* In your root-level (project-level) Gradle file (build.gradle) under allprojects, add the following repository URL:
 
  maven {
     url "https://artifact.esper.io/artifactory/esper-device-sdk/"
