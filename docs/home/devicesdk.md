@@ -4,7 +4,7 @@ The Esper Device SDK exposes an API to conduct privileged operations on Esper Ma
 
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
-Current version: 2.0.6
+Current version: 2.0.7882.13
 
 Release name: Tessarion_MR8
 
@@ -36,7 +36,7 @@ Table of Contents:
 
 ## Enabling the Esper SDK in your Application
 
-* In your root-level (project-level) Gradle file (build.gradle), add the following repository URL:
+* In your root-level (project-level) Gradle file (build.gradle) under allprojects, add the following repository URL:
 
  maven {
     url "https://artifact.esper.io/artifactory/esper-device-sdk/"
@@ -69,7 +69,7 @@ When an application using the SDK is first installed on a managed device, it mus
 
 To activate the SDK, you must provide an OAuth Access Token generated from an API Key that belongs to your endpoint. 
 
-After successfully activating the SDK for an application, this status will persist until the application is uninstalled.(note: If the Esper Agent Device SDK API level is lower than version 4, the SDK is always “active” by default)
+After successfully activating the SDK for an application, this status will persist until the application is uninstalled.(note: If the Esper Agent Device SDK API level is lower than version 4, the SDK is always "active" by default)
 
 ```java
 sdk.activateSDK(token, new EsperDeviceSDK.Callback<Void>() {
@@ -363,7 +363,7 @@ sdk.enableMobileData(false, new EsperDeviceSDK.Callback<Boolean>() {
 Wifi Hotspot can be enabled/disabled with a provision to set SSID and password. 
 
 For password-protected hotspot, a minimum of 8 characters of password needs to be provided, call will be failed for characters less than 8 and greater than 0.
-If the hotspot is created successfully, response with value “success” will be returned.
+If the hotspot is created successfully, response with value "success" will be returned.
 
 In case the password is passed as empty, open Wifi hotspot will be created. 
 
@@ -451,7 +451,7 @@ To Update/Remove/Delete config, an APN ID needs to be passed.
 
 ### Add new APN
 
-```JSON
+```java
 sdk.addNewApnConfig(
        new EsperDeviceSDK.Callback<Integer>() {
            @Override
@@ -560,10 +560,10 @@ state: (String) either of "SHOW", "DISABLE", "ENABLE"
 EsperDeviceSDK.Callback for the results. Response is boolean with
 true = changing app state success.
 false = some error occurred.
-sdk.changeAppState(“com.android.chrome”, ”DISABLE”, new EsperDeviceSDK.Callback<Boolean>() {
+sdk.changeAppState("com.android.chrome", "DISABLE", new EsperDeviceSDK.Callback<Boolean>() {
                 @Override
                 public void onResponse(@Nullable Boolean response) {
-         String message = response ? “success” : “failed”;
+         String message = response ? "success" : "failed";
                     Log.d(TAG, message);
                 }
 
@@ -661,26 +661,19 @@ For example, an organization might require that approved apps allow the IT admin
   
 
 Usage:
-```
+```java
 sdk.updateAppConfigurations(appConfigurationString, new  EsperDeviceSDK.Callback<Boolean>() {
 
-@Override
+    @Override
+    public void  onResponse(@Nullable  Boolean response) {
+        Log.d(TAG, "updateAppConfigurations: was settings applied: "  + response);
+    }
 
-public void  onResponse(@Nullable  Boolean response) {
-
-Log.d(TAG, “updateAppConfigurations: was settings applied: “  + response);
-
-}
-
-  
-
-@Override
-
-public void  onFailure(Throwable throwable) {
-
-Log.e(TAG, “updateAppConfigurations: Error: “  + throwable.getMessage());
-
-}
+    
+    @Override
+    public void  onFailure(Throwable throwable) {   
+        Log.e(TAG, "updateAppConfigurations: Error: "  + throwable.getMessage());
+    }
 
 });
 ```
@@ -697,29 +690,15 @@ Schema:
 
 -   Managed App configuration JSON string schema:
     
-```
+```json
 {
-
-“managedAppConfigurations”: {
-
-“app_package_name”: {
-
-“key1”: “value1”,
-
-“key2”: “value2”,
-
-.
-
-.
-
-.
-
-"keyN”: “valueN”
-
-}
-
-}
-
+    "managedAppConfigurations": {
+        "app_package_name": {
+            "key1": "value1",
+            "key2": "value2",
+            "keyN": "valueN"
+        }
+    }
 }
 ```
 
@@ -732,27 +711,17 @@ System settings contain miscellaneous system preferences. This table holds simpl
   
 
 Usage:
-```
+```java
 sdk.setSystemlSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
+    @Override
+    public void  onResponse(@Nullable  Boolean response) {
+        Log.d(TAG, "setGlobalSetting: is setting applied: "  + response);
+    }
 
-@Override
-
-public void  onResponse(@Nullable  Boolean response) {
-
-Log.d(TAG, “setGlobalSetting: is setting applied: “  + response);
-
-}
-
-  
-
-@Override
-
-public void  onFailure(Throwable throwable) {
-
-Log.e(TAG, “setGlobalSetting: Error: “  + throwable.getMessage());
-
-}
-
+    @Override
+    public void  onFailure(Throwable throwable) {
+        Log.e(TAG, "setGlobalSetting: Error: "  + throwable.getMessage());
+    }
 }
 
 ```  
@@ -784,27 +753,19 @@ Global system settings containing preferences always apply identically to all de
   
 
 Usage:
-```
+```java
 sdk.setGlobalSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
+    @Override
+    public void  onResponse(@Nullable  Boolean response) {
+        Log.d(TAG, "setGlobalSetting: is setting applied: "  + response);
+    }
 
-@Override
+    
 
-public void  onResponse(@Nullable  Boolean response) {
-
-Log.d(TAG, “setGlobalSetting: is setting applied: “  + response);
-
-}
-
-  
-
-@Override
-
-public void  onFailure(Throwable throwable) {
-
-Log.e(TAG, “setGlobalSetting: Error: “  + throwable.getMessage());
-
-}
-
+    @Override
+    public void  onFailure(Throwable throwable) {
+        Log.e(TAG, "setGlobalSetting: Error: "  + throwable.getMessage());
+    }
 }
 
   
@@ -833,28 +794,19 @@ If an Android device encounters a "no network" situation, then the following JSO
   
 
 Usage:
-
+```java
 sdk.configNoNetworkFallback(configJsonString, new  EsperDeviceSDK.Callback<Boolean>() {
+    @Override
+    public void  onResponse(@Nullable  Boolean response) {
+        Log.d(TAG, "configNoNetworkFallback: is config applied: "  + response);
+    }
 
-@Override
-
-public void  onResponse(@Nullable  Boolean response) {
-
-Log.d(TAG, “configNoNetworkFallback: is config applied: “  + response);
-
+    @Override
+    public void  onFailure(Throwable throwable) {
+        Log.e(TAG, "configNoNetworkFallback: Error: "  + throwable.getMessage());
+    }
 }
-
-  
-
-@Override
-
-public void  onFailure(Throwable throwable) {
-
-Log.e(TAG, “configNoNetworkFallback: Error: “  + throwable.getMessage());
-
-}
-
-}
+```
 
   
 
@@ -871,21 +823,14 @@ Schema:
 
 -   Configuring JSON string schema:
     
-```
+```java
 {
-
-“networkFallbackEnabled”: Boolean,
-
-“fallbackDurationFlightModeOn”: Long,
-
-“fallbackDurationOff”: Long,
-
-“fallbackDurationReboot”: Long,
-
-“maxResetsInDay”: Integer,
-
-“networkFallbackAction”: Integer
-
+    "networkFallbackEnabled": Boolean,
+    "fallbackDurationFlightModeOn": Long,
+    "fallbackDurationOff": Long,
+    "fallbackDurationReboot": Long,
+    "maxResetsInDay": Integer,
+    "networkFallbackAction": Integer
 }
 ```
 
@@ -939,22 +884,20 @@ This API requires Android API level 21 and won’t work beyond API level 29. Inv
 
 In case there is no removable storage present, or if removable storage is not mounted, then PathNotFoundException will be returned.  
   
-```  
-
+```java 
 /**  
 * @param callback - callback implementation to be invoked upon completion of the operation.  
 */  
   
-  
 sdk.getEsperRemovableStorageCachePath(new EsperDeviceSDK.Callback<String>() {  
-@Override  
-public  void  onResponse(@Nullable String response) {  
-Log.d(TAG, "getEsperRemovableStoragePath successful. Path : " + response);  
-}  
-@Override  
-public  void  onFailure(Throwable t) {  
-Log.e(TAG, "getEsperRemovableStoragePath failure. Error : " + t.getMessage());  
-}  
+    @Override  
+    public  void  onResponse(@Nullable String response) {  
+        Log.d(TAG, "getEsperRemovableStoragePath successful. Path : " + response);  
+    }  
+
+    @Override  
+    public  void  onFailure(Throwable t) {  
+        Log.e(TAG, "getEsperRemovableStoragePath failure. Error : " + t.getMessage());  
+    }  
 });  
-}
  ```

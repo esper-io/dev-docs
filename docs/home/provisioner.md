@@ -1,12 +1,12 @@
 # Esper Device Provisioner
 
-The Esper Device Provisioner is designed to make provisioning single or multiple AOSP devices an easy task. Essentially the Device Provisioner uses ADB under the hood to provision devices while providing a great user experience so you can avoid the multiple command line steps otherwise required.
+The Esper Device Provisioner is designed to make provisioning single or multiple AOSP devices an easy task in concert with the Esper Cloud. Essentially the Device Provisioner uses adb under the hood communicating with the Esper Cloud to pull in configuration instructions and the apps to install upon enrollmentto provision devices while providing a great user experience so you can avoid the multiple command line steps otherwise required.
 
-It can also provision GMS devices, useful for specialized GMS devices without a camera thus unable to read a QR code used with the 6-Tap and AfW provisioning methods. It is also used to provision Android Studio AVDs.
+While intended for AOSP devices that don’t have the Android Enterprise enrollment methods available, it can also provision GMS devices, useful for specialized GMS devices without a camera thus unable to read a QR code used with the 6-Tap and AfW provisioning methods. Android Studio AVDs can also be provisioned using this tool.
 
-This tool is supported on Windows 10, MacOS, and Linux; a development PC running either of these operating systems is required. You generally do not have to install ADB yourself on your PC, the Device Provisioner takes care of that for you. However if you wish to use Wi-Fi or Ethernet for your provisioning means, in some cases you will need to execute an ADB command from your own ADB installation.
+This tool is supported on Windows 10, macOS, and Linux; a development PC running either of these operating systems is required. You generally do not have to install adb yourself on your PC, the Device Provisioner takes care of that for you. However if you wish to use Wi-Fi or Ethernet for your provisioning means, in some cases you will need to execute an adb command from your own adb installation.
 
-The means to provision multiple devices in series using the Device Provisioner depends on the provisioning method you use across the available choices of USB, Wi-Fi, or Ethernet. If you use USB, you will need a USB hub enabling multiple devices to be connected to your development PC. With Wi-Fi, devices need to be connected to the same access point as your development PC, noting with many devices you first need to run an ADB command via USB for ADB via Wi-Fi to work. For Ethernet you need to have all devices connected to the same subnet as your development PC. You can provision up to 16 devices at once using the Device Provisioner.
+The means to provision multiple devices in series using the Device Provisioner depends on the provisioning method you use across USB, Wi-Fi, or Ethernet choices. If you use USB, and wish to provision multiple devices from one development PC, you will need a USB hub. With Wi-Fi, devices need to be connected to the same access point as your development PC, noting with many devices you first need to run an adb command via USB for adb via Wi-Fi to work. For Ethernet you need to have all devices connected to the same subnet as your development PC. You can provision up to 16 devices at once using the Device Provisioner.
 
 **WARNING: In order to use the Esper Device Provisioner, you must have created at least one Provisioning Template in the Esper Console. You will find instructions for doing so in [Provisioning Templates](./console.md#provisioning-templates).**
 
@@ -149,7 +149,7 @@ Scroll down to the DEBUGGING section, and then turn on **USB debugging**. A popu
 <img src="./assets/NewProvisioner/AllowUSBPrompt.png" alt="provisioner" style="max-width:200px;"/>
 
 :::tip
-Some AOSP devices ship with USB debugging already turned on - if that’s the case for your device you can skip this step. Once provisioned onto Esper and depending on the provisioning settings set up in your Provisioning Template, Esper prevents local ADB debugging sessions unless enabled by you using Esper.
+Some AOSP devices ship with USB debugging already turned on - if that’s the case for your device you can skip this step. Once provisioned onto Esper and depending on the provisioning settings set up in your Provisioning Template, Esper prevents local adb debugging sessions unless enabled by you using Esper.
 :::
 
 ### Provisioning via USB
@@ -160,20 +160,34 @@ Plug the USB cable into the Android device and then connect it to your developme
 
 <img src="./assets/NewProvisioner/AllowUSBPrompt1.png" alt="provisioner" style="max-width:200px;"/>
 
-**NOTE**: If your AOSP device is configured to automatically allow an ADB connection to a development PC, you will not see this dialog box. If you have ADB installed on your development PC, you can verify you are connected by going to the command line and executing adb devices. You should see your device listed if this is the case. You can also see which device or devices are connected on the Select Devices screen.
+**NOTE**: If your AOSP device is configured to automatically allow an adb connection to a development PC, you will not see this dialog box. If you have adb installed on your development PC, you can verify you are connected by going to the command line and executing adb devices. You should see your device listed if this is the case. You can also see which device or devices are connected on the Select Devices screen.
 
 Now go back to the Device Provisioner once the device is prepared, and on the Get started screen click **Next**.
 
 **NOTE**: Some specialized AOSP devices have additional settings under Developer options that may need to be properly configured in order to provision your device using the Device Provisioner. This typically includes the mode that the USB port operates in, for example Host or Device. If you have any questions regarding the proper settings choices, please contact us directly.
  
 :::tip
-AOSP devices typically have multiple USB ports. Oftentimes only one of them is enabled for ADB. Please consult the accompanying manual for the device. Alternatively you can try each USB port plugging it into your development PC until you find the one that invokes the Allow USB debugging dialog on your development PC. Frequently a Type A Male to Type A Male cable is needed, but it depends on the available USB ports on your development PC (e.g. USB C instead of Type A), as well as the appropriate port used by the device (it can be USB C, Mini, Micro, or Type A). 
+AOSP devices typically have multiple USB ports. Oftentimes only one of them is enabled for adb. Please consult the accompanying manual for the device. Alternatively you can try each USB port plugging it into your development PC until you find the one that invokes the Allow USB debugging dialog on your development PC. Frequently a Type A Male to Type A Male cable is needed, but it depends on the available USB ports on your development PC (e.g. USB C instead of Type A), as well as the appropriate port used by the device (it can be USB C, Mini, Micro, or Type A). 
 :::
+
+Following are the additional steps required to provision Xiaomi/Redmi devices:
+
+Settings > About Phone > MIUI version > Tap until "You are now a developer" pop-up is displayed.
+Settings > Additional Settings > Developer Options > Enable "USB debugging" > click "OK" on prompt.
+Settings > Additional Settings > Developer Options > Enable " Install via USB".
+
+**Note:** You need SIM inserted into your device, and you need to sign-in to your MI account.
+
+Settings > Additional Settings > Developer Options > Disable "MIUI optimization".
+Settings > Additional Settings > Developer Options > Click on "Revoke USB debugging authorization" > click "OK".
+Settings > Additional Settings > Developer Options > Enable "USB Debugging*(Security settings)*"
+
+**Note:** If provisioning still fails, You may need to remove the Google/MI account added previously.
 
 
 ### Provisioning via Wi-Fi
 
-To enable ADB via Wi-Fi on the same subnet used by your development PC you typically first need to execute an ADB command to the device when it is connected via USB to your development PC (thus you need to have ADB installed on your system). But it may be possible your device’s firmware is already set up for ADB over Wi-Fi, which is useful for provisioning a large number of devices at once. Otherwise you will have to connect the device via USB cable to your development PC to start, in which case completing the process via a USB connection may be more efficient.
+To enable adb via Wi-Fi on the same subnet used by your development PC you typically first need to execute an adb command to the device when it is connected via USB to your development PC (thus you need to have adb installed on your system). But it may be possible your device’s firmware is already set up for adb over Wi-Fi, which is useful for provisioning a large number of devices at once. Otherwise you will have to connect the device via USB cable to your development PC to start, in which case completing the process via a USB connection may be more efficient.
 
 To provision using Wi-Fi first follow the above steps for [Using USB](./provisioner.md#provisioning-via-usb), and then keep your device connected via the USB cable to your development PC. 
 
@@ -183,7 +197,7 @@ Note your Android device’s IP address, typically found in **Settings > About t
 
 ### Provisioning via Ethernet
 
-To provision via Ethernet, make sure your Android device or devices are connected to the same subnet as your development PC (noting the development PC can be connected via either Ethernet or Wi-Fi). You typically first need to execute an ADB command to the device when it is connected via USB to your development PC (thus you need to have ADB installed on your system). But it may be possible your device’s firmware is already set up for ADB over Ethernet, which is useful for provisioning a large number of devices at once. Otherwise you will have to connect the device via USB cable to your development PC to start, in which case completing the process via a USB connection may be more efficient.
+To provision via Ethernet, make sure your Android device or devices are connected to the same subnet as your development PC (noting the development PC can be connected via either Ethernet or Wi-Fi). You typically first need to execute an adb command to the device when it is connected via USB to your development PC (thus you need to have adb installed on your system). But it may be possible your device’s firmware is already set up for adb over Ethernet, which is useful for provisioning a large number of devices at once. Otherwise you will have to connect the device via USB cable to your development PC to start, in which case completing the process via a USB connection may be more efficient.
 
 To provision using Ethernet first follow the above steps for [Using USB](./provisioner.md#provisioning-via-usb), and then keep your device connected via the USB cable to your development PC. 
 
@@ -233,7 +247,7 @@ Once you are satisfied with your selections on the Download Applications screen,
 
 ## Select Devices
 
-If the Esper Device Provisioner has connected to the device or devices you are provisioning, the device will appear on the screen of your computer. It is possible to see multiple devices listed if you are set up to provision more than one device, or if you happen to have other devices on your local network that have ADB enabled. Be sure to select only the device or devices you wish to provision by checking the appropriate selector next to each device listed under Select Devices.
+If the Esper Device Provisioner has connected to the device or devices you are provisioning, the device will appear on the screen of your computer. It is possible to see multiple devices listed if you are set up to provision more than one device, or if you happen to have other devices on your local network that have adb enabled. Be sure to select only the device or devices you wish to provision by checking the appropriate selector next to each device listed under Select Devices.
 
 <img src="./assets/NewProvisioner/AddDevices.png" alt="provisioner" style="max-width:200px;"/>
 
@@ -250,7 +264,7 @@ If your device is connected via either Wi-Fi or Ethernet and your device is not 
 <img src="./assets/NewProvisioner/IPDetails.png" alt="provisioner" style="max-width:200px;"/>
 
 :::tip
-The default port number for ADB is 5555, unless you’ve changed it as part of connecting your device or devices via ADB. Note you have to enter the port number in the field, the 5555 text displayed in the box is for example only, the field is not actually filled in.
+The default port number for adb is 5555, unless you’ve changed it as part of connecting your device or devices via adb. Note you have to enter the port number in the field, the 5555 text displayed in the box is for example only, the field is not actually filled in.
 :::
 
 Once you click **Connect**, the device will be displayed under Select Devices. If you have more than one device to add, repeat the above steps. Once all devices have been added and then selected by either checking each individual checkbox per device or you have selected Select all, click on **Install**.
