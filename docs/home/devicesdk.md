@@ -749,7 +749,21 @@ Key-Value Reference:
   
 
 Global system settings containing preferences always apply identically to all defined users. Applications can read these but are not allowed to write, like the secure settings. These are for preferences that the user must explicitly modify through the system UI or specialized APIs for those values.
+Following is a list global settings which **doesn't need supervisor:**
 
+ - "adb_enabled"
+ - "auto_time"
+ - "auto_time_zone"
+ - "data_roaming"
+ - "usb_mass_storage_enabled"
+ - "wifi_sleep_policy"
+ - "stay_on_while_plugged_in"
+ - "wifi_device_owner_configs_lockdown"
+ - "bluetooth_on"
+ - "development_settings_enabled"
+ - "mode_ringer"
+ - "network_preference"
+ - "wifi_on"
   
 
 Usage:
