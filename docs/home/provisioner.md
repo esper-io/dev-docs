@@ -89,6 +89,10 @@ Enter your password and click **Login**.
 
 <img src="./assets/NewProvisioner/LoginPassword.png" alt="provisioner" style="max-width:200px;"/>
 
+:::tip
+If you enter the wrong username or password more than five times, you will be locked out for 5 minutes. A timer on the screen will display minutes, after which you can retry. 
+:::
+
 The device provisioner will perform any required set up immediately after first login. After that you will now be on the Get started screen. Device Provisioner is now set up to be used with your Endpoint.
 
 <img src="./assets/NewProvisioner/GetStartedAboutPhone.png" alt="provisioner" style="max-width:200px;"/>
