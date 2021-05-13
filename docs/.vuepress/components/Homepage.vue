@@ -37,7 +37,7 @@
           >
         </div>
         <div class="homepage__a">API Reference</div>
-        <p>API documentation and OpenAPI specificiation</p>
+        <p>API documentation and OpenAPI specification</p>
       </a>
       <a
         href="/home/espercli.html"
