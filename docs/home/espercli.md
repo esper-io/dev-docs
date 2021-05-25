@@ -24,6 +24,12 @@ From PyPI
 
 or
 
+From PyPI- to update to the latest version
+
+    $ pip install espercli--upgrade
+
+or
+
 From [GitHub](https://github.com/esper-io/esper-cli)
 
 
