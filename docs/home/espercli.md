@@ -26,7 +26,7 @@ or
 
 From PyPI- to update to the latest version
 
-    $ pip install espercli--upgrade
+    $ pip install espercli --upgrade
 
 or
 
