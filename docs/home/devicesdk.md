@@ -10,27 +10,27 @@ Release name: Tessarion_MR8
 
 Table of Contents:
 
-- Downloading the SDK
-- Initializing the SDK
-- Activating the SDK
-- Checking Activation Status
-- Getting Device Info
-- Getting Device Settings
-- Reboot Device via Esper Device SDK
-- Clearing App Data
-- Manage AppOpp Permissions
-- Manage Dock
-- Start/Stop Mobile Data
-- Start/Stop Wifi-Hotspot:
-- Disable Users From Powering Off Devices
-- Configure APNs via the Esper Device SDK
-- Add new APN
-- Update Existing APN Config
-- Remove APN Config
-- Set APN as Default
-- Change App State
-- Set Brightness
-- Set Device Orientation
+* Downloading the SDK
+* Initializing the SDK
+* Activating the SDK
+* Checking Activation Status
+* Getting Device Info
+* Getting Device Settings
+* Reboot Device via Esper Device SDK
+* Clearing App Data
+* Manage AppOpp Permissions
+* Manage Dock
+* Start/Stop Mobile Data
+* Start/Stop Wifi-Hotspot:
+* Disable Users From Powering Off Devices
+* Configure APNs via the Esper Device SDK
+* Add new APN
+* Update Existing APN Config
+* Remove APN Config
+* Set APN as Default
+* Change App State
+* Set Brightness
+* Set Device Orientation
 
 
 
@@ -38,17 +38,19 @@ Table of Contents:
 
 * In your root-level (project-level) Gradle file (build.gradle), add the following repository URL:
 
- maven {
+```gradle
+maven {
     url "https://artifact.esper.io/artifactory/esper-device-sdk/"
 }
+```
 
 * In your module (app-level) Gradle file (usually app/build.gradle), add the dependency for the Esper SDK:
 
-**implementation 'io.esper.devicesdk:app:2.0.6404.10'**
+`implementation 'io.esper.devicesdk:app:2.0.6404.10'`
 
-or
+ or
 
-**implementation 'io.esper.devicesdk:app:+'**
+`implementation 'io.esper.devicesdk:app:+'`
 
 Note that Version 2.0.6404.10 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
 
@@ -81,6 +83,7 @@ sdk.activateSDK(token, new EsperDeviceSDK.Callback<Void>() {
     }
 });
 ```
+
 The ``​onResponse​`` callback will be called with ​null​ in two cases:
 
 * The SDK was successfully activated with the provided token string
@@ -91,6 +94,7 @@ In this case, all privileged operations(​getEsperDeviceInfo()​, ​clearAppD
 The ​onFailure​ will be called when there is a failure in the operation. 
 
 In this case, the SDK was unable to be activated.
+
 * If the throwable received is an ​ActivationFailedException​, the provided token was invalid, or there was an error when connecting to the device’s endpoint when validating the token
 
 ### Checking Activation Status
@@ -114,6 +118,7 @@ sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
 ```
 
 If the check is successful, the API will return a boolean in ​onResponse​ indicating whether or not the SDK is activated.
+
 * This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will becalled.
 
 ### Getting Device Info
@@ -184,6 +189,7 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
 
 
 **Sample JSON response:**
+
 ```java
 {
    "adbTimeout":3600000,
@@ -634,7 +640,8 @@ sdk.setDeviceOrientation(orientation, new EsperDeviceSDK.Callback<Boolean>() {
    }
 });
 ```
-**Managed App Configurations**
+
+### Managed App Configurations
 
   
 
@@ -644,23 +651,20 @@ Managed Configurations (also known as app restrictions) allow the organization's
 
 For example, an organization might require that approved apps allow the IT admin to:
 
--   Allow or block URLs for a web browser.
-    
--   Configure whether an app is allowed to sync content via cellular or Wi-Fi
-    
--   Configure the app’s email settings.
+*   Allow or block URLs for a web browser.
+*   Configure whether an app is allowed to sync content via cellular or Wi-Fi
+*   Configure the app’s email settings.
     
 
   
 
-**Note**:
-
--   The API won’t work below Android API Level 21 (Lollipop)
+:::tip
+The API won’t work below Android API Level 21 (Lollipop)
+:::
     
-
-  
 
 Usage:
+
 ```java
 sdk.updateAppConfigurations(appConfigurationString, new  EsperDeviceSDK.Callback<Boolean>() {
 
@@ -677,18 +681,18 @@ sdk.updateAppConfigurations(appConfigurationString, new  EsperDeviceSDK.Callback
 
 });
 ```
+
 Params:
 
--   appConfigurationString {String} : a JSON style configuration string
-    
--   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+*   appConfigurationString {String} : a JSON style configuration string
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
     
 
   
 
 Schema:
 
--   Managed App configuration JSON string schema:
+*   Managed App configuration JSON string schema:
     
 ```json
 {
@@ -702,15 +706,15 @@ Schema:
 }
 ```
 
-**Set System Settings**
+### Set System Settings
 
   
 
 System settings contain miscellaneous system preferences. This table holds simple key/value pairs. setSystemSettings are convenient functions for accessing individual setting entries.
 
-  
 
 Usage:
+
 ```java
 sdk.setSystemlSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
     @Override
@@ -728,31 +732,27 @@ sdk.setSystemlSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
 
 Params:
 
--   key {String} : the name of the system setting
-    
--   value {String} : the value of the system setting
-    
--   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+*   key {String} : the name of the system setting
+*   value {String} : the value of the system setting
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
     
 
   
 
 Key-Value Reference:
 
--   To know about possible key-value pairs, refer to official Android documentation on System Settings.
+*   To know about possible key-value pairs, refer to official Android documentation on System Settings.
     
+[https://developer.android.com/reference/android/provider/Settings.System](https://developer.android.com/reference/android/provider/Settings.System)
 
-(https://developer.android.com/reference/android/provider/Settings.System)
-
-**Set Global Settings**
-
+### Set Global Settings
   
 
 Global system settings containing preferences always apply identically to all defined users. Applications can read these but are not allowed to write, like the secure settings. These are for preferences that the user must explicitly modify through the system UI or specialized APIs for those values.
 
-  
 
 Usage:
+
 ```java
 sdk.setGlobalSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
     @Override
@@ -767,33 +767,30 @@ sdk.setGlobalSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
         Log.e(TAG, "setGlobalSetting: Error: "  + throwable.getMessage());
     }
 }
-
   
 ```
+
 Params:
 
--   Key {String} : the name of the global setting
-    
--   value {String} : the value of the global setting
-    
--   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+*   Key {String} : the name of the global setting
+*   value {String} : the value of the global setting
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
     
 
   
 
 key-value Reference:
 
--   To know about possible key-value pairs, refer to official Android documentation on Global Settings (https://developer.android.com/reference/android/provider/Settings.Global)
+*   To know about possible key-value pairs, refer to official Android documentation on Global Settings [https://developer.android.com/reference/android/provider/Settings.Global](https://developer.android.com/reference/android/provider/Settings.Global)
 
-**Configure No Network Fallback**
-
+### Configure No Network Fallback
   
 
 If an Android device encounters a "no network" situation, then the following JSON configuration is referred to as a follow-up strategy to regain the lost network.
 
-  
 
 Usage:
+
 ```java
 sdk.configNoNetworkFallback(configJsonString, new  EsperDeviceSDK.Callback<Boolean>() {
     @Override
@@ -812,16 +809,15 @@ sdk.configNoNetworkFallback(configJsonString, new  EsperDeviceSDK.Callback<Boole
 
 Params:
 
--   configJsonString {String} : a JSON style configuration string
-    
--   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+*   configJsonString {String} : a JSON style configuration string
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
     
 
   
 
 Schema:
 
--   Configuring JSON string schema:
+*   Configuring JSON string schema:
     
 ```java
 {
@@ -834,44 +830,40 @@ Schema:
 }
 ```
 
-networkFallbackEnabled
+`networkFallbackEnabled`
 true : Enable
 false : Disable
 
-fallbackDurationFlightModeOn
+`fallbackDurationFlightModeOn`
 Duration in milliseconds to turn on Airplane mode. Not applicable for Reboot only mode
 
-fallbackDurationOff
+`fallbackDurationOff`
 Duration in milliseconds to turn off Airplane Mode. Not applicable for Reboot only mode.
 
-fallbackDurationReboot
+`fallbackDurationReboot`
 Duration in milliseconds to Reboot device after the Internet is lost. Not applicable in the case of Airplane mode only.
 
-maxResetsInDay
+`maxResetsInDay`
 Number of times device can reset in a day(that date only)
 
-networkFallbackAction
-0: Airplane Mode Only
-1: Reboot Mode Only
-2: Airplane and Reboot
+`networkFallbackAction`
+`0`: Airplane Mode Only
+`1`: Reboot Mode Only
+`2`: Airplane and Reboot
 
-**Getting Removable storage Path**
-
-  
+### Getting Removable storage Path
 
 The response contains a cache path to removable storage such as an SD card. Any files inside this path are accessible by the other applications.
 
-  
-
 In Esper SDK version TESSARION_MR12, the Get storage path API was introduced.
-
   
 
 Response Example: storage/140C-113C/Android/data/io.shoonya.shoonyadpc/cache/
-
   
 
-**Note**: Apps using this path to access files must have READ_EXTERNAL_STORAGE granted.
+:::tip
+Apps using this path to access files must have READ_EXTERNAL_STORAGE granted.
+:::
 
   
 This API requires authentication. Else, it will return InactiveSDKException. The response is a String.

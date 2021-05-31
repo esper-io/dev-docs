@@ -84,7 +84,7 @@
         <p>Plugin for Android Studio, Virtual Devices, Enhanced Android</p>
       </a>
       <a
-        href="/home/console.html"
+        href="https://console-docs.esper.io"
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">

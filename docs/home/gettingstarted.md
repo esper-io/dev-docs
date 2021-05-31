@@ -102,8 +102,8 @@ Feel free to add accounts for additional team members and pass them their creden
 
 Below are quick links to guide you on how to perform specific actions on the Esper platform:
 
-- [Signing up for an Esper Account](https://esper.io/signup)
-- [Provisioning Your Device](./console/device-provisioning/index.md)
-- [Getting an API Key](./console.md#api-key-management)
-- [Esper SDK for Python](./pythonsdk.md)
-- [Getting started with Esper CLI](./espercli.md)
+* [Signing up for an Esper Account](https://esper.io/signup)
+* [Provisioning Your Device](./console/device-provisioning/index.md)
+* [Getting an API Key](./console.md#api-key-management)
+* [Esper SDK for Python](./pythonsdk.md)
+* [Getting started with Esper CLI](./espercli.md)
