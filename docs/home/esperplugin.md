@@ -170,7 +170,7 @@ Inorder to provision the AVD (EVD) to your endpoint, you can grab the Serial num
 
 To find out how to add Serial Number or IMEI number to a template for provisioning, refer to this page -
 
-[Adding IMEI/Serial Number to a Template](./console/device-template/imei-provisioning-template/index.md)
+[Adding IMEI/Serial Number to a Template](https://console-docs.esper.io/provisioning-template/upload-imei.html#how-to-upload-multiple-imei-serial-numbers-to-a-template-for-imei-provisioning)
 
 If you'd rather use ADB to get the serial number, you can also use
 

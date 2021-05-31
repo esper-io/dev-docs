@@ -60,7 +60,7 @@ Please read [Steps to Create a Device Template](https://console-docs.esper.io/pr
 
 ### 6. Provision a Dedicated Android Device
 
-You can use any Android device that meets Esper’s [requirements](./requirements.md) as a target device for your applications and can be provisioned by the Esper Console. Once provisioned, you’ll be able to communicate with your device, and to deploy and test apps on it. During the process of provisioning, an Esper Device Agent will be installed on the device. Please see [Provisioning Your Device](./console/device-provisioning/index.md) and follow the process best suited to your device and workflow.
+You can use any Android device that meets Esper’s [requirements](./requirements.md) as a target device for your applications and can be provisioned by the Esper Console. Once provisioned, you’ll be able to communicate with your device, and to deploy and test apps on it. During the process of provisioning, an Esper Device Agent will be installed on the device. Please see [Provisioning Your Device](https://console-docs.esper.io/provisioning-methods/) and follow the process best suited to your device and workflow.
 
 If you are an Android developer and wish to use an AVD, you can easily provision your AVD using the Esper Device Provisioner tool. Simply install the Device Provisioner on your development PC, create an AVD in Android Studio, then run the Device Provisioner to provision the AVD. Find out more [here](./provisioner.html#provisioning-an-avd).
 
@@ -103,7 +103,7 @@ Feel free to add accounts for additional team members and pass them their creden
 Below are quick links to guide you on how to perform specific actions on the Esper platform:
 
 * [Signing up for an Esper Account](https://esper.io/signup)
-* [Provisioning Your Device](./console/device-provisioning/index.md)
+* [Provisioning Your Device](https://console-docs.esper.io/provisioning-methods/)
 * [Getting an API Key](https://console-docs.esper.io/API/)
 * [Esper SDK for Python](./pythonsdk.md)
 * [Getting started with Esper CLI](./espercli.md)
