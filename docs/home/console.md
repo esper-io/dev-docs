@@ -1,3 +1,3 @@
 # Esper Console
 
-Please click [here]((https://console-docs.esper.io)) for a new version of Console Documentation.
+Visit [console documentation](https://console-docs.esper.io) for all the information you need about Esper Console!
