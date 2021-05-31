@@ -4,7 +4,7 @@ The Esper Device SDK exposes an API to conduct privileged operations on Esper Ma
 
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
-Current version: 2.0.6
+Current version: 2.0.7882.13
 
 Release name: Tessarion_MR8
 
@@ -36,7 +36,7 @@ Table of Contents:
 
 ## Enabling the Esper SDK in your Application
 
-* In your root-level (project-level) Gradle file (build.gradle), add the following repository URL:
+* In your root-level (project-level) Gradle file (build.gradle) under allprojects, add the following repository URL:
 
 ```gradle
 maven {
@@ -749,7 +749,22 @@ Key-Value Reference:
   
 
 Global system settings containing preferences always apply identically to all defined users. Applications can read these but are not allowed to write, like the secure settings. These are for preferences that the user must explicitly modify through the system UI or specialized APIs for those values.
+Following is a list global settings which **doesn't need supervisor:**
 
+* "adb_enabled"
+* "auto_time"
+* "auto_time_zone"
+* "data_roaming"
+* "usb_mass_storage_enabled"
+* "wifi_sleep_policy"
+* "stay_on_while_plugged_in"
+* "wifi_device_owner_configs_lockdown"
+* "bluetooth_on"
+* "development_settings_enabled"
+* "mode_ringer"
+* "network_preference"
+* "wifi_on"
+  
 
 Usage:
 
