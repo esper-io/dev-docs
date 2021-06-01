@@ -97,7 +97,7 @@ Esper makes it easy to add team members to your endpoint enabling you to give th
 
 Feel free to add accounts for additional team members and pass them their credentials so they can join the fun.
 
-## Quick links
+## Quick Links
 
 Below are quick links to guide you on how to perform specific actions on the Esper platform:
 

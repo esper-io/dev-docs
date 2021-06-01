@@ -2,7 +2,7 @@
   <div class="home">
     <div class="homepage__headerbox">
       <h1 class="homepage__heading">
-        Esper Docs
+        Esper Documentation
       </h1>
       <p class="homepage__subheading">
         Documentation for all the Esper Dev APIs, SDKs, and Tools.
@@ -132,19 +132,21 @@
 }
 .homepage__heading {
   margin: 1.8rem auto;
-  font-size: 3rem;
-  font-weight: 500;
+  margin-top: 20vh;
+  font-size: 2.4rem;
+  font-weight: 600;
   line-height: 1.25;
   color: #7a55a5;
   font-family: 'Nunito Sans', sans-serif;
 }
 .homepage__subheading {
   max-width: 37rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   color: #6a8bad;
   font-family: 'Nunito Sans', sans-serif;
   margin: 1.8rem auto;
+  margin-bottom: 3rem;
 }
 
 .homepage__action {
@@ -155,15 +157,17 @@
   font-family: 'Nunito Sans', sans-serif;
   display: inline-block;
   font-size: 1.2rem;
+  font-weight: 600;
   margin-right: 1rem;
   /* color: #fff; */
   /* background-color: #7a55a5; */
-  padding: 0rem 2rem;
+  padding: 0.25rem 3rem;
   border-radius: 4px;
   transition: background-color 0.1s ease;
   color: #7a55a5;
   box-sizing: border-box;
   border: 1px solid #6e4d95;
+  
 }
 
 .homepage__button:hover {
@@ -196,10 +200,12 @@
   flex-basis: 30%;
   max-width: 30%;
   border: solid 1px #dfe3e6;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px 0 rgba(0, 82, 204, 0.08);
   text-align: center;
   margin-bottom: 2rem;
   padding: 2rem 0rem 2rem 0rem;
-  background-color: rgba(250, 250, 250, 0.3);
+  background-color: #fcfdff82;
   border-radius: 4px;
 }
 
@@ -215,12 +221,10 @@
   flex-grow: 1;
   flex-basis: 30%;
   max-width: 30%;
-  border: solid 1px #dfe3e6;
+  min-height: 15rem;
   text-align: center;
-  min-height: 14rem;
   margin-bottom: 2rem;
   padding: 2rem 0rem 1rem 0rem;
-  background-color: rgba(250, 250, 250, 0.3);
   border-radius: 4px;
 }
 
