@@ -38,6 +38,7 @@ export default {
     padding-bottom 3rem
     padding-right: 1rem
   .content__default
+    min-height: 25rem;
     @media (max-width: 520px)
       max-width: 80vw
     background #fff

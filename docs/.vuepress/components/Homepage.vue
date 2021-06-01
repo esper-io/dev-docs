@@ -5,7 +5,7 @@
         Esper Docs
       </h1>
       <p class="homepage__subheading">
-        Documentation for all the Esper Dev APIs, SDKs, and Tools
+        Documentation for all the Esper Dev APIs, SDKs, and Tools.
       </p>
       <p>
         <a
@@ -34,7 +34,7 @@
           >
         </div>
         <div class="homepage__a">API Reference</div>
-        <p>API documentation and OpenAPI Specification</p>
+        <p>API Documentation and OpenAPI Specification.</p>
       </a>
       <a
         href="/home/espercli.html"
@@ -48,7 +48,7 @@
           >
         </div>
         <div class="homepage__a">CLI</div>
-        <p>Command line tool for the APIs</p>
+        <p>Command line tool for the APIs.</p>
       </a>
       <a
         href="/home/pythonsdk.html"
@@ -62,7 +62,7 @@
           >
         </div>
         <div class="homepage__a">SDK</div>
-        <p>Python library to call the APIs</p>
+        <p>Python library to call the APIs.</p>
       </a>
     </div>
     <div class="homepage__links__section">
@@ -78,7 +78,7 @@
           >
         </div>
         <div class="homepage__a">Tools for Android™ Studio</div>
-        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android</p>
+        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android.</p>
       </a>
       <a
         href="https://console-docs.esper.io"
@@ -105,7 +105,7 @@
           >
         </div>
         <div class="homepage__a">Blog</div>
-        <p>Find out the latest about Esper on our Blog</p>
+        <p>Find out the latest about Esper on our Blog.</p>
       </a>
     </div>
     <div class="homepage__footer">
