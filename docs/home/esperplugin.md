@@ -32,10 +32,6 @@ The setup for the Esper Plugin is Project specific for the currently open Projec
 
 ![Esper Android Studio Plugin](./assets/plugin/setup/settings.png)
 
-If you don't have credentials, please click on "here" hyperlink in the above screen and sign up by typing your email, full name, company name and contact number. Your end point credentials will be emailed to you.
-
-![Esper Android Studio Plugin](./assets/plugin/setup/signup.png)
-
 Please type in the relevant credentials for your Endpoint Name, Username, and Password. Hit Apply and then OK.
 
 ![Esper Android Studio Plugin](./assets/plugin/setup/setup.png)

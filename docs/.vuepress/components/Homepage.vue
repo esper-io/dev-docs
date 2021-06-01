@@ -2,10 +2,7 @@
   <div class="home">
     <div class="homepage__headerbox">
       <h1 class="homepage__heading">
-        Esper Docs<Badge
-          text="Preview Release"
-          type="tip"
-        />
+        Esper Docs
       </h1>
       <p class="homepage__subheading">
         Documentation for all the Esper Dev APIs, SDKs, and Tools
@@ -37,7 +34,7 @@
           >
         </div>
         <div class="homepage__a">API Reference</div>
-        <p>API documentation and OpenAPI specificiation</p>
+        <p>API documentation and OpenAPI Specification</p>
       </a>
       <a
         href="/home/espercli.html"
@@ -94,7 +91,7 @@
           >
         </div>
         <div class="homepage__a">Console</div>
-        <p>Using the Esper Console: Esper Dev & Esper Manage</p>
+        <p>Device Onboarding and Management Platform.</p>
       </a>
       <a
         href="https://blog.esper.io"

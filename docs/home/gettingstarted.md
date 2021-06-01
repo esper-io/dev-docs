@@ -74,14 +74,13 @@ One way to explore and interact with your devices is to use Esper’s Web Consol
 
 Here are some of the interesting things you can try out:
 
-* Define a Compliance Policy (read more [here](https://console-docs.esper.io/compliance-policy/)) and then push it out to your device ([here](https://console-docs.esper.io/devices-groups/device-compliance.html#how-to-manage-the-compliance-policy-on-a-single-device)).
+* Define a [Compliance Policy](https://console-docs.esper.io/compliance-policy/) and then apply it.
 * Update an app you installed on your device to a newer version.
-* Initiate a remote view (or if supported remote control) session (read more [here](https://console-docs.esper.io/devices-groups/remote-viewer.html#how-to-access-a-device-using-the-remote-viewer-and-control)).
-* Experiment with a Kiosk mode application (read more [here](https://console-docs.esper.io/devices-groups/device-settings.html)).
+* Initiate a [remote view (or remote control if supported)](https://console-docs.esper.io/devices-groups/remote-viewer.html#how-to-access-a-device-using-the-remote-viewer-and-control) session.
+* Experiment with a [Kiosk mode](https://console-docs.esper.io/devices-groups/device-settings.html) application,
 
-Once you get the fundamentals of Esper down, now you can move on to Esper’s Group management capabilities by provisioning additional devices and putting them into the same group.
-
-Please see [Esper Console](https://console-docs.esper.io/) for details on using the Esper Console.
+Once you get the fundamentals of Esper down, you can move on to Esper’s Group management capabilities by provisioning additional devices and adding them into the created groups.
+Please visit Esper Console Docs for more information.
 
 ### 8. Start Developing
 

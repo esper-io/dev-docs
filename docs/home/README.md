@@ -41,7 +41,6 @@ Coupled with the intuitive Esper Dev Console and Esper Manage Dashboard, Esper a
 
 Esper gives you access to a suite of development tools you need to build, deliver, and maintain dedicated device solutions all in one place. Below is an overview of the Esper Tools:
 
-- **[Esper Dev Portal](../readme.md)**: Provides all Esper documentation in a portal that’s easy to access and use.
 - **Esper Dev Console**: A developer specific console organizing all of the Esper tools.
 - **Esper Cloud**: A private Cloud dedicated to each development team.
 - **[Esper Virtual Device](./esperplugin.md#esper-android-virtual-device)**: An emulation environment for development and verification testing use with Esper Enhanced Android. You can also use emulation in Android Studio with a stock Android image running our Esper Agent.
@@ -87,4 +86,4 @@ Through the Esper Console you can access all the features and capabilities you n
 
 ## Contact Us
 
-You can also send us an email at <mailto:support@esper.io> for any questions or concerns.
+You can also send us an email at [support@esper.io](mailto:support@esper.io) for any questions or concerns.
