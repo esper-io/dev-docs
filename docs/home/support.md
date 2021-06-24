@@ -11,6 +11,7 @@ Esper Trial users receive 15 days of evaluation support after signup via support
 If you are having any problems signing up for an Esper Trial, please email support@esper.io.
 
 ## Feedback
+
 You are welcome to provide feedback at any time through the Esper Console using the built-in [Feedback Widget]. For any of Esper developer tools, please engage us via [GitHub]. 
 
 ## Additional Esper Documentation Pages
