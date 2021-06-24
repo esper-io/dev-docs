@@ -35,14 +35,13 @@ To try out Esper simply sign up for a developer trial account on the [Esper Webs
 
 ## Scale your Deployment
 
-Coupled with the intuitive Esper Dev Console and Esper Manage Dashboard, Esper allows you to gradually scale your fleet at your own pace. You have options here; start with emulated devices, your currently available Dedicated Device or off-the-shelf Android hardware. You can also choose Esper Development Devices that run Esper Enhanced Android. Across the endless variety of Dedicated Devices, Esper gives you supreme control of your app on your own device.
+Coupled with the intuitive Esper Console and Esper Manage Dashboard, Esper allows you to gradually scale your fleet at your own pace. You have options here; start with emulated devices, your currently available Dedicated Device or off-the-shelf Android hardware. You can also choose Esper Development Devices that run Esper Enhanced Android. Across the endless variety of Dedicated Devices, Esper gives you supreme control of your app on your own device.
 
 ## Esper Tools
 
 Esper gives you access to a suite of development tools you need to build, deliver, and maintain dedicated device solutions all in one place. Below is an overview of the Esper Tools:
 
-- **[Esper Dev Portal](../readme.md)**: Provides all Esper documentation in a portal that’s easy to access and use.
-- **Esper Dev Console**: A developer specific console organizing all of the Esper tools.
+- **Esper Console**: Device Onboarding and Management Platform.
 - **Esper Cloud**: A private Cloud dedicated to each development team.
 - **[Esper Virtual Device](./esperplugin.md#esper-android-virtual-device)**: An emulation environment for development and verification testing use with Esper Enhanced Android. You can also use emulation in Android Studio with a stock Android image running our Esper Agent.
 - **Esper Enhanced Android**: A fortified version built with Android OS for Dedicated Devices. Adds key features for Dedicated Device needs not met by stock Android.
@@ -52,7 +51,6 @@ Esper gives you access to a suite of development tools you need to build, delive
 - **[Esper CLI](./espercli.md)**: A unified command line interface to the Esper APIs, provided with source code so you can extend it yourself.
 - **Esper Remote Debug**: Everything you need to do secure remote debugging of deployed Dedicated Devices running Esper Enhanced Android.
 - **Esper Dedicated Device Cookbooks**: Available quick starts for Kiosk, POS, Restaurant, and Logistics Dedicated Device solutions.
-- **Esper Manage Console**: Use the Esper console to access Device Orchestration capabilities that elevates MDM of dedicated devices to a whole new level.
 - **[Esper Support](./support.md)**: Chat, GitHub, email and phone.
 
 ## Esper Device Orchestration Features
@@ -87,4 +85,4 @@ Through the Esper Console you can access all the features and capabilities you n
 
 ## Contact Us
 
-You can also send us an email at <mailto:support@esper.io> for any questions or concerns.
+You can also send us an email at [support@esper.io](mailto:support@esper.io) for any questions or concerns.
