@@ -24,13 +24,13 @@ You are welcome to provide feedback at any time through the Esper Console using 
 
 
 [Esper Support Forum]: https://esperhelp.freshdesk.com/support/home
-[Feedback Widget]: https://docs.esper.io/home/console.html#feedback-widget
+[Feedback Widget]: https://console-docs.esper.io/miscellaneous/#what-is-the-feedback-widget
 [GitHub]: https://github.com/esper-io
 [Esper Tools]: https://docs.esper.io/home/#esper-tools
 [Esper Support]: https://docs.esper.io/home/support.html
 [Contact Us]: https://docs.esper.io/home/#contact-us
 [Feature Support]: https://docs.esper.io/home/requirements.html#esper-feature-support
-[Need Help Choosing]: https://docs.esper.io/home/console.html#need-help-choosing
+[Need Help Choosing]: https://console-docs.esper.io/provisioning-methods/help.html#do-you-need-help-choosing-a-provisioning-method
 
 
 
