@@ -109,7 +109,7 @@
       </a>
     </div>
     <div class="homepage__footer">
-      Apache 2.0 | © 2019 Esper, Inc.
+      Apache 2.0 | © 2021 Esper, Inc.
       <div style="font-size: 0.5em;">
         Android is a trademark of Google LLC
       </div>
