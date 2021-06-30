@@ -1,6 +1,6 @@
 # Esper Device SDK
 
-The Esper Device SDK exposes an API to conduct privileged operations on Esper Managed devices. The SDK can be used to develop apps which need to perform seamless operations on or retrieve vital information out of a device. Esper device SDK now uses the latest versions of AndroidX libraries as dependencies. This will reduce the compile time for applications using the Esper SDK.
+The Esper Device SDK exposes an API to conduct privileged operations on Esper Managed devices. The SDK can be used to develop apps which need to perform seamless operations on or retrieve vital information out of a device. Esper device SDK now uses the latest versions of AndroidX libraries ( androidx.core-core-ktx version: 1.5.0) as dependencies. This will reduce the compile time for applications using the Esper SDK.
 
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
