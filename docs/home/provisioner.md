@@ -224,7 +224,7 @@ If you selected the wrong template, simply click on the **X** next to the templa
 
 Once you have your template selected, click **Next**.
 
-## Download Applications
+## Operations
 
 You will now be on the *Download Applications* screen. The Device Provisioner will display all the Enterprise Apps associated with the selected Provisioning Template.
 
@@ -245,6 +245,10 @@ You also have the option to modify the permissions for application install. One 
 Some device firmware is implemented such that it prevents enrollment of the device into Esper. We may supply you with a special Esper debug agent and helper to help us determine the issue or issues with enrollment. If that’s the case, turn **Debug Esper Agent** to on. Two fields will appear - one to enter the full path for the agent, and another for the full path of the agent helper. You will need to manually enter these paths.
 
 <img src="./assets/NewProvisioner/DebugEsperAgent.png" alt="provisioner" style="max-width:200px;"/>
+
+You can fire ADB commands during the provisioning using the provisioner tool.
+
+<img src="./assets/NewProvisioner/ADB.png" alt="provisioner" style="max-width:200px;"/>
 
 Once you are satisfied with your selections on the Download Applications screen, click **Next**.
 
