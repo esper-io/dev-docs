@@ -38,6 +38,10 @@ export default {
     padding-bottom 3rem
     padding-right: 1rem
   .content__default
+    min-height: 25rem;
+    border: solid 1px #dfe3e6;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 rgba(0, 82, 204, 0.08);
     @media (max-width: 520px)
       max-width: 80vw
     background #fff

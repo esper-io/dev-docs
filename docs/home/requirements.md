@@ -15,7 +15,9 @@ We have recently started supporting latest Android version 10 on our platform.
 Esper Development Devices running Esper Enhanced Android will always be supported be used. Such devices open up additional features for developers, when using Esper.
 
 ## Esper Feature Support
+
 ### If you have any questions about what feature support we offer for your device, please contact support@esper.io
+
 #### Legend:
 
 * :heavy_check_mark: - Feature Supported
@@ -60,7 +62,7 @@ Dedicated devices are often behind corporate firewalls, preventing the Esper bac
 
 ### URLs
 
-* *.amazonaws.com
+* *.amazonaws.com (443 and 8883)
 * [mqtt.shoonyacloud.com:1883] (device telemetry/management)
 * [customer endpoint].esper.cloud:443
 * [customer-endpoint]-api.esper.cloud
@@ -77,9 +79,9 @@ For customers that are provisioning devices behind a firewall there are a few ad
 
 ### Ports
 
-- 5228
-- 5229
-- 5230
+* 5228
+* 5229
+* 5230
 
 ## Esper Dev Tools Requirements
 
@@ -92,7 +94,7 @@ Various Esper tools and SDK require a Python installation. The table below lists
 
 ### Esper SDK Language Support
 
-- Python
+* Python
 
 To use the Esper Python SDK, please ensure you are using Python v2.7 or above.
 
@@ -100,9 +102,9 @@ To use the Esper Python SDK, please ensure you are using Python v2.7 or above.
 
 ## Supported Development Platforms
 
-- MacOS
-- Windows
-- Linux
+* MacOS
+* Windows
+* Linux
 
 At Esper, our developers use all of the above platforms to interact with Esper itself. So feel free to use whatever platform fits well for you!
 

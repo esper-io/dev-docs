@@ -8,7 +8,9 @@ This tool is supported on Windows 10, macOS, and Linux; a development PC running
 
 The means to provision multiple devices in series using the Device Provisioner depends on the provisioning method you use across USB, Wi-Fi, or Ethernet choices. If you use USB, and wish to provision multiple devices from one development PC, you will need a USB hub. With Wi-Fi, devices need to be connected to the same access point as your development PC, noting with many devices you first need to run an adb command via USB for adb via Wi-Fi to work. For Ethernet you need to have all devices connected to the same subnet as your development PC. You can provision up to 16 devices at once using the Device Provisioner.
 
-**WARNING: In order to use the Esper Device Provisioner, you must have created at least one Provisioning Template in the Esper Console. You will find instructions for doing so in [Provisioning Templates](./console.md#provisioning-templates).**
+:::warning
+In order to use the Esper Device Provisioner, you must have created at least one Provisioning Template in the Esper Console. You will find instructions for doing so in [Provisioning Templates](https://console-docs.esper.io/provisioning-template/).
+:::
 
 ## Windows 10 Installation
 
@@ -50,24 +52,21 @@ Once installed, the Device Provisioner is ready to be configured.
 
 First, download the  corresponding version of the  Device Provisioner  to your Linux development PC.
 
--   [AppImage](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.AppImage)
-    
--   [deb](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.deb)
-    
--   [pacman](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.pacman)
-    
--   [snap](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.snap)
+*   [AppImage](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.AppImage)
+*   [deb](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.deb)
+*   [pacman](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.pacman)
+*   [snap](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.snap)
     
 
-Navigate to the downloaded file. Double-click on the file to start the installation.![](./assets/NewProvisioner/1-download.png)
+Navigate to the downloaded file. Double-click on the file to start the installation.![Download image](./assets/NewProvisioner/1-download.png)
 
 The following screen will be displayed once the installation is complete.
 
-![](./assets/NewProvisioner/2-AfterInstallation.png)
+![After installation](./assets/NewProvisioner/2-AfterInstallation.png)
 
 The Device Provisioner is ready to be configured. Double click on the Device Provisioner icon to start provisioning the devices.
 
-![](./assets/NewProvisioner/3-AppSearch.jpg)
+![AppSearch](./assets/NewProvisioner/3-AppSearch.jpg)
 
 ## Configuring the Device Provisioner Upon First Use
 
@@ -89,6 +88,10 @@ Enter your password and click **Login**.
 
 <img src="./assets/NewProvisioner/LoginPassword.png" alt="provisioner" style="max-width:200px;"/>
 
+:::tip
+If you enter the wrong username or password more than five times, you will be locked out for 5 minutes. A timer on the screen will display minutes, after which you can retry. 
+:::
+
 The device provisioner will perform any required set up immediately after first login. After that you will now be on the Get started screen. Device Provisioner is now set up to be used with your Endpoint.
 
 <img src="./assets/NewProvisioner/GetStartedAboutPhone.png" alt="provisioner" style="max-width:200px;"/>
@@ -101,13 +104,13 @@ On the top right corner of your Esper Device Provisioner tool, you will see a to
 
   
 
-![](./assets/NewProvisioner/1-toggleMode.png)
+![Toggle Mode](./assets/NewProvisioner/1-toggleMode.png)
 
   
-![](./assets/NewProvisioner/3-darkmode.png) 
+![Dark mode](./assets/NewProvisioner/3-darkmode.png) 
 Dark Mode 
 
-![](./assets/NewProvisioner/2-lightmode.png)
+![Light mode](./assets/NewProvisioner/2-lightmode.png)
 
 Light Mode
 
@@ -117,7 +120,7 @@ When you click on the profile icon at the top right corner, you will see all you
 
   
 
-![](./assets/NewProvisioner/4-profile.png)
+![Profile icon](./assets/NewProvisioner/4-profile.png)
 
   
 **Note:** It will also show the endpoint you are signed in to.

@@ -1,4 +1,4 @@
-# Esper CLI <Badge text="Preview Release" type="tip"/>
+# Esper CLI
 
 This package provides a unified command line interface to the Esper API Services.
 
@@ -12,7 +12,7 @@ Current stable release versions are
 
 1.  **Python:** You must use Python 3.6 or above.
 2.  **An Esper Dev Account:** You need a free Esper Dev Trial account to create an environment and generate an Esper `SERVER URL`to talk to APIs. You will choose the `ENVIRONMENT NAME` that will then be assigned as your custom URL. When you complete the sign up process your private environment will be created. See [Requesting an Esper Dev Trial account](./gettingstarted.md#_1-sign-up-for-an-account).
-3.  **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Dev Console once you have set up your account. For example, the Esper Dev Console for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud` if you choose the `ENVIRONMENT NAME` of “{{ esper_tenant_name }}”. See [Generating an API Key](./module/genapikey.md)
+3.  **Generate an API key:** API key authentication is used for accessing APIs. You will have to generate this from the Esper Console once you have set up your account. For example, the Esper Console for your account can be accessed at `https://{{ esper_tenant_name }}.esper.cloud` if you choose the `ENVIRONMENT NAME` of “{{ esper_tenant_name }}”. See [Generating an API Key](./module/genapikey.md)
 
 ## Installation
 
@@ -21,6 +21,12 @@ Current stable release versions are
 From PyPI
 
     $ pip install espercli
+
+or
+
+From PyPI- to update to the latest version
+
+    $ pip install espercli --upgrade
 
 or
 
