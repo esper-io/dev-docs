@@ -1,7 +1,7 @@
 module.exports = {
   base: '/',
   title: 'Esper Docs',
-  description: 'Esper documentation',
+  description: 'Learn more about Esper’s documentation.',
   plugins: [
     ['vuepress-plugin-reading-time', true],
     ['@dovyp/vuepress-plugin-clipboard-copy', true],
@@ -34,6 +34,8 @@ module.exports = {
   ],
   head: [
     ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { property: "og:image", content:"https://docs.esper.io/images/Android-device-management.png" }],
+    ['meta', { property: "twitter:card", content:"summary_large_image" }]
   ],
   themeConfig: {
     esper_tenant_name: 'foo',
