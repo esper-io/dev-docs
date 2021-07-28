@@ -405,7 +405,7 @@ An Android Virtual Device (AVD) is a particular device configuration simulated b
 
 Begin by creating and / or running an AVD out of the many configurations available to you via Android Studio, see the [Android Studio documentation](https://developer.android.com/studio/run/managing-avds).
 
-Once the AVD is running, start the Device Provisioner and follow the steps to [prepare the device as instructed](./provisioner.md#preparing-a-device-for-provisioning), [select your Provisioning Template](./provisioner.md#selecting-the-provisioning-template), and [download your Enterprise applications](./provisioner.md#download-applications).
+Once the AVD is running, start the Device Provisioner and follow the steps to [prepare the device as instructed](./provisioner.md#preparing-a-device-for-provisioning), [select your Provisioning Template](./provisioner.md#selecting-the-provisioning-template), and [download your Enterprise applications](./provisioner.md-#operations).
 
 When you get to the Select devices screen, you will see your AVD displayed as an emulated device. (In some cases you may need to first successfully execute **adb tcpip 5555** via the command line on the AVD in order for the Device Provisioner to connect to the AVD.) Select it and click on **Install**.
 
