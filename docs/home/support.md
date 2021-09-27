@@ -6,7 +6,7 @@ If you face any issues while using Esper, we are here to help you! Support optio
 * Esper Essentials - support@esper.io
 * Esper Pro - Direct ticketing of support issues by customers
 
-Esper Trial users receive 15 days of evaluation support after signup via support@esper.io. Please be sure to check our support forums first before emailing support. **After 15 days, the default support option will be the Esper Support Forum unless you’ve purchased an Esper Essentials or Pro licensing pack.**
+After starting your Esper trial, you will have access to a robust volume of documentation to help get your team up and running with Esper. Please contact our sales team if you are interested in purchasing more support for your organization.
 
 If you are having any problems signing up for an Esper Trial, please email support@esper.io.
 
