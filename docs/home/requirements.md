@@ -66,6 +66,8 @@ Dedicated devices are often behind corporate firewalls, preventing the Esper bac
 * [mqtt.shoonyacloud.com:1883] (device telemetry/management)
 * [customer endpoint].esper.cloud:443
 * [customer-endpoint]-api.esper.cloud
+* mqtt2.shoonyacloud.com
+* eea-telemetry-mqtt.esper.cloud
 * [turn.shoonyacloud.com]
 * 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
 
