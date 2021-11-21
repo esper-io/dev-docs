@@ -326,6 +326,23 @@ sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
 });
 ```
 
+**Start Dock:**
+
+```java
+sdk.startDock(new EsperDeviceSDK.Callback<Void>() {
+    @Override
+    public void onResponse(Void response) {
+        showToast(R.string.success);
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+        t.printStackTrace();
+        showToast(R.string.failure);
+    }
+});
+```
+
 **Hide Dock:**
 
 ```java
