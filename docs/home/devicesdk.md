@@ -30,6 +30,11 @@ Table of Contents:
 * Change App State
 * Set Brightness
 * Set Device Orientation
+* Managed App Configurations
+* Set System Settings
+* Set Global Settings
+* Configure No Network Fallback
+* Getting Removal Storage Path
 
 
 
@@ -45,13 +50,13 @@ maven {
 
 * In your module (app-level) Gradle file (usually app/build.gradle), add the dependency for the Esper SDK:
 
-`implementation 'io.esper.devicesdk:app:2.0.6404.10'`
+`implementation 'io.esper.devicesdk:app:2.1.1181.15'`
 
  or
 
 `implementation 'io.esper.devicesdk:app:+'`
 
-Note that Version 2.0.6404.10 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
+Note that Version 2.1.1181.15 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
 
 
 ### Initializing the SDK
