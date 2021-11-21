@@ -5,7 +5,7 @@ In its current development state, the SDK provides limited features but the list
 
 Current version: 2.1.1181.15
 
-Release name: Tessarion_MR8
+Release name: SUNFYRE_V5
 
 Table of Contents:
 
