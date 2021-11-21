@@ -36,7 +36,7 @@ Table of Contents:
 * Configure No Network Fallback
 * Getting Removal Storage Path
 * Getting Device Temperatures
-
+* Push Telemetry Data
 
 
 ## Enabling the Esper SDK in your Application
@@ -934,7 +934,7 @@ sdk.getEsperRemovableStorageCachePath(new EsperDeviceSDK.Callback<String>() {
 ### Getting Device Temperatures
 Method to get Device hardware component's temperatures such as CPU, GPU, Battery or Skin in Celsius.
 
-::: Note
+:::Note
 This SDK method requires Android API level 24.
 :::
 
@@ -970,6 +970,33 @@ sdk.getDeviceTemperatures(0, 0, new EsperDeviceSDK.Callback<float[]>() {
     public void onFailure(Throwable t) {
         Log.d(TAG, "getDeviceTemperatures failure. error : " + t.getMessage());
         showFailureResult(t);
+    }
+});
+```
+
+### Push Telemetry Data
+Method to push data that needs to be stored and synced with Quantum and does not need to be fetched or handled by the Quantum Telemetry System.
+
+```java
+HashMap<String, Object> data = new HashMap<>();
+data.put("test", "testValue");
+data.put("test 2", 123);
+
+/**
+ * @param name Name of the Custom Telemetry Data Type
+ * @param id   Id of the Custom Telemetry Data Type must be between 2000 and 3000
+ * @param data the data pertaining to the custom Telemetry type
+ */
+sdk.pushTelemetryData("Sdk Test Telemetry", 1001, true, data, new EsperDeviceSDK.Callback<Void>() {
+    @Override
+    public void onResponse(@Nullable Void response) {
+        Log.d(TAG, "pushTelemetryData: onResponse - hence success");
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+        runOnUiThread(() -> Toast.makeText(MainActivity.this, "pushTelemetryData: onFailure - " + t.getMessage(), Toast.LENGTH_SHORT).show());
+        Log.e(TAG, "pushTelemetryData: onFailure - " + t.getMessage(), t);
     }
 });
 ```
