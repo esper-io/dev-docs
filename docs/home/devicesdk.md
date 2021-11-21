@@ -720,15 +720,15 @@ System settings contain miscellaneous system preferences. This table holds simpl
 Usage:
 
 ```java
-sdk.setSystemlSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
+sdk.setSystemSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
     @Override
     public void  onResponse(@Nullable  Boolean response) {
-        Log.d(TAG, "setGlobalSetting: is setting applied: "  + response);
+        Log.d(TAG, "setSystemSetting: is setting applied: "  + response);
     }
 
     @Override
     public void  onFailure(Throwable throwable) {
-        Log.e(TAG, "setGlobalSetting: Error: "  + throwable.getMessage());
+        Log.e(TAG, "setSystemSetting: Error: "  + throwable.getMessage());
     }
 }
 
