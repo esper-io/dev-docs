@@ -35,6 +35,7 @@ Table of Contents:
 * Set Global Settings
 * Configure No Network Fallback
 * Getting Removal Storage Path
+* Getting Device Temperatures
 
 
 
@@ -929,3 +930,46 @@ sdk.getEsperRemovableStorageCachePath(new EsperDeviceSDK.Callback<String>() {
     }  
 });  
  ```
+
+### Getting Device Temperatures
+Method to get Device hardware component's temperatures such as CPU, GPU, Battery or Skin in Celsius.
+
+::: Note
+This SDK method requires Android API level 24.
+:::
+
+```java
+/**
+ * @param type     - type of requested device temperature, one of
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_CPU},
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_GPU},
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_BATTERY} or
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_SKIN}.
+ * @param source   - source of requested device temperature, one of
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_CURRENT},
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_THROTTLING},
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_THROTTLING_BELOW_VR_MIN} or
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_SHUTDOWN}.
+ * @param callback - callback implementation to be invoked upon completion of the operation.
+ *                 In devices running android 7 or above, the callback will return float array
+ *                 of temperatures of given type and source.
+ *                 Callback's onFailure method returns InvalidAndroidSdkException in case Device is
+ *                 running below Android 7
+ *                 Callback's onFailure method returns InternalError in case device
+ *                 is not able to access {@link android.os.HardwarePropertiesManager}
+ *
+ */
+sdk.getDeviceTemperatures(0, 0, new EsperDeviceSDK.Callback<float[]>() {
+    @Override
+    public void onResponse(@Nullable float[] response) {
+        Log.d(TAG, "getDeviceTemperatures successful. temperatures : " + Arrays.toString(response));
+        showMethodResult(Arrays.toString(response));
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+        Log.d(TAG, "getDeviceTemperatures failure. error : " + t.getMessage());
+        showFailureResult(t);
+    }
+});
+```
