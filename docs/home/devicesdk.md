@@ -959,7 +959,8 @@ This SDK method requires Android API level 24.
  *                 is not able to access {@link android.os.HardwarePropertiesManager}
  *
  */
-sdk.getDeviceTemperatures(0, 0, new EsperDeviceSDK.Callback<float[]>() {
+sdk.getDeviceTemperatures(HardwarePropertiesManager.DEVICE_TEMPERATURE_CPU, HardwarePropertiesManager.TEMPERATURE_CURRENT, 
+                            new EsperDeviceSDK.Callback<float[]>() {
     @Override
     public void onResponse(@Nullable float[] response) {
         Log.d(TAG, "getDeviceTemperatures successful. temperatures : " + Arrays.toString(response));
