@@ -267,15 +267,10 @@ sdk.configNoNetworkFallback(configJsonString, new  EsperDeviceSDK.Callback<Boole
 }
 ```
 
-  
-
 Params:
 
 *   configJsonString {String} : a JSON style configuration string
 *   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
-    
-
-  
 
 Schema:
 
@@ -618,7 +613,6 @@ sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
 
 Managed Configurations (also known as app restrictions) allow the organization's IT admin to configure apps remotely. This capability is beneficial for organizations to apply rules on the apps deployed to a work profile.
 
-  
 
 For example, an organization might require that approved apps allow the IT admin to:
 
@@ -626,8 +620,6 @@ For example, an organization might require that approved apps allow the IT admin
 *   Configure whether an app is allowed to sync content via cellular or Wi-Fi
 *   Configure the app’s email settings.
     
-
-  
 
 :::tip
 The API won’t work below Android API Level 21 (Lollipop)
@@ -657,9 +649,6 @@ Params:
 
 *   appConfigurationString {String} : a JSON style configuration string
 *   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
-    
-
-  
 
 Schema:
 
