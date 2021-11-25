@@ -149,6 +149,33 @@ sdk.addNewApnConfig(
 addNewApnConfig function returns a newly added APN ID as an integer in response. 
 
  -1 Indicates a Failure. Users should keep a note of the APN ID returned, as there are no APIs to query. Please note that in case of incorrect parameters passed in the config, an APN may not show up in the list of APNs in settings.
+ 
+ ```JSON
+{
+  "name": "Esper Device SDK",
+  "apn": "Airtel",
+  "proxy": "",
+  "port": "80",
+  "mmsproxy": "",
+  "mmsport": "",
+  "user": "",
+  "server": "",
+  "password": "",
+  "mmsc": "",
+  "authtype": "-1",
+  "protocol": "IPV4V6",
+  "roaming_protocol": "IPV4V6",
+  "type": "",
+  "mcc": "404",
+  "mnc": "45",
+  "numeric": "40445",
+  "current": "1",
+  "bearer": "0",
+  "mvno_type": "",
+  "mvno_match_data": "",
+  "carrier_enabled": "1"
+}
+```
 
 ### Change App State
 
@@ -215,33 +242,6 @@ APIs to add/update/remove/setDefault APN confuguraton(s).
 These APIs are only available on Samsung KNOX enabled devices, or via Supervisor plugin, and the Esper Device SDK version TESSARION_MR8.
 
 To create new / update an existing APN, a JSON string needs to be passed in SDK functions with APN config parameters mentioned.
-
-```JSON
-{
-  "name": "Esper Device SDK",
-  "apn": "Airtel",
-  "proxy": "",
-  "port": "80",
-  "mmsproxy": "",
-  "mmsport": "",
-  "user": "",
-  "server": "",
-  "password": "",
-  "mmsc": "",
-  "authtype": "-1",
-  "protocol": "IPV4V6",
-  "roaming_protocol": "IPV4V6",
-  "type": "",
-  "mcc": "404",
-  "mnc": "45",
-  "numeric": "40445",
-  "current": "1",
-  "bearer": "0",
-  "mvno_type": "",
-  "mvno_match_data": "",
-  "carrier_enabled": "1"
-}
-```
 
 To Update/Remove/Delete config, an APN ID needs to be passed.
 
