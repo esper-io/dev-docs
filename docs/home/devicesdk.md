@@ -5,33 +5,41 @@ In its current development state, the SDK provides limited features but the list
 
 Current version: 2.1.1181.15
 
-Release name: Tessarion_MR8
+Release name: SUNFYRE_V5
 
 Table of Contents:
 
-* Downloading the SDK
-* Initializing the SDK
-* Activating the SDK
-* Checking Activation Status
-* Getting Device Info
-* Getting Device Settings
-* Reboot Device via Esper Device SDK
-* Clearing App Data
-* Manage AppOpp Permissions
-* Manage Dock
-* Start/Stop Mobile Data
-* Start/Stop Wifi-Hotspot:
-* Disable Users From Powering Off Devices
-* Configure APNs via the Esper Device SDK
-* Add new APN
-* Update Existing APN Config
-* Remove APN Config
-* Set APN as Default
-* Change App State
-* Set Brightness
-* Set Device Orientation
+* SDK Setup
+    * Downloading the SDK
+    * Initializing the SDK
+    * Activating the SDK
+    * Checking Activation Status
 
-
+* SDK Methods
+    * Add New APN
+    * Change App State
+    * Clearing App Data
+    * Configure APNs via the Esper Device SDK
+    * Configure No Network Fallback
+    * Disable Users From Powering Off Devices
+    * Getting Device Info
+    * Getting Device Settings
+    * Getting Device Temperatures
+    * Getting Removal Storage Path
+    * Manage AppOpp Permissions
+    * Manage Dock
+    * Managed App Configurations
+    * Push Telemetry Data
+    * Reboot Device via Esper Device SDK
+    * Remove APN Config
+    * Set APN as Default
+    * Set Brightness
+    * Set Device Orientation
+    * Set Global Settings
+    * Set System Settings
+    * Start/Stop Mobile Data
+    * Start/Stop Wifi-Hotspot
+    * Update Existing APN Config
 
 ## Enabling the Esper SDK in your Application
 
@@ -45,13 +53,13 @@ maven {
 
 * In your module (app-level) Gradle file (usually app/build.gradle), add the dependency for the Esper SDK:
 
-`implementation 'io.esper.devicesdk:app:2.0.6404.10'`
+`implementation 'io.esper.devicesdk:app:2.1.1181.15'`
 
  or
 
 `implementation 'io.esper.devicesdk:app:+'`
 
-Note that Version 2.0.6404.10 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
+Note that Version 2.1.1181.15 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
 
 
 ### Initializing the SDK
@@ -118,7 +126,213 @@ sdk.isActivated(new EsperDeviceSDK.Callback<Boolean>() {
 
 If the check is successful, the API will return a boolean in ​onResponse​ indicating whether or not the SDK is activated.
 
-* This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will becalled.
+* This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will be called.
+
+### Add New APN
+
+```java
+sdk.addNewApnConfig(
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               showMethodResult("onResponse: APN ID: " + response);
+           }
+
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+}, apnConfigJSONString);
+```
+
+addNewApnConfig function returns a newly added APN ID as an integer in response. 
+
+ -1 Indicates a Failure. Users should keep a note of the APN ID returned, as there are no APIs to query. Please note that in case of incorrect parameters passed in the config, an APN may not show up in the list of APNs in settings.
+ 
+ ```JSON
+{
+  "name": "Esper Device SDK",
+  "apn": "Airtel",
+  "proxy": "",
+  "port": "80",
+  "mmsproxy": "",
+  "mmsport": "",
+  "user": "",
+  "server": "",
+  "password": "",
+  "mmsc": "",
+  "authtype": "-1",
+  "protocol": "IPV4V6",
+  "roaming_protocol": "IPV4V6",
+  "type": "",
+  "mcc": "404",
+  "mnc": "45",
+  "numeric": "40445",
+  "current": "1",
+  "bearer": "0",
+  "mvno_type": "",
+  "mvno_match_data": "",
+  "carrier_enabled": "1"
+}
+```
+
+### Change App State
+
+App state can now be changed from the SDK. Every app supports three states:
+
+* DISABLE: Requires Android 5.0 and above. DPC Disables the app on the managed device. 
+* SHOW: The app can be used by the managed device, and the shortcut is provided on the Home screen.
+* HIDE: Hides the app, making it unusable in the DPC. No shortcut is provided on the Home screen, but it is still possible for the app to run in the background.
+
+**Note: One cannot make state changes on an application if it is in kiosk mode.**
+
+The changeAppState function expects three arguments:
+
+```java
+
+packageName: (String) the app whose state we want to change.
+state: (String) either of "SHOW", "DISABLE", "ENABLE"
+EsperDeviceSDK.Callback for the results. Response is boolean with
+true = changing app state success.
+false = some error occurred.
+sdk.changeAppState("com.android.chrome", "DISABLE", new EsperDeviceSDK.Callback<Boolean>() {
+                @Override
+                public void onResponse(@Nullable Boolean response) {
+         String message = response ? "success" : "failed";
+                    Log.d(TAG, message);
+                }
+
+                @Override
+                public void onFailure(Throwable t) {
+                    Log.d(TAG, "Error", t);
+                }
+});
+```
+
+### Clearing App Data
+
+The SDK exposes APIs to clear data of an installed app. The API requires the device to run Android 7.0 and above.
+
+```java
+/**
+  * @param packageNames - list of package names whose data is to be cleared
+  * @param callback     - callback implementation to be invoked upon completion
+  *                       of the operation.
+  */
+sdk.clearAppData(appsToBeCleared, new EsperDeviceSDK.Callback<ArrayList<String>>() {
+    @Override
+    public void onResponse(@Nullable ArrayList<String> response) {
+                
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+
+    }
+});
+```
+
+The API allows you to pass a list of packages whose data is to be cleared. The API will return a null in onResponse if it was successfully able to clear the data of all apps or it shall return the list of packages whose data it was unable to clear.
+
+### Configure APNs via the Esper Device SDK
+
+APIs to add/update/remove/setDefault APN confuguraton(s).
+
+These APIs are only available on Samsung KNOX enabled devices, or via Supervisor plugin, and the Esper Device SDK version TESSARION_MR8.
+
+To create new / update an existing APN, a JSON string needs to be passed in SDK functions with APN config parameters mentioned.
+
+To Update/Remove/Delete config, an APN ID needs to be passed.
+
+**MVNO_TYPE & MVNO_MATCH_DATA on Samsung devices is only available on Android API Level 29 & above.**
+
+### Configure No Network Fallback
+
+If an Android device encounters a "no network" situation, then the following JSON configuration is referred to as a follow-up strategy to regain the lost network.
+
+Usage:
+
+```java
+sdk.configNoNetworkFallback(configJsonString, new  EsperDeviceSDK.Callback<Boolean>() {
+    @Override
+    public void  onResponse(@Nullable  Boolean response) {
+        Log.d(TAG, "configNoNetworkFallback: is config applied: "  + response);
+    }
+
+    @Override
+    public void  onFailure(Throwable throwable) {
+        Log.e(TAG, "configNoNetworkFallback: Error: "  + throwable.getMessage());
+    }
+}
+```
+
+Params:
+
+*   configJsonString {String} : a JSON style configuration string
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+
+Schema:
+
+*   Configuring JSON string schema:
+    
+```java
+{
+    "networkFallbackEnabled": Boolean,
+    "fallbackDurationFlightModeOn": Long,
+    "fallbackDurationOff": Long,
+    "fallbackDurationReboot": Long,
+    "maxResetsInDay": Integer,
+    "networkFallbackAction": Integer
+}
+```
+
+`networkFallbackEnabled`
+true : Enable
+false : Disable
+
+`fallbackDurationFlightModeOn`
+Duration in milliseconds to turn on Airplane mode. Not applicable for Reboot only mode
+
+`fallbackDurationOff`
+Duration in milliseconds to turn off Airplane Mode. Not applicable for Reboot only mode.
+
+`fallbackDurationReboot`
+Duration in milliseconds to Reboot device after the Internet is lost. Not applicable in the case of Airplane mode only.
+
+`maxResetsInDay`
+Number of times device can reset in a day(that date only)
+
+`networkFallbackAction`
+`0`: Airplane Mode Only
+`1`: Reboot Mode Only
+`2`: Airplane and Reboot
+
+### Disable Users From Powering Off Devices
+
+This API will enable or disable the user to power off the device by pressing the power button. 
+
+* Once power off is disabled, powering off is enabled only if another call is made to re-enable it. 
+* If powering off is disabled, a toast notification with the message "Security policy prevents power off" appears when the user tries to power off the device.
+
+**This API is only available on Samsung KNOX enabled devices & is available from the Esper Device SDK version TESSARION_MR8.**
+
+The function call to allowPowerOff returns boolean if allowing or disallowing power off was successful.
+
+```java
+sdk.allowPowerOff(true/false, new EsperDeviceSDK.Callback<Boolean>() {
+   @Override
+   public void onResponse(@Nullable Boolean response) {
+       Log.d(TAG, "onResponse: " + response);
+       showMethodResult(getString(R.string.result, "" + response));
+   }
+   @Override
+   public void onFailure(Throwable t) {
+       Log.e(TAG, "onFailure: ", t);
+       showFailureResult(t);
+   }
+});
+```
 
 ### Getting Device Info
 
@@ -225,53 +439,93 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
 }
 ```
 
-### Reboot Device via Esper Device SDK
+### Getting Device Temperatures
 
-Reboot API required supervisor support until Android 6.0 (Marshmallow), from Android 7.0 & above, the ability to Reboot a device via the Esper Device SDK is supported without a supervisor.
+Method to get Device hardware component's temperatures such as CPU, GPU, Battery or Skin in Celsius.
 
-Reboot API was introduced in Esper SDK version <code> TESSARION_MR5. </code>
-
-Enabling the <code> Reboot </code> function of the SDK requires a callback in arguments. 
-
-As soon as the <code> Reboot </code> API is called, the device will be rebooted.
-
-```java
-sdk.reboot(new EsperDeviceSDK.Callback<Void>() {
-   @Override
-   public void onResponse(Void response) {
-   }
-
-   @Override
-   public void onFailure(Throwable t) {
-       Log.e(TAG, "onFailure: ", t);
-   }
-});
-```
-
-### Clearing App Data
-
-The SDK exposes APIs to clear data of an installed app. The API requires the device to run Android 7.0 and above.
+:::Note
+This SDK method requires Android API level 24.
+:::
 
 ```java
 /**
-  * @param packageNames - list of package names whose data is to be cleared
-  * @param callback     - callback implementation to be invoked upon completion
-  *                       of the operation.
-  */
-sdk.clearAppData(appsToBeCleared, new EsperDeviceSDK.Callback<ArrayList<String>>() {
+ * @param type     - type of requested device temperature, one of
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_CPU},
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_GPU},
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_BATTERY} or
+ *                 {@link android.os.HardwarePropertiesManager#DEVICE_TEMPERATURE_SKIN}.
+ * @param source   - source of requested device temperature, one of
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_CURRENT},
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_THROTTLING},
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_THROTTLING_BELOW_VR_MIN} or
+ *                 {@link android.os.HardwarePropertiesManager#TEMPERATURE_SHUTDOWN}.
+ * @param callback - callback implementation to be invoked upon completion of the operation.
+ *                 In devices running android 7 or above, the callback will return float array
+ *                 of temperatures of given type and source.
+ *                 Callback's onFailure method returns InvalidAndroidSdkException in case Device is
+ *                 running below Android 7
+ *                 Callback's onFailure method returns InternalError in case device
+ *                 is not able to access {@link android.os.HardwarePropertiesManager}
+ *
+ */
+sdk.getDeviceTemperatures(HardwarePropertiesManager.DEVICE_TEMPERATURE_CPU, HardwarePropertiesManager.TEMPERATURE_CURRENT, 
+                            new EsperDeviceSDK.Callback<float[]>() {
     @Override
-    public void onResponse(@Nullable ArrayList<String> response) {
-                
+    public void onResponse(@Nullable float[] response) {
+        Log.d(TAG, "getDeviceTemperatures successful. temperatures : " + Arrays.toString(response));
+        showMethodResult(Arrays.toString(response));
     }
 
     @Override
     public void onFailure(Throwable t) {
-
+        Log.d(TAG, "getDeviceTemperatures failure. error : " + t.getMessage());
+        showFailureResult(t);
     }
 });
 ```
 
-The API allows you to pass a list of packages whose data is to be cleared. The API will return a null in onResponse if it was successfully able to clear the data of all apps or it shall return the list of packages whose data it was unable to clear.
+### Getting Removable storage Path
+
+The response contains a cache path to removable storage such as an SD card. Any files inside this path are accessible by the other applications.
+
+In Esper SDK version TESSARION_MR12, the Get storage path API was introduced.
+  
+
+Response Example: storage/140C-113C/Android/data/io.shoonya.shoonyadpc/cache/
+  
+
+:::tip
+Apps using this path to access files must have READ_EXTERNAL_STORAGE granted.
+:::
+
+  
+This API requires authentication. Else, it will return InactiveSDKException. The response is a String.
+
+  
+
+This API requires Android API level 21 and won’t work beyond API level 29. InvalidAndroidSdkException will be returned for other Android versions.
+
+  
+
+In case there is no removable storage present, or if removable storage is not mounted, then PathNotFoundException will be returned.  
+  
+```java 
+/**  
+* @param callback - callback implementation to be invoked upon completion of the operation.  
+*/  
+  
+sdk.getEsperRemovableStorageCachePath(new EsperDeviceSDK.Callback<String>() {  
+    @Override  
+    public  void  onResponse(@Nullable String response) {  
+        Log.d(TAG, "getEsperRemovableStoragePath successful. Path : " + response);  
+    }  
+
+    @Override  
+    public  void  onFailure(Throwable t) {  
+        Log.e(TAG, "getEsperRemovableStoragePath failure. Error : " + t.getMessage());  
+    }  
+});  
+```
 
 ### Manage AppOpp Permissions
 
@@ -321,6 +575,23 @@ sdk.showDock(new EsperDeviceSDK.Callback<Void>() {
 });
 ```
 
+**Start Dock:**
+
+```java
+sdk.startDock(new EsperDeviceSDK.Callback<Void>() {
+    @Override
+    public void onResponse(Void response) {
+        showToast(R.string.success);
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+        t.printStackTrace();
+        showToast(R.string.failure);
+    }
+});
+```
+
 **Hide Dock:**
 
 ```java
@@ -338,166 +609,113 @@ sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
 });
 ```
 
-### Start/Stop Mobile Data
+### Managed App Configurations
 
-Mobile data can be started/stopped only with DPC on android 4.4 & requires supervisor plugin on Android 5.0+.
+Managed Configurations (also known as app restrictions) allow the organization's IT admin to configure apps remotely. This capability is beneficial for organizations to apply rules on the apps deployed to a work profile.
 
-enableMobileData function of SDK expects two arguments:
 
-boolean value to start/stop mobile data.
-true = start mobile data & false = stop mobile data 
-EsperDeviceSDK.Callback for the results.
-response also is boolean with true = changing mobile data state success.
+For example, an organization might require that approved apps allow the IT admin to:
 
-```java
-sdk.enableMobileData(false, new EsperDeviceSDK.Callback<Boolean>() {
-   @Override
-   public void onResponse(@Nullable Boolean response) {
-       Log.d(TAG, "onResponse: " + response);
-   }
+*   Allow or block URLs for a web browser.
+*   Configure whether an app is allowed to sync content via cellular or Wi-Fi
+*   Configure the app’s email settings.
+    
 
-   @Override
-   public void onFailure(Throwable t) {
-       Log.e(TAG, "onFailure: ", t);
-   }
-});
-```
+:::tip
+The API won’t work below Android API Level 21 (Lollipop)
+:::
+    
 
-### Start/Stop Wifi-Hotspot:
-
-Wifi Hotspot can be enabled/disabled with a provision to set SSID and password. 
-
-For password-protected hotspot, a minimum of 8 characters of password needs to be provided, call will be failed for characters less than 8 and greater than 0.
-If the hotspot is created successfully, response with value "success" will be returned.
-
-In case the password is passed as empty, open Wifi hotspot will be created. 
-
-**param 1 >** SSID (name of the hotspot)
-
-**param 2 >** password
-
-**param 3 >** true / false (true = start hotspot, false = stop hotspot)
+Usage:
 
 ```java
-sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new​ ​EsperDeviceSDK​.​Callback​<​String​>() {  
-    @Override ​public​ ​void​ onResponse(@Nullable ​String​ response) {
-        ​Log​.d(TAG, ​"onResponse: "​ + response);            
+sdk.updateAppConfigurations(appConfigurationString, new  EsperDeviceSDK.Callback<Boolean>() {
+
+    @Override
+    public void  onResponse(@Nullable  Boolean response) {
+        Log.d(TAG, "updateAppConfigurations: was settings applied: "  + response);
     }
-    @Override ​public​ ​void​ onFailure(​Throwable​ t) {
-        ​Log​.e(TAG, ​"onFailure: "​, t);
+
+    
+    @Override
+    public void  onFailure(Throwable throwable) {   
+        Log.e(TAG, "updateAppConfigurations: Error: "  + throwable.getMessage());
     }
+
 });
 ```
 
-### Disable Users From Powering Off Devices
+Params:
 
-This API will enable or disable the user to power off the device by pressing the power button. 
+*   appConfigurationString {String} : a JSON style configuration string
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
 
-* Once power off is disabled, powering off is enabled only if another call is made to re-enable it. 
-* If powering off is disabled, a toast notification with the message "Security policy prevents power off" appears when the user tries to power off the device.
+Schema:
 
-**This API is only available on Samsung KNOX enabled devices & is available from the Esper Device SDK version TESSARION_MR8.**
-
-The function call to allowPowerOff returns boolean if allowing or disallowing power off was successful.
-
-```java
-sdk.allowPowerOff(true/false, new EsperDeviceSDK.Callback<Boolean>() {
-   @Override
-   public void onResponse(@Nullable Boolean response) {
-       Log.d(TAG, "onResponse: " + response);
-       showMethodResult(getString(R.string.result, "" + response));
-   }
-   @Override
-   public void onFailure(Throwable t) {
-       Log.e(TAG, "onFailure: ", t);
-       showFailureResult(t);
-   }
-});
-```
-
-### Configure APNs via the Esper Device SDK
-
-APIs to add/update/remove/setDefault APN confuguraton(s).
-
-These APIs are only available on Samsung KNOX enabled devices, or via Supervisor plugin, and the Esper Device SDK version TESSARION_MR8.
-
-To create new / update an existing APN, a JSON string needs to be passed in SDK functions with APN config parameters mentioned.
-
-```JSON
+*   Managed App configuration JSON string schema:
+    
+```json
 {
-  "name": "Esper Device SDK",
-  "apn": "Airtel",
-  "proxy": "",
-  "port": "80",
-  "mmsproxy": "",
-  "mmsport": "",
-  "user": "",
-  "server": "",
-  "password": "",
-  "mmsc": "",
-  "authtype": "-1",
-  "protocol": "IPV4V6",
-  "roaming_protocol": "IPV4V6",
-  "type": "",
-  "mcc": "404",
-  "mnc": "45",
-  "numeric": "40445",
-  "current": "1",
-  "bearer": "0",
-  "mvno_type": "",
-  "mvno_match_data": "",
-  "carrier_enabled": "1"
+    "managedAppConfigurations": {
+        "app_package_name": {
+            "key1": "value1",
+            "key2": "value2",
+            "keyN": "valueN"
+        }
+    }
 }
 ```
 
-To Update/Remove/Delete config, an APN ID needs to be passed.
+### Push Telemetry Data
 
-**MVNO_TYPE & MVNO_MATCH_DATA on Samsung devices is only available on Android API Level 29 & above.**
-
-### Add new APN
+Method to push data that needs to be stored and synced with Quantum and does not need to be fetched or handled by the Quantum Telemetry System.
 
 ```java
-sdk.addNewApnConfig(
-       new EsperDeviceSDK.Callback<Integer>() {
-           @Override
-           public void onResponse(@Nullable Integer response) {
-               showMethodResult("onResponse: APN ID: " + response);
-           }
+HashMap<String, Object> data = new HashMap<>();
+data.put("test", "testValue");
+data.put("test 2", 123);
 
-           @Override
-           public void onFailure(Throwable t) {
-               Log.e(TAG, "onFailure: ", t);
-               showFailureResult(t);
-           }
-}, apnConfigJSONString);
+/**
+ * @param name Name of the Custom Telemetry Data Type
+ * @param id   Id of the Custom Telemetry Data Type must be between 2000 and 3000
+ * @param data the data pertaining to the custom Telemetry type
+ */
+sdk.pushTelemetryData("Sdk Test Telemetry", 1001, true, data, new EsperDeviceSDK.Callback<Void>() {
+    @Override
+    public void onResponse(@Nullable Void response) {
+        Log.d(TAG, "pushTelemetryData: onResponse - hence success");
+    }
+
+    @Override
+    public void onFailure(Throwable t) {
+        runOnUiThread(() -> Toast.makeText(MainActivity.this, "pushTelemetryData: onFailure - " + t.getMessage(), Toast.LENGTH_SHORT).show());
+        Log.e(TAG, "pushTelemetryData: onFailure - " + t.getMessage(), t);
+    }
+});
 ```
 
-addNewApnConfig function returns a newly added APN ID as an integer in response. 
+### Reboot Device via Esper Device SDK
 
- -1 Indicates a Failure. Users should keep a note of the APN ID returned, as there are no APIs to query. Please note that in case of incorrect parameters passed in the config, an APN may not show up in the list of APNs in settings.
+Reboot API required supervisor support until Android 6.0 (Marshmallow), from Android 7.0 & above, the ability to Reboot a device via the Esper Device SDK is supported without a supervisor.
 
+Reboot API was introduced in Esper SDK version <code> TESSARION_MR5. </code>
 
-### Update Existing APN Config
+Enabling the <code> Reboot </code> function of the SDK requires a callback in arguments. 
+
+As soon as the <code> Reboot </code> API is called, the device will be rebooted.
 
 ```java
-sdk.updateUpdateApnConfig(
-       new EsperDeviceSDK.Callback<Integer>() {
-           @Override
-           public void onResponse(@Nullable Integer response) {
-               showMethodResult("onResponse: Update Result: " + response);
-           }
+sdk.reboot(new EsperDeviceSDK.Callback<Void>() {
+   @Override
+   public void onResponse(Void response) {
+   }
 
-           @Override
-           public void onFailure(Throwable t) {
-               Log.e(TAG, "onFailure: ", t);
-               showFailureResult(t);
-           }
-}, apnID, apnConfigJSONString);
+   @Override
+   public void onFailure(Throwable t) {
+       Log.e(TAG, "onFailure: ", t);
+   }
+});
 ```
-
-updateUpdateApnConfig expects first argument as APN ID returned by addNewApnConfig function & second as APN config JSON string. It returns Integer as a response. 
-
-1 indicates success & -1 a failure.
 
 ### Remove APN Config
 
@@ -545,39 +763,6 @@ setDefaultApn expects APN ID in argument returned by addNewApnConfig function.
 returns Integer as a response.
 
 1 indicates success & -1 a failure.
-
-### Change App State
-
-App state can now be changed from the SDK. Every app supports three states:
-
-* DISABLE: Requires Android 5.0 and above. DPC Disables the app on the managed device. 
-* SHOW: The app can be used by the managed device, and the shortcut is provided on the Home screen.
-* HIDE: Hides the app, making it unusable in the DPC. No shortcut is provided on the Home screen, but it is still possible for the app to run in the background.
-
-**Note: One cannot make state changes on an application if it is in kiosk mode.**
-
-The changeAppState function expects three arguments:
-
-```java
-
-packageName: (String) the app whose state we want to change.
-state: (String) either of "SHOW", "DISABLE", "ENABLE"
-EsperDeviceSDK.Callback for the results. Response is boolean with
-true = changing app state success.
-false = some error occurred.
-sdk.changeAppState("com.android.chrome", "DISABLE", new EsperDeviceSDK.Callback<Boolean>() {
-                @Override
-                public void onResponse(@Nullable Boolean response) {
-         String message = response ? "success" : "failed";
-                    Log.d(TAG, message);
-                }
-
-                @Override
-                public void onFailure(Throwable t) {
-                    Log.d(TAG, "Error", t);
-                }
-});
-```
 
 ### Set Brightness
 
@@ -640,112 +825,7 @@ sdk.setDeviceOrientation(orientation, new EsperDeviceSDK.Callback<Boolean>() {
 });
 ```
 
-### Managed App Configurations
-
-  
-
-Managed Configurations (also known as app restrictions) allow the organization's IT admin to configure apps remotely. This capability is beneficial for organizations to apply rules on the apps deployed to a work profile.
-
-  
-
-For example, an organization might require that approved apps allow the IT admin to:
-
-*   Allow or block URLs for a web browser.
-*   Configure whether an app is allowed to sync content via cellular or Wi-Fi
-*   Configure the app’s email settings.
-    
-
-  
-
-:::tip
-The API won’t work below Android API Level 21 (Lollipop)
-:::
-    
-
-Usage:
-
-```java
-sdk.updateAppConfigurations(appConfigurationString, new  EsperDeviceSDK.Callback<Boolean>() {
-
-    @Override
-    public void  onResponse(@Nullable  Boolean response) {
-        Log.d(TAG, "updateAppConfigurations: was settings applied: "  + response);
-    }
-
-    
-    @Override
-    public void  onFailure(Throwable throwable) {   
-        Log.e(TAG, "updateAppConfigurations: Error: "  + throwable.getMessage());
-    }
-
-});
-```
-
-Params:
-
-*   appConfigurationString {String} : a JSON style configuration string
-*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
-    
-
-  
-
-Schema:
-
-*   Managed App configuration JSON string schema:
-    
-```json
-{
-    "managedAppConfigurations": {
-        "app_package_name": {
-            "key1": "value1",
-            "key2": "value2",
-            "keyN": "valueN"
-        }
-    }
-}
-```
-
-### Set System Settings
-
-  
-
-System settings contain miscellaneous system preferences. This table holds simple key/value pairs. setSystemSettings are convenient functions for accessing individual setting entries.
-
-
-Usage:
-
-```java
-sdk.setSystemlSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
-    @Override
-    public void  onResponse(@Nullable  Boolean response) {
-        Log.d(TAG, "setGlobalSetting: is setting applied: "  + response);
-    }
-
-    @Override
-    public void  onFailure(Throwable throwable) {
-        Log.e(TAG, "setGlobalSetting: Error: "  + throwable.getMessage());
-    }
-}
-
-```  
-
-Params:
-
-*   key {String} : the name of the system setting
-*   value {String} : the value of the system setting
-*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
-    
-
-  
-
-Key-Value Reference:
-
-*   To know about possible key-value pairs, refer to official Android documentation on System Settings.
-    
-[https://developer.android.com/reference/android/provider/Settings.System](https://developer.android.com/reference/android/provider/Settings.System)
-
-### Set Global Settings
-  
+### Set Global Settings  
 
 Global system settings containing preferences always apply identically to all defined users. Applications can read these but are not allowed to write, like the secure settings. These are for preferences that the user must explicitly modify through the system UI or specialized APIs for those values.
 Following is a list global settings which **doesn't need supervisor:**
@@ -789,121 +869,113 @@ Params:
 *   Key {String} : the name of the global setting
 *   value {String} : the value of the global setting
 *   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
-    
-
-  
 
 key-value Reference:
 
 *   To know about possible key-value pairs, refer to official Android documentation on Global Settings [https://developer.android.com/reference/android/provider/Settings.Global](https://developer.android.com/reference/android/provider/Settings.Global)
 
-### Configure No Network Fallback
-  
+### Set System Settings
 
-If an Android device encounters a "no network" situation, then the following JSON configuration is referred to as a follow-up strategy to regain the lost network.
-
+System settings contain miscellaneous system preferences. This table holds simple key/value pairs. setSystemSettings are convenient functions for accessing individual setting entries.
 
 Usage:
 
 ```java
-sdk.configNoNetworkFallback(configJsonString, new  EsperDeviceSDK.Callback<Boolean>() {
+sdk.setSystemSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
     @Override
     public void  onResponse(@Nullable  Boolean response) {
-        Log.d(TAG, "configNoNetworkFallback: is config applied: "  + response);
+        Log.d(TAG, "setSystemSetting: is setting applied: "  + response);
     }
 
     @Override
     public void  onFailure(Throwable throwable) {
-        Log.e(TAG, "configNoNetworkFallback: Error: "  + throwable.getMessage());
+        Log.e(TAG, "setSystemSetting: Error: "  + throwable.getMessage());
     }
 }
-```
 
-  
+```  
 
 Params:
 
-*   configJsonString {String} : a JSON style configuration string
+*   key {String} : the name of the system setting
+*   value {String} : the value of the system setting
 *   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+
+Key-Value Reference:
+
+*   To know about possible key-value pairs, refer to official Android documentation on System Settings.
     
+[https://developer.android.com/reference/android/provider/Settings.System](https://developer.android.com/reference/android/provider/Settings.System)
 
-  
+### Start/Stop Mobile Data
 
-Schema:
+Mobile data can be started/stopped only with DPC on android 4.4 & requires supervisor plugin on Android 5.0+.
 
-*   Configuring JSON string schema:
-    
+enableMobileData function of SDK expects two arguments:
+
+boolean value to start/stop mobile data.
+true = start mobile data & false = stop mobile data 
+EsperDeviceSDK.Callback for the results.
+response also is boolean with true = changing mobile data state success.
+
 ```java
-{
-    "networkFallbackEnabled": Boolean,
-    "fallbackDurationFlightModeOn": Long,
-    "fallbackDurationOff": Long,
-    "fallbackDurationReboot": Long,
-    "maxResetsInDay": Integer,
-    "networkFallbackAction": Integer
-}
+sdk.enableMobileData(false, new EsperDeviceSDK.Callback<Boolean>() {
+   @Override
+   public void onResponse(@Nullable Boolean response) {
+       Log.d(TAG, "onResponse: " + response);
+   }
+
+   @Override
+   public void onFailure(Throwable t) {
+       Log.e(TAG, "onFailure: ", t);
+   }
+});
 ```
 
-`networkFallbackEnabled`
-true : Enable
-false : Disable
+### Start/Stop Wifi-Hotspot
 
-`fallbackDurationFlightModeOn`
-Duration in milliseconds to turn on Airplane mode. Not applicable for Reboot only mode
+Wifi Hotspot can be enabled/disabled with a provision to set SSID and password. 
 
-`fallbackDurationOff`
-Duration in milliseconds to turn off Airplane Mode. Not applicable for Reboot only mode.
+For password-protected hotspot, a minimum of 8 characters of password needs to be provided, call will be failed for characters less than 8 and greater than 0.
+If the hotspot is created successfully, response with value "success" will be returned.
 
-`fallbackDurationReboot`
-Duration in milliseconds to Reboot device after the Internet is lost. Not applicable in the case of Airplane mode only.
+In case the password is passed as empty, open Wifi hotspot will be created. 
 
-`maxResetsInDay`
-Number of times device can reset in a day(that date only)
+**param 1 >** SSID (name of the hotspot)
 
-`networkFallbackAction`
-`0`: Airplane Mode Only
-`1`: Reboot Mode Only
-`2`: Airplane and Reboot
+**param 2 >** password
 
-### Getting Removable storage Path
+**param 3 >** true / false (true = start hotspot, false = stop hotspot)
 
-The response contains a cache path to removable storage such as an SD card. Any files inside this path are accessible by the other applications.
+```java
+sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new​ ​EsperDeviceSDK​.​Callback​<​String​>() {  
+    @Override ​public​ ​void​ onResponse(@Nullable ​String​ response) {
+        ​Log​.d(TAG, ​"onResponse: "​ + response);            
+    }
+    @Override ​public​ ​void​ onFailure(​Throwable​ t) {
+        ​Log​.e(TAG, ​"onFailure: "​, t);
+    }
+});
+```
 
-In Esper SDK version TESSARION_MR12, the Get storage path API was introduced.
-  
+### Update Existing APN Config
 
-Response Example: storage/140C-113C/Android/data/io.shoonya.shoonyadpc/cache/
-  
+```java
+sdk.updateUpdateApnConfig(
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               showMethodResult("onResponse: Update Result: " + response);
+           }
 
-:::tip
-Apps using this path to access files must have READ_EXTERNAL_STORAGE granted.
-:::
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+}, apnID, apnConfigJSONString);
+```
 
-  
-This API requires authentication. Else, it will return InactiveSDKException. The response is a String.
+updateUpdateApnConfig expects first argument as APN ID returned by addNewApnConfig function & second as APN config JSON string. It returns Integer as a response. 
 
-  
-
-This API requires Android API level 21 and won’t work beyond API level 29. InvalidAndroidSdkException will be returned for other Android versions.
-
-  
-
-In case there is no removable storage present, or if removable storage is not mounted, then PathNotFoundException will be returned.  
-  
-```java 
-/**  
-* @param callback - callback implementation to be invoked upon completion of the operation.  
-*/  
-  
-sdk.getEsperRemovableStorageCachePath(new EsperDeviceSDK.Callback<String>() {  
-    @Override  
-    public  void  onResponse(@Nullable String response) {  
-        Log.d(TAG, "getEsperRemovableStoragePath successful. Path : " + response);  
-    }  
-
-    @Override  
-    public  void  onFailure(Throwable t) {  
-        Log.e(TAG, "getEsperRemovableStoragePath failure. Error : " + t.getMessage());  
-    }  
-});  
- ```
+1 indicates success & -1 a failure.
