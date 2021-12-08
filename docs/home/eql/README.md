@@ -31,36 +31,36 @@ Consider a collection of documents with JSON structure as below:
   
 ```
 {  
-"name": "Foo",  
-"location": [  
-"Bengaluru",  
-"Seattle",  
-"Bellevue"  
+    "name": "Foo",  
+    "location": [  
+        "Bengaluru",  
+        "Seattle",  
+        "Bellevue"  
 ],  
 "rating": 5,  
 "scores": [  
-5,  
-4,  
-3  
+    5,  
+    4,  
+    3  
 ],  
 "active": true,  
 "price": 10.15,  
 "last_active": "2019-07-02T10:46:39.425399+00:00",  
 "details": {  
-"url": "https://example.com",  
-"description": "esper document",  
-"registered_on": "2019-07-02T10:46:39.425399+00:00"  
+    "url": "https://example.com",  
+    "description": "esper document",  
+    "registered_on": "2019-07-02T10:46:39.425399+00:00"  
 },  
 "projects": [  
-{  
-"name": "telemetry",  
-"version": 2  
-},  
-{  
-"name": "eea",  
-"version": 1  
-}  
-]  
+    {  
+        "name": "telemetry",  
+        "version": 2  
+    },  
+    {  
+        "name": "eea",  
+        "version": 1  
+    }  
+    ]  
 }
 ```
   
@@ -76,7 +76,7 @@ Basic components are
     
 2.  Operators: These are EQL supported operators like comparison operators, logical operators, lookup operators, etc
     
-3.  Queries): These are the types of EQL queries.
+3.  Queries: These are the types of EQL queries.
     
 
   
@@ -118,18 +118,18 @@ Example: Consider the following nested field
 
 ```
 "details": {  
-"url": "https://example.com",  
-"description": "esper document",  
-"registered_on": "2019-07-02T10:46:39.425399+00:00"  
+    "url": "https://example.com",  
+    "description": "esper document",  
+    "registered_on": "2019-07-02T10:46:39.425399+00:00"  
 }
 ```
   
 
 To query on the “url” field present inside “details” use details.url
 
+```
 details.url:"https://esper.io"
-
-  
+```
   
 
 # Operators
@@ -143,8 +143,9 @@ Returns documents with an equality condition
 
 Example: Get all active documents
 
+```
 active: true
-
+```
   
 
 ## Logical Operators
@@ -157,8 +158,9 @@ Returns documents satisfying both conditions to the left and the right of the op
 
 Example: Get documents that belong to Seattle and are priced at $110.
 
+```
 location:"Seattle"  AND price:110
-
+```
   
 
 #### OR
@@ -168,8 +170,9 @@ Returns documents satisfying either one or both of the conditions to the left an
 
 Example: Get documents which either belong to Nevada or are priced at $50.
 
+```
 location:"Nevada"  OR price:50
-
+```
   
 
 ## Lookup Operators
@@ -184,26 +187,30 @@ A list is a collection of comma-separated values inside the opening and closing 
 
 Example: A valid list of integers
 
+```
 (5, 1, 3)
-
+```
   
 
 Example: A valid list of strings
 
+```
 (“foo”, “bar”)
-
+```
   
 
 Example: Get documents where the rating is one of the values in 5, 4 or 3
 
+```
 rating IN (5, 4, 3)
-
+```
   
 
 Example: Get documents that belong to Seattle, Texas, or Bengaluru
 
+```
 location IN (“Seattle”, “Texas”, “Bengaluru”)
-
+```
   
 
 **Note**: For strings, IN matching is case-sensitive.
@@ -219,8 +226,9 @@ Returns results containing the given string.
 
 Example: Get documents where name contains foo.
 
+```
 name LIKE "foo"
-
+```
   
 
 # Queries
@@ -237,8 +245,9 @@ There are two types of queries in EQL
 A simple query operates on a single field, and it is an atomic query. A simple query is usually of the form:
 
   
-
+```
 <JSON FIELD> <OPERATOR> <VALUE>
+```
 
   
 
@@ -257,18 +266,15 @@ VALUES is the value of the JSON field for the query. Valid values are string, in
 Below are examples of some valid values
 
   
-
+```
 Boolean: true or false
-
-  
+ 
 
 Integer: A whole number e.g 10, -2, 521
-
   
 
 Double: A real number e.g 11.5, 6.0001
 
-  
 
 String: Double quoted characters e.g “foo”, “bar”, “hello”, “esper”, “eql”  
   
@@ -278,36 +284,36 @@ List: Collection of comma-separated values inside the opening and closing braces
 
 (5, 1, 3)
 
-  
 
 (“foo”, “bar”)  
   
 
 Date: A string representation of date e.g. “2019-07-02T10:46:39.425399+00:00”
-
+```
   
 
   
-  
-
 ### Examples
 
 Get document with name “Foo”
 
+```
 name:"Foo"
-
+```
   
 
 Get documents where the location is Chennai or Bengaluru
 
+```
 location  IN ("Chennai", "Bengaluru")
-
+```
   
 
 Query to get document where `url` matches with `example` (partial string search- contains, starts, or ends with)
 
+```
 details.url LIKE "example"
-
+```
   
 
 ## Compound Query
@@ -320,22 +326,25 @@ A compound query is formed by combining one or more Simple queries using either 
 
 Query where the name is `Foo` and the location is `Nevada`.
 
+```
 name:"Foo"  AND location:"Nevada"
-
+```
   
   
 
 Query where the name is like “foo” or score and the rating is 5.
 
+```
 name  LIKE “foo” OR (scores:5 AND  rating: 5)
-
+```
   
   
 
 Query where the description contains “esper”, or the name is Esper with 5 ratings in Bengaluru.
 
+```
 (details.url  LIKE “esper” OR  name: “esper”) AND  rating:5 AND  location: “Bengaluru”
-
+```
   
 
 # EQL for Esper Device
@@ -349,13 +358,13 @@ Following is the structure of device JSON at Esper.
 ```
 {
 
-"tenant": "alpha",
+    "tenant": "alpha",
 
-"enterprise": {
+    "enterprise": {
 
-"id": "d276b043-1cfe-49cc-8b61-efd03735297e",
+        "id": "d276b043-1cfe-49cc-8b61-efd03735297e",
 
-"name": "Alpha"
+        "name": "Alpha"
 
 },
 
@@ -367,33 +376,33 @@ Following is the structure of device JSON at Esper.
 
 "software": {
 
-"supported_abi": "arm64-v8a",
+    "supported_abi": "arm64-v8a",
 
-"android_version": "10",
+    "android_version": "10",
 
-"security_patch_level": "2020-03-01",
+    "security_patch_level": "2020-03-01",
 
-"device_kernel_version": "4.4.177-18057978",
+    "device_kernel_version": "4.4.177-18057978",
 
-"android_api": 29,
+    "android_api": 29,
 
-"eea_version": null,
+    "eea_version": null,
 
-"security_state": "LOW_RISK"
+    "security_state": "LOW_RISK"
 
 },
 
 "hardware": {
 
-"brand": "samsung",
+    "brand": "samsung",
 
-"model": "SA-B412DN",
+    "model": "SA-B412DN",
 
-"hardware": "nox001",
+    "hardware": "nox001",
 
-"manufacturer": "samsung",
+    "manufacturer": "samsung",
 
-"serial_number": "S58N22GEDGD"
+    "serial_number": "S58N22GEDGD"
 
 },
 
@@ -401,45 +410,45 @@ Following is the structure of device JSON at Esper.
 
 "imei": [
 
-"243878115869812",
+    "243878115869812",
 
-"456879115862345"
+    "456879115862345"
 
 ],
 
 "wifi": {
 
-"mac_address": "dc:dc:e2:b8:8e:54",
+    "mac_address": "dc:dc:e2:b8:8e:54",
 
-"ssid": "random",
+    "ssid": "random",
 
-"frequency": -1,
+    "frequency": -1,
 
-"link_speed": -1,
+    "link_speed": -1,
 
-"signal": 0,
+    "signal": 0,
 
-"configured_networks": [
+    "configured_networks": [
 
-"\"Guest\"",
+    "\"Guest\"",
 
-"\"Alpha 2.4\"",
+    "\"Alpha 2.4\"",
 
-]
+  ]
 
 },
 
 "dns": [
 
-"/192.135.142.197",
+    "/192.135.142.197",
 
-"/192.135.142.247"
+    "/192.135.142.247"
 
 ],
 
 "ip_address": [
 
-"10.333.268.50/24"
+    "10.333.268.50/24"
 
 ],
 
@@ -455,11 +464,11 @@ Following is the structure of device JSON at Esper.
 
 "cellular": {
 
-"type": "4G LTE",
+    "type": "4G LTE",
 
-"status": "CONNECTED",
+    "status": "CONNECTED",
 
-"signal": "-101dB"
+    "signal": "-101dB"
 
 }
 
@@ -467,21 +476,21 @@ Following is the structure of device JSON at Esper.
 
 "memory": {
 
-"ram_total_in_mb": "3723",
+    "ram_total_in_mb": "3723",
 
-"internal_storage_total_in_mb": "68719",
+    "internal_storage_total_in_mb": "68719",
 
-"available_ram_in_mb": 1850,
+    "available_ram_in_mb": 1850,
 
-"available_internal_storage_in_mb": 47117,
+    "available_internal_storage_in_mb": 47117,
 
-"os_occupied_storage_in_mb": 4338
+    "os_occupied_storage_in_mb": 4338
 
 },
 
 "template": {
 
-"name": "custom-template"
+    "name": "custom-template"
 
 },
 
@@ -507,19 +516,19 @@ Following is the structure of device JSON at Esper.
 
 "policy": {
 
-"id": 1,
+    "id": 1,
 
-"name": "policy 2.0"
+    "name": "policy 2.0"
 
 },
 
 "group": {
 
-"id": "9ff3255f-a2a8-4b1d-9769-e5fa3a84b98a",
+    "id": "9ff3255f-a2a8-4b1d-9769-e5fa3a84b98a",
 
-"name": "Test",
+    "name": "Test",
 
-"path": "All devices/fleet"
+    "path": "All devices/fleet"
 
 },
 
@@ -527,21 +536,21 @@ Following is the structure of device JSON at Esper.
 
 "usage": [
 
-12.37,
+    12.37,
 
-21.57,
+    21.57,
 
-16.49,
+    16.49,
 
-21.57,
+    21.57,
 
-8.82,
+    8.82,
 
-10.89,
+    10.89,
 
-0,
+    0,
 
-9.9
+    9.9
 
 ]
 
@@ -549,107 +558,107 @@ Following is the structure of device JSON at Esper.
 
 "location": {
 
-"lat": 47.3828228,
+    "lat": 47.3828228,
 
-"lng": 8.5148608,
+    "lng": 8.5148608,
 
-"alt": 449.5,
+    "alt": 449.5,
 
-"city": "Zürich",
+    "city": "Zürich",
 
-"state": "Zürich",
+    "state": "Zürich",
 
-"country": "Switzerland",
+    "country": "Switzerland",
 
-"zipcode": "8004"
+    "zipcode": "8004"
 
 },
 
 "bluetooth": {
 
-"paired_devices": [],
+    "paired_devices": [],
 
-"connected_devices": []
+    "connected_devices": []
 
 },
 
 "data": {
 
-"upload": 276946744,
+    "upload": 276946744,
 
-"download": 393967413
+    "download": 393967413
 
 },
 
 "settings": {
 
-"gps_state": "LOCATION_MODE_ON",
+    "gps_state": "LOCATION_MODE_ON",
 
-"wifi_state": true,
+    "wifi_state": true,
 
-"adb_enabled": false,
+    "adb_enabled": false,
 
-"adb_timeout": 3600000,
+    "adb_timeout": 3600000,
 
-"rotation_state": "AUTO",
+    "rotation_state": "AUTO",
 
-"bluetooth_state": false,
+    "bluetooth_state": false,
 
-"brightness_scale": 9,
+    "brightness_scale": 9,
 
-"remote_adb_enabled": false,
+    "remote_adb_enabled": false,
 
-"screen_off_timeout": 30000
+    "screen_off_timeout": 30000
 
 },
 
 "battery": {
 
-"power_source": "BATTERY_UNPLUGGED",
+    "power_source": "BATTERY_UNPLUGGED",
 
-"power_status": "BATTERY_STATUS_DISCHARGING",
+    "power_status": "BATTERY_STATUS_DISCHARGING",
 
-"screen_state": "N/A",
+    "screen_state": "N/A",
 
-"level": 92,
+    "level": 92,
 
-"scale": 100,
+    "scale": 100,
 
-"state": "BATTERY_STATUS_DISCHARGING",
+    "state": "BATTERY_STATUS_DISCHARGING",
 
-"health": "GOOD",
+    "health": "GOOD",
 
-"current": -6,
+    "current": -6,
 
-"voltage": 4.198,
+    "voltage": 4.198,
 
-"current_avg": -34,
+    "current_avg": -34,
 
-"technology": "Li-ion",
+    "technology": "Li-ion",
 
-"temperature": 22,
+    "temperature": 22,
 
-"low_indicator": false,
+    "low_indicator": false,
 
-"capacity_count": 92,
+    "capacity_count": 92,
 
-"capacity_total": 2879900,
+    "capacity_total": 2879900,
 
-"level_absolute": 92
+    "level_absolute": 92
 
 },
 
 "app_list": [
 
-"Facebook com.facebook.android.app 3.3.10.2",
+    "Facebook com.facebook.android.app 3.3.10.2",
 
-"Google com.google.android.googlequicksearchbox 11.29.10.21.arm64",
+    "Google com.google.android.googlequicksearchbox 11.29.10.21.arm64",
 
 ],
 
 "dpc": {
 
-"version": "v7.3.6014"
+    "version": "v7.3.6014"
 
 },
 
@@ -668,70 +677,82 @@ Following is the structure of device JSON at Esper.
 
 Get all devices in the Alpha enterprise.
 
+```
 enterprise.name:"Alpha"
-
+```
   
 
 Get all devices in the Test group.
 
+```
 group.name:"Test"
-
+```
   
 
 Get all Samsung devices in Bengaluru.
 
+```
 location.city:"Bengaluru"  AND hardware.brand:"samsung"
-
+```
   
 
 Get all online devices.
 
+```
 status:"online"
-
+```
   
 
 Get offline devices with Android version 8 or 9.
 
+```
 software.android_version IN ("8", "9") AND status:"offline"
-
+```
   
 
 Get online devices having Facebook app installed.
 
+```
 app_name:"Facebook" and status:"offline"
-
+```
   
 
-**Note:** app_name is not present in the device document. Some of the app fields like app_name, app_version, and package_name are mapped to app_list in the device document. Since EQL is under active development, watch out for the support of arrays in future releases.
+**Note:** **app_name** is not present in the device document. Some of the app fields like **app_name**, **app_version**, and **package_name** are mapped to app_list in the device document. Since EQL is under active development, watch out for the support of arrays in future releases.
 
   
 
 Devices with version 2.1.0 for Chrome application.
 
+```
 package_name:"Google Chrome"  AND app_version:"2.1.0"
-
+```
   
 
 If you want to query for all the 2.1.X versions of an app, you can use LIKE query.
 
+```
 package_name:"Google Chrome"  AND app_version LIKE  "2.1."
-
+```
   
 
 Get devices that are GMS or in kiosk mode.
 
+```
 gms:true  OR app_mode:"KIOSK"
-
+```
   
 
 All Google devices in the group Bengaluru, Nevada, California or devices having Esper Agent v6.0.1740 with Android version 8.1.0.
 
 Note: The group name must be present on the Esper Console.
 
+```
 (group.name IN ("Bengaluru","Nevada","California") AND hardware.brand:"google") OR (dpc.version:"v6.0.1740"  AND software.android_version:"8.1.0")
-
+```
   
 
 Devices that are using IoT core for communication and are not GMS.
 
+```
 iotcore:true AND gms:false
+```
