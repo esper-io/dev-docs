@@ -43,7 +43,7 @@ Table of Contents:
 
 ## Enabling the Esper SDK in your Application
 
-* In your root-level (project-level) Gradle file (build.gradle) under allprojects, add the following repository URL:
+* In your settings.gradle, add the following repository URL:
 
 ```gradle
 maven {
