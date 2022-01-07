@@ -61,7 +61,7 @@ maven {
 
 Note that Version 2.1.1181.15 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
 
-For Android 11 , can you add the following code in the manifest :
+For Android 11, add the following code in the AndroidManifest.xml :
 
 ```
 <queries>
