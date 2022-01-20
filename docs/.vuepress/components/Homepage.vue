@@ -28,7 +28,7 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            class="no-shadow"
+            class="no-shadow homepage_image_icon"
             src="./icons/ApiReferenceIcon.svg"
             alt="api"
           >
@@ -42,7 +42,7 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            class="no-shadow"
+            class="no-shadow homepage_image_icon"
             src="./icons/EsperCliIcon.svg"
             alt="cli"
           >
@@ -56,7 +56,7 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            class="no-shadow"
+            class="no-shadow homepage_image_icon"
             src="./icons/EsperSdkIcon.svg"
             alt="sdk"
           >
@@ -72,7 +72,7 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            class="no-shadow"
+            class="no-shadow homepage_image_icon"
             src="./icons/EsperPluginIcon.svg"
             alt="plugin"
           >
@@ -86,6 +86,7 @@
       >
         <div style="padding-bottom: 1rem">
           <img
+            class="no-shadow homepage_image_icon"
             src="./icons/EsperConsoleIcon.svg"
             alt="console"
           >
@@ -99,7 +100,7 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            class="no-shadow"
+            class="no-shadow homepage_image_icon"
             src="./icons/EsperBlogIcon.svg"
             alt="blog"
           >
@@ -115,8 +116,8 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            class="no-shadow"
-            src="./icons/EsperPluginIcon.svg"
+            class="no-shadow homepage_image_icon"
+            src="./icons/ReleaseNotes.svg"
             alt="plugin"
           >
         </div>
@@ -129,7 +130,8 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            src="./icons/EsperConsoleIcon.svg"
+            class="no-shadow homepage_image_icon"
+            src="./icons/DeviceSDK.svg"
             alt="console"
           >
         </div>
@@ -142,8 +144,8 @@
       >
         <div style="padding-bottom: 1rem">
           <img
-            class="no-shadow"
-            src="./icons/EsperBlogIcon.svg"
+            class="no-shadow homepage_image_icon"
+            src="./icons/ProvisionerTool.svg"
             alt="blog"
           >
         </div>
@@ -192,6 +194,11 @@
   font-family: 'Nunito Sans', sans-serif;
   margin: 1.8rem auto;
   margin-bottom: 3rem;
+}
+
+.homepage_image_icon {
+  width: 60px;
+  height: 60px;
 }
 
 .homepage__action {
