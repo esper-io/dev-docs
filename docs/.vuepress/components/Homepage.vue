@@ -111,7 +111,37 @@
     </div>
     <div class="homepage__links__section">
       <a
-        href="/home/esperplugin.html"
+        href="/home/devicesdk.html"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            class="no-shadow homepage_image_icon"
+            src="./icons/ProvisionerTool.svg"
+            alt="console"
+          >
+        </div>
+        <div class="homepage__a">Device SDK</div>
+        <p>Device library to call APIs.</p>
+      </a>
+      <a
+        href="/home/provisioner.html"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            class="no-shadow homepage_image_icon"
+            src="./icons/DeviceSDK.svg"
+            alt="blog"
+          >
+        </div>
+        <div class="homepage__a">Device Provisioner</div>
+        <p>Esper Tool for provisioning.</p>
+      </a>
+
+     <a
+        href="/home/release-notes"
+        style="visibility: hidden;"
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
@@ -122,35 +152,7 @@
           >
         </div>
         <div class="homepage__a">Release Notes</div>
-        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android.</p>
-      </a>
-      <a
-        href="/home/devicesdk.html"
-        class="homepage__links__section__item homepage__links__section__item2"
-      >
-        <div style="padding-bottom: 1rem">
-          <img
-            class="no-shadow homepage_image_icon"
-            src="./icons/DeviceSDK.svg"
-            alt="console"
-          >
-        </div>
-        <div class="homepage__a">Device SDK</div>
-        <p>Device Onboarding and Management Platform.</p>
-      </a>
-      <a
-        href="/home/provisioner.html"
-        class="homepage__links__section__item homepage__links__section__item2"
-      >
-        <div style="padding-bottom: 1rem">
-          <img
-            class="no-shadow homepage_image_icon"
-            src="./icons/ProvisionerTool.svg"
-            alt="blog"
-          >
-        </div>
-        <div class="homepage__a">Device Provisioner</div>
-        <p>Find out the latest about Esper on our Blog.</p>
+        <p>Find out latest about Esper releases.</p>
       </a>
     </div>
     <div class="homepage__footer">
