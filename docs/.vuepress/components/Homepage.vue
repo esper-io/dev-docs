@@ -108,6 +108,49 @@
         <p>Find out the latest about Esper on our Blog.</p>
       </a>
     </div>
+    <div class="homepage__links__section">
+      <a
+        href="/home/esperplugin.html"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            class="no-shadow"
+            src="./icons/EsperPluginIcon.svg"
+            alt="plugin"
+          >
+        </div>
+        <div class="homepage__a">Release Notes</div>
+        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android.</p>
+      </a>
+      <a
+        href="/home/devicesdk.html"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            src="./icons/EsperConsoleIcon.svg"
+            alt="console"
+          >
+        </div>
+        <div class="homepage__a">Device SDK</div>
+        <p>Device Onboarding and Management Platform.</p>
+      </a>
+      <a
+        href="/home/provisioner.html"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            class="no-shadow"
+            src="./icons/EsperBlogIcon.svg"
+            alt="blog"
+          >
+        </div>
+        <div class="homepage__a">Device Provisioner</div>
+        <p>Find out the latest about Esper on our Blog.</p>
+      </a>
+    </div>
     <div class="homepage__footer">
       Apache 2.0 | © 2021 Esper, Inc.
       <div style="font-size: 0.5em;">
@@ -123,7 +166,7 @@
   font-weight: normal;
 }
 .home {
-  padding: 3.6rem 2rem 0;
+  padding: 3rem 2rem 0;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -133,8 +176,10 @@
 .homepage__heading {
   margin: 1.8rem auto;
   margin-top: 20vh;
-  font-size: 2.4rem;
-  font-weight: 600;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 800;
+  letter-spacing: 0.015em;
   line-height: 1.25;
   color: #7a55a5;
   font-family: 'Nunito Sans', sans-serif;
@@ -162,7 +207,7 @@
   /* color: #fff; */
   /* background-color: #7a55a5; */
   padding: 0.25rem 3rem;
-  border-radius: 4px;
+  border-radius: 5px;
   transition: background-color 0.1s ease;
   color: #7a55a5;
   box-sizing: border-box;
@@ -200,13 +245,12 @@
   flex-basis: 30%;
   max-width: 30%;
   border: solid 1px #dfe3e6;
-  border-radius: 5px;
+  border-radius: 12px;
   box-shadow: 0 2px 6px 0 rgba(0, 82, 204, 0.08);
   text-align: center;
   margin-bottom: 2rem;
-  padding: 2rem 0rem 2rem 0rem;
+  padding: 2rem 0rem 1rem 0rem;
   background-color: #fcfdff82;
-  border-radius: 4px;
 }
 
 .homepage__links__section__item:hover {
@@ -225,7 +269,7 @@
   text-align: center;
   margin-bottom: 2rem;
   padding: 2rem 0rem 1rem 0rem;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
 @media (max-width: 719px) {
@@ -286,7 +330,7 @@
 }
 
 .homepage__a {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   border-bottom: none;
   padding-bottom: 0;
   color: #3a5169;

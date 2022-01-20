@@ -102,6 +102,7 @@ module.exports = {
         "api",
         "remote-adb",
         "devicesdk",
+        "release-notes/"
         // "tutorials",
         // "support",
         // "faq"
