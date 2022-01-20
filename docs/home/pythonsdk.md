@@ -1,6 +1,6 @@
 # Esper SDK for Python
 
-Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper Manage. To read more about the various capabilities of Esper Manage and Esper managed devices, please visit [esper.io](https://esper.io).
+Esper provides a Python client library to communicate with the Esper APIs to programmatically control and monitor your enterprise's Android-based Dedicated Devices using Esper Manage. To read more about the various capabilities of Esper Manage and Esper managed devices, please visit [esper.io](https://www.esper.io).
 
 Current stable release versions are
 

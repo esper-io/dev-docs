@@ -10,36 +10,36 @@ Release name: SUNFYRE_V5
 Table of Contents:
 
 * SDK Setup
-    * Downloading the SDK
-    * Initializing the SDK
-    * Activating the SDK
-    * Checking Activation Status
+  * Downloading the SDK
+  * Initializing the SDK
+  * Activating the SDK
+  * Checking Activation Status
 
 * SDK Methods
-    * Add New APN
-    * Change App State
-    * Clearing App Data
-    * Configure APNs via the Esper Device SDK
-    * Configure No Network Fallback
-    * Disable Users From Powering Off Devices
-    * Getting Device Info
-    * Getting Device Settings
-    * Getting Device Temperatures
-    * Getting Removal Storage Path
-    * Manage AppOpp Permissions
-    * Manage Dock
-    * Managed App Configurations
-    * Push Telemetry Data
-    * Reboot Device via Esper Device SDK
-    * Remove APN Config
-    * Set APN as Default
-    * Set Brightness
-    * Set Device Orientation
-    * Set Global Settings
-    * Set System Settings
-    * Start/Stop Mobile Data
-    * Start/Stop Wifi-Hotspot
-    * Update Existing APN Config
+  * Add New APN
+  * Change App State
+  * Clearing App Data
+  * Configure APNs via the Esper Device SDK
+  * Configure No Network Fallback
+  * Disable Users From Powering Off Devices
+  * Getting Device Info
+  * Getting Device Settings
+  * Getting Device Temperatures
+  * Getting Removal Storage Path
+  * Manage AppOpp Permissions
+  * Manage Dock
+  * Managed App Configurations
+  * Push Telemetry Data
+  * Reboot Device via Esper Device SDK
+  * Remove APN Config
+  * Set APN as Default
+  * Set Brightness
+  * Set Device Orientation
+  * Set Global Settings
+  * Set System Settings
+  * Start/Stop Mobile Data
+  * Start/Stop Wifi-Hotspot
+  * Update Existing APN Config
 
 ## Enabling the Esper SDK in your Application
 
@@ -63,7 +63,7 @@ Note that Version 2.1.1181.15 is the current latest version of the Esper SDK, an
 
 For Android 11, add the following code in the AndroidManifest.xml :
 
-```
+```xml
 <queries>
         <package android:name="io.shoonya.shoonyadpc"/>
 </queries>
