@@ -4,7 +4,7 @@ The following documentation details the minimum requirements necessary for using
 
 ## Web-Based Console (\*.esper.cloud)
 
-The Console requires [Chrome](https://www.google.com/chrome) v57 or above. At present, viewing the console on mobile devices is not supported.
+The Console requires [Chrome](https://www.google.com/chrome) v80 or above. At present, viewing the console on mobile devices is not supported.
 
 ## Dedicated Android Devices
 

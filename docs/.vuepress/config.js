@@ -58,31 +58,31 @@ module.exports = {
         items: [
           {
             text: 'Commercial Android',
-            link: 'https://esper.io/hardware'
+            link: 'https://www.esper.io/hardware'
           },
           
           {
             text: 'Custom Device',
-            link: 'https://esper.io/custom-device'
+            link: 'https://www.esper.io/custom-device'
           },
           
           {
             text: 'Esper Test Lab',
-            link: 'https://esper.io/test-lab/'
+            link: 'https://www.esper.io/test-lab/'
           },
           {
             text: 'Esper Androidx86',
-            link: 'https://esper.io/android-x86/'
+            link: 'https://www.esper.io/android-x86/'
           },
           {
             text: 'Esper Virtual Devices',
-            link: 'https://esper.io/android-virtual-device/'
+            link: 'https://www.esper.io/android-virtual-device/'
           },
           
         ]
       },
       { text: 'Blog', link: 'https://blog.esper.io' },
-      { text: 'SIGNUP', link: 'https://esper.io/signup' },
+      { text: 'SIGNUP', link: 'https://www.esper.io/signup' },
     ],
     docsRepo: 'esper-io/dev-docs/',
     docsDir: 'docs',
@@ -102,6 +102,7 @@ module.exports = {
         "api",
         "remote-adb",
         "devicesdk",
+        // "release-notes/"
         // "tutorials",
         // "support",
         // "faq"

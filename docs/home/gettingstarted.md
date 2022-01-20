@@ -10,7 +10,7 @@ Each of these steps is described in detail below:
 
 ### 1. Sign Up for an Account
 
-Your first step is to [sign up for a free trial account](https://esper.io/signup). During the signup process you will will be asked to enter a few quick details to set up your environment:
+Your first step is to [sign up for a free trial account](https://www.esper.io/signup). During the signup process you will will be asked to enter a few quick details to set up your environment:
 
 ![Signup screen](./assets/GettingStarted/SingupScreen.png)
 
@@ -101,7 +101,7 @@ Feel free to add accounts for additional team members and pass them their creden
 
 Below are quick links to guide you on how to perform specific actions on the Esper platform:
 
-* [Signing up for an Esper Account](https://esper.io/signup)
+* [Signing up for an Esper Account](https://www.esper.io/signup)
 * [Provisioning Your Device](https://console-docs.esper.io/provisioning-methods/)
 * [Getting an API Key](https://console-docs.esper.io/API/)
 * [Esper SDK for Python](./pythonsdk.md)
