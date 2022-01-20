@@ -9,7 +9,7 @@
       </p>
       <p>
         <a
-          href="https://esper.io/signup/"
+          href="https://www.esper.io/signup/"
           class="homepage__button"
         >Sign up</a>
         <a

@@ -8,7 +8,7 @@ Before you start with this guide, make sure you have Android Studio installed, v
 
 ![Esper Android Studio Plugin](./assets/OLD_DASHBOARD/1_asp_AndroidStudioAbout.jpg)
 
-In case you have a version before 181, simply upgrade your Android Studio to the latest version. The latest available version can be installed by clicking on Help → Check for Updates and then following the subsequent prompts. You will also need an account on an Esper Endpoint. Have your Endpoint name, username, and password available. If your company doesn’t have an Esper Endpoint, sign up for an Esper Trial account [here](https://esper.io/signup).
+In case you have a version before 181, simply upgrade your Android Studio to the latest version. The latest available version can be installed by clicking on Help → Check for Updates and then following the subsequent prompts. You will also need an account on an Esper Endpoint. Have your Endpoint name, username, and password available. If your company doesn’t have an Esper Endpoint, sign up for an Esper Trial account [here](https://www.esper.io/signup).
 
 ## Installation
 

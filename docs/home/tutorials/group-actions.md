@@ -15,7 +15,7 @@ In this tutorial we will use our APIs and Python SDK combined with our Group fun
 
 ## Setup
 
-1.  [Sign-up free](https://esper.io/signup/) on for the Esper Trial and generate API Key.
+1.  [Sign-up free](https://www.esper.io/signup/) on for the Esper Trial and generate API Key.
 
 2.  Install Esper Python SDK from [here](../pythonsdk.md).
 

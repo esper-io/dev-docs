@@ -124,7 +124,7 @@ Example: Consider the following nested field
 To query on the “url” field present inside “details” use details.url
 
 ```yml
-details.url:"https://esper.io"
+details.url:"https://www.esper.io"
 ```
   
 

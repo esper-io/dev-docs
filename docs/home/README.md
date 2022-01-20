@@ -31,7 +31,7 @@ Many of the above Console features are available via the Esper APIs, so please b
 
 ## Sign Up for an Esper Trial Account
 
-To try out Esper simply sign up for a developer trial account on the [Esper Website](https://esper.io/signup/). Once the account is setup and you generate your API key, you can test out all the features of our innovative platform—whether building out a kiosk, point of sale solution, or for an entirely new Dedicated Device category. It is the best platform designed for the Android app developer targeting Dedicated Devices. Check out the [Developer Hub](../readme.md) and the [API Documentation](https://api.esper.io).
+To try out Esper simply sign up for a developer trial account on the [Esper Website](https://www.esper.io/signup/). Once the account is setup and you generate your API key, you can test out all the features of our innovative platform—whether building out a kiosk, point of sale solution, or for an entirely new Dedicated Device category. It is the best platform designed for the Android app developer targeting Dedicated Devices. Check out the [Developer Hub](../readme.md) and the [API Documentation](https://api.esper.io).
 
 ## Scale your Deployment
 
@@ -81,7 +81,7 @@ Through the Esper Console you can access all the features and capabilities you n
 3.  Checkout Esper APIs [documentation](https://api.esper.io)
 4.  Checkout Esper SDK on [GitHub](https://github.com/esper-io/esper-client-py)
 5.  Checkout [Esper CLI](https://github.com/esper-io/esper-cli), a command line tool for accessing APIs.
-6.  To learn more about Esper, visit [esper.io](https://esper.io)
+6.  To learn more about Esper, visit [esper.io](https://www.esper.io)
 
 ## Contact Us
 
