@@ -102,13 +102,25 @@ module.exports = {
         "api",
         "remote-adb",
         "devicesdk",
-        // "release-notes/"
+        {
+          title: 'Release notes',
+          collapsable: true,
+          children: [
+            "release-notes/general/devrel-76",
+            "release-notes/general/devrel-73",
+            {
+              title: 'View all >',
+              path: 'release-notes/',
+            }
+          ]
+
+        }
         // "tutorials",
         // "support",
         // "faq"
 
 
-      ]
+      ],
     },
     displayAllHeaders: false,
   },

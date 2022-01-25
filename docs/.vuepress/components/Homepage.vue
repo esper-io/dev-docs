@@ -141,7 +141,6 @@
 
      <a
         href="/home/release-notes"
-        style="visibility: hidden;"
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
