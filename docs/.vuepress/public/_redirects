@@ -1,0 +1,16 @@
+# Redirects from what the browser requests to what we serve
+
+/home/console/device-provisioning/afw-provisioning              https://console-docs.esper.io/provisioning-methods/android-for-work.html
+/home/console/device-provisioning              https://console-docs.esper.io/provisioning-methods
+/home/console/device-template              https://console-docs.esper.io/provisioning-template/createtemplate.html
+/home/console/group-management              https://console-docs.esper.io/devices-groups
+/apps/approveapp              https://console-docs.esper.io/apps/approveapp.html
+/pipeline/view-pipelinev2              https://console-docs.esper.io/pipeline/view-pipelinev2.html
+/pipeline/run-pipelinev2              https://console-docs.esper.io/pipeline/run-pipelinev2.html
+/apps/unsubscribe              https://console-docs.esper.io/apps/unsubscribe.html
+/geofence/delete              https://console-docs.esper.io/geofence/delete.html#how-to-delete-a-geofence
+/apps/control              https://console-docs.esper.io/apps/control.html
+/provisioning-template              https://console-docs.esper.io/provisioning-template
+/esper-enhanced-updates              https://console-docs.esper.io/esper-enhanced-updates
+/compliance-policy              https://console-docs.esper.io/compliance-policy
+/devices-groups              https://console-docs.esper.io/devices-groups
