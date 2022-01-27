@@ -106,12 +106,23 @@ module.exports = {
           title: 'Release notes',
           collapsable: true,
           children: [
-            "release-notes/general/devrel-76",
-            "release-notes/general/devrel-73",
             {
-              title: 'View all >',
-              path: 'release-notes/',
-            }
+              title: 'Console release notes',
+              children: [
+                {
+                  title: '76.0 (January 2022)',
+                  path: "release-notes/general/devrel-76"
+                },
+                {
+                  title: '73.0 (December 2021)',
+                  path: "release-notes/general/devrel-73"
+                },
+                {
+                  title: 'View all >',
+                  path: 'release-notes/',
+                }
+              ],
+            },
           ]
 
         }

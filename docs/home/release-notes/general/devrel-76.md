@@ -1,8 +1,8 @@
 # DevRel 76
 
-Esper DevRel 76 is here with important updates. We've added a command to push the Google Play account after provisioning and have improved custom reports. You can find the complete breakdown of what's new below.
+Esper DevRel 76 is here with important updates. We've added a command to push the Google Play account after provisioning and have improved custom reports.
 
--   Added a command to push a managed Google Play account after provisioning
+## Added a command to push a managed Google Play account after provisioning
 
 Previously, if you provisioned a GMS device without a managed Google Play account, you had to factory reset the device and then provision the device again with a managed Google Play account. 
 
