@@ -3,9 +3,9 @@
 List of all release notes
 
 
-- [DevRel 77 (February 2022)](./general/devrel-77.md)
-- [DevRel 76 (January 2022)](./general/devrel-76.md)
-- [DevRel 73 (December 2021)](./general/devrel-73.md)
+- [DevRel 77 (February 2022)](./devrel-77.md)
+- [DevRel 76 (January 2022)](./devrel-76.md)
+- [DevRel 73 (December 2021)](./devrel-73.md)
 - [DevRel 72 (December 2021)](https://blog.esper.io/esper-release-notes-devrel-72-2/)
 - [DevRel 71 (November 2021)](https://blog.esper.io/esper-release-notes-devrel-71/)
 - [DevRel 69 (October 2021)](https://blog.esper.io/esper-release-notes-devrel-69/)
