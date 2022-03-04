@@ -995,25 +995,21 @@ Returns an instance of UsbPermissionManager which can be used for granting or de
 
 ```java
 sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() {
-
 @Override
-
 public void onResponse(@Nullable UsbPermissionManager usbPermissionManager) {
 
 // use UsbPermissionManager to perform needed actions
 
 }
-
-
   
 
 @Override
 
 public void onFailure(Throwable t) {
 
-Log.e(TAG, "onFailure: ", t);
+    Log.e(TAG, "onFailure: ", t);
 
-showFailureResult(t);
+    showFailureResult(t);
 
 }
 
@@ -1032,38 +1028,33 @@ Unless explicitly granted, permissions are considered denied by default.
 
 ### Check USB access permissions for an app
 
-Accepts package name for an app as parameter and returns true if permission is granted for the app and false otherwise.
+Accepts package name for an app as parameter and returns **true** if permission is granted for the app and **false** otherwise.
 
 ```java
 try {
 
-boolean granted = usbPermissionManager.isAccessGranted("com.example.app");
+    boolean granted = usbPermissionManager.isAccessGranted("com.example.app");
 
 } catch (EsperSdkException t) {
 
-Log.e(TAG, "onFailure: ", t);
-
-showFailureResult(t);
+    Log.e(TAG, "onFailure: ", t);
+    showFailureResult(t);
 
 }
 ```
 
 ### Grant or deny USB access permissions for an app
 
-It accepts package name of the app and grant status as boolean. The example shown below will grant permissions to the app identified with package name com.example.app. Grant status false will deny the permission.
+It accepts package name of the app and grant status as boolean. The example shown below will grant permissions to the app identified with package name **com.example.app.** Grant status **false** will deny the permission.
 
-Once grated via here, the apps no more need to request for permission via ACTION_USB_PERMISSION intent.
+Once grated via here, the apps no more need to request for permission via **ACTION_USB_PERMISSION** intent.
 
 ```java
 try {
 
-usbPermissionManager.setAccessGranted("com.example.app", true);
-
+    usbPermissionManager.setAccessGranted("com.example.app", true);
 } catch (EsperSdkException t) {
-
-Log.e(TAG, "onFailure: ", t);
-
-showFailureResult(t);
-
+    Log.e(TAG, "onFailure: ", t);
+    showFailureResult(t);
 }
 ```
