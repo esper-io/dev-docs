@@ -997,14 +997,14 @@ Returns an instance of UsbPermissionManager which can be used for granting or de
 sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() {
     @Override
     public void onResponse(@Nullable UsbPermissionManager usbPermissionManager) {
-// use UsbPermissionManager to perform needed actions
-}
+        // use UsbPermissionManager to perform needed actions
+    }
   
-@Override
-public void onFailure(Throwable t) {
-    Log.e(TAG, "onFailure: ", t);
-    showFailureResult(t);
-}
+    @Override
+    public void onFailure(Throwable t) {
+        Log.e(TAG, "onFailure: ", t);
+        showFailureResult(t);
+    }
 });
 ```
 
