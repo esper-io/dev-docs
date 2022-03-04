@@ -1028,7 +1028,7 @@ Unless explicitly granted, permissions are considered denied by default.
 
 ### Check USB access permissions for an app
 
-Accepts package name for an app as parameter and returns **true** if permission is granted for the app and **false** otherwise.
+Accepts package name for an app as parameter and returns <code> true </code> if permission is granted for the app and <code> false </code> otherwise.
 
 ```java
 try {
@@ -1045,9 +1045,9 @@ try {
 
 ### Grant or deny USB access permissions for an app
 
-It accepts package name of the app and grant status as boolean. The example shown below will grant permissions to the app identified with package name **com.example.app.** Grant status **false** will deny the permission.
+It accepts package name of the app and grant status as boolean. The example shown below will grant permissions to the app identified with package name <code> com.example.app. </code> Grant status <code> false </code> will deny the permission.
 
-Once grated via here, the apps no more need to request for permission via **ACTION_USB_PERMISSION** intent.
+Once grated via here, the apps no more need to request for permission via <code> ACTION_USB_PERMISSION </code> intent.
 
 ```java
 try {
