@@ -995,24 +995,16 @@ Returns an instance of UsbPermissionManager which can be used for granting or de
 
 ```java
 sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() {
-@Override
-public void onResponse(@Nullable UsbPermissionManager usbPermissionManager) {
-
+    @Override
+    public void onResponse(@Nullable UsbPermissionManager usbPermissionManager) {
 // use UsbPermissionManager to perform needed actions
-
 }
   
-
 @Override
-
 public void onFailure(Throwable t) {
-
     Log.e(TAG, "onFailure: ", t);
-
     showFailureResult(t);
-
 }
-
 });
 ```
 
@@ -1028,16 +1020,14 @@ Unless explicitly granted, permissions are considered denied by default.
 
 ### Check USB access permissions for an app
 
-Accepts package name for an app as parameter and returns <code> true </code> if permission is granted for the app and <code> false</code> otherwise.
+Accepts package name for an app as parameter and returns <code> true</code> if permission is granted for the app and <code> false</code> otherwise.
 
 ```java
 try {
     boolean granted = usbPermissionManager.isAccessGranted("com.example.app");
-
 } catch (EsperSdkException t) {
     Log.e(TAG, "onFailure: ", t);
     showFailureResult(t);
-
 }
 ```
 
