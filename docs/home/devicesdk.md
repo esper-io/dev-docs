@@ -987,3 +987,61 @@ sdk.updateUpdateApnConfig(
 updateUpdateApnConfig expects first argument as APN ID returned by addNewApnConfig function & second as APN config JSON string. It returns Integer as a response. 
 
 1 indicates success & -1 a failure.
+
+
+### Get USB Permission Manager
+
+Returns an instance of UsbPermissionManager which can be used for granting or denying USB device/accessory access permissions to packages.
+
+```java
+sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() {
+    @Override
+    public void onResponse(@Nullable UsbPermissionManager usbPermissionManager) {
+        // use UsbPermissionManager to perform needed actions
+    }
+  
+    @Override
+    public void onFailure(Throwable t) {
+        Log.e(TAG, "onFailure: ", t);
+        showFailureResult(t);
+    }
+});
+```
+
+### UsbPermissionManager
+
+Compared to the default permission manager of android, this one can persist permissions across package re-installations, as this one uses package name instead of UID.
+
+Here it is possible to grant or deny access for all USB devices and accessories to a package in one go, instead of the default one that operates on individual device identifiers.
+
+:::tip
+Unless explicitly granted, permissions are considered denied by default.
+:::
+
+### Check USB access permissions for an app
+
+Accepts package name for an app as parameter and returns <code> true</code> if permission is granted for the app and <code> false</code> otherwise.
+
+```java
+try {
+    boolean granted = usbPermissionManager.isAccessGranted("com.example.app");
+} catch (EsperSdkException t) {
+    Log.e(TAG, "onFailure: ", t);
+    showFailureResult(t);
+}
+```
+
+### Grant or deny USB access permissions for an app
+
+It accepts package name of the app and grant status as boolean. The example shown below will grant permissions to the app identified with package name <code> com.example.app </code> Grant status <code> false</code> will deny the permission.
+
+Once grated via here, the apps no more need to request for permission via <code> ACTION_USB_PERMISSION </code> intent.
+
+```java
+try {
+    usbPermissionManager.setAccessGranted("com.example.app", true);
+} catch (EsperSdkException t) {
+    Log.e(TAG, "onFailure: ", t);
+    showFailureResult(t);
+}
+```
