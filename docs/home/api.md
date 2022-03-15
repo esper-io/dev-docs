@@ -8,7 +8,7 @@ Esper APIs adhere to [Open API specification](https://swagger.io/docs/specificat
 
 ## Authentication
 
-The client needs to send authentication details to access the Esper APIs by generating and applying an API key. Be sure to sign up for your free trial account with Esper Dev to generate your key. See [Generating an API key](./module/genapikey.md)
+The client needs to send authentication details to access the Esper APIs by generating and applying an API key. Be sure to sign up for your free trial account with Esper Dev to generate your key. See [Generating an API key](https://console-docs.esper.io/API/generate.html)
 
 Once you have the access token, you need to send an authorization header as below
 
