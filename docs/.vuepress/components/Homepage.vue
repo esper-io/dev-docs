@@ -5,7 +5,7 @@
         Esper Documentation
       </h1>
       <p class="homepage__subheading">
-        Documentation for all the Esper Dev APIs, SDKs, and Tools.
+        Documentation for all the Esper Dev APIs, SDKs, and Tools
       </p>
       <p>
         <a
@@ -34,7 +34,7 @@
           >
         </div>
         <div class="homepage__a">API Reference</div>
-        <p>API Documentation and OpenAPI Specification.</p>
+        <p>API documentation and OpenAPI specification</p>
       </a>
       <a
         href="/home/espercli.html"
@@ -48,7 +48,7 @@
           >
         </div>
         <div class="homepage__a">CLI</div>
-        <p>Command line tool for the APIs.</p>
+        <p>Command Line Tool for the APIs</p>
       </a>
       <a
         href="/home/pythonsdk.html"
@@ -62,7 +62,7 @@
           >
         </div>
         <div class="homepage__a">SDK</div>
-        <p>Python library to call the APIs.</p>
+        <p>Python library to call the APIs</p>
       </a>
     </div>
     <div class="homepage__links__section">
@@ -78,7 +78,7 @@
           >
         </div>
         <div class="homepage__a">Tools for Android™ Studio</div>
-        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android.</p>
+        <p>Plugin for Android Studio, Virtual Devices, Enhanced Android</p>
       </a>
       <a
         href="https://console-docs.esper.io"
@@ -92,7 +92,7 @@
           >
         </div>
         <div class="homepage__a">Console</div>
-        <p>Device Onboarding and Management Platform.</p>
+        <p>Device onboarding and management platform</p>
       </a>
       <a
         href="https://blog.esper.io"
@@ -106,7 +106,7 @@
           >
         </div>
         <div class="homepage__a">Blog</div>
-        <p>Find out the latest about Esper on our Blog.</p>
+        <p>Read the latest news, trends, and updates about Esper, Android DevOps, and more</p>
       </a>
     </div>
     <div class="homepage__links__section">
@@ -122,7 +122,7 @@
           >
         </div>
         <div class="homepage__a">Device SDK</div>
-        <p>Device library to call APIs.</p>
+        <p>Device library to call APIs</p>
       </a>
       <a
         href="/home/provisioner.html"
@@ -136,12 +136,11 @@
           >
         </div>
         <div class="homepage__a">Device Provisioner</div>
-        <p>Esper Tool for provisioning.</p>
+        <p>Esper tool for provisioning</p>
       </a>
 
      <a
         href="/home/release-notes"
-        style="visibility: hidden;"
         class="homepage__links__section__item homepage__links__section__item2"
       >
         <div style="padding-bottom: 1rem">
@@ -152,7 +151,7 @@
           >
         </div>
         <div class="homepage__a">Release Notes</div>
-        <p>Find out latest about Esper releases.</p>
+        <p>Stay informed about Esper's ongoing updates and improvements</p>
       </a>
     </div>
     <div class="homepage__footer">

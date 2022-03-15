@@ -102,13 +102,40 @@ module.exports = {
         "api",
         "remote-adb",
         "devicesdk",
-        // "release-notes/"
+        {
+          title: 'Release notes',
+          collapsable: true,
+          children: [
+            {
+              title: 'Console release notes',
+              children: [
+                {
+                  title: '77.0 (February 2022)',
+                  path: "release-notes/general/devrel-77"
+                },
+                {
+                  title: '76.0 (January 2022)',
+                  path: "release-notes/general/devrel-76"
+                },
+                {
+                  title: '73.0 (December 2021)',
+                  path: "release-notes/general/devrel-73"
+                },
+                {
+                  title: 'View all >',
+                  path: 'release-notes/',
+                }
+              ],
+            },
+          ]
+
+        }
         // "tutorials",
         // "support",
         // "faq"
 
 
-      ]
+      ],
     },
     displayAllHeaders: false,
   },
