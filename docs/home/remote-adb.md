@@ -44,7 +44,7 @@ Remote access to the device can be done from anywhere in the world using espercl
         If adb-tools is installed, please run the command below:
         adb connect 127.0.0.1:62945
 
-8.  Now connect your device via port number obtained above on localhost.
+8.  Now, leave the previous terminal opened, and in a new one connect your device via port number obtained above on localhost:
 
         adb connect 127.0.0.1:62945
 
