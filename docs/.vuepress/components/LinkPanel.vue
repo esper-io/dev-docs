@@ -1,40 +1,34 @@
 <template>
   <div :class="{ 'has-icon': icon }" class="link-container md:w-1/2">
-     <RouterLink
-            v-if="isInternal"
-            :to="link"
-            >
-            <div class="link-container_inside-box">
-      <div class="link-container_inside-box_inside">
-        <img
-          class="link-container_inside-box_inside-image"
-          :src="icon"
-          alt="blog"
-        />
+    <a :href="link">
+      <div class="link-container_inside-box">
+        <div class="link-container_inside-box_inside">
+          <img
+            class="link-container_inside-box_inside-image"
+            :src="icon"
+            alt="blog"
+          />
 
-        <div class="link-container_inside-box_inside-text">
-          <div class="link-container_inside-box_inside-text_title">
-            {{ title }}
+          <div class="link-container_inside-box_inside-text">
+            <div class="link-container_inside-box_inside-text_title">
+              {{ title }}
+            </div>
+            <div class="link-container_inside-box_inside-text_desc">
+              {{ subtitle }}
+            </div>
+            <div class="link-container_inside-box_inside-text_footer">
+              {{ footer }}
+            </div>
           </div>
-          <div class="link-container_inside-box_inside-text_desc">
-            {{ subtitle }}
-          </div>
-          <div
-            class="link-container_inside-box_inside-text_footer"
-            >
-            {{footer}}
-          </div
-          >
         </div>
       </div>
-    </div>
-    </RouterLink>
+    </a>
   </div>
 </template>
 
 <style lang="postcss">
 .link-container {
-  text-decoration: none;;
+  text-decoration: none;
   width: 50%;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -110,10 +104,10 @@
 }
 .flex {
   display: flex;
-} 
+}
 .flex-wrap {
   flex-wrap: wrap;
-} 
+}
 .-mx-1 {
   margin-left: -0.25rem;
   margin-right: -0.25rem;
