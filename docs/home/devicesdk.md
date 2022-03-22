@@ -355,6 +355,7 @@ sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
             String serialNo = esperDeviceInfo.getSerialNo();
             String imei1 = esperDeviceInfo.getImei1();
             String imei2 = esperDeviceInfo.getImei2();
+            String wifiMacAddress = esperDeviceInfo.getWifiMacAddress();
         }
      }
 
@@ -365,7 +366,7 @@ sdk.getEsperDeviceInfo(new EsperDeviceSDK.Callback<EsperDeviceInfo>() {
 });
 ```
 
-onResponse callback will be called if the device info is successfully retrieved from the device. The device information is stored in an `EsperDeviceInfo` object. The object can be further queried to retrieve several bits of information such as `getDeviceId()`, `getSerialNo()`, `getImei1()` and `getImei2()`.
+onResponse callback will be called if the device info is successfully retrieved from the device. The device information is stored in an `EsperDeviceInfo` object. The object can be further queried to retrieve several bits of information such as `getDeviceId()`, `getSerialNo()`, `getImei1()`,`getImei2()`, and `getWifiMacAddress()`.
 
 `onFailure` will be called when there is failure in the operation. The `Throwable` will one of the following exceptions: `EsperSDKNotFoundException`, `InterruptedException`.
 
