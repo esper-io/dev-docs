@@ -113,24 +113,8 @@ module.exports = {
                   title: 'Version 1.0',
                   path: "release-notes/sdk/rel-1.0"
                 },
-                
-              //  {
-              //    title: '76.0 (January 2022)',
-              //    path: "release-notes/general/devrel-76"
-               // },
-              //  {
-               //   title: '73.0 (December 2021)',
-              //    path: "release-notes/general/devrel-73"
-              //  },
-               // {
-              //    title: 'View all >',
-               //   path: 'release-notes/',
-               // }
-              
               ],
             },
-          ],
-          children: [
             {
               title: 'Console release notes',
               children: [
