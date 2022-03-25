@@ -140,6 +140,20 @@
       </a>
 
      <a
+        href="/home/guides"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            class="no-shadow homepage_image_icon"
+            src="./icons/Guides.png"
+            alt="plugin"
+          >
+        </div>
+        <div class="homepage__a">Guides and Tutorials</div>
+        <p>Compilation of Feature Walkthroughs, Tips and Use Cases</p>
+      </a>
+     <a
         href="/home/release-notes"
         class="homepage__links__section__item homepage__links__section__item2"
       >
