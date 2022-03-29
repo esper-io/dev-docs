@@ -224,6 +224,14 @@ If you selected the wrong template, simply click on the **X** next to the templa
 
 Once you have your template selected, click **Next**.
 
+:::tip
+If you have Groups and Blueprint enabled on your endpoint, at this step please choose a group or a sub-group. 
+
+<img src="./assets/NewProvisioner/image.png" alt="provisioner" style="max-width:200px;"/>
+
+:::
+
+
 ## Operations
 
 You will now be on the *Download Applications* screen. The Device Provisioner will display all the Enterprise Apps associated with the selected Provisioning Template.
