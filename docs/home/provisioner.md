@@ -224,6 +224,14 @@ If you selected the wrong template, simply click on the **X** next to the templa
 
 Once you have your template selected, click **Next**.
 
+:::tip
+If you are on the Onboarding feature, you need to choose the group. 
+
+<img src="./assets/NewProvisioner/image.png" alt="provisioner" style="max-width:200px;"/>
+
+:::
+
+
 ## Operations
 
 You will now be on the *Download Applications* screen. The Device Provisioner will display all the Enterprise Apps associated with the selected Provisioning Template.
