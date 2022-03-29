@@ -11,5 +11,5 @@ This release of Device SDK contains the following changes:
     
     ```java
     String wifiMacAddress = esperDeviceInfo.getWifiMacAddress();
-    ```
+    ```java
        
