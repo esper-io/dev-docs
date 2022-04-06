@@ -103,6 +103,22 @@ module.exports = {
         "remote-adb",
         "devicesdk",
         {
+          title: 'Guides and Tutorials',
+          collapsable: false,
+          children: [
+            {
+              title: 'Guides and Tutorials',
+              children: [
+                {
+                  title: 'Guides',
+                  path: "guides/README"
+                },
+              ],
+            },
+            
+          ]
+        },
+        {
           title: 'Release notes',
           collapsable: true,
           children: [
