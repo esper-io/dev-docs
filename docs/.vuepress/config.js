@@ -108,7 +108,7 @@ module.exports = {
           children: [
             {
             title: 'Guides and Tutorials',
-            path: "guides"
+            path: "guides/"
             },
           ],        
         },
