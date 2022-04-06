@@ -71,7 +71,7 @@ First, download the  corresponding version of the  Device Provisioner  to your L
 
 
 
-:::tip
+:::Note
 If you signed up for Esper Platform on or after Apr 12, 2022, download the Esper Device Provisioner using the following links: 
 [AppImage](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.AppImage)
 
