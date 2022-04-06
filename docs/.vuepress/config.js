@@ -105,12 +105,12 @@ module.exports = {
         {
           title: 'Guides and Tutorials',
           collapsable: false,
-          path: "guides/README.md"
-        //   children: [
-        //     {
-        //       ""
-        //     },
-        //   ]
+          children: [
+            {
+              title: 'Guides and Tutorials',
+              path: "guides/"
+            },
+         ],
         },
 
         {
