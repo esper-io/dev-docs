@@ -102,10 +102,16 @@ module.exports = {
         "api",
         "remote-adb",
         "devicesdk",
-        {
-          title: 'Guides and Tutorials',
-          collapsable: false,
-        },
+        // {
+        //   title: 'Guides and Tutorials',
+        //   collapsable: false,
+        //   children: [
+        //     {
+        //       ""
+        //     },
+        //   ]
+        // },
+
         {
           title: 'Release notes',
           collapsable: true,
