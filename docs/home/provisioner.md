@@ -16,6 +16,10 @@ In order to use the Esper Device Provisioner, you must have created at least one
 
 First download the [Esper Device Provisioner](https://downloads.esper.io/esper-provisioner/windows/EsperDeviceProvisioner.exe) to your Windows development PC.
 
+:::tip
+If you signed up for Esper Platform on or after Apr 12, 2022, download the Esper Device Provisioner using [this](https://downloads.esper.io/esper-provisioner/windows/EsperDeviceProvisioner.exe) link. 
+:::
+
 Now open *File Explorer* and navigate to where you have downloaded the file. If you haven’t specified otherwise, it will probably be in your **Downloads** folder.
 
 <img src="./assets/NewProvisioner/Exe.png" alt="provisioner" style="max-width:200px;"/>
@@ -29,6 +33,11 @@ Once installed, the Device Provisioner is ready to be configured.
 ## MacOS Installation
 
 First download [Esper Device Provisioner](https://downloads.esper.io/esper-provisioner/mac/EsperDeviceProvisioner.dmg) to your MacOS development PC.
+
+:::tip
+If you signed up for Esper Platform on or after Apr 12, 2022, download the Esper Device Provisioner using [this](https://downloads.esper.io/esper-provisioner/mac/EsperDeviceProvisioner.dmg) link. 
+:::
+
 
 Now open Finder and navigate to where you have downloaded the file. If you haven’t specified otherwise, it will probably be in your **Downloads** folder.
 
@@ -52,10 +61,27 @@ Once installed, the Device Provisioner is ready to be configured.
 
 First, download the  corresponding version of the  Device Provisioner  to your Linux development PC.
 
-*   [AppImage](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.AppImage)
-*   [deb](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.deb)
-*   [pacman](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.pacman)
-*   [snap](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.snap)
+[AppImage](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.AppImage)
+
+[deb](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.deb)
+
+[pacman](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.pacman)
+
+[snap](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.snap)
+
+
+
+:::tip
+If you signed up for Esper Platform on or after Apr 12, 2022, download the Esper Device Provisioner using the following links: 
+[AppImage](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.AppImage)
+
+[deb](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.deb)
+
+[pacman](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.pacman)
+
+[snap](https://downloads.esper.io/esper-provisioner/linux/EsperDeviceProvisioner.snap)
+
+:::
     
 
 Navigate to the downloaded file. Double-click on the file to start the installation.![Download image](./assets/NewProvisioner/1-download.png)
