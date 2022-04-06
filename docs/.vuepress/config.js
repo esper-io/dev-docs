@@ -107,8 +107,7 @@ module.exports = {
           collapsable: false,
           children: [
             {
-              title: 'Guides and Tutorials',
-              path: "guides/"
+             path: "guides/"
             },
          ],
         },
