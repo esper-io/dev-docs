@@ -17,3 +17,11 @@
         footer="8 lessons · Apr 12, 2022"
       />
 </div>
+
+
+| Popular Videos                          | Description                                                                                                          |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| [Groups, Bluprints and Device Onboarding](https://www.youtube.com/watch?v=QSFc5Fjf_w4) | Organize device fleets with Groups and Subgroups and configure device settings with Esper Blueprints.                |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| Pipelines                               | Define Pipeline stages with selected targets and operations and distribute app updates to various deployment stages. |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| DevOps for Devices                      | Learn about the difference between the legacy device management solutions and DevOps approach.                       |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+| Factory Reset                           | Learn how to factory reset a device at an individual and at a group level.                                           |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
