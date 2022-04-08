@@ -202,11 +202,11 @@ If you want to uninstall a preloaded app in the group after provisioning, that f
 
 Customers often ask us the difference between Device Template and Compliance policy which are both applied on devices. The main and most basic difference between Device Template and Compliance policy is that Device Template, (which has multiple sections inclusive of compliance policy as well as apps, groups, branding, settings), is used to apply on devices <i>during</i> provisioning and NEVER after that. Compliance policy on the other hand is applied on Esper Managed devices once they have already been provisioned.
 
-Preview of a Template ![Preview of a template](./assets/faq/device-template-faq2.png)
+Preview of a Template ![Preview of a template](../assets/faq/device-template-faq2.png)
 
 The concept of Device Template is to make it easy for our customers to define how they want their devices to behave once they provision and become managed by Esper. The dashboard admin can define for a newly provisioned device the following - apps they want installed, compliance policy applied, background wallpapers, device settings and the group that they want the device to fall in -----<b>All in One place!</b> Dashboard admin can create the one-stop-for-all Device Template and push this on devices <i>when provisioning them</i>. As a result once the device is provisioned with the said template, device will comply by the chosen options in following sections-
 
-![Esper Device Template](./assets/faq/device-template-faq1.png)
+![Esper Device Template](../assets/faq/device-template-faq1.png)
 
 1.  Compliance policy
 2.  Settings
@@ -224,16 +224,16 @@ Now, after provisioning, if the admin changes their mind and wants to apply chan
 
 Devices - If a user wants to make change to an individual (Esper Managed) device, (let's call them 'Esper Managed Devices' post provisioning), they need to go to the Devices section on the sidebar menu. Here is a device dashboard where user can view tiles of all provisioned devices. They may click on 'Details' to take actions on that individual device such as change the compliance policy or install a new app or lockdown the device. Find more about individual devices by clicking below.
 
-[![Esper Device Template](./assets/faq/device-template-faq3.png)
+[![Esper Device Template](../assets/faq/device-template-faq3.png)
 
 Groups - If a user wants to make change to an entire group of (Esper Managed) devices, they need to go to Groups section on the sidebar menu. Here users can see Group tiles. Here also, on clicking 'Details' user can see various available Group functionalities under various menus. Find out more about Group functionalities by clicking below.
 
-[![Esper Device Template](./assets/faq/device-template-faq5.png)
+[![Esper Device Template](../assets/faq/device-template-faq5.png)
 
 In the Devices & Groups section, user will see a 'Compliance Policy' tab under which they can choose and apply a new Compliance policy for the individual device or the group. In order to apply a policy, user needs to create a new Compliance policy or choose an existing one.
 
 
-![Esper Device Template](./assets/faq/device-template-faq4.png)
+![Esper Device Template](../assets/faq/device-template-faq4.png)
 
 [Know more about Compliance Policy](https://console-docs.esper.io/compliance-policy/).
 
@@ -241,11 +241,11 @@ In the Devices & Groups section, user will see a 'Compliance Policy' tab under w
 
 Sometimes customers are not able to use their apps that require extra permissions. They get the message such as "Permission needed" and "Action Not Allowed" when trying to change Settings or open the app. 
 
-![Permissions for app](./assets/faq/permissionsforapp5.png)
+![Permissions for app](../assets/faq/permissionsforapp5.png)
 
 There is a simple solution to this problem. Simply create a Compliance Policy and choose the option of `Ask User` from `App Permissions` drop down. This will allow the device user to give the required permission to the app from Settings -> App Permissions.  
 
-![Permissions for app](./assets/faq/permissionforapp3.png)
+![Permissions for app](../assets/faq/permissionforapp3.png)
 
 Once you apply the compliance policy on the device/group, you should be able to make the required permission changes from the Settings on the device.
 
@@ -278,38 +278,38 @@ If you still wish to unenroll your email from Google Android for Work, get in to
 
 1. Go to  [Google Play Admin Settings page](https://play.google.com/work/adminsettings). If you are already signed in, you will see an option to 'SWITCH ACCOUNTS'. Click on the same to switch to the gmail id that you had enrolled with.
 
-    ![Google Play Admin Settings page](./assets/faq/emmfaq1.png)
+    ![Google Play Admin Settings page](../assets/faq/emmfaq1.png)
 
 2. Select your account or give login credentials 
 
-    ![FAQ](./assets/faq/emmfaq2.png)
+    ![FAQ](../assets/faq/emmfaq2.png)
 
 3. Under Settings you will see Organization information section. Click on the vertical ellipsis on the right. You will see an option to “Delete Organization”. Clicking this will disassociate your email with the said organization.
 
-![disassociate your email with the said organization](./assets/faq/emmfaq3.png)
+![disassociate your email with the said organization](../assets/faq/emmfaq3.png)
 
 ## On entering afw#esper why do I see "Couldn't find your google account?
 
 A possible cause for this error message is that the pre-configured Google account has not been removed from the device before the factory reset.
 In order to solve this problem, provide the previously configured Google Account credentials and reset the device. Remove the Google Account from the device and carry out the factory reset again.
 
-![afw#esper](./assets/faq/faq14.png)
+![afw#esper](../assets/faq/faq14.png)
 
 ## Can I control which apps show up on my device Google Play Store app?
 
 Yes, you have the option to decide which of the apps are to appear on the device Google Play Store. Go to the Play For Work section and choose the option Organize App-
 
-![Google Play Store app](./assets/faq/orgapp1.png)
+![Google Play Store app](../assets/faq/orgapp1.png)
 
 Any app added in the collections on this page will show up on the Google Play Store app on the device - 
 
-![Google Play Store app](./assets/faq/orgapp2.png)
+![Google Play Store app](../assets/faq/orgapp2.png)
 
 ## How to capture log when my device is in Kiosk mode?
 
 Click on below image to view video instructions to easily  capture log for a device which is in Kiosk mode-
 
-<br/><br/> [![Capture log-kiosk mode](./assets/faq/capturebugreport-kiosk.png)](https://www.youtube.com/watch?v=EEGsY9_1Nn0&feature=youtu.be 'Capture log in kiosk mode')
+<br/><br/> [![Capture log-kiosk mode](../assets/faq/capturebugreport-kiosk.png)](https://www.youtube.com/watch?v=EEGsY9_1Nn0&feature=youtu.be 'Capture log in kiosk mode')
 
 Steps to take
 
