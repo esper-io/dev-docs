@@ -3,6 +3,7 @@
 List of all release notes
 
 
+- [DevRel 81 (February 2022)](./devrel-81.md)
 - [DevRel 77 (February 2022)](./devrel-77.md)
 - [DevRel 76 (January 2022)](./devrel-76.md)
 - [DevRel 73 (December 2021)](./devrel-73.md)

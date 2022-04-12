@@ -102,13 +102,27 @@ module.exports = {
         "api",
         "remote-adb",
         "devicesdk",
+        "guides/",
         {
           title: 'Release notes',
           collapsable: true,
           children: [
             {
+              title: 'Device SDK release notes',
+              children: [
+                {
+                  title: 'SUNFYRE_V6',
+                  path: "release-notes/sdk/rel-1.0"
+                },
+              ],
+            },
+            {
               title: 'Console release notes',
               children: [
+                {
+                  title: '81.0 (April 2022)',
+                  path: "release-notes/general/devrel-81"
+                },
                 {
                   title: '77.0 (February 2022)',
                   path: "release-notes/general/devrel-77"
@@ -128,7 +142,6 @@ module.exports = {
               ],
             },
           ]
-
         }
         // "tutorials",
         // "support",
