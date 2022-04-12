@@ -992,6 +992,10 @@ updateUpdateApnConfig expects first argument as APN ID returned by addNewApnConf
 
 ### Get USB Permission Manager
 
+:::tip
+This SDK API is only for devices running Esper Foundation for Android.
+:::
+
 Returns an instance of UsbPermissionManager which can be used for granting or denying USB device/accessory access permissions to packages.
 
 ```java
