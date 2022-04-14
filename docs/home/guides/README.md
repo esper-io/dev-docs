@@ -12,15 +12,18 @@
       <LinkPanel 
         title="Esper Features for Fleet Management at Scale"
         icon="https://images.articulate.com/f:jpg,b:fff,s:cover,w:340/rise/courses/1IBRlUUhuhvn2WIXcLc4kvj_7OVs--AX/wRa7CTkDEhJq_lIt.jpg"
-        subtitle="Explore Groups & Blueprints, Pipelines, Esper Software Deployment and SAML/SSO provisioning."
-        link="hhttps://bit.ly/3M801xv" 
-        footer="8 lessons · Apr 12, 2022"
+        subtitle="Explore Groups & Blueprints, Pipelines and Esper Software Deployment."
+        link="https://bit.ly/3M801xv" 
+        footer="6 lessons · Apr 12, 2022"
       />
 </div>
 
 </br>
 </br>
 </br>
+</br>
+
+## Videos
 
 | Popular Videos                          | Description                                                                                                                                                       |
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
