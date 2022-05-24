@@ -1,10 +1,6 @@
 # Support
 
-If you face any issues while using Esper, we are here to help you! Support options available to you depend on your Esper tier:
-
-* Esper Starter - [Esper Support Forum]
-* Esper Essentials - support@esper.io
-* Esper Pro - Direct ticketing of support issues by customers
+If you face any issues while using Esper, we are here to help you! Please reach out to [Esper Support Forum](https://support.esper.io/s/) or [email us](mailto:support@esper.io).
 
 After starting your Esper trial, you will have access to a robust volume of documentation to help get your team up and running with Esper. Please contact our sales team if you are interested in purchasing more support for your organization.
 
