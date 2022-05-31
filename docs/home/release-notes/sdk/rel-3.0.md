@@ -1,6 +1,6 @@
 # Device SDK Release Notes
 
- Version: 2.1.5627.19
+ Version: SUNFYRE_V7
 
 Date: 6/6/2022
 
