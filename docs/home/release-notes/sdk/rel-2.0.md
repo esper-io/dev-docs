@@ -6,9 +6,9 @@ Date: 5/12/2022
 
 This release of Device SDK contains the following changes:
 
--   Fetching device UUID via Device SDK- We have added the following parameter to the get device info API. This method will fetch the UUID for the devices.
+-   We have added the following parameter to the get device info API. This method will fetch the Wifi Mac address for the device.
     
 ```java
-String uuid = esperDeviceInfo.getUUID()
+String wifiMacAddress = esperDeviceInfo.getWifiMacAddress()
 ```
 
