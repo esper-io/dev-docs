@@ -206,23 +206,23 @@ module.exports = {
                 }
               ],
             },
-            {
-              title: 'Foundation release notes',
-              children: [
-                {
-                  title: 'Swan',
-                  path: "release-notes/foundation/swan"
-                },
-                {
-                  title: 'Foenix',
-                  path: "release-notes/foundation/foenix"
-                },
-                {
-                  title: 'SUNFYRE_V6',
-                  path: "release-notes/sdk/rel-1.0"
-                },
-              ],
-            },
+            // {
+            //   title: 'Foundation release notes',
+            //   children: [
+            //     {
+            //       title: 'Swan',
+            //       path: "release-notes/foundation/swan"
+            //     },
+            //     {
+            //       title: 'Foenix',
+            //       path: "release-notes/foundation/foenix"
+            //     },
+            //     {
+            //       title: 'SUNFYRE_V6',
+            //       path: "release-notes/sdk/rel-1.0"
+            //     },
+            //   ],
+            // },
           ]
         }
         // "tutorials",
