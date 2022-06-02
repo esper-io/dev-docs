@@ -60,30 +60,22 @@ Esper Development Devices running Esper Enhanced Android will always be supporte
 
 Dedicated devices are often behind corporate firewalls, preventing the Esper backend from communicating with them (or vice-versa). Please make sure to whitelist the following URLs and Ports, in case your fleet is running behind such a firewall.
 
-### URLs
+### Firewall Requirements
 
-* *.amazonaws.com (443 and 8883)
-* [mqtt.shoonyacloud.com:1883] (device telemetry/management)
-* [customer endpoint].esper.cloud:443
-* [customer-endpoint]-api.esper.cloud
-* mqtt2.shoonyacloud.com
-* eea-telemetry-mqtt.esper.cloud
-* [turn.shoonyacloud.com]
-* 13.52.132.230 (required only if want to allow secure remote ADB access to your devices)
+| FQDNs                                 | Ports                           | Features                                                                                 |
+|---------------------------------------|---------------------------------|------------------------------------------------------------------------------------------|
+| *.amazonaws.com                       | 443 and 8883                    | For provisioning, app management and device management                                   |
+| [mqtt.shoonyacloud.com:1883]                            | Backup device managemnt channel                                                          |
+| mqtt2.shoonyacloud.com                | 1883                            | Backup device managemnt channel                                                          |
+| [services.shoonyacloud.com]           | TCP: 80 (HTTP), 443 (HTTPS)     | IMEI/ Seamless provisioning and remote viewer APK                                        |
+| [turn.shoonyacloud.com]                | "TCP: 3478, 5349                | For remote viewer and control                                                            |
+| dpcdownloads.esper.cloud              | UDP: 3478, 5349, 49152 - 65535" | For the 6-tap QR code method of provisioning and Remote viewer APK                       |
+| [customer endpoint].esper.cloud       | N/A                             | For Esper Console                                                                        |
+| [customer-endpoint]-api.esper.cloud   | TCP: 443                        | For communication from device to cloud (device status event and command success/failure) |
+| eea-telemetry-mqtt.esper.cloud        | TCP: 443                        | Deep telemetry from devices                                                              |
+| firebaseinstallations.googleapis.com and fcm.googleapis.com| 1883                            | Backup channel and used for ping command to wakeup a device (Only for GMS devices)       |
 
- 
-For customers that are provisioning devices behind a firewall there are a few additional URLs to allow:
-
-* dpcdownloads.esper.cloud
-* [downloads.esper.io]
-* [services.shoonyacloud.com] (only for serial number-based provisioning)
-
-
-### Ports
-
-* 5228
-* 5229
-* 5230
+Note: For static IP, please contact [Esper team](https://support.esper.io/s/).
 
 ## Esper Dev Tools Requirements
 
