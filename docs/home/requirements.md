@@ -71,7 +71,7 @@ Dedicated devices are often behind corporate firewalls, preventing the Esper bac
 | [turn.shoonyacloud.com]                | "TCP: 3478, 5349                | For remote viewer and control                                                            |
 | dpcdownloads.esper.cloud              | UDP: 3478, 5349, 49152 - 65535" | For the 6-tap QR code method of provisioning and Remote viewer APK                       |
 | [customer endpoint].esper.cloud       | N/A                             | For Esper Console                                                                        |
-| [customer-endpoint]-api.esper.cloud   | TCP: 443                        | For communication from device to cloud (device status event and command success/failure) |
+| [customer endpoint]-api.esper.cloud   | TCP: 443                        | For communication from device to cloud (device status event and command success/failure) |
 | mqtt-telemetry-prod.esper.cloud       | 1883                       | Deep telemetry from devices                                                              |
 | firebaseinstallations.googleapis.com and fcm.googleapis.com| 1883                            | Backup channel and used for ping command to wakeup a device (Only for GMS devices)       |
 
