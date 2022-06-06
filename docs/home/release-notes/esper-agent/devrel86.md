@@ -8,7 +8,7 @@ Welcome to the Esper Agent release notes. We believe that you will like the upda
 
 Bugs and Improvements:
 
--   When a blueprint is applied to a devices, changes made to the applications section in the blueprint now reflect on the device. All apps will be removed, updated/downgraded, installed, or hidden/shown to match the new blueprint state.
+-   When a Blueprint is applied to a devices, changes made to the applications section in the blueprint now reflect on the device. All apps will be removed, updated/downgraded, installed, or hidden/shown to match the new blueprint state.
     
 -   We have added an API for scheduled power ON/OFF for specific Lenovo devices. Please contact your sales team to know more about this feature.
     
