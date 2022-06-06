@@ -119,7 +119,7 @@ module.exports = {
                   path: "release-notes/sdk/rel-2.0"
                 },
                 {
-                  title: 'SUNFYRE_V6',
+                  title: 'SUNFYRE_V5',
                   path: "release-notes/sdk/rel-1.0"
                 },
               ],
