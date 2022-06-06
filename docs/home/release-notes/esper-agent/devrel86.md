@@ -1,6 +1,6 @@
 # Esper Agent Release Notes 
 
-Version: 
+Version: v7.8.5502
 
 DevRel: 86 
 
