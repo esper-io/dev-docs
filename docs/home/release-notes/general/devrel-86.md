@@ -1,6 +1,6 @@
 # Esper Release Notes - DevRel 86
 
-Date: 6/9/2022
+Date: 6/14/2022
 
   
 
@@ -42,5 +42,5 @@ String uuid = esperDeviceInfo.getUUID()
 -   We have resolved a bug with the Device Provisioner tool that was causing an interruption during provisioning.
   
 
-We’re excited to launch DevRel 86 today, and the Esper team is hard at work on DevRel 87, which is currently scheduled to launch in June 2022. Please [reach out](https://support.esper.io/s/) to share your thoughts on how Esper can improve future releases.
+We’re excited to launch DevRel 86 today, and the Esper team is hard at work on DevRel 87, which is currently scheduled to launch in July 2022. Please [reach out](https://support.esper.io/s/) to share your thoughts on how Esper can improve future releases.
 
