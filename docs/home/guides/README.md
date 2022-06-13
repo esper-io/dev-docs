@@ -16,6 +16,13 @@
         link="https://bit.ly/3jDnHxe" 
         footer="5 lessons · Apr 1, 2022"
       />
+      <LinkPanel 
+        title="AOSP vs GMS Hardware Selection Guide"
+        icon="https://images.articulate.com/f:jpg,b:fff,s:cover,w:340/rise/courses/1IBRlUUhuhvn2WIXcLc4kvj_7OVs--AX/wRa7CTkDEhJq_lIt.jpg"
+        subtitle="Choose your Android hardware confidently."
+        link="http://bit.ly/aospgms" 
+        footer="4 lessons · Jun 13, 2022"
+      />
 </div>
 
 </br>
