@@ -132,6 +132,10 @@ module.exports = {
                   path: "release-notes/esper-agent/ea-86"
                 },
                 {
+                  title: 'Esper Agent v7.8.5502',
+                  path: "release-notes/esper-agent/v7.8.5502"
+                },
+                {
                   title: 'Esper Agent v7.8.5434',
                   path: "release-notes/esper-agent/v7.8.5434"
                 },
