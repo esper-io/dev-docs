@@ -2,7 +2,7 @@
 
 Date: 4/12/2022
 
-Version: SUNFYRE_V6  
+Version: SUNFYRE_V5 
 
 
 This release of Device SDK contains the following changes:

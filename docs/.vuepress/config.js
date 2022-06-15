@@ -111,7 +111,15 @@ module.exports = {
               title: 'Device SDK release notes',
               children: [
                 {
+                  title: '2.1.5627.19',
+                  path: "release-notes/sdk/rel-3.0"
+                },
+                {
                   title: 'SUNFYRE_V6',
+                  path: "release-notes/sdk/rel-2.0"
+                },
+                {
+                  title: 'SUNFYRE_V5',
                   path: "release-notes/sdk/rel-1.0"
                 },
               ],
@@ -119,6 +127,14 @@ module.exports = {
             {
               title: 'Esper Agent release notes',
               children: [
+                {
+                  title: 'Esper Agent v7.8.5502',
+                  path: "release-notes/esper-agent/ea-86"
+                },
+                {
+                  title: 'Esper Agent v7.8.5502',
+                  path: "release-notes/esper-agent/v7.8.5502"
+                },
                 {
                   title: 'Esper Agent v7.8.5434',
                   path: "release-notes/esper-agent/v7.8.5434"
@@ -173,6 +189,10 @@ module.exports = {
               title: 'Console release notes',
               children: [
                 {
+                  title: '86.0 (June 2022)',
+                  path: "release-notes/general/devrel-86"
+                },
+                {
                   title: '81.0 (April 2022)',
                   path: "release-notes/general/devrel-81"
                 },
@@ -194,6 +214,23 @@ module.exports = {
                 }
               ],
             },
+            // {
+            //   title: 'Foundation release notes',
+            //   children: [
+            //     {
+            //       title: 'Swan',
+            //       path: "release-notes/foundation/swan"
+            //     },
+            //     {
+            //       title: 'Foenix',
+            //       path: "release-notes/foundation/foenix"
+            //     },
+            //     {
+            //       title: 'SUNFYRE_V6',
+            //       path: "release-notes/sdk/rel-1.0"
+            //     },
+            //   ],
+            // },
           ]
         }
         // "tutorials",
