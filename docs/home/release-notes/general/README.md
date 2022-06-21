@@ -1,8 +1,9 @@
-# Release Notes
+# Console Release Notes
 
-List of all release notes
+List of all the Console release notes:
 
 
+- [DevRel 86 (June 2022)](./devrel-86.md)
 - [DevRel 81 (February 2022)](./devrel-81.md)
 - [DevRel 77 (February 2022)](./devrel-77.md)
 - [DevRel 76 (January 2022)](./devrel-76.md)

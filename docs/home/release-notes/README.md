@@ -1,3 +1,10 @@
 # Welcome to release notes
 
-[All Console Release notes](./general/README.md)
+[Console release notes landing page](./general/README.md)
+
+[Esper Agent landing page](./esper-agent/README.md)
+
+[Device SDK landing page](./sdk/README.md)
+
+[Device Provisioner landing page](./provisioner/README.md)
+
