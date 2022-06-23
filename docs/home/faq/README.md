@@ -327,3 +327,10 @@ Steps to take
 12. Go to Device->Compliance policy and switch it back to the old policy with notification bar off.
 13. Go to Device->Actions and click on Pin app to go back to kiosk mode.
 
+## What are the limitations to upload an application to Esper Cloud?
+    
+
+You cannot upload applications that are signed with a debug key—use a release key. Follow the Play Store [naming conventions](https://developer.android.com/studio/publish/app-signing) for an APK.
+
+Esper cloud does not support app bundles. Please upload 1 APK per application.
+
