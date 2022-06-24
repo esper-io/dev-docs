@@ -125,6 +125,23 @@ module.exports = {
               ],
             },
             {
+              title: 'Device Provisioner release notes',
+              children: [
+                {
+                  title: 'v6.2.0',
+                  path: "release-notes/provisioner/pro-rel-1.0"
+                },
+                // {
+                //   title: 'SUNFYRE_V6',
+                //   path: "release-notes/sdk/rel-2.0"
+                // },
+                // {
+                //   title: 'SUNFYRE_V5',
+                //   path: "release-notes/sdk/rel-1.0"
+                // },
+              ],
+            },
+            {
               title: 'Esper Agent release notes',
               children: [
                 {
