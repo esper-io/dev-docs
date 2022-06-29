@@ -111,7 +111,7 @@ module.exports = {
               title: 'Device SDK release notes',
               children: [
                 {
-                  title: '2.1.5627.19',
+                  title: 'SUNFYRE_V7',
                   path: "release-notes/sdk/rel-3.0"
                 },
                 {
