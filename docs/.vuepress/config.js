@@ -265,27 +265,27 @@ module.exports = {
             {
               title: 'Technical',
               children: [
-                {
-                  title: 'SUNFYRE_V7',
-                  path: "release-notes/sdk/rel-3.0"
-                },
-                {
-                  title: 'SUNFYRE_V6',
-                  path: "release-notes/sdk/rel-2.0"
-                },
-                {
-                  title: 'SUNFYRE_V5',
-                  path: "release-notes/sdk/rel-1.0"
-                },
+                // {
+                //   title: 'SUNFYRE_V7',
+                //   path: "release-notes/sdk/rel-3.0"
+                // },
+                // {
+                //   title: 'SUNFYRE_V6',
+                //   path: "release-notes/sdk/rel-2.0"
+                // },
+                // {
+                //   title: 'SUNFYRE_V5',
+                //   path: "release-notes/sdk/rel-1.0"
+                // },
               ],
             },
             {
               title: 'Non-technical',
               children: [
-                {
-                  title: 'v6.2.0',
-                  path: "release-notes/provisioner/pro-rel-1.0"
-                },
+                // {
+                //   title: 'v6.2.0',
+                //   path: "release-notes/provisioner/pro-rel-1.0"
+                // },
                 // {
                 //   title: 'SUNFYRE_V6',
                 //   path: "release-notes/sdk/rel-2.0"
