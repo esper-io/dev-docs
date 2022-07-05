@@ -1,11 +1,6 @@
-# FAQs
+# Technical
 
-[Technical FAQ](./technical.md)
-[Non-technical FAQ](./non-technical.md)
-
-## Technical
-
-### SAML/SSO
+## SAML/SSO
 
 1.Will all my users be required to sign in via SAML SSO (my IdP) when this is set up?
 
@@ -16,7 +11,7 @@
 
  No, only Enterprise Admins are able to enable/disable the SAML SSO configuration.
 
-### API
+## API
 
 1.How to find the group id?
     
@@ -32,7 +27,7 @@ You can find the Group Id in the URL when inspecting the group settings page of 
 
 You can find the Group Id in the URL when inspecting the group settings page of a particular group. To get to the Group Settings page, first visit the "Devices & Groups" page. Find the Group you want the id for then click the grop name.
 
-### Device info
+## Device info
 
 1.What is the default font size? Can I increase or decrease it using JSON? Is there any limitation?
     
@@ -66,7 +61,7 @@ String  wifiMacAddress = esperDeviceInfo.getWifiMacAddress()
 Alternatively, you can use our open-source tool that uses our API and allows you to generate a report which contains the Wifi Mac Id and some other fields we display in the device information page. You can find a link to an executable of the tool here: Release Esper API Support Tool v0.191 · esper-io/esper-api-support-tool (github.com) - [https://github.com/esper-io/esper-api-support-tool/releases/tag/0.191](https://github.com/esper-io/esper-api-support-tool/releases/tag/0.191) . You can find some documentation about how to use the tool here: [https://docs.google.com/document/d/1WwDIQ-7CzQscVNFhiErbYtIwMyE34hGxE_MQWBqc9_k/](https://docs.google.com/document/d/1WwDIQ-7CzQscVNFhiErbYtIwMyE34hGxE_MQWBqc9_k/)
 
   
-### JSON settings
+## JSON settings
 
 1.Can I apply JSON setting at a device level?
     
@@ -80,7 +75,7 @@ No JSON settings are applied at a group level. They are a part of the Blueprint/
 
 The USB configuration in developer settings is not editable via JSON as these settings are hidden under dev settings and during provisioning; we disable it. You can choose from the tethering options available under the Android settings or use the mobile hotspot for wireless connections.
 
-### Device SDK
+## Device SDK
 
 1.Can I set Wi-Fi credentials via SDK?
     
@@ -106,7 +101,7 @@ WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 wifi.setWifiEnabled(false);
 ```
 
-### Reboot
+## Reboot
 
 1.Can I schedule a reboot on a device?
     
@@ -140,16 +135,3 @@ Request Body:
 }  
 }
 ```
-
-## Non-technical
-
-1.Can I have Esper Software Updates automatically deployed to my devices?
-
- Yes, of course! Navigate to the settings tab for Esper Software Updates and uncheck the Enable automatic updates.
- 
-
-2.How often does the device check for a new Esper Agent version?
-
-If you select the Esper Software Updates option, the devices check for an Esper Agent version every hour.
-
-  
