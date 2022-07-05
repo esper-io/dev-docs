@@ -254,7 +254,7 @@ module.exports = {
             //   ],
             // },
           ]
-        }
+        },
         // "tutorials",
         // "support",
         // "faq"
