@@ -1,10 +1,5 @@
 # FAQs
 
-
-[Technical](./technical/README.md)
-
-[Non-technical](./non-technical/README.md)
-
 ## How can I try out Esper?
 
 Sign up for the free Esper Trial! Create an endpoint for your company to run all of your Esper services, and get access to the Esper Console. Developers can generate API keys and use them with the APIs, SDK, CLI, and Android Tools.

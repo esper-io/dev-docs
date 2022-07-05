@@ -10,7 +10,7 @@
       <li>
         <a class="faq-title" href="/home/support.html">Contact</a>
       </li>
-      <li class="faq-title">Frequently asked Questions</li>
+      <li class="faq-title">Frequently asked questions</li>
       <div class="faq-item">
         <a href="/home/faq/">General FAQ</a>
         <a href="/home/faq/payments">Payments</a>
