@@ -2,5 +2,5 @@
 
 [Technical FAQ](./technical.md)
 
-[Non-technical FAQ](./non-technical.md)
+[General](./non-technical.md)
 
