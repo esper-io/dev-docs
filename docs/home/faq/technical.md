@@ -84,22 +84,22 @@
 
   
 
-For enabling WiFi:
+  For enabling WiFi:
 
-```java
-WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+  ```java
+  WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
-wifi.setWifiEnabled(true);
-```
-  
+  wifi.setWifiEnabled(true);
+  ```
+    
 
-For disabling Wifi:
+  For disabling Wifi:
 
-```java
-WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+  ```java
+  WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
 
-wifi.setWifiEnabled(false);
-```
+  wifi.setWifiEnabled(false);
+  ```
 
 ## Reboot
 
@@ -112,24 +112,24 @@ wifi.setWifiEnabled(false);
 
   https://<endpoint-name>-api.esper.cloud/api/v0/enterprise/<;enterpriseID>/command/
 
-R equest Body:
+  Request Body:
 
-  ```java
-  {  
-      "command_type": "GROUP",  
-      "groups": [  
-      "String"  
-      ],  
-      "device_type": "active",  
-      "command": "REBOOT",  
-      "command_args": {  
-      },  
-      "schedule": "WINDOW",  
-      "schedule_args": {  
-      "name": "Reboot",  
-      "start_datetime": "2020-12-30T12:00:00Z",  
-      "end_datetime": "2020-12-31T12:10:00Z",  
-      "time_type": "device"  
-    }  
-  }
-  ```
+    ```java
+    {  
+        "command_type": "GROUP",  
+        "groups": [  
+        "String"  
+        ],  
+        "device_type": "active",  
+        "command": "REBOOT",  
+        "command_args": {  
+        },  
+        "schedule": "WINDOW",  
+        "schedule_args": {  
+        "name": "Reboot",  
+        "start_datetime": "2020-12-30T12:00:00Z",  
+        "end_datetime": "2020-12-31T12:10:00Z",  
+        "time_type": "device"  
+      }  
+    }
+    ```
