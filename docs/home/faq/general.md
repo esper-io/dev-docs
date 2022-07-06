@@ -2,143 +2,142 @@
 
 ## Esper Software Updates
 
-1.Can I have Esper Software Updates automatically deployed to my devices?
+- **Can I have Esper Software Updates automatically deployed to my devices?**
 
- Yes, of course! Navigate to the settings tab for Esper Software Updates and uncheck the Enable automatic updates.
-
-  
-
-2.How often does the device check for a new Esper Agent version?
-
-If you select the Esper Software Updates option, the devices check for an Esper Agent version every hour.
+    Yes, of course! Navigate to the settings tab for Esper Software Updates and uncheck the Enable automatic updates.
 
   
-3.Can I use the Esper Agent chosen under Esper Software Updates available for provisioning?
 
-Yes! The QR code is updated to reflect the Esper Agent version chosen. When you provision a device using a 6-tap or Device Provisioner, you will use this QR code.
+- **How often does the device check for a new Esper Agent version?** 
+
+    If you select the Esper Software Updates option, the devices check for an Esper Agent version every hour.
+
+  
+- **Can I use the Esper Agent chosen under Esper Software Updates available for provisioning?**
+
+    Yes! The QR code is updated to reflect the Esper Agent version chosen. When you provision a device using a 6-tap or Device Provisioner, you will use this QR code.
 
 ## Groups and Blueprints
 
-1.Is a Blueprint applied automatically when I create a group?
+- **Is a Blueprint applied automatically when I create a group?**
 
- No, groups are created without Blueprints. There are various ways to assign a Blueprint to a group after it is added to your directory: “Create a new Blueprint”, “Clone Existing Blueprint” or “Import Blueprint”.
+    No, groups are created without Blueprints. There are various ways to assign a Blueprint to a group after it is added to your directory: “Create a new Blueprint”, “Clone Existing Blueprint” or “Import Blueprint”.
 
+    :::tip
+    If a device is onboarded to a group without a Blueprint, a Blueprint with default settings will be assigned to that group. If you want to change this configuration, you can either change the Blueprint settings, or reapply a different Blueprint. Check out the default Blueprint settings [here](https://onboarding-esper.netlify.app/blueprint_default_values.pdf).
+    ::: 
 
-**Note:** If a device is onboarded to a group without a Blueprint, a Blueprint with default settings will be assigned to that group. If you want to change this configuration, you can either change the Blueprint settings, or reapply a different Blueprint. Check out the default Blueprint settings [here](https://onboarding-esper.netlify.app/blueprint_default_values.pdf).
+- **Can I restore a deleted group?**    
 
-  
-
-2.Can I restore a deleted group?
-
-You cannot restore a deleted group. Groups and their subgroups are not versioned, so if you delete a group, you need to create a new one from scratch.
-
-  
-
-3.Can I move a device to a different group?
-
- Certainly! Navigate to the group where the device is onboarded to, select the device, click the “Actions” button, click “Move”, and then select the destination group.
+    You cannot restore a deleted group. Groups and their subgroups are not versioned, so if you delete a group, you need to create a new one from scratch.
 
   
 
-4.What happens to a device if I delete the group it is onboarded to?
+- **Can I move a device to a different group?**
 
-You cannot delete a group with onboarded devices. If you wish to delete a group, you need to migrate your devices to another group first.
-
-  
-
-5.Do I need to manually create groups/subgroups on the Console and move devices over for managing device updates?
-
-Not at all! You can use Esper APIs for automating device/group management. Check out more [here](https://api.esper.io/tag/Device-Group).
+    Certainly! Navigate to the group where the device is onboarded to, select the device, click the “Actions” button, click “Move”, and then select the destination group.
 
   
 
-6.Is it mandatory to create a group to manage devices?
+- **What happens to a device if I delete the group it is onboarded to?**
 
- Yes, you have to have at least one parent level group to start managing your devices. Creating sub-groups is optional.
-
-  
-
-7.Where are the groups hosted?
-
- All the groups and devices are hosted in the root level, “The Directory”.
+    You cannot delete a group with onboarded devices. If you wish to delete a group, you need to migrate your devices to another group first.
 
   
 
-8.Can I factory reset all the devices in a group/sub-group?
+- **Do I need to manually create groups/subgroups on the Console and move devices over for managing device updates?**
 
-Yes. You can apply the factory reset command to the group, sub-group or individual devices.
+    Not at all! You can use Esper APIs for automating device/group management. Check out more [here](https://api.esper.io/tag/Device-Group).
 
   
 
-9.Is it possible to have dynamic groups - aka, having the same device in multiple groups?
+- **Is it mandatory to create a group to manage devices?**
 
- Not currently. A device can only be assigned to a single group, but you can move it if you need to.
+    Yes, you have to have at least one parent level group to start managing your devices. Creating sub-groups is optional.
+
+  
+
+- **Where are the groups hosted?**
+
+    All the groups and devices are hosted in the root level, “The Directory”.
+
+  
+
+- **Can I factory reset all the devices in a group/sub-group?**
+
+    Yes. You can apply the factory reset command to the group, sub-group or individual devices.
+
+  
+
+- **Is it possible to have dynamic groups - aka, having the same device in multiple groups?**
+
+    Not currently. A device can only be assigned to a single group, but you can move it if you need to.
 
 ## Payments
 
-1.What happens if my payment is unsuccessful during self check-out?
+- **What happens if my payment is unsuccessful during self check-out?**
 
- A user has one month (from the time of the first failure) to resolve a failed payment. If there is no resolution after the one month mark, they will automatically be downgraded to the Free plan.
+     A user has one month (from the time of the first failure) to resolve a failed payment. If there is no resolution after the one month mark, they will automatically be downgraded to the Free plan.
 
   
 
-2.Can I get an invoice sent to me after upgrading my plan?
+- **Can I get an invoice sent to me after upgrading my plan?**
 
- Yes, customers get a receipt following their purchase. They can also download their invoice through the Billing section of Console.
+    Yes, customers get a receipt following their purchase. They can also download their invoice through the Billing section of Console.
 
 ## Pipelines
 
-1.I am trying to *only* update tablets with certain app versions, so I want to query tablets by a particular installed app version. Is there a way to do advanced queries in Pipelines to filter the devices or groups?
+- **I am trying to *only* update tablets with certain app versions, so I want to query tablets by a particular installed app version. Is there a way to do advanced queries in Pipelines to filter the devices or groups?**
 
- This level of fine-grained filtering functionality is not available through the Console. Pipelines can be set to target either individual devices, or devices at a group level. Having said that, you can create Tags and Aliases for your devices to bucket them, and when you are setting the Pipeline targets, you can filter the devices by these.
-
-  
-
-2.What are the benefits of using Esper Pipelines APIs?
-
- You can integrate Esper Pipelines to your CI/CD flow by using our APIs. Additionally, you can create, update, delete or query Pipeline, Stage and Target Runs at scale. Check out Esper Pipelines APIs [here.](https://api.esper.io/tag/Pipelines)
+    This level of fine-grained filtering functionality is not available through the Console. Pipelines can be set to target either individual devices, or devices at a group level. Having said that, you can create Tags and Aliases for your devices to bucket them, and when you are setting the Pipeline targets, you can filter the devices by these.
 
   
 
-3.When can I edit the properties, targets and operations of a Pipeline?
+- **What are the benefits of using Esper Pipelines APIs?**
 
- You can edit Pipeline settings during the definition stage - aka, before running the Pipeline. Once you send the Run Pipeline command, you can no longer edit that specific Run instance. However, once the run has been completed, you can configure a new Run and edit the Pipeline properties, stage operations, and targets.
+    You can integrate Esper Pipelines to your CI/CD flow by using our APIs. Additionally, you can create, update, delete or query Pipeline, Stage and Target Runs at scale. Check out Esper Pipelines APIs [here.](https://api.esper.io/tag/Pipelines)
 
   
 
-4.What happens if I target offline devices?
+- **When can I edit the properties, targets and operations of a Pipeline?**
 
- The Pipeline stages timeout after a week. If the device becomes online in that period, it will receive the set operation. If not, you can re-run the Pipeline and target those offline devices.  
+    You can edit Pipeline settings during the definition stage - aka, before running the Pipeline. Once you send the Run Pipeline command, you can no longer edit that specific Run instance. However, once the run has been completed, you can configure a new Run and edit the Pipeline properties, stage operations, and targets.
+
+  
+
+- **What happens if I target offline devices?**
+
+    The Pipeline stages timeout after a week. If the device becomes online in that period, it will receive the set operation. If not, you can re-run the Pipeline and target those offline devices.  
 
 ## Esper Trial
 
-1.How can I try out Esper?
+- **How can I try out Esper?**
 
-Sign up for the free Esper Trial! Create an endpoint for your company to run all of your Esper services, and get access to the Esper Console. Developers can generate API keys and use them with the APIs, SDK, CLI, and Android Tools.
+    Sign up for the free Esper Trial! Create an endpoint for your company to run all of your Esper services, and get access to the Esper Console. Developers can generate API keys and use them with the APIs, SDK, CLI, and Android Tools.
 
-2.How long does the Esper Trial last?
+- **How long does the Esper Trial last?**
 
-The Esper Starter Plan is free forever once your endpoint is created, and is intended for development and evaluation use - not for commercial deployments. Contact Esper if you have any further questions about the Trial, we’d be happy to help.
+    The Esper Starter Plan is free forever once your endpoint is created, and is intended for development and evaluation use - not for commercial deployments. Contact Esper if you have any further questions about the Trial, we’d be happy to help.
 
-3.Can I invite other members of my team to use the Esper Trial?
+- **Can I invite other members of my team to use the Esper Trial?**
 
-Yes! If you have created an Esper Trial Endpoint you can simply add additional users in the User Management section. Each user has access to all the templates created for the endpoint and all the devices provisioned through the Endpoint. Additionally each user can create their own set of API Keys, noting all users of the Endpoint will have the same Enterprise ID
+    Yes! If you have created an Esper Trial Endpoint you can simply add additional users in the User Management section. Each user has access to all the templates created for the endpoint and all the devices provisioned through the Endpoint. Additionally each user can create their own set of API Keys, noting all users of the Endpoint will have the same Enterprise ID
 
-4.If I like Esper, can I convert my Trial Endpoint to use ongoing or do I need to start with a new Endpoint?
+- **If I like Esper, can I convert my Trial Endpoint to use ongoing or do I need to start with a new Endpoint?**
 
-You can continue to use your same endpoint if you decide to adopt Esper. And we hope you do end up liking Esper!
+    You can continue to use your same endpoint if you decide to adopt Esper. And we hope you do end up liking Esper!
 
-5.Can I change the name of the Trial Endpoint as I did not use my company’s name?
+- **Can I change the name of the Trial Endpoint as I did not use my company’s name?**
 
-Unfortunately once the endpoint name is chosen, it can’t be changed. But let us know and we’ll figure something out.
+    Unfortunately once the endpoint name is chosen, it can’t be changed. But let us know and we’ll figure something out.
 
-6.Do I have to be a developer to use Esper?
+- **Do I have to be a developer to use Esper?**
 
-No, Esper has a full Console with a Dashboard available for non-developer users. It provides the full capabilities of Esper in a convenient to use Web Portal. Create templates, provision and manage devices, set alerts, monitor your fleet - it's all there for you and your team.
+    No, Esper has a full Console with a Dashboard available for non-developer users. It provides the full capabilities of Esper in a convenient to use Web Portal. Create templates, provision and manage devices, set alerts, monitor your fleet - it's all there for you and your team.
 
-7.Do I need to use the Esper Console to use Esper?
+- **Do I need to use the Esper Console to use Esper?**
 
-No, Esper has a rich set of APIs that can be called directly via REST/HTTP, via our SDK for Python, or using our CLI. Additionally we have a set of tools for Android Studio, including an app uploader that lets you upload your APKs directly from Android Studio to Esper. There are a few actions that currently can only be done through the Console, like creating Device Templates. Over time we’ll increasingly add capabilities to the API moving beyond the Console.
+    No, Esper has a rich set of APIs that can be called directly via REST/HTTP, via our SDK for Python, or using our CLI. Additionally we have a set of tools for Android Studio, including an app uploader that lets you upload your APKs directly from Android Studio to Esper. There are a few actions that currently can only be done through the Console, like creating Device Templates. Over time we’ll increasingly add capabilities to the API moving beyond the Console.
 
 8.What is Esper Enhanced Android? Do I need to have it on my device to use Esper?
 
