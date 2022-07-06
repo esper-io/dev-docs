@@ -267,8 +267,8 @@ module.exports = {
                path: "faq/technical.md",
              },
              {
-              title: 'Non-technical',
-              path: "faq/non-technical.md",
+              title: 'General',
+              path: "faq/general.md",
             }
         //     {
         //       title: 'Non-technical',
