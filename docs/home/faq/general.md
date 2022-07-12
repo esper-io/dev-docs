@@ -1,337 +1,403 @@
-# Non-technical
-
-## Esper Software Updates
-
-- **Can I have Esper Software Updates automatically deployed to my devices?**
-
-    Yes, of course! Navigate to the settings tab for Esper Software Updates and uncheck the Enable automatic updates.
-
-  
-
-- **How often does the device check for a new Esper Agent version?** 
-
-    If you select the Esper Software Updates option, the devices check for an Esper Agent version every hour.
-
-  
-- **Can I use the Esper Agent chosen under Esper Software Updates available for provisioning?**
-
-    Yes! The QR code is updated to reflect the Esper Agent version chosen. When you provision a device using a 6-tap or Device Provisioner, you will use this QR code.
-
-## Groups and Blueprints
-
-- **Is a Blueprint applied automatically when I create a group?**
-
-    No, groups are created without Blueprints. There are various ways to assign a Blueprint to a group after it is added to your directory: “Create a new Blueprint”, “Clone Existing Blueprint” or “Import Blueprint”.
-
-    :::tip
-    If a device is onboarded to a group without a Blueprint, a Blueprint with default settings will be assigned to that group. If you want to change this configuration, you can either change the Blueprint settings, or reapply a different Blueprint. Check out the default Blueprint settings [here](https://onboarding-esper.netlify.app/blueprint_default_values.pdf).
-    ::: 
-
-- **Can I restore a deleted group?**    
-
-    You cannot restore a deleted group. Groups and their subgroups are not versioned, so if you delete a group, you need to create a new one from scratch.
-
-  
-
-- **Can I move a device to a different group?**
-
-    Certainly! Navigate to the group where the device is onboarded to, select the device, click the “Actions” button, click “Move”, and then select the destination group.
-
-  
-
-- **What happens to a device if I delete the group it is onboarded to?**
-
-    You cannot delete a group with onboarded devices. If you wish to delete a group, you need to migrate your devices to another group first.
-
-  
-
-- **Do I need to manually create groups/subgroups on the Console and move devices over for managing device updates?**
-
-    Not at all! You can use Esper APIs for automating device/group management. Check out more [here](https://api.esper.io/tag/Device-Group).
-
-  
-
-- **Is it mandatory to create a group to manage devices?**
-
-    Yes, you have to have at least one parent level group to start managing your devices. Creating sub-groups is optional.
-
-  
-
-- **Where are the groups hosted?**
-
-    All the groups and devices are hosted in the root level, “The Directory”.
-
-  
-
-- **Can I factory reset all the devices in a group/sub-group?**
-
-    Yes. You can apply the factory reset command to the group, sub-group or individual devices.
-
-  
-
-- **Is it possible to have dynamic groups - aka, having the same device in multiple groups?**
-
-    Not currently. A device can only be assigned to a single group, but you can move it if you need to.
-
-## Payments
-
-- **What happens if my payment is unsuccessful during self check-out?**
-
-     A user has one month (from the time of the first failure) to resolve a failed payment. If there is no resolution after the one month mark, they will automatically be downgraded to the Free plan.
-
-  
-
-- **Can I get an invoice sent to me after upgrading my plan?**
-
-    Yes, customers get a receipt following their purchase. They can also download their invoice through the Billing section of Console.
-
-## Pipelines
-
-- **I am trying to *only* update tablets with certain app versions, so I want to query tablets by a particular installed app version. Is there a way to do advanced queries in Pipelines to filter the devices or groups?**
-
-    This level of fine-grained filtering functionality is not available through the Console. Pipelines can be set to target either individual devices, or devices at a group level. Having said that, you can create Tags and Aliases for your devices to bucket them, and when you are setting the Pipeline targets, you can filter the devices by these.
-
-  
-
-- **What are the benefits of using Esper Pipelines APIs?**
-
-    You can integrate Esper Pipelines to your CI/CD flow by using our APIs. Additionally, you can create, update, delete or query Pipeline, Stage and Target Runs at scale. Check out Esper Pipelines APIs [here.](https://api.esper.io/tag/Pipelines)
-
-  
-
-- **When can I edit the properties, targets and operations of a Pipeline?**
-
-    You can edit Pipeline settings during the definition stage - aka, before running the Pipeline. Once you send the Run Pipeline command, you can no longer edit that specific Run instance. However, once the run has been completed, you can configure a new Run and edit the Pipeline properties, stage operations, and targets.
-
-  
-
-- **What happens if I target offline devices?**
-
-    The Pipeline stages timeout after a week. If the device becomes online in that period, it will receive the set operation. If not, you can re-run the Pipeline and target those offline devices.  
-
-## Esper Trial
-
-- **How can I try out Esper?**
-
-    Sign up for the free Esper Trial! Create an endpoint for your company to run all of your Esper services, and get access to the Esper Console. Developers can generate API keys and use them with the APIs, SDK, CLI, and Android Tools.
-
-- **How long does the Esper Trial last?**
-
-    The Esper Starter Plan is free forever once your endpoint is created, and is intended for development and evaluation use - not for commercial deployments. Contact Esper if you have any further questions about the Trial, we’d be happy to help.
-
-- **Can I invite other members of my team to use the Esper Trial?**
-
-    Yes! If you have created an Esper Trial Endpoint you can simply add additional users in the User Management section. Each user has access to all the templates created for the endpoint and all the devices provisioned through the Endpoint. Additionally each user can create their own set of API Keys, noting all users of the Endpoint will have the same Enterprise ID
-
-- **If I like Esper, can I convert my Trial Endpoint to use ongoing or do I need to start with a new Endpoint?**
-
-    You can continue to use your same endpoint if you decide to adopt Esper. And we hope you do end up liking Esper!
-
-- **Can I change the name of the Trial Endpoint as I did not use my company’s name?**
-
-    Unfortunately once the endpoint name is chosen, it can’t be changed. But let us know and we’ll figure something out.
-
-- **Do I have to be a developer to use Esper?**
-
-    No, Esper has a full Console with a Dashboard available for non-developer users. It provides the full capabilities of Esper in a convenient to use Web Portal. Create templates, provision and manage devices, set alerts, monitor your fleet - it's all there for you and your team.
-
-- **Do I need to use the Esper Console to use Esper?**
-
-    No, Esper has a rich set of APIs that can be called directly via REST/HTTP, via our SDK for Python, or using our CLI. Additionally we have a set of tools for Android Studio, including an app uploader that lets you upload your APKs directly from Android Studio to Esper. There are a few actions that currently can only be done through the Console, like creating Device Templates. Over time we’ll increasingly add capabilities to the API moving beyond the Console.
-
-8.What is Esper Enhanced Android? Do I need to have it on my device to use Esper?
-
-Esper Enhanced Android is a hardened version built and maintained by Esper specifically for use on dedicated devices. With Esper Enhanced Android customers receive the benefit of Zero touch enrollment and secure remote diagnostics of deployed devices running in the field including debugging, profiling, and viewing. You do NOT need it to use Esper Enhanced Android in order to use Esper. Esper works with “stock” Android, however, you do not receive the additional features enabled by Esper Enhanced Android. Esper Enhanced Android is available for select devices, please contact us in you’d like to find out more.
-
-9.What Android releases are supported by Esper?
-
-To obtain the set of Esper features, we require Android Nougat/7.0 or above. If you are running an older version, contact us so we can discuss the available feature set.
-
-10.Is Esper an MDM system?
-
-Esper’s roots are in MDM, but typical MDM doesn’t deliver everything needed across the lifecycle of apps running on dedicated devices. Developers play a lead role for these solutions, yet incumbents provide very little by way of tools and enablement. MDM doesn’t fit the bill - instead we will deliver on our vision of Device Orchestration.
-
-11.How does Esper compare to available MDM, EMM, or UEM solutions?
-
-We are the only company providing Device Orchestration and we do it just for Android-based dedicated devices spanning developers and admins by providing a full API set, an SDK, a CLI, tools for Android Studio, and a web-based Console. No other vendor does this.
-
-12.How much does Esper cost?
-
-Esper has several pricing models and tiers available, either purely per device or a blend of device and consumption. Contact us at andi@esper.io to find out more.
-
-13.Do you support Zero touch enrollment?
-
-Yes! By using Esper Enhanced Android you can perform scaled Zero touch enrollment using Esper across your entire device fleet.
-
-14.What is Device Orchestration?
-
-Device Orchestration is moving beyond MDM to bring the management of dedicated devices into DevOps. MDM is the antiquated approach to device management established in a pre-cloud computing world. Additionally, MDM does not factor in building and maintaining dedicated device fleets - it appeared to service BYOD. Esper was conceived for the DevOps world with CI/CD - we expose the Esper platform via a set of APIs that can be integrated into Cloud-based backend systems for automating the device management process, hence orchestrating. We also robustly address the app developers’ needs to work with dedicated devices during the early phases of app development and testing using our Android Tools, the SDK, and the CLI.
-
-15.Where is Esper based?
-
-We are based in Seattle with offices in Silicon Valley and India. We are ex-Amazon and Microsoft with deep experience in Android, Windows CE, and Windows Phone.
-
-16.What does Esper offer for customer support?
-
-We provide free support within reason during the Trial period. After or beyond that we provide paid support plans with the choice of email, telephone, chat, or Zoom.
-
-17.Does Esper support iOS devices and/or PC-based systems?
-
-No, we do not. We are not a general device management company. We are hyper-focused on Android-based dedicated devices. That’s what we do!
-
-18.Does Esper support BYOD?
-
-We do not support BYOD scenarios. We do support bringing your own dedicated devices.
-
-19.What is the difference between Template and Policy?
-
-Customers often ask us the difference between Device Template and Compliance policy which are both applied on devices. The main and most basic difference between Device Template and Compliance policy is that Device Template, (which has multiple sections inclusive of compliance policy as well as apps, groups, branding, settings), is used to apply on devices <i>during</i> provisioning and NEVER after that. Compliance policy on the other hand is applied on Esper Managed devices once they have already been provisioned.
-
-Preview of a Template ![Preview of a template](../assets/faq/device-template-faq2.png)
-
-The concept of Device Template is to make it easy for our customers to define how they want their devices to behave once they provision and become managed by Esper. The dashboard admin can define for a newly provisioned device the following - apps they want installed, compliance policy applied, background wallpapers, device settings and the group that they want the device to fall in -----<b>All in One place!</b> Dashboard admin can create the one-stop-for-all Device Template and push this on devices <i>when provisioning them</i>. As a result once the device is provisioned with the said template, device will comply by the chosen options in following sections-
-
-![Esper Device Template](../assets/faq/device-template-faq1.png)
-
-1.  Compliance policy
-2.  Settings
-3.  Wallpaper
-4.  Apps
-5.  Groups
-
-Post provisioning, the device will be set and ready to use in production as defined by the template.
-
-:::tip
-The template is not meant for any other purpose except for provisioning devices.
-:::
-
-Now, after provisioning, if the admin changes their mind and wants to apply changes to individual devices or groups of devices, they have options to do in the Esper Dashboard. These are categorised by Devices and Groups.
-
-Devices - If a user wants to make change to an individual (Esper Managed) device, (let's call them 'Esper Managed Devices' post provisioning), they need to go to the Devices section on the sidebar menu. Here is a device dashboard where user can view tiles of all provisioned devices. They may click on 'Details' to take actions on that individual device such as change the compliance policy or install a new app or lockdown the device. Find more about individual devices by clicking below.
-
-[![Esper Device Template](../assets/faq/device-template-faq3.png)
-
-Groups - If a user wants to make change to an entire group of (Esper Managed) devices, they need to go to Groups section on the sidebar menu. Here users can see Group tiles. Here also, on clicking 'Details' user can see various available Group functionalities under various menus. Find out more about Group functionalities by clicking below.
-
-[![Esper Device Template](../assets/faq/device-template-faq5.png)
-
-In the Devices & Groups section, user will see a 'Compliance Policy' tab under which they can choose and apply a new Compliance policy for the individual device or the group. In order to apply a policy, user needs to create a new Compliance policy or choose an existing one.
-
-
-![Esper Device Template](../assets/faq/device-template-faq4.png)
-
-[Know more about Compliance Policy](https://console-docs.esper.io/compliance-policy/).
-
-
-20.I am not able to open my app (for example - true caller) as permissions are not provided to the app and I am getting a message that ths is controlled by admin?
-
-Sometimes customers are not able to use their apps that require extra permissions. They get the message such as "Permission needed" and "Action Not Allowed" when trying to change Settings or open the app. 
-
-![Permissions for app](../assets/faq/permissionsforapp5.png)
-
-There is a simple solution to this problem. Simply create a Compliance Policy and choose the option of `Ask User` from `App Permissions` drop down. This will allow the device user to give the required permission to the app from Settings -> App Permissions.  
-
-![Permissions for app](../assets/faq/permissionforapp3.png)
-
-Once you apply the compliance policy on the device/group, you should be able to make the required permission changes from the Settings on the device.
-
-
-21.My device is not adhering to the expected behavior when I take an action on the dashboard.
-
-There is a big market of android manufacturers that have deployed various Android versions ranging from 4.x to 10.x. Often times these devices display unique behaviors that is manufacturer and OS specific. In such cases these devices might not comply by certain dashboard actions as expected due to device-specific issues. For example notification bar might show up in lenovo devices during lockdown or an older version of samsung device does not comply by password policy.  Contact esper support at support@esper.io to get help with device specific issues. 
-
-## Device Info
-
-1.Why is landscape and portrait mode reversed in my device?
-
-This is a device specific behaviour and depends on the device manufacturer and OS image installed on the device. The same system would be landscape for some devices and portrait for others.
-
-
-## Apps
-
-1.I am unable to push any of the apps/apk I uploaded to the Esper Console to the device.
-
-This is an issue with Google PlayProtect interference. You need to decline the Google Play Protect prompt that pops up during provisioning. Alternatively you may use Play For Work to deploy apps, or simply appeal the the [PlayProtect folks](https://support.google.com/googleplay/android-developer/answer/2992033?hl=en).
-
-
-2.Can I use G-Suite account during EMM enrollment?
-
-No. Currently Esper supports only Gmail accounts for enrollment with Google EMM services. Support for G-suite account is coming up soon. Contact support@esper.io to know the latest in this regard.
-
-3.Is it Possible to Enroll for EMM with an e-mail id which is currently already enrolled in EMM?
-
-No, it is not  possible. Either you need to use a new email id which has never been enrolled. Or you need to un-enroll your previously used gmail id from EMM and then re-enroll with the same email id.
-
-
-4.How to un-enroll from EMM with your email ID? 
-
-:::tip
-If you delete you organization from google EMM enrollment, Esper does not get this information from Google and hence it will cause failure of provisioning when Esper will try to reach Google for setting up the device. It is highly advised that admin does NOT unenroll their gmail ids from Google without consulting Esper support at support@esper.io.
-:::
-
-If you still wish to unenroll your email from Google Android for Work, get in touch with esper support at support@esper.io and follow these steps -
-
-1. Go to  [Google Play Admin Settings page](https://play.google.com/work/adminsettings). If you are already signed in, you will see an option to 'SWITCH ACCOUNTS'. Click on the same to switch to the gmail id that you had enrolled with.
-
-    ![Google Play Admin Settings page](../assets/faq/emmfaq1.png)
-
-2. Select your account or give login credentials 
-
-    ![FAQ](../assets/faq/emmfaq2.png)
-
-3. Under Settings you will see Organization information section. Click on the vertical ellipsis on the right. You will see an option to “Delete Organization”. Clicking this will disassociate your email with the said organization.
-
-![disassociate your email with the said organization](../assets/faq/emmfaq3.png)
-
-5.Can I control which apps show up on my device Google Play Store app?
-
-Yes, you have the option to decide which of the apps are to appear on the device Google Play Store. Go to the Play For Work section and choose the option Organize App-
-
-![Google Play Store app](../assets/faq/orgapp1.png)
-
-Any app added in the collections on this page will show up on the Google Play Store app on the device - 
-
-![Google Play Store app](../assets/faq/orgapp2.png)
-
-6.What are the limitations to upload an application to Esper Cloud?
-    
-
-You cannot upload applications that are signed with a debug key—use a release key. Follow the Play Store [naming conventions](https://developer.android.com/studio/publish/app-signing) for an APK.
-
-Esper cloud does not support app bundles. Please upload 1 APK per application.
+# General
 
 ## Provisioning
 
-1.On entering afw#esper why do I see "Couldn't find your google account?
+-   Can I use the Google Zero-touch enrollment method with any Android devices?
+    
 
-A possible cause for this error message is that the pre-configured Google account has not been removed from the device before the factory reset.
-In order to solve this problem, provide the previously configured Google Account credentials and reset the device. Remove the Google Account from the device and carry out the factory reset again.
+Not really. Google Zero-touch enrollment works only on the device purchased from a reseller.
 
-![afw#esper](../assets/faq/faq14.png)
+  
 
-## Device Mode
+-   Why do I get "Couldn’t find your Google account” error after entering afw#esper?
+    
 
-1.How to capture log when my device is in Kiosk mode?
+A possible cause for this error message is that the pre-configured Google account was not removed from the device before the factory reset.
 
-Click on below image to view video instructions to easily  capture log for a device which is in Kiosk mode-
+To solve this problem, provide the previously configured Google account credentials and reset the device. Remove the Google account from the device and factory reset it again.
 
-<br/><br/> [![Capture log-kiosk mode](../assets/faq/capturebugreport-kiosk.png)](https://www.youtube.com/watch?v=EEGsY9_1Nn0&feature=youtu.be 'Capture log in kiosk mode')
+## Device details
 
-Steps to take
+-   How often does the device communicate with the Console?
+    
 
-1. Go to the Devices section, and search for your device via the Device ID. Click on Details.
-2. Go to Actions tab and click "Unpin app". This will unpin the kiosk app from your device. 
-3. Usually the Compliance Policy for Kiosk mode is set such that Notification bar is blocked. Since we need notification bar for getting bug report, in order to change this we need a new policy to be set on the device. 
-4. Open the Compliance Policy section in new tab.
-5. Create a new Compliance Policy that is identical to the policy currently applied on the device except for the notification bar. Alternatively, you may duplicate existing policies via the vertical ellipsis and make the change. Turn on the toggle button for notification bar and save the policy with a unique name, for example NotificationEnabledPolicy. 
-6. Apply this new policy on the device by going to Device-> Compliance Policy section. 
-7. You will see a notification on device "Policy Switch successful."
-8. Now you may drag down finger from top to see the notification bar on phone.
-9. On the Console, go to Device-> Capture log and click Start.
-10. On the device notification bar, you will see that system is capturing bug report. At the end of this process, click on small arrow down next to the question "Share bug report?" and click on 'Share' on the request seen in notification bar. 
-11. The console will now show a downloadable link for bugreport.
-12. Go to Device->Compliance policy and switch it back to the old policy with notification bar off.
-13. Go to Device->Actions and click on Pin app to go back to kiosk mode.
+The device communicates every minute to maintain its status.
 
+  
 
+-   How is the security status of a device determined?
+    
+
+The OS/Builds known security exploits and vulnerabilities determine the security status.
+
+  
+
+-   Can I find out which devices use Wi-Fi vs. cellular data?
+    
+
+You can add a filter on the device list view — the "Network Type" as a column option.
+
+  
+
+![filter](https://lh6.googleusercontent.com/T-mw1IrqEjhRuE8aMWAAxDEeBwv2bOBs6Er2971raOyB-MgtAWlrPWsC4Uj-IBGbzcB6s3eG70EvX4NMjYwEjyqB3XMyV3k1QUsQBnxEDl6bF2Lr-cW13vnuGbc8ImkSLN2Rs7oMR6Holg3YbcZeBg)
+
+  
+
+-   Why is landscape and portrait mode reversed in my device?
+    
+
+This device-specific behavior depends on the device manufacturer and OS image installed on the device. The same system would be landscape for some devices and portrait for others.
+
+  
+
+-   How can I remove Esper from my device?
+    
+
+You can reset the device locally or perform the same action from the Esper Console.
+
+Note: The device should be online and connected to an active network while you send the reset command to the device.
+
+## Launcher
+
+-   Can I set my own application as the default launcher instead of the Esper launcher?
+    
+
+1.  Select Android launcher in the Blueprint/Template.
+    
+2.  Add the following lines of code in your application to set as a default launcher.
+    
+
+<category android:name="android.intent.category.HOME" />  
+<category android:name="android.intent.category.DEFAULT" />
+
+  
+
+-   Can I set Kiosk Mode using the Android launcher?
+    
+
+Android launcher works only in Multi-app Mode. Multi-app Mode enables simultaneous use of Esper and Android MDM. You cannot set Kiosk Mode if the device is using an Android launcher.
+
+## Kiosk Mode
+
+-   Can I block system alerts — such as amber alert — in Kiosk Mode?
+    
+
+In Kiosk Mode, the notification bar is disabled; you shouldn't receive such notifications. They will be populated in the notification panel and will not interfere with the user's work.
+
+  
+
+-   Can I update the Wi-Fi password in Kiosk mode?
+    
+
+In Kiosk Mode, you can retrieve the hidden dock — 3-taps on the right corner — which allows you to access Esper settings or the Esper Wi-Fi settings page.
+
+## Apps
+
+-   When does an approved Play Store application show under the list of the available apps?
+    
+
+You approve Play Store apps on the Google Iframe; then our backend gets the callback from Google about the approval, and we display your applications. Sometimes the callback takes a while to initiate, causing a delay.
+
+  
+
+-   Can I choose the version for a Play Store application to install?
+    
+
+There is no version control with Play Store apps. You will always get the latest version.
+
+However, you can upload an APK found [online](https://apkpure.com/teamviewer-remote-control/com.teamviewer.teamviewer.market.mobile/versions) and use a specific version using Esper Cloud. [Here](https://console-docs.esper.io/apps/upload-apps.html), you can find more information on uploading APK to Esper Cloud.
+
+  
+
+-   Can I upgrade the APK file?
+    
+
+You can upgrade an APK only if both versions have the same signature. Android doesn't allow the same app with varying signatures; you can:
+
+-   Try uninstalling the older APK and then push the latest one.
+    
+-   Sign the latest APK with the same signature key as the former APK.
+    
+
+  
+
+-   What is the maximum size of an APK that I can upload to the Esper Console?
+    
+
+You can upload an APK up to 2 GB.
+
+  
+
+-   I am trying to install an application from Google Play( Esper Console > Apps > Play Store). I searched and approved the app. But the system throws an error: "Error performing the task."
+    
+
+Make sure the app is not under development (EarlyAccess only). Alternatively, you can download APK from Google Play and upload it via the Esper Console.
+
+-   I am not able to open my app as permissions are not provided to the app, and I am getting a message that the admin controls this?
+    
+
+Sometimes customers are not able to use their apps that require extra permissions. They get messages such as “Permission needed” and “Action Not Allowed” when trying to change settings or open the app.
+
+In the Compliance policy or Blueprint, choose ‘Ask User’ for Run-time Permissions. This will allow the device users to give the required permission to the application. 
+
+![permissions](https://lh5.googleusercontent.com/x9jAEbuRyzOhJiXLGF69pQinQWlCTpdcmHV-kcMqXfPhgGr4Po4lsQsO0lqiIjVLsvsgR0eVp3O_FRoJGNajhdyxPrTUCeolv4vH99T_BLJUnENT-4XQHhzIAiXqIUoFNfbz5_UmbQLvjhKMVd3fmA)
+
+-   Can I disable pre-loaded apps? What happens when I factory reset the device?
+    
+
+Yes — you can disable pre-loaded apps. Navigate to the Device Settings> Apps> Preloaded apps. From the drop-down, select the “Disable” option for the App State.
+
+Note: On the Console, system applications are shown under Preloaded apps. You cannot disable system apps.
+
+  
+![pre-loaded](https://lh6.googleusercontent.com/6QsAa26AtK4ondDR2KN3U_8L2p5TjJGL09Es8yHExcBNcn-F1gbuk5G5M3La4EiqyIy3c-dziLgV2ZOXC-7XslJYe8c-S3bQk45DPstuy-jM7ND5GcUKkX0P6Tgnm-G3_ulrlIB3LRlUEDsHEHQC_x0)  
+
+If you factory reset the device, the device will take the App State as mentioned in the Provisioning Template or the Blueprint.
+
+  
+
+## File transfer
+
+-   Can I push content to the devices when using a cellular network?
+    
+
+Yes — you can push content to your device fleet on the cellular network.
+
+## Remote Viewer
+
+-   Can I increase the Remote Viewer session to over 15min?
+    
+
+No. At this point, we only allow a 15-minute Remote Viewer session.
+
+  
+
+-   Can I start a Remote Viewer session on my phone?
+    
+
+Currently, Esper does not support mobile browsers. The capability of the mobile browser limits some features on the Esper Console. For instance, the Remote Viewer is supported for Chrome (version 78+), Edge (version 80+), and Firefox (version 80+).
+
+  
+
+-   I cannot use the Remote Control feature for my Android devices.
+    
+
+Contact [Esper support](https://support.esper.io/s) to add a supervisor plugin.
+
+## Managed Google Play
+
+-   Can I add a Google account during provisioning?
+    
+
+You cannot define an account in the Template; this would need to be done manually on the device.
+
+However, you can link your company’s Google account to Esper through the EMM Enrollment process. Once the account is linked, all devices obtain a Managed Google Account once provisioned.
+
+Note: Currently, we can't add those Managed Google Accounts to already provisioned devices.
+
+  
+
+-   Is it possible to enroll for EMM using an email ID already enrolled in EMM?
+    
+
+No, it is not possible. Either you need to use a new email id that has never been enrolled. Or you need to un-enroll your previously used Gmail ID from EMM and then re-enroll with the same email ID.
+
+  
+
+-   I cannot push any apps/APK from the Esper Console to the device.
+    
+
+This is an issue with Google PlayProtect interference. You need to decline the Google Play Protect prompt during provisioning. Alternatively, you may use Play For Work to deploy apps or simply appeal to the [PlayProtect](https://support.google.com/googleplay/android-developer/answer/2992033?hl=en).
+
+## Tags
+
+-   Can I update/apply tags to all devices in a Group?
+    
+
+Updating or adding tags for all the devices is not possible via the Console. However, you can use the [East](https://docs.google.com/document/d/1WwDIQ-7CzQscVNFhiErbYtIwMyE34hGxE_MQWBqc9_k/edit) tool for the same.
+
+## SAML/SSO
+
+  
+
+-   Are all the users required to sign in via SAML SSO (my IdP) when this is set up?
+    
+
+Yes, once you configure the SAML SSO configuration, all users will be routed to sign in via your own IdP.
+
+  
+
+-   Can anyone update the SAML SSO configuration in Esper?
+    
+
+No, only Enterprise Admins can enable/disable the SAML SSO configuration.
+
+  
+
+## Factory reset
+
+-   Can I restrict users from hard resetting a device?
+    
+
+You cannot completely block hard resetting a device, but you can use [Factory Reset Protection (FRP)](https://console-docs.esper.io/compliance-policy/frp.html#how-to-get-google-id-and-use-frp-factory-reset-protection-feature).
+
+  
+
+-   How to reset an 'offline' device in a boot loop?
+    
+
+Connect the device to a computer (not just a power plug) and press the power button + volume up button.
+
+## Esper Cloud
+
+-   What are the limitations of uploading an application to Esper Cloud?
+    
+
+You cannot upload signed applications with a debug key — use a release key. Follow the Play Store [naming conventions](https://developer.android.com/studio/publish/app-signing) for an APK.
+
+Esper cloud does not support app bundles. Please upload 1 APK per application.
+
+## Payment
+
+-   What happens if a payment is unsuccessful?
+    
+
+A user has one month (from the time of the first failure) to resolve a failed payment. After one month without resolution, they will automatically be downgraded to the Free plan.
+
+  
+
+-   What happens to an account that exceeds 100 devices and has not paid?
+    
+
+Nothing. You can continue using Esper. Finance and Product will handle the invoice on the backend and notify Sales of a potential opportunity to engage with the customer and upsell.
+
+  
+
+-   Are Esper Essential invoices sent automatically to the customer? If so, who?
+    
+
+Customers get a receipt sent to them. And can download the invoice.
+
+## Esper Software Updates
+
+-   Can I have Esper Software Updates automatically deployed to my devices?
+    
+
+Yes, of course! Navigate to the settings tab for Esper Software Updates and uncheck the Enable automatic updates.
+
+  
+
+-   How often does the device check for a new Esper Agent version?
+    
+
+If you select the Esper Software Updates option, the devices check for an Esper Agent version every hour.
+
+  
+
+-   Can I use the Esper Agent chosen under Esper Software Updates available for provisioning?
+    
+
+Yes! The QR code is updated to reflect the Esper Agent version chosen. You will use this QR code when you provision a device using a 6-tap or Device Provisioner.
+
+## Groups and Blueprints
+
+-   Is a Blueprint applied automatically when I create a Group?
+    
+
+No, Groups are created without Blueprints. There are various ways to assign a Blueprint to a Group after it is added to your directory: “Create a new Blueprint,” “Clone Existing Blueprint,” or “Import Blueprint.”
+
+Note: A Blueprint with default settings is assigned to that Group without a Blueprint. If you want to change this configuration, you can either change the Blueprint settings or reapply a different Blueprint. Check out the default Blueprint settings [here](https://onboarding-esper.netlify.app/blueprint_default_values.pdf).
+
+  
+
+-   Can I restore a deleted Group?
+    
+
+You cannot restore a deleted Group. Groups and subgroups are not versioned, so you must create a new one from scratch if you delete a Group.
+
+  
+
+-   Can I move a device to a different Group?
+    
+
+Certainly! Navigate to the Group where the device is onboarded, select the device, click the “Actions” button, choose “Move,” and then select the destination Group.
+
+  
+
+-   What happens to a device if I delete the Group it is onboarded to?
+    
+
+You cannot delete a Group with onboarded devices. To delete a Group, you must first migrate your devices to another Group.
+
+  
+
+-   Do I need to manually create Groups/subgroups on the Console and move devices over for managing device updates?
+    
+
+Not at all! You can use Esper APIs for automating Device/Group management. Check out more [here](https://api.esper.io/tag/Device-Group).
+
+  
+
+-   Is it mandatory to create a Group to manage devices?
+    
+
+You need at least one parent-level Group to start managing your devices. Creating sub-groups is optional.
+
+  
+
+-   Where are the Groups hosted?
+    
+
+All the Groups and devices are hosted in the root level, “The Directory.”
+
+  
+
+-   Can I factory reset all the devices in a Group/sub-group?
+    
+
+Yes. You can apply the factory reset command to the Group, sub-group, or individual devices.
+
+  
+
+-   Is it possible to have dynamic Groups with the same device in multiple Groups?
+    
+
+Not currently. A device can only be assigned to a single Group, but you can move it if necessary.
+
+## Pipelines
+
+-   I am trying only to update tablets with specific app versions, so I want to query tablets by a particular installed app version. Is there a way to do advanced queries in Pipelines to filter the devices or Groups?
+    
+
+This level of fine-grained filtering functionality is not available through the Console. You can set pipelines to target either individual devices or devices at a Group level. You can create tags and aliases for your devices to bucket them, and when selecting the Pipeline targets, you can filter the devices by these.
+
+  
+
+-   What are the benefits of using Esper Pipelines APIs?
+    
+
+Using our APIs, you can integrate Esper Pipelines to your CI/CD flow. Additionally, you can create, update, delete, or query Pipeline, Stage, and Target Runs at scale. Check out Esper Pipelines APIs [here.](https://api.esper.io/tag/Pipelines)
+
+  
+
+-   When can I edit a Pipeline's properties, targets, and operations?
+    
+
+You can edit Pipeline settings during the definition stage — before running the Pipeline. Once you send the Run Pipeline command, you can no longer edit that specific Run instance. However, once the run is complete, you can configure a new Run and edit the Pipeline properties, stage operations, and targets.
+
+  
+
+-   What happens if I target offline devices?
+    
+
+The Pipeline stages timeout after a week. The device will receive the set operation if it becomes online in that period. If not, you can re-run the Pipeline and target those offline devices.
+
+  
+
+## Provisioning Template
+
+-   What is the difference between Provisioning Template and Compliance Policy?
+    
+
+Customers often ask us the difference between Provisioning Template and Compliance Policy, which are applied on devices. The main and most fundamental difference between Provisioning Template and Compliance Policy is that Provisioning Template is used to apply on devices during provisioning and NEVER after that. Compliance Policy, on the other hand, is applied on Esper Managed devices once they have already been provisioned.
 
