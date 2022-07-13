@@ -167,6 +167,20 @@
         <div class="homepage__a">Release Notes</div>
         <p>Stay informed about Esper's ongoing updates and improvements</p>
       </a>
+      <a
+        href="/home/faq"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            class="no-shadow homepage_image_icon"
+            src="./icons/ReleaseNotes.svg"
+            alt="plugin"
+          >
+        </div>
+        <div class="homepage__a">FAQ</div>
+        <p>Frequently asked questions</p>
+      </a>
     </div>
     <div class="homepage__footer">
       Apache 2.0 | © 2021 Esper, Inc.
