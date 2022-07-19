@@ -364,6 +364,13 @@ Yes. You can apply the factory reset command to the Group, sub-group, or individ
 
 Not currently. A device can only be assigned to a single Group, but you can move it if necessary.
 
+## Geofence
+
+-   I am not able to delete a Geofence. I get an error “Cannot delete a geofence; geofence still applied on the device”?
+    
+
+Follow [these steps](https://console-docs.esper.io/geofence/deletefromdevice.html) to delete any devices linked to the Geofence. Once you remove the devices, delete the Geofence.
+
 ## Pipelines
 
 -   I am trying only to update tablets with specific app versions, so I want to query tablets by a particular installed app version. Is there a way to do advanced queries in Pipelines to filter the devices or Groups?
