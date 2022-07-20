@@ -178,7 +178,7 @@
             alt="blog"
           >
         </div>
-        <div class="homepage__a">Device Provisioner</div>
+        <div class="homepage__a">EAST Tool</div>
         <p>Esper API Support Tool</p>
       </a>
       <a
