@@ -167,20 +167,6 @@
         <div class="homepage__a">Release Notes</div>
         <p>Stay informed about Esper's ongoing updates and improvements</p>
       </a>
-       <a
-        href="/home/east.html"
-        class="homepage__links__section__item homepage__links__section__item2"
-      >
-        <div style="padding-bottom: 1rem">
-          <img
-            class="no-shadow homepage_image_icon"
-            src="./icons/DeviceSDK.svg"
-            alt="blog"
-          >
-        </div>
-        <div class="homepage__a">EAST Tool</div>
-        <p>Esper API Support Tool</p>
-      </a>
       <a
         href="/home/faq"
         class="homepage__links__section__item homepage__links__section__item2"

@@ -1,23 +1,15 @@
 # EAST Tool
 
-## Tool Preparation
+The Esper API Support Tool (EAST) is available for Mac and Windows OS. The executables for each OS will be available on the tool’s [Github releases](https://github.com/esper-io/esper-api-support-tool/releases) page.
 
-### Executable Environment
-
-The Esper API Support Tool is intended to be available for both Mac and Window OS users. The executables for each OS will be available on the tool’s [Github Releases](https://github.com/esper-io/esper-api-support-tool/releases) page.
-
-#### Mac Setup
-
-If you are having issues with running the application on Mac OS please try the following.
+If you have issues running the application on Mac OS, please try the following.
 
 1.  Open The EsperAPISupportTool.App.
-    
 2.  If the application is blocked, navigate to the Security and Privacy section of System Preferences.
-    
-3.  Under the General tab click the lock on the bottom left and then click “Open” under the EsperAPISupportTool notification.
+3.  Under the General tab, click the lock on the bottom left and click “Open” under the EsperAPISupportTool notification.
     
 
-### Code Environment
+## Code Environment
 
 The Esper API Support Tool is intended to be available for both Mac and Window OS users. Currently a user will need a Python environment setup in order to run the application.
 

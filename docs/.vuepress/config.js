@@ -101,7 +101,7 @@ module.exports = {
         "espercli",
         "api",
         "remote-adb",
-        "east",
+        //"east",
         "devicesdk",
         "guides/",
         {
