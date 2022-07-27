@@ -75,7 +75,7 @@ Dedicated devices are often behind corporate firewalls, preventing Esper's backe
 | [customer endpoint]-api.esper.cloud   | TCP: 443 (HTTPS)                      | For communicating from the device to the Esper Endpoint. (example: device status events and command success/failure messages) |
 | mqtt-telemetry-prod.esper.cloud       | TCP: 1883                      | Deep telemetry from devices                                                              |
 | IP: 13.52.132.230          |  TCP: 40000 - 50000 | For allowing secure remote ADB access to your devices                       |
-| firebaseinstallations.googleapis.com and fcm.googleapis.com| TCP: 1883 (HTTPS) | Backup channel, also used for ping command to wake up a device (Only for GMS devices)       |
+| firebaseinstallations.googleapis.com and fcm.googleapis.com| TCP: 1883 | Backup channel, also used for ping command to wake up a device (Only for GMS devices)       |
 
 
 :::tip
