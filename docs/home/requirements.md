@@ -73,8 +73,8 @@ Dedicated devices are often behind corporate firewalls, preventing Esper's backe
 | dpcdownloads.esper.cloud              | UDP: 3478, 5349, 49152 - 65535 | For the 6-tap QR code method of provisioning and Remote Viewer APK                       |
 | [customer endpoint].esper.cloud       | TCP: 443 (HTTPS)                            | Grants access to the Esper Console when operating under a network with a restricted outbound firewall                                                                        |
 | [customer endpoint]-api.esper.cloud   | TCP: 443 (HTTPS)                      | For communicating from the device to the Esper Endpoint. (example: device status events and command success/failure messages) |
-| mqtt-telemetry-prod.esper.cloud       | TCP: 1883 (MQTT)                      | Deep telemetry from devices                                                              |
-| N/A           | 13.52.132.230 Port range: 40000 - 50000 | For allowing secure remote ADB access to your devices                       |
+| mqtt-telemetry-prod.esper.cloud       | TCP: 1883                      | Deep telemetry from devices                                                              |
+| IP: 13.52.132.230          |  TCP port range: 40000 - 50000 | For allowing secure remote ADB access to your devices                       |
 | firebaseinstallations.googleapis.com and fcm.googleapis.com| TCP: 1883 (HTTPS) | Backup channel, also used for ping command to wake up a device (Only for GMS devices)       |
 
 
