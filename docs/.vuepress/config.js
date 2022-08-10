@@ -112,6 +112,10 @@ module.exports = {
               title: 'Device SDK release notes',
               children: [
                 {
+                  title: 'SUNFYRE_V8',
+                  path: "release-notes/sdk/rel-4.0"
+                },
+                {
                   title: 'SUNFYRE_V7',
                   path: "release-notes/sdk/rel-3.0"
                 },
@@ -146,6 +150,10 @@ module.exports = {
               title: 'Esper Agent release notes',
               children: [
                
+                {
+                  title: 'Esper Agent ',
+                  path: "release-notes/esper-agent/ea-91"
+                },
                 {
                   title: 'Esper Agent v7.8.6435',
                   path: "release-notes/esper-agent/ea-86-1"

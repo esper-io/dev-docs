@@ -127,7 +127,9 @@ Currently, we do not support this functionality on the Console. However,you can 
 
 Request URL :
 
-https<nolink>://{endpoint-name}-api.esper.cloud/api/v0/enterprise/{enterpriseID}/command/
+```java
+https://{endpoint-name}-api.esper.cloud/api/v0/enterprise/{enterpriseID}/command/
+```
 
 Request Body:
 
