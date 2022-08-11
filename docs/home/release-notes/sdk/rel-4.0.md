@@ -27,5 +27,5 @@ sdk.clearUsbDeviceWhitelistForPackage()
 -   We have added a method to toggle ON/OFF Wi-Fi and Bluetooth for a device.
     
 ```json
-sdk.changeSettingsState(EsperDeviceSDK.BLUETOOTH,true, new  EsperDeviceSDK.Callback<Boolean>()
+sdk.changeSettingsState()
 ```
