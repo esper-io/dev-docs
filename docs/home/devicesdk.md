@@ -1112,3 +1112,25 @@ try {
     showFailureResult(t);
 }
 ```
+### Turn on/off Wifi/Bluetooth
+
+/**
+* set Bluetooth/WiFi state to true(ON)/false(OFF)
+* state successful means it has successfully started processing Bluetooth/WiFi to true(ON)/false(OFF) state
+* for best result , add a listener if the state is successful. For Bluetooth we need to use BluetoothAdapter.ACTION_STATE_CHANGED
+* @return if state change was successful processing or not , please note it does not guarantee the state change
+*/
+
+```java
+sdk.changeSettingsState(settingsName, mState, new EsperDeviceSDK.Callback<Boolean>() {
+@Override
+public void onResponse(@Nullable Boolean response) {
+if (response) {
+// Register for broadcasts on BluetoothAdapter state change
+IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
+registerReceiver(mReceiver, filter);
+} else {
+
+}
+}
+```
