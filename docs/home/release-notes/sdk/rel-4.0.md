@@ -23,3 +23,9 @@ sdk.clearUsbDeviceWhitelistForPackage()
 ```
 
 **Note:** This API is available only on Samsung KNOX enabled devices from the SDK version SUNFYRE_V8 and above.
+
+-   We have added a method to toggle ON/OFF Wi-Fi and Bluetooth for a device.
+    
+```json
+sdk.changeSettingsState(EsperDeviceSDK.BLUETOOTH,true, new  EsperDeviceSDK.Callback<Boolean>()
+```

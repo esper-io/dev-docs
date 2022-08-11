@@ -1112,14 +1112,19 @@ try {
     showFailureResult(t);
 }
 ```
+
 ### Turn Wifi/Bluetooth for the device to on/off
 
-/**
-* set Bluetooth/Wifi in String type state to true(ON)/false(OFF) in boolean type
-* state successful means it has successfully started processing Bluetooth/Wifi to true(ON)/false(OFF) state
-* for best result , add a listener if the state is successful. For Bluetooth we need to use BluetoothAdapter.ACTION_STATE_CHANGED
+**Notes:**
+
+* Set Bluetooth/Wi-Fi in string type state to true(ON)/false(OFF) in boolean type
+
+* State successful means it has successfully started processing Bluetooth/Wi-Fi to true(ON)/false(OFF) state
+
+* For best result , add a listener if the state is successful. For Bluetooth you need to use BluetoothAdapter.ACTION_STATE_CHANGED
+
 * @return if state change was successful processing or not , please note it does not guarantee the state change
-*/
+
 
 ```java
 sdk.changeSettingsState(EsperDeviceSDK.BLUETOOTH,true, new EsperDeviceSDK.Callback<Boolean>() {
