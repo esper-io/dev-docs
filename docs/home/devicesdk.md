@@ -990,6 +990,67 @@ updateUpdateApnConfig expects first argument as APN ID returned by addNewApnConf
 
 1 indicates success & -1 a failure.
 
+### Whitelist USB for an app
+
+Whitelist a USB device for a particular application, granting permission for that application to use the USB device.
+
+You can obtain the USB device's Product and Vendor Ids using the [Android UsbDevice API](https://developer.android.com/reference/android/hardware/usb/UsbDevice).
+
+**This API is only available on Samsung KNOX enabled devices  & is available from the Esper Device SDK version SUNFYRE_V8.**
+
+```java
+sdk.whitelistUsbDeviceForPackage(
+       "com.example.app",
+       20,  // USB Vendor ID
+       20,  // USB Product ID
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               showMethodResult("onResponse: Update Result: " + response);
+           }
+
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+});
+```
+
+Params:
+
+*   packageName {String} : the package name of the application that USB device should be whitelisted for
+*   vendorId {Int} : the Vendor Id of the USB device
+*   productId {Int} : the Product Id of the USB device
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
+
+### Clear USB Whitelist for an app
+
+Clear all USB devices that were whitelisted for an application using the **whitelistUsbDeviceForPackage** SDK method.
+
+**This API is only available on Samsung KNOX enabled devices & is available from the Esper Device SDK version SUNFYRE_V8.**
+
+```java
+sdk.clearUsbDeviceWhitelistForPackage(
+       "com.example.app",
+       new EsperDeviceSDK.Callback<Integer>() {
+           @Override
+           public void onResponse(@Nullable Integer response) {
+               showMethodResult("onResponse: Update Result: " + response);
+           }
+
+           @Override
+           public void onFailure(Throwable t) {
+               Log.e(TAG, "onFailure: ", t);
+               showFailureResult(t);
+           }
+});
+```
+
+Params:
+
+*   packageName {String} : the package name of the application that USB device should be whitelisted for
+*   callback {EsperDeviceSDK.Callback} : callback implementation to be invoked upon completion of the operation
 
 ### Get USB Permission Manager
 
@@ -1050,4 +1111,28 @@ try {
     Log.e(TAG, "onFailure: ", t);
     showFailureResult(t);
 }
+```
+
+### Turn Wifi/Bluetooth for the device to on/off
+
+**Notes:**
+
+* Set Bluetooth/Wi-Fi in string type state to true(ON)/false(OFF) in boolean type
+
+* State successful means it has successfully started processing Bluetooth/Wi-Fi to true(ON)/false(OFF) state
+
+* For best result , add a listener if the state is successful. For Bluetooth you need to use BluetoothAdapter.ACTION_STATE_CHANGED
+
+* @return if state change was successful processing or not , please note it does not guarantee the state change
+
+
+```java
+sdk.changeSettingsState(EsperDeviceSDK.BLUETOOTH,true, new EsperDeviceSDK.Callback<Boolean>() {
+@Override
+public void onResponse(@Nullable Boolean response) {
+if (response) {
+Log.e(TAG, "response: " +response);
+}
+}
+})
 ```
