@@ -44,11 +44,11 @@ Please contact [Esper Support](mailto:support@esper.io) to access this capabilit
 
 ### New
 
--   For customers using the new Onboarding experience with Esper's new Blueprints, we have added the Directory Record Management APIs — Create, Delete, Update and List Directory Records.
+-   For customers using the new Onboarding experience with Esper's new [Blueprints](https://api.esper.io/tag/Blueprint), we have added the [Directory Record Management APIs](https://api.esper.io/tag/Directory-Record) — Create, Delete, Update and List Directory Records.
     
 -   For customers using the new Onboarding experience, we have added the Blueprint APIs — Create, Delete, Update, Restore and List Blueprints.
     
--   We have added a new Pipeline API for cancelling Target Run commands.
+-   We have added a new Pipeline API for [cancelling Target Run](https://api.esper.io/tag/Target-Runs#operation/putTargetRunCommandStatus) commands.
     
 
 ### Updates
