@@ -44,24 +44,24 @@ Please contact [Esper Support](mailto:support@esper.io) to access this capabilit
 
 ### New
 
--   For customers using the new Onboarding experience with Esper's new Blueprints, we have added the Directory Record Management APIs — Create, Delete, Update and List Directory Records.
+-   For customers using the new Onboarding experience with Esper's new Blueprints, we have added the [Directory Record Management APIs](https://api.esper.io/tag/Directory-Record) — Create, Delete, Update and List Directory Records.
     
--   For customers using the new Onboarding experience, we have added the Blueprint APIs — Create, Delete, Update, Restore and List Blueprints.
+-   For customers using the new Onboarding experience, we have added the [Blueprint APIs](https://api.esper.io/tag/Blueprint) — Create, Delete, Update, Restore and List Blueprints.
     
--   We have added a new Pipeline API for cancelling Target Run commands.
+-   We have added a new Pipeline API for [cancelling Target Run](https://api.esper.io/tag/Target-Runs#operation/putTargetRunCommandStatus) commands.
     
 
 ### Updates
 
--   Added support for the NOTIFY_DEVICE command under ‘Create a command request API’. This NOTIFY_DEVICE command allows you to broadcast messages to the device.
+-   Added support for the NOTIFY_DEVICE command under the ["Create a command request" API](https://api.esper.io/tag/Commands-V2#operation/createCommand). This NOTIFY_DEVICE command allows you to broadcast messages to the device.
     
--   Added all device state details to the response of the "Fetch all devices in an enterprise" API. This allows querying devices by their state, such as Online, Offline, and Onboarding in progress.
+-   Added all device state details to the response of the ["Fetch all devices in an enterprise" API](https://api.esper.io/tag/Device#operation/getAllDevices). This allows querying devices by their state, such as Online, Offline, and Onboarding in progress.
     
--   Added all device state details to the sample response parameter of the "Fetch device details by ID" API. This allows extracting device state insights such as Device is undergoing a Factory Reset, Device is Online, etc.
+-   Added all device state details to the sample response parameter of the ["Fetch device details by ID" API](https://api.esper.io/tag/Device#operation/getDeviceById). This allows extracting device state insights such as Device is undergoing a Factory Reset, Device is Online, etc.
     
 -   Added status descriptions — Processing, Success, Timeout etc. — to Pipeline Runs, Target Runs and Stage Runs APIs.
     
--   Added description for latest_event parameter in the latest event API. This parameter must be set to 1 to return the latest event details.
+-   Added description for latest_event parameter in the ["Latest event" API](https://api.esper.io/tag/Device#operation/getDeviceEvent). This parameter must be set to 1 to return the latest event details.
     
 
   
