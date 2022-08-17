@@ -3,9 +3,9 @@
 The Esper Device SDK exposes an API to conduct privileged operations on Esper Managed devices. The SDK can be used to develop apps which need to perform seamless operations on or retrieve vital information out of a device. Esper device SDK now uses the latest versions of AndroidX libraries (androidx.core-core-ktx version: 1.5.0 stable) as dependencies. This will reduce the compile time for applications using the Esper SDK.
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
-Current version: 2.1.6510.20
+Current version: v2.1.7787.21
 
-Release name: SUNFYRE_V7
+Release name: SUNFYRE_V8
 
 Table of Contents:
 
@@ -53,13 +53,13 @@ maven {
 
 * In your module (app-level) Gradle file (usually app/build.gradle), add the dependency for the Esper SDK:
 
-`implementation 'io.esper.devicesdk:app:2.1.6510.20'`
+`implementation 'io.esper.devicesdk:app:v2.1.7787.21'`
 
  or
 
 `implementation 'io.esper.devicesdk:app:+'`
 
-Note that Version 2.1.6510.20 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
+Note that Version v2.1.7787.21 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
 
 For Android 11, add the following code in the AndroidManifest.xml :
 
