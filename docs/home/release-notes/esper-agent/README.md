@@ -2,8 +2,8 @@
 
 List of all the Esper Agent release notes:
 
-- [Esper Agent v7.8.7875 (August 2022)](./v7.8.7875.md)
-- [Esper Agent v7.8.7718 (August 2022)](./v7.8.7718.md)
+- [Esper Agent v7.8.7875 (August 22, 2022)](./v7.8.7875.md)
+- [Esper Agent v7.8.7718 (August 16, 2022)](./v7.8.7718.md)
 - [Esper Agent v7.8.6435 (June 2022)](./ea-86-1.md)
 - [Esper Agent v7.8.5502 (April 22, 2022)](./v7.8.5502.md)
 - [Esper Agent v7.8.5434 (April 19, 2022)](./v7.8.5434.md)
