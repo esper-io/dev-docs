@@ -149,7 +149,11 @@ module.exports = {
             {
               title: 'Esper Agent release notes',
               children: [
-               
+             
+                {
+                  title: 'Esper Agent v7.8.7875',
+                  path: "release-notes/esper-agent/v7.8.7875"
+                },    
                 {
                   title: 'Esper Agent v7.8.7718',
                   path: "release-notes/esper-agent/v7.8.7718"
