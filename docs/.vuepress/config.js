@@ -152,7 +152,7 @@ module.exports = {
                
                 {
                   title: 'Esper Agent v7.8.7718',
-                  path: "release-notes/esper-agent/ea-91"
+                  path: "release-notes/esper-agent/v7.8.7718"
                 },
                 {
                   title: 'Esper Agent v7.8.6435',
