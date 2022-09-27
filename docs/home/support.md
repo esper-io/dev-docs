@@ -16,7 +16,6 @@ You are welcome to provide feedback at any time through the Esper Console using 
 * [Need Help Choosing] - Based on your selections, the tool will suggest one of the four provisioning methods by highlighting it. Click on it to see the steps to provision your device. If you still have trouble figuring the provisioning process, Esper support will be happy to assist you. Visit our support page to find the appropriate channel to reach out to us.
 
 
-[Esper Support Forum]: https://support.esper.io/s/
 [Feedback Widget]: https://console-docs.esper.io/miscellaneous/#what-is-the-feedback-widget
 [GitHub]: https://github.com/esper-io
 [Esper Tools]: https://docs.esper.io/home/#esper-tools
