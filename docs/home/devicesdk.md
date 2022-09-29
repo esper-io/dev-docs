@@ -53,13 +53,13 @@ maven {
 
 * In your module (app-level) Gradle file (usually app/build.gradle), add the dependency for the Esper SDK:
 
-`implementation 'io.esper.devicesdk:app:v2.1.7787.21'`
+`implementation 'io.esper.devicesdk:app:2.1.7787.21'`
 
  or
 
 `implementation 'io.esper.devicesdk:app:+'`
 
-Note that Version v2.1.7787.21 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
+Note that Version 2.1.7787.21 is the current latest version of the Esper SDK, and it can change in every release. Developers can use + instead of version if they need to get the latest version automatically.
 
 For Android 11, add the following code in the AndroidManifest.xml :
 
