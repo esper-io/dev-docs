@@ -1,0 +1,2 @@
+$ git config --global user.name "Xi Liao"
+$ git config --global user.email "xi@esper.io"

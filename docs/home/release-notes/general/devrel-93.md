@@ -1,3 +1,6 @@
+git config --global user.name "Xi Liao"
+
+git config --global user.email "xi@esper.io"
 # DevRel 93
 
 Esper DevRel 93 is a standard release with exciting new updates and improvements. Along with adding Android 13 support, we added several improvements to the Blueprint experience. Significant improvement on time taken for Kiosk mode changes to reflect on console.
