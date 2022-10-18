@@ -23,7 +23,7 @@ We have made a significant improvement on time taken for Kiosk mode changes made
 
 ## Blueprint information added to Esper Settings
 
-You can now see Blueprint versions under “Esper Settings → About”. Blueprint version changes follow Blueprint config setup, where: 
+You can now see Blueprint versions under "Esper Settings → About". Blueprint version changes follow Blueprint config setup, where: 
 
 1.  If you remove a Blueprint from a Group, the device will still have the Blueprint version last set to it.
 2.  Blueprint version will only be updated when you move the device to a different Group with an assigned Blueprint.
