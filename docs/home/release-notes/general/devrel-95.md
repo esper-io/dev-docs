@@ -3,6 +3,7 @@
 Date: 10/12/2022
 
 Esper DevRel 95 delivers a broad set of bug fixes and improvements, including:
+
 - Changes to the Blueprints creation/edit screens making them easier to use. We hope you like them!
 - Fixing the IMEI/Serial Number bulk upload where certain device records were not being displayed by the Esper Console.
 - Properly displaying the state of Hidden Wi-Fi access points were in the Esper Console.
