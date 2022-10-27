@@ -919,9 +919,9 @@ Key-Value Reference:
 
 ### Start/Stop Mobile Data
 
-Mobile data can be started/stopped only with DPC on android 4.4 & requires supervisor plugin on Android 5.0+.
+Mobile data can be started/stopped requires supervisor plugin on Android 5.0+.
 
-enableMobileData function of SDK expects two arguments:
+`enableMobileData` function of SDK expects two arguments:
 
 boolean value to start/stop mobile data.
 true = start mobile data & false = stop mobile data 
