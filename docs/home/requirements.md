@@ -8,7 +8,7 @@ The Console requires [Chrome](https://www.google.com/chrome) v80 or above. At pr
 
 ## Dedicated Android Devices
 
-Targeted Dedicated Devices must run Android version 4.4 KitKat (API Level 19) or above. However, we recommend that devices running Android version 7.0 Nougat (API Level 24) or above be used with Esper.
+Targeted Dedicated Devices must run Android version 5.0 Lollipop (API Level 21) or above. However, we recommend that devices running Android version 7.0 Nougat (API Level 24) or above be used with Esper.
 
 We have recently started supporting latest Android version 10 on our platform.
 
@@ -26,35 +26,35 @@ Esper Development Devices running Esper Enhanced Android will always be supporte
 * :question: - Partially supported. This option is only supported if a supervisor is available.
 
 
-|   |Android 4.4 (KitKat)   |Android 5.0 (Lollipop)   |Android 5.1 (Lollipop MR1)   |Android 6.0 (Marshmallow)   |Android 7.0 (Nougat)   |Android 7.1 (Nougat MR1)   |Android 8.0 (Oreo)   |Android 8.1 (Oreo MR1)   |Android 9.0 (Pie)   | Android 10.0 (Q)
-|---|---|---|---|---|---|---|---|---|---|---|
-| Managed Google Play  | :x:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| App Install/Uninstall  | :exclamation:  | :exclamation:  | :exclamation:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| App Permission Management   | :x:  | :x:  | :x:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark: | :heavy_check_mark: 
-| Remote Viewer & Screenshot  | :x:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| **Device Commands**  |  | | | | | | | | |
-| Reboot  |  :question: |  :question: | :question: | :question:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Location Control  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Brightness Control  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Volume Controls  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Rotation Control  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Screen Timeout Control  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark: 
-| **Policy Features**  |  |  | | | | |  |  | |
-| Disable Lockscreen  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |:heavy_check_mark: | :heavy_check_mark: 
-| Disable Camera  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable Status Bar  | :x:  | :x:   | :x:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable NFC Beam  | :x:  | :x:  |  :heavy_check_mark: | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable Outgoing Calls  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable Factory Reset  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable USB Connectivity  | :x:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable Screenshot  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable Safe Mode  | :x:  | :x:  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Disable SMS  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Enforce Password Rules  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark: 
-| Enforce Default App Permissions  | :x:   | :x:  | :x:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark: 
-| Safety Net  | :heavy_check_mark:   | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark: 
-| Device Telemetry  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
-| Kiosk Mode & Lockdown  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark: 
+|                                 | Android 5.0 (Lollipop) | Android 5.1 (Lollipop MR1) | Android 6.0 (Marshmallow) | Android 7.0 (Nougat) | Android 7.1 (Nougat MR1) | Android 8.0 (Oreo) | Android 8.1 (Oreo MR1) | Android 9.0 (Pie)  | Android 10.0 (Q)   |
+| ------------------------------- | ---------------------- | -------------------------- | ------------------------- | -------------------- | ------------------------ | ------------------ | ---------------------- | ------------------ | ------------------ |
+| Managed Google Play             | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| App Install/Uninstall           | :exclamation:          | :exclamation:              | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| App Permission Management       | :x:                    | :x:                        | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Remote Viewer & Screenshot      | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| **Device Commands**             |                        |                            |                           |                      |                          |                    |                        |                    |                    |
+| Reboot                          | :question:             | :question:                 | :question:                | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Location Control                | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Brightness Control              | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Volume Controls                 | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Rotation Control                | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Screen Timeout Control          | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| **Policy Features**             |                        |                            |                           |                      |                          |                    |                        |                    |                    |
+| Disable Lockscreen              | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark:
+| Disable Camera                  | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable Status Bar              | :x:                    | :x:                        | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable NFC Beam                | :x:                    | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable Outgoing Calls          | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable Factory Reset           | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable USB Connectivity        | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable Screenshot              | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable Safe Mode               | :x:                    | :x:                        | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Disable SMS                     | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Enforce Password Rules          | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Enforce Default App Permissions | :x:                    | :x:                        | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Safety Net                      | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Device Telemetry                | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
+| Kiosk Mode & Lockdown           | :heavy_check_mark:     | :heavy_check_mark:         | :heavy_check_mark:        | :heavy_check_mark:   | :heavy_check_mark:       | :heavy_check_mark: | :heavy_check_mark:     | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Infrastructure
 
@@ -64,18 +64,18 @@ Dedicated devices are often behind corporate firewalls, preventing the Esper bac
 
 Dedicated devices are often behind corporate firewalls, preventing Esper's backend from communicating with them (or vice-versa). Please make sure to whitelist the following URLs and Ports if your fleet runs behind such a firewall.
 
-| FQDNs                                 | Ports                           | Features                                                                                 |
-|---------------------------------------|---------------------------------|------------------------------------------------------------------------------------------|
-| *.amazonaws.com                       | TCP: 443 (HTTPS), TCP: 8883 (MQTT)                   | For provisioning, app management and device management                                   |
-|  mqtt.shoonyacloud.com |       TCP: 1883 (MQTT)                 | For MQTT communication with devices                                                          |                                                         |
-| services.shoonyacloud.com           |TCP: 443 (HTTPS)     | Provisioning services and Remote Viewer APK                                        |
-| turn.shoonyacloud.com              | TCP/UDP: 3478 (SCTP), TCP/UDP: 5349 (SCTP), UDP: 49152 - 65535               | For Remote Viewer and Remote Control services                                                            |
-| dpcdownloads.esper.cloud              | TCP: 443 (HTTPS)| For the 6-tap QR code method of provisioning and Remote Viewer APK                       |
-| [customer endpoint].esper.cloud       | TCP: 443 (HTTPS)                            | Grants access to the Esper Console when operating under a network with a restricted outbound firewall                                                                        |
-| [customer endpoint]-api.esper.cloud   | TCP: 443 (HTTPS)                      | For communicating from the device to the Esper Endpoint. (example: device status events and command success/failure messages) |
-| mqtt-telemetry-prod.esper.cloud       | TCP: 1883 (MQTT)                     | Deep telemetry from devices                                                              |
-| IP: 13.52.132.230          |  TCP: 40000 - 50000 | For allowing secure remote ADB access to your devices                       |
-| firebaseinstallations.googleapis.com and fcm.googleapis.com| TCP: 443 (HTTPS), TCP: 5228 (HTTPS), TCP: 5229 (HTTPS), TCP: 5230 (HTTPS)  | Backup channel, also used for ping command to wake up a device (Only for GMS devices)       |
+| FQDNs                                                       | Ports                                                                     | Features                                                                                                                      |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| *.amazonaws.com                                             | TCP: 443 (HTTPS), TCP: 8883 (MQTT)                                        | For provisioning, app management and device management                                                                        |
+| mqtt.shoonyacloud.com                                       | TCP: 1883 (MQTT)                                                          | For MQTT communication with devices                                                                                           |                                                         
+| services.shoonyacloud.com                                   | TCP: 443 (HTTPS)                                                          | Provisioning services and Remote Viewer APK                                                                                   |
+| turn.shoonyacloud.com                                       | TCP/UDP: 3478 (SCTP), TCP/UDP: 5349 (SCTP), UDP: 49152 - 65535            | For Remote Viewer and Remote Control services                                                                                 |
+| dpcdownloads.esper.cloud                                    | TCP: 443 (HTTPS)                                                          | For the 6-tap QR code method of provisioning and Remote Viewer APK                                                            |
+| [customer endpoint].esper.cloud                             | TCP: 443 (HTTPS)                                                          | Grants access to the Esper Console when operating under a network with a restricted outbound firewall                         |
+| [customer endpoint]-api.esper.cloud                         | TCP: 443 (HTTPS)                                                          | For communicating from the device to the Esper Endpoint. (example: device status events and command success/failure messages) |
+| mqtt-telemetry-prod.esper.cloud                             | TCP: 1883 (MQTT)                                                          | Deep telemetry from devices                                                                                                   |
+| IP: 13.52.132.230                                           | TCP: 40000 - 50000                                                        | For allowing secure remote ADB access to your devices                                                                         |
+| firebaseinstallations.googleapis.com and fcm.googleapis.com | TCP: 443 (HTTPS), TCP: 5228 (HTTPS), TCP: 5229 (HTTPS), TCP: 5230 (HTTPS) | Backup channel, also used for ping command to wake up a device (Only for GMS devices)                                         |
 
 
 :::tip

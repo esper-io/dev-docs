@@ -3,6 +3,8 @@
 List of all the Console release notes:
 
 
+- [DevRel 95 (October 2022)](./devrel-95.md)
+- [DevRel 93 (September 2022)](./devrel-93.md)
 - [DevRel 91 (August 2022)](./devrel-91.md)
 - [DevRel 86 (June 2022)](./devrel-86.md)
 - [DevRel 81 (February 2022)](./devrel-81.md)

@@ -136,14 +136,6 @@ module.exports = {
                   title: 'v6.2.0',
                   path: "release-notes/provisioner/pro-rel-1.0"
                 },
-                // {
-                //   title: 'SUNFYRE_V6',
-                //   path: "release-notes/sdk/rel-2.0"
-                // },
-                // {
-                //   title: 'SUNFYRE_V5',
-                //   path: "release-notes/sdk/rel-1.0"
-                // },
               ],
             },
             {
@@ -162,10 +154,6 @@ module.exports = {
                   title: 'Esper Agent v7.8.6435',
                   path: "release-notes/esper-agent/ea-86-1"
                 },
-                // {
-                //   title: 'Esper Agent v7.8.5502',
-                //   path: "release-notes/esper-agent/ea-86"
-                // },
                 {
                   title: 'Esper Agent v7.8.5502',
                   path: "release-notes/esper-agent/v7.8.5502"
@@ -175,54 +163,22 @@ module.exports = {
                   path: "release-notes/esper-agent/v7.8.5434"
                 },
                 {
-                  title: 'Esper Agent v7.8.5391',
-                  path: "release-notes/esper-agent/v7.8.5391"
-                },
-                {
-                  title: 'Esper Agent v7.8.5266',
-                  path: "release-notes/esper-agent/v7.8.5266"
-                },
-                {
-                  title: 'Esper Agent v7.8.4021',
-                  path: "release-notes/esper-agent/v7.8.4021"
-                },
-                {
-                  title: 'Esper Agent v7.6.3452',
-                  path: "release-notes/esper-agent/v7.6.3452"
-                },
-                {
-                  title: 'Esper Agent v7.6.2851',
-                  path: "release-notes/esper-agent/v7.6.2851"
-                },
-                {
-                  title: 'Esper Agent v7.5.1332',
-                  path: "release-notes/esper-agent/v7.5.1332"
-                },
-                {
-                  title: 'Esper Agent v7.6.2504',
-                  path: "release-notes/esper-agent/v7.6.2504"
-                },
-                {
-                  title: 'Esper Agent v7.5.2281',
-                  path: "release-notes/esper-agent/v7.5.2281"
-                },
-                {
-                  title: 'Esper Agent v7.5.1748',
-                  path: "release-notes/esper-agent/v7.5.1748"
-                },
-                {
-                  title: 'Esper Agent v7.5.1332',
-                  path: "release-notes/esper-agent/v7.5.1332"
-                },
-                {
-                  title: 'Esper Agent v7.5.0763',
-                  path: "release-notes/esper-agent/v7.5.0763"
-                },
+                  title: 'View all >',
+                  path: 'release-notes/esper-agent/',
+                }
               ],
             },
             {
               title: 'Console release notes',
               children: [
+                {
+                  title: '95.0 (October 2022)',
+                  path: "release-notes/general/devrel-95"
+                },
+                {
+                  title: '93.0 (September 2022)',
+                  path: "release-notes/general/devrel-93"
+                },
                 {
                   title: '91.0 (August 2022)',
                   path: "release-notes/general/devrel-91"
@@ -230,22 +186,6 @@ module.exports = {
                 {
                   title: '86.0 (June 2022)',
                   path: "release-notes/general/devrel-86"
-                },
-                {
-                  title: '81.0 (April 2022)',
-                  path: "release-notes/general/devrel-81"
-                },
-                {
-                  title: '77.0 (February 2022)',
-                  path: "release-notes/general/devrel-77"
-                },
-                {
-                  title: '76.0 (January 2022)',
-                  path: "release-notes/general/devrel-76"
-                },
-                {
-                  title: '73.0 (December 2021)',
-                  path: "release-notes/general/devrel-73"
                 },
                 {
                   title: 'View all >',

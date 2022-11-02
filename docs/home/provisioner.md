@@ -351,7 +351,7 @@ If you wish to exit the provisioning process for any reason, touch or click on t
 
 <img src="./assets/NewProvisioner/Preparing.png" alt="provisioner" style="max-width:200px;"/>
 
-You typically will need to take several actions on the device, depending on the state of the device’s firmware. The example below is based on an Android 7.1 GMS device. Earlier Android versions such as Android 4.4 and Android 5.1 will exhibit slightly different behavior (e.g Activate device administrator and enabling accessibility services) - follow the prompts provided by the Esper agent to successfully complete enrollment and provisioning. On devices without a touch screen or if navigation buttons are not displayed, an external peripheral device like a mouse will be required.
+You typically will need to take several actions on the device, depending on the state of the device’s firmware. The example below is based on an Android 7.1 GMS device. Earlier Android versions such as Android 5.1 will exhibit slightly different behavior (e.g Activate device administrator and enabling accessibility services) - follow the prompts provided by the Esper agent to successfully complete enrollment and provisioning. On devices without a touch screen or if navigation buttons are not displayed, an external peripheral device like a mouse will be required.
 
 On some devices these actions will not need to be taken, in these cases you will not be prompted by the Esper agent. Please [contact Esper](mailto:support@esper.io) if you run into any issues completing the provisioning process on  the device.
 
