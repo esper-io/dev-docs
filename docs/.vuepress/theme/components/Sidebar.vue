@@ -47,14 +47,14 @@ export default {
   }
 
   .support-title {
-    font-weight: bold;
+    font-weight: 800;
     font-size: 1.2em;
     color: #626262 !important;
   }
 
   .faq-title {
     margin-top: 1rem;
-    font-weight: bold !important;
+    font-weight: 800 !important;
   }
   .faq-item {
     margin-top: 0.5rem;
@@ -103,7 +103,7 @@ export default {
     & > li > a.sidebar-link {
       font-size: 1em;
       line-height: 1.7;
-      font-weight: 600 !important;
+      font-weight: 700 !important;
     }
 
     & > li:not(:first-child) {
