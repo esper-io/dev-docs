@@ -113,11 +113,3 @@ At Esper, our developers use all of the above platforms to interact with Esper i
 ## Help
 
 If you face any issues setting up your requirements for Esper, please don't hesitate to [ask for some help!](./support.md) We'll be happy to assist you.
-
-
-
-[mqtt.shoonyacloud.com:1883]: http://mqtt.shoonyacloud.com:1883/
-[turn.shoonyacloud.com]: http://turn.shoonyacloud.com/
-[downloads.esper.io]: http://downloads.esper.io/
-[services.shoonyacloud.com]: http://services.shoonyacloud.com/
-

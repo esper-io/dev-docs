@@ -36,8 +36,8 @@ Table of Contents:
   * [Set Device Orientation](#set-device-orientation)
   * [Set Global Settings](#set-global-settings)
   * [Set System Settings](#set-system-settings)
-  * [Start/Stop Mobile Data](#startstop-mobile-data)
-  * [Start/Stop Wifi-Hotspot](#startstop-wifi-hotspot)
+  * [Start or Stop Mobile Data](#start-or-stop-mobile-data)
+  * [Start or Stop Wifi-Hotspot](#start-or-stop-wifi-hotspot)
   * [Update Existing APN Config](#update-existing-apn-config)
 
 ## SDK Setup
@@ -924,7 +924,7 @@ Key-Value Reference:
     
 [https://developer.android.com/reference/android/provider/Settings.System](https://developer.android.com/reference/android/provider/Settings.System)
 
-### Start/Stop Mobile Data
+### Start or Stop Mobile Data
 
 Mobile data can be started/stopped requires supervisor plugin on Android 5.0+.
 
@@ -949,7 +949,7 @@ sdk.enableMobileData(false, new EsperDeviceSDK.Callback<Boolean>() {
 });
 ```
 
-### Start/Stop Wifi-Hotspot
+### Start or Stop Wifi-Hotspot
 
 Wifi Hotspot can be enabled/disabled with a provision to set SSID and password. 
 
