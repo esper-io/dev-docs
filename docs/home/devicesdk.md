@@ -3,45 +3,48 @@
 The Esper Device SDK exposes an API to conduct privileged operations on Esper Managed devices. The SDK can be used to develop apps which need to perform seamless operations on or retrieve vital information out of a device. Esper device SDK now uses the latest versions of AndroidX libraries (androidx.core-core-ktx version: 1.5.0 stable) as dependencies. This will reduce the compile time for applications using the Esper SDK.
 In its current development state, the SDK provides limited features but the list will grow with time driven by customer need.
 
-Current version: v2.1.7787.21
+Current version: **v2.1.7787.21**
 
-Release name: SUNFYRE_V8
+Release name: **SUNFYRE_V8**
 
 Table of Contents:
 
-* SDK Setup
-  * Downloading the SDK
-  * Initializing the SDK
-  * Activating the SDK
-  * Checking Activation Status
+* **SDK Setup**
+  * [Downloading the SDK](#downloading-the-sdk)
+  * [Initializing the SDK](#initializing-the-sdk)
+  * [Activating the SDK](#activating-the-sdk)
+  * [Checking Activation Status](#checking-activation-status)
 
-* SDK Methods
-  * Add New APN
-  * Change App State
-  * Clearing App Data
-  * Configure APNs via the Esper Device SDK
-  * Configure No Network Fallback
-  * Disable Users From Powering Off Devices
-  * Getting Device Info
-  * Getting Device Settings
-  * Getting Device Temperatures
-  * Getting Removal Storage Path
-  * Manage AppOpp Permissions
-  * Manage Dock
-  * Managed App Configurations
-  * Push Telemetry Data
-  * Reboot Device via Esper Device SDK
-  * Remove APN Config
-  * Set APN as Default
-  * Set Brightness
-  * Set Device Orientation
-  * Set Global Settings
-  * Set System Settings
-  * Start/Stop Mobile Data
-  * Start/Stop Wifi-Hotspot
-  * Update Existing APN Config
+* **SDK Methods**
+  * [Add New APN](#add-new-apn)
+  * [Change App State](#change-app-state)
+  * [Clearing App Data](#clearing-app-data)
+  * [Configure APNs via the Esper Device SDK](#configure-apns-via-the-esper-device-sdk)
+  * [Configure No Network Fallback](#configure-no-network-fallback)
+  * [Disable Users From Powering Off Devices](#disable-users-from-powering-off-devices)
+  * [Getting Device Info](#getting-device-info)
+  * [Getting Device Settings](#getting-device-settings)
+  * [Getting Device Temperatures](#getting-device-temperatures)
+  * [Getting Removal Storage Path](#getting-removable-storage-path)
+  * [Manage Dock](#manage-dock)
+  * [Managed App Configurations](#managed-app-configurations)
+  * [Push Telemetry Data](#push-telemetry-data)
+  * [Reboot Device via Esper Device SDK](#reboot-device-via-esper-device-sdk)
+  * [Remove APN Config](#remove-apn-config)
+  * [Set APN as Default](#set-apn-as-default)
+  * [Set Brightness](#set-brightness)
+  * [Set Device Orientation](#set-device-orientation)
+  * [Set Global Settings](#set-global-settings)
+  * [Set System Settings](#set-system-settings)
+  * [Start/Stop Mobile Data](#startstop-mobile-data)
+  * [Start/Stop Wifi-Hotspot](#startstop-wifi-hotspot)
+  * [Update Existing APN Config](#update-existing-apn-config)
 
-## Enabling the Esper SDK in your Application
+## SDK Setup
+
+First you'll have to download the SDK in your application, for this follow the steps.
+
+### Downloading the SDK
 
 * In your settings.gradle, add the following repository URL:
 
@@ -136,6 +139,8 @@ If the check is successful, the API will return a boolean in ​onResponse​ in
 
 * This value will always be true by default if the Esper Agent Device SDK API level is lower than version 4. Otherwise, if there are any issues when checking activation status, ​onFailure​ will be called.
 
+## SDK Methods
+
 ### Add New APN
 
 ```java
@@ -189,9 +194,9 @@ addNewApnConfig function returns a newly added APN ID as an integer in response.
 
 App state can now be changed from the SDK. Every app supports three states:
 
-* DISABLE: Requires Android 5.0 and above. DPC Disables the app on the managed device. 
-* SHOW: The app can be used by the managed device, and the shortcut is provided on the Home screen.
-* HIDE: Hides the app, making it unusable in the DPC. No shortcut is provided on the Home screen, but it is still possible for the app to run in the background.
+* **DISABLE**: Requires Android 5.0 and above. DPC Disables the app on the managed device. 
+* **SHOW**: The app can be used by the managed device, and the shortcut is provided on the Home screen.
+* **HIDE**: Hides the app, making it unusable in the DPC. No shortcut is provided on the Home screen, but it is still possible for the app to run in the background.
 
 **Note: One cannot make state changes on an application if it is in kiosk mode.**
 
@@ -199,22 +204,22 @@ The changeAppState function expects three arguments:
 
 ```java
 
-packageName: (String) the app whose state we want to change.
-state: (String) either of "SHOW", "DISABLE", "ENABLE"
-EsperDeviceSDK.Callback for the results. Response is boolean with
-true = changing app state success.
-false = some error occurred.
+// packageName: (String) the app whose state we want to change.
+// state: (String) either of "SHOW", "DISABLE", "ENABLE"
+// EsperDeviceSDK.Callback for the results. Response is boolean with
+// true = changing app state success.
+// false = some error occurred.
 sdk.changeAppState("com.android.chrome", "DISABLE", new EsperDeviceSDK.Callback<Boolean>() {
-                @Override
-                public void onResponse(@Nullable Boolean response) {
-         String message = response ? "success" : "failed";
-                    Log.d(TAG, message);
-                }
+    @Override
+    public void onResponse(@Nullable Boolean response) {
+        String message = response ? "success" : "failed";
+        Log.d(TAG, message);
+    }
 
-                @Override
-                public void onFailure(Throwable t) {
-                    Log.d(TAG, "Error", t);
-                }
+    @Override
+    public void onFailure(Throwable t) {
+        Log.d(TAG, "Error", t);
+    }
 });
 ```
 
@@ -253,7 +258,9 @@ To create new / update an existing APN, a JSON string needs to be passed in SDK 
 
 To Update/Remove/Delete config, an APN ID needs to be passed.
 
+:::tip
 **MVNO_TYPE & MVNO_MATCH_DATA on Samsung devices is only available on Android API Level 29 & above.**
+:::
 
 ### Configure No Network Fallback
 
@@ -377,7 +384,7 @@ The response contains information about device settings as well as the DPC Param
 
 This API requires authentication, else will return InactiveSDKException. The response is JSONObject. Model class can be created using this configuration:
 
-|                  |                  |
+| key              | value            |
 | ---------------- | ---------------- |
 | adbTimeout       | Long value       |
 | brightnessScale  | Integer value    |
@@ -453,7 +460,7 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
 
 Method to get Device hardware component's temperatures such as CPU, GPU, Battery or Skin in Celsius.
 
-:::Note
+:::warning
 This SDK method requires Android API level 24.
 :::
 
@@ -782,22 +789,22 @@ The setBrightness function expects two arguments:
 
 ```java
 
-scale: (int) the percentage of brightness for device
-EsperDeviceSDK.Callback for the results. Response is boolean with
-true = changing app state success.
-false = some error occurred.
+// scale: (int) the percentage of brightness for device
+// EsperDeviceSDK.Callback for the results. Response is boolean with
+// true = changing app state success.
+// false = some error occurred.
 sdk.setBrightness(10, new EsperDeviceSDK.Callback<Boolean>() {
-                @Override
-                public void onResponse(@Nullable Boolean response) {
-                    if(response != null) {
-                        showMethodResult(response.toString());
-                    }
-                }
+    @Override
+    public void onResponse(@Nullable Boolean response) {
+        if(response != null) {
+            showMethodResult(response.toString());
+        }
+    }
 
-                @Override
-                public void onFailure(Throwable t) {
-                    Log.d(TAG, "Error", t);
-                }
+    @Override
+    public void onFailure(Throwable t) {
+        Log.d(TAG, "Error", t);
+    }
 });
 ```
 
@@ -1128,11 +1135,11 @@ try {
 
 ```java
 sdk.changeSettingsState(EsperDeviceSDK.BLUETOOTH,true, new EsperDeviceSDK.Callback<Boolean>() {
-@Override
-public void onResponse(@Nullable Boolean response) {
-if (response) {
-Log.e(TAG, "response: " +response);
-}
-}
+    @Override
+    public void onResponse(@Nullable Boolean response) {
+        if (response) {
+            Log.e(TAG, "response: " +response);
+        }
+    }
 })
 ```
