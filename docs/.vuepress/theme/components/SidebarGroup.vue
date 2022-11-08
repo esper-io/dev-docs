@@ -101,7 +101,7 @@ export default {
   transition color .15s ease
   cursor pointer
   font-size 1.1em
-  font-weight bold
+  font-weight 800
   // text-transform uppercase
   padding 0.35rem 1.5rem 0.35rem 1.25rem
   width 100%
