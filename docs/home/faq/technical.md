@@ -50,7 +50,7 @@ The default font size is 1. You can use the following JSON code in the Template 
 -   Can I export the MAC address?
     
 
-Use the following parameter in the [get device info SDK](http://ing-the-esper-sdk-in-your-application) to fetch the Wi-Fi MAC address for the device.
+Use the following parameter in the get device info SDK to fetch the Wi-Fi MAC address for the device.
 
 String  wifiMacAddress = esperDeviceInfo.getWifiMacAddress()
 
@@ -96,7 +96,7 @@ The USB configuration is not editable via JSON as these settings are hidden unde
 -   Can I set Wi-Fi credentials via SDK?
     
 
-Currently, you cannot directly set the Wi-Fi credentials. However, follow these [steps](https://docs.esper.io/home/devicesdk.html#enabling-the-esper-sdk-in-your-application) to get the ‘write’ access and enable/disable Wi-Fi settings.
+Currently, you cannot directly set the Wi-Fi credentials. However, follow these [steps](../devicesdk.md#enabling-the-esper-sdk-in-your-application) to get the ‘write’ access and enable/disable Wi-Fi settings.
 
   
 
