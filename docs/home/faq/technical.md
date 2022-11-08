@@ -96,7 +96,7 @@ The USB configuration is not editable via JSON as these settings are hidden unde
 -   Can I set Wi-Fi credentials via SDK?
     
 
-Currently, you cannot directly set the Wi-Fi credentials. However, follow these [steps](../devicesdk.md#enabling-the-esper-sdk-in-your-application) to get the ‘write’ access and enable/disable Wi-Fi settings.
+Currently, you cannot directly set the Wi-Fi credentials. However, follow these [steps](../devicesdk.md#activating-the-sdk) to get the ‘write’ access and enable/disable Wi-Fi settings.
 
   
 
