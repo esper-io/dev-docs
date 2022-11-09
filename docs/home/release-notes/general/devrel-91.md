@@ -24,13 +24,6 @@ Previously SAML SSO provisioning function was enabled by default. We changed the
 
 Note: Enabling SAML SSO will disable all the other log-in options — Esper SSO and Google Authentication.
 
-## Display more data usage columns in the reports
-    
-
-We have enhanced our report fields. Esper Console now displays all the columns in a daily and a custom report that was only available via API. Navigate to the "Reports" section to view the new data usage columns — Mobile Data Transmitted, Mobile Data Received, Wi-Fi Data Transmitted, and Wi-Fi Data Received.
-
-![Reports](https://lh3.googleusercontent.com/3_RaimF3ecoBvG1ObL18h-U_v7Qgt05-Oq5Xw1DjoU3r-YWGMPzMem7lTAH-EBlLHp_CZOEkM5xWx4J3sbJNqRrIRYEmE1aBmc_zu0wqlLWOTGIfGLPdrIcGO2d7IawTUKtXqGOa7tT5qjuYNwnjXrA)
-
 Please contact [Esper Support](mailto:support@esper.io) to access this capability.
 
 ## Bugs and Improvements
