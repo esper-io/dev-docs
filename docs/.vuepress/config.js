@@ -172,6 +172,10 @@ module.exports = {
               title: 'Console release notes',
               children: [
                 {
+                  title: '97.0 (November 2022)',
+                  path: "release-notes/general/devrel-97"
+                },
+                {
                   title: '95.0 (October 2022)',
                   path: "release-notes/general/devrel-95"
                 },
