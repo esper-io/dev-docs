@@ -18,11 +18,11 @@ We’ve added some new features in this release to make the most out of provisio
 
 - We’ve added the unique capability for Esper Foundation for Android x86 to support 802.1X via Ethernet. As part of this support you can now configure the required Ethernet certificate via JSON Settings in a Template or Blueprint, or via Namespace API.
 
-
 If you’re using Esper’s Blueprints feature, you now have the option to prevent enrolling devices in Android EMM (AKA Managed Google Play) during provisioning. Use this option if you do not need Play Store Apps for your deployment. If you choose this and later on wish to add Android EMM capabilities to your devices, they will need to be factory reset and re-provisioned.
 
  
 ## Bug Fixes and Improvements
+
 -  Fixed an issue that led some devices to get stuck during provisioning. 
 
 -  Patched a bug that resulted in the Play Store shortcut being hidden post-installation. 
