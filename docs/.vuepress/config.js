@@ -1,4 +1,7 @@
 module.exports = {
+  "config": {
+    "port":"8080"
+  },
   base: '/',
   title: 'Esper Docs',
   description: 'Learn more about Esper’s documentation.',
