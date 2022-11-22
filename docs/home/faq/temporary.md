@@ -1,3 +1,4 @@
+
 ## Esper Single Sign-on (SSO)
 
 As Esper strives to provide our customers with the most advanced functionality for their devices, we're excited to announce that we'll be transitioning to Single Sign-On (SSO), with enhanced security, support for SAML and OIDC, and other features. As part of this transition, starting in November 2022, we will begin notifying users, via email, when they will need to reset their passwords in order to migrate to these new and exciting features.
@@ -13,6 +14,7 @@ Look for an email sent by Esper. Click on the link in the email to get started.
 
 **Step 2**
 Choose a method: Email+Password or Google. Going forward, you will only be able to log in using that method.
+
 If you choose email & password, you may use your previous password or set a new one. 
 
 **Step 3**
@@ -43,4 +45,5 @@ You should receive an email with instructions on how to transition to the new SS
 **Should I set up SSO and how do I do that?**
 
 Not every organization will need SSO. However, if you already have an identity provider such as Okta, it may make sense to implement it in Esper. 
+
 
