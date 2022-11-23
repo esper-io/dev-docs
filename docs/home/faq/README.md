@@ -1,6 +1,6 @@
 # FAQs
 
-[Technical FAQ](./technical.md)
+<!-- [Technical FAQ](./technical.md) -->
 
 [General](./general.md)
 
