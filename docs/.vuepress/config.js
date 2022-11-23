@@ -233,7 +233,11 @@ module.exports = {
              {
               title: 'General',
               path: "faq/general.md",
-            }
+            },
+            // {
+            //   title: 'Temporary',
+            //   path: "faq/temporary.md"
+            // }
         //     {
         //       title: 'Non-technical',
         //       //path: "faq/non-technical/README.md",
