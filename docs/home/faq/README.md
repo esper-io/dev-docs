@@ -1,7 +1,7 @@
 # FAQs
 
-<!-- [Technical FAQ](./technical.md) -->
+[Technical FAQ](./technical.md)
 
 [General](./general.md)
-
-[Temporary](./temporary.md)
+<!-- 
+[Temporary](./temporary.md) -->
