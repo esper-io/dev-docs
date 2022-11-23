@@ -226,13 +226,17 @@ module.exports = {
            title: 'Frequently Asked Questions',
            collapsable: true,
            children: [
-             {
-               title: 'Technical',
-               path: "faq/technical.md",
-             },
+            //  {
+            //    title: 'Technical',
+            //    path: "faq/technical.md",
+            //  },
              {
               title: 'General',
               path: "faq/general.md",
+            },
+            {
+              title: 'Temporary',
+              path: "faq/temporary.md"
             }
         //     {
         //       title: 'Non-technical',
