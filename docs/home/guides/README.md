@@ -2,13 +2,16 @@
 
 
 <div class="flex flex-wrap -mx-1">
+
 <!-- <LinkPanel 
+
         title="How to Migrate your Esper Account to our New SSO Platform"
         icon="https://images.articulate.com/f:jpg,b:fff,s:cover,w:340/rise/courses/1IBRlUUhuhvn2WIXcLc4kvj_7OVs--AX/wRa7CTkDEhJq_lIt.jpg"
         subtitle="A more secure Authentication integration and SSO configuration."
         link="https://scribehow.com/shared/How_to_Migrate_your_Esper_Account_to_our_New_SSO_Platform__SNEwGMcZTVajjxgEi5HoUw" 
         footer="11 steps · Nov 21, 2022"
       /> -->
+
     <LinkPanel 
         title="Esper Features for Fleet Management at Scale"
         icon="https://images.articulate.com/f:jpg,b:fff,s:cover,w:340/rise/courses/1IBRlUUhuhvn2WIXcLc4kvj_7OVs--AX/wRa7CTkDEhJq_lIt.jpg"
