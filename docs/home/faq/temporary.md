@@ -1,3 +1,4 @@
+
 <!-- Starting November 2022, Esper will begin transitioning tenants to our new security service, Auth0. During this process, Esper users will need to set up their authentication details to log in to the Esper console. 
 
 Once this process starts, you should receive an email with a sign-up link. 
@@ -39,6 +40,7 @@ You will no longer be asked to sign up with a username, first name, and last nam
 You should have already received an email to sign up for the new system. If you did not receive an email, and you use SSO to currently sign in to Esper, please reach out to [support](mailto:support@esper.io). 
 
 **Should I set up SSO and how do I do that?**
+
 
 Not every organization will need SSO. However, if you already have an identity provider such as Okta, it may make sense to implement it in Esper. 
  -->
