@@ -14,7 +14,6 @@ Look for an email sent by Esper. Click on the link in the email to get started.
 
 **Step 2**
 Choose a method: Email+Password or Google. Going forward, you will only be able to log in using that method.
-
 If you choose email & password, you may use your previous password or set a new one. 
 
 **Step 3**
