@@ -12,7 +12,7 @@ Click on the link to sign on to the Esper console. The link is active for 7 days
 Look for an email sent by Esper. Click on the link in the email to get started.
 
 **Step 2**
-Choose a method: email & password or Google. Going forward, you will only be able to log in using that method.
+Choose a method: Email+Password or Google. Going forward, you will only be able to log in using that method.
 If you choose email & password, you may use your previous password or set a new one. 
 
 **Step 3**
@@ -33,7 +33,6 @@ If you don’t accept the invitation, administrators have the ability to send ne
 **What will change with the new authentication system?**
 
 There will be two major changes: 
-
 If you used both the email/password *and* Google Sign-on to log into Esper, this will no longer be possible. You will need to choose one method.
 You will no longer be asked to sign up with a username, first name, and last name. We’ve simplified this process so that now only a single name will be used in the console. 
 
