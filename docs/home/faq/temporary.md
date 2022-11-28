@@ -1,4 +1,6 @@
 
+## Esper Single Sign-on (SSO)
+
 As Esper strives to provide our customers with the most advanced functionality for their devices, we're excited to announce that we'll be transitioning to Single Sign-On (SSO), with enhanced security, support for SAML and OIDC, and other features. As part of this transition, starting in November 2022, we will begin notifying users, via email, when they will need to reset their passwords in order to migrate to these new and exciting features.
 
 Once this process starts, you should receive an email with a sign-up link. 
