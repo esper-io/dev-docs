@@ -3,7 +3,8 @@
 
 <div class="flex flex-wrap -mx-1">
 
-  <LinkPanel 
+
+<LinkPanel 
         title="How to Migrate your Esper Account to our New SSO Platform"
         icon="https://images.articulate.com/f:jpg,b:fff,s:cover,w:340/rise/courses/1IBRlUUhuhvn2WIXcLc4kvj_7OVs--AX/wRa7CTkDEhJq_lIt.jpg"
         subtitle="A more secure Authentication integration and SSO configuration."
