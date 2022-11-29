@@ -1,4 +1,7 @@
 module.exports = {
+  "config": {
+    "port":"8080"
+  },
   base: '/',
   title: 'Esper Docs',
   description: 'Learn more about Esper’s documentation.',
@@ -230,6 +233,10 @@ module.exports = {
              {
               title: 'General',
               path: "faq/general.md",
+            },
+            {
+              title: 'Temporary',
+              path: "faq/temporary.md"
             }
         //     {
         //       title: 'Non-technical',
