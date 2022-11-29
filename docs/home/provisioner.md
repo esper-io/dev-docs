@@ -1,8 +1,8 @@
 # Esper Device Provisioner
 
-The Esper Device Provisioner is designed to make provisioning single or multiple AOSP devices an easy task in concert with the Esper Cloud. Essentially the Device Provisioner uses adb under the hood communicating with the Esper Cloud to pull in configuration instructions and the apps to install upon enrollmentto provision devices while providing a great user experience so you can avoid the multiple command line steps otherwise required.
+The Esper Device Provisioner (EDP) is designed to make provisioning single or multiple Android Open Source Project (AOSP) devices an easy task in concert with the Esper Cloud. Essentially, the Device Provisioner uses adb under the hood to communicate with the Esper Cloud and pull in configuration instructions and apps. These configurations and apps are installed upon enrollment to provisioned devices while providing an intuitive experience, so you can avoid the multiple command line steps otherwise required.
 
-While intended for AOSP devices that don’t have the Android Enterprise enrollment methods available, it can also provision GMS devices, useful for specialized GMS devices without a camera thus unable to read a QR code used with the 6-Tap and AfW provisioning methods. Android Studio AVDs can also be provisioned using this tool.
+While intended for AOSP devices that don’t have Android Enterprise enrollment methods available, it can also provision Google Mobile Services (GMS) devices. This is especially useful for GMS devices without a camera that are unable to take advantage the six-tap and QR-code Android for Work (AfW) provisioning methods. Android Studio AVDs can also be provisioned using this tool.
 
 This tool is supported on Windows 10, macOS, and Linux; a development PC running either of these operating systems is required. You generally do not have to install adb yourself on your PC, the Device Provisioner takes care of that for you. However if you wish to use Wi-Fi or Ethernet for your provisioning means, in some cases you will need to execute an adb command from your own adb installation.
 
@@ -168,7 +168,7 @@ Plug the USB cable into the Android device and then connect it to your developme
 
 <img src="./assets/NewProvisioner/AllowUSBPrompt1.png" alt="provisioner" style="max-width:200px;"/>
 
-**NOTE**: If your AOSP device is configured to automatically allow an adb connection to a development PC, you will not see this dialog box. If you have adb installed on your development PC, you can verify you are connected by going to the command line and executing adb devices. You should see your device listed if this is the case. You can also see which device or devices are connected on the Select Devices screen.
+**NOTE**: If your AOSP device is configured to automatically allow an adb connection to a development PC, you will not see this dialog box. If you have adb installed on your development PC, you can verify you are connected by going to the command line and executing the adb devices. You should see your device listed. You can also see which device or devices are connected on the Select Devices screen.
 
 Now go back to the Device Provisioner once the device is prepared, and on the Get started screen click **Next**.
 
