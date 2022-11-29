@@ -1,6 +1,6 @@
 # Esper Device Provisioner
 
-The Esper Device Provisioner (EDP) is designed to make provisioning single or multiple Android Open Source Project (AOSP) devices an easy task in concert with the Esper Cloud. Essentially, the Device Provisioner uses adb under the hood to communicate with the Esper Cloud and pull in configuration instructions and apps. These configurations and apps are installed upon enrollment to provisioned devices while providing an intuitive experience, so you can avoid the multiple command line steps otherwise required.
+The Esper Device Provisioner (EDP) is designed to make provisioning single or multiple Android Open Source Project (AOSP) devices an easy task in concert with the Esper Cloud. Essentially, the Device Provisioner uses Android Debug Bridge (adb) under the hood to communicate with the Esper Cloud and pull in configuration instructions and apps. These configurations and apps are installed upon enrollment to provisioned devices while providing an intuitive experience, so you can avoid the multiple command line steps otherwise required.
 
 While intended for AOSP devices that don’t have Android Enterprise enrollment methods available, it can also provision Google Mobile Services (GMS) devices. This is especially useful for GMS devices without a camera that are unable to take advantage the six-tap and QR-code Android for Work (AfW) provisioning methods. Android Studio AVDs can also be provisioned using this tool.
 
