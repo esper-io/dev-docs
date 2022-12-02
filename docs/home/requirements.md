@@ -5,6 +5,7 @@ The following documentation details the minimum requirements necessary for using
 ## Web-Based Console (\*.esper.cloud)
 
 The Console is validated against the following desktop browsers:
+
 * The five most-recent Chrome versions
 * The five most-recent Firefox versions
 * The two most-recent Edge versions
