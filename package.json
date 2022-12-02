@@ -36,7 +36,7 @@
     "@vuepress/plugin-medium-zoom": "1.9.7",
     "eslint-plugin-vue": "9.7.0",
     "prettier": "2.7.1",
-    "vuepress": "1.9.7",
+    "vuepress": "^1.9.7",
     "vuepress-plugin-google-tag-manager": "0.0.5",
     "vuepress-plugin-robots": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.1"
