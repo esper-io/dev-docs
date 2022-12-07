@@ -182,7 +182,7 @@ Currently, Esper does not support mobile browsers. The capability of the mobile 
 -   I cannot use the Remote Control feature for my Android devices.
     
 
-Contact [Esper support](https://support.esper.io/s) to add a supervisor plugin.
+Contact [Esper support](mailto:support@esper.io) to add a supervisor plugin.
 
 ## Managed Google Play
 
@@ -220,18 +220,22 @@ Updating or adding tags for all the devices is not possible via the Console. How
 
   
 
--   Are all the users required to sign in via SAML SSO (my IdP) when this is set up?
+-   Are all the users required to sign in via Single Sign-on SSO through an identity provider (IdP) once it is configured?
     
 
-Yes, once you configure the SAML SSO configuration, all users will be routed to sign in via your own IdP.
+Yes, once you configure the SAML or OIDC SSO, all users will be routed to sign in via your own IdP.
 
   
 
--   Can anyone update the SAML SSO configuration in Esper?
+-   Can anyone enable or disable the SAML SSO configuration in Esper?
     
 
 No, only Enterprise Admins can enable/disable the SAML SSO configuration.
 
+
+-   Does my organization need SSO? 
+
+Not every organization will need SSO. However, if you are already using an IdP, it may make sense. See our [Setting Up SSO documentation](https://console-docs-v2.esper.io/sso/) for more information. 
   
 
 ## Factory reset
@@ -269,16 +273,17 @@ A user has one month (from the time of the first failure) to resolve a failed pa
 -   What happens to an account that exceeds 100 devices and has not paid?
     
 
-Nothing. You can continue using Esper. Finance and Product will handle the invoice on the backend and notify Sales of a potential opportunity to engage with the customer and upsell.
-
+You may continue using Esper and will be notified to upgrade your plan. 
   
 
 -   Are Esper Essential invoices sent automatically to the customer? If so, who?
     
 
-Customers get a receipt sent to them. And can download the invoice.
+Customers get a receipt sent to them and may download the invoice.
 
 ## Esper Software Updates
+
+Note: At this time, Esper Software Updates are only available to certain tenants.
 
 -   Can I have Esper Software Updates automatically deployed to my devices?
     
@@ -373,17 +378,17 @@ Follow [these steps](https://console-docs.esper.io/geofence/deletefromdevice.htm
 
 ## Pipelines
 
--   I am trying only to update tablets with specific app versions, so I want to query tablets by a particular installed app version. Is there a way to do advanced queries in Pipelines to filter the devices or Groups?
+-   I am trying to only update tablets with specific app versions, so I would like to query tablets by a particular installed app version. Is there a way to do advanced queries in Pipelines to filter the devices or Groups?
     
 
-This level of fine-grained filtering functionality is not available through the Console. You can set pipelines to target either individual devices or devices at a Group level. You can create tags and aliases for your devices to bucket them, and when selecting the Pipeline targets, you can filter the devices by these.
+This level of fine-grained filtering functionality is not available through the Console. You can set Pipelines to target either individual devices or devices at a Group level. You can create tags and aliases for your devices to bucket them, and when selecting the Pipeline targets, you can filter the devices by these.
 
   
 
 -   What are the benefits of using Esper Pipelines APIs?
     
 
-Using our APIs, you can integrate Esper Pipelines to your CI/CD flow. Additionally, you can create, update, delete, or query Pipeline, Stage, and Target Runs at scale. Check out Esper Pipelines APIs [here.](https://api.esper.io/tag/Pipelines)
+By using our APIs, you can integrate Esper Pipelines to your CI/CD flow. Additionally, you can create, update, delete, or query Pipeline, Stage, and Target Runs at scale. Check out Esper Pipelines APIs [here.](https://api.esper.io/tag/Pipelines)
 
   
 
@@ -397,7 +402,7 @@ You can edit Pipeline settings during the definition stage — before running th
 -   What happens if I target offline devices?
     
 
-The Pipeline stages timeout after a week. The device will receive the set operation if it becomes online in that period. If not, you can re-run the Pipeline and target those offline devices.
+The Pipeline stages time out after a week. The device will receive the set operation if it becomes online in that period. If not, you can re-run the Pipeline and target those offline devices.
 
   
 
@@ -406,5 +411,5 @@ The Pipeline stages timeout after a week. The device will receive the set operat
 -   What is the difference between Provisioning Template and Compliance Policy?
     
 
-Customers often ask us the difference between Provisioning Template and Compliance Policy, which are applied on devices. The main and most fundamental difference between Provisioning Template and Compliance Policy is that Provisioning Template is used to apply on devices during provisioning and NEVER after that. Compliance Policy, on the other hand, is applied on Esper Managed devices once they have already been provisioned.
+Customers often ask us the difference between Provisioning Template and Compliance Policy, which are applied on devices. The main and most fundamental difference between Provisioning Template and Compliance Policy is that Provisioning Template is used to apply on devices during provisioning and NEVER after that. The Compliance Policy, on the other hand, is applied on Esper Managed devices once they have already been provisioned.
 
