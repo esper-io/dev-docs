@@ -7,10 +7,7 @@
 
 You can find the Group ID in the URL when inspecting the Group settings page of a particular Group. To get to the Group settings page, visit the "Devices & Groups" page. Find the Group you want the ID for, then click the Group name.
 
-  
-
-![group id](https://lh4.googleusercontent.com/tjOv67g_dox5pac9kN7FoCrZhgMCDE9rJTDNJRuHK85zEbSU6-dy3UK15FkJ6HPmYFFaFBvSaYKiCibAkKVb-U6CQZLlFWKxyl4PH-uFxNRyd6QoMbZ2wk6OvCJ0KKbWWQlA3QauiOZ7qXJeGrwsug)
-
+![The group ID is highlighted in the URL.](./images/group-id-in-url.png)
   
 
 -   Where do I find the Device ID?
@@ -18,9 +15,8 @@ You can find the Group ID in the URL when inspecting the Group settings page of 
 
 You can find the Device ID in the URL when inspecting the Device settings page of a particular device. To get to the Device settings page, visit the "Devices & Groups" page. Find the device you want the ID for, then click the Device name.
 
-  
+![The device ID is highlighted in the URL](./images/device-id-in-url.png)
 
-![device id](https://lh3.googleusercontent.com/FFa_yL6KUW34ltgTu77zPT8yGEdd-Tgb8oCb7aGJoZpj10qtqmljN_ibMCpBw5s7Klmnx5oteQR3ck5NjTDDJAJFM977JnuxLy3aG3MJgp03HyLGh-jd4hgsfpXPk4hS16ceA0bJDI9s1slOjqcfmQ)
 
 ## Device info
 
