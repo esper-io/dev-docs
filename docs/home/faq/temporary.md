@@ -42,5 +42,5 @@ You should receive an email with instructions on how to transition to the new SS
 
 **Should I set up SSO and how do I do that?**
 
-Not every organization will need SSO. However, if you already have an identity provider such as Okta, it may make sense to implement it in Esper. 
+Not every organization will need SSO. However, if you already have an identity provider such as Okta, it may make sense to implement it in Esper. [See how to implement SSO in our console docs](https://console-docs-v2.esper.io/sso/).
 
