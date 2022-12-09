@@ -18,6 +18,10 @@ If you choose email & password, you may use your previous password or set a new 
 **Step 3**
 Sign on to Esper as you normally would. 
 
+We've also created a guide to describe this process:  
+
+<iframe src="https://scribehow.com/embed/How_to_Migrate_your_Esper_Account_to_our_New_SSO_Platform__SNEwGMcZTVajjxgEi5HoUw" width="640" height="640" allowfullscreen frameborder="0"></iframe>
+
 **Why do I need to do this?**
 
 As part of the migration process, you’ll be required to reset your sign-on method. 
@@ -43,4 +47,16 @@ You should receive an email with instructions on how to transition to the new SS
 **Should I set up SSO and how do I do that?**
 
 Not every organization will need SSO. However, if you already have an identity provider such as Okta, it may make sense to implement it in Esper. [See how to implement SSO in our console docs](https://console-docs-v2.esper.io/sso/).
+
+**Are there videos describing this process?**
+
+Yes! 
+
+Using the email/password method: 
+<iframe src="https://player.vimeo.com/video/778633840?h=2ed9560f59&byline=0" width="640" height="381" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/778633840">How to Migrate your Esper Account to our New SSO Platform - Email+Password</a> from <a href="https://vimeo.com/esperacademy">Esper</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+Using the Google Sign-on method: 
+<iframe src="https://player.vimeo.com/video/778636717?h=ed95c9c8c7&byline=0" width="640" height="381" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/778636717">How to Migrate your Esper Account to our New SSO Platform - Google Auth</a> from <a href="https://vimeo.com/esperacademy">Esper</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
