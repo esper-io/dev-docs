@@ -18,6 +18,10 @@ If you choose email & password, you may use your previous password or set a new 
 **Step 3**
 Sign on to Esper as you normally would. 
 
+We've also created a guide to describe this process:  
+
+<iframe src="https://scribehow.com/embed/How_to_Migrate_your_Esper_Account_to_our_New_SSO_Platform__SNEwGMcZTVajjxgEi5HoUw" width="640" height="640" allowfullscreen frameborder="0"></iframe>
+
 **Why do I need to do this?**
 
 As part of the migration process, you’ll be required to reset your sign-on method. 
