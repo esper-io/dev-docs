@@ -1,7 +1,7 @@
 
 # December 2022
 
-What’s new in Esper Device Provisioner version 7.0:
+What’s new in Esper Device Provisioner v7.0:
  
 
 ## Features 
