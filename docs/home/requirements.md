@@ -65,7 +65,7 @@ Esper Development Devices running Esper Enhanced Android will always be supporte
 
 ## Infrastructure
 
-Dedicated devices are often behind corporate firewalls, preventing the Esper backend from communicating with them (or vice-versa). Please make sure to whitelist the following URLs and Ports, in case your fleet is running behind such a firewall.
+Dedicated devices are often behind corporate firewalls, preventing the Esper backend from communicating with them (or vice-versa). Please make sure to whitelist the following URLs and ports, in case your fleet is running behind such a firewall.
 
 ### Firewall Requirements
 
@@ -83,6 +83,8 @@ Dedicated devices are often behind corporate firewalls, preventing Esper's backe
 | mqtt-telemetry-prod.esper.cloud                             | TCP: 1883 (MQTT)                                                          | Deep telemetry from devices                                                                                                   |
 | IP: 13.52.132.230                                           | TCP: 40000 - 50000                                                        | For allowing secure remote ADB access to your devices                                                                         |
 | firebaseinstallations.googleapis.com and fcm.googleapis.com | TCP: 443 (HTTPS), TCP: 5228 (HTTPS), TCP: 5229 (HTTPS), TCP: 5230 (HTTPS) | Backup channel, also used for ping command to wake up a device (Only for GMS devices)                                         |
+| time.android.com | UDP: 123 NTP(SNTP) | Used to actively synchronize the device's time.                                      |
+| ip-api.com       | TCP: 444 (HTTP)    | Used when the OS boots for the first time (post-installation) to set up the timezone. |
 
 
 :::tip
