@@ -162,7 +162,7 @@ The API will return a boolean in ​```onResponse```​ indicating whether or no
 
 Add a new Access Point Name. 
 
-<mark>We recommend that you take note of the APN ID for other as there aren't other methods to call for this ID.</mark>
+<mark>We recommend that you take note of the APN ID as there aren't other methods to call for this ID.</mark>
 
 **Response**
 _____
@@ -239,7 +239,7 @@ ____
 | Parameter      | Data Type          | Description                                                                                                     |
 |----------------|--------------------|-----------------------------------------------------------------------------------------------------------------|
 | packageName    | String             | Name of the app.                                                                                                |
-| state          | String             | "SHOW", "DISABLE", or "ENABLE"                                                                                  |
+| state          | String             | One of the following: <ul><li>"SHOW"</li><li>"DISABLE"</li><li>"ENABLE"</li></ul>                                                                                  |
 | ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 **Responses**
