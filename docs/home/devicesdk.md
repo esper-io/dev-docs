@@ -162,10 +162,10 @@ Add a new Access Point Name.
 **Response**
 _____
 
-| Response | Data Type | Data   | 
+| Response | Data Type | Description   | 
 |----------|-----------|--------|
-| Success  | Integer   | APN ID |       
-| Failure  | Integer   | -1     |
+| APN ID  | Integer   | Success |       
+| -1  | Integer   | Failure     |
 
 **Usage**
 _____
@@ -235,7 +235,14 @@ ____
 |----------------|--------------------|-----------------------------------------------------------------------------------------------------------------|
 | packageName    | String             | Name of the app.                                                                                                |
 | state          | String             | "SHOW", "DISABLE", or "ENABLE"                                                                                  |
-| EsperDeviceSDK | Boolean (Callback) | A callback of the results. The response is a boolean:  <ul><li>true: changed the app state</li><li> false: an error occured</li></ul> |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
+
+**Responses**
+_____
+|Response  |Data Type   | Description |
+|----------|------------|-------------|
+|true      | Boolean    | Success     |
+|false      | Boolean    | Failure     |
 
 **Usage**
 ____
@@ -269,21 +276,21 @@ Clear data from installed apps.
 Requires Android 7.0 or above. 
 :::
 
-***Parameters**
+**Parameters**
 ____
 
 | Parameters      | Data Type | Description                              |
 |----------------|-----------|------------------------------------------|
 | packageNames   | ArrayList | List of apps where the data was cleared. |
-| EsperDeviceSDK | Callback  | Invokes after the operation completes.   |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 **Responses**
 _____
 
 | Response | Data Type | Description                                  |
 |----------|-----------|----------------------------------------------|
-| Success  | null      | List of apps where the data was cleared.     |
-| Failure  | ArrayList | List of packages where data was not cleared. |
+| null  | null      | Success     |
+| List of packages where data was not cleared.  | ArrayList | Failure |
 
 
 **Usage**
@@ -329,7 +336,15 @@ ___
 | Parameters       | Data Type               | Description                                                                                                                                            |
 |------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | configJsonString | String                  | A JSON-style configuration. See the schema section below.                                                                                                                            |
-| callback         | EsperDeviceSDK.Callback | A callback of the results. The response is a boolean:   <ul><li> true: changed the app state </li ><li>  false: an error occured </li></ul> |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
+
+**Responses**
+____
+|Response  |Data Type   | Description |
+|----------|------------|-------------|
+|true      | Boolean    | Success     |
+|false      | Boolean    | Failure     |
+
 
 **Usage**
 ____
@@ -390,8 +405,8 @@ Responses
 ___
 | Response               | Data Type | Description                                                                              |
 |------------------------|-----------|------------------------------------------------------------------------------------------|
-| Success                | Boolean   | true                                                                                     |
-| Failure                | Boolean   | false                                                                                    |
+| true                | Boolean   | Success                                                                                     |
+| false                | Boolean   | Failure                                                                                    |
 
 The  ```allowPowerOff``` function returns a boolean if allowing or disallowing power off was successful.
 
@@ -657,7 +672,7 @@ The AppOp permission constants are available in the `io.esper.devicesdk.constant
 |-----------|---------------------------------|----------------------------------------------------------------------------------------------|
 | appOpMode | Integer                         | integer value of the AppOp permission                                                        |
 | granted   | Boolean                         | One of the following:  <ul><li>```true``` </li><li> ```false```</li></ul>                    |
-| callback  | ```EsperDeviceSDK . Callback``` | callback implementation to be invoked upon completion of the operation. |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 **Usage**
 ________
@@ -767,7 +782,7 @@ ______
 | Parameter              | Data Type                       | Description                                                                                  |
 |------------------------|---------------------------------|----------------------------------------------------------------------------------------------|
 | appConfigurationString | String                          | A JSON-style configuration string. See the Schema section below.                                                           |
-| callback               | ```EsperDeviceSDK . Callback``` | The callback implementation to be invoked upon completion of the operation. |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 **Usage**
 _________
@@ -882,7 +897,7 @@ Remove an APN configuration.
 ___
 | Parameter | Data Type | Description                                                          |
 |-----------|-----------|----------------------------------------------------------------------|
-| APNID     | Integer   | The APN ID. (Returned by ```addNewApnConfig```.                      |
+| APNID     | Integer   | The APN ID. (Returned by ```addNewApnConfig```).                      |
 
 **Responses**
 _____
@@ -918,7 +933,7 @@ Set the default APN.
 ___
 | Parameter | Data Type | Description                                                          |
 |-----------|-----------|----------------------------------------------------------------------|
-| APNID     | Integer   | The APN ID. (Returned by ```addNewApnConfig```.                      |
+| APNID     | Integer   | The APN ID. (Returned by ```addNewApnConfig```).                      |
 
 **Responses**
 _____
@@ -952,22 +967,20 @@ sdk.setDefaultApn(
 
 Set the device’s brightness. 
 
-**Parameter**
+**Paremeters**
 ___
 
 | Parameter | Data Type                     | Description                                                                 |
 |-----------|-------------------------------|-----------------------------------------------------------------------------|
 | scale     | Integer                       | The percentage of brightness for the device.                                |
-| callback  | ```EsperDeviceSDK.Callback``` | The callback implementation to be invoked upon completion of the operation. |
-
-
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 **Responses**
 _____
 | Response | Data Type | Description                                      |
 |----------|-----------|--------------------------------------------------|
-| true  | Integer   | Success                                               |
-| false  | Integer   | Failure                                           |
+| true  | Boolean   | Success                                               |
+| false  | Boolean   | Failure                                           |
 
 **Usage**
 ___
@@ -1011,7 +1024,7 @@ ____
 | Parameter   | Data Type                     | Description                                                                                                                                                                                                                              |
 |-------------|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | orientation | String                        | One of the following:  <ul><li>ROTATION_STATE_AUTO</li> <li>ROTATION_STATE_PORTRAIT_ONLY</li> <li>ROTATION_STATE_LANDSCAPE_ONLY</li> <li>ROTATION_STATE_INVERTED_PORTRAIT_ONLY</li> <li>ROTATION_STATE_INVERTED_LANDSCAPE_ONLY</li></ul> |
-| callback    | ```EsperDeviceSDK.Callback``` | The callback implementation to be invoked upon completion of the operation.                                                                                                                                                              |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |                                                                                                                                                           |
 
 
 **Usage**
@@ -1069,7 +1082,7 @@ ___
 |-----------|-------------------------|------------------------------------------------------|
 | key       | String                  | The name of the global setting.                      |
 | value     | String                  | The value of the global setting.                     |
-| callback  | EsperDeviceSDK.Callback | The callback implemented once the callback succeeds. |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 
 Key-value Reference:
@@ -1108,7 +1121,7 @@ ___
 |-----------|-------------------------|------------------------------------------------------|
 | key       | String                  | The name of the system setting.                      |
 | value     | String                  | The value of the system setting.                     |
-| callback  | EsperDeviceSDK.Callback | The callback implemented once the callback succeeds. |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 Key-Value Reference:
 
@@ -1142,13 +1155,19 @@ Mobile data can be started or stopped.
 Requires supervisor plugin on Android 5.0+.
 :::
 
-The `enableMobileData` method expects two arguments:
+**Parameters**
+____
+| Parameter  | Data Type               | Description                                                                                        |
+|------------|-------------------------|----------------------------------------------------------------------------------------------------|
+| true/false | Boolean                 | One of the following:  <ul><li>true: start mobile data</li> <li>false: stop mobile data </li></ul> |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
-* Boolean value to start/stop mobile data.
-* true = start mobile data. 
-* False = stop mobile data 
-* EsperDeviceSDK.Callback for the results.
-response also is boolean with true = success.
+**Responses**
+_____
+| Response | Data Type | Description                                      |
+|----------|-----------|--------------------------------------------------|
+| true  | Boolean   | Success                                               |
+| false  | Boolean   | Failure                                           |
 
 **Usage**
 ____
@@ -1176,14 +1195,17 @@ If the hotspot is created successfully, the method returns `success`.
 
 An empty password will create an open Wi-Fi hotspot. 
 
-Params: 
+**Parameters**
+______
 
-* **param 1**: SSID (name of the hotspot). 
+| Parameter  | Data Type | Description                                                                                               |
+|------------|-----------|-----------------------------------------------------------------------------------------------------------|
+| SSID       | String    | Name of the hotspot.                                                                                      |
+| Password   | String    | Passwords are required to be eight characters or longer. An empty password creates an open Wi-Fi hotspot. |
+| true/false | Boolean   | One of the following:   <ul><li>true: start hotspot</li> <li>false: stop hotspot </li></ul>               |
 
-* **param 2**: Password. Passwords are required to be eight characters or longer. An empty password creates an open Wi-Fi hotspot. 
-
-* **param 3**: true / false (true = start hotspot, false = stop hotspot)
-
+**Usage**
+____
 ```java
 sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new​ ​EsperDeviceSDK​.​Callback​<​String​>() {  
     @Override ​public​ ​void​ onResponse(@Nullable ​String​ response) {
@@ -1198,6 +1220,9 @@ sdk.enableWifiTethering(​"EsperSDKHotspot"​, ​"123123123"​, true, ​new
 ### Update Existing APN Config
 
 Update an existing APN configuration. 
+
+**Usage**
+____
 
 ```java
 sdk.updateUpdateApnConfig(
@@ -1225,13 +1250,17 @@ You can obtain the USB device's Product and Vendor IDs using the [Android UsbDev
 This API is only available on Samsung KNOX enabled devices & is available from the Esper Device SDK version SUNFYRE_V8.
 :::
 
-Params:
+**Parameters**
+___
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| packageName | String                  | The package name of the application that USB device should be whitelisted for. |
+| vendorId    | Integer                 | The Vendor ID of the USB device.                                               |
+| productId   | Integer                 | The Product ID of the USB device.                                              |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
-*   packageName: {String}. The package name of the application that USB device should be whitelisted for.
-*   vendorId: {Integer}. The Vendor ID of the USB device.
-*   productId: {Integer}. The Product ID of the USB device.
-*   callback: {EsperDeviceSDK.Callback}. callback implementation to be invoked upon completion of the operation
-
+**Usage**
+___
 
 ```java
 sdk.whitelistUsbDeviceForPackage(
@@ -1260,10 +1289,16 @@ Clear all USB devices that were whitelisted for an application using the **white
 Only available on Samsung KNOX enabled devices & is available from the Esper Device SDK version SUNFYRE_V8.
 ::: 
 
-Params:
+**Parameters**
+___
 
-*   **packageName**: {String}. the package name of the application that USB device should be whitelisted for. 
-*   **callback**: {EsperDeviceSDK.Callback}. Invokes after the operation succeeds.
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| packageName | String                  | The package name of the application that USB device should be whitelisted for. |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
+
+**Usage**
+____
 
 ```java
 sdk.clearUsbDeviceWhitelistForPackage(
@@ -1290,6 +1325,9 @@ Returns an instance of `UsbPermissionManager` which can be used for granting or 
 Only available x86, x86_64 and arm64 GSI devices running Esper Foundation for Android.
 :::
 
+**Usage**
+____
+
 ```java
 sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() {
     @Override
@@ -1307,7 +1345,7 @@ sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() 
 
 ### UsbPermissionManager
 
-Compared to the default permission manager of android, this one can persist permissions across package re-installations, as this one uses package name instead of UID.
+Compared to the default permission manager of Android, this one can persist permissions across package re-installations, as this one uses package name instead of UID.
 
 Here it is possible to grant or deny access for all USB devices and accessories to a package in one go, instead of the default one that operates on individual device identifiers.
 
@@ -1317,7 +1355,24 @@ Unless explicitly granted, permissions are considered denied by default.
 
 ### Check USB access permissions for an app
 
-Accepts package name for an app as parameter and returns ```true``` if permission is granted for the app and ```false``` otherwise.
+Check the USB's access permissions for an app. 
+
+**Parameters**
+___
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| packageName | String                  | The package name of the application. |
+
+
+**Responses**
+_____
+| Response | Data Type | Description                                      |
+|----------|-----------|--------------------------------------------------|
+| true  | Boolean   | Success                                               |
+| false  | Boolean   | Failure                                           |
+
+**Usage**
+____
 
 ```java
 try {
@@ -1330,9 +1385,28 @@ try {
 
 ### Grant or deny USB access permissions for an app
 
-Accepts the package name of the app and grants status as boolean. The example shown below will grant permissions to the app identified with package name <code> com.example.app </code> Grant status <code> false</code> will deny the permission.
+Grant or deny USB access permissions for an app. 
 
-Once grated via here, the apps no more need to request for permission via <code> ACTION_USB_PERMISSION </code> intent.
+**Parameter**
+___
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| packageName | String                  | The package name of the application. |
+
+
+**Responses**
+_____
+| Response | Data Type | Description                                      |
+|----------|-----------|--------------------------------------------------|
+| true  | Boolean   | Success                                               |
+| false  | Boolean   | Failure           |
+
+The example shown below will grant permissions to the app identified with package name <code> com.example.app </code> Grant status <code> false</code> will deny the permission.
+
+Once granted via here, the apps no more need to request for permission via <code> ACTION_USB_PERMISSION </code> intent.
+
+**Usage**
+___
 
 ```java
 try {
@@ -1345,13 +1419,18 @@ try {
 
 ### Turn Wifi/Bluetooth for the device to on/off
 
-Turn Bluetooh off or on for a device. 
+Turn Bluetooh or Wi-Fi off or on for a device. 
 
-* Set Bluetooth/Wi-Fi as a string to `true` (ON) or `false` (OFF). 
+**Parameter**
+_____
+| Parameter | Data Type | Description                                      |
+|----------|-----------|--------------------------------------------------|
+| true/false  | Boolean   | Choose one of the following: <ul><li>true: ON </li><li>false: OFF</li></ul>                                               |
+
 
 This method starts processing the Bluetooth/Wi-Fi to true(ON) or false(OFF), but does not necessarily guarantee a state change. 
 
-* For the best results, add a listener if the state is successful. For Bluetooth, you will need to use `BluetoothAdapter.ACTION_STATE_CHANGED`. 
+* For the best results, add a listener if the state change is successful. For Bluetooth, you will need to use `BluetoothAdapter.ACTION_STATE_CHANGED`. 
 
 
 ```java
