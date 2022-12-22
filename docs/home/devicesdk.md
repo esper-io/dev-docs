@@ -73,6 +73,11 @@ For Android 11, add the following code to AndroidManifest.xml :
 </queries>
  ```
 
+If you are using Esper Device SDK version SUNFYRE_V7 or above, target app needs to use override <uses-sdk> for imported libraries
+
+```
+ <uses-sdk tools:overrideLibrary="esper.library" />
+```
 
 If you are using Esper Device SDK version SUNFYRE_V7 or above, the target app will need to override `<uses-sdk>` for imported libraries:
 
