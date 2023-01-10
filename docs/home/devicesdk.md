@@ -860,7 +860,7 @@ sdk.pushTelemetryData("Sdk Test Telemetry", 1001, true, data, new EsperDeviceSDK
 });
 ```
 
-### Reboot the Device via Esper Device SDK
+### Reboot Device via Esper Device SDK
 
 Reboot the device. 
 
