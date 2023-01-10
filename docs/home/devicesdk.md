@@ -38,6 +38,8 @@ Table of Contents:
   * [Start or Stop Mobile Data](#start-or-stop-mobile-data)
   * [Start or Stop Wifi-Hotspot](#start-or-stop-wifi-hotspot)
   * [Update Existing APN Config](#update-existing-apn-config)
+  * [Install APK from a Public Folder](#install-apk)
+  * [Powering Off the Device](#power-off)
 
 ## SDK Setup
 
@@ -73,7 +75,7 @@ For Android 11, add the following code to AndroidManifest.xml :
 </queries>
  ```
 
-If you are using Esper Device SDK version SUNFYRE_V7 or above, target app needs to use override <uses-sdk> for imported libraries
+If you are using Esper Device SDK version SUNFYRE_V7 or above, target app needs to use override ```<uses-sdk>``` for imported libraries
 
 ```
  <uses-sdk tools:overrideLibrary="esper.library" />
@@ -1327,7 +1329,7 @@ sdk.clearUsbDeviceWhitelistForPackage(
 Returns an instance of `UsbPermissionManager` which can be used for granting or denying USB device/accessory access permissions to packages.
 
 :::warning Requirements
-Only available x86, x86_64 and arm64 GSI devices running Esper Foundation for Android.
+Only available for x86, x86_64 and arm64 GSI devices running Esper Foundation for Android.
 :::
 
 **Usage**
@@ -1432,6 +1434,7 @@ _____
 |----------|-----------|--------------------------------------------------|
 | true/false  | Boolean   | Choose one of the following: <ul><li>true: ON </li><li>false: OFF</li></ul>                                               |
 
+**Usage**
 
 This method starts processing the Bluetooth/Wi-Fi to true(ON) or false(OFF), but does not necessarily guarantee a state change. 
 
@@ -1448,4 +1451,55 @@ sdk.changeSettingsState(EsperDeviceSDK.BLUETOOTH,true, new EsperDeviceSDK.Callba
     }
 })
 ```
+
+### Install an APK from a Public Folder 
+
+Use this method to install an APK from a public folder. 
+
+**Parameters**
+___
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| packageName | String                  | The package name of the application. |
+| apkPath     | String                  | The complete path of the APK.        |
+
+**Usage**
+___
+
+```java 
+sdk.installApp(packageName, apkPath, new EsperDeviceSDK.Callback<Boolean>() {
+    @Override    public void onResponse(Boolean esperApkInstall) {
+        showMethodResult(esperApkInstall.toString());    }
+    @Override    public void onFailure(Throwable t) {
+        showFailureResult(t);    }
+});
+```
+
+### Power Off the Device
+
+Use this method to power off the device. 
+
+:::warning Requirements
+This method is only available for Knox-supported devices & CSDK-supported devices.
+:::
+
+**Usage**
+___
+
+```java
+sdk.powerOff(new EsperDeviceSDK.Callback<Boolean>() {
+                @Override
+                public void onResponse(@Nullable Boolean response) {
+                    Log.d(TAG, "performPowerOff: onResponse: " + response);
+                    showMethodResult(getString(R.string.result, "" + response));
+                }
+    
+                @Override
+                public void onFailure(Throwable t) {
+                    Log.e(TAG, "performPowerOff: onFailure: ", t);
+                    showFailureResult(t);
+                }
+            });
+```
+
 
