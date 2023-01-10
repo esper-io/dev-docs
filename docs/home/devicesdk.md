@@ -38,8 +38,8 @@ Table of Contents:
   * [Start or Stop Mobile Data](#start-or-stop-mobile-data)
   * [Start or Stop Wifi-Hotspot](#start-or-stop-wifi-hotspot)
   * [Update Existing APN Config](#update-existing-apn-config)
-  * [Install APK from a Public Folder](#install-apk)
-  * [Powering Off the Device](#power-off)
+  * [Install an APK from a Public Folder](#install-an-apk-from-a-public-folder)
+  * [Power Off the Device](#power-off-the-device)
 
 ## SDK Setup
 
@@ -1416,7 +1416,7 @@ try {
 
 ### Turn Wifi/Bluetooth for the Device to On/Off
 
-Turn Bluetooh or Wi-Fi off or on for a device. 
+Turn Bluetooth or Wi-Fi off or on for a device. 
 
 **Parameter**
 _____
