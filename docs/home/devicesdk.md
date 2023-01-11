@@ -38,6 +38,8 @@ Table of Contents:
   * [Start or Stop Mobile Data](#start-or-stop-mobile-data)
   * [Start or Stop Wifi-Hotspot](#start-or-stop-wifi-hotspot)
   * [Update Existing APN Config](#update-existing-apn-config)
+  * [Install an APK from a Public Folder](#install-an-apk-from-a-public-folder)
+  * [Power Off the Device](#power-off-the-device)
 
 ## SDK Setup
 
@@ -73,7 +75,7 @@ For Android 11, add the following code to AndroidManifest.xml :
 </queries>
  ```
 
-If you are using Esper Device SDK version SUNFYRE_V7 or above, target app needs to use override <uses-sdk> for imported libraries
+If you are using Esper Device SDK version SUNFYRE_V7 or above, target app needs to use override ```<uses-sdk>``` for imported libraries
 
 ```
  <uses-sdk tools:overrideLibrary="esper.library" />
@@ -84,8 +86,6 @@ If you are using Esper Device SDK version SUNFYRE_V7 or above, the target app wi
 ```
  <uses-sdk tools:overrideLibrary="esper.library" />
 ```
-
-
 
 ### Initializing the SDK
 
@@ -474,7 +474,6 @@ The response contains information about device settings as well as the DPC param
 
 **Responses**
 
-
 Returns an ```InactiveADKException``` if authentication fails. 
 
 If successful, returns a JSON object with the following key-value pairs: 
@@ -515,7 +514,6 @@ sdk.getDeviceSettings(new EsperDeviceSDK.Callback<JSONObject>() {
 If successful, **onResponse** returns the settings in a JSON Object.
 
 If unsuccessful, **onFailure** is called.
-
 
 **Sample JSON response:**
 
@@ -672,7 +670,7 @@ Android 6.0 introduced “Special app access” meaning permissions such as “D
 The AppOp permission constants are available in the `io.esper.devicesdk.constants.AppOpsPermissions` class.
 
 **Parameters**
-
+___
 | Parameter | Data Type                       | Description                                                                                  |
 |-----------|---------------------------------|----------------------------------------------------------------------------------------------|
 | appOpMode | Integer                         | integer value of the AppOp permission                                                        |
@@ -702,7 +700,6 @@ sdk.setAppOpMode(AppOpsPermissions.OP_WRITE_SETTINGS, true, new EsperDeviceSDK.C
      }
  });
 ```
-
 
 ### Manage Dock
 
@@ -769,7 +766,6 @@ sdk.stopDock(new EsperDeviceSDK.Callback<Void>() {
 Configure the app. 
 
 Managed Configurations (also known as app restrictions) allow the organization's IT admin to configure apps remotely. This capability is beneficial for organizations to apply rules on the apps deployed to a work profile.
-
 
 For example, an organization might require that approved apps allow the IT admin to:
 
@@ -933,7 +929,6 @@ sdk.removeApnConfig(
 
 Set the default APN. 
 
-
 **Parameter**
 ___
 | Parameter | Data Type | Description                                                          |
@@ -1031,7 +1026,6 @@ ____
 | orientation | String                        | One of the following:  <ul><li>ROTATION_STATE_AUTO</li> <li>ROTATION_STATE_PORTRAIT_ONLY</li> <li>ROTATION_STATE_LANDSCAPE_ONLY</li> <li>ROTATION_STATE_INVERTED_PORTRAIT_ONLY</li> <li>ROTATION_STATE_INVERTED_LANDSCAPE_ONLY</li></ul> |
 | ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |                                                                                                                                                           |
 
-
 **Usage**
 ___
 
@@ -1089,7 +1083,6 @@ ___
 | value     | String                  | The value of the global setting.                     |
 | ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
-
 Key-value Reference:
 
 *   To know about possible key-value pairs, refer to official Android documentation on Global Settings [https://developer.android.com/reference/android/provider/Settings.Global](https://developer.android.com/reference/android/provider/Settings.Global)
@@ -1112,7 +1105,6 @@ sdk.setGlobalSetting(key, value, new  EsperDeviceSDK.Callback<Boolean>() {
 }
   
 ```
-
 
 ### Set System Settings
 
@@ -1245,7 +1237,7 @@ sdk.updateUpdateApnConfig(
 }, apnID, apnConfigJSONString);
 ```
 
-### Whitelist USB for an app
+### Whitelist USB for an App
 
 Whitelist a USB device for a particular application, granting permission for that application to use the USB device.
 
@@ -1327,7 +1319,7 @@ sdk.clearUsbDeviceWhitelistForPackage(
 Returns an instance of `UsbPermissionManager` which can be used for granting or denying USB device/accessory access permissions to packages.
 
 :::warning Requirements
-Only available x86, x86_64 and arm64 GSI devices running Esper Foundation for Android.
+Only available for x86, x86_64 and arm64 GSI devices running Esper Foundation for Android.
 :::
 
 **Usage**
@@ -1348,9 +1340,9 @@ sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() 
 });
 ```
 
-### UsbPermissionManager
+### About the UsbPermissionManager
 
-Compared to the default permission manager of Android, this one can persist permissions across package re-installations, as this one uses package name instead of UID.
+Compared to the default permission manager of Android, this one can persist permissions across package re-installations, as this one uses the package name instead of UID.
 
 Here it is possible to grant or deny access for all USB devices and accessories to a package in one go, instead of the default one that operates on individual device identifiers.
 
@@ -1358,7 +1350,7 @@ Here it is possible to grant or deny access for all USB devices and accessories 
 Unless explicitly granted, permissions are considered denied by default.
 :::
 
-### Check USB access permissions for an app
+### Check USB Access Permissions for an App
 
 Check the USB's access permissions for an app. 
 
@@ -1388,7 +1380,7 @@ try {
 }
 ```
 
-### Grant or deny USB access permissions for an app
+### Grant or Deny USB Access Permissions for an App
 
 Grant or deny USB access permissions for an app. 
 
@@ -1406,7 +1398,7 @@ _____
 | true  | Boolean   | Success                                               |
 | false  | Boolean   | Failure           |
 
-The example shown below will grant permissions to the app identified with package name <code> com.example.app </code> Grant status <code> false</code> will deny the permission.
+The example shown below will grant permissions to the app identified with package name <code>com.example.app</code>. Grant status <code>false</code> will deny the permission.
 
 Once granted via here, the apps no more need to request for permission via <code> ACTION_USB_PERMISSION </code> intent.
 
@@ -1422,9 +1414,9 @@ try {
 }
 ```
 
-### Turn Wifi/Bluetooth for the device to on/off
+### Turn Wifi/Bluetooth for the Device to On/Off
 
-Turn Bluetooh or Wi-Fi off or on for a device. 
+Turn Bluetooth or Wi-Fi off or on for a device. 
 
 **Parameter**
 _____
@@ -1432,6 +1424,8 @@ _____
 |----------|-----------|--------------------------------------------------|
 | true/false  | Boolean   | Choose one of the following: <ul><li>true: ON </li><li>false: OFF</li></ul>                                               |
 
+**Usage**
+___
 
 This method starts processing the Bluetooth/Wi-Fi to true(ON) or false(OFF), but does not necessarily guarantee a state change. 
 
@@ -1448,4 +1442,55 @@ sdk.changeSettingsState(EsperDeviceSDK.BLUETOOTH,true, new EsperDeviceSDK.Callba
     }
 })
 ```
+
+### Install an APK from a Public Folder 
+
+Use this method to install an APK from a public folder. 
+
+**Parameters**
+___
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| packageName | String                  | The package name of the application. |
+| apkPath     | String                  | The complete path to the APK.        |
+
+**Usage**
+___
+
+```java 
+sdk.installApp(packageName, apkPath, new EsperDeviceSDK.Callback<Boolean>() {
+    @Override    public void onResponse(Boolean esperApkInstall) {
+        showMethodResult(esperApkInstall.toString());    }
+    @Override    public void onFailure(Throwable t) {
+        showFailureResult(t);    }
+});
+```
+
+### Power Off the Device
+
+Use this method to power off the device. 
+
+:::warning Requirements
+This method is only available for Knox-supported devices & CSDK-supported devices.
+:::
+
+**Usage**
+___
+
+```java
+sdk.powerOff(new EsperDeviceSDK.Callback<Boolean>() {
+                @Override
+                public void onResponse(@Nullable Boolean response) {
+                    Log.d(TAG, "performPowerOff: onResponse: " + response);
+                    showMethodResult(getString(R.string.result, "" + response));
+                }
+    
+                @Override
+                public void onFailure(Throwable t) {
+                    Log.e(TAG, "performPowerOff: onFailure: ", t);
+                    showFailureResult(t);
+                }
+            });
+```
+
 
