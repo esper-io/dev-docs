@@ -136,6 +136,10 @@ module.exports = {
               title: 'Device Provisioner release notes',
               children: [
                 {
+                  title: 'v7.0',
+                  path: "release-notes/provisioner/pro-rel-7"
+                },
+                {
                   title: 'v6.2.0',
                   path: "release-notes/provisioner/pro-rel-1.0"
                 },
