@@ -145,6 +145,23 @@ module.exports = {
               title: 'Esper Agent release notes',
               children: [
                 {
+                  title: 'Esper Agent v7.9.3037',
+                  path: "release-notes/esper-agent/v7.9.3037"
+                },{
+                  title: 'Esper Agent v7.9.3027',
+                  path: "release-notes/esper-agent/v7.9.3027"
+                },{
+                  title: 'Esper Agent v7.9.3016',
+                  path: "release-notes/esper-agent/v7.9.3016"
+                },{
+                  title: 'Esper Agent v7.9.3004',
+                  path: "release-notes/esper-agent/v7.9.3004"
+                },
+                {
+                  title: 'Esper Agent v7.9.2998',
+                  path: "release-notes/esper-agent/v7.9.2998"
+                },
+                {
                   title: 'Esper Agent v7.9.2301',
                   path: "release-notes/esper-agent/v7.9.2301"
                 },

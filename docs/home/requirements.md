@@ -17,9 +17,19 @@ At present, viewing the console on mobile devices is not supported.
 
 Targeted Dedicated Devices must run Android version 5.0 Lollipop (API Level 21) or above. However, we recommend that devices running Android version 7.0 Nougat (API Level 24) or above be used with Esper.
 
-We have recently started supporting latest Android version 10 on our platform.
+Esper Development Devices running Esper Enhanced Android will always be supported be used. Such devices open up additional features for developers when using Esper.
 
-Esper Development Devices running Esper Enhanced Android will always be supported be used. Such devices open up additional features for developers, when using Esper.
+We support the following Android versions: 
+- 5.0 Lollipop
+- 5.1 Lollipop MR1
+- 6.0 Marshmallow 
+- 7.0 Nougat 
+- 8.0 Oreo 
+- 8.1 Oreo MR1 
+- 9.0 Pie 
+- 10.0 Q
+- 11.0 Red Velvet Cake 
+- 12.0 Snow Cone
 
 ## Esper Feature Support
 
