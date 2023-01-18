@@ -2,6 +2,11 @@
 
 List of all the Esper Agent release notes:
 
+-   [Esper Agent v7.9.3037 (January 17, 2023)](./v7.9.3037.md)
+-   [Esper Agent v7.9.3027 (January 16, 2023)](./v7.9.3027.md)
+-   [Esper Agent v7.9.3016 (January 16, 2023)](./v7.9.3016.md)
+-   [Esper Agent v7.9.3004 (January 16, 2023)](./v7.9.3004.md)
+-   [Esper Agent v7.9.2998 (January 15, 2023)](./v7.9.2998.md)
 -   [Esper Agent v7.9.2301 (December 2, 2022)](./v7.9.2301.md)
 -   [Esper Agent v7.9.2269 (December 1, 2022)](./v7.9.2269.md)
 -   [Esper Agent v7.9.1597 (November 7, 2022)](./v7.9.1597.md)
@@ -22,5 +27,3 @@ List of all the Esper Agent release notes:
 -   [Esper Agent v7.5.1748 (October 2021)](./v7.5.1748.md) 
 -   [Esper Agent v7.5.1332 (September 2021)](./v7.5.1332.md) 
 -   [Esper Agent v7.5.0763 (August 2021)](./v7.5.0763.md) 
-
- 
