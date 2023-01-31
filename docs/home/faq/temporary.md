@@ -1,3 +1,5 @@
+# New Single Sign On Methods
+
 As Esper strives to provide our customers with the most advanced functionality for their devices, we're excited to announce that we'll be transitioning to Single Sign-On (SSO) with support for SAML and OIDC, enhanced security, and other features. This transition will begin in February 2022, and we will begin notifying users via email when they will need to reset their passwords in order to migrate to these new and exciting features.
 
 Once this process starts, you will need to log in to the system again. 
@@ -19,10 +21,11 @@ As part of the migration process, you’ll be required to reset your sign-on met
 **What will change with the new authentication system?**
 
 There will be two major changes: 
-You may continue to use email/password *and* Sign In with Google to log into Esper. :::
+1. You may continue to use email/password *and* Sign In with Google to log into Esper. 
 ::: warning 
-Note: These methods will create different accounts in the Console’s User Management section. :::
-You will no longer be asked to sign up with a username, first name, and last name. We’ve simplified this process so that now only a single name will be used in the Esper Console. 
+Note: These methods will create different accounts in the Console’s User Management section. 
+:::
+2. You will no longer be asked to sign up with a username, first name, and last name. We’ve simplified this process so that now only a single name will be used in the Esper Console. 
 
 **What if I’m already using SSO to sign in to Esper?**
 
