@@ -12,13 +12,13 @@ In this release, we’ve launched our new single sign-on feature, allowing users
 
     * The ability to switch to log in with SSO only, which restricts access to the Console to users registered with an identity provider.
 
-    * A unified authentication method for signing in to multiple  tenants using the same credentials. 
+    * A unified authentication method for signing in to multiple tenants using the same credentials. 
 
     * Better visibility with user management, including login methods. 
 
     * Access to Esper via Enterprise credentials.
 
-* Added support for dashes in CSV files when uploading serial numbers for  Seamless Provisioning. 
+* Added support for dashes in CSV files when uploading serial numbers for Seamless Provisioning. 
 
 ## Bug Fixes and Improvements
 
