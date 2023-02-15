@@ -149,20 +149,12 @@ module.exports = {
               title: 'Esper Agent release notes',
               children: [
                 {
-                  title: 'Esper Agent v7.9.3222',
-                  path: "release-notes/esper-agent/v7.9.3222"
+                  title: 'Esper Agent v7.9.3216',
+                  path: "release-notes/esper-agent/v7.9.3216"
                 },
-                // {
-                //   title: 'Esper Agent v7.9.3216',
-                //   path: "release-notes/esper-agent/v7.9.3216"
-                // },
-                // {
-                //   title: 'Esper Agent v7.9.3192',
-                //   path: "release-notes/esper-agent/v7.9.3192"
-                // },
                 {
-                  title: 'Esper Agent v7.9.3120',
-                  path: "release-notes/esper-agent/v7.9.3120"
+                  title: 'Esper Agent v7.9.3192',
+                  path: "release-notes/esper-agent/v7.9.3192"
                 },
                 {
                   title: 'Esper Agent v7.9.3181',
@@ -254,6 +246,10 @@ module.exports = {
             {
               title: 'Console release notes',
               children: [
+                {
+                  title: '104.0 (February 2023)',
+                  path: "release-notes/general/devrel-104"
+                },
                 {
                   title: '102.0 (January 2023)',
                   path: "release-notes/general/devrel-102"
