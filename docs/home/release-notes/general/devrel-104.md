@@ -24,8 +24,8 @@ In this release, we’ve launched our new single sign-on feature, allowing users
 
 * In Templates:
 
-    * Added ability to download the historical event feed JSON (even for events that happened months ago).
+    * Added ability to download the historical event feed JSON (even for events that happened months ago). Look for the Download button in the group or device Event Feed. 
 
-    * Added the Beep command for Quick Actions. It’s now easier to locate a device from the Console.
+    * Added the Beep command for Quick Actions. It’s now easier to locate a device from the Console. 
 
 We’re excited to launch DevRel 104, and the Esper team is hard at work on the next release. Please contact Esper Support to share your thoughts on how Esper can improve future releases.
