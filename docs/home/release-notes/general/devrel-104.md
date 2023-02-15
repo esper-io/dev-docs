@@ -24,7 +24,7 @@ In this release, we’ve launched our new single sign-on feature, allowing users
 
 * In Templates:
 
-    * Added ability to download the historical event feed JSON (even for events that happened months ago).
+    * Added ability to download the historical event feed JSON (even for events that happened months ago). Look in the Event Feed for the new download button. 
 
     * Added the Beep command for Quick Actions. It’s now easier to locate a device from the Console.
 
