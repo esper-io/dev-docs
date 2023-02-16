@@ -30,6 +30,7 @@ We support the following Android versions:
 - 10.0 Q
 - 11.0 Red Velvet Cake 
 - 12.0 Snow Cone
+- 13.0 Tiramisu
 
 ## Esper Feature Support
 
