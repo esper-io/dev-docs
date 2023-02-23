@@ -701,6 +701,26 @@ sdk.setAppOpMode(AppOpsPermissions.OP_WRITE_SETTINGS, true, new EsperDeviceSDK.C
  });
 ```
 
+<!-- **AppOpsPermissions Constants**
+________
+
+```java 
+public class AppOpsPermissions {
+    // Write System settings 
+    public static final int OP_WRITE_SETTINGS = 23; 
+
+    // Screen projection 
+    public static final int OP_PROJECT_MEDIA = 46; 
+
+    //Draw over other apps 
+    public static final int OP_SYSTEM_ALERT_WINDOW = 24; 
+
+    //Get process usage stats 
+    public static int OP_GET_USAGE_STATS = 43;
+}
+
+``` -->
+
 ### Manage Dock
 
 Show or hide the Esper menu. 
