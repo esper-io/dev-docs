@@ -1528,16 +1528,14 @@ ___
 ___
 
 ```java
-sdk.setScreenTimeOut(timeoutInMills, new EsperDeviceSDK.Callback<Boolean>() {
+sdk.setScreenTimeOut(Constants.TWO_MIN, new EsperDeviceSDK.Callback<Boolean>() {
                 @Override
                 public void onResponse(@Nullable Boolean response) {
                     Log.d(TAG, "screen timeout to " + timeout + " is success : " + response);
-                    showMethodResult(getString(R.string.result, "" + response));
                 }
                 @Override
                 public void onFailure(Throwable t) {
                     Log.d(TAG, "Screen Timeout change failed", t);
-                    showFailureResult(t);
                 }
             });
 ```
