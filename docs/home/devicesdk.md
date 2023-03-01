@@ -1492,7 +1492,7 @@ sdk.installApp(packageName, apkPath, new EsperDeviceSDK.Callback<Boolean>() {
 Use this method to power off the device. 
 
 :::warning Requirements
-This method is only available for device with Supervisor, Knox-supported devices & CSDK-supported devices.
+This method is only available for devices with support for Knox/CSDK/Supervisor plugin.
 :::
 
 **Usage**
@@ -1521,7 +1521,7 @@ Use this method to set the screen timeout for the device.
 ___
 | Parameter   | Data Type               | Description                                                                    |
 |-------------|-------------------------|--------------------------------------------------------------------------------|
-| time | int                  | One of the following:  <ul><li>FIVE_SECS</li> <li>FIFTEEN_SECS</li> <li>THIRTY_SECS</li> <li>FORTY_FIVE_SECS</li> <li>ONE_MIN</li> <li>TWO_MIN</li> <li>FIVE_MIN</li> <li>TEN_MIN</li> <li>ONE_HOUR</li> <li>TWO_HOUR</li> <li>NEVER</li></ul> |
+| timeoutInMills | int                  | One of the following:  <ul><li>Constants.FIVE_SECS</li> <li>Constants.FIFTEEN_SECS</li> <li>Constants.THIRTY_SECS</li> <li>Constants.FORTY_FIVE_SECS</li> <li>Constants.ONE_MIN</li> <li>Constants.TWO_MIN</li> <li>Constants.FIVE_MIN</li> <li>Constants.TEN_MIN</li> <li>Constants.ONE_HOUR</li> <li>Constants.TWO_HOUR</li> <li>Constants.NEVER</li></ul> |
 | ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
 
 **Usage**
