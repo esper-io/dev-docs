@@ -40,6 +40,7 @@ Table of Contents:
   * [Update Existing APN Config](#update-existing-apn-config)
   * [Install an APK from a Public Folder](#install-an-apk-from-a-public-folder)
   * [Power Off the Device](#power-off-the-device)
+  * [Set Screen Timeout](#set-screen-timeout)
 
 ## SDK Setup
 
@@ -1491,7 +1492,7 @@ sdk.installApp(packageName, apkPath, new EsperDeviceSDK.Callback<Boolean>() {
 Use this method to power off the device. 
 
 :::warning Requirements
-This method is only available for Knox-supported devices & CSDK-supported devices.
+This method is only available for device with Supervisor, Knox-supported devices & CSDK-supported devices.
 :::
 
 **Usage**
@@ -1513,4 +1514,30 @@ sdk.powerOff(new EsperDeviceSDK.Callback<Boolean>() {
             });
 ```
 
+### Set Screen Timeout
+Use this method to set the screen timeout for the device.
 
+**Parameters**
+___
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| time | int                  | One of the following:  <ul><li>FIVE_SECS</li> <li>FIFTEEN_SECS</li> <li>THIRTY_SECS</li> <li>FORTY_FIVE_SECS</li> <li>ONE_MIN</li> <li>TWO_MIN</li> <li>FIVE_MIN</li> <li>TEN_MIN</li> <li>ONE_HOUR</li> <li>TWO_HOUR</li> <li>NEVER</li></ul> |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
+
+**Usage**
+___
+
+```java
+sdk.setScreenTimeOut(timeoutInMills, new EsperDeviceSDK.Callback<Boolean>() {
+                @Override
+                public void onResponse(@Nullable Boolean response) {
+                    Log.d(TAG, "screen timeout to " + timeout + " is success : " + response);
+                    showMethodResult(getString(R.string.result, "" + response));
+                }
+                @Override
+                public void onFailure(Throwable t) {
+                    Log.d(TAG, "Screen Timeout change failed", t);
+                    showFailureResult(t);
+                }
+            });
+```
