@@ -16,11 +16,6 @@ module.exports = {
           hostname: 'https://docs.esper.io',
       },
     ],
-    [ 'robots', {
-      host: 'https://docs.esper.io',
-      allowAll: true,    
-    } 
-    ],
     // [
     //   ('@vuepress/google-analytics',
     //   {
