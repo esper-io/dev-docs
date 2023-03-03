@@ -1,6 +1,6 @@
 # Redirects from what the browser requests to what we serve
 
-/home/provisioner.html#instructions-for-windows-10         https://help.esper.io/hc/en-us/articles/12311253854609#windows-10-installation       301
+/home/provisioner.html#instructions-for-windows-10         https://help.esper.io/hc/en-us/articles/12311253854609#windows-10-installation       301!
 /home/release-notes/general/                               https://help.esper.io/hc/en-us/categories/11384970989329-Release-Notes               301
 /home/guides/                                              https://help.esper.io/hc/en-us/articles/12310606598033-Guides-and-Tutorials          301
 
