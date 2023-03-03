@@ -1,3 +1,4 @@
 # Redirects from what the browser requests to what we serve
 
-/      https://help.esper.io       200
+/home   https://help.esper.io       200
+/       /home
