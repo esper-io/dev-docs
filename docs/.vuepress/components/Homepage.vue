@@ -139,6 +139,20 @@
         <p class="homepage__text">Esper tool for provisioning</p>
       </a>
 
+      <a
+        href="https://fsdk-api.esper.io/"
+        class="homepage__links__section__item homepage__links__section__item2"
+      >
+        <div style="padding-bottom: 1rem">
+          <img
+            class="no-shadow homepage_image_icon"
+            src="./icons/ApiReferenceIcon.svg"
+            alt="api"
+          >
+        </div>
+        <div class="homepage__a">Foundation SDK Reference</div>
+        <p class="homepage__text">API documentation</p>
+      </a>
      <a
         href="/home/guides"
         class="homepage__links__section__item homepage__links__section__item2"

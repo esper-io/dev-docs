@@ -1334,105 +1334,13 @@ sdk.clearUsbDeviceWhitelistForPackage(
 });
 ```
 
-### Get USB Permission Manager
+### USB Permission Manager
 
-Returns an instance of `UsbPermissionManager` which can be used for granting or denying USB device/accessory access permissions to packages.
-
-:::warning Requirements
-Only available for x86, x86_64 and arm64 GSI devices running Esper Foundation for Android.
+:::tip API Migrated
+Esper Foundation APIs are now available under a dedicated SDK named **Foundation SDK**.  
+For setup and migrating to the same, refer [Foundation API Reference](https://fsdk-api.esper.io/)
 :::
 
-**Usage**
-____
-
-```java
-sdk.getUsbPermissionManager(new EsperDeviceSDK.Callback<UsbPermissionManager>() {
-    @Override
-    public void onResponse(@Nullable UsbPermissionManager usbPermissionManager) {
-        // use UsbPermissionManager to perform needed actions
-    }
-  
-    @Override
-    public void onFailure(Throwable t) {
-        Log.e(TAG, "onFailure: ", t);
-        showFailureResult(t);
-    }
-});
-```
-
-### About the UsbPermissionManager
-
-Compared to the default permission manager of Android, this one can persist permissions across package re-installations, as this one uses the package name instead of UID.
-
-Here it is possible to grant or deny access for all USB devices and accessories to a package in one go, instead of the default one that operates on individual device identifiers.
-
-:::tip
-Unless explicitly granted, permissions are considered denied by default.
-:::
-
-### Check USB Access Permissions for an App
-
-Check the USB's access permissions for an app. 
-
-**Parameters**
-___
-| Parameter   | Data Type               | Description                                                                    |
-|-------------|-------------------------|--------------------------------------------------------------------------------|
-| packageName | String                  | The package name of the application. |
-
-
-**Responses**
-_____
-| Response | Data Type | Description                                      |
-|----------|-----------|--------------------------------------------------|
-| true  | Boolean   | Success                                               |
-| false  | Boolean   | Failure                                           |
-
-**Usage**
-____
-
-```java
-try {
-    boolean granted = usbPermissionManager.isAccessGranted("com.example.app");
-} catch (EsperSdkException t) {
-    Log.e(TAG, "onFailure: ", t);
-    showFailureResult(t);
-}
-```
-
-### Grant or Deny USB Access Permissions for an App
-
-Grant or deny USB access permissions for an app. 
-
-**Parameter**
-___
-| Parameter   | Data Type               | Description                                                                    |
-|-------------|-------------------------|--------------------------------------------------------------------------------|
-| packageName | String                  | The package name of the application. |
-
-
-**Responses**
-_____
-| Response | Data Type | Description                                      |
-|----------|-----------|--------------------------------------------------|
-| true  | Boolean   | Success                                               |
-| false  | Boolean   | Failure           |
-
-The example shown below will grant permissions to the app identified with package name <code>com.example.app</code>. Grant status <code>false</code> will deny the permission.
-
-Once granted via here, the apps no more need to request for permission via <code> ACTION_USB_PERMISSION </code> intent.
-
-**Usage**
-___
-
-```java
-try {
-    usbPermissionManager.setAccessGranted("com.example.app", true);
-} catch (EsperSdkException t) {
-    Log.e(TAG, "onFailure: ", t);
-    showFailureResult(t);
-}
-```
 
 ### Turn Wifi/Bluetooth for the Device to On/Off
 
