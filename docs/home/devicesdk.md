@@ -2,9 +2,9 @@
 
 The Esper Device SDK uses an API to conduct operations on Esper-managed devices. Use the Device SDK to develop apps that perform operations or retrieve data from your device fleet. We now use AndroidX libraries (androidx.core-core-ktx version 1.5.0 stable) as dependencies which reduces compile time. 
 
-Current version: **v2.1.7787.21**
+Current version: **v2.2.3663.24**
 
-Release name: **SUNFYRE_V8**
+Release name: **SILVERWING**
 
 Table of Contents:
 
@@ -40,6 +40,7 @@ Table of Contents:
   * [Update Existing APN Config](#update-existing-apn-config)
   * [Install an APK from a Public Folder](#install-an-apk-from-a-public-folder)
   * [Power Off the Device](#power-off-the-device)
+  * [Set Screen Timeout](#set-screen-timeout)
 
 ## SDK Setup
 
@@ -1491,7 +1492,7 @@ sdk.installApp(packageName, apkPath, new EsperDeviceSDK.Callback<Boolean>() {
 Use this method to power off the device. 
 
 :::warning Requirements
-This method is only available for Knox-supported devices & CSDK-supported devices.
+This method is only available for devices with support for Knox/CSDK/Supervisor plugin.
 :::
 
 **Usage**
@@ -1513,4 +1514,28 @@ sdk.powerOff(new EsperDeviceSDK.Callback<Boolean>() {
             });
 ```
 
+### Set Screen Timeout
+Use this method to set the screen timeout for the device.
 
+**Parameters**
+___
+| Parameter   | Data Type               | Description                                                                    |
+|-------------|-------------------------|--------------------------------------------------------------------------------|
+| timeoutInMills | int                  | One of the following:  <ul><li>Constants.FIVE_SECS</li> <li>Constants.FIFTEEN_SECS</li> <li>Constants.THIRTY_SECS</li> <li>Constants.FORTY_FIVE_SECS</li> <li>Constants.ONE_MIN</li> <li>Constants.TWO_MIN</li> <li>Constants.FIVE_MIN</li> <li>Constants.TEN_MIN</li> <li>Constants.ONE_HOUR</li> <li>Constants.TWO_HOUR</li> <li>Constants.NEVER</li></ul> |
+| ```EsperDeviceSDK.Callback```  | callback | The callback implemented once the callback succeeds. |
+
+**Usage**
+___
+
+```java
+sdk.setScreenTimeOut(Constants.TWO_MIN, new EsperDeviceSDK.Callback<Boolean>() {
+                @Override
+                public void onResponse(@Nullable Boolean response) {
+                    Log.d(TAG, "screen timeout to " + timeout + " is success : " + response);
+                }
+                @Override
+                public void onFailure(Throwable t) {
+                    Log.d(TAG, "Screen Timeout change failed", t);
+                }
+            });
+```
