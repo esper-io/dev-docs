@@ -2,9 +2,9 @@
 
 The Esper Device SDK uses an API to conduct operations on Esper-managed devices. Use the Device SDK to develop apps that perform operations or retrieve data from your device fleet. We now use AndroidX libraries (androidx.core-core-ktx version 1.5.0 stable) as dependencies which reduces compile time. 
 
-Current version: **v2.1.7787.21**
+Current version: **v3.1.0101.27**
 
-Release name: **SUNFYRE_V8**
+Release name: **VERSION_27**
 
 Table of Contents:
 
